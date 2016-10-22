@@ -1,7 +1,7 @@
 {
   "name": "htmlmetaparser",
   "version": "1.0.0",
-  "description": "Extract rich metadata from HTML",
+  "description": "A `htmlparser2` handler for parsing rich metadata from HTML. Includes HTML metadata, JSON-LD, RDFa, microdata, OEmbed, Twitter cards and AppLinks.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
