@@ -229,9 +229,9 @@ export interface HtmlMetaParserResultHtml {
 }
 
 export interface Alternative {
+  type: string
   href: string
   title?: string
-  type?: string
   media?: string
   hreflang?: string
 }
@@ -591,7 +591,7 @@ export class Handler {
 
             if (typeAttr || mediaAttr || hreflangAttr) {
               this.result.alternate.push({
-                type: typeAttr,
+                type: typeAttr || 'text/html',
                 media: mediaAttr,
                 hreflang: hreflangAttr,
                 title: normalize(attributes['title']),
