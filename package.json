@@ -1,6 +1,6 @@
 {
   "name": "htmlmetaparser",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Extract rich metadata from HTML",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
