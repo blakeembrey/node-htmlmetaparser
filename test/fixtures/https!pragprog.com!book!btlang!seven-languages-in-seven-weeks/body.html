@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="google-site-verification"
+          content="Y0U-2qfR5wHZl72gpEtOdc0gHrYcFRSsl4PsKagctzE" />
+
+      <noscript>
+        <meta http-equiv="refresh" content="2;url=https://pragprog.com/no_js">
+      </noscript>
+
+    <meta http-equiv="Content-Type"
+      content="text/html; charset=UTF-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4460760967","applicationID":"340824","transactionName":"cQ5YEkJeCFpTQEsSWkYNUxUfQgxZQQ==","queueTime":0,"applicationTime":184,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<title>
+  The Pragmatic Bookshelf | Seven Languages in Seven Weeks
+</title>
+<meta name="copyright"
+      content="Copyright (c) 1999-2016 The Pragmatic Programmers, LLC. All rights reserved." />
+<meta name="description" content="title: Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages, by: Bruce A. Tate, isbn: 9781934356593, date: 2010-10-27" />
+<meta name="keywords" content="Ruby, Io, Prolog, Scala, Erlang, Clojure, Haskell, programming, languages, survey, JavaScript, Java, Rails" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" name="csrf-token" />
+
+<script src="/assets/vendor/modernizr-ff9b87cb63ff1ddf96f98cde7b915abd.js" type="text/javascript"></script>
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="icon" href="/favicon.png">
+
+<link href="/assets/pip-foundation-38e3b4b1212996ed05206f831b8d937b.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://pragprog.com/catalog/search-description" title="Content search" />
+<link rel="canonical" href="https://pragprog.com/book/btlang/seven-languages-in-seven-weeks" />
+<link href="https://pragprog.com/feed/global" rel="alternate" title="RSS" type="application/rss+xml" />
+
+<link rel="apple-touch-icon"
+      href="/assets/apple-touch-icon-b2b0ae35523796f7d278b585ee6e3fdc.png"/>
+<link rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/apple-touch-icon-72-8324ac157c6cd2515c3221be5ba1c82f.png"/>
+<link rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/apple-touch-icon-114-e9be9a15c4d0003dd3fbd480d1a1d887.png"/>
+<link rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/apple-touch-icon-144-31cdbfd7af29d49d73981b0cf1719ab4.png"/>
+
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-280358-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </head>
+
+  <body class="titles show">
+
+    <div id="wrapper-for-content">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+        <div id="skip">
+          <a href="#main">Skip to main content</a>
+        </div>
+
+        <div class="fixed hide-for-small">
+  <nav class="top-bar" data-topbar>
+
+    <section class="top-bar-section">
+      <div class="left pp-logo">
+          <a href="/" alt="The Pragmatic Bookshelf" >
+            <div id="logo-svg-container"
+     style="padding-bottom: 36.364% /* 100% * 100/275 */">
+  <svg version="1.1"
+       id="logo-svg"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px" y="0px"
+     viewBox="0 8.5 275 108.5"
+     preserveAspectRatio="xMinYMin meet"
+     xml:space="preserve">
+
+  <style type="text/css">
+   .logo_letters{fill:#e0e0f0;}
+   .trapezoid {fill:#006080;}
+  </style>
+
+  <g id="Trapezoid">
+    <polygon class="trapezoid" points="247,108.5 24,108.5 0,0 275,0"/>
+  </g>
+
+  <g id="The">
+    <g>
+      <g>
+	<path class="logo_letters" d="M61.3,26.4l-0.8,0.3c-0.9-1.8-2.6-3.1-4.6-3.1c-0.8,0-0.8,0.4-0.8,0.9V34c0,0.5,0,1.2,0.2,1.6
+				      c0.3,0.7,1,0.7,1.6,0.7h0.4V37h-6.5v-0.6l0.4,0c0.6,0,1.3-0.1,1.6-0.7c0.2-0.4,0.2-1.2,0.2-1.7v-9.4c0-0.7,0-1.1-0.9-1.1
+				      c-2.1,0-3.7,1.3-4.7,3.1l-0.7-0.3l1.2-3.7h12.2L61.3,26.4z"/>
+	<path class="logo_letters" d="M72.3,34.3c0,1.2,0.2,1.9,1.5,2H74V37h-5.6v-0.6h0.3c1.4-0.1,1.6-0.7,1.6-2v-4.5
+				      c0-0.5,0-1.1-0.3-1.5c-0.3-0.4-0.9-0.6-1.4-0.6c-1.2,0-2.9,0.8-3.7,1.7v5c0,1.2,0.1,2,1.4,2h0.3V37h-5.6v-0.6h0.2
+				      c1.4-0.1,1.7-0.7,1.7-2v-9c0-1.1-0.1-1.9-1.6-2l-0.3,0v-0.6c1-0.1,2.1-0.3,3-0.7h0.8v6.4c1.2-1,2.6-1.8,4.3-1.8
+				      c0.8,0,1.7,0.2,2.4,0.7c0.8,0.6,0.8,1.5,0.8,2.4v0.1V34.3z"/>
+	<path class="logo_letters" d="M77.4,30.9l0,1.1c0,1,0.4,2.1,0.9,2.9c0.6,0.9,1.6,1.3,2.7,1.3c1.4,0,2.4-0.7,3.1-1.9l0.7,0.4
+				      c-0.8,1.7-2.5,2.5-4.3,2.5c-1.4,0-2.6-0.4-3.7-1.4c-1-1-1.6-2.5-1.6-3.9c0-3,1.9-5.2,5-5.2h0c2.5,0,4.5,1.7,4.5,4.2v0.1H77.4z
+				      M82.5,30.1c0-1.6-1-2.6-2.4-2.6c-1.5,0-2.5,1.2-2.6,2.6H82.5z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Pragmatic">
+    <g>
+      <g>
+	<path class="logo_letters" d="M29.9,53.7c0,0.8,0,1.8,0.3,2.4c0.5,1.1,1.7,1.2,2.7,1.3l0.7,0v1.1H23.1v-1.1l0.3,0
+				      c1-0.1,2-0.2,2.4-1.2c0.4-0.8,0.4-2,0.4-3V38.6c0-1.9-0.2-3.3-2.7-3.5l-0.5,0V34h11.8c2.1,0,4.2,0.2,6,1.3c2,1.2,3.1,3.2,3.1,5.5
+				      c0,2.1-0.9,4.1-2.6,5.4c-1.8,1.4-4.4,1.6-6.6,1.6h-5V53.7z M34.3,46.4c1.8,0,3.4-0.1,4.7-1.5c1.1-1.2,1.4-2.5,1.4-4.1
+				      c0-1.5-0.5-3.1-1.7-4.1c-1.2-1-2.8-1.3-4.3-1.3c-0.9,0-3.3,0.1-4,0.7c-0.5,0.3-0.5,1.1-0.5,1.7v8.6H34.3z"/>
+	<path class="logo_letters" d="M51.7,53.9c0.1,2.1,0.4,3.3,2.7,3.5l0.6,0v1.1h-9.9v-1.1h0.4c2.4-0.1,2.8-1.3,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5H45v-1.1l5.5-0.8h1.2v2.7c1.6-1.6,3.6-3.1,6-3.1c1.2,0,2.7,0.5,2.7,1.9c0,1.2-0.9,1.9-2,1.9
+				      c-1.7,0-2.1-1.2-3.2-1.2c-1.2,0-2.7,1.1-3.5,2V53.9z"/>
+	<path class="logo_letters" d="M81.3,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L81.3,57.6z
+				      M73.7,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M94.6,56.8c2.7,0.4,5.8,0.9,5.8,4.4c0,4.9-5.8,6-9.7,6c-2.9,0-9.1-0.7-9.1-4.6
+				      c0-2.1,2.1-3.2,3.7-3.8v-0.1c-1.4-0.4-2.6-1.3-2.6-2.9c0-2,1.7-3.3,3.5-3.7c-1.8-1-2.8-2.9-2.8-4.9v-0.2c0.1-4,3.5-6.3,7.2-6.3
+				      c1.1,0,2.2,0.2,3.3,0.6c0.9-1.7,2.5-3.2,4.5-3.2c1,0,2.1,0.4,2.1,1.5c0,0.7-0.5,1.4-1.3,1.4c-0.8,0-1.5-0.6-2.3-0.6
+				      s-1.4,0.8-1.9,1.4c1.8,1.3,3,3.1,3,5.4c0,1.7-0.9,3.5-2.2,4.5c-1.4,1.2-3.4,1.5-5.3,1.5c-1.2,0-2.2-0.2-3.2-0.6
+				      c-0.7,0.3-1.7,1.1-1.7,1.9c0,1.3,2,1.4,2.8,1.5L94.6,56.8z M86.7,59.2c-1.4,0.4-2.9,1.7-2.9,3.2c0,3.2,4.8,3.7,7.1,3.7
+				      c2.3,0,6.9-0.5,6.9-3.6c0-2-2.6-2.2-4.1-2.4L86.7,59.2z M86.9,47c0,2.7,0.7,5,3.9,5c1.2,0,2.6-0.6,3.1-1.7
+				      c0.5-0.9,0.6-2.4,0.6-3.4c0-2.6-0.6-4.9-3.7-4.9C87.8,42,86.9,44.5,86.9,47z"/>
+	<path class="logo_letters" d="M107.7,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.2v-1.1c2.4-0.2,2.8-1.4,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2v2.5c1.6-1.7,4-2.8,6.8-2.8c2.3,0,3.9,0.6,5,2.8c1.8-1.6,4.3-2.8,6.6-2.8h0.1
+				      c1.5,0,3.1,0.5,4.1,1.8c0.8,1,0.9,2.3,0.9,3.5v7.9c0,1.9,0.3,3.3,2.7,3.5v1.1h-9.1v-1.1h0.3c2.3-0.2,2.7-1.4,2.7-3.5v-7.1
+				      c0-0.8,0-1.7-0.3-2.4c-0.4-1.1-1.4-1.8-2.6-1.8c-1.9,0-3.8,1.2-5.4,2.4v9c0,2.1,0.4,3.3,2.7,3.5h0.3v1.1H113v-1.1h0.3
+				      c2.3-0.2,2.7-1.4,2.7-3.5v-7.2c0-2-0.1-4.1-2.7-4.1c-2.1,0-4.1,1.2-5.5,2.4V53.9z"/>
+	<path class="logo_letters" d="M155.4,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L155.4,57.6z
+				      M147.9,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M167.5,42.2h-5.1v10.1c0,2,0,4.9,2.7,4.9c1.3,0,2.3-0.7,3.1-1.6l0.9,0.8c-1.2,1.6-3.1,2.3-5.1,2.3
+				      c-1.2,0-2.6-0.3-3.6-0.9c-1.4-0.9-1.6-2.3-1.6-3.9V42.2h-3v-1.2c4.1-0.1,4.9-3.1,4.9-6.6h1.5v6.6h5.1V42.2z"/>
+	<path class="logo_letters" d="M176.3,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.5v-1.1h0.3c2.4-0.1,2.7-1.3,2.7-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2V53.9z M174.5,39.3c-1.3,0-2.1-1-2.1-2.2c0-1.1,1-2.1,2.2-2.1c1.3,0,2.2,1,2.2,2.2
+				      C176.7,38.4,175.7,39.3,174.5,39.3z"/>
+	<path class="logo_letters" d="M197.6,54.8c-1.8,2.8-4.4,4-7.7,4c-5.4,0-8.9-3.5-8.9-8.9c0-5.4,3.3-9.2,8.9-9.2
+				      c1.7,0,3.3,0.3,4.8,1.3c1.2,0.8,2.4,2,2.4,3.5c0,1.1-0.7,2-1.8,2c-1,0-1.8-0.7-1.8-1.7c0-0.5,0.1-0.9,0.1-1.4
+				      c0-1.6-2.3-2.3-3.6-2.3c-4.1,0-4.9,4.5-4.9,7.7v0.1c0,3.6,1.6,7.5,5.8,7.5c2.5,0,4.1-1.4,5.6-3.3L197.6,54.8z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Bookshelf">
+    <g>
+      <g>
+	<path class="logo_letters" d="M68.6,86v-1.1l0.4,0c1-0.1,2.1-0.2,2.6-1.2c0.3-0.6,0.4-1.7,0.4-2.6V66.1c0-1.9-0.2-3.3-2.7-3.5
+				      l-0.6-0.1v-1.1H81c1.9,0,4.7,0.1,6.5,0.7c2.3,0.8,4,2.6,4,5.1c0,3.1-2.4,4.6-5.2,5.1v0.1c3.3,0.5,6.5,2.5,6.5,6.2
+				      c0,2.7-1.4,4.9-3.8,6.1c-2.2,1.1-5.2,1.2-7.6,1.2H68.6z M79.5,72c3.3,0,8.3,0,8.3-4.6c0-4.1-4.2-4.6-7.4-4.6c-1,0-3.3,0-4.2,0.8
+				      c-0.6,0.6-0.7,1.7-0.7,2.6V72H79.5z M75.5,80.3c0,1,0,2.6,0.6,3.3c0.8,0.8,3.1,0.9,4.2,0.9c1.8,0,4.2-0.2,5.8-1.1
+				      c1.7-1,2.6-2.8,2.6-4.8c0-2.2-1-4.2-3.3-4.8c-1.5-0.4-3.6-0.4-5.3-0.4h-4.6V80.3z"/>
+	<path class="logo_letters" d="M110.4,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C106.4,68.2,108.8,68.9,110.4,70.5z M104.3,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H104.3z"/>
+	<path class="logo_letters" d="M130.6,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C126.5,68.2,129,68.9,130.6,70.5z M124.5,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H124.5z"/>
+	<path class="logo_letters" d="M141.8,77l5.1-4.5c0.4-0.4,1.3-1,1.3-1.7c0-1-1.2-1.1-2-1.2v-1.1h9.6v1.1c-3.2,0.3-5.4,1.7-7.7,3.8
+				      l-0.9,0.8l5,7.3c1.2,1.7,2.6,3.1,4.8,3.4V86h-9.8v-1.1h0.4c0.7,0,1.6,0,1.6-1c0-0.8-0.8-1.8-1.2-2.4l-3.4-4.9l-2.9,2.6v2.3
+				      c0,2.1,0.2,3.4,2.5,3.5h0.6V86h-9.8v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1
+				      c1.8-0.2,3.5-0.5,5.2-1.2h1.4V77z"/>
+	<path class="logo_letters" d="M173,74.1h-1.2c-0.9-2.4-3.7-4.4-6.3-4.4c-1.6,0-3.7,0.7-3.7,2.6c0,1.8,2.1,2.1,3.4,2.4l4.1,1
+				      c2.7,0.6,5,1.6,5,4.8c0,4-4,5.8-7.5,5.8c-2.1,0-4.1-0.5-5.8-1.8l-0.4,1.5h-1.2l-1.3-6.4h1.3c1,3.2,4,5.2,7.3,5.2
+				      c1.8,0,4.5-0.9,4.5-3.2c0-1.8-1.6-2.2-3-2.5l-3.7-1c-2.7-0.7-5.8-1.4-5.8-4.8c0-3.3,3.7-5.1,6.6-5.1c1.8,0,3.7,0.5,5.1,1.6
+				      l0.4-1.3h1L173,74.1z"/>
+	<path class="logo_letters" d="M195.7,81.4c0,2,0.3,3.3,2.5,3.5h0.4V86H189v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5v-7.7
+				      c0-0.9,0-1.8-0.6-2.6c-0.6-0.7-1.5-1-2.4-1c-2.1,0-4.9,1.4-6.3,2.8v8.5c0,2,0.3,3.3,2.4,3.5h0.5V86h-9.6v-1.1h0.4
+				      c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4v11.1c2.1-1.8,4.5-3,7.3-3
+				      c1.3,0,3,0.4,4,1.2c1.4,1.1,1.4,2.6,1.4,4.1v0.3V81.4z"/>
+	<path class="logo_letters" d="M204.4,75.6l-0.1,1.8c0,1.7,0.6,3.6,1.5,5c1,1.5,2.8,2.2,4.6,2.2c2.4,0,4.1-1.2,5.3-3.3l1.2,0.6
+				      c-1.3,2.8-4.3,4.3-7.3,4.3c-2.4,0-4.5-0.6-6.3-2.3c-1.8-1.8-2.7-4.3-2.7-6.7c0-5.2,3.3-9,8.6-9h0.1c4.2,0,7.7,2.8,7.7,7.2v0.1
+				      H204.4z M213.1,74.1c0-2.7-1.7-4.4-4.1-4.4c-2.6,0-4.2,2.1-4.5,4.4H213.1z"/>
+	<path class="logo_letters" d="M225.4,81.4c0,1.9,0.3,3.3,2.5,3.5l0.4,0V86h-9.4v-1.1h0.3c2.3-0.2,2.7-1.3,2.7-3.5V66
+				      c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4V81.4z"/>
+	<path class="logo_letters" d="M239.6,69.7H236v11.7c0,2,0.3,3.3,2.5,3.5l0.5,0V86h-9.5v-1.1h0.3c2.3-0.1,2.7-1.3,2.7-3.5V69.7
+				      h-3.1v-1.2h3.1v-1.5c0-1.9,0.1-3.6,1.5-5.1c1.6-1.6,4.3-2.4,6.5-2.4c1.2,0,3.1,0.6,3.1,2.1c0,0.9-0.8,1.6-1.7,1.6
+				      c-1.7,0-1.7-2.1-3.4-2.1c-0.6,0-1.3,0.4-1.8,0.8c-0.8,0.8-0.8,1.7-0.8,2.8v3.9h3.6V69.7z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+
+          </a>
+      </div>
+
+      <ul class="right">
+
+        <li><a href="https://pragprog.com/login?return_to=https%3A%2F%2Fpragprog.com%2Fbook%2Fbtlang%2Fseven-languages-in-seven-weeks"><figure class="icon-text">
+         <i class="fa fa-sign-in"></i>
+         <figcaption>Log in</figcaption>
+      </figure>
+    </a></li>
+
+        <li class="divider"></li>
+
+        <li class="has-dropdown">
+  <a href="#"
+     alt="a dropdown menu containing links to our books, videos, magaines, and courses">
+    <figure class="icon-text">
+         <i class="fa fa-book"></i>
+         <figcaption>Books/Videos</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li class="active"><a href="https://pragprog.com/titles" title="Pragmatic topics to make developer&#x27;s lives easier"><i class="fa fa-book"></i> Books</a></li>
+<li><a href="https://pragprog.com/screencasts" title="Experts show you how it&#x27;s done"><i class="fa fa-video-camera"></i> Video</a></li>
+<li><a href="https://pragprog.com/audio_books" title="Listen to our Audio Books"><i class="fa fa-headphones"></i> Audio</a></li>
+<li><a href="https://pragmaticstudio.com" title="Learn online from the experts"><i class="fa fa-mortar-board"></i> Training</a></li>
+<li><a href="https://pragprog.com/magazines" title="Read our monthly magazine"><i class="fa fa-file"></i> Magazine</a></li>
+  </ul>
+</li>
+
+
+        <li class="divider"></li>
+
+        <li class="has-dropdown">
+  <a href="#"
+     alt="dropdown containing links to our forums, resource listings, and support">
+    <figure class="icon-text">
+         <i class="fa fa-info-circle"></i>
+         <figcaption>Help</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li><a href="https://forums.pragprog.com" title="Join in the discussions"><i class="fa fa-comments"></i> Forums</a></li>
+<li><a href="https://pragprog.com/resources" title="Help finding the cool stuff"><i class="fa fa-user-plus"></i> Resources</a></li>
+<li><a href="https://pragprog.com/frequently-asked-questions" title="Got a problem? Let us help."><i class="fa fa-question-circle"></i> Support</a></li>
+  </ul>
+</li>
+
+
+        <li class="divider"></li>
+
+        <li>
+          <a href="/cart" class="cart-in-navbar empty" data-reveal-ajax="true" data-reveal-id="common-modal" title="Display your cart and proceed to checkout"><figure class="icon-text">
+         
+        <i class="fa fa-shopping-cart cart-overlay">
+        </i>
+    
+         <figcaption>Cart <span class="cart-count"
+                aria-live="polite"
+                aria-label="number of items in cart">
+                (0)
+             </span></figcaption>
+      </figure>
+    </a>
+        </li>
+
+
+        <li class="show-for-medium-only">
+          <a data-dropdown="search-dropdown"
+             aria-controls="search-dropdown"
+             aria-expanded="false"
+             href="#"
+             role="search">
+            <figure class="icon-text">
+         <i class="fa fa-search"></i>
+         <figcaption>Search</figcaption>
+      </figure>
+    
+          </a>
+              <div id="search-dropdown"
+         data-dropdown-content
+         class="f-dropdown content"
+         aria-hidden="true"
+         tabindex="-1">
+      <form accept-charset="UTF-8" action="/search" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" /></div>
+        <div class="row collapse postfix-round">
+          <div class="small-12 columns">
+            <label for="#search-text">
+              Search…
+            </label>
+          </div>
+        </div>
+        <div class="row collapse postfix-round">
+          <div class="small-10 columns">
+            <input id="search-text" name="q" type="text" />
+          </div>
+          <div class="small-2 columns">
+            <input class="postfix button radius" id="submit-search" name="commit" type="submit" value="Go" />
+          </div>
+        </div>
+</form>    </div>
+
+        </li>
+
+        <li class="show-for-large-up has-form" >
+          <form accept-charset="UTF-8" action="/search" class="search-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" /></div>
+  <div class="row collapse radius postfix-radius">
+    <div class="small-8 large-9 columns">
+      <input name="q"  placeholder="Search our catalog…" type="search" >
+    </div>
+    <div class="small-4 large-3 columns">
+      <button class="expand postfix">Search</button>
+    </div>
+  </div>
+</form>
+        </li>
+
+      </ul>
+
+    </section>
+  </nav>
+</div>
+
+<div class="fixed show-for-small">
+<nav class="tab-bar">
+  <div class="left pp-logo small">
+    <a href="/" alt="The Pragmatic Bookshelf" >
+      <div id="logo-svg-container"
+     style="padding-bottom: 36.364% /* 100% * 100/275 */">
+  <svg version="1.1"
+       id="logo-svg"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px" y="0px"
+     viewBox="0 8.5 275 108.5"
+     preserveAspectRatio="xMinYMin meet"
+     xml:space="preserve">
+
+  <style type="text/css">
+   .logo_letters{fill:#e0e0f0;}
+   .trapezoid {fill:#006080;}
+  </style>
+
+  <g id="Trapezoid">
+    <polygon class="trapezoid" points="247,108.5 24,108.5 0,0 275,0"/>
+  </g>
+
+  <g id="The">
+    <g>
+      <g>
+	<path class="logo_letters" d="M61.3,26.4l-0.8,0.3c-0.9-1.8-2.6-3.1-4.6-3.1c-0.8,0-0.8,0.4-0.8,0.9V34c0,0.5,0,1.2,0.2,1.6
+				      c0.3,0.7,1,0.7,1.6,0.7h0.4V37h-6.5v-0.6l0.4,0c0.6,0,1.3-0.1,1.6-0.7c0.2-0.4,0.2-1.2,0.2-1.7v-9.4c0-0.7,0-1.1-0.9-1.1
+				      c-2.1,0-3.7,1.3-4.7,3.1l-0.7-0.3l1.2-3.7h12.2L61.3,26.4z"/>
+	<path class="logo_letters" d="M72.3,34.3c0,1.2,0.2,1.9,1.5,2H74V37h-5.6v-0.6h0.3c1.4-0.1,1.6-0.7,1.6-2v-4.5
+				      c0-0.5,0-1.1-0.3-1.5c-0.3-0.4-0.9-0.6-1.4-0.6c-1.2,0-2.9,0.8-3.7,1.7v5c0,1.2,0.1,2,1.4,2h0.3V37h-5.6v-0.6h0.2
+				      c1.4-0.1,1.7-0.7,1.7-2v-9c0-1.1-0.1-1.9-1.6-2l-0.3,0v-0.6c1-0.1,2.1-0.3,3-0.7h0.8v6.4c1.2-1,2.6-1.8,4.3-1.8
+				      c0.8,0,1.7,0.2,2.4,0.7c0.8,0.6,0.8,1.5,0.8,2.4v0.1V34.3z"/>
+	<path class="logo_letters" d="M77.4,30.9l0,1.1c0,1,0.4,2.1,0.9,2.9c0.6,0.9,1.6,1.3,2.7,1.3c1.4,0,2.4-0.7,3.1-1.9l0.7,0.4
+				      c-0.8,1.7-2.5,2.5-4.3,2.5c-1.4,0-2.6-0.4-3.7-1.4c-1-1-1.6-2.5-1.6-3.9c0-3,1.9-5.2,5-5.2h0c2.5,0,4.5,1.7,4.5,4.2v0.1H77.4z
+				      M82.5,30.1c0-1.6-1-2.6-2.4-2.6c-1.5,0-2.5,1.2-2.6,2.6H82.5z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Pragmatic">
+    <g>
+      <g>
+	<path class="logo_letters" d="M29.9,53.7c0,0.8,0,1.8,0.3,2.4c0.5,1.1,1.7,1.2,2.7,1.3l0.7,0v1.1H23.1v-1.1l0.3,0
+				      c1-0.1,2-0.2,2.4-1.2c0.4-0.8,0.4-2,0.4-3V38.6c0-1.9-0.2-3.3-2.7-3.5l-0.5,0V34h11.8c2.1,0,4.2,0.2,6,1.3c2,1.2,3.1,3.2,3.1,5.5
+				      c0,2.1-0.9,4.1-2.6,5.4c-1.8,1.4-4.4,1.6-6.6,1.6h-5V53.7z M34.3,46.4c1.8,0,3.4-0.1,4.7-1.5c1.1-1.2,1.4-2.5,1.4-4.1
+				      c0-1.5-0.5-3.1-1.7-4.1c-1.2-1-2.8-1.3-4.3-1.3c-0.9,0-3.3,0.1-4,0.7c-0.5,0.3-0.5,1.1-0.5,1.7v8.6H34.3z"/>
+	<path class="logo_letters" d="M51.7,53.9c0.1,2.1,0.4,3.3,2.7,3.5l0.6,0v1.1h-9.9v-1.1h0.4c2.4-0.1,2.8-1.3,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5H45v-1.1l5.5-0.8h1.2v2.7c1.6-1.6,3.6-3.1,6-3.1c1.2,0,2.7,0.5,2.7,1.9c0,1.2-0.9,1.9-2,1.9
+				      c-1.7,0-2.1-1.2-3.2-1.2c-1.2,0-2.7,1.1-3.5,2V53.9z"/>
+	<path class="logo_letters" d="M81.3,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L81.3,57.6z
+				      M73.7,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M94.6,56.8c2.7,0.4,5.8,0.9,5.8,4.4c0,4.9-5.8,6-9.7,6c-2.9,0-9.1-0.7-9.1-4.6
+				      c0-2.1,2.1-3.2,3.7-3.8v-0.1c-1.4-0.4-2.6-1.3-2.6-2.9c0-2,1.7-3.3,3.5-3.7c-1.8-1-2.8-2.9-2.8-4.9v-0.2c0.1-4,3.5-6.3,7.2-6.3
+				      c1.1,0,2.2,0.2,3.3,0.6c0.9-1.7,2.5-3.2,4.5-3.2c1,0,2.1,0.4,2.1,1.5c0,0.7-0.5,1.4-1.3,1.4c-0.8,0-1.5-0.6-2.3-0.6
+				      s-1.4,0.8-1.9,1.4c1.8,1.3,3,3.1,3,5.4c0,1.7-0.9,3.5-2.2,4.5c-1.4,1.2-3.4,1.5-5.3,1.5c-1.2,0-2.2-0.2-3.2-0.6
+				      c-0.7,0.3-1.7,1.1-1.7,1.9c0,1.3,2,1.4,2.8,1.5L94.6,56.8z M86.7,59.2c-1.4,0.4-2.9,1.7-2.9,3.2c0,3.2,4.8,3.7,7.1,3.7
+				      c2.3,0,6.9-0.5,6.9-3.6c0-2-2.6-2.2-4.1-2.4L86.7,59.2z M86.9,47c0,2.7,0.7,5,3.9,5c1.2,0,2.6-0.6,3.1-1.7
+				      c0.5-0.9,0.6-2.4,0.6-3.4c0-2.6-0.6-4.9-3.7-4.9C87.8,42,86.9,44.5,86.9,47z"/>
+	<path class="logo_letters" d="M107.7,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.2v-1.1c2.4-0.2,2.8-1.4,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2v2.5c1.6-1.7,4-2.8,6.8-2.8c2.3,0,3.9,0.6,5,2.8c1.8-1.6,4.3-2.8,6.6-2.8h0.1
+				      c1.5,0,3.1,0.5,4.1,1.8c0.8,1,0.9,2.3,0.9,3.5v7.9c0,1.9,0.3,3.3,2.7,3.5v1.1h-9.1v-1.1h0.3c2.3-0.2,2.7-1.4,2.7-3.5v-7.1
+				      c0-0.8,0-1.7-0.3-2.4c-0.4-1.1-1.4-1.8-2.6-1.8c-1.9,0-3.8,1.2-5.4,2.4v9c0,2.1,0.4,3.3,2.7,3.5h0.3v1.1H113v-1.1h0.3
+				      c2.3-0.2,2.7-1.4,2.7-3.5v-7.2c0-2-0.1-4.1-2.7-4.1c-2.1,0-4.1,1.2-5.5,2.4V53.9z"/>
+	<path class="logo_letters" d="M155.4,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L155.4,57.6z
+				      M147.9,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M167.5,42.2h-5.1v10.1c0,2,0,4.9,2.7,4.9c1.3,0,2.3-0.7,3.1-1.6l0.9,0.8c-1.2,1.6-3.1,2.3-5.1,2.3
+				      c-1.2,0-2.6-0.3-3.6-0.9c-1.4-0.9-1.6-2.3-1.6-3.9V42.2h-3v-1.2c4.1-0.1,4.9-3.1,4.9-6.6h1.5v6.6h5.1V42.2z"/>
+	<path class="logo_letters" d="M176.3,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.5v-1.1h0.3c2.4-0.1,2.7-1.3,2.7-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2V53.9z M174.5,39.3c-1.3,0-2.1-1-2.1-2.2c0-1.1,1-2.1,2.2-2.1c1.3,0,2.2,1,2.2,2.2
+				      C176.7,38.4,175.7,39.3,174.5,39.3z"/>
+	<path class="logo_letters" d="M197.6,54.8c-1.8,2.8-4.4,4-7.7,4c-5.4,0-8.9-3.5-8.9-8.9c0-5.4,3.3-9.2,8.9-9.2
+				      c1.7,0,3.3,0.3,4.8,1.3c1.2,0.8,2.4,2,2.4,3.5c0,1.1-0.7,2-1.8,2c-1,0-1.8-0.7-1.8-1.7c0-0.5,0.1-0.9,0.1-1.4
+				      c0-1.6-2.3-2.3-3.6-2.3c-4.1,0-4.9,4.5-4.9,7.7v0.1c0,3.6,1.6,7.5,5.8,7.5c2.5,0,4.1-1.4,5.6-3.3L197.6,54.8z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Bookshelf">
+    <g>
+      <g>
+	<path class="logo_letters" d="M68.6,86v-1.1l0.4,0c1-0.1,2.1-0.2,2.6-1.2c0.3-0.6,0.4-1.7,0.4-2.6V66.1c0-1.9-0.2-3.3-2.7-3.5
+				      l-0.6-0.1v-1.1H81c1.9,0,4.7,0.1,6.5,0.7c2.3,0.8,4,2.6,4,5.1c0,3.1-2.4,4.6-5.2,5.1v0.1c3.3,0.5,6.5,2.5,6.5,6.2
+				      c0,2.7-1.4,4.9-3.8,6.1c-2.2,1.1-5.2,1.2-7.6,1.2H68.6z M79.5,72c3.3,0,8.3,0,8.3-4.6c0-4.1-4.2-4.6-7.4-4.6c-1,0-3.3,0-4.2,0.8
+				      c-0.6,0.6-0.7,1.7-0.7,2.6V72H79.5z M75.5,80.3c0,1,0,2.6,0.6,3.3c0.8,0.8,3.1,0.9,4.2,0.9c1.8,0,4.2-0.2,5.8-1.1
+				      c1.7-1,2.6-2.8,2.6-4.8c0-2.2-1-4.2-3.3-4.8c-1.5-0.4-3.6-0.4-5.3-0.4h-4.6V80.3z"/>
+	<path class="logo_letters" d="M110.4,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C106.4,68.2,108.8,68.9,110.4,70.5z M104.3,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H104.3z"/>
+	<path class="logo_letters" d="M130.6,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C126.5,68.2,129,68.9,130.6,70.5z M124.5,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H124.5z"/>
+	<path class="logo_letters" d="M141.8,77l5.1-4.5c0.4-0.4,1.3-1,1.3-1.7c0-1-1.2-1.1-2-1.2v-1.1h9.6v1.1c-3.2,0.3-5.4,1.7-7.7,3.8
+				      l-0.9,0.8l5,7.3c1.2,1.7,2.6,3.1,4.8,3.4V86h-9.8v-1.1h0.4c0.7,0,1.6,0,1.6-1c0-0.8-0.8-1.8-1.2-2.4l-3.4-4.9l-2.9,2.6v2.3
+				      c0,2.1,0.2,3.4,2.5,3.5h0.6V86h-9.8v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1
+				      c1.8-0.2,3.5-0.5,5.2-1.2h1.4V77z"/>
+	<path class="logo_letters" d="M173,74.1h-1.2c-0.9-2.4-3.7-4.4-6.3-4.4c-1.6,0-3.7,0.7-3.7,2.6c0,1.8,2.1,2.1,3.4,2.4l4.1,1
+				      c2.7,0.6,5,1.6,5,4.8c0,4-4,5.8-7.5,5.8c-2.1,0-4.1-0.5-5.8-1.8l-0.4,1.5h-1.2l-1.3-6.4h1.3c1,3.2,4,5.2,7.3,5.2
+				      c1.8,0,4.5-0.9,4.5-3.2c0-1.8-1.6-2.2-3-2.5l-3.7-1c-2.7-0.7-5.8-1.4-5.8-4.8c0-3.3,3.7-5.1,6.6-5.1c1.8,0,3.7,0.5,5.1,1.6
+				      l0.4-1.3h1L173,74.1z"/>
+	<path class="logo_letters" d="M195.7,81.4c0,2,0.3,3.3,2.5,3.5h0.4V86H189v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5v-7.7
+				      c0-0.9,0-1.8-0.6-2.6c-0.6-0.7-1.5-1-2.4-1c-2.1,0-4.9,1.4-6.3,2.8v8.5c0,2,0.3,3.3,2.4,3.5h0.5V86h-9.6v-1.1h0.4
+				      c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4v11.1c2.1-1.8,4.5-3,7.3-3
+				      c1.3,0,3,0.4,4,1.2c1.4,1.1,1.4,2.6,1.4,4.1v0.3V81.4z"/>
+	<path class="logo_letters" d="M204.4,75.6l-0.1,1.8c0,1.7,0.6,3.6,1.5,5c1,1.5,2.8,2.2,4.6,2.2c2.4,0,4.1-1.2,5.3-3.3l1.2,0.6
+				      c-1.3,2.8-4.3,4.3-7.3,4.3c-2.4,0-4.5-0.6-6.3-2.3c-1.8-1.8-2.7-4.3-2.7-6.7c0-5.2,3.3-9,8.6-9h0.1c4.2,0,7.7,2.8,7.7,7.2v0.1
+				      H204.4z M213.1,74.1c0-2.7-1.7-4.4-4.1-4.4c-2.6,0-4.2,2.1-4.5,4.4H213.1z"/>
+	<path class="logo_letters" d="M225.4,81.4c0,1.9,0.3,3.3,2.5,3.5l0.4,0V86h-9.4v-1.1h0.3c2.3-0.2,2.7-1.3,2.7-3.5V66
+				      c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4V81.4z"/>
+	<path class="logo_letters" d="M239.6,69.7H236v11.7c0,2,0.3,3.3,2.5,3.5l0.5,0V86h-9.5v-1.1h0.3c2.3-0.1,2.7-1.3,2.7-3.5V69.7
+				      h-3.1v-1.2h3.1v-1.5c0-1.9,0.1-3.6,1.5-5.1c1.6-1.6,4.3-2.4,6.5-2.4c1.2,0,3.1,0.6,3.1,2.1c0,0.9-0.8,1.6-1.7,1.6
+				      c-1.7,0-1.7-2.1-3.4-2.1c-0.6,0-1.3,0.4-1.8,0.8c-0.8,0.8-0.8,1.7-0.8,2.8v3.9h3.6V69.7z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+
+    </a>
+  </div>
+
+  <div class="right tab-bar-section">
+    <a href="/cart" class="cart-in-navbar empty" data-reveal-ajax="true" data-reveal-id="common-modal" title="Display your cart and proceed to checkout"><figure class="icon-text">
+         
+        <i class="fa fa-shopping-cart cart-overlay">
+        </i>
+    
+         <figcaption>Cart <span class="cart-count"
+                aria-live="polite"
+                aria-label="number of items in cart">
+                (0)
+             </span></figcaption>
+      </figure>
+    </a>
+  </div>
+
+  <section class="right-small">
+    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+  </section>
+</nav>
+</div>
+
+<aside class="right-off-canvas-menu">
+  <ul class="sidebar">
+    <li class="inline-search"><form accept-charset="UTF-8" action="/search" class="search-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" /></div>
+  <div class="row collapse radius postfix-radius">
+    <div class="small-8 large-9 columns">
+      <input name="q"  placeholder="Search our catalog…" type="search" >
+    </div>
+    <div class="small-4 large-3 columns">
+      <button class="expand postfix">Search</button>
+    </div>
+  </div>
+</form></li>
+    <li><a href="https://pragprog.com/login?return_to=https%3A%2F%2Fpragprog.com%2Fbook%2Fbtlang%2Fseven-languages-in-seven-weeks"><figure class="icon-text">
+         <i class="fa fa-sign-in"></i>
+         <figcaption>Log in</figcaption>
+      </figure>
+    </a></li>
+    <li class="has-dropdown">
+  <a href="#"
+     alt="a dropdown menu containing links to our books, videos, magaines, and courses">
+    <figure class="icon-text">
+         <i class="fa fa-book"></i>
+         <figcaption>Books/Videos</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li class="active"><a href="https://pragprog.com/titles" title="Pragmatic topics to make developer&#x27;s lives easier"><i class="fa fa-book"></i> Books</a></li>
+<li><a href="https://pragprog.com/screencasts" title="Experts show you how it&#x27;s done"><i class="fa fa-video-camera"></i> Video</a></li>
+<li><a href="https://pragprog.com/audio_books" title="Listen to our Audio Books"><i class="fa fa-headphones"></i> Audio</a></li>
+<li><a href="https://pragmaticstudio.com" title="Learn online from the experts"><i class="fa fa-mortar-board"></i> Training</a></li>
+<li><a href="https://pragprog.com/magazines" title="Read our monthly magazine"><i class="fa fa-file"></i> Magazine</a></li>
+  </ul>
+</li>
+
+    <li class="has-dropdown">
+  <a href="#"
+     alt="dropdown containing links to our forums, resource listings, and support">
+    <figure class="icon-text">
+         <i class="fa fa-info-circle"></i>
+         <figcaption>Help</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li><a href="https://forums.pragprog.com" title="Join in the discussions"><i class="fa fa-comments"></i> Forums</a></li>
+<li><a href="https://pragprog.com/resources" title="Help finding the cool stuff"><i class="fa fa-user-plus"></i> Resources</a></li>
+<li><a href="https://pragprog.com/frequently-asked-questions" title="Got a problem? Let us help."><i class="fa fa-question-circle"></i> Support</a></li>
+  </ul>
+</li>
+
+  </ul>
+</aside>
+
+
+        <div id="layout">
+
+          <p class="panel hide">
+            <strong class="show-for-small-only">small</strong>
+            <strong class="show-for-medium-only">medium</strong>
+            <strong class="show-for-large-only">large</strong>
+            <strong class="show-for-xlarge-up">xlarge</strong>
+          </p>
+
+          <div id="error-popup"
+     class="reveal-modal small"
+     data-reveal
+     aria-hidden="true"
+     role="dialog">
+  <a href="#"
+     tabindex="0"
+     class="close-reveal-modal"
+     aria-label="Close Alert">&times;</a>
+  <div data-alert
+       class="alert-box"
+       tabindex="0"
+       aria-live="assertive"
+       role="dialogalert">
+  </div>
+</div>
+
+
+
+          <main id="#main">
+            
+            
+
+<section id="title-page">
+
+  <div class="hidden-schema">
+    <h1 itemprop="name">Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages</h1>
+    <h2>by <span itemprop="author">Bruce A. Tate</span></h2>
+  </div>
+
+
+    <div class="fixed hide-for-small">
+  <nav class="top-bar" data-topbar>
+
+    <section class="top-bar-section">
+      <div class="left pp-logo">
+          <a href="/" alt="The Pragmatic Bookshelf" >
+            <div id="logo-svg-container"
+     style="padding-bottom: 36.364% /* 100% * 100/275 */">
+  <svg version="1.1"
+       id="logo-svg"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px" y="0px"
+     viewBox="0 8.5 275 108.5"
+     preserveAspectRatio="xMinYMin meet"
+     xml:space="preserve">
+
+  <style type="text/css">
+   .logo_letters{fill:#e0e0f0;}
+   .trapezoid {fill:#006080;}
+  </style>
+
+  <g id="Trapezoid">
+    <polygon class="trapezoid" points="247,108.5 24,108.5 0,0 275,0"/>
+  </g>
+
+  <g id="The">
+    <g>
+      <g>
+	<path class="logo_letters" d="M61.3,26.4l-0.8,0.3c-0.9-1.8-2.6-3.1-4.6-3.1c-0.8,0-0.8,0.4-0.8,0.9V34c0,0.5,0,1.2,0.2,1.6
+				      c0.3,0.7,1,0.7,1.6,0.7h0.4V37h-6.5v-0.6l0.4,0c0.6,0,1.3-0.1,1.6-0.7c0.2-0.4,0.2-1.2,0.2-1.7v-9.4c0-0.7,0-1.1-0.9-1.1
+				      c-2.1,0-3.7,1.3-4.7,3.1l-0.7-0.3l1.2-3.7h12.2L61.3,26.4z"/>
+	<path class="logo_letters" d="M72.3,34.3c0,1.2,0.2,1.9,1.5,2H74V37h-5.6v-0.6h0.3c1.4-0.1,1.6-0.7,1.6-2v-4.5
+				      c0-0.5,0-1.1-0.3-1.5c-0.3-0.4-0.9-0.6-1.4-0.6c-1.2,0-2.9,0.8-3.7,1.7v5c0,1.2,0.1,2,1.4,2h0.3V37h-5.6v-0.6h0.2
+				      c1.4-0.1,1.7-0.7,1.7-2v-9c0-1.1-0.1-1.9-1.6-2l-0.3,0v-0.6c1-0.1,2.1-0.3,3-0.7h0.8v6.4c1.2-1,2.6-1.8,4.3-1.8
+				      c0.8,0,1.7,0.2,2.4,0.7c0.8,0.6,0.8,1.5,0.8,2.4v0.1V34.3z"/>
+	<path class="logo_letters" d="M77.4,30.9l0,1.1c0,1,0.4,2.1,0.9,2.9c0.6,0.9,1.6,1.3,2.7,1.3c1.4,0,2.4-0.7,3.1-1.9l0.7,0.4
+				      c-0.8,1.7-2.5,2.5-4.3,2.5c-1.4,0-2.6-0.4-3.7-1.4c-1-1-1.6-2.5-1.6-3.9c0-3,1.9-5.2,5-5.2h0c2.5,0,4.5,1.7,4.5,4.2v0.1H77.4z
+				      M82.5,30.1c0-1.6-1-2.6-2.4-2.6c-1.5,0-2.5,1.2-2.6,2.6H82.5z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Pragmatic">
+    <g>
+      <g>
+	<path class="logo_letters" d="M29.9,53.7c0,0.8,0,1.8,0.3,2.4c0.5,1.1,1.7,1.2,2.7,1.3l0.7,0v1.1H23.1v-1.1l0.3,0
+				      c1-0.1,2-0.2,2.4-1.2c0.4-0.8,0.4-2,0.4-3V38.6c0-1.9-0.2-3.3-2.7-3.5l-0.5,0V34h11.8c2.1,0,4.2,0.2,6,1.3c2,1.2,3.1,3.2,3.1,5.5
+				      c0,2.1-0.9,4.1-2.6,5.4c-1.8,1.4-4.4,1.6-6.6,1.6h-5V53.7z M34.3,46.4c1.8,0,3.4-0.1,4.7-1.5c1.1-1.2,1.4-2.5,1.4-4.1
+				      c0-1.5-0.5-3.1-1.7-4.1c-1.2-1-2.8-1.3-4.3-1.3c-0.9,0-3.3,0.1-4,0.7c-0.5,0.3-0.5,1.1-0.5,1.7v8.6H34.3z"/>
+	<path class="logo_letters" d="M51.7,53.9c0.1,2.1,0.4,3.3,2.7,3.5l0.6,0v1.1h-9.9v-1.1h0.4c2.4-0.1,2.8-1.3,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5H45v-1.1l5.5-0.8h1.2v2.7c1.6-1.6,3.6-3.1,6-3.1c1.2,0,2.7,0.5,2.7,1.9c0,1.2-0.9,1.9-2,1.9
+				      c-1.7,0-2.1-1.2-3.2-1.2c-1.2,0-2.7,1.1-3.5,2V53.9z"/>
+	<path class="logo_letters" d="M81.3,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L81.3,57.6z
+				      M73.7,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M94.6,56.8c2.7,0.4,5.8,0.9,5.8,4.4c0,4.9-5.8,6-9.7,6c-2.9,0-9.1-0.7-9.1-4.6
+				      c0-2.1,2.1-3.2,3.7-3.8v-0.1c-1.4-0.4-2.6-1.3-2.6-2.9c0-2,1.7-3.3,3.5-3.7c-1.8-1-2.8-2.9-2.8-4.9v-0.2c0.1-4,3.5-6.3,7.2-6.3
+				      c1.1,0,2.2,0.2,3.3,0.6c0.9-1.7,2.5-3.2,4.5-3.2c1,0,2.1,0.4,2.1,1.5c0,0.7-0.5,1.4-1.3,1.4c-0.8,0-1.5-0.6-2.3-0.6
+				      s-1.4,0.8-1.9,1.4c1.8,1.3,3,3.1,3,5.4c0,1.7-0.9,3.5-2.2,4.5c-1.4,1.2-3.4,1.5-5.3,1.5c-1.2,0-2.2-0.2-3.2-0.6
+				      c-0.7,0.3-1.7,1.1-1.7,1.9c0,1.3,2,1.4,2.8,1.5L94.6,56.8z M86.7,59.2c-1.4,0.4-2.9,1.7-2.9,3.2c0,3.2,4.8,3.7,7.1,3.7
+				      c2.3,0,6.9-0.5,6.9-3.6c0-2-2.6-2.2-4.1-2.4L86.7,59.2z M86.9,47c0,2.7,0.7,5,3.9,5c1.2,0,2.6-0.6,3.1-1.7
+				      c0.5-0.9,0.6-2.4,0.6-3.4c0-2.6-0.6-4.9-3.7-4.9C87.8,42,86.9,44.5,86.9,47z"/>
+	<path class="logo_letters" d="M107.7,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.2v-1.1c2.4-0.2,2.8-1.4,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2v2.5c1.6-1.7,4-2.8,6.8-2.8c2.3,0,3.9,0.6,5,2.8c1.8-1.6,4.3-2.8,6.6-2.8h0.1
+				      c1.5,0,3.1,0.5,4.1,1.8c0.8,1,0.9,2.3,0.9,3.5v7.9c0,1.9,0.3,3.3,2.7,3.5v1.1h-9.1v-1.1h0.3c2.3-0.2,2.7-1.4,2.7-3.5v-7.1
+				      c0-0.8,0-1.7-0.3-2.4c-0.4-1.1-1.4-1.8-2.6-1.8c-1.9,0-3.8,1.2-5.4,2.4v9c0,2.1,0.4,3.3,2.7,3.5h0.3v1.1H113v-1.1h0.3
+				      c2.3-0.2,2.7-1.4,2.7-3.5v-7.2c0-2-0.1-4.1-2.7-4.1c-2.1,0-4.1,1.2-5.5,2.4V53.9z"/>
+	<path class="logo_letters" d="M155.4,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L155.4,57.6z
+				      M147.9,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M167.5,42.2h-5.1v10.1c0,2,0,4.9,2.7,4.9c1.3,0,2.3-0.7,3.1-1.6l0.9,0.8c-1.2,1.6-3.1,2.3-5.1,2.3
+				      c-1.2,0-2.6-0.3-3.6-0.9c-1.4-0.9-1.6-2.3-1.6-3.9V42.2h-3v-1.2c4.1-0.1,4.9-3.1,4.9-6.6h1.5v6.6h5.1V42.2z"/>
+	<path class="logo_letters" d="M176.3,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.5v-1.1h0.3c2.4-0.1,2.7-1.3,2.7-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2V53.9z M174.5,39.3c-1.3,0-2.1-1-2.1-2.2c0-1.1,1-2.1,2.2-2.1c1.3,0,2.2,1,2.2,2.2
+				      C176.7,38.4,175.7,39.3,174.5,39.3z"/>
+	<path class="logo_letters" d="M197.6,54.8c-1.8,2.8-4.4,4-7.7,4c-5.4,0-8.9-3.5-8.9-8.9c0-5.4,3.3-9.2,8.9-9.2
+				      c1.7,0,3.3,0.3,4.8,1.3c1.2,0.8,2.4,2,2.4,3.5c0,1.1-0.7,2-1.8,2c-1,0-1.8-0.7-1.8-1.7c0-0.5,0.1-0.9,0.1-1.4
+				      c0-1.6-2.3-2.3-3.6-2.3c-4.1,0-4.9,4.5-4.9,7.7v0.1c0,3.6,1.6,7.5,5.8,7.5c2.5,0,4.1-1.4,5.6-3.3L197.6,54.8z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Bookshelf">
+    <g>
+      <g>
+	<path class="logo_letters" d="M68.6,86v-1.1l0.4,0c1-0.1,2.1-0.2,2.6-1.2c0.3-0.6,0.4-1.7,0.4-2.6V66.1c0-1.9-0.2-3.3-2.7-3.5
+				      l-0.6-0.1v-1.1H81c1.9,0,4.7,0.1,6.5,0.7c2.3,0.8,4,2.6,4,5.1c0,3.1-2.4,4.6-5.2,5.1v0.1c3.3,0.5,6.5,2.5,6.5,6.2
+				      c0,2.7-1.4,4.9-3.8,6.1c-2.2,1.1-5.2,1.2-7.6,1.2H68.6z M79.5,72c3.3,0,8.3,0,8.3-4.6c0-4.1-4.2-4.6-7.4-4.6c-1,0-3.3,0-4.2,0.8
+				      c-0.6,0.6-0.7,1.7-0.7,2.6V72H79.5z M75.5,80.3c0,1,0,2.6,0.6,3.3c0.8,0.8,3.1,0.9,4.2,0.9c1.8,0,4.2-0.2,5.8-1.1
+				      c1.7-1,2.6-2.8,2.6-4.8c0-2.2-1-4.2-3.3-4.8c-1.5-0.4-3.6-0.4-5.3-0.4h-4.6V80.3z"/>
+	<path class="logo_letters" d="M110.4,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C106.4,68.2,108.8,68.9,110.4,70.5z M104.3,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H104.3z"/>
+	<path class="logo_letters" d="M130.6,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C126.5,68.2,129,68.9,130.6,70.5z M124.5,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H124.5z"/>
+	<path class="logo_letters" d="M141.8,77l5.1-4.5c0.4-0.4,1.3-1,1.3-1.7c0-1-1.2-1.1-2-1.2v-1.1h9.6v1.1c-3.2,0.3-5.4,1.7-7.7,3.8
+				      l-0.9,0.8l5,7.3c1.2,1.7,2.6,3.1,4.8,3.4V86h-9.8v-1.1h0.4c0.7,0,1.6,0,1.6-1c0-0.8-0.8-1.8-1.2-2.4l-3.4-4.9l-2.9,2.6v2.3
+				      c0,2.1,0.2,3.4,2.5,3.5h0.6V86h-9.8v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1
+				      c1.8-0.2,3.5-0.5,5.2-1.2h1.4V77z"/>
+	<path class="logo_letters" d="M173,74.1h-1.2c-0.9-2.4-3.7-4.4-6.3-4.4c-1.6,0-3.7,0.7-3.7,2.6c0,1.8,2.1,2.1,3.4,2.4l4.1,1
+				      c2.7,0.6,5,1.6,5,4.8c0,4-4,5.8-7.5,5.8c-2.1,0-4.1-0.5-5.8-1.8l-0.4,1.5h-1.2l-1.3-6.4h1.3c1,3.2,4,5.2,7.3,5.2
+				      c1.8,0,4.5-0.9,4.5-3.2c0-1.8-1.6-2.2-3-2.5l-3.7-1c-2.7-0.7-5.8-1.4-5.8-4.8c0-3.3,3.7-5.1,6.6-5.1c1.8,0,3.7,0.5,5.1,1.6
+				      l0.4-1.3h1L173,74.1z"/>
+	<path class="logo_letters" d="M195.7,81.4c0,2,0.3,3.3,2.5,3.5h0.4V86H189v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5v-7.7
+				      c0-0.9,0-1.8-0.6-2.6c-0.6-0.7-1.5-1-2.4-1c-2.1,0-4.9,1.4-6.3,2.8v8.5c0,2,0.3,3.3,2.4,3.5h0.5V86h-9.6v-1.1h0.4
+				      c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4v11.1c2.1-1.8,4.5-3,7.3-3
+				      c1.3,0,3,0.4,4,1.2c1.4,1.1,1.4,2.6,1.4,4.1v0.3V81.4z"/>
+	<path class="logo_letters" d="M204.4,75.6l-0.1,1.8c0,1.7,0.6,3.6,1.5,5c1,1.5,2.8,2.2,4.6,2.2c2.4,0,4.1-1.2,5.3-3.3l1.2,0.6
+				      c-1.3,2.8-4.3,4.3-7.3,4.3c-2.4,0-4.5-0.6-6.3-2.3c-1.8-1.8-2.7-4.3-2.7-6.7c0-5.2,3.3-9,8.6-9h0.1c4.2,0,7.7,2.8,7.7,7.2v0.1
+				      H204.4z M213.1,74.1c0-2.7-1.7-4.4-4.1-4.4c-2.6,0-4.2,2.1-4.5,4.4H213.1z"/>
+	<path class="logo_letters" d="M225.4,81.4c0,1.9,0.3,3.3,2.5,3.5l0.4,0V86h-9.4v-1.1h0.3c2.3-0.2,2.7-1.3,2.7-3.5V66
+				      c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4V81.4z"/>
+	<path class="logo_letters" d="M239.6,69.7H236v11.7c0,2,0.3,3.3,2.5,3.5l0.5,0V86h-9.5v-1.1h0.3c2.3-0.1,2.7-1.3,2.7-3.5V69.7
+				      h-3.1v-1.2h3.1v-1.5c0-1.9,0.1-3.6,1.5-5.1c1.6-1.6,4.3-2.4,6.5-2.4c1.2,0,3.1,0.6,3.1,2.1c0,0.9-0.8,1.6-1.7,1.6
+				      c-1.7,0-1.7-2.1-3.4-2.1c-0.6,0-1.3,0.4-1.8,0.8c-0.8,0.8-0.8,1.7-0.8,2.8v3.9h3.6V69.7z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+
+          </a>
+      </div>
+
+      <ul class="right">
+
+        <li><a href="https://pragprog.com/login?return_to=https%3A%2F%2Fpragprog.com%2Fbook%2Fbtlang%2Fseven-languages-in-seven-weeks"><figure class="icon-text">
+         <i class="fa fa-sign-in"></i>
+         <figcaption>Log in</figcaption>
+      </figure>
+    </a></li>
+
+        <li class="divider"></li>
+
+        <li class="has-dropdown">
+  <a href="#"
+     alt="a dropdown menu containing links to our books, videos, magaines, and courses">
+    <figure class="icon-text">
+         <i class="fa fa-book"></i>
+         <figcaption>Books/Videos</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li class="active"><a href="https://pragprog.com/titles" title="Pragmatic topics to make developer&#x27;s lives easier"><i class="fa fa-book"></i> Books</a></li>
+<li><a href="https://pragprog.com/screencasts" title="Experts show you how it&#x27;s done"><i class="fa fa-video-camera"></i> Video</a></li>
+<li><a href="https://pragprog.com/audio_books" title="Listen to our Audio Books"><i class="fa fa-headphones"></i> Audio</a></li>
+<li><a href="https://pragmaticstudio.com" title="Learn online from the experts"><i class="fa fa-mortar-board"></i> Training</a></li>
+<li><a href="https://pragprog.com/magazines" title="Read our monthly magazine"><i class="fa fa-file"></i> Magazine</a></li>
+  </ul>
+</li>
+
+
+        <li class="divider"></li>
+
+        <li class="has-dropdown">
+  <a href="#"
+     alt="dropdown containing links to our forums, resource listings, and support">
+    <figure class="icon-text">
+         <i class="fa fa-info-circle"></i>
+         <figcaption>Help</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li><a href="https://forums.pragprog.com" title="Join in the discussions"><i class="fa fa-comments"></i> Forums</a></li>
+<li><a href="https://pragprog.com/resources" title="Help finding the cool stuff"><i class="fa fa-user-plus"></i> Resources</a></li>
+<li><a href="https://pragprog.com/frequently-asked-questions" title="Got a problem? Let us help."><i class="fa fa-question-circle"></i> Support</a></li>
+  </ul>
+</li>
+
+
+        <li class="divider"></li>
+
+        <li>
+          <a href="/cart" class="cart-in-navbar empty" data-reveal-ajax="true" data-reveal-id="common-modal" title="Display your cart and proceed to checkout"><figure class="icon-text">
+         
+        <i class="fa fa-shopping-cart cart-overlay">
+        </i>
+    
+         <figcaption>Cart <span class="cart-count"
+                aria-live="polite"
+                aria-label="number of items in cart">
+                (0)
+             </span></figcaption>
+      </figure>
+    </a>
+        </li>
+
+
+        <li class="show-for-medium-only">
+          <a data-dropdown="search-dropdown"
+             aria-controls="search-dropdown"
+             aria-expanded="false"
+             href="#"
+             role="search">
+            <figure class="icon-text">
+         <i class="fa fa-search"></i>
+         <figcaption>Search</figcaption>
+      </figure>
+    
+          </a>
+              <div id="search-dropdown"
+         data-dropdown-content
+         class="f-dropdown content"
+         aria-hidden="true"
+         tabindex="-1">
+      <form accept-charset="UTF-8" action="/search" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" /></div>
+        <div class="row collapse postfix-round">
+          <div class="small-12 columns">
+            <label for="#search-text">
+              Search…
+            </label>
+          </div>
+        </div>
+        <div class="row collapse postfix-round">
+          <div class="small-10 columns">
+            <input id="search-text" name="q" type="text" />
+          </div>
+          <div class="small-2 columns">
+            <input class="postfix button radius" id="submit-search" name="commit" type="submit" value="Go" />
+          </div>
+        </div>
+</form>    </div>
+
+        </li>
+
+        <li class="show-for-large-up has-form" >
+          <form accept-charset="UTF-8" action="/search" class="search-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" /></div>
+  <div class="row collapse radius postfix-radius">
+    <div class="small-8 large-9 columns">
+      <input name="q"  placeholder="Search our catalog…" type="search" >
+    </div>
+    <div class="small-4 large-3 columns">
+      <button class="expand postfix">Search</button>
+    </div>
+  </div>
+</form>
+        </li>
+
+      </ul>
+
+    </section>
+  </nav>
+</div>
+
+<div class="fixed show-for-small">
+<nav class="tab-bar">
+  <div class="left pp-logo small">
+    <a href="/" alt="The Pragmatic Bookshelf" >
+      <div id="logo-svg-container"
+     style="padding-bottom: 36.364% /* 100% * 100/275 */">
+  <svg version="1.1"
+       id="logo-svg"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px" y="0px"
+     viewBox="0 8.5 275 108.5"
+     preserveAspectRatio="xMinYMin meet"
+     xml:space="preserve">
+
+  <style type="text/css">
+   .logo_letters{fill:#e0e0f0;}
+   .trapezoid {fill:#006080;}
+  </style>
+
+  <g id="Trapezoid">
+    <polygon class="trapezoid" points="247,108.5 24,108.5 0,0 275,0"/>
+  </g>
+
+  <g id="The">
+    <g>
+      <g>
+	<path class="logo_letters" d="M61.3,26.4l-0.8,0.3c-0.9-1.8-2.6-3.1-4.6-3.1c-0.8,0-0.8,0.4-0.8,0.9V34c0,0.5,0,1.2,0.2,1.6
+				      c0.3,0.7,1,0.7,1.6,0.7h0.4V37h-6.5v-0.6l0.4,0c0.6,0,1.3-0.1,1.6-0.7c0.2-0.4,0.2-1.2,0.2-1.7v-9.4c0-0.7,0-1.1-0.9-1.1
+				      c-2.1,0-3.7,1.3-4.7,3.1l-0.7-0.3l1.2-3.7h12.2L61.3,26.4z"/>
+	<path class="logo_letters" d="M72.3,34.3c0,1.2,0.2,1.9,1.5,2H74V37h-5.6v-0.6h0.3c1.4-0.1,1.6-0.7,1.6-2v-4.5
+				      c0-0.5,0-1.1-0.3-1.5c-0.3-0.4-0.9-0.6-1.4-0.6c-1.2,0-2.9,0.8-3.7,1.7v5c0,1.2,0.1,2,1.4,2h0.3V37h-5.6v-0.6h0.2
+				      c1.4-0.1,1.7-0.7,1.7-2v-9c0-1.1-0.1-1.9-1.6-2l-0.3,0v-0.6c1-0.1,2.1-0.3,3-0.7h0.8v6.4c1.2-1,2.6-1.8,4.3-1.8
+				      c0.8,0,1.7,0.2,2.4,0.7c0.8,0.6,0.8,1.5,0.8,2.4v0.1V34.3z"/>
+	<path class="logo_letters" d="M77.4,30.9l0,1.1c0,1,0.4,2.1,0.9,2.9c0.6,0.9,1.6,1.3,2.7,1.3c1.4,0,2.4-0.7,3.1-1.9l0.7,0.4
+				      c-0.8,1.7-2.5,2.5-4.3,2.5c-1.4,0-2.6-0.4-3.7-1.4c-1-1-1.6-2.5-1.6-3.9c0-3,1.9-5.2,5-5.2h0c2.5,0,4.5,1.7,4.5,4.2v0.1H77.4z
+				      M82.5,30.1c0-1.6-1-2.6-2.4-2.6c-1.5,0-2.5,1.2-2.6,2.6H82.5z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Pragmatic">
+    <g>
+      <g>
+	<path class="logo_letters" d="M29.9,53.7c0,0.8,0,1.8,0.3,2.4c0.5,1.1,1.7,1.2,2.7,1.3l0.7,0v1.1H23.1v-1.1l0.3,0
+				      c1-0.1,2-0.2,2.4-1.2c0.4-0.8,0.4-2,0.4-3V38.6c0-1.9-0.2-3.3-2.7-3.5l-0.5,0V34h11.8c2.1,0,4.2,0.2,6,1.3c2,1.2,3.1,3.2,3.1,5.5
+				      c0,2.1-0.9,4.1-2.6,5.4c-1.8,1.4-4.4,1.6-6.6,1.6h-5V53.7z M34.3,46.4c1.8,0,3.4-0.1,4.7-1.5c1.1-1.2,1.4-2.5,1.4-4.1
+				      c0-1.5-0.5-3.1-1.7-4.1c-1.2-1-2.8-1.3-4.3-1.3c-0.9,0-3.3,0.1-4,0.7c-0.5,0.3-0.5,1.1-0.5,1.7v8.6H34.3z"/>
+	<path class="logo_letters" d="M51.7,53.9c0.1,2.1,0.4,3.3,2.7,3.5l0.6,0v1.1h-9.9v-1.1h0.4c2.4-0.1,2.8-1.3,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5H45v-1.1l5.5-0.8h1.2v2.7c1.6-1.6,3.6-3.1,6-3.1c1.2,0,2.7,0.5,2.7,1.9c0,1.2-0.9,1.9-2,1.9
+				      c-1.7,0-2.1-1.2-3.2-1.2c-1.2,0-2.7,1.1-3.5,2V53.9z"/>
+	<path class="logo_letters" d="M81.3,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L81.3,57.6z
+				      M73.7,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M94.6,56.8c2.7,0.4,5.8,0.9,5.8,4.4c0,4.9-5.8,6-9.7,6c-2.9,0-9.1-0.7-9.1-4.6
+				      c0-2.1,2.1-3.2,3.7-3.8v-0.1c-1.4-0.4-2.6-1.3-2.6-2.9c0-2,1.7-3.3,3.5-3.7c-1.8-1-2.8-2.9-2.8-4.9v-0.2c0.1-4,3.5-6.3,7.2-6.3
+				      c1.1,0,2.2,0.2,3.3,0.6c0.9-1.7,2.5-3.2,4.5-3.2c1,0,2.1,0.4,2.1,1.5c0,0.7-0.5,1.4-1.3,1.4c-0.8,0-1.5-0.6-2.3-0.6
+				      s-1.4,0.8-1.9,1.4c1.8,1.3,3,3.1,3,5.4c0,1.7-0.9,3.5-2.2,4.5c-1.4,1.2-3.4,1.5-5.3,1.5c-1.2,0-2.2-0.2-3.2-0.6
+				      c-0.7,0.3-1.7,1.1-1.7,1.9c0,1.3,2,1.4,2.8,1.5L94.6,56.8z M86.7,59.2c-1.4,0.4-2.9,1.7-2.9,3.2c0,3.2,4.8,3.7,7.1,3.7
+				      c2.3,0,6.9-0.5,6.9-3.6c0-2-2.6-2.2-4.1-2.4L86.7,59.2z M86.9,47c0,2.7,0.7,5,3.9,5c1.2,0,2.6-0.6,3.1-1.7
+				      c0.5-0.9,0.6-2.4,0.6-3.4c0-2.6-0.6-4.9-3.7-4.9C87.8,42,86.9,44.5,86.9,47z"/>
+	<path class="logo_letters" d="M107.7,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.2v-1.1c2.4-0.2,2.8-1.4,2.8-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2v2.5c1.6-1.7,4-2.8,6.8-2.8c2.3,0,3.9,0.6,5,2.8c1.8-1.6,4.3-2.8,6.6-2.8h0.1
+				      c1.5,0,3.1,0.5,4.1,1.8c0.8,1,0.9,2.3,0.9,3.5v7.9c0,1.9,0.3,3.3,2.7,3.5v1.1h-9.1v-1.1h0.3c2.3-0.2,2.7-1.4,2.7-3.5v-7.1
+				      c0-0.8,0-1.7-0.3-2.4c-0.4-1.1-1.4-1.8-2.6-1.8c-1.9,0-3.8,1.2-5.4,2.4v9c0,2.1,0.4,3.3,2.7,3.5h0.3v1.1H113v-1.1h0.3
+				      c2.3-0.2,2.7-1.4,2.7-3.5v-7.2c0-2-0.1-4.1-2.7-4.1c-2.1,0-4.1,1.2-5.5,2.4V53.9z"/>
+	<path class="logo_letters" d="M155.4,57.6c-0.9,0.8-2.3,1.2-3.5,1.2h-0.1c-1.8,0-3.4-0.8-3.9-2.6c-2.1,1.7-4.1,2.6-6.8,2.6
+				      c-2.5,0-5.5-1.4-5.5-4.2c0-2.4,1.5-3.6,3.6-4.5c1.9-0.9,4-1.3,6-1.5l2.7-0.3v-2.6c-0.1-1.1-0.3-2.1-1.3-2.7
+				      c-0.9-0.6-2.2-0.8-3.2-0.8c-1.1,0-3.5,0.5-3.5,1.9v0.5c0,1.2-0.5,2.2-1.8,2.2c-0.9,0-1.7-0.7-1.7-1.6c0-1.5,1.7-2.8,2.9-3.4
+				      c1.5-0.6,3.5-1,5.1-1h0.1c1.5,0,3.4,0.5,4.7,1.2c1.9,1,2.1,2.4,2.1,4.4v7.1c0,1.5,0.2,3.8,2,3.8c0.5,0,1-0.3,1.5-0.5L155.4,57.6z
+				      M147.9,49.5c-2.7,0.3-8.6,1-8.6,4.6c0,1.8,1.5,2.9,3.3,2.9c1.9,0,3.9-1.2,5.4-2.4V49.5z"/>
+	<path class="logo_letters" d="M167.5,42.2h-5.1v10.1c0,2,0,4.9,2.7,4.9c1.3,0,2.3-0.7,3.1-1.6l0.9,0.8c-1.2,1.6-3.1,2.3-5.1,2.3
+				      c-1.2,0-2.6-0.3-3.6-0.9c-1.4-0.9-1.6-2.3-1.6-3.9V42.2h-3v-1.2c4.1-0.1,4.9-3.1,4.9-6.6h1.5v6.6h5.1V42.2z"/>
+	<path class="logo_letters" d="M176.3,53.9c0,2,0.3,3.3,2.6,3.5h0.4v1.1h-9.5v-1.1h0.3c2.4-0.1,2.7-1.3,2.7-3.5v-7.5
+				      c0-2-0.4-3.3-2.6-3.5h-0.6v-1.1l5.5-0.8h1.2V53.9z M174.5,39.3c-1.3,0-2.1-1-2.1-2.2c0-1.1,1-2.1,2.2-2.1c1.3,0,2.2,1,2.2,2.2
+				      C176.7,38.4,175.7,39.3,174.5,39.3z"/>
+	<path class="logo_letters" d="M197.6,54.8c-1.8,2.8-4.4,4-7.7,4c-5.4,0-8.9-3.5-8.9-8.9c0-5.4,3.3-9.2,8.9-9.2
+				      c1.7,0,3.3,0.3,4.8,1.3c1.2,0.8,2.4,2,2.4,3.5c0,1.1-0.7,2-1.8,2c-1,0-1.8-0.7-1.8-1.7c0-0.5,0.1-0.9,0.1-1.4
+				      c0-1.6-2.3-2.3-3.6-2.3c-4.1,0-4.9,4.5-4.9,7.7v0.1c0,3.6,1.6,7.5,5.8,7.5c2.5,0,4.1-1.4,5.6-3.3L197.6,54.8z"/>
+      </g>
+    </g>
+  </g>
+  <g id="Bookshelf">
+    <g>
+      <g>
+	<path class="logo_letters" d="M68.6,86v-1.1l0.4,0c1-0.1,2.1-0.2,2.6-1.2c0.3-0.6,0.4-1.7,0.4-2.6V66.1c0-1.9-0.2-3.3-2.7-3.5
+				      l-0.6-0.1v-1.1H81c1.9,0,4.7,0.1,6.5,0.7c2.3,0.8,4,2.6,4,5.1c0,3.1-2.4,4.6-5.2,5.1v0.1c3.3,0.5,6.5,2.5,6.5,6.2
+				      c0,2.7-1.4,4.9-3.8,6.1c-2.2,1.1-5.2,1.2-7.6,1.2H68.6z M79.5,72c3.3,0,8.3,0,8.3-4.6c0-4.1-4.2-4.6-7.4-4.6c-1,0-3.3,0-4.2,0.8
+				      c-0.6,0.6-0.7,1.7-0.7,2.6V72H79.5z M75.5,80.3c0,1,0,2.6,0.6,3.3c0.8,0.8,3.1,0.9,4.2,0.9c1.8,0,4.2-0.2,5.8-1.1
+				      c1.7-1,2.6-2.8,2.6-4.8c0-2.2-1-4.2-3.3-4.8c-1.5-0.4-3.6-0.4-5.3-0.4h-4.6V80.3z"/>
+	<path class="logo_letters" d="M110.4,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C106.4,68.2,108.8,68.9,110.4,70.5z M104.3,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H104.3z"/>
+	<path class="logo_letters" d="M130.6,70.5c1.8,1.7,2.6,4.4,2.6,6.8c0,5.4-3.4,9-8.8,9c-5.3,0-8.8-3.5-8.8-8.8
+				      c0-5.4,3.1-9.3,8.7-9.3C126.5,68.2,129,68.9,130.6,70.5z M124.5,69.7c-4.1,0-5.1,4.4-5.1,7.7c0,3.5,1,7.5,5.3,7.5
+				      c3.9,0,4.8-4.1,4.8-7.2c0-1.7-0.1-3.7-0.9-5.3c-0.8-1.5-2.3-2.7-4-2.7H124.5z"/>
+	<path class="logo_letters" d="M141.8,77l5.1-4.5c0.4-0.4,1.3-1,1.3-1.7c0-1-1.2-1.1-2-1.2v-1.1h9.6v1.1c-3.2,0.3-5.4,1.7-7.7,3.8
+				      l-0.9,0.8l5,7.3c1.2,1.7,2.6,3.1,4.8,3.4V86h-9.8v-1.1h0.4c0.7,0,1.6,0,1.6-1c0-0.8-0.8-1.8-1.2-2.4l-3.4-4.9l-2.9,2.6v2.3
+				      c0,2.1,0.2,3.4,2.5,3.5h0.6V86h-9.8v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1
+				      c1.8-0.2,3.5-0.5,5.2-1.2h1.4V77z"/>
+	<path class="logo_letters" d="M173,74.1h-1.2c-0.9-2.4-3.7-4.4-6.3-4.4c-1.6,0-3.7,0.7-3.7,2.6c0,1.8,2.1,2.1,3.4,2.4l4.1,1
+				      c2.7,0.6,5,1.6,5,4.8c0,4-4,5.8-7.5,5.8c-2.1,0-4.1-0.5-5.8-1.8l-0.4,1.5h-1.2l-1.3-6.4h1.3c1,3.2,4,5.2,7.3,5.2
+				      c1.8,0,4.5-0.9,4.5-3.2c0-1.8-1.6-2.2-3-2.5l-3.7-1c-2.7-0.7-5.8-1.4-5.8-4.8c0-3.3,3.7-5.1,6.6-5.1c1.8,0,3.7,0.5,5.1,1.6
+				      l0.4-1.3h1L173,74.1z"/>
+	<path class="logo_letters" d="M195.7,81.4c0,2,0.3,3.3,2.5,3.5h0.4V86H189v-1.1h0.4c2.4-0.1,2.8-1.2,2.8-3.5v-7.7
+				      c0-0.9,0-1.8-0.6-2.6c-0.6-0.7-1.5-1-2.4-1c-2.1,0-4.9,1.4-6.3,2.8v8.5c0,2,0.3,3.3,2.4,3.5h0.5V86h-9.6v-1.1h0.4
+				      c2.4-0.1,2.8-1.2,2.8-3.5V66c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4v11.1c2.1-1.8,4.5-3,7.3-3
+				      c1.3,0,3,0.4,4,1.2c1.4,1.1,1.4,2.6,1.4,4.1v0.3V81.4z"/>
+	<path class="logo_letters" d="M204.4,75.6l-0.1,1.8c0,1.7,0.6,3.6,1.5,5c1,1.5,2.8,2.2,4.6,2.2c2.4,0,4.1-1.2,5.3-3.3l1.2,0.6
+				      c-1.3,2.8-4.3,4.3-7.3,4.3c-2.4,0-4.5-0.6-6.3-2.3c-1.8-1.8-2.7-4.3-2.7-6.7c0-5.2,3.3-9,8.6-9h0.1c4.2,0,7.7,2.8,7.7,7.2v0.1
+				      H204.4z M213.1,74.1c0-2.7-1.7-4.4-4.1-4.4c-2.6,0-4.2,2.1-4.5,4.4H213.1z"/>
+	<path class="logo_letters" d="M225.4,81.4c0,1.9,0.3,3.3,2.5,3.5l0.4,0V86h-9.4v-1.1h0.3c2.3-0.2,2.7-1.3,2.7-3.5V66
+				      c0-1.9-0.2-3.3-2.7-3.5l-0.5,0v-1.1c1.8-0.2,3.5-0.5,5.2-1.2h1.4V81.4z"/>
+	<path class="logo_letters" d="M239.6,69.7H236v11.7c0,2,0.3,3.3,2.5,3.5l0.5,0V86h-9.5v-1.1h0.3c2.3-0.1,2.7-1.3,2.7-3.5V69.7
+				      h-3.1v-1.2h3.1v-1.5c0-1.9,0.1-3.6,1.5-5.1c1.6-1.6,4.3-2.4,6.5-2.4c1.2,0,3.1,0.6,3.1,2.1c0,0.9-0.8,1.6-1.7,1.6
+				      c-1.7,0-1.7-2.1-3.4-2.1c-0.6,0-1.3,0.4-1.8,0.8c-0.8,0.8-0.8,1.7-0.8,2.8v3.9h3.6V69.7z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+
+    </a>
+  </div>
+
+  <div class="right tab-bar-section">
+    <a href="/cart" class="cart-in-navbar empty" data-reveal-ajax="true" data-reveal-id="common-modal" title="Display your cart and proceed to checkout"><figure class="icon-text">
+         
+        <i class="fa fa-shopping-cart cart-overlay">
+        </i>
+    
+         <figcaption>Cart <span class="cart-count"
+                aria-live="polite"
+                aria-label="number of items in cart">
+                (0)
+             </span></figcaption>
+      </figure>
+    </a>
+  </div>
+
+  <section class="right-small">
+    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+  </section>
+</nav>
+</div>
+
+<aside class="right-off-canvas-menu">
+  <ul class="sidebar">
+    <li class="inline-search"><form accept-charset="UTF-8" action="/search" class="search-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" /></div>
+  <div class="row collapse radius postfix-radius">
+    <div class="small-8 large-9 columns">
+      <input name="q"  placeholder="Search our catalog…" type="search" >
+    </div>
+    <div class="small-4 large-3 columns">
+      <button class="expand postfix">Search</button>
+    </div>
+  </div>
+</form></li>
+    <li><a href="https://pragprog.com/login?return_to=https%3A%2F%2Fpragprog.com%2Fbook%2Fbtlang%2Fseven-languages-in-seven-weeks"><figure class="icon-text">
+         <i class="fa fa-sign-in"></i>
+         <figcaption>Log in</figcaption>
+      </figure>
+    </a></li>
+    <li class="has-dropdown">
+  <a href="#"
+     alt="a dropdown menu containing links to our books, videos, magaines, and courses">
+    <figure class="icon-text">
+         <i class="fa fa-book"></i>
+         <figcaption>Books/Videos</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li class="active"><a href="https://pragprog.com/titles" title="Pragmatic topics to make developer&#x27;s lives easier"><i class="fa fa-book"></i> Books</a></li>
+<li><a href="https://pragprog.com/screencasts" title="Experts show you how it&#x27;s done"><i class="fa fa-video-camera"></i> Video</a></li>
+<li><a href="https://pragprog.com/audio_books" title="Listen to our Audio Books"><i class="fa fa-headphones"></i> Audio</a></li>
+<li><a href="https://pragmaticstudio.com" title="Learn online from the experts"><i class="fa fa-mortar-board"></i> Training</a></li>
+<li><a href="https://pragprog.com/magazines" title="Read our monthly magazine"><i class="fa fa-file"></i> Magazine</a></li>
+  </ul>
+</li>
+
+    <li class="has-dropdown">
+  <a href="#"
+     alt="dropdown containing links to our forums, resource listings, and support">
+    <figure class="icon-text">
+         <i class="fa fa-info-circle"></i>
+         <figcaption>Help</figcaption>
+      </figure>
+    
+  </a>
+  <ul class="dropdown">
+    <li><a href="https://forums.pragprog.com" title="Join in the discussions"><i class="fa fa-comments"></i> Forums</a></li>
+<li><a href="https://pragprog.com/resources" title="Help finding the cool stuff"><i class="fa fa-user-plus"></i> Resources</a></li>
+<li><a href="https://pragprog.com/frequently-asked-questions" title="Got a problem? Let us help."><i class="fa fa-question-circle"></i> Support</a></li>
+  </ul>
+</li>
+
+  </ul>
+</aside>
+
+    <div data-magellan-expedition
+         data-magellan-destination-threshold="99"
+         class="after-main-menu internal-nav"
+         >
+      <dl class="sub-nav">
+        <dd data-magellan-arrival="build">
+          <a href="#summary">Top</a></dd>
+        <dd data-magellan-arrival="details">
+          <a href="#details">Details</a></dd>
+
+
+        <dd data-magellan-arrival="links">
+          <a href="#links">Links</a></dd>
+
+          <dd data-magellan-arrival="forums">
+            <a href="#forums">Forums</a></dd>
+
+        <dd data-magellan-arrival="contents">
+          <a href="#contents">TOC</a></dd>
+        <dd data-magellan-arrival="author">
+          <a href="#author">Author</a></dd>
+      </dl>
+    </div>
+
+
+  <div data-magellan-destination="summary">
+    <a name="summary" >
+    </a>
+  </div>
+
+  
+<div class="title-and-author row center">
+  <div class="small-12 medium-8 medium-offset-4 columns">
+    <h1>Seven Languages in Seven Weeks</h1>
+    <h2>A Pragmatic Guide to Learning Programming Languages</h2>
+    <h3>by <span itemprop="author">Bruce A. Tate</span></h3>
+  </div>
+</div>
+
+<div class="title-top row center">
+  <div class="medium-3  columns end">
+    <div class="image-and-data">
+      <a href="https://imagery.pragprog.com/products/195/btlang.jpg?1298589937"><img alt="Cover image for Seven Languages in Seven Weeks" class="cover-xlarge b-lazy book-cover" height="228" id="title-book-cover-btlang" itemprop="image" src="https://imagery.pragprog.com/products/195/btlang_xlargecover.jpg?1298589937" title="Cover image for Seven Languages in Seven Weeks" width="190" /></a>
+
+      <table class="book-details">
+  <tr>
+    <th>Pages</th>
+    <td><span  itemprop="numberOfPages">330</span></td>
+  </tr>
+
+  <tr>
+    <th>Published</th>
+    <td><time itemprop="datePublished">2010-10-27</time></td>
+  </tr>
+
+    <tr>
+      <th>Release</th>
+      <td><span itemProp="release">P5.0 (2012-03-27)</span></td>
+    </tr>
+
+  <tr>
+    <th>ISBN</th>
+    <td><span itemprop="isbn">978-1-93435-659-3</span></td>
+  </tr>
+</table>
+
+    </div>
+  </div>
+
+  <div class="medium-4 medium-offset-1 columns ">
+    <article class="description" itemprop="description">
+      <p>You should learn a programming language every year, as recommended by <em>The Pragmatic Programmer</em>. But if one per year is good, how about <em>Seven Languages in Seven Weeks</em>? In this book you&#8217;ll get a hands-on tour of Clojure, Haskell, Io, Prolog, Scala, Erlang, and Ruby. Whether or not your favorite language is on that list, you&#8217;ll broaden your perspective of programming by examining these languages side-by-side. You&#8217;ll learn something new from each, and best of all, you&#8217;ll learn how to learn a language quickly.</p>
+    </article>
+
+      <article class="description web-highlight" >
+        <p>Just as each new spoken language can make you smarter and increase your options, each programming language increases your mental tool kit, adding new abstractions you can throw at each new problem. Knowledge is power. The Seven in Seven series builds on that power across many different dimensions. Each chapter in each book walks you through some nontrivial problem with each language, or database, or web server. These books take commitment to read, but their impact can be profound.</p>
+      </article>
+  </div>
+
+  <div class="medium-3 medium-offset-1 columns end">
+    
+  <div class="cart-or-buy-book buy-book-panel">
+    <form accept-charset="UTF-8" action="/cart/add_to_cart" class="buy-book" data-remote="true" id="buy-now" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="IwgYUVvNkMVNQtcr+LstOXcpiI/vMu2yzpGUM/eMrZk=" /></div>
+
+
+<fieldset >
+  <legend>Choose Your Format(s)</legend>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <ul class="product-prices">
+
+          <li itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+  <label>
+    <input type="radio"
+           name="sku_id"
+           value="307_306"
+           checked >
+    <span itemProp="bookFormat" class="format">eBook + Paper</span>
+  </label>
+  <span itemprop="price" class="price">$44.95</span>
+  <span style="display: none"
+        itemprop="availability"
+        href="http://schema.org/InStock">In Stock</span>
+    <p>
+      Save $15.00 on the combo pack.
+    </p>
+</li>
+
+
+          <li itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+  <label>
+    <input type="radio"
+           name="sku_id"
+           value="306"
+            >
+    <span itemProp="bookFormat" class="format">Paper Book</span>
+  </label>
+  <span itemprop="price" class="price">$34.95</span>
+  <span style="display: none"
+        itemprop="availability"
+        href="http://schema.org/InStock">In Stock</span>
+</li>
+
+
+          <li itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+  <label>
+    <input type="radio"
+           name="sku_id"
+           value="307"
+            >
+    <span itemProp="bookFormat" class="format">eBook</span>
+  </label>
+  <span itemprop="price" class="price">$25.00</span>
+  <span style="display: none"
+        itemprop="availability"
+        href="http://schema.org/InStock">In Stock</span>
+</li>
+
+
+
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="small-12 columns buy-buttons">
+
+      <input type="submit"
+      id="add-to-cart"
+      name="add-to-cart"
+      role="button"
+      class="submit success button small radius"
+      value="Add to cart…"
+      >
+    </div>
+  </div>
+
+
+  <div class="row">
+    <ul class="small-12 columns format-notes">
+      <li>
+        <p>
+          Ebooks are
+          <span data-tooltip
+                aria-haspopup="true"
+                class="has-tip radius"
+                title="
+                       <p>
+                       You are free to copy your ebooks between
+                       your devices, archive them, print them,
+                       and so on.
+                       </p>
+                       <p>
+                       You just can't give them to
+                       other people or sell them.
+                       </p>">
+            DRM free</span>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <span data-tooltip
+                aria-haspopup="true"
+                class="has-tip radius"
+                title="
+            <p>
+            Ebooks can be delivered via email, Dropbox,
+            and Google Drive (you'll need accounts on
+            both our system and the target system for the last
+            two options).
+        </p>">
+            Ebook delivery options.
+          </span>
+        </p>
+      </li>
+
+    </ul>
+  </div>
+
+</fieldset>
+</form>
+<!--
+
+  «% if cart.nil? -%>
+    «div class="formats left font-85">
+      «%= render :partial => 'titles/formats', :locals => { :title => title } %>
+    «/div>
+  «% end -%>
+
+-->
+
+  </div>
+
+
+  </div>
+
+  <div class="small-12" >
+    <hr class="top-separator"/>
+  </div>
+</div>
+
+
+
+  <section>
+    <div class="row title-section"><div class="medium-3 large-4 columns"><h1 data-magellan-destination="details" id="details">About This Title</h1></div><div class="medium-6  columns end">
+
+
+  <p>Ruby, Io, Prolog, Scala, Erlang, Clojure, Haskell.  With <em>Seven Languages in Seven Weeks,</em> by Bruce A. Tate, you&#8217;ll go beyond the syntax—and beyond the 20-minute tutorial you&#8217;ll find someplace online.  This book has an audacious goal: to present a meaningful exploration of seven languages within a single book.  <em>Seven Languages</em> hits what&#8217;s essential and unique about each language and will help teach you how to grok new languages.</p>
+
+
+	<p>For each language, you&#8217;ll solve a nontrivial problem, using techniques that show off the language&#8217;s most important features.  You&#8217;ll discover the strengths and weaknesses of each language while dissecting the process of learning languages quickly&#8212;for example, finding the typing and programming models, decision structures, and how you interact with them.</p>
+
+
+	<p>Among this group of seven, you&#8217;ll explore the most critical programming models of our time.  Learn the dynamic typing that makes Ruby, Python, and Perl so flexible and compelling. Understand the underlying prototype system that&#8217;s at the heart of JavaScript. See how pattern matching in Prolog shaped the development of Scala and Erlang. Discover how pure functional programming in Haskell is different from the Lisp family of languages, including Clojure.</p>
+
+
+	<p>Explore the concurrency techniques that are quickly becoming the backbone of a new generation of Internet applications. Find out how to use Erlang&#8217;s let-it-crash philosophy for building fault-tolerant systems. Understand the actor model that drives concurrency design in Io and Scala.  Learn how Clojure uses versioning to solve some of the most difficult concurrency problems.</p>
+
+
+	<p>It&#8217;s all here, all in one place.  Use the concepts from one language to find creative solutions in another—or discover a language that may become one of your favorites.</p>
+
+    <p>
+      Read
+      <a href="#reviews" id="44fb878c-7560-4227-9abb-7e70eccd226e" rel="modal:open">the reviews <i class='fa fa-eye'></i></a>.
+    </p>
+</div></div>
+
+      <div class="row title-section"><div class="medium-3 large-4 columns"><h1 data-magellan-destination="related" id="related">You Might Also Like</h1></div><div class="medium-6  columns end">
+    
+    <ul class=" book-cover-list"><li class="book-cover-item cover-large" data-id="49" data-pubdate="2004-&amp;10-01" data-title="programming ruby" style=""><a href="https://pragprog.com/book/ruby/programming-ruby" title="Cover for Programming Ruby. Click to pop-up details."><img alt="Cover Image For Programming Ruby…" class="cover-large b-lazy book-cover" height="144" src="https://imagery.pragprog.com/products/49/ruby_largecover.jpg?1298589710" width="120" /></a></li><li class="book-cover-item cover-large" data-id="167" data-pubdate="2010-&amp;06-17" data-title="sql antipatterns" style=""><a href="https://pragprog.com/book/bksqla/sql-antipatterns" title="Cover for SQL Antipatterns. Click to pop-up details."><img alt="Cover Image For SQL Antipatterns…" class="cover-large b-lazy book-cover" height="144" src="https://imagery.pragprog.com/products/167/bksqla_largecover.jpg?1298589874" width="120" /></a></li><li class="book-cover-item cover-large" data-id="340" data-pubdate="2014-&amp;07-10" data-title="seven concurrency models in seven weeks" style=""><a href="https://pragprog.com/book/pb7con/seven-concurrency-models-in-seven-weeks" title="Cover for Seven Concurrency Models in Seven Weeks. Click to pop-up details."><img alt="Cover Image For Seven Concurrency Models in Seven Weeks…" class="cover-large b-lazy book-cover" height="144" src="https://imagery.pragprog.com/products/340/pb7con_largecover.jpg?1381427917" width="120" /></a></li><li class="book-cover-item cover-large" data-id="299" data-pubdate="2014-&amp;01-15" data-title="seven web frameworks in seven weeks" style=""><a href="https://pragprog.com/book/7web/seven-web-frameworks-in-seven-weeks" title="Cover for Seven Web Frameworks in Seven Weeks. Click to pop-up details."><img alt="Cover Image For Seven Web Frameworks in Seven Weeks…" class="cover-large b-lazy book-cover" height="144" src="https://imagery.pragprog.com/products/299/7web_largecover.jpg?1381427862" width="120" /></a></li><li class="book-cover-item cover-large" data-id="251" data-pubdate="2012-&amp;05-11" data-title="seven databases in seven weeks" style=""><a href="https://pragprog.com/book/rwdata/seven-databases-in-seven-weeks" title="Cover for Seven Databases in Seven Weeks. Click to pop-up details."><img alt="Cover Image For Seven Databases in Seven Weeks…" class="cover-large b-lazy book-cover" height="144" src="https://imagery.pragprog.com/products/251/rwdata_largecover.jpg?1381427963" width="120" /></a></li></ul>
+    
+</div></div>
+
+
+      <div class="row title-section"><div class="medium-3 large-4 columns"><h1 data-magellan-destination="links" id="links">Resources</h1></div><div class="medium-6  columns end">
+    
+    <ul><li><a href="https://pragprog.com/titles/btlang/source_code">Source code</a></li><li><a href="https://pragprog.com/titles/btlang/errata">Errata</a></li><li><a href="/titles/btlang/release_info" data-reveal-ajax="true" data-reveal-id="common-modal" title="Seven Languages in Seven Weeks">Releases</a></li></ul>
+      
+</div></div>
+
+      <div class="row title-section"><div class="medium-3 large-4 columns"><h1 data-magellan-destination="forums" id="forums">Forums</h1></div><div class="medium-6  columns end">
+
+  <p>
+    Each of our books has its own dedicated discussion
+    area, where readers help each other out. Many authors
+    also choose to drop by.
+  </p>
+  <p>
+    <a href="https://forums.pragprog.com/forums/147">Join in…</a>
+  </p>
+
+  <p>
+    Here are some recent topics:
+  </p>
+
+  <ul>
+      <li>
+        <a href="https://forums.pragprog.com/forums/147/topics/14600">Io message example</a>
+      </li>
+      <li>
+        <a href="https://forums.pragprog.com/forums/147/topics/13512">Io parser behavior, Day 3, and general method lookup</a>
+      </li>
+      <li>
+        <a href="https://forums.pragprog.com/forums/147/topics/7077">ruby day 2</a>
+      </li>
+      <li>
+        <a href="https://forums.pragprog.com/forums/147/topics/13226">Footnote 3 on page 35 (Ruby)</a>
+      </li>
+      <li>
+        <a href="https://forums.pragprog.com/forums/147/topics/13216">Io xor operator - simpler implementation</a>
+      </li>
+  </ul>
+
+</div></div>
+
+    <div class="row title-section"><div class="medium-3 large-4 columns"><h1 data-magellan-destination="contents" id="contents">Contents &amp; Extracts</h1></div><div class="medium-6  columns end">
+
+
+  <article id="toc">
+    <p><a href="http://media.pragprog.com/titles/btlang/toc.pdf">Full Table of Contents</a></p>
+
+
+	<ul>
+	<li>Foreword</li>
+		<li><a href="http://media.pragprog.com/titles/btlang/introduction.pdf">Introduction</a></li>
+		<li>Ruby</li>
+		<li>Io   <a href="http://media.pragprog.com/titles/btlang/lo.pdf">excerpt</a></li>
+		<li>Prolog  <a href="http://media.pragprog.com/titles/btlang/prolog.pdf">excerpt</a></li>
+		<li>Scala</li>
+		<li>Erlang</li>
+		<li>Clojure</li>
+		<li>Haskell</li>
+		<li>Wrap-up</li>
+		<li>Bibliography</li>
+	</ul>
+  </article>
+</div></div>
+
+    <div class="row title-section"><div class="medium-3 large-4 columns"><h1 data-magellan-destination="author" id="author">Brought to You By</h1></div><div class="medium-6  columns end">
+
+  <p><strong>Bruce Tate</strong> runs RapidRed, an Austin, TX-based practice that consults on lightweight development in Ruby. Previously he worked at <span class="caps">IBM</span> in roles ranging from a database systems programmer to Java consultant. He left <span class="caps">IBM</span> to work for several startups in roles ranging from Client Solutions Director to <span class="caps">CTO</span>.   He speaks internationally and is the author of more than ten books, including <em>From Java to Ruby, Deploying Rails Applications,</em> the best-selling <em>Bitter</em> series, <em>Beyond Java,</em> and the Jolt-winning <em>Better, Faster, Lighter Java.</em></p>
+
+
+</div></div>
+  </section>
+
+    <aside id="reviews"
+       aria-hidden="true"
+       role="dialog"
+       aria-label="list of reviews"
+       style="display: none">
+
+  <a href="#" class="closing button info tiny radius" rel="modal:close"><i class='fa fa-times'></i></a>
+  <ul>
+      <li>
+        <blockquote><p>I have been programming for 25 years in a variety of hardware and
+software languages. After reading Seven Languages in Seven Weeks, I
+am starting to understand how to evaluate languages for their objective
+strengths and weaknesses. More importantly, I feel as if I could
+pick one of them to actually get some work done.</p><footer><cite><span aria-label="review author" class="reviewer-name">Chris Kappler</span><span aria-label="reviewer title" class="reviewer-title">, Senior scientist</span><span aria-label="reviewer&#x27;s company" class="reviewer-company">, Raytheon BBN Technologies</span></cite></footer></blockquote>
+      </li>
+      <li>
+        <blockquote><p>I spent most of my time as a computer sciences student saying I didn’t
+want to be a software developer and then became one anyway. Seven
+Languages in Seven Weeks expanded my way of thinking about problems
+and reminded me what I love about programming.</p><footer><cite><span aria-label="review author" class="reviewer-name">Travis Kaspar</span><span aria-label="reviewer title" class="reviewer-title">, Software engineer</span><span aria-label="reviewer&#x27;s company" class="reviewer-company">, Northrop Grumman</span></cite></footer></blockquote>
+      </li>
+      <li>
+        <blockquote><p>Do you want seven kick starts into learning your “language of the
+year”? Do you want your thinking challenged about programming in
+general? Look no further than this book. I personally was taken back
+in time to my undergraduate computer science days, coasting through
+my programming languages survey course. The difference is that
+Bruce won’t let you coast through this course! This isn’t a leisurely
+read—you’ll have to work this book. I believe you’ll find it both mindblowing
+and intensely practical at the same time.</p><footer><cite><span aria-label="review author" class="reviewer-name">Matt Stine</span><span aria-label="reviewer title" class="reviewer-title">, Group leader, Research Application Development</span><span aria-label="reviewer&#x27;s company" class="reviewer-company">, St. Jude Children&#x27;s Research Hospital</span></cite></footer></blockquote>
+      </li>
+      <li>
+        <blockquote><p>Fasten your seat belts, because you are in for a fast-paced journey.
+This book is packed with programming-language-learning action.
+Bruce puts it all on the line, and the result is an engaging, rewarding
+book that passionate programmers will thoroughly enjoy. If you
+love learning new languages, if you want to challenge your mind, if
+you want to take your programming skills to the next level—this book
+is for you. You will not be disappointed.</p><footer><cite><span aria-label="review author" class="reviewer-name">Frederic Daoud</span><span aria-label="reviewer title" class="reviewer-title">, Author, &quot;Stripes ...and Java Web Development Is Fun Again&quot; and &quot;Getting Started with Apache Click&quot;</span></cite></footer></blockquote>
+      </li>
+      <li>
+        <blockquote><p>As a programmer, the importance of being exposed to new programming
+languages, paradigms, and techniques cannot be overstated.
+This book does a marvelous job of introducing seven important and
+diverse languages in a concise—but nontrivial—manner, revealing
+their strengths and reasons for being. This book is akin to a dim-sum
+buffet for any programmer who is interested in exploring new horizons
+or evaluating emerging languages before committing to studying one
+in particular.</p><footer><cite><span aria-label="review author" class="reviewer-name">Antonio Cangiano</span><span aria-label="reviewer title" class="reviewer-title">, Software engineer and technical evangelist</span><span aria-label="reviewer&#x27;s company" class="reviewer-company">, IBM</span></cite></footer></blockquote>
+      </li>
+      <li>
+        <blockquote><p>Knowing multiple paradigms greatly influences our design abilities, so
+I’m always on the lookout for good books that’ll help me learn them.
+This book nicely brings prominent paradigms together. Bruce has
+experience learning and using multiple languages. Now you can gain
+from his experience through this book. I highly recommend it.</p><footer><cite><span aria-label="review author" class="reviewer-name">Dr. Venkat Subramaniam</span><span aria-label="reviewer title" class="reviewer-title">, Award-winning author and founder</span><span aria-label="reviewer&#x27;s company" class="reviewer-company">, Agile Developer, Inc.</span></cite></footer></blockquote>
+      </li>
+  </ul>
+</aside>
+
+
+  
+</section>
+
+
+
+          </main>
+
+        </div>
+
+        <div id="common-modal"
+     class="reveal-modal"
+     data-reveal
+     aria-hidden="true"
+     role="dialog">
+</div>
+
+<div id="medium-modal"
+     class="medium reveal-modal"
+     data-reveal
+     aria-hidden="true"
+     role="dialog">
+</div>
+
+<div id="small-modal"
+     class="small reveal-modal"
+     data-reveal
+     aria-hidden="true"
+     role="dialog">
+</div>
+
+<div id="confirm-add-to-cart-modal"
+     class="medium reveal-modal"
+     data-reveal
+     aria-hidden="true"
+     role="dialog">
+
+  <div class="row" >
+    <div class="small-8 small-offset-2 columns end" >
+      <p id="message">
+      </p>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="small-4 small-offset-2 columns" >
+      <button aria-label="Close" class="small radius" onclick="$(&#x27;.reveal-modal.open&#x27;).foundation(&#x27;reveal&#x27;, &#x27;close&#x27;); return false" type="submit"><span>Continue<br />Shopping</span></button>
+    </div>
+    <div class="small-4 columns end" >
+      <a href="/cart" class="button small radius success" data-reveal-ajax="true" data-reveal-id="common-modal" title="Display your cart and proceed to checkout">View Your<br/>Cart</a>
+    </div>
+  </div>
+
+</div>
+
+<div id="confirm-add-to-cart-prior-purchase-modal"
+     class="medium reveal-modal"
+     data-reveal
+     aria-hidden="true"
+     role="dialog">
+
+  <div class="row" >
+    <div class="small-8 small-offset-2 columns end" >
+      <p id="header-message">
+      </p>
+      <ul id="items">
+      </ul>
+      <p id="footer-message">
+      </p>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="small-4 small-offset-2 columns" >
+      <button class="small radius success" onclick="$(&#x27;&lt;input&gt;&#x27;).attr({
+                                          type: &#x27;hidden&#x27;,
+                                          name: &#x27;items-confirmed&#x27;
+                                       }).appendTo(&#x27;#buy-now&#x27;); $(&#x27;#buy-now&#x27;).submit();
+                                       $(&#x27;.reveal-modal.open&#x27;).foundation(&#x27;reveal&#x27;, &#x27;close&#x27;);
+                                      " type="submit"><span>Yes</span></button>
+    </div>
+    <div class="small-4 columns end" >
+      <button aria-label="Close" class="small radius secondary" onclick="$(&#x27;.reveal-modal.open&#x27;).foundation(&#x27;reveal&#x27;, &#x27;close&#x27;); return false" type="submit"><span>No</span></button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+        <a class="exit-off-canvas"></a>
+
+      </div>
+    </div>
+    <div id="push"></div>
+    </div>
+
+    
+<footer id="footer">
+  <div class="row">
+    <div class="small-12 columns">
+
+      <div class="right copyright">
+        <p>© 1999–2016 The Pragmatic Programmers, LLC</p>
+      </div>
+      
+      <nav id="footer-links">
+        <ul class="inline-list">
+          <li>
+            <a href="https://pragprog.com/about">Meet the team</a>
+          </li>
+          <li>
+            <a href="https://pragprog.com/contact">Contact</a>
+          </li>
+          <li class="show-for-medium-up">
+            <a href="http://write-for-us.pragprog.com/">Write For Us</a>
+          </li>
+          <li class="show-for-medium-up">
+            <a href="https://pragprog.com/privacy">Privacy</a>
+          </li>
+          <li class="show-for-medium-up">
+            <a href="https://pragprog.com/security">Security</a>
+          </li>
+          <li class="show-for-medium-up">
+            <a href="https://pragprog.com/terms-of-use">Legal</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+
+
+
+      <script async="async" src="/assets/pip-foundation-608fd67726ea9bc081371601db91e233.js" type="text/javascript"></script>
+
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+
+    
+
+  </body>
+
+
+</html>

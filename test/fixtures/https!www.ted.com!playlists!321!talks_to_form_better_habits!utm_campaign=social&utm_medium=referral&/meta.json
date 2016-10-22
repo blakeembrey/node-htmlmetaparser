@@ -1,0 +1,25 @@
+{
+  "url": "https://www.ted.com/playlists/321/talks_to_form_better_habits?utm_campaign=social&utm_medium=referral&utm_source=facebook.com&utm_content=playlist&utm_term=social-science",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "0",
+    "cache-control": "max-age=0, public, s-maxage=180",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-length": "22206",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "server": "nginx",
+    "set-cookie": [
+      "_nu=1477102246.431; Expires=Thu, 21 Oct 2021 02:10:46 GMT; Path=/",
+      "_abby=JoToXEW9Et61P9d; Expires=Thu, 21 Oct 2021 02:10:46 GMT; Path=/; Domain=.ted.com"
+    ],
+    "status": "200 OK",
+    "x-content-type-options": "nosniff",
+    "x-served-by": "e01; w01",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.ted.com/playlists/321/talks_to_form_better_habits?utm_campaign=social&utm_medium=referral&utm_source=facebook.com&utm_content=playlist&utm_term=social-science",
+  "status": 200,
+  "statusText": "OK"
+}

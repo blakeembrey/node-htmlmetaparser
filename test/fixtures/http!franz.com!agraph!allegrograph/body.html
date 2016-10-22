@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<head> <title>AllegroGraph - Semantic Graph Database</title> 
+
+<meta name="title"
+content="Semantic Technologies AllegroGraph Triple Store RDF Web 3.0 Database,
+optimized SPARQL Query engine, Prolog and RDFS+ reasoner">
+
+<meta name="description" content="AllegroGraph RDFStore is a
+high-performance, scalable persistent RDF graph database. AllegroGraph
+uses disk-based storage, enabling it to scale to billions of RDF and
+OWL triples while maintaining superior performance. AllegroGraph
+supports SPARQL queries and RDFS++, and Prolog reasoning from Java,
+Python, Common Lisp, Ruby, C++, and HTTP REST applications"> 
+
+<!-- link to magicthumb.css file -->
+        <link href="/magicthumb/magicthumb.css" rel="stylesheet" type="text/css" media="screen"/>
+        <!-- link to magicthumb.js file -->
+        <script src="/magicthumb/magicthumb.js" type="text/javascript"></script>
+<script type="text/javascript">
+MagicThumb.options = { zIndex: 10000 };
+</script>
+
+
+<!--start of post_head.inc-->
+
+<!--META TAGS-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="keywords" content="Franz Inc, Lisp, Enterprise
+Development Tools, Common Lisp, Allegro CL, ACL, Allegro Common Lisp
+AllegroCache, RDF, OWL, SPARQL, Semantic Web Technology, AllegroGraph
+Web 3.0 Database, Triple Store, RacerPro, TopBraid Composer"/>
+
+<meta name="description" content="Franz is a leading vendor of Graph
+Search Technology (AllegroGraph and Gruff) and Common Lisp Software
+Development Tools (Allegro CL and AllegroCache)"/>
+
+<!--The following are for Firefox's Live Bookmarks-->
+<link rel="alternate" type="application/rss+xml"
+      title="General Allegro Common Lisp News"
+      href="/rss20_main.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Technical Support Feed for Allegro Common Lisp"
+      href="/rss20_support.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 7.0"
+      href="/support/patches/log/7.0/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 8.0"
+      href="/support/patches/log/8.0/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 8.1"
+      href="/support/patches/log/8.1/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 8.2"
+      href="/support/patches/log/8.2/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="Patch Feed for Allegro Common Lisp 9.0"
+      href="/support/patches/log/9.0/rss20_patch.xml"/>
+<link rel="alternate" type="application/rss+xml"
+      title="AllegroCache release notification Feed"
+      href="/products/allegrocache/download/dist/rss20_acache.xml"/>
+
+<link rel="stylesheet" type="text/css" href="/css/franz.css"/>
+
+<script type="text/javascript" language="JavaScript" src="/site.js">
+</script>
+
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+<!-- New Google Analytics Asynchronous Tracking Code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8392475-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<!--end of post_head.inc-->
+<!--start of top_nav.inc-->
+<center>
+  <div class="doc">
+    <!-- Franz header begins -->
+    <div id="hd2">
+      <ul>
+ <li class="logo">
+
+    <a href="/"><img src="/images/franz-in-front_white2-ai.png" alt="Franz.com" /></a></li>
+<!--
+    <a href="/"><img src="/images/lg_franz.gif" alt="Franz.com" /></a></li>
+-->
+	<li class="srchcntr"> 
+	  <div class="intls"> 
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cja&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_japan_flag.png" alt="Japan"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cko&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_southkorea_flag.png" alt="South Korea"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cfr&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_france_flag.png" alt="France"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cpt&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_brazil_flag.png" alt="Brazil"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Czh-TW&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_china_flag.png" alt="China"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cde&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_germany_flag.png" alt="Germany"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Cru&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_russia_flag.png" alt="Russia"/></a>
+	    <a href="http://translate.google.com/translate?u=http%3A%2F%2Ffranz.com&amp;langpair=en%7Ces&amp;hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;prev=%2Flanguage_tools"><img src="/images/icn_spain_flag.png" alt="Spain"/></a>
+	  </div><!-- class=intls -->
+	  <div class="search">
+	    <form method="post" action="/htdig-bin/htsearch"><input id="srch" type="text" name="words" maxlength="100"/><input type="submit" id="search" class="srchbtn" name="Ask" value="Search"/>
+	      <input type="hidden" name="method" value="or"/>
+	      <input type="hidden" name="format" value="builtin-long"/>
+	      <input type="hidden" name="sort" value="score"/>
+	      <input type="hidden" name="config" value="mainsite"/>
+	      <input type="hidden" name="restrict" value=""/>
+	      <input type="hidden" name="exclude" value="/support/documentation/8.1.beta/|/support/documentation/6.2/|/support/documentation/6.1/|/support/documentation/6.0/|/support/documentation/5.0.1/|/support/documentation/5.0/"/>
+	    </form>
+	  </div>
+	  <div class="sublinks">
+	    <a href="/support.lhtml">Support/Doc</a> |
+	    <a href="/about/">About</a> |
+	    <a href="/purchase.lhtml">Purchase</a>  |
+	    <a href="/search/">Advanced Search</a>
+	  </div>
+	</li>
+      </ul>
+    </div> <!-- class=hdX -->
+    <!-- Franz header ends -->
+    
+    <!-- Nav bar begins -->
+    <div id="nav" class="nav">
+      <ul>
+<li class="tb"><a href="/">Home</a></li>
+	<li class="tb_wwlink selected"><a href="/agraph/">Semantic Graph Technologies</a></li>
+	<li class="tb"><a href="/enterprise_development_tools.lhtml">Common Lisp Tools</a></li>
+        <li class="tb"><a href="/ps/index.lhtml">Professional Services</a></li>
+
+      </ul> 
+    </div> <!-- class=nav -->
+    <!-- Nav bar ends -->
+    <div style="clear:both"></div>
+    <!--div class=doc is open -->
+<!--end of top_nav.inc-->
+<!-- start pre_menu.inc -->
+   <!-- Content begins -->
+   <div id="content2" class="wrapper">
+     <!-- Left Nav begins -->
+   <div class="leftnav">
+   <ul class="sub">
+<!-- end pre_menu.inc -->
+<li class="selected">AllegroGraph</li>
+<div class="ssmenu">
+<ul>
+<li class="selected2">Product Description</li>
+<ul class="sssmenu">
+<li><a href="/agraph/support/documentation/current/agraph-introduction.html" target="_blank">Documentation</a></li>
+<li><a href="/agraph/allegrograph/agraph_benchmarks.lhtml">Benchmarks</a></li>
+<li><a href="/agraph/downloads/">Downloads</a></li>
+</ul>
+<li><a href="/agraph/cresources/white_papers/">White Papers</a></li>
+<li><a href="/agraph/success/">Customers</a></li>
+</ul></div>
+<li><a href="/agraph/gruff/">Gruff</a></li>
+<li><a href="/agraph/set/">Allegro SET</a></li>
+<li><a href="/agraph/agwebview/">AGWebView</a></li>
+<li><a href="/agraph/ec2/">Amazon AWS</a></li>
+<li><a href="/agraph/tbc/">TopBraid Composer</a></li>
+<li><a href="/agraph/smartlogic/">Semaphore</a></li>
+<li><a href="/agraph/sentient/">Sentient Suite</a></li>
+<li><a href="/ps/pepito/">DATAmaestro</a></li>
+<li><a href="/ps/">Consulting</a></li>
+<li><a href="/agraph/support/">Support</a></li>
+<!-- start post_menu.inc -->
+   </ul>
+   
+   </div>
+   <!-- Left Nav ends -->
+
+<!-- Main content begins -->
+<!-- end post_menu.inc -->
+<div class="swtbody">
+<div itemscope itemtype="http://schema.org/SoftwareApplication" class="swtbody"> <h2 itemprop="softwareVersion">AllegroGraph</h2><p> <span itemprop="name">AllegroGraph</span><sup>&reg; </sup> is amodern, high-performance, persistent graph database. AllegroGraph usesefficient memory utilization in combination with disk-based storage,enabling it to scale to billions of quads while maintaining superiorperformance. AllegroGraph supports SPARQL, RDFS++, and Prologreasoning from numerous client applications.  </p><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse2.slideit()">AllegroGraph New Features</a><div id="new_features" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><div style="padding: 0 5px"><h3>AllegroGraph v6.1 New Features</h3><ul><li><a href="/about/press_room/ag-6.0_2-8-2016.lhtml">Certification on Cloudera Enterprise</a></li><li>Support for loading files from Hadoop Distributed File System; see<a href="/agraph/support/documentation/current/agload.html#hdfs">Loadingfiles from HDFS filesystems</a> in <ahref="/agraph/support/documentation/current/agload.html">DataLoading</a>. Loading from HDFS file systems has been tested with theCloudera Hadoop distribution.</li><li>AllegroGraph Federation improvements - Improved and optimizedcommunication between the main server and leaf nodes improves overallperformance 2x for most users, and some operations by up to50x. Federation is discussed in the <ahref="/agraph/support/documentation/current/agraph-introduction.html#intro-federation">AllegroGraphIntroduction.</a></li><li>Query Engine Optimizations:<ul><li>Improved SPARQL Processing Efficiency</li><li>Improved Support for SPARQL Endpoints</li><li>Improved Support for SPARQL Magic Properties</li><li>More efficient use of temporary disk space</li><li>Improved handling of very large result sets</li></ul></li><li>Storage Layer Operations:<ul><li>New Style2 Indices (optimizing point queries). See <a href="/agraph/support/documentation/current/daemon-config.html#style2indices">Style2Indices</a> </li><li>Reduced I/O of some data types</li><li>Improved handling when out of disk space conditions exist</li></ul></li><li>Improved Auditing (see <a href="/agraph/support/documentation/current/audit.html">Auditing</a>)</li><li>Improved Online Backup and Restore (see <a href="/agraph/support/documentation/current/backup-and-restore.html">Backup and Restore</a>)</li><li>Improved operations with freetext indices (see <a href="/agraph/support/documentation/current/text-index.html">Full-text Indices</a>)</li><li>Python3 Client</li><li>Updated Sesame (2.7.11) and Jena (2.11.1), both clients that support Java 1.6. </li></ul><h3>Additional New Features</h3><ul><!--<li>Support for loading files from the Hadoop Distributed File System; see <a href="/agraph/support/documentation/current/agload.html#hdfs">Loading files from HDFS filesystems</a> in <a href="/agraph/support/documentation/current/agload.html">Data Loading</a></li>--><li>New 3D and multi-dimensional geospatial functionality <a href="/agraph/support/documentation/current/geospatial-nd.html">(see N-dimensional Geospatial)</a><table><tr><td><a href="images/image-circle-strips.png" class="MagicThumb"><img src="images/thumbs/image-circle-strips.png"></a></td><td width="10"></td><td><a href="images/image-4-prisms.png" class="MagicThumb"><img src="images/thumbs/image-4-prisms.png"></a></td><td width="10"></td><td><a href="images/image-InitialDesigner.png" class="MagicThumb"><img src="images/thumbs/image-InitialDesigner.png"></a></td></tr></table></li><li>Update to new Sesame 2.7.x transactional semantics <a href="/agraph/support/documentation/current/javadoc/index.html">(see Javadocs (Sesame and Jena))</a></li><li>Update to new Apache Jena v2.6.x <a href="/agraph/support/documentation/current/javadoc/index.html">(see Javadocs (Sesame and Jena))</a></li><li>WebView query page improvements: display of execution time and abort options <a href="/agraph/support/documentation/current/agwebview.html">(see WebView)</a></li><li>SPARQL v1.1 support for Geospatial, Temporal, and Social NetworkAnalytics</li><li>The server supports new optional specific transaction "begin"</a><li>Improved support for encrypted client connections</li><li>Query Engine Improvements</li><li>Support for Top Braid Composer 4.5. See <a href="/agraph/support/documentation/current/TBCplugin.html">Top Braid Composer Plugin</a></li> <li>SPARQL Query Engine Enhancements<ul><li>Improved Query Optimizer</li><li>SPARQL Performance Improvements</li><li>Improved Query Memory Management</li></ul><li>Parallel Data Export</li><li>Enhanced <a href="/agraph/support/documentation/current/magic-properties.html"> SPARQL "Magic Properties"</a> or "Property Functions"</li><li><a href="/agraph/support/documentation/current/javascript.html">Javascript API</a> Updates</li><li><a href="/agraph/support/documentation/current/materializer.html">Materialized Reasoner</a> Improvements</li><li><a href="/agraph/support/documentation/current/query-analysis.html">Query Plan Analyzer</a> Improvements</li><li>Enhanced <a href="/agraph/support/documentation/current/mongo-interface.html">Integration with MongoDB</a> - Presentation: <ahref="http://semtechbizsf2012.semanticweb.com/sessionPop.cfm?confid=65&proposalid=4803"target="_blank">MongoDB meets the Semantic Web</a>, and <ahref="/ps/services/conferences_seminars/semantic_technologies_v27.lhtml">arecent Webcast on MongoGraph</a></li><li><ahref="/agraph/support/documentation/current/text-index.html">SOLRInterface</a> for free text indexes, integrated with the SPARQL 1.1query engine. View the webcast: <ahref="/ps/services/conferences_seminars/semantic_technologies_v29.lhtml">MakingSolr Search Smarter using RDF</a></li></ul><p>The primary emphasis of this release has been additional enterprisefunctionality, efficiency and overall scalability. Please refer to the<ahref="/agraph/support/documentation/current/release-notes.html">releasenotes</a> for a complete list of enhancements and improvements.</p></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse2=new animatedcollapse("new_features", 500, true)</script><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse3.slideit()">Features</a><div id="4.0_features" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><div style="padding: 0 5px"><ul><li>AllegroGraph is 100 percent <ahref="/agraph/support/documentation/current/agraph-introduction.html#ai-acid">ACID</a>,supporting Transactions: Commit, Rollback, and Checkpointing. </li>  <li>Full and Fast Recoverability</li>  <li>100% Read Concurrency, Near Full Write Concurrency</li>  <li><a  href="/agraph/support/documentation/current/backup-and-restore.html">Online  Backups</a>, <a  href="/agraph/support/documentation/current/point-in-time-recovery.html">Point-in-Time  Recovery</a>, <a  href="/agraph/support/documentation/current/warm-standby.html">Replication,  Warm Standby</a></li>  <li>Dynamic and Automatic Indexing &ndash; All committed triples are  always indexed (7 indices)</li>  <li>Advanced Text Indexing &ndash; Text indexing per predicate</li><li><ahref="/agraph/support/documentation/current/text-index.html#header2-11">SOLR</a>and <ahref="/agraph/support/documentation/current/mongo-interface.html">MongoDB</a>Integration </li><li><a href="/agraph/support/documentation/current/spin.html">SPIN</a>support (SPARQL Inferencing Notation). The SPIN API allows you todefine a function in terms of a SPARQL query and then call thatfunction in other SPARQL queries. These SPIN functions can appear inFILTERs and can also be used to compute values in assignment andselect expressions.</li>  <li>All <a href="/agraph/downloads/clients">Clients</a>  based on <a  href="/agraph/support/documentation/current/http-protocol.html">REST Protocol</a> &ndash; <a  href="/agraph/support/documentation/current/java-tutorial/java-tutorial.html">Java  Sesame</a>, <a  href="/agraph/support/documentation/current/java-tutorial/jena-tutorial.html">Java  Jena</a>, <a  href="/agraph/support/documentation/current/python-tutorial/python-tutorial.html">Python</a>,  <a href="https://github.com/franzinc/agraph-csharp-client"  target="_blank"> C#</a>, <a  href="https://github.com/franzinc/agraph-java-client"  target="_blank"> Clojure</a>, <a  href="http://search.cpan.org/dist/RDF-AllegroGraph-Easy/"  target="_blank">Perl</a>, <a href="https://github.com/phifty/agraph"  target="_blank"> Ruby</a>, <a  href="https://github.com/mark-watson/java_practical_semantic_web"  target="_blank"> Scala</a>, and <a  href="/agraph/support/documentation/current/lisp-quickstart.html">  Lisp</a> clients</li>  <li>Completely multi-processing based (SMP) &ndash; Automatic  Resource Management for all processors and disks, and optimized  memory use. See the performance tuning guide<a  href="/agraph/support/documentation/current/performance-tuning.html">  here</a>, and server configuration guide <a  href="/agraph/support/documentation/current/daemon-config.html">here</a></li>  <li>Column-based compression of indices &ndash; reduced paging, better performance</li><li><a href="/agraph/support/documentation/current/security.html#filters">Triple Level Security</a> with Security Filters</li><li>Cloud-Hosted AllegroGraph - <ahref="/agraph/allegrograph/agraph_hosted.lhtml">Amazon EC2</a></li><li>The AllegroGraph RDF server can be scripted using the <a href="/agraph/support/documentation/current/javascript.html">JavaScript API</a></li><li>JavaScript-based interface <ahref="http://www.youtube.com/watch?v=QFaH6IvbPiw"target="_blank">(JIG)</a> for general graph traversal</li><li><ahref="/agraph/support/documentation/current/text-index.html">Soundexsupport</a> - Allows Free text indexing based on phoneticpronunciation </li><li>User-defined Indices - fully controllable by system administrator</li><li>Client-Server <a href="/agraph/gruff/">GRUFF</a> with Graphical Query Builder</li><li>Plug-in Interface for Text Indexers (use SOLR/Lucene, Native AGFull Text Indexer, <a href="/agraph/support/documentation/current/lisp-reference.html#create-freetext-index">Japanese Tokenizer</a>)</li>  <li>Dedicated and Public Sessions &ndash; In dedicated sessions users  can work with their own rule sets against the same database</li>  <li>Visit our <a href="/agraph/support/learning/">Learning  Center</a></li><li>Mark Watson's new book: <ahref="/agraph/allegrograph/mwbook.lhtml">Practical Semantic Web andLinked Data Applications, Java, Clojure, Scala, and JRubyEdition</a></li></ul></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse3=new animatedcollapse("4.0_features", 500, true)</script><!---------------------------------------------------------------------><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse4.slideit()">High-performance Storage</a><div id="hiper" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><div style="padding: 0 5px"><p>AllegroGraph is designed for maximum loading speed and query speed.Loading of quads, through its highly optimized RDF/XML and N-Quadsparsers, is best-of-breed, particularly with large files. TheAllegroGraph product line has always pushed the performance envelopestarting with version 1.0 in 2004, which was the first product toclaim 1 billion triples loaded and indexed using standard x86 64-bithardware. AllegroGraph, a purpose built (not a modified RDBMS), NoSQLGraph Database continued to drive innovation in the marketplace withthe 2008 SemTech conference example of 10 billion quads loaded onAmazon&rsquo;s EC2 service. The new version 4 series continues tobring performance to the forefront of Franz&rsquo;s SemanticTechnologies as the industry&rsquo;s first OLTP semantic web database.AllegroGraph&rsquo;s ability to automatically manage all availablehardware resources to maximize loading, indexing and querycapabilities once again raises the bar for RDF storageperformance. The following table displays examples of AllegroGraph'sperformance in loading andindexing. <a href="agraph_benchmarks.lhtml">Benchmark Results</a>.</p><div align="center"><table id="box-table-swta"> <thead>  <tr>    <th scope="col"><div align="center">Load Test </div></th>    <th scope="col"><div align="center"># Triples </div></th>    <th scope="col"><div align="center">Time </div></th>    <th scope="col"><div align="center">Load Rate (T/Sec) </div></th>  </tr>    </thead>    <tbody><tr> <td valign="top"><p align="center">LUBM(8000)* </p></td> <tdvalign="top"><p align="center">1.106 Billion</p></td> <tdvalign="top"><p align="center">36min, 49 sec</p></td> <tdvalign="top"><p align="center">500,679</p></td> </tr> <tr> <tdvalign="top"><p align="center">LUBM(160,000)*</p></td> <tdvalign="top"><p align="center">22.12 Billion</p></td> <tdvalign="top" width="120"><p align="center">12 hrs, 18m, 16s</p></td> <tdvalign="top"><p align="center">499,188</p></td> </tr> <tr> <tdvalign="top"><p align="center">AllegroGraph Pre-release**</p></td> <td valign="top"><palign="center">310.269 Billion<strong></strong></p></td> <td valign="top"><p align="center">78 hrs, 9m,23s</p></td> <td valign="top"><p align="center">1,102,737</p></td> </tr><tr> <tdvalign="top"><p align="center">AllegroGraph Pre-release***</p></td> <td valign="top"><palign="center"><strong>1.009 Trillion</strong><strong>  </strong></p></td> <td valign="top"><p align="center">338 hrs,  5m</p></td> <td valign="top"><p align="center">829,556</p></td> </tr> </tbody> </table> </div><p>*32 core Intel E5520, 2.0 GHz, with 1 TB  RAM,&nbsp; RedHat v6.1.<br />  **64 core Intel x7560, 2.27 GHz, 2TB RAM, 22TB  Disk, Redhat v6.1. LUBM-like data.<br />***240 core Intel x5650, 2.66GHz, 1.28TB RAM, 88TB Disk, Redhat v6.1. LUBM-like data.<br /></p></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse4=new animatedcollapse("hiper", 500, true)</script><!---------------------------------------------------------------------><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse5.slideit()">Architecture</a><div id="accessing" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><!-- link to magicthumb.css file -->        <link href="/magicthumb/magicthumb.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- link to magicthumb.js file -->        <script src="/magicthumb/magicthumb.js" type="text/javascript"></script><div style="padding: 0 5px">AllegroGraph provides a REST protocol architecture, essentially asuperset of the Sesame HTTP Client. Franz's staff directly supportsadapters for various languages, Sesame Java, Sesame Jena, Python usingthe Sesame signatures, and Lisp. There are Open Source Adaptersthrough community projects for C#, Ruby, Clojure, Scala, andPerl. Links to download <a href="/agraph/downloads/clients">here</a>.<p align="center"><a href="ag_client-server_arch_4.2.2.png" class="MagicThumb"><img src="ag_client-server_arch_4.2.2-small.png"></a></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse5=new animatedcollapse("accessing", 500, true)</script><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse6.slideit()">Powerful and Expressive Reasoning and Querying</a><div id="reasoning" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><div style="padding: 0 5px"><p>AllegroGraph provides the broadest array of mechanisms toquery and access knowledge in an RDF datastore:</p><ul><li><strong>RDFS++ Reasoning</strong> - <ahref="dynamic-materialization.lhtml">Dynamic Materialization</a> <p>Description logics or OWL-DL reasoners are good at handling complexontologies. They tend to be complete (give all the possible answers toa query) but can be totally unpredictable with respect to executiontime when the number of triples increases beyondmillions. AllegroGraph offers a very fast and practical RDFS++reasoner.</p><p>We support all the RDF and RDFS predicates and some in fullOWL. The supported predicates are RDF:type, RDFS:subClassOf, range,domain, subProperty.</p><p>OWL:sameAs inverseOf, TransitiveProperty, hasValue, someValuesFrom,allValuesFrom, one of, equivalentClass, restriction, onProperty,intersectionOf.</p> <p>AllegroGraph's RDFS++ engine dynamically maintains the ontologicalentailments required for reasoning: it has no explicit materializationphase. Materialization is the pre-computation and storage of inferredtriples so that future queries run more efficiently. The centralproblem with materialization is its maintenance: changes to thetriple-store's ontology or facts usually change the set of inferredtriples. In static materialization, any change in the store requirescomplete re-processing before new queries can run. <ahref="dynamic-materialization.lhtml">AllegroGraph'sDynamic Materialization</a> simplifies store maintenance and reducesthe time required between data changes and querying.</p></li><li><strong>OWL2 RL Materialized Reasoner</strong><p>AllegroGraph's <ahref="/agraph/support/documentation/current/materializer.html">OWL2 RLmaterializer</a> uses a set of inference rules to generate new triplesand adds them to the database.  OWL 2 RL is the subset of OWL 2 thatis designed to support rule based reasoners. OWL 2 RL contains a largenumber of rules for generating triples and some rules for verifyingthat the triple store is consistent with respect to the OWL 2 RLontology.  The OWL2 RL materializer is best when OWL 2 RL inference isrequired or the store is relatively static.</p> </li><li><strong>SPARQL Queries on Named Graphs</strong><p>SPARQL, the W3C standard RDF query language, returns RDF, XML andother formats in responses to queries. AllegroGraph's SPARQL, one ofthe W3C's "interoperable implementations", includes a query optimizer,and has full support for named graphs.  It can be used with the RDFS++reasoning turned on (i.e., query over real and inferredtriples). SPARQL can be used with every available AllegroGraphinterface mentioned in the previous section. </p><li> <strong>Prolog</strong><p>AllegroGraph's RDF Prolog provides concise, powerful,industry-standard, domain-specific reasoning to build high-levelconcepts (that require complex rules or numerical processing) on topof RDF data.  AllegroGraph Prolog is an option because many use casesare difficult (or very cumbersome) to model with only RDF/RDFS andOWL.  Prolog can also be used on top of the RDFS++ reasoner as a rulebased system.</li></p></p><li><strong>Low-level APIs</strong> Allow fast, 'close-to-the-metal' access to triplesby subject, predicate, and object.</li>    </ul></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse6=new animatedcollapse("reasoning", 500, true)</script><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse7.slideit()">GeoTemporal Reasoning, Social Network Analysis, and Additional Features</a><div id="additional" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><div style="padding: 0 5px"><p>Other essential Triple-Store features:</p><ul><li><strong>Geospatial and Temporal Reasoning</strong><p>AllegroGraph stores <ahref="/agraph/support/documentation/current/geospatial-tutorial.html"target="_blank">geospatial</a> and <ahref="/agraph/support/documentation/current/temporal-tutorial.html"target="_blank">temporal</a> data types as native datastructures. Combined with its indexing and range query mechanisms,AllegroGraph lets you perform geospatial and temporal reasoningefficiently.</p></li><li><strong>Social Networking Analysis</strong><p>AllegroGraph includes an SNA library that treats a triple-store asa graph of relations, with functions for measuring importance andcentrality as well as several families of search functions.  Examplealgorithms are nodal-degree, nodal-neighbors, ego-group,graph-density, actor-degree-centrality, group-degree-centrality,actor-closeness-centrality, group-closeness-centrality, actorbetweenness-centrality, group-betweenness-centrality,page-rank-centrality, and cliques. Geospatial and temporal primitivescombined with SNA functions forman <a href="/ps/services/conferences_seminars/semantic_technologies_v9.lhtml">ActivityRecognition</a> framework for flexibly analyzing networks and eventsin large volumes of structured and unstructured data.<li><strong>Native Data Types and Efficient Range Queries</strong><p>AllegroGraph stores a wide range of data types directly in its lowlevel triple representation. This allows for very efficient rangequeries and significant reduction in triple-store data size. Withother triple-stores that only store strings, the only way to do arange query is to go through all the values for a particularpredicate. This works well if everything fits in memory; but if thepredicate has millions of triples, it will need costly machines withhuge amounts of RAM. AllegroGraph supports most XML Schema types(native numeric types, dates, times, longitudes, latitudes, durationsand telephone numbers).</p> </li> <li><strong>Free-text Indexing</strong><p>AllegroGraph supports free-text indexing on the objects of tripleswhose predicates have been registered for indexing. Once indexed,triples can be found using a simple but robust querylanguage. Free-text indexing support includes functions to registerpredicates and see which predicates are registered. Support for<b>Solr</b> was added in AllegroGrpah version 4.5</p></li><li><strong>Named Graphs for Weights, Trust Factors, Provenance</strong><p>AllegroGraph actually stores quints. A triple in AllegroGraphcontains 5 slots, the first three being subject (s), predicate (p),and object (o). The remaining two are a named-graph slot (g) and aunique id assigned by AllegroGraph. The id slot is used for internaladministrative purposes, but can also be referred to by othertriples directly.</p><p>The W3C proposal is to use the 'named-graph' slot for clusteringtriples. So for example, you load a file with triples intoAllegroGraph and you use the filename as the named-graph. This way, ifthere are changes to the triple file, you just update those triples inthe named graph that came from the original file. However, withAllegroGraph, you can also put other attributes such as weights, trustfactors, times, latitudes, longitudes, etc, into the named graphslot.</p></li><li><strong>Direct Reification</strong><p>AllegroGraph allows triple-ids to be the subject or object ofanother triple. This is beyond the scope of pure RDF. The advantage ofthis approach is that you can reduce the total number of triples inthe store to a more manageable size, and, even more importantly,dramatically reduce query time because a single query can retrievemore data.</p></li><li><strong>Automatic Resource Management</strong><p>The AllegroGraph architecture is designed to maximize hardwareresources for all data management procedures (Loading, Indexing,Query, etc.). The hardware utilization can be managed throughthe <a href="/agraph/support/documentation/current/daemon-config.html">AllegroGraphconfiguration file</a> as necessary.</li><li><strong>Dynamic and Automatic Indexing</strong><p>Triple-indices are user configurable, or index management can betaken care of entirely by AllegroGraph. By default, all committedtriples are always indexed (default: 7 indices). AllegroGraph nowsupports any index combination of S, P, O, G. The default indices are:<ul><li>S, P, O, G, I - Subject, Predicate, Object, Named Graph, ID</li><li>P, O, S, G, I</li><li>O, S, P, G, I</li><li>G, S, P, O, I</li><li>G, P, O, S, I</li><li>G, O, S, P, I</li><li>I</li></p></ul></li><li><strong>Federation</strong><p>AllegroGraph supports queries with distributed databases. You cangroup multiple triple-stores, both local and remote into a singlevirtual store. It allows thread-safe opening of multipletriple-databases from one application (for the read only parts of thedatabase).  Queries over multiple databases are easy with direct dataaccess from applications.  It also supports physical merging ofdatabases.</p><li><strong>Warm Standby</strong> <p>Production AllegroGraph databases cannow be paired with transactionally consistent Warm Standby databases,co-located in the same data center or across the globe.  Whether forplanned maintenance or a hardware failure, your enterprise applicationnever needs to be down.</p></li><li><strong>Point in Time Recovery</strong><p>Provides a user theoption to advance the state of a restored database forward to anylater commit that was made to the original (and perhaps still running)database.&nbsp; This functionality performs as if the user performed abackup after every commit thus providing complete dataintegrity.</p></li><li><strong>Replication </strong><p>Allows multiple AllegroGraph databasesto be kept synchronized and transactionally consistent in real-timewith the master.&nbsp; These replicates can provide scalability andload balancing for applications by offering numerous clients theability to read data that reflects content in the masterdatabase.&nbsp; Replication occurs across the network so any set ofAllegroGraph databases connected by a network can participate inreplication.&nbsp; </p></li></ul></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse7=new animatedcollapse("additional", 500, true)</script><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse8.slideit()">Professional Services</a><div id="services" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><div style="padding: 0 5px"><p>Make the most of your use of semantic technologies by utilizing our consulting services. We provide:<ul><li>Vision Building - How to Apply Semantic Technologies</li><li>Rapid Prototyping and Proof-of-Concept Development</li><li>Complete Enterprise Technology Solution Stack</li><li>Best Practices to Maximize Value from Semantic Technologies</li><li>New Organizational Skills Required ֠Custom Training</li></ul><p>More Details - <a href="/ps">franz.com/ps</a></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse8=new animatedcollapse("services", 500, true)</script><!---------------------------------------------------------------------><!---------------------------------------------------------------------><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse11.slideit()">Compatible Semantic Technologies</a><div id="technologies" class="swtsliderbody"><!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV --><!-- link to magicthumb.css file -->        <link href="/magicthumb/magicthumb.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- link to magicthumb.js file -->        <script src="/magicthumb/magicthumb.js" type="text/javascript"></script><div style="padding: 0 5px"><p align="center"><a href="semantic-technologies5.png" class="MagicThumb"><img src="semantic-technologies5_small.png"></a><ul><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">TopBraid Composer</strong> <p>TopBraidComposer, developed by TopQuadrant, Inc., is an enterprise-classmodeling and application development environment It providescomprehensive support for modeling ontologies and data, connectingdata sources, designing queries, rules and semantic data processingchains, and developing Semantic Web applications. For details see <ahref="/agraph/tbc/">TopBraid Composer</a> </p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">RacerPro</strong> <p>The Semantic Webreasoning system developed by Racer Systems GmbH, RacerPro, has beenintegrated with AllegroGraph, exposing RDF data in AllegroGraph toRacer's highly optimized Description Logic (DL) reasoner. It is mostsuitable for ontology-driven applications or theoremproofing. RacerPro's interfaces also include DIG over HTTP and supportfor rules (SWRL). For details see <ahref="https://www.ifis.uni-luebeck.de/index.php?id=385"target="_blank">RacerPro</a> </p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">AGWebview</strong> <p>AGWebview, developed byFranz, Inc., is an interface for exploring, querying, and managingAllegroGraph triple stores through a web browser. For details see <ahref="/agraph/agwebview/">AGWebview</a> </p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">Gruff</strong> <p> Gruff is an RDF browserthat displays visual graphs and has an interface to build SPARQL orProlog queries as visual graphs. Gruff can also display tables of allproperties of selected resources or generate tables with SPARQLqueries, and resources in the tables can be added to the visualgraph. For details see <a href="/agraph/gruff/">Gruff</a> </p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">DATAmaestro</strong><p>Data mining has increasinglyplayed a key role in the enterprise decision process because oftoday's competitive necessity to respond to changing market conditionsquickly and correctly, leveraging the enormous operating data nowavailable for such process. DATAmaestro, developed by PEPITe S.A. bringsunique capabilities to meet today's data mining needs. For details see<a href="/ps/pepito/">DATAmaestro</a></p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">Cogito</strong><p> The COGITO platform byExpert System S.p.A., conceived to bring intelligence to the search,extraction and classification of unstructured information for internalmanagement purposes and for monitoring and analyzing external sources,such as the Internet. For details see <ahref="http://www.expertsystem.net/page.asp?id=1515&idd=200&lang=1"target="_blank">Cogito</a> </p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">Sentient Suite</strong><p>The Sentient Suite,developed by IO Informatics Inc., integrates heterogeneous data tosolve knowledge and project management problems for the Life Sciencesindustry. For details see <a href="http://www.io-informatics.com/"target="_blank">Sentient Suite</a></p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">Callimachus</strong><p>Callimachus is aframework for data-driven applications based on Linked Dataprinciples. Callimachus allows Web authors to quickly and easilycreate semantically-enabled Web applications. For details see <ahref="/agraph/callimachus/">Callimachus</a></p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">Talend Open Studio</strong><p>Talend OpenStudio is an open source, Eclipse-based environment offering thebroadest connectivity to all source and target systems to support alltypes of data integration, data migration and data synchronizationoperations. For details see <ahref="/agraph/talend/">Talend</a></p></li><li itemscope itemtype="http://schema.org/SoftwareApplication"><strong itemprop="name">Semaphore</strong><p> Semaphore is anEnterprise Content Intelligence Platform built from four core andinter-connected modules: an Ontology Manager, Classification and TextMining, a Semantic Enhancement Server, and a Search ApplicationFramework. Semaphore:<ul><li>Automatically, accurately and consistently applies metadata and classification</li><li>Improves findability by being ontology-driven</li><li>Provides a better search and navigation experience</li><li>Enables effective data disposition, data loss prevention, records retention and eDiscovery</li></ul>For more detalis see <a href="/agraph/smartlogic/">Semaphore</a></p></li></ul></div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse11=new animatedcollapse("technologies", 500, true)</script><!---------------------------------------------------------------------><!---------------------------------------------------------------------><div style="padding: 10px 0 0 0;"><a href="javascript:collapse10.slideit()">System Requirements</a><div id="requirements" class="swtsliderbody"><p>The AllegroGraph Database Server runs natively on Linux x86-64bit. To run AllegroGraph on other operating systems (i.e. Windows,Mac) we suggest you set up a Linux Virtual Machine or EC2. We providea Virtual Machine and EC2 AMIs to help facilitateinstallation. Clients to an AllegroGraph server may be any OS andeither 32-bit or 64-bit.  <ahref="/downloads">franz.com/downloads</a></p><table id="box-table-swtc" summary="requirements" ><tr>  <th align="left"><b>AllegroGraph</b></th>  <th align="left"><b><a href="/agraph/allegrograph/vm/">Virtual Machine Appliance</a> (Requires 64-bit hardware)</b></th><tr><tr><td>Linux (x86-64), glibc 2.11 and above</td><td>Apple Mac OSX 10.9 and newer</td></tr><tr><tr><td><a href="/agraph/ec2/">Amazon EC2</a> (Linux x86-64)</td><td>32 or 64 bit Microsoft Windows</td></tr></table></p><p>The Virtual Machine Appliance will let you run the AllegroGraph Linuxversion on a Windows or Mac operating system. Performance will beslower than running natively, so we encourage you to installAllegroGraph natively for performance evaluation.</p><p>Installation details for the <a href="/agraph/allegrograph/vm/">Virtual Machine Appliance</a>.</li></ul>    <!--Your DIV content as follows. Note to add CSS padding or margins, do it inside a DIV within the Collapsible DIV -->  <div style="padding: 0 5px"><p>&nbsp;</p>  </div></div></div><script type="text/javascript">//Syntax: var uniquevar=new animatedcollapse("DIV_id", animatetime_milisec, enablepersist(true/fase), [initialstate] )var collapse10=new animatedcollapse("requirements", 500, true)</script><p>For more info, send email to <ahref="mailto:AllegroGraph@franz.com">AllegroGraph@franz.com</a> orcall (510) 452-2000, Option 3-Sales and Marketing.</p><!-- start footer.inc -->
+</div> <!-- closes class=*body -->
+<!-- Main Content ends -->  
+</div><!-- close class=wrapper -->
+<!-- Content ends -->  
+</div><!-- closes class=doc -->
+
+<div id="ft">
+
+
+<table align="center">
+<tr>
+
+<td width="500">
+  <font size="1">
+  Copyright &copy; 2016 Franz Inc., All Rights Reserved
+  | <a href="/about/privacystatement.lhtml">Privacy Statement</a>
+  </font>
+</td>
+<td>
+<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/Share" data-url="http://franz.com"></script>
+</td>
+<td>
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:send href="franz.com" font="arial"></fb:send>
+
+</td>
+
+<td width="30">
+
+<a href="http://www.delicious.com/save" onclick="window.open('http://www.delicious.com/save?v=5&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"><img src="/images/delicious.jpg" height="21" width="21" alt="Delicious" /></a>
+</td>
+
+<td align="center">
+<a href="http://www.google.com/profiles/allegrograph"><img src="/images/buzz-icon.png" alt="Google Buzz"></a>
+</td>
+<td width="30"><a href="http://twitter.com/Franzinc"><img src="/images/twitter-m.png" alt="Twitter"/></a>
+</td>
+
+<td>
+<!-- Place this code where you want the badge to render. -->
+<a href="//plus.google.com/117478799237137039578?prsrc=3"
+   rel="publisher" target="_top" style="text-decoration:none;">
+<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;"/>
+</a>
+</td>
+<!--
+<td>
+<g:plusone size="medium"></g:plusone>
+</td>
+-->
+
+</tr>
+</table>
+
+
+</div> 
+
+</center>
+
+
+
+</body>
+</html>

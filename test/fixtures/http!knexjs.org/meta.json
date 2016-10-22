@@ -1,0 +1,19 @@
+{
+  "url": "http://knexjs.org/",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "cache-control": "max-age=600",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Sat, 22 Oct 2016 02:20:46 GMT",
+    "last-modified": "Wed, 19 Oct 2016 19:26:08 GMT",
+    "server": "GitHub.com",
+    "transfer-encoding": "chunked",
+    "x-github-request-id": "424BF412:26A06:222537E6:580ACAA6"
+  },
+  "originalUrl": "http://knexjs.org/",
+  "status": 200,
+  "statusText": "OK"
+}

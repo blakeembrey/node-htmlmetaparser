@@ -1,0 +1,7 @@
+.vscode
+.DS_Store
+coverage/
+node_modules/
+npm-debug.log
+dist/
+typings/

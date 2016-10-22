@@ -1,0 +1,36 @@
+{
+  "url": "https://en.wikipedia.org/wiki/TypeScript",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "28457",
+    "backend-timing": "D=480135 t=1477073788980655",
+    "cache-control": "private, s-maxage=0, max-age=0, must-revalidate",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-language": "en",
+    "content-length": "28085",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "last-modified": "Fri, 21 Oct 2016 18:12:40 GMT",
+    "p3p": "CP=\"This is not a P3P policy! See https://en.wikipedia.org/wiki/Special:CentralAutoLogin/P3P for more info.\"",
+    "server": "mw1257.eqiad.wmnet",
+    "set-cookie": [
+      "WMF-Last-Access=22-Oct-2016;Path=/;HttpOnly;secure;Expires=Wed, 23 Nov 2016 00:00:00 GMT",
+      "GeoIP=US:CA:San_Diego:32.86:-117.21:v4; Path=/; secure; Domain=.wikipedia.org"
+    ],
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "vary": "Accept-Encoding,Cookie,Authorization",
+    "via": "1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish",
+    "x-analytics": "ns=0;page_id=8157205;https=1;nocookies=1",
+    "x-cache": "cp1052 hit/2, cp2019 miss, cp4008 miss, cp4018 hit/15",
+    "x-cache-status": "hit",
+    "x-client-ip": "66.75.244.18",
+    "x-content-type-options": "nosniff",
+    "x-powered-by": "HHVM/3.12.7",
+    "x-ua-compatible": "IE=Edge",
+    "x-varnish": "1245070504 1242287801, 1185516018, 1294982142, 2271544040 2110529623"
+  },
+  "originalUrl": "https://en.wikipedia.org/wiki/TypeScript",
+  "status": 200,
+  "statusText": "OK"
+}

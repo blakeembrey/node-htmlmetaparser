@@ -1,0 +1,28 @@
+{
+  "url": "https://www.yelp.com/biz/boba-guys-san-francisco-4",
+  "headers": {
+    "cache-control": "private",
+    "cf-ray": "2f596a31fd5c2240-LAX",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:48 GMT",
+    "server": "cloudflare-nginx",
+    "set-cookie": "bse=d0919fc3b1009e74c2437297c0bbdabf; Domain=.yelp.com; Path=/; HttpOnly",
+    "transfer-encoding": "chunked",
+    "vary": [
+      "Accept-Encoding",
+      "Accept-Encoding,User-Agent"
+    ],
+    "x-mode": "ro",
+    "x-node": [
+      "www_all",
+      "10-64-88-176-uswest1aprod"
+    ],
+    "x-proxied": "10-64-16-186-uswest1bprod",
+    "x-xss-protection": "1; report=https://www.yelp.com/xss_protection_report"
+  },
+  "originalUrl": "http://www.yelp.com/biz/boba-guys-san-francisco-4",
+  "status": 200,
+  "statusText": "OK"
+}

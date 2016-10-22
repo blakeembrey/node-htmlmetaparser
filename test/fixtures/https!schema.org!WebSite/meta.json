@@ -1,0 +1,22 @@
+{
+  "url": "https://schema.org/WebSite",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "alt-svc": "quic=\":443\"; ma=2592000; v=\"36,35,34,33,32\"",
+    "cache-control": "private, max-age=600",
+    "connection": "close",
+    "content-length": "65879",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:48 GMT",
+    "etag": "24751161007153220a957036416",
+    "expires": "Sat, 22 Oct 2016 02:10:48 GMT",
+    "last-modified": "Fri, 07 Oct 2016 15:32:20 UTC",
+    "server": "Google Frontend",
+    "set-cookie": "GOOGAPPUID=1; Path=/",
+    "vary": "Accept, Accept-Encoding",
+    "x-cloud-trace-context": "ddd307014ce7f7605545d2b41d7b7301"
+  },
+  "originalUrl": "https://schema.org/WebSite",
+  "status": 200,
+  "statusText": "OK"
+}

@@ -1,0 +1,2123 @@
+<!DOCTYPE HTML>
+
+
+<html xmlns:ng="http://angularjs.org" id="ng-app" lang="en" ng-app="TH">
+
+<head ng-controller="DZHeadController">
+<!--
+
+##::::: ##: ########::::::: ###:::: ########:: ########:::: ##:::: ##: ####: ########:: ####: ##::: ##:: ######::
+##: ##: ##: ##.....::::::: ## ##::: ##.... ##: ##.....::::: ##:::: ##:. ##:: ##.... ##:. ##:: ###:: ##: ##... ##:
+##: ##: ##: ##::::::::::: ##:. ##:: ##:::: ##: ##:::::::::: ##:::: ##:: ##:: ##:::: ##:: ##:: ####: ##: ##:::..::
+##: ##: ##: ######:::::: ##:::. ##: ########:: ######:::::: #########:: ##:: ########::: ##:: ## ## ##: ##:: ####
+##: ##: ##: ##...::::::: #########: ##.. ##::: ##...::::::: ##.... ##:: ##:: ##.. ##:::: ##:: ##. ####: ##::: ##:
+##: ##: ##: ##:::::::::: ##.... ##: ##::. ##:: ##:::::::::: ##:::: ##:: ##:: ##::. ##::: ##:: ##:. ###: ##::: ##:
+ ###. ###:: ########:::: ##:::: ##: ##:::. ##: ########:::: ##:::: ##: ####: ##:::. ##: ####: ##::. ##:. ######::
+
+Skills wanted: Java, AngularJS, Spring, Hibernate, UX and Responsive Design
+http://dzone.applytojob.com/apply
+
+-->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <meta name="description" ng-attr-content="{{ service.description }}" content="A graph is a data structure composed of vertices and edges. These terms are synonymous with the following: vertices, dots, nodes, things, pointsedges, lines,..." />
+    <meta name="keywords" ng-attr-content="{{ service.keywords }}" content="programming, software development, devops, java, agile, web, iot, database, mobile, big data, cloud" />
+
+    <meta property="og:description" ng-attr-content="{{ service.description }}" content="A graph is a data structure composed of vertices and edges. These terms are synonymous with the following: vertices, dots, nodes, things, pointsedges, lines,..." />
+
+    <meta ng-attr-content="{{ service.noIndex ? 'noindex' : '' }}" ng-attr-name="{{ service.noIndex ? 'robots' : '' }}"
+          name="" content="" />
+
+    <meta property="og:site_name" ng-attr-content="{{ service.siteName }}" content="dzone.com" />
+    <meta property="og:title" ng-attr-content="{{ service.title }}" content="Exploring a Graph Representation of Wikipedia Using Gremlin - DZone Database" />
+    <meta property="og:url" ng-attr-content="{{ service.canonical }}" content="https://dzone.com/articles/exploring-graph-representation" />
+    <meta ng-if="service.img" ng-attr-content="{{ service.img }}" property="og:image:secure_url" content="https://dzone.com/themes/dz20/images/ArticleImg_7.jpg" />
+    <meta ng-if="service.type" ng-attr-content="{{ service.type }}" property="og:type" content="" />
+
+    <meta name="twitter:site" content="@dzone" />
+    <meta ng-if="service.twitterImage" ng-attr-content="{{ service.twitterImage }}" name="twitter:image" content="https://dzone.com/themes/dz20/images/ArticleImg_7.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" ng-attr-content="{{ service.description }}" content="A graph is a data structure composed of vertices and edges. These terms are synonymous with the following: vertices, dots, nodes, things, pointsedges, lines,..." />
+    <meta name="twitter:title" ng-attr-content="{{ service.title }}" content="Exploring a Graph Representation of Wikipedia Using Gremlin - DZone Database"/>
+
+    <meta ng-if="service.wordCount" property="article:wordcount" ng-attr-content="{{service.wordCount}}" content="1647" />
+    <meta name="referrer" content="origin">
+
+    <link rel="dns-prefetch" href="//www.googletagservices.com"/>
+    <link rel="dns-prefetch" href="//pixel-geo.prfct.co"/>
+    <link rel="dns-prefetch" href="//secure.adnxs.com"/>
+    <link rel="dns-prefetch" href="//hn.inspectlet.com"/>
+    <link rel="dns-prefetch" href="//inspectletws.herokuapp.com"/>
+    <link rel="dns-prefetch" href="//tag.perfectaudience.com"/>
+    <link rel="dns-prefetch" href="//www.google-analytics.com"/>
+    <link rel="image_src"   ng-href="{{ service.img }}" href="https://dzone.com/themes/dz20/images/ArticleImg_7.jpg" /><!--formatted-->
+
+
+    <link rel="canonical" ng-href="{{service.canonical}}" href="https://dzone.com/articles/exploring-graph-representation"/>
+    <link ng-if="service.prevPage" rel="prev" ng-href="{{ service.prevPage }}" href="" />
+    <link ng-if="service.nextPage" rel="next" ng-href="{{ service.nextPage }}" href=""/>
+    <link rel="icon" type="image/x-icon" href="/themes/dz20/images/favicon.ico">
+
+    <title ng-bind="service.title">Exploring a Graph Representation of Wikipedia Using Gremlin - DZone Database</title>
+
+    <meta name="df-verify" content="df0d76632b4543" />
+
+<link rel="stylesheet" type="text/css" href="//dz2cdn3.dzone.com/storage/pub/3306731-combined.css" charset="utf-8"/><link rel="stylesheet" type="text/css" href="//dz2cdn3.dzone.com/storage/pub/3306736-combined.css" charset="utf-8"/>
+</head>
+<body>
+
+    <div class="container-fluid header" th-element="header" th-element-groups="[]" ng-hide="$root.isHidden('header')" data-th-element-name="header"><div class="row mainHeaderRow" th-element="mainHeaderRow" th-element-groups="['header']" ng-hide="$root.isHidden('mainHeaderRow')" data-th-element-name="mainHeaderRow"><div class="col-md-12 mainHeader headerHeaderV2 oUhbWOfRPSwBoUhM" th-element="mainHeader" th-element-groups="['header','mainHeaderRow']" ng-hide="$root.isHidden('mainHeader')" data-th-element-name="mainHeader" data-th-widget="header.headerV2" data-widget-header-header-v2="" ng-controller="mainHeader">
+<script type="text/ng-template" id="like-article.html">
+<div class="dz-like"
+     ng-class='{liked: status.liked}' ng-click='like()'
+
+    <a href="#">
+        <i ng-class="{'icon-thumbs-up-alt': status.liked, 'icon-thumbs-up liked': !status.liked}"></i>
+            <span>Like ({{ status.score }})</span>
+    </a>
+</div>
+</script>
+
+<script type="text/ng-template" id="refcard-save.html">
+    <button type="button" ng-class="{'icon-star gold': status.saved, 'icon-star-empty': !status.saved}"
+            ng-click="save()" class="btn btn-save btn-lg"><span class="save-title">SAVE</span><span ng-if="status.saved"
+                                                                                                    class="d-letter">D</span>
+    </button>
+</script>
+
+<div class="header-top">
+    <div class="header-container">
+        <div class="pull-left">
+            <div class="logo" >
+                <a class="inner" href="/"><img src="/themes/dz20/images/logo.png" alt="DZone"></a>
+            </div>
+        <div class="active-portal"> / <a href="/database-sql-nosql-tutorials-tools-news">Database Zone</a></div>
+        </div>
+        <div class="pull-right">
+
+
+            
+                <div class="dz-intro">Over a million developers have joined DZone.</div>
+                <div class="mobile-visible sign-in-join" ng-if="!$root.user.authenticated"><a href="#" ng-click="loginForm()">Sign In / Join</a></div>
+
+                <div class="join-icon"><i class="icon-user" ng-if="!$root.user.authenticated" ng-click="loginForm()"></i></div>
+
+
+                <div class="headerSearch">
+                    <span class="icon-search dropdown-toggle" ng-click="focusSearch()" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <form class="form-wrapper">
+                                <input id="search" ng-model="searchT" type="text" placeholder="Search" required>
+                                <input type="button" value="Search" class="btn btn-action" ng-click="allResults()" ng-disabled="searchT.length < 3">
+                            </form>
+                        </li>
+                        <div class="results-area" ng-cloak>
+                            <div class="col-md-12"><th-loader flag="loading"></th-loader></div>
+                            <li ng-repeat="node in nodes">
+                                <div class="results-container">
+                                    <img dz-image-fid-width="80" dz-image-fid="{{ node.thumb }}">
+                                    <a class="title" target="{{ node.type=='link'? '_blank' : '_self'}}" ng-href="{{node.urlOrigin}}">{{node.title}}</a>
+                                    <p class="source">
+                                        <span class="type">{{node.type}}</span>
+                                        <span class="source-bullet"> &middot;</span>
+                                        <span ng-if="node.type=='link'" class="link-source">{{ node.urlSource.name }}</span>
+                                        <span ng-if="node.type=='link'" class="source-bullet"> &middot;</span>
+                                        <span class="source-date" am-time-ago="node.articleDate"></span>
+                                        <span ng-if="node.type != 'guide'">
+                                            by <a href="{{ node.authors[0].url }}" target="_blank" class="author-name" th-popup="users.profile.mini" popup-data="{user: node.authors[0].id}">{{node.authors[0].realName }}</a>
+                                        </span>
+                                    </p>
+                                    <div class="hover-buttons" ng-if="node.type=='refcard'">
+                                        <a type="button" class="btn download" href="{{node.pdf}}"><i class="icon-download"></i> DOWNLOAD</a>
+                                        <dz-save template="refcard-save.html" node="node" class="save-btn"></dz-save>
+                                        <span class="download-count"><i class="icon-download"></i> {{node.downloads}}</span>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                        </div>
+
+                        <div class="totalResults" ng-if="totalResults"><span>{{totalResults}} search results</span></div>
+                        <li class="btn-vall" ng-if="haveResults">
+                            <input type="button" value="View All Results" ng-click="allResults()" class="btn btn-action" ng-disabled="searchT.length < 3">
+                        </li>
+
+                    </ul>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="header-bottom">
+
+
+    <ul class="portals header-container">
+
+
+            <li>
+                <a href="/refcardz" 
+                   id="header-refcardz"><em>Refcardz</em></a></li>
+            <li>
+                <a href="/guides" 
+                   id="header-guides"><em>Guides</em></a></li>
+            <li>
+                <a href="/portals" 
+                   id="header-portals"><em>Zones</em></a></li>
+        <li>|</li>
+
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(2)}" href="/agile-methodology-training-tools-news" id="header-2">
+            Agile</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(3)}" href="/big-data-analytics-tutorials-tools-news" id="header-3">
+            Big Data</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(4)}" href="/cloud-computing-tutorials-tools-news" id="header-4">
+            Cloud</a>
+        </li>
+        <li>
+            <a class="active-state" ng-class="{'active-state': isActivePortal(5)}" href="/database-sql-nosql-tutorials-tools-news" id="header-5">
+            Database</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(6)}" href="/devops-tutorials-tools-news" id="header-6">
+            DevOps</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(7)}" href="/enterprise-integration-training-tools-news" id="header-7">
+            Integration</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(8)}" href="/iot-developer-tutorials-tools-news-reviews" id="header-8">
+            IoT</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(1)}" href="/java-jdk-development-tutorials-tools-news" id="header-1">
+            Java</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(9)}" href="/mobile-app-developer-tutorials-tools-news" id="header-9">
+            Mobile</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(10)}" href="/apm-tools-performance-monitoring-optimization" id="header-10">
+            Performance</a>
+        </li>
+        <li>
+            <a  ng-class="{'active-state': isActivePortal(11)}" href="/web-development-programming-tutorials-tools-news" id="header-11">
+            Web Dev</a>
+        </li>
+    </ul>
+</div>
+</div></div></div><div class="container-fluid body withSlider" th-element="body" th-element-groups="[]" ng-hide="$root.isHidden('body')" data-th-element-name="body"><div class="row mainContentRow" th-element="mainContentRow" th-element-groups="['body']" ng-hide="$root.isHidden('mainContentRow')" data-th-element-name="mainContentRow"><div class="col-md-12 articleContent4 articleContent oUhbblYOaqbcblYOaqbcC" th-element="articleContent4" th-element-groups="['body','mainContentRow']" ng-hide="$root.isHidden('articleContent4')" data-th-element-name="articleContent4" data-th-widget="article.content" data-widget-article-content="" header-change-trigger="" ng-controller="articleContent4">
+<script type="text/ng-template" id="like-article.html">
+<div class="dz-like"
+     ng-class='{liked: status.liked}' ng-click='like()'
+
+    <a href="#">
+        <i ng-class="{'icon-thumbs-up-alt': status.liked, 'icon-thumbs-up liked': !status.liked}"></i>
+            <span>Like ({{ status.score }})</span>
+    </a>
+</div>
+</script>
+
+<script type="text/ng-template" id="link-article-save.html">
+<div class="save "
+     ng-class="{'icon-star gold': status.saved, 'icon-star-empty': !status.saved}" ng-click="save()"><span
+        class="action-label">{{ status.saved ? 'Saved' : 'Save' }}</span></div>
+</script>
+
+<script type="text/ng-template" id="like-article.html">
+    <div class="dz-like" ng-class="{'icon-thumbs-up-alt liked': status.liked, 'icon-thumbs-up': !status.liked}" ng-click="like()"><span class="action-label"><span>Like</span><span ng-if="status.liked" class="d-letter">d</span></span>
+        <a href="#">
+            <span>({{ status.score }})</span>
+        </a>
+    </div>
+</script>
+
+<div class="articles-wrap" ng-if="articles[0].id == 479794">
+
+<div ng-if="ads.top.show() && articles[0].readyForAd" class="ad-container">
+    <div dc-slot="ads.top.slot()" tags="ads.top.tags(articles[0])" size="ads.top.size()"></div>
+</div>
+
+
+<div><th-if-scroll relative-to="top" from="0" to="50" callback="activateT(articles[0])"></th-if-scroll></div>
+
+<div class="article-stream widget-top-border"
+     ng-class="{'widget-top-border': articles[0].published }"
+     itemscope itemtype="https://schema.org/Article" ng-if="articles[0].id == 479794">
+    <div class="social-media-icons mobile-only" follow-dzone><p>Let's be friends:</p>
+<ul class="icons-only" ng-class="{open: isOpen}" click-outside="outside()">
+    <li class="rss-icon" id="rss-spotlight-1">
+        <a href="/pages/feeds"><i class="icon-rss-1"></i></a>
+    </li>
+    <li class="twitter-icon">
+        <a href="https://twitter.com/DZone" target="_blank"><i class="icon-twitter"></i></a>
+    </li>
+    <li class="facebook-icon">
+        <a href="https://www.facebook.com/DZone-259639764711" target="_blank"><i class="icon-facebook-1"></i></a>
+    </li>
+    <li class="google-icon">
+        <a href="https://plus.google.com/+dzone/posts" target="_blank"><i class="icon-gplus"></i></a>
+    </li>
+    <li class="linkedin-icon">
+        <a href="https://www.linkedin.com/company/dzone" target="_blank"><i class="icon-linkedin-1"></i></a>
+    </li>
+
+</ul>
+</div>
+    <div ng-if="!edition || (width > 1024 && edition)" class="content-right-images" header-affix-element="div.content">
+
+        <div class="article-adsponsor" ng-if="(articles[0].partner && articles[0].showLogo) || articles[0].partner.isSponsoringArticle">
+                <div class="adsponsor">
+                <a href="https://www.mongodb.com/">
+                    <img src="//dz2cdn3.dzone.com/storage/partner-logo/3109242-mongodb-logosvg.png" />
+                </a>
+                </div>
+        </div>
+
+        <div class="sidebar-ad" ng-if="articles[0].readyForAd" dc-slot="ads.sb1.slot(articles[0], 0)"
+             tags="ads.sb1.tags(articles[0], 0)" size="ads.sb1.size(articles[0], 0)"></div>
+
+        <div ng-if="articles[0].readyForAd && 0 > 1 && !articles[0].partner.isSponsoringArticle" dc-slot="ads.sb2.slot(articles[0], 0)"
+             tags="ads.sb2.tags(articles[0], 0)" size="ads.sb2.size(articles[0], 0)"></div>
+
+    </div>
+
+    <article>
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="url" content="https://dzone.com/themes/dz20/images/logo.png">
+            </div>
+            <meta itemprop="name" content="DZone">
+        </div>
+
+        <div class="content" ng-class="{'content-full': (width <= 1024 && edition)}"
+             >
+            <meta itemprop="datePublished" content="2012-03-10T00:43:46Z"/>
+            <meta itemprop="author" content="Marko Rodriguez"/>
+            <meta itemprop="dateModified" content="2012-03-10T00:43:46Z"/>
+            <meta itemprop="mainEntityOfPage" content="https://dzone.com/articles/exploring-graph-representation"/>
+            <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="image" 
+                      content="https://dzone.com/themes/dz20/images/ArticleImg_4.jpg"
+/>
+
+                <meta itemprop="url" 
+                      content="https://dzone.com/themes/dz20/images/ArticleImg_4.jpg"
+>
+                <meta itemprop="width" content="370">
+                <meta itemprop="height" content="230">
+
+            </div>
+
+            <div class="header">
+                <div class="header-title">
+                    <div class="title">
+                        <h1 class="article-title" itemprop="headline">
+                            Exploring a Graph Representation of Wikipedia Using Gremlin
+                        </h1>
+                    </div>
+
+                    <div class="subhead">
+                        <h3></h3>
+                    </div>
+
+                    <div class="publish-meta">
+<div class="article-author-meta" >
+    <a href="/users/739235/okram.html">
+     <img src="https://secure.gravatar.com/avatar/40feb25b7b2632d536ac07ccb0349907?d=identicon&r=PG"  class="avatar" width="40"/>
+    </a> by
+
+    <div class="author-info">
+                        <span class="author-name">
+                            <a th-popup="users.profile.mini" popup-data="{user: 739235}"
+                               href="/users/739235/okram.html">
+                                Marko Rodriguez</a>
+                        </span>
+
+    </div>
+        <div  class="mvb-award">
+            <i class="icon-mvb-1"></i>
+        </div>
+        <div  class="mvb-partner">
+            
+        </div>
+        <div class="zone-leader">
+            
+        </div>
+
+     &middot;
+</div>
+                        <span class="author-date">Mar. 10, 12</span>
+                        &middot;
+                            <a href="/database-sql-nosql-tutorials-tools-news" id="portal-name"><span
+                                    class="portal-name">Database Zone</span></a>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+
+
+            <div class="author-n-useraction">
+                <div class="like action"><dz-like template="like-article.html" node="articles[0]"><div class="dz-like"
+     
+
+    <a href="#">
+        <i ng-class="{'icon-thumbs-up-alt': status.liked, 'icon-thumbs-up liked': !status.liked}"></i>
+            <span>Like (0)</span>
+    </a>
+</div>
+
+                    </dz-like></div>
+
+                <div class="comment action">
+                    <p ng-show="!articles[0].isLocked" slider-toggle="commentsSlider" slider-data="{parent: articles[0]}"
+                       activate-with-url-params="{showComments: articles[0].id}">
+                            <span><i class="icon-comment" tooltip-html-unsafe="{{ commentTooltip(articles[0]) }}"></span></i>
+                        Comment (<span class="comment-after number-of-comments" ng-bind="articles[0].nComments">0</span>)
+                    </p>
+                    <p ng-show="articles[0].isLocked">
+                        <span ng-cloak><i class="icon-icon-comment comment-disabled" tooltip-html-unsafe="Comments have been disabled for this article"></i></span>
+                    </p>
+                </div>
+
+                <div class="save action">
+                    <dz-save template="link-article-save.html" node="articles[0]" class="save"><div class="save icon-star-empty"
+     ><span
+        class="action-label">Save</span></div>
+
+                    </dz-save>
+                </div>
+
+                <div class="tweet action"><a ng-href="#"
+                                             ng-click='shareTwitter($event, articles[0].header.title, articles[0].url)'
+                                             class="title" target="_blank"><span><i class="icon-twitter"></i></span>
+                    <span class="action-label">Tweet</span></a>
+                </div>
+
+                <div class="pull-right">
+
+                    <div class="article-views action" ng-cloak><i class="icon-eye"></i> {{ articles[0].views | formatCount}} <span
+                    class="action-label">Views</span></div>
+
+                        <div class="user-n-admin-action action" ng-if="canEdit(articles[0]) || canDelete(articles[0])">
+                            <div class="mod-tools" dropdown is-open="dropdown.open" ng-cloak>
+                                <span dropdown-toggle>
+                                    <i class="icon-cog"></i>
+                                </span>
+                                <ul class="dropdown-menu">
+                                    <li><a ng-if="canEdit(articles[0])" ng-href="/content/{{ articles[0].id }}/edit.html">Edit</a>
+                                    </li>
+                                    <li><a href="#" ng-if="canDelete(articles[0])" ng-click="delete(articles[0])">Delete</a></li>
+                                    <li><a href="#" ng-if="perms.canPublish" ng-click="toggleComments(articles[0])">{{ articles[0].isLocked ? 'Enable' : 'Disable' }} comments</a></li>
+                                    <li><a href="#" ng-if="perms.canPublish && !articles[0].isLocked" ng-click="toggleLimitComments(articles[0])">
+                                        {{ articles[0].isLimited ? 'Remove comment limits' : 'Enable moderated comments' }}
+                                    </a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+                <div class="signin-prompt" >
+                    <p>Join the DZone community and get the full member experience.</p>
+                    <a id="article-signin-prompt" href="#" ng-click="loginForm()">Join For Free</a>
+                </div>
+                <div class="arrow-down"></div>
+
+
+            <div class="article-bumper"  ng-if="articles[0].showLogo && articles[0].partner.top.text | partnerBumperLinks:articles[0].partner.top.id"
+                 ng-bind-html="articles[0].partner.top.text | partnerBumperLinks:articles[0].partner.top.id">
+                <p>Build fast, scale big with <a href="https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad" target="_blank" rel="nofollow">MongoDB Atlas</a>, a hosted service for the leading NoSQL database. Try it now! Brought to you in partnership with <a href="https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad" target="_blank" rel="nofollow">MongoDB</a>.</p>
+            </div>
+            <div class="content-html" dz-code-container 
+                 itemprop="articleBody"><p>A <a href="http://en.wikipedia.org/wiki/File:Social_Red.jpg">graph</a> is a data structure composed of vertices and edges. These terms are synonymous with the following:</p>
+
+<ul><li>vertices, dots, nodes, things, points</li><li>edges, lines, links, relations, arcs</li></ul>
+<p>From vertices and edges, numerous artificial and real-world systems 
+can be modeled and processed. The purpose of this post is to explore a 
+graph representation of <a href="http://wikipedia.org/">Wikipedia</a> persisted in the graph database <a href="http://neo4j.org/">Neo4j</a> and processed using the graph traversal language <a href="http://gremlin.tinkerpop.com/">Gremlin</a>. Please note that a parse-friendly representation of Wikipedia was provided by <a href="http://dbpedia.org/">DBPedia</a> and the present analysis and presentation is provided by a collaborative effort between <a href="http://thinkaurelius.com/">Aurelius</a> and the Intelligent Systems Laboratory at <a href="http://www.parc.com/">PARC</a> (a <a href="http://www.xerox.com/">Xerox</a> company).</p>
+<h2>On the Graph Nature of Wikipedia</h2>
+<p>There are numerous ways in which Wikipedia can be represented as a graph. The articles and the href <a href="http://en.wikipedia.org/wiki/Hyperlink">hyperlinks</a>
+ between them is one way. This type of graph is known a 
+single-relational graph because all the edges have the same meaning — a 
+hyperlink. A more complex rendering could represent the people discussed
+ in the articles as “people-vertices” who know other “people-vertices” 
+and that live in particular “city-vertices” and work for various 
+“company-vertices” — so forth and so on until what emerges is a 
+multi-relational <a href="http://en.wikipedia.org/wiki/Conceptual_graph">concept graph</a>. For the purpose of this post, a middle ground representation is used. The vertices are Wikipedia <a href="http://en.wikipedia.org/wiki/Wikipedia:Starting_an_article">articles</a> and Wikipedia <a href="http://en.wikipedia.org/wiki/Help:Category">categories</a>. The edges are <a href="http://en.wikipedia.org/wiki/Hyperlink">hyperlinks</a> between articles as well as <a href="http://en.wikipedia.org/wiki/Taxonomy">taxonomical</a> relations amongst the categories.</p>
+<p>Using Gremlin, some descriptive graph statistics of this 
+representation are calculated. Along with vertex and edge counts, the 
+in- and out-degree distributions of the graph are provided below. These 
+distribution calculations are agnostic to the edge labels.</p><pre class="brush:shell">gremlin&gt; g = new Neo4jGraph('/data/dbpedia')
+neo4jgraph[/data/dbpedia]
+gremlin&gt; g.V.count()
+30962172
+gremlin&gt; g.E.count()
+191767951 
+gremlin&gt; outDegrees = [:]; inDegrees = [:]
+gremlin&gt; g.V.transform{it.out.count()}.groupCount(outDegrees).iterate()
+gremlin&gt; g.V.transform{it.in.count()}.groupCount(inDegrees).iterate()
+gremlin&gt; f = new File('out-degrees.txt')
+gremlin&gt; outDegrees.each{k,v -&gt; f.append(k + '\t' + v + '\n')}
+gremlin&gt; f = new File('in-degrees.txt')
+gremlin&gt; inDegrees.each{k,v -&gt; f.append(k + '\t' + v + '\n')}
+</pre><p>The files <em>out-degrees.txt</em> and <em>in-degrees.txt</em> generated by Gremlin are loaded into <a href="http://www.r-project.org/">R Statistics</a> and plotted.</p><pre class="brush:shell">R version 2.13.1 (2011-07-08)
+Copyright (C) 2011 The R Foundation for Statistical Computing
+
+ out.degrees &lt;- read.table('out-degrees.txt', sep='\t')
+ in.degrees &lt;- read.table('in-degrees.txt', sep='\t')
+ plot(out.degrees, log='xy', main='Wikipedia Out-Degree Distribution', xlab='Out Degree', ylab='Frequency', cex.lab=1.5, cex.axis=1.5, cex.main=1.5)
+ plot(in.degrees, log='xy', main='Wikipedia In-Degree Distribution', xlab='In Degree', ylab='Frequency', cex.lab=1.5, cex.axis=1.5, cex.main=1.5)
+</pre><p> <img src="/data:image/png;base64,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" alt="" /></p><h2>On the Referential Nature of Ideas</h2>
+<p><img class="alignleft" src="http://markorodriguez.files.wordpress.com/2012/03/drgremlinphd-graphbook.png?w=115" alt="" width="115" /> One lazy Sunday afternoon, Gremlin walks into his library. The smell of <a href="http://thewafflerdotcom.files.wordpress.com/2011/12/classic.jpeg">leather and mahogany</a>
+ overcomes his senses. His eyes scan over the shelves filled with books 
+about every imaginable topic. On one inspired day many moons ago, 
+Gremlin printed out each Wikipedia article, bound it, and stored it. On 
+this particular occasion, Gremlin decides to review one of his favorite 
+subjects: graph theory. Off the shelf, Gremlin grabs the book 
+respectfully entitled “<a href="http://en.wikipedia.org/wiki/Graph_theory">Graph Theory</a>.”</p><pre class="brush:shell">gremlin&gt; v = g.idx(T.v)[[uri:'http://dbpedia.org/resource/Graph_theory']].next()
+v[26634]
+gremlin&gt; v.map()
+name=graph theory
+uri=http://dbpedia.org/resource/Graph_theory
+</pre><p>Gremlin cracks open the cover of Graph Theory. To his amazement, he 
+notices that the words in the book reference other books on his shelf! 
+[line 1] He wonders, how many such references exist? [line 7]  </p><pre class="brush:shell">gremlin&gt; v.out('href').name[0..4]
+mathematics
+computer science
+graph (mathematics)
+vertex (graph theory)
+graph of a function
+gremlin&gt; v.out('href').count()
+240
+</pre><p><img class="alignright" src="http://markorodriguez.files.wordpress.com/2012/03/graphtheory-out.png?w=260" alt="" width="260" />
+ One reference at a time, Gremlin pulls the respective book from its 
+shelf and looks at its pages. Unbelievably, these books also make 
+reference to other books! [line 1] How many references do the references
+ of Graph Theory have? [line 8] Dumbfounded by the circuitous nature of 
+ideas being defined in terms of other ideas, Gremlin comes to realize 
+the inherent structure of the graph of knowledge — its self-referential 
+nature [line 9].</p><pre class="brush:shell">gremlin&gt; v.out('href').out('href').name[0..4]
+mathematics (disambiguation)
+math (disambiguation)
+euclid
+greek language
+quantity
+gremlin&gt; v.out('href').out('href').count()   
+21182
+gremlin&gt; v.out('href').dedup.out('href').out('href').retain([v]).paths{it.name}[0..4]
+[graph theory, mathematics, logic, graph theory]
+[graph theory, mathematics, history of mathematics, graph theory]
+[graph theory, mathematics, operations research, graph theory]
+[graph theory, mathematics, paul erdős, graph theory]
+[graph theory, mathematics, theoretical computer science, graph theory]
+</pre><p>There is only so much time a little green Gremlin gets to live. He 
+wonders what he would be expert in if he continues to read book after 
+book as dictated by the references that they maintain to one another.</p><pre class="brush:shell">gremlin&gt; v.in('href').name[0..4]
+semiotics of the structure
+sones graphdb
+trapezoid graph
+alpha centrality
+block graph
+</pre><p><img class="aligncenter" src="http://markorodriguez.files.wordpress.com/2012/03/graphtheory-inout.png?w=430" alt="" width="430" /></p><h2>On the Recurrent Nature of Thought</h2>
+<p><img class="alignleft" src="http://markorodriguez.files.wordpress.com/2012/03/library-distribution.png?w=200" alt="" width="200" />
+ For hours upon hours and days upon days, Gremlin goes from book to 
+book. Sometimes coming back to reading a previous book over again. From 
+the vantage point of a <a href="http://farm5.staticflickr.com/4004/4499248643_0a48dec7aa_z.jpg">long exposure film</a>,
+ his form looks like a blur amongst his collection. However, this blur 
+is not evenly distributed across his library. In fact, he is more likely
+ reading some books over others. Those books that are most central in 
+the hyperlink structure are those most likely to be encountered on 
+Gremlin’s <a href="http://en.wikipedia.org/wiki/Random_walk">random walk</a>.
+ In his ledger, Gremlin decides to record the potential that he will be 
+reading any one book at any one time. Initially all pages are equally 
+likely. [line 1] He begins his journey at Graph Theory. [line 2] He 
+looks up how much “potential” exists for Graph Theory. [line 3] He then 
+retrieves all the outgoing neighbors of Graph Theory. [line 4] He 
+determines the total number of neighbors. [line 5] To each neighbor, he 
+distributes Graph Theory’s potential equally amongst them. [lines 6--8] 
+Gremlin then jumps to Graph Theory’s referred to books and continues the
+ process over and over and over again for 100,000 steps. Starting from 
+the Graph Theory vertex, Gremlin <a href="http://en.wikipedia.org/wiki/Diffusion">diffuses</a> himself like a <a href="http://en.wikipedia.org/wiki/Wave">wave</a> over the structure that surrounds.</p><pre class="brush:shell">gremlin&gt; m = [:].withDefault{1}
+gremlin&gt; v.transform{
+  rank = m[it.name]; 
+  neighbors = it.out('href').toList();
+  degree = neighbors.size();
+  neighbors.each {
+    m[it.name] = m[it.name] + (rank/degree);
+  }
+  neighbors;
+}.scatter.range(0,100000).loop(3){true}.iterate()
+null
+</pre><p><img class="aligncenter" src="http://markorodriguez.files.wordpress.com/2012/03/graphtheory-diffusion.png?w=497" alt="" width="497" /></p><p>Gremlin looks over the top 10 ranked entries in his ledger. This is 
+where his diffusion shows the most recurrence — it articulates which 
+book he is most likely to be reading at any one moment in the next 
+100,000 book reads.</p><pre class="brush:shell">gremlin&gt; m.sort{a,b -&gt; b.value &lt;=&gt; a.value}[0..9]
+mathematics=8.2325984930913507177010807338237871640327644591
+graph theory=6.3579261869065686025097269665928272601625649213
+graph (mathematics)=3.8056391897097907459393869524402476473212892533
+computer science=3.2189950001323052861187247709061777261390151631
+real number=2.942860316400352223267769366106131293745859000
+mathematician=2.751409475433875926984889918863144276736916
+number theory=2.7296994022747017139496107107489077766999403538
+combinatorics=2.6983273156966484352429094611889032326648909856
+topology=2.6822253369205954921236082679389161746453858919
+set theory=2.5682887400468326671894663603540368070624776875</pre><h2>On the Taxonomical Nature of Categories</h2>
+<p> Gremlin’s library is not just shelves with books. His library also has a
+ card catalog in it. The catalog indexes books by category. Moreover, 
+each book has a reference to its subject category. For instance, the 
+subject category of Graph Theory is, well…’graph theory.’ The catalog is
+ also structured such that the categories make reference to one another.
+ For instance, ‘combinatorics’ is a broader category than ‘graph 
+theory.’ For the fun of it, Gremlin decides to move between the books 
+and the categories. </p><pre class="brush:shell">gremlin&gt; v.out('subject').name
+graph theory
+gremlin&gt; v.out('subject').out('broader').name
+combinatorics
+mathematics
+</pre><p>In order to see the layers in a <a href="http://en.wikipedia.org/wiki/Breadth-first_search">breadth-first manner</a>, Gremlin exposes the category “rings” emanating from ‘graph theory.’</p><pre class="brush:shell">gremlin&gt; x = [];
+gremlin&gt; v.out('subject').out('broader').gather{t = it.unique(); x.add(t*.name); t}.scatter.loop(3){it.loops &lt; 7}.iterate()
+null
+gremlin&gt; x
+[combinatorics, mathematical relations]
+[subdivisions of mathematics, discrete mathematics, mathematics, predicate logic]
+[mathematics, subfields by academic discipline, subdivisions of mathematics, main topic classifications, abstraction, formal sciences, structure, scientific disciplines, systems of formal logic]
+[main topic classifications, abstraction, formal sciences, structure, scientific disciplines, categories by topic, academic disciplines, mathematics, subfields by academic discipline, articles, thought, innovation, problem solving, creativity, analogy, concepts, logic, interdisciplinary fields, formalism (deductive), matter, dimension, form, science, mathematical logic, formal systems]
+[articles, thought, structure, innovation, problem solving, creativity, analogy, concepts, academic disciplines, logic, interdisciplinary fields, scientific disciplines, formalism (deductive), matter, dimension, form, science, subfields by academic discipline, categories by parameter, academia, categories by topic, main topic classifications, abstraction, formal sciences, contents, mind, cognition, mental processes, mental content, technological change, intelligence, critical thinking, human skills, human behavior, action, quality, fundamental categories, branches of philosophy, axiology, theories of deduction, formalism, fundamental physics concepts, universe, nature, ontology, manifolds, physical quantities, knowledge, subdivisions of mathematics, discrete mathematics, mathematical logic, metalogic, formal theories, logical syntax]
+[contents, mind, cognition, mental processes, mental content, matter, concepts, dimension, form, technological change, intelligence, creativity, innovation, critical thinking, human skills, human behavior, action, quality, thought, fundamental categories, academia, categories by topic, abstraction, branches of philosophy, interdisciplinary fields, axiology, science, academic disciplines, subfields by academic discipline, theories of deduction, formalism, fundamental physics concepts, universe, nature, ontology, manifolds, physical quantities, knowledge, main topic classifications, categories, education, categories by parameter, articles, structure, problem solving, analogy, logic, scientific disciplines, formalism (deductive), cognitive science, concepts in metaphysics, philosophy of mind, consciousness, epistemology, psychology, technology, economic development, technological change, and growth, neurology, neuroscience, memory, learning, educational psychology, philosophical logic, evaluation, life skills, skills, humans, behavior, phenomena, determinism, free will, motion, management, philosophy by field, value, deduction, scientific theories, philosophical theories, philosophy of mathematics, physics, concepts by field, physical cosmology, astrophysics, astronomical dynamical systems, reality, everything, life, metaphysics, philosophy of science, topological spaces, differential geometry, geometric topology, measurement, information, perception, concepts in epistemology, mathematics, subdivisions of mathematics, discrete mathematics, metaphilosophy, metatheory, theories, formal languages, formal sciences, syntax]
+</pre><p><img class="aligncenter" src="http://markorodriguez.files.wordpress.com/2012/03/graphtheory-concepts.png?w=497" alt="" width="497" /></p><p>These rings are useful for seeing what is touched at each step of the
+ walk. However, in order to see the inverted tree structure, Gremlin 
+nests his traversal so that the categories are <a href="https://github.com/tinkerpop/gremlin/wiki/MapReduce-Pattern">grouped under their children</a>. Gremlin records the <a href="http://en.wikipedia.org/wiki/Description_logic">subsumption hierarchy</a> as categories broaden one another.</p><pre class="brush:shell">gremlin&gt; v.out('subject').out('broader').groupBy{it.name}{
+  it.out('broader').groupBy{it.name}{
+    it.out('broader').name
+  }.cap.next()
+}.cap.next()
+mathematical relations=[{mathematics=[main topic classifications, abstraction, formal sciences, structure, scientific disciplines], predicate logic=[systems of formal logic]}]
+combinatorics=[{discrete mathematics=[subdivisions of mathematics], subdivisions of mathematics=[mathematics, subfields by academic discipline]}]
+</pre><p>Gremlin’s library is an adventure through the fascinating world of interconnected ideas.</p>
+<h2>References</h2>
+<p>Bizer, C., Lehmann, J., Kobilarov, G., Auer, S., Becker, S., Cyganiak, R., Hellmann, S., “<a href="http://www.wiwiss.fu-berlin.de/en/institute/pwo/bizer/research/publications/Bizer-etal-DBpedia-CrystallizationPoint-JWS-Preprint.pdf">DBpedia – A Crystallization Point for the Web of Data</a>,” Journal of Web Semantics, 7(3), 2009. </p>
+<p>Rodriguez, M.A., Pepe, A., Shinavier, J., “<a href="http://arxiv.org/abs/1006.1080">The Dilated Triple</a>,” Emergent Web Intelligence: Advanced Semantic Technologies, Advanced Information and Knowledge Processing series, 3–16, 2010.</p>
+<p>Newman, M.E.J., “<a href="http://arxiv.org/abs/cond-mat/0303516">The Structure and Function of Complex Networks</a>“, SIAM Review, 45, 167–256, 2003.</p>
+<p>Bollen, J., Van de Sompel, H., Hagberg, A., Bettencourt, L.M.A, Chute, R., Rodriguez, M.A., Balakireva, L.L., “<a href="http://dx.doi.org/10.1371/journal.pone.0004803">Clickstream Data Yields High-Resolution Maps of Science</a>,” PLoS One, Public Library of Science, 4(3), e4803, 2009.</p></div>
+            <div class="article-bumper article-bumper-bottom"
+                 ng-if="articles[0].showLogo"
+                 ng-bind-html="articles[0].partner.bottom.text | partnerBumperLinks:articles[0].partner.bottom.id">
+                <p>Now it's easier than ever to get started with MongoDB, the database that allows startups and enterprises alike to rapidly build planet-scale apps. Introducing <a href="https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad" target="_blank" rel="nofollow">MongoDB Atlas</a>, the official hosted service for the database on AWS. Try it now! Brought to you in partnership with <a href="https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad" target="_blank" rel="nofollow">MongoDB</a>.</p>
+            </div>
+
+            <div class="article-topics">
+                <div class="topic-label">Topics:</div>
+                <div class="topics">
+                        
+                </div>
+            </div>
+
+            <div class="author-n-useraction">
+                <div class="like action"><dz-like template="like-article.html" node="articles[0]"><div class="dz-like"
+     
+
+    <a href="#">
+        <i ng-class="{'icon-thumbs-up-alt': status.liked, 'icon-thumbs-up liked': !status.liked}"></i>
+            <span>Like (0)</span>
+    </a>
+</div>
+
+                    </dz-like></div>
+
+                <div class="comment action">
+                    <p ng-show="!articles[0].isLocked" slider-toggle="commentsSlider" slider-data="{parent: articles[0]}"
+                       activate-with-url-params="{showComments: articles[0].id}">
+                        <span><i class="icon-comment" tooltip-html-unsafe="{{ commentTooltip(articles[0]) }}"></span></i>
+                        Comment (<span class="comment-after number-of-comments" ng-bind="articles[0].nComments">0</span>)
+                    </p>
+                    <p ng-show="articles[0].isLocked">
+                        <span ng-cloak><i class="icon-icon-comment comment-disabled" tooltip-html-unsafe="Comments have been disabled for this article"></i></span>
+                    </p>
+                </div>
+
+                <div class="save action">
+                    <dz-save template="link-article-save.html" node="articles[0]" class="save"><div class="save icon-star-empty"
+     ><span
+        class="action-label">Save</span></div>
+
+                    </dz-save>
+                </div>
+
+                <div class="tweet action"><a ng-href="#"
+                                             ng-click='shareTwitter($event, articles[0].header.title, articles[0].url)'
+                                             class="title" target="_blank"><span><i class="icon-twitter"></i></span>
+                    <span class="action-label">Tweet</span></a>
+                </div>
+
+                <div class="pull-right">
+
+                    <div class="article-views action" ng-cloak><i class="icon-eye"></i> {{ articles[0].views | formatCount}} <span class="action-label">Views</span></div>
+
+                        <div class="user-n-admin-action action" ng-if="canEdit(articles[0]) || canDelete(articles[0])">
+                            <div class="mod-tools" dropdown is-open="dropdown.open" ng-cloak>
+                                <span dropdown-toggle>
+                                    <i class="icon-cog"></i>
+                                </span>
+                                <ul class="dropdown-menu">
+                                    <li><a ng-if="canEdit(articles[0])" ng-href="/content/{{ articles[0].id }}/edit.html">Edit</a></li>
+                                    <li><a href="#" ng-if="canDelete(articles[0])" ng-click="delete(articles[0])">Delete</a></li>
+                                    <li><a href="#" ng-if="perms.canPublish" ng-click="toggleComments(articles[0])">{{ articles[0].isLocked ? 'Enable' : 'Disable' }} comments</a></li>
+                                    <li><a href="#" ng-if="perms.canPublish && !articles[0].isLocked" ng-click="toggleLimitComments(articles[0])">
+                                        {{ articles[0].isLimited ? 'Remove comment limits' : 'Enable moderated comments' }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+                <div  class="attribution">
+                    <p>Published at DZone with permission of 
+                    Marko Rodriguez<span
+                            ng-if="articles[0].authors[0].isMVB">, DZone MVB</span>. <span ng-if="articles[0].source"><a
+                            href="http://markorodriguez.com/2012/03/07/exploring-wikipedia-with-gremlin-graph-traversals/" target="_blank">See the original article here.<i class="icon-link-ext-alt"></i></a></span></p>
+
+                    <p>Opinions expressed by DZone contributors are their own.</p>
+                </div>
+        </div>
+    </article>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <th-if-scroll relative-to="bottom" from="-20" to="0" callback="activateB(articles[0])"></th-if-scroll>
+    </div>
+</div>
+
+
+<div class="layout-card widget-top-border partner-resources-block">
+    <div class="main-container">
+        <div class="row">
+            <div class="featured-header">
+                <h2>Database<span> Partner Resources</span></h2>
+            </div>
+        </div>
+        <div class="row column">
+                <div class="s-asset asset-title">
+                    <div class="margin-rule">
+                        <div class="title-content">
+                            <div class="title"><a href="https://www.mongodb.com/cloud/atlas/lp/developers?jmp=dzone-ad" ng-click="$root.linkGo($event, '/sponsor/go?l=1370131&i=156121')"
+                                                  target="_blank">Introducing the only MongoDB as a Service offering available on Amazon Web Services (AWS) powered by the creators of the database. Learn more.</a></div>
+                            <div class="sponsor-name">MongoDB</div>
+                        </div>
+                        <div class="icon"><a href="https://www.mongodb.com/cloud/atlas/lp/developers?jmp=dzone-ad"><i
+                                class="icon-icon-comment ext icon-link-ext-alt"></i></a></div>
+                    </div>
+                </div>
+                <div class="s-asset asset-title">
+                    <div class="margin-rule">
+                        <div class="title-content">
+                            <div class="title"><a href="https://www.mongodb.com/cloud/atlas/lp/aws-users?jmp=dzone-ad" ng-click="$root.linkGo($event, '/sponsor/go?l=1365954&i=153165')"
+                                                  target="_blank">MongoDB Atlas, the fastest growing NoSQL database. Delivered as a Service on AWS. Learn more.</a></div>
+                            <div class="sponsor-name">MongoDB</div>
+                        </div>
+                        <div class="icon"><a href="https://www.mongodb.com/cloud/atlas/lp/aws-users?jmp=dzone-ad"><i
+                                class="icon-icon-comment ext icon-link-ext-alt"></i></a></div>
+                    </div>
+                </div>
+                <div class="s-asset asset-title">
+                    <div class="margin-rule">
+                        <div class="title-content">
+                            <div class="title"><a href="https://www.mongodb.com/cloud/atlas/lp/developers?jmp=dzone-ad" ng-click="$root.linkGo($event, '/sponsor/go?l=1365953&i=153164')"
+                                                  target="_blank">MongoDB Atlas is an on demand NoSQL database service. Try it now!</a></div>
+                            <div class="sponsor-name">MongoDB</div>
+                        </div>
+                        <div class="icon"><a href="https://www.mongodb.com/cloud/atlas/lp/developers?jmp=dzone-ad"><i
+                                class="icon-icon-comment ext icon-link-ext-alt"></i></a></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="ad-silver row" ng-if="articles[1] && !articles[1].partner.isSponsoringArticle && width >= 768">
+</div>
+
+<div class="ad-gold row" ng-if="articles[1] && !articles[1].partner.isSponsoringArticle && width < 768">
+    <div class="col-md-12">
+        <div ng-if="ads.gold1.show()" dc-slot="ads.gold1.slot()" tags="ads.gold1.tags(articles[0])" class="leaderboard-ad" size="ads.gold1.size()"></div>
+    </div>
+</div>
+
+
+</div>
+<div class="articles-wrap" ng-repeat="article in articles" ng-if="$index > 0 || article.id != 479794" ng-include="'/static/article/article.html'"></div>
+
+<div style="clear: both;"></div>
+<th-if-scroll ng-if="!isPreview" relative-to="bottom" from="-50" to="50" callback="loadMore()"></th-if-scroll>
+</div><div class="col-md-12 emailSubscriptionsPopover5 emailSubscriptionsPopover oUhbaTnfejsgpZntffWVcC" th-element="emailSubscriptionsPopover5" th-element-groups="['body','mainContentRow']" ng-hide="$root.isHidden('emailSubscriptionsPopover5')" data-th-element-name="emailSubscriptionsPopover5" data-th-widget="emailSubscriptions.popover" data-widget-email-subscriptions-popover="" ng-controller="emailSubscriptionsPopover5">    <div id="emailSubPanel" class="container emailSubPanel" ng-if="showEmailSubPanel && !$root.user.authenticated && !nonsusb" ng-model="minimized" ng-cloak>
+        <div class="row">
+            <div class="pull-right" style="height: 20px">
+                <a href="#" ng-click="hideEmailSubPanel('#emailSubPanel')" class="btn em-minimize"><i class="icon-white icon-minus"></i></a>
+            </div>
+        </div>
+        <div class="row emailSubPanelInput" ng-show="!subscribed">
+
+            <div class="control-group content col-lg-12">
+                <div class="col-lg-12">
+                    <span>
+                        <h3 style="font-weight: bold">The best of DZone straight to your inbox.</h3>
+                        <a href="{{examplePlug}}" target="_blank">SEE AN EXAMPLE</a>
+                    </span>
+                    <form name="formSubscribe" class="formSubscribe">
+                    <div class="input-group">
+                        <input ng-keydown="submitted=false" type="email" name="email" class="form-control email-address input-lg input-container" ng-model="subscriber.email" required/>
+                        <div class="icon" ng-class="{'ok_icon icon-ok': !formSubscribe.email.$invalid && subscriber.email!='', 'alert_icon icon-attention-circled': formSubscribe.email.$invalid && formSubscribe.email.$viewValue!='' && formSubscribe.email.$viewValue!=null}"></div>
+                        <button ng-disabled="submitted || !subscriber.email || emailForm.email.$invalid" ng-model="subscriber" type="button" ng-click="submit('#emailSubPanel')" class="btn btn-xlg">SUBSCRIBE</button>
+                    </div>
+                    <span class="error" ng-show="submitted && (formSubscribe.email.$error.required || formSubscribe.email.$error.email)">Please provide a valid email address.</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row emailSubPanelInput" ng-show="showSubscribed">
+            <div class="content col-lg-12">
+                <div class="col-lg-12">
+                    <span><h3 style="font-weight: bold">Thanks for subscribing!</h3></span>
+                    <span>Awesome! Check your inbox to verify your email so you can start receiving the latest in tech news and resources.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pull-right emailSubPanelDock" ng-hide="!minimized" ng-show="minimized" ng-model="minimized" ng-mouseenter="changeColor('#AFAFB2')" ng-mouseleave="changeColor(rgba(135, 135, 135, 0.50))" ng-style="dockColor" ng-cloak>
+        <div>Subscribe
+            <a href="#" id="emailSubPanelDock" ng-click="maximizeSubPanel()" class="btn">
+                <i class="icon-angle-double-up left"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</div></div></div><div class="container-fluid footerOuter" th-element="footerOuter" th-element-groups="[]" ng-hide="$root.isHidden('footerOuter')" data-th-element-name="footerOuter"><div class="row row1" th-element="row1" th-element-groups="['footerOuter']" ng-hide="$root.isHidden('row1')" data-th-element-name="row1"><div class="col-md-12 container2" th-element="container2" th-element-groups="['footerOuter','row1']" ng-hide="$root.isHidden('container2')" data-th-element-name="container2"><div class="container container2" th-element="container2" th-element-groups="['footerOuter','row1','container2']" ng-hide="$root.isHidden('container2')" data-th-element-name="container2"><div class="row footer" th-element="footer" th-element-groups="['footerOuter','row1','container2','container2']" ng-hide="$root.isHidden('footer')" data-th-element-name="footer"></div></div></div></div></div><div class=" sidebar sidebarTapBar oUhbkSMadabbWQbVkcC oUhbkSMadabfWVcC" th-element="sidebar" th-element-groups="[]" ng-hide="$root.isHidden('sidebar')" data-th-element-name="sidebar" data-th-widget="sidebar.tapBar" data-widget-sidebar-tap-bar="" ng-controller="sidebar"><div class="content" ng-if="!$root.botInfo.isRenderBot" sidebar-list>
+<div class=" sidebar.content" th-element="sidebar.content" th-element-groups="['sidebar']" ng-hide="$root.isHidden('sidebar.content')" data-th-element-name="sidebar.content"><div class="col-md-12 sidebarContentList8 sidebarContentList oUhbkSMaaqbcdvVkcC" th-element="sidebarContentList8" th-element-groups="['sidebar','sidebar.content']" ng-hide="$root.isHidden('sidebarContentList8')" data-th-element-name="sidebarContentList8" data-th-widget="sidebar.content.list" data-widget-sidebar-content-list="" ng-controller="sidebarContentList8"><ul class="nodes-list" dnd-list="display">
+
+    <div class="header" ng-if="edition">
+        <h3><strong>{{ editionName }}</strong></h3>
+            </div>
+
+
+    <li ng-repeat="node in display" id="{{::node.id}}-{{edition}}-{{$index}}" class="list-entry" ng-class="{active: isActive(node)}" sidebar-item="node"
+        >
+            <div ng-if="node.type != 'article' && node.type != 'ad'" class="resource {{ node.type }}">
+                <div class="sidebar-content">{{ node.blurb }}</div>
+            </div>
+        <div class="sidebar-content ">
+            <a ng-class="{badge1: edition}" data-badge="{{$index + 1}}" ng-if="node.type != 'ad'" ng-href="{{ ::node.url }}" ng-click="tap()" sidebar-click="node">
+                <div class="sidebar-node-image" ng-if="edition"><img class="imageList" dz-image-fid-width="80" dz-image-fid="{{ ::node.imageUrl }}"></div>
+                <div ng-class="{'sidebar-node-title' : edition}">{{ ::node.title }}</div>
+            </a>
+        </div>
+    </li>
+    <th-if-scroll relative-to="bottom" from="-100" to="50" callback="loadMore()"></th-if-scroll>
+    <th-loader flag="loading()" />
+</ul>
+</div></div></div>
+<span class="tap" ng-class="{tapEdition: edition}" ng-click="tap()" ng-if="!$root.botInfo.isRenderBot">
+    <i class="icon-angle-double-left left"></i>
+    <i class="icon-angle-double-right right"></i>
+</span>
+</div><div class=" componentsSlider6 componentsSlider oUhballbvbdSaoUhM" th-element="componentsSlider6" th-element-groups="[]" ng-hide="$root.isHidden('componentsSlider6')" data-th-element-name="componentsSlider6" data-th-widget="components.slider" data-widget-components-slider="" ng-controller="componentsSlider6"><!--<i class="icon-cancel" ng-click="close()"></i>-->
+
+<div class="background" ng-class="{open: _sliderOpen}" ng-if="_ready" ng-click="close()">
+</div>
+
+<div class="slider-outer-wrapper" ng-class="{open: _sliderOpen}">
+    
+    <div class="row slider-inner-wrapper" ng-if="_ready">
+<div class=" componentsSlider6.widgets" th-element="componentsSlider6.widgets" th-element-groups="['componentsSlider6']" ng-hide="$root.isHidden('componentsSlider6.widgets')" data-th-element-name="componentsSlider6.widgets"><div class="col-md-12 contentCommentsSlider7 contentCommentsSlider oUhbaqbcaibvnWffWVcC" th-element="contentCommentsSlider7" th-element-groups="['componentsSlider6','componentsSlider6.widgets']" ng-hide="$root.isHidden('contentCommentsSlider7')" data-th-element-name="contentCommentsSlider7" data-th-widget="content.commentsSlider" data-widget-content-comments-slider="" ng-controller="contentCommentsSlider7"><script type="text/ng-template" id="link-article-save.html">
+    <div ng-class="{'icon-star gold': status.saved, 'icon-star-empty': !status.saved}" ng-click="save()" class="save"><span class="save-title">Save</span><span ng-if="status.saved" class="d-letter">d</span></div>
+</script>
+
+
+<div class="comment-slider-content">
+
+    <div class="node-info">
+        <div class="comment-title">
+            <h1 class="parent-title">{{ parent.title || parent.header.title}}</h1>
+            <!--<a ng-if="parent.title" ng-href="{{ parent.linkSource }}">-->
+            <!--<i class="icon-link-2" tooltip-html-unsafe="Permalink"></i>-->
+            <!--</a>  -->
+            <h3 ng-if="parent.tldr"  class="tldr">{{ parent.tldr }}</h3>
+            <h3 ng-if="parent.title" class="link-description" >{{ parent.linkDescription }}</h3>
+            <a ng-if="parent.title" ng-href="{{parent.url}}" class="link-source">{{ parent.urlSource.name }}</a>
+        </div>
+    </div>
+    <div class="author-n-article-info">
+        <div class="author-avatar">
+            <a ng-href="{{ parent.authors[0].url || parent.authorUrl }}">
+                <img dz-image-fid-width="80" dz-image-fid="{{ parent.authors[0].avatar || parent.authorAvatar }}" class="avatar" width="40" />
+            </a>
+        </div>
+        <div class="author-name">
+            by <a th-popup="users.profile.mini" popup-data="{user: parent.authors[0].id || parent.authorId }" ng-href="{{ parent.authors[0].url || parent.authorUrl }}">{{ parent.authors[0].realName || parent.author}}
+
+            <div ng-if="parent.authors[0].isMVB || parent.isMVB" class="mbv-award">
+                <i class="icon-mvb-1"></i>
+            </div></a>
+
+            <div ng-if="parent.authors[0].isMVB || parent.isMVB" class="mvb-partner">
+                <user-is-partner user="parent.authors[0].id" ng-if="canDelete(parent)"></user-is-partner>
+            </div>
+
+            <div class="zone-leader">
+                <user-is-zone-leader user="parent.authors[0].id"></user-is-zone-leader>
+            </div>
+
+        </div>
+        <div class="publish-date">
+            &middot; <span class="author-date">{{ parent.articleDate | date:'MMM. dd, yyyy' }} {{ parent.linkDate | date:'MMM. dd, yyyy' }}</span>
+        </div>
+        <div class="portal-link">
+            &middot; <a href="{{ parent.portal.url }}" id="portal-name" ng-cloak><span class="portal-name">{{ parent.portal.name }} Zone</span></a>
+        </div>
+    </div>
+    <div class="user-actions">
+        <div class="like action" ng-if="parent.title">
+            <dz-like template="like-article.html" callback="addVoter()" node="parent" ng-if="parent.articleDate"></dz-like>
+            <dz-like callback="addVoter()" callback="addVoter()" node="parent" ng-if="parent.linkDate"></dz-like>
+        </div>
+
+        <div class="like action" ng-if="!parent.title">
+            <dz-like template="like-article.html" callback="addVoter()" node="parent"></dz-like>
+        </div>
+
+
+        <div class="save-article action"><dz-save template="link-article-save.html" node="parent" class="save"></dz-save></div>
+
+        <div class="tweet action">
+            <a ng-href="#" ng-click='shareTwitter($event, parent.title || parent.header.title,parent.linkSource || parent.url)' class="title" target="_blank"><i class="icon-twitter"></i>Tweet</a>
+        </div>
+
+        <div class="pull-right">
+            <div class="view-count action">
+                <i class="icon-eye"></i> {{ parent.views }} <span ng-if="!parent.title">Views</span><span ng-if="parent.title" class="action-label">Clicks</span>
+            </div>
+
+            <div class="user-n-admin-action action" ng-if="canEdit(parent) || canDelete(parent)">
+                <div class="mod-tools" dropdown is-open="dropdown.open">
+                    <span dropdown-toggle><i class="icon-cog"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a ng-href="/content/{{ parent.id }}/edit.html">Edit</a></li>
+                        <li><a href="#" ng-if="canDelete(parent)" ng-click="deleteLink(parent)">Delete</a></li>
+                        <li><a href="#" ng-if="canPublish && !parent.title" ng-click="toggleComments(parent)">{{ parent.isLocked ? 'Enable' : 'Disable' }} comments</a></li>
+                        <li><a href="#" ng-if="canPublish && !parent.isLocked && !parent.title" ng-click="toggleLimitComments(parent)">
+                            {{ parent.isLimited ? 'Remove comment limits' : 'Enable moderated comments' }}
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th-defer-until="_sliderOpen">
+        <!--<div content-comment-box parent="parent.id" count="parent.nComments" limited="parent.isLimited" class="comment-box"></div>-->
+    </div>
+</div>
+
+</div></div>    </div>
+</div>
+
+</div>
+
+    <div class="row">
+        <a href="#" class="back-to-top"><i class="icon-up-big"></i></a>
+    </div>
+
+
+
+    <script type="text/ng-template" id="/themes/dz20/widgets/header/sections/widget.html">
+<span dropdown is-open="dropdown.open" ng-class="{small: width < 768}">
+    <span dropdown-toggle class="sections"><i class="icon-menu"></i>
+        <span class="menuLabel" ng-if="width < 768"></span></span>
+    <ul class="dropdown-menu ul-first" ng-style="width < 768 ? {'top': headerSize + 0 + 'px', 'padding-top': '15px'} : {}">
+        <li><a href="/links">Links</a></li>
+        <li><a href="/refcardz">Refcardz</a></li>
+        <li><a href="/guides">Guides</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li class="divider"></li>
+
+        <li class="post-title"><span>Zones</span></li>
+        <li ng-repeat="topic in portals" class="dropdown">
+            <a ng-href="{{ topic.url }}">{{ topic.name }}</a>
+        </li>
+        <li class="divider"></li>
+        <li class="post-title"><span>Post</span></li>
+        <li><a href="/links">Link</a></li>
+        <li><a href="/article/post.html">Article</a></li>
+    </ul>
+</span>
+
+
+    </script>
+
+<script type="text/ng-template" id="dzfollow.html"><button class="btn btn-follow" ng-class="{'btn-success': !status.followed, 'btn-warning': status.followed, 'hidden': followed.id == $root.user.id}" ng-click="follow()"><span ng-if="!status.followed"><i class="icon-plus"></i> Follow</span><span ng-if="status.followed" class="following">Following</span><span ng-if="status.followed" class="hover">Unfollow</span></button></script><script type="text/ng-template" id="dztopicselect.html"><ui-select  ng-if="canAddTopics" ng-model="editing.topics" theme="bootstrap" multiple tagging tagging-label="(add topic)"
+           tagging-tokens=",">
+    <ui-select-match class="input-tags"><div class="topics-tag">{{ $item }}</div></ui-select-match>
+    <ui-select-choices
+            refresh="topicsRefresh($select.search)"
+            refresh-delay="250"
+            repeat="topic in foundTopics | filter: $select.search">
+        <div ng-bind-html="topic | highlight: $select.search"></div>
+    </ui-select-choices>
+</ui-select>
+<ui-select ng-if="!canAddTopics" ng-model="editing.topics" theme="bootstrap" multiple>
+    <ui-select-match><div class="topics-tag">{{ $item }}</div></ui-select-match>
+    <ui-select-choices
+            refresh="topicsRefresh($select.search)"
+            refresh-delay="250"
+            repeat="topic in foundTopics | filter: $select.search">
+        <div ng-bind-html="topic | highlight: $select.search"></div>
+    </ui-select-choices>
+</ui-select></script><script type="text/ng-template" id="dzsave.html"><i class="icon-star-empty" ng-class="{'icon-star gold': status.saved, 'icon-star-empty': !status.saved}" tooltip-html-unsafe="{{status.saved ? 'Saved' : 'Save'}}" ng-click="save()"></i>
+<!--<span ng-class="{'gold count': status.saved}">{{ status.count }}</span>--></script><script type="text/ng-template" id="dzupload.html"><span class="btn btn-upload" >
+    <div ng-bind-html="label"></div>
+    <div class="progress-container" ng-style="{visibility: uploading ? 'visible' : 'hidden'}">
+        <progressbar max="100" value="progress"><span>{{ progress }}</span></progressbar>
+    </div>
+    <input type="file" ng-file-drop ng-file-select ng-file-change="upload($files)" />
+</span></script><script type="text/ng-template" id="inline-editable.html"><div class="inline-editable" ng-if="!status.editing" ng-click="edit()" ng-transclude></div>
+<div class="inline-editor-wrapper" ng-if="status.editing">
+    <textarea class="inline-editor" ng-model="status.editValue" ng-if="type == 'textarea'"></textarea>
+    <input class="inline-editor" ng-model="status.editValue" ng-if="type == 'input'"></textarea>
+    <div class="inline-editor-tools">
+        <button class="btn select-ok" ng-disabled="!status.editValue" ng-click="save()"><i class="icon-check-1"></i></button>
+        <button class="btn select-cancel" ng-disabled="!editable" ng-click="cancel()"><i class="icon-cancel-1"></i></button>
+    </div>
+</div></script><script type="text/ng-template" id="dzlike.html">
+<div class="dz-like " ng-class="{liked: status.liked}" ng-click="like()">
+    <a href="#">
+        <i class="icon-up-dir"></i>
+        <span>{{ status.score }}</span>
+    </a>
+</div>
+</script><script type="text/ng-template" id="dzphoto.html"><i class="icon-camera-alt photo" type="file" ng-file-drop ng-file-select ng-file-change="upload($files)"></i></script><script type="text/ng-template" id="followus.html">
+<p>Let's be friends:</p>
+<ul class="icons-only" ng-class="{open: isOpen}" click-outside="outside()">
+    <li class="rss-icon" id="rss-spotlight-1">
+        <a href="/pages/feeds"><i class="icon-rss-1"></i></a>
+    </li>
+    <li class="twitter-icon">
+        <a href="https://twitter.com/DZone" target="_blank"><i class="icon-twitter"></i></a>
+    </li>
+    <li class="facebook-icon">
+        <a href="https://www.facebook.com/DZone-259639764711" target="_blank"><i class="icon-facebook-1"></i></a>
+    </li>
+    <li class="google-icon">
+        <a href="https://plus.google.com/+dzone/posts" target="_blank"><i class="icon-gplus"></i></a>
+    </li>
+    <li class="linkedin-icon">
+        <a href="https://www.linkedin.com/company/dzone" target="_blank"><i class="icon-linkedin-1"></i></a>
+    </li>
+
+        <ul class="social-dropdown dropdown-menu">
+            <li class="rss" id="rss-spotlight"><a href="/pages/feeds"><i class="icon-rss-squared"></i> <span>RSS Feed</span></a></li>
+            <li class="twitter" id="twitter-spotlight">
+                <a href="https://twitter.com/DZone" class="twitter-follow-button" data-show-count="true"
+                   data-show-screen-name="false">Follow @DZone</a>
+            </li>
+            <li class="fb-like" id="fb-spotlight" data-href="https://www.facebook.com/DZone-259639764711/timeline/"
+                data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></li>
+            <li class="google-plus" id="gplus-spotlight">
+                <div class="g-follow" data-annotation="bubble" data-height="20"
+                     data-href="https://plus.google.com/108688665090780146602" data-rel="publisher"></div>
+            </li>
+            <li class="linkedin" id="linkedin-spotlight">
+                <script type="IN/FollowCompany" data-id="114427" data-counter="right"></script>
+            </li>
+        </ul>
+</ul>
+</script><script type="text/ng-template" id="overlay.html"><div class="ngdialog th-overlay">
+    <div class="ngdialog-overlay">
+        <div class="overlay-box">
+            <i class="icon-spin5 animate-spin"></i>
+
+            <p>{{ message }}</p>
+        </div>
+    </div>
+</div></script><script type="text/ng-template" id="dialog.confirm.html"><p>{{ message }}</p></script><script type="text/ng-template" id="dialog.skeleton.html"><div class="dialog-title">
+    <h1 ng-if="$dialog.title">{{ $dialog.title }}</h1>
+</div>
+<div class="dialog-body {{ $dialog.extraClass }}" ng-include="$dialog.template"></div>
+<div class="dialog-footer">
+    <div class="dialog-buttons" ng-if="$dialog.buttons">
+        <button ng-repeat="button in $dialog.buttons" ng-hide="button.hidden" ng-disabled="button.disabled || $dialog.executing"
+                class="btn btn-{{ button.type || 'info' }}" ng-click="$dialog.runAction(button)">
+            <span class="icon-spin6 animate-spin" ng-if="button.executing"></span>{{ button.label || button.name }}</button>
+    </div>
+</div></script><script type="text/ng-template" id="dialog.message.html"><div class="message-icon">
+    <i class="icon-{{ icon }}"></i>
+</div>
+<div class="message-text">
+    <p class="message-title" ng-bind-html="trustAsHtml(title)"></p>
+    <p ng-bind-html="trustAsHtml(message)"></p>
+</div>
+</script>
+<script type="text/javascript">
+
+    var TH_CORE_VARS = {};
+
+    try {
+        TH_CORE_VARS.additional = {};
+
+        TH_CORE_VARS.additional.model = [{"content":{"id":"479794","type":"article","plug":"exploring-graph-representation","creationDate":"2012-03-10 00:43:46.0"},"enableThreadedComments":true,"portal":{"id":5,"code":"database","title":"Database","shortTitle":"database-sql-nosql-tutorials-tools-news"},"contentType":"article","metaData":{"title":"Exploring a Graph Representation of Wikipedia Using Gremlin - DZone Database","description":"A graph is a data structure composed of vertices and edges. These terms are synonymous with the following: vertices, dots, nodes, things, pointsedges, lines,...","keywords":"programming, software development, devops, java, agile, web, iot, database, mobile, big data, cloud","siteName":"dzone.com","url":"https://dzone.com","img":"https://dzone.com/themes/dz20/images/ArticleImg_7.jpg","imgprop":"og:image:secure_url","twitterImage":null,"type":"","wordCount":1647,"canonical":"https://dzone.com/articles/exploring-graph-representation","noIndex":false,"noFollow":false,"prevPage":null,"nextPage":null,"useEscapedFragment":false,"robots":false,"robotsTag":""},"articleType":"article/"}];
+        TH_CORE_VARS.additional.loadedStyles = [["/lib/bootstrap/bootstrap.less","/lib/fontello/css/fontello.css","/lib/fontello/css/animation.css","/lib/angular-ui/select.css","/lib/ngDialog/css/ngDialog.css","/less/ngDialog-theme.less","/less/container.less","/lib/bootstrap-switch/bootstrap-switch.css","/less/dzone20.less","/less/fonts.less","/less/directives.less","/lib/sb/sb.css","/lib/bootstrap-slider/bootstrap-slider.css","/less/layout.less","/widgets/article/content/article-content.less","/widgets/components/slider/widget.less","/widgets/content/commentsSlider/widget.less","/widgets/emailSubscriptions/popover/widget.less","/widgets/header/headerV2/widget.less","/widgets/sidebar/content/list/list.less","/widgets/sidebar/tapBar/sidebar-list.less","/widgets/sidebar/tapBar/widget.less"]];
+        TH_CORE_VARS.additional.loadedScripts = [["/lib/jquery/jquery.js","/lib/lodash/lodash.js","/lib/moment/moment.js","/scripts/utils.js","/lib/angular/angular.js","/lib/angular/angular-sanitize.js","/lib/local-storage/angular-local-storage.js","/lib/bootstrap/dropdown.js","/lib/angular-ui/bootstrap.js","/lib/angular-ui/select.js","/lib/bootstrap-switch/bootstrap-switch.js","/lib/ngDialog/js/ngDialog.js","/lib/angular-moment/angular-moment.js","/scripts/app.js","/scripts/socket.js","/scripts/services.js","/scripts/ui-services.js","/scripts/directives.js","/scripts/filters.js","/lib/angular/angular-cookies.js","/lib/angulartics/angulartics.js","/lib/angulartics/angulartics-ga.js","/lib/angular-touch/angular-touch.min.js","/lib/elastic/elastic.js","/lib/ng-file-upload/angular-file-upload-all.js","/scripts/dzone.js","/scripts/ads.js","/scripts/social-media.js","/scripts/head.js","/scripts/links.js","/scripts/utilities/directives.js","/scripts/utilities/services.js","/scripts/utilities/editor.js","/lib/bootstrap-slider/bootstrap-slider.js","/lib/bootstrap-slider/directive.js","/lib/sb/sb.js","/lib/angular-draganddrop/draganddrop.js","/lib/flexmenu/flexmenu.min.js","/widgets/article/content/utils.js","/widgets/components/slider/service.js","/widgets/header/headerV2/resize.js","/widgets/sidebar/content/list/service.js","/widgets/sidebar/tapBar/directive.js","/widgets/sidebar/tapBar/service.js"]];
+        TH_CORE_VARS.additional.botInfo = [{"isRenderBot":false}];
+        TH_CORE_VARS.additional.TH_CSRF = "3471356754547344698";
+        TH_CORE_VARS.additional.request = [{"site":{"id":7,"title":"DZone: Programming & DevOps news, tutorials & tools","keywords":"programming, software development, devops, java, agile, web, iot, database, mobile, big data, cloud","description":"Programming, Web Development, and DevOps news, tutorials and tools for beginners to experts. Hundreds of free publications, over 1M members, totally free.","name":"DZone.com"},"dev":false,"cdn":["dz2cdn1.dzone.com","dz2cdn2.dzone.com","dz2cdn3.dzone.com","dz2cdn4.dzone.com"],"theme":"dz20","context":"","user":{"id":2500002,"authenticated":false,"name":"Anonymous","realName":null,"avatar":"https://secure.gravatar.com/avatar/?d=identicon&r=PG","profile":"/users/2500002/anon-user.html"}}];
+        TH_CORE_VARS.additional.portals = [[{"topic":8,"id":2,"shortTitle":"agile-methodology-training-tools-news","color":"red","name":"Agile","code":"agile","url":"/agile-methodology-training-tools-news"},{"topic":6129,"id":3,"shortTitle":"big-data-analytics-tutorials-tools-news","color":"green","name":"Big Data","code":"big-data","url":"/big-data-analytics-tutorials-tools-news"},{"topic":30,"id":4,"shortTitle":"cloud-computing-tutorials-tools-news","color":"orange","name":"Cloud","code":"cloud","url":"/cloud-computing-tutorials-tools-news"},{"topic":59,"id":5,"shortTitle":"database-sql-nosql-tutorials-tools-news","color":"purple","name":"Database","code":"database","url":"/database-sql-nosql-tutorials-tools-news"},{"topic":31,"id":6,"shortTitle":"devops-tutorials-tools-news","color":"yellow","name":"DevOps","code":"devops","url":"/devops-tutorials-tools-news"},{"topic":1138,"id":7,"shortTitle":"enterprise-integration-training-tools-news","color":"green","name":"Integration","code":"integration","url":"/enterprise-integration-training-tools-news"},{"topic":48,"id":8,"shortTitle":"iot-developer-tutorials-tools-news-reviews","color":"orange","name":"IoT","code":"iot","url":"/iot-developer-tutorials-tools-news-reviews"},{"topic":1,"id":1,"shortTitle":"java-jdk-development-tutorials-tools-news","color":"purple","name":"Java","code":"java","url":"/java-jdk-development-tutorials-tools-news"},{"topic":29,"id":9,"shortTitle":"mobile-app-developer-tutorials-tools-news","color":"yellow","name":"Mobile","code":"mobile","url":"/mobile-app-developer-tutorials-tools-news"},{"topic":653,"id":10,"shortTitle":"apm-tools-performance-monitoring-optimization","color":"red","name":"Performance","code":"performance","url":"/apm-tools-performance-monitoring-optimization"},{"topic":35,"id":11,"shortTitle":"web-development-programming-tutorials-tools-news","color":"orange","name":"Web Dev","code":"webdev","url":"/web-development-programming-tutorials-tools-news"}]];
+        TH_CORE_VARS.additional.matchedUrl = {"name":"dzone:articles:view","mapping":"/articles/**","mappingPatterns":{}};
+        TH_CORE_VARS.additional.requiresModule = ["dndLists","generalDirectives","monospaced.elastic","angularFileUpload","ui.bootstrap-slider","angulartics","angulartics.google.analytics","ngCookies","ngSanitize","ui.select","ui.bootstrap","angularMoment","ngTouch","ngDialog","LocalStorageModule"];
+            } catch (e) {
+        console.error(e);
+    }
+</script>
+
+<script type='text/javascript'>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+</script>
+<script type="text/javascript" src="//dz2cdn2.dzone.com/storage/pub/3306732-combined.js" charset="utf-8"></script><script type="text/javascript" src="//dz2cdn2.dzone.com/storage/pub/3306744-combined.js" charset="utf-8"></script><script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-410289-1', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('set', 'siteSpeedSampleRate', 25);
+    //ga('send', 'pageview');
+</script>
+
+<!-- Begin Inspectlet Embed Code -->
+<script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 1999343779]);
+    (function () {
+        function __ldinsp() {
+            var insp = document.createElement('script');
+            insp.type = 'text/javascript';
+            insp.async = true;
+            insp.id = "inspsync";
+            insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(insp, x);
+        }
+
+        if (window.attachEvent) window.attachEvent('onload', __ldinsp);
+        else window.addEventListener('load', __ldinsp, false);
+    })();
+</script>
+<!-- End Inspectlet Embed Code -->
+
+<script type="text/javascript">
+    (function () {
+        window._pa = window._pa || {};
+        var pa = document.createElement('script');
+        pa.type = 'text/javascript';
+        pa.async = true;
+        pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/514a05817a82440002000406.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(pa, s);
+    })();
+</script>
+
+
+<script type="text/javascript">
+    (function() {
+            function controller($scope, TH$Dialog, $location, $rootScope, $timeout, TH$SharedVars, $service, TH$LocalStorage) {
+    {
+        $scope.location = $location.path();
+    }
+
+    $scope.searchT ='';
+
+    TH$SharedVars.bind($scope, 'searchT', 'searchTerm', true)
+
+    $scope.loginForm = function () {
+
+        TH$Dialog.open({
+            loadWidget: 'users.loginFormV2',
+            size: 'loginForm'
+        });
+    };
+
+    $timeout(function() {
+        $(".portals").flexMenu();
+    }, 0);
+
+
+    $scope.isActivePortal = function (portalId) {
+        return $rootScope.model.portal && $rootScope.model.portal.id == portalId;
+    };
+
+    $scope.allResults = function() {
+        window.location='/search';
+    }
+
+    $("#search").keyup(function (e) {
+        var length = ($scope.searchT) ? $scope.searchT.length : 0;
+        $scope.searchT = ($scope.searchT) ? $scope.searchT : '';
+
+        if(e.keyCode == 13 && length > 2) {
+            $scope.allResults();
+        }else {
+            $scope.search();
+        }
+    });
+
+    $scope.focusSearch = function(){
+        $timeout(function(){$("#search").focus();},100)
+    }
+
+    $scope.search = function(){
+        var length = ($scope.searchT) ? $scope.searchT.length : 0;
+        $scope.loading = (length > 2);
+        if(length < 3){
+            if($scope.nodes || $scope.nodes == [] ){
+                $timeout(function(){
+                    $scope.nodes = [];
+                    $scope.cType = [];
+                    $scope.related = [];
+                    $scope.pager = [];
+                    $scope.searchParam = [];
+                    $scope.totalResults = null;
+
+                },100)
+            }
+            return false;
+        }
+
+        var term = $scope.searchT;
+        if ($scope.prevTerm == term) {return;}
+        $scope.prevTerm = term;
+
+
+        TH$LocalStorage.value('searchValue', term);
+        term = (term) ? term : '';
+        $service.nextPage({term: term, pageSize: 7}, null, true).then(function (data) {
+            $scope.loading = false;
+            var curPage = 1;
+            $scope.nodes = data.pages.newest[curPage];
+            $scope.haveResults = ($scope.nodes) ? true : false;
+            $scope.totalResults = data.totalItems;
+        })
+    }
+}
+            var WMODEL_DATA = {};
+            WMODEL_DATA.applyFades = true;
+        WMODEL_DATA.isAdmin = false;
+        WMODEL_DATA.slot = null;
+        WMODEL_DATA.user = {"jobRole":null,"website":null,"about":null,"job":null,"avatar":"https://secure.gravatar.com/avatar/?d=identicon&r=PG","country":null,"city":null,"id":2500002,"karma":10,"company":null,"realName":"$$ANON_USER$$","websiteUrl":"","tagline":null};
+        WMODEL_DATA.OPTIONS = {};
+        WMODEL_DATA.getPortals = null;
+        TH.installWidgetController('header.headerV2', 'mainHeader', WMODEL_DATA, typeof controller == 'function' ? controller : null, [{name: 'nextPage', data: false}], ' oUhbWOfRPSwBoUhM', null);
+        })();
+        (function() {
+            function controller($scope, $sce, $analytics, $service, SideBarService, TH$Dialog,$rootScope, TH$Location, $q, $window,
+                    /**infoBarService,*/ DZtopicsString, shareThis, $location, TH$Service, DZHeadService, $timeout, ArticleAdsService) {
+
+    var current = ($scope.articles && $scope.articles.length) ? $scope.articles[0] : null;
+    var loading = null;
+    var lastLoaded = current;
+    var cache = {};
+
+
+    $scope.width = $(window).width();
+
+    $scope.voted = null;
+
+    $scope.canDelete = function(article) {
+        return article.canDelete;
+    };
+
+    $scope.canEdit = function(article) {
+        return article.canEdit;
+    };
+
+    $scope.canPublish = function (article) {
+        return article.canPublish;
+    };
+
+    $scope.loginForm = function () {
+
+        TH$Dialog.open({
+            loadWidget: 'users.loginFormV2',
+            size: 'loginForm'
+        });
+    };
+
+    $scope.delete= function(article) {
+        TH$Dialog.confirm("Are you sure you want to permanently delete this article?").then(function() {
+            TH$Service.action('delete', {type: 'node', id: article.id}).then(function() {
+                TH$Dialog.success('Article deleted');
+                    newArticle(article.type);
+            });
+        });
+    };
+
+    $scope.publish = function(article) {
+        TH$Dialog.confirm("Are you sure you want to publish this article?").then(function () {
+            TH$Service.action('nodes.publish', {type: 'node', id: article.id}, {}, true)
+                .then(function () {
+                    TH$Dialog.success('Article Published', 'Your article was successfully published');
+                    article.published = true;
+                }, function () {
+                    TH$Dialog.error('Article not Published', 'There was an error publishing teh article');
+                });
+        });
+    };
+
+        $scope.shareTwitter = function($event, title, url){
+            $event.preventDefault();
+            $event.stopPropagation();
+            var twitter = 'https://twitter.com/intent/tweet';
+            var link = $location.protocol() + '://' + location.host + url;
+            var ref = location.host;
+            var params = '?text='+title+'&url='+link+'&ref=dzone.com&via=DZone';
+            var win = window.open(twitter+params, '_blank');
+            win.focus();
+        }
+
+
+
+    function newArticle(type) {
+        current.article = {
+            body: '',
+            title: '',
+            image: null,
+            topics: [],
+            sources: [],
+            notes: '',
+            published: false,
+            canDelete: false
+        };
+
+        current.bodyImages = [];
+        setEditUrl(null, type);
+    };
+
+    function setEditUrl(id, type) {
+        TH$Location.apply(function ($location) {
+
+            var url;
+
+            if (id) {
+                if (type == 'article') {
+                    url = '/content/' + id + '/edit.html';
+                } else {
+                    url = '/dzone/staff/' + type + (type == 'refcard' ? 'z' : 's') + '/' + id + '/edit.html';
+                }
+            } else {
+                if (type == 'article') {
+                    url = '/content/article/post.html';
+                } else if (type == 'refcard'){
+                    url = '/dzone/staff/' + type + 'z' + '/add.html';
+                }else{
+                    url = '/content/article/post.html'
+                }
+            }
+            $timeout(function(){
+                $location.path(url);
+            },1000);
+        });
+    };
+
+    function setCurrentInSidebar(article) {
+        var title = (article.header) ? article.header.title : article.title;
+        var titleEll = (article.header) ? article.header.titleEll : article.title;
+        SideBarService.active = article.title ? article : {
+            id: article.id,
+            type: 'article',
+            title:  $scope.edition ? titleEll : title,
+            url: article.url,
+            imageUrl: article.articleImage
+        }
+    }
+
+    if (current) {
+        loadPartner(current);
+        loadRichSnippetData(current);
+
+        setCurrentInSidebar(current);
+        //infoBarService.setTitle(current.header.title);
+        //infoBarService.setArticle(current);
+
+//        cache[current.id] = current;
+        setMeta(current);
+        current.fullHtml = $sce.trustAsHtml(current.articleContent);
+    }
+
+    function setMeta(current){
+        var portal = (current.portal) ? current.portal.name : '';
+        var keywords = (current.articleTags) ? current.articleTags.toString() : portal;
+        var title = current.header ? current.header.title : current.title;
+
+        if(!title){
+            return;
+        }
+
+        DZHeadService.title = title+' - DZone '+portal;
+        DZHeadService.description = current.metaDescription;
+        DZHeadService.keywords = keywords;
+        DZHeadService.url = $location.absUrl();
+        DZHeadService.canonical = $location.protocol() + '://' + $location.host() + current.url;
+        var imageLink = current.header ? current.header.imageLink : current.imageLink;
+        var imgUrl = $location.host() + imageLink;
+
+        DZHeadService.img = imgUrl;
+        DZHeadService.type = current.articleType;
+        DZHeadService.wordCount = (current.articleContent) ? current.articleContent.split(/\s+/).length : 0;
+    }
+
+    function getArticle(id) {
+
+        if (cache[id]) {
+            return $q.when(cache[id]);
+        } else {
+            var promise =  $service({article: id});
+
+            promise.then(function(article) {
+                article.fullHtml = $sce.trustAsHtml(article.articleContent);
+            });
+
+            return promise;
+        }
+    }
+
+    function loadArticleInList(id) {
+        loading = id;
+
+        if (cache[id]) {
+            $scope.articles.push(cache[id]);
+            lastLoaded = cache[id];
+            loading = null;
+        } else {
+            $scope.articles.push({type: 'loader'});
+
+            getArticle(id)
+                .then(function(article) {
+                    $scope.articles.pop();
+                    $scope.articles.push(article);
+                    lastLoaded = article;
+                    loading = null;
+                    cache[article.id] = article;
+
+                    loadPartner(article);
+                    loadRichSnippetData(current);
+                });
+        }
+    }
+
+    $scope.imageUrlBase = $location.protocol() + "://" + $location.host();
+
+    function loadRichSnippetData(article) {
+
+        var rs = {
+            bodyProp: 'articleBody',
+            date: moment(article.articleDate).format()
+        };
+
+        switch (article.articleType) {
+
+            case 'news':
+                rs.type = 'https://schema.org/NewsArticle';
+                break;
+            case 'snippet':
+                rs.type = 'https://schema.org/Code';
+                rs.bodyProp = '';
+                break;
+            case 'review':
+                rs.type = 'https://schema.org/Review';
+                rs.bodyProp = 'reviewBody';
+                break;
+            case 'tutorial':
+            case 'analysis':
+                rs.type = 'https://schema.org/TechArticle';
+                break;
+            case 'opinion':
+                rs.type = 'https://schema.org/BlogPosting';
+                break;
+            default:
+                rs.type = 'https://schema.org/Article';
+                break;
+        }
+
+        article.rs = rs;
+    }
+
+    var articleNumber = 1;
+
+    function attachPartner(article, partners) {
+
+        article.showLogo = true;
+
+        if (!_.isNumber(partners.lastUsed)) {
+            //partners.lastUsed = 0;
+            toUse = partners.lastUsed
+        }else{
+            toUse = partners.lastUsed + 1;
+        }
+
+        if (toUse >= partners.length || !toUse) {
+            toUse = 0;
+        }
+
+        if(partners){
+            article.showLogo = (partners.length < 2 && articleNumber % 2) ? false : article.showLogo;
+        }else{
+            article.showLogo = false;
+        }
+
+        if(!articleNumber || article.partner){
+            return;
+        }
+
+        article.readyForAd = true;
+        article.partner = partners[toUse];
+        $scope.partners.lastUsed = toUse;
+        articleNumber++;
+    }
+
+
+    function loadPartner(article) {
+
+        var partners = $scope.partners;
+
+        if (!article.portalId) {
+            if ($scope.portal) {
+                article.portal = _.findWhere($scope.portals, {id: $scope.portal.id});
+            } else {
+                //_.each(article.articleTagIds, function (id) {
+                //    var portal = _.findWhere($scope.portals, {topic: id});
+                //
+                //    if (portal) {
+                //        article.portal = portal;
+                //    }
+                //});
+            }
+        } else {
+            article.portal = _.findWhere($scope.portals, {id: article.portalId});
+        }
+        if (article.portal) {
+            if (partners[article.portal.id]) {
+                var _partners = partners[article.portal.id];
+                _partners.lastUsed = $scope.partners.lastUsed;
+                attachPartner(article, _partners);
+            } else {
+                $service.partners({portal: article.portal.id}).then(function(_partners) {
+                    partners[article.portal.id] = _partners;
+                    attachPartner(article, _partners);
+                });
+            }
+        }
+
+        if (article.readyForAd || article.partner) {
+            article.readyForAd = true;
+            return;
+        }
+
+    }
+
+    $scope.loadMore = function() {
+
+        if (loading) {
+            return;
+        }
+
+        var next = SideBarService.findNext(lastLoaded ? lastLoaded.id : null);
+
+        if (next) {
+            loadArticleInList(next);
+        }
+
+
+    };
+
+    $scope.activate = function(article) {
+
+        if(article.type == 'loader'){
+            return;
+        }
+
+        $rootScope.model.portal = article.portal
+        $scope.addShareCount(article);
+
+        //infoBarService.setnComments(article.nComments);
+        //infoBarService.setArticle(article);
+
+        if (current && article.id == current.id) {
+            return;
+        }
+
+        current = article;
+        setCurrentInSidebar(article);
+
+        TH$Location.apply(function($location) {
+            $location.path(article.url);
+        });
+
+        var title = article.header ? article.header.title : article.title;
+
+        //infoBarService.setTitle(title);
+        //infoBarService.setArticle(article);
+        setMeta(article);
+            $timeout(function(){
+                if (!article.viewTracked) {
+                    TH$Service.action('nodes.trackView', {type: 'node', id: article.id}, {}, true);
+                    article.views++;
+                    article.viewTracked = true;
+
+                    if (window.ga) {
+                        window.ga('set', 'dimension2', article.articleType ? ('article/' + article.articleType) : 'article');
+                        window.ga('set', 'dimension3', moment(article.articleDate).format('YYYY-MM-DD'));
+                        window.ga('set', 'dimension4', _.indexOf($scope.articles, article));
+                        window.ga('set', 'dimension5', article.zonetop || 'undefined');
+                        window.ga('set', 'dimension6', article.pubPlug || 'undefined');
+                    }
+
+                    $analytics.pageTrack(article.url);
+                }
+            },0);
+    };
+
+    $scope.toggleComments = function(article) {
+        if(!article.isLocked) {
+            TH$Service.action('articles.lockNode', {type: 'node', id: article.id}).then(function(result) {
+                if(result){
+                    article.isLocked = true;
+                    TH$Dialog.success('You have disabled all comments for this Article');
+                }else{
+                    TH$Dialog.error('error','Your requested was denied')
+                }
+            });
+        }else {
+            TH$Service.action('articles.unlockNode', {type: 'node', id: article.id}).then(function(result) {
+                if(result){
+                    article.isLocked = false;
+                    TH$Dialog.success('You have enabled all comments for this Article');
+                }else{
+                    TH$Dialog.error('error','Your requested was denied')
+                }
+            });
+        }
+    };
+
+    $scope.toggleLimitComments = function (article) {
+        if (!article.isLimited) {
+            TH$Service.action('articles.limitNode', {type: 'node', id: article.id}).then(function (result) {
+                if (result) {
+                    article.isLimited = true;
+                    TH$Dialog.success('You have limited comments for this Article. Now all comments will go through moderation.');
+                } else {
+                    TH$Dialog.error('error', 'Your requested was denied')
+                }
+            });
+        } else {
+            TH$Service.action('articles.unlimitNode', {type: 'node', id: article.id}).then(function (result) {
+                if (result) {
+                    article.isLimited = false;
+                    TH$Dialog.success('You removed the limits for comments on this Article');
+                } else {
+                    TH$Dialog.error('error', 'Your requested was denied')
+                }
+            });
+        }
+    };
+
+    $scope.activateT = function(article) {
+        $scope.activate(article);
+    };
+
+    $scope.activateB = function(article) {
+        $scope.activate(article);
+    };
+
+    SideBarService.fn.onSelected = function(node) {
+        $scope.articles = [];
+
+        loadArticleInList(node.id);
+
+        $scope.activate(node);
+        $($window).scrollTop(0);
+    };
+
+    $scope.upvoteArticle = function () {
+
+// disabled till we decide how the vote system will work
+
+//        if (!$scope.voted) {
+//            $scope.articles[0].upvote_count += 1;
+//            $scope.voted = 1;
+//        }else {
+//            $scope.articles[0].upvote_count -= 1;
+//            $scope.voted = null;
+//        }
+    };
+
+    $scope.addShareCount = function(article){
+//        var socials = ['linkedin', 'reddit', 'twitter'];
+//        var url = $location.protocol()+'://'+$location.host()+':'+$location.port()+article.url;
+//
+//        socials.map( function(item) {
+//
+//            if(article[item] == undefined){
+//
+//                article[item] = shareThis.countThis(item,url, 'content').then(function(result){
+//                    article[item] = result;
+//                })
+//            }
+//        })
+
+
+    };
+
+    $scope.share = function(socialNet, url, title){
+        shareThis.shareThis(socialNet, $location.protocol()+'://'+$location.host()+':'+$location.port()+url, title);
+    };
+
+    Object.size = function(obj) {
+        var size = 0, key;
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) size++;
+        }
+        return size;
+    };
+
+
+    $scope.share = function(socialNet, url, title){
+        shareThis.shareThis(socialNet, $location.protocol()+'://'+$location.host()+':'+$location.port()+url, title);
+    };
+
+    $scope.mailShareLink = function(article) {
+        var title = article.header ? article.header.title : article.title;
+        var link = article.header ? article.header.link : article.link;
+        return 'mailto:?subject=' + encodeURIComponent(title) +  '&body=Article: ' + encodeURIComponent('https://dzone.com/' + link);
+    };
+
+    $scope.ads = ArticleAdsService($scope.edition, $scope.width);
+
+};
+
+
+            var WMODEL_DATA = {};
+            WMODEL_DATA.edition = null;
+        WMODEL_DATA.articles = [{"articleImage":"/themes/dz20/images/ArticleImg_5.jpg","saveStatus":{"canSave":false,"count":0,"saved":false},"portalId":5,"viewTracked":true,"canDelete":false,"bodyProp":"articleBody","pubPlug":null,"canEdit":false,"publisher":{"logo":"https://dzone.com/themes/dz20/images/logo.png","name":"DZone"},"id":479794,"authors":[{"id":739235,"name":"okram","realName":"Marko Rodriguez","avatar":"https://secure.gravatar.com/avatar/40feb25b7b2632d536ac07ccb0349907?d=identicon&r=PG","isMVB":true,"url":"/users/739235/okram.html","tagline":null,"aboutAuthor":"Dr. Marko A. Rodriguez is the CEO and founder of the graph technology firm <a href=\"http://thinkaurelius.com\">Aurelius</a>. He focuses his time on both the theoretical and applied aspects of graph computing in his academic career and as a co-founder of <a href=\"http://tinkerpop.com/\">TinkerPop<a/>. Prior to his commercial endeavors, Marko was a Director's Fellow at the Center for Nonlinear Studies at the Los Alamos National Lab in New Mexico."}],"articleDate":1331340226000,"partner":{"details":{"logo":"//dz2cdn3.dzone.com/storage/partner-logo/3109242-mongodb-logosvg.png","level":2,"name":"MongoDB","partnerUrl":"https://www.mongodb.com/","leveldesc":"Platinum","code":"mongodb"},"bottom":{"id":153160,"text":"<p>Now it's easier than ever to get started with MongoDB, the database that allows startups and enterprises alike to rapidly build planet-scale apps. Introducing <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB Atlas</a>, the official hosted service for the database on AWS. Try it now! Brought to you in partnership with <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB</a>.</p>"},"campaign":78614,"top":{"id":153159,"text":"<p>Build fast, scale big with <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB Atlas</a>, a hosted service for the leading NoSQL database. Try it now! Brought to you in partnership with <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB</a>.</p>"}},"nComments":0,"published":true,"canonical":"https://dzone.com/articles/exploring-graph-representation","articleTypePre":"https://schema.org/Article","readyForAd":true,"metaDescription":"A graph is a data structure composed of vertices and edges. These terms are synonymous with the following: vertices, dots, nodes, things, pointsedges, lines,...","image":"https://dzone.com/themes/dz20/images/ArticleImg_4.jpg","canPublish":false,"deleted":false,"likeStatus":{"liked":false,"score":0,"canLike":false},"zonetop":"","articleTags":[],"header":{"id":479794,"title":"Exploring a Graph Representation of Wikipedia Using Gremlin","imageUrl":"/themes/dz20/images/ArticleImg_7.jpg","link":"/articles/exploring-graph-representation","imageLink":"/themes/dz20/images/ArticleImg_7.jpg","titleEll":"Exploring a Graph Representation of Wikipedia...","type":"article"},"url":"/articles/exploring-graph-representation","isLocked":false,"draft":false,"articleContent":"","source":"http://markorodriguez.com/2012/03/07/exploring-wikipedia-with-gremlin-graph-traversals/","modDate":1331340226000,"views":4606,"isLimited":false,"tldr":null,"originalSource":"http://markorodriguez.com/2012/03/07/exploring-wikipedia-with-gremlin-graph-traversals/","articleType":""}];
+        WMODEL_DATA.perms = {"canDecidePick":false,"canPublish":false};
+        WMODEL_DATA.partners = {"5":[{"details":{"logo":"//dz2cdn3.dzone.com/storage/partner-logo/3109242-mongodb-logosvg.png","level":2,"name":"MongoDB","partnerUrl":"https://www.mongodb.com/","leveldesc":"Platinum","code":"mongodb"},"bottom":{"id":153160,"text":"<p>Now it's easier than ever to get started with MongoDB, the database that allows startups and enterprises alike to rapidly build planet-scale apps. Introducing <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB Atlas</a>, the official hosted service for the database on AWS. Try it now! Brought to you in partnership with <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB</a>.</p>"},"campaign":78614,"top":{"id":153159,"text":"<p>Build fast, scale big with <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB Atlas</a>, a hosted service for the leading NoSQL database. Try it now! Brought to you in partnership with <a href=\"https://www.mongodb.com/cloud/atlas/lp/dbaas?jmp=dzone-ad\" target=\"_blank\" rel=\"nofollow\">MongoDB</a>.</p>"}}],"lastUsed":0};
+        WMODEL_DATA.authenticated = false;
+        WMODEL_DATA.firstArticleContent = null;
+        WMODEL_DATA.isPreview = false;
+        WMODEL_DATA.OPTIONS = {};
+        TH.installWidgetController('article.content', 'articleContent4', WMODEL_DATA, typeof controller == 'function' ? controller : null, [{name: 'partners', data: true},{name: 'DEFAULT', data: true}], ' oUhbblYOaqbcblYOaqbcC', null);
+        })();
+        (function() {
+            function controller($rootScope, $scope, TH$Service, TH$LocalStorage, newsLetterPlugCreator) {
+
+    $scope.subscriber = {email:$scope.userEmail == null? '' : $scope.userEmail};
+    $scope.submitted = false;
+    var portal = $rootScope.model.portal;
+    var newsletters = TH$LocalStorage.makeMap('newsletter.anon.subs').newsletter.anon.subs || {};
+    $scope.nonsusb = (portal) ? (newsletters[portal.id]) ? newsletters[portal.id] : false : true;
+    $scope.examplePlug = newsLetterPlugCreator('weekly', null);
+
+
+
+    $.fn.riseUp = function(e)   { $(e).slideUp("slow")}
+    $.fn.riseDown = function(e) { $(e).slideDown("slow")}
+    var fold = $(window).scrollTop() + $(window).height();
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= $(window).height()) {
+            $scope.showEmailSubPanel();
+        }
+    });
+
+    $scope.showEmailSubPanel = function(){
+        if($scope.minimized == null || $scope.minimized == false){
+            if($scope.subscribed == null || $scope.subscribed == false) {
+                $.fn.riseDown($(".emailSubPanel"));
+                $scope.minimized = false;
+            }
+        }
+    }
+
+    $scope.hideEmailSubPanel = function(element){
+        $(element).slideToggle();
+        $scope.minimized = true;
+    }
+
+    $scope.maximizeSubPanel = function(){
+        $scope.minimized = false;
+        $scope.showEmailSubPanel();
+    }
+
+    $scope.submit = function(e) {
+        $scope.submitted = true;
+        $scope.subscribed = true;
+        $scope.showSubscribed = true;
+        var key = portal.id;
+        newsletters[key] = true;
+        TH$LocalStorage.preference('newsletter.anon.subs', newsletters);
+        TH$Service.exec('newsletters.subscribeEmail', {email: $scope.subscriber.email, portal: portal.id }).then(function (success) {
+            if (success) {
+                $scope.errors = false;
+                setTimeout(function () {
+                    $(e).slideToggle();
+                }, 5000);
+            }else{
+                delete newsletters[key];
+                TH$LocalStorage.preference('newsletter.anon.subs', newsletters);
+            }
+        });
+        if($scope.errors == null){
+            $scope.errors = true;
+        }
+    };
+
+    $scope.changeColor = function(color){
+        $scope.dockColor = {'background-color': color};
+    }
+
+    $scope.showDock = function(){
+        return $scope.minimized;
+    }
+};
+            var WMODEL_DATA = {};
+            WMODEL_DATA.OPTIONS = {};
+        TH.installWidgetController('emailSubscriptions.popover', 'emailSubscriptionsPopover5', WMODEL_DATA, typeof controller == 'function' ? controller : null, null, ' oUhbaTnfejsgpZntffWVcC', null);
+        })();
+        (function() {
+            function controller($scope, $service, $location, SideBarService, $timeout) {
+
+    if ($scope.edition) {
+        $scope.date = moment($scope.editionDate).utc().format('MMM DD, YYYY');
+    }
+
+    SideBarService.ctx.pageSize = $scope.pageSize;
+    SideBarService.ctx.isPreview = $scope.isPreview;
+    SideBarService.ctx.mode = $scope.mode;
+
+    SideBarService.fn.loader = $service;
+
+    var $window = $(window);
+
+    function checkWidth() {
+        var windowsize = $window.width();
+        $scope.width = windowsize;
+    }
+    // Execute on load
+    checkWidth()
+    // Bind event listener
+    $(window).resize(checkWidth);
+
+
+    if ($scope.edition) {
+        SideBarService.ctx.edition = $scope.edition;
+    }
+
+    SideBarService.fn.scrollCheck = function() {
+        $scope.$emit('thIfScrollCheck');
+    };
+
+    var currentFilter;
+
+    $scope.$on('$locationChangeSuccess', function() {
+
+        if (!$location.search().filter) {
+            $scope.filter = 'latest';
+        } else {
+            $scope.filter = $location.search().filter;
+
+            if ($scope.filter == 'latest') {
+                $location.search('filter', null);
+            }
+        }
+
+        if (currentFilter == $scope.filter) {
+            return;
+        }
+
+        currentFilter = $scope.filter;
+
+        SideBarService.ctx.filter = $scope.filter;
+    });
+
+    $scope.display = SideBarService.getList();
+
+    $scope.$watchCollection(function() {
+        return SideBarService.getList();
+    }, function (n) {
+        $scope.display = n;
+    });
+
+    $scope.isActive = SideBarService.isActive;
+
+    $scope.isExcluded = SideBarService.isExcluded;
+
+    $scope.loadMore = SideBarService.load;
+
+    $scope.loading = function() {
+        return SideBarService.ctx.loading;
+    };
+
+    TH.on('TapBarStatusChange', function(expanded) {
+        if (expanded) {
+            SideBarService.unblock();
+        }
+    })
+
+}
+            var WMODEL_DATA = {};
+            WMODEL_DATA.edition = null;
+        WMODEL_DATA.editionName = "";
+        WMODEL_DATA.pageSize = 20;
+        WMODEL_DATA.isPreview = false;
+        WMODEL_DATA.editionDate = null;
+        WMODEL_DATA.OPTIONS = {};
+        WMODEL_DATA.mode = null;
+        TH.installWidgetController('sidebar.content.list', 'sidebarContentList8', WMODEL_DATA, typeof controller == 'function' ? controller : null, [{name: 'DEFAULT', data: true}], ' oUhbkSMaaqbcdvVkcC', null);
+        })();
+        (function() {
+            function controller($scope) {
+    var $window = $(window);
+
+    function checkWidth() {
+        var windowsize = $window.width();
+        var $element = $('div.sidebar.sidebarTapBar');
+        $scope.width = windowsize;
+        if(windowsize <= 1024 && $scope.edition){
+            $('.fixContentRight').removeClass('fixContentRight');
+            $('.tap').show();
+        }else if($scope.edition){
+            $('.tap').hide();
+            $('.mainContentRow').addClass('fixContentRight');
+            $element.removeClass('tapNotExpanded');
+            $element.addClass('expanded');
+        }
+    }
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
+}
+            var WMODEL_DATA = {};
+            WMODEL_DATA.edition = null;
+        WMODEL_DATA.slot = null;
+        WMODEL_DATA.OPTIONS = {};
+        TH.installWidgetController('sidebar.tapBar', 'sidebar', WMODEL_DATA, typeof controller == 'function' ? controller : null, null, ' oUhbkSMadabfWVcC oUhbkSMadabbWQbVkcC', null);
+        })();
+        (function() {
+            function controller($scope,  shareThis, TH$Dialog, TH$Service, $location) {
+    $scope.getEditUrl = function(id, type) {
+        if (!type || type == 'article') {
+            return '/content/' + id + '/edit.html';
+        } else {
+            return '/dzone/staff/' + type + (type == 'refcard' ? 'z' : 's') + '/' + id + '/edit.html';
+        }
+    };
+
+    $scope.share = function(socialNet, url, title){
+        shareThis.shareThis(socialNet, url, title);
+    };
+
+//    $scope.mailShareLink = function(article) {
+//        return 'mailto:?subject=' + encodeURIComponent(article.header.title) +  '&body=Article: ' + encodeURIComponent('https://dzone.com/' + article.header.link);
+//    };
+
+    $scope.canDelete = function(article) {
+        return article.canDelete;
+    };
+
+    $scope.canPublish = function(article) {
+        return article.canPublish;
+    };
+
+    $scope.canEdit = function(article) {
+        return article.canEdit;
+    };
+
+    $scope.toggleComments = function(article) {
+        if(!article.isLocked) {
+            TH$Service.action('articles.lockNode', {type: 'node', id: article.id}).then(function(result) {
+                if(result){
+                    article.isLocked = true;
+                    TH$Dialog.success('You have disabled all comments for this Article');
+                }else{
+                    TH$Dialog.error('error','Your requested was denied')
+                }
+            });
+        }else {
+            TH$Service.action('articles.unlockNode', {type: 'node', id: article.id}).then(function(result) {
+                if(result){
+                    article.isLocked = false;
+                    TH$Dialog.success('You have enabled all comments for this Article');
+                }else{
+                    TH$Dialog.error('error','Your requested was denied')
+                }
+            });
+        }
+    };
+
+    $scope.toggleLimitComments = function (article) {
+        if (!article.isLimited) {
+            TH$Service.action('articles.limitNode', {type: 'node', id: article.id}).then(function (result) {
+                if (result) {
+                    article.isLimited = true;
+                    TH$Dialog.success('You have limited comments for this Article. Now all comments will go through moderation.');
+                } else {
+                    TH$Dialog.error('error', 'Your requested was denied')
+                }
+            });
+        } else {
+            TH$Service.action('articles.unlimitNode', {type: 'node', id: article.id}).then(function (result) {
+                if (result) {
+                    article.isLimited = false;
+                    TH$Dialog.success('You removed the limits for comments on this Article');
+                } else {
+                    TH$Dialog.error('error', 'Your requested was denied')
+                }
+            });
+        }
+    };
+
+    $scope.shareTwitter = function($event, title, url){
+
+        $event.preventDefault();
+        $event.stopPropagation();
+        var twitter = 'https://twitter.com/intent/tweet';
+        var link = $location.protocol() + '://' + location.host + url;
+        var ref = location.host;
+        var params = '?text='+title+'&url='+link+'&ref=dzone.com&via=DZone';
+        var win = window.open(twitter+params, '_blank');
+        win.focus();
+    };
+
+    $scope.edit = function(link) {
+        TH$Dialog.open({
+            loadWidget: 'links.postPreview',
+            widgetArgs: {
+                edit: link.id
+            },
+            size: 'xbig'
+        }).then(function (result) {
+            $scope.link.title = result.title;
+            $scope.link.linkDescription = result.content;
+            $scope.link.thumb = result.thumb;
+            $scope.link.tags = result.topics;
+        });
+    };
+
+    $scope.deleteLink = function(article) {
+        var title = article.title;
+        var type = 'link';
+        if(article.header){
+            title = (article.header.type == 'article') ? article.header.title : article.title;
+            type = (article.header.type == 'article') ? 'article' : 'link';
+        }
+        TH$Dialog.confirm('Do you want to delete "' + title + '"?').then(function() {
+            return TH$Service.action('delete', {type: type, id: article.id});
+        }).then(function() {
+            article.deleted = true;
+        });
+    };
+}
+
+
+            var WMODEL_DATA = {};
+            WMODEL_DATA.OPTIONS = {};
+        TH.installWidgetController('content.commentsSlider', 'contentCommentsSlider7', WMODEL_DATA, typeof controller == 'function' ? controller : null, null, ' oUhbaqbcaibvnWffWVcC', null);
+        })();
+        (function() {
+            
+            var WMODEL_DATA = {};
+            WMODEL_DATA.name = "commentsSlider";
+        WMODEL_DATA.slot = null;
+        WMODEL_DATA.OPTIONS = {"name":"commentsSlider"};
+        TH.installWidgetController('components.slider', 'componentsSlider6', WMODEL_DATA, typeof controller == 'function' ? controller : null, null, ' oUhballbvbdSaoUhM', null);
+        })();
+        </script>
+    <script type="text/javascript">
+
+        TH.installWidgetDirective('links.sources.mini', 'linksSourcesMini', {"service":{"link":"="},"extra":null}, 'widget.html', '', [{name: 'DEFAULT', data: true}], ' oUhbdhbqvRbefWfSC', null, ['mini.less']);
+        
+        TH.installWidgetDirective('leads.addCRM', 'leadsAddCRM', {"service":null,"extra":null}, 'widget.html', '/widgets/leads/addCRM/widget.js', [{name: 'DEFAULT', data: true}], ' oUhb_ObOQnKRMnM oUhbcgvKRcgcONfPC', ['/scripts/utilities/tools.js'], ['add-crm.less','add-ref.less']);
+        
+        TH.installWidgetDirective('manage.revisions', 'manageRevisions', {"service":{"node":"=","body":"=","masterTemplate":"=","format":"=","mode":"="},"extra":null}, 'widget.html', '/widgets/manage/revisions/widget.js', [{name: 'revision', data: true},{name: 'DEFAULT', data: true}], ' oUhbXYVajkgpfWVcC', null, ['widget.less']);
+        
+        TH.installWidgetDirective('header.zonesDropdown', 'headerZonesDropdown', {"service":{"portal":"="},"extra":{"hover":"="}}, 'widget.html', '/widgets/header/zonesDropdown/widget.js', [{name: 'DEFAULT', data: true}], '', null, null);
+        
+        TH.installWidgetDirective('manage.customNotifications.preview', 'manageCustomNotificationsPreview', {"service":null,"extra":null}, 'widget.html', '/widgets/manage/customNotifications/preview/widget.js', null, ' oUhbXYVMwrjrYVdgpZfnkZfnkM dLgZWBLPpWkKeXB', null, ['preview.less','/lib/froala-2/css/froala_style.min.css']);
+        
+        TH.installWidgetDirective('emailSubscriptions.subscriptions.unsubscribeHeader', 'emailSubscriptionsSubscriptionsUnsubscribeHeader', {"service":null,"extra":null}, 'widget.html', '', null, ' oUhbaTnfejsgpbfejsgpdpfejQWOffWVcC', null, ['widget.less']);
+        
+        TH.installWidgetDirective('assets.mini', 'assetsMini', {"service":{"asset":"="},"extra":null}, 'widget.html', '', [{name: 'DEFAULT', data: true}], ' oUhbcgvWfSoUhM', null, ['widget.less']);
+        
+        TH.installWidgetDirective('users.profile.mini', 'usersProfileMini', {"service":{"user":"="},"extra":null}, 'widget.html', '/widgets/users/profile/mini/widget.js', [{name: 'DEFAULT', data: true}], ' oUhbwfbqddOeffWVcC', null, ['widget.less']);
+        
+        TH.installWidgetDirective('links.postV2', 'linksPostV2', {"service":null,"extra":null}, 'widget.html', '/widgets/links/postV2/widget.js', null, ' oUhbdhbnvXZqyBC', null, ['postV2.less']);
+        
+        TH.installWidgetDirective('links.listV2', 'linksListV2', {"service":null,"extra":null}, 'widget.ftl', '/widgets/links/listV2/widget.js', [{name: 'linkData', data: true},{name: 'list', data: true},{name: 'parseLink', data: true}], ' oUhbdhbdvXVkyBC', ['filters.js','directives.js'], ['listV2.less']);
+        
+        TH.installWidgetDirective('users.uiPrefs', 'usersUiPrefs', {"service":null,"extra":null}, 'widget.html', '/widgets/users/uiPrefs/widget.js', null, '', null, null);
+        
+        TH.installWidgetDirective('emailSubscriptions.subscriptions.nonMemberJoin', 'emailSubscriptionsSubscriptionsNonMemberJoin', {"service":null,"extra":null}, 'widget.html', '', null, ' oUhbaTnfejsgpbfejsgpXlaYfhffWVcC', null, ['widget.less']);
+        
+        TH.installWidgetDirective('links.postPreview', 'linksPostPreview', {"service":{"url":"=","edit":"="},"extra":null}, 'widget.html', '/widgets/links/postPreview/widget.js', [{name: 'topics', data: true},{name: 'DEFAULT', data: true}], ' oUhbdhbnvqjXfoUhM', null, ['widget.less']);
+        
+        TH.installWidgetDirective('manage.customNotifications.test', 'manageCustomNotificationsTest', {"service":{"customNotification":"="},"extra":null}, 'widget.html', '/widgets/manage/customNotifications/test/widget.js', [{name: 'searchGroups', data: true},{name: 'searchUsers', data: true},{name: 'DEFAULT', data: true}], ' oUhbXYVMwrjrYVdgpcgcoUhM', null, ['widget.less']);
+        
+        TH.installWidgetDirective('header.sections', 'headerSections', {"service":null,"extra":null}, 'widget.html', '/widgets/header/sections/widget.js', null, ' oUhbWOfbRllbgfgpM', null, ['sections.less']);
+        
+        TH.installWidgetDirective('article.listV2', 'articleListV2', {"service":null,"extra":null}, 'widget.html', '/widgets/article/listV2/widget.js', [{name: 'list', data: true},{name: 'sortCount', data: true}], ' oUhbblYOdvXKuV_VkcC', ['directives.js'], ['article-list.less']);
+        
+        TH.installWidgetDirective('content.commentBox', 'contentCommentBox', {"service":{"parent":"="},"extra":{"count":"=","limited":"="}}, 'widget.html', '/widgets/content/commentBox/widget.js', [{name: 'post', data: false},{name: 'edit', data: false},{name: 'DEFAULT', data: true}], ' oUhbaqbcaibevMkaqbC', null, ['comments.less']);
+        
+        TH.installWidgetDirective('emailSubscriptions.subscribeInjection', 'emailSubscriptionsSubscribeInjection', {"service":null,"extra":null}, 'widget.html', '/widgets/emailSubscriptions/subscribeInjection/widget.js', null, ' oUhbaTnfejsgpbfejQfYfgXoUhM', null, ['widget.less']);
+        
+        TH.installWidgetDirective('emailSubscriptions.subscriptions.memberManageHeader', 'emailSubscriptionsSubscriptionsMemberManageHeader', {"service":null,"extra":null}, 'widget.html', '', null, ' oUhbaTnfejsgpbfejsgpWaQnYRWPSaoUhM', null, ['widget.less']);
+        
+        TH.installWidgetDirective('emailSubscriptions.subscriptions.nonMemberManageHeader', 'emailSubscriptionsSubscriptionsNonMemberManageHeader', {"service":null,"extra":null}, 'widget.html', '', null, ' oUhbaTnfejsgpbfejsgpXlaYfXYVWOffWVcC', null, ['widget.less']);
+        
+        TH.installWidgetDirective('emailSubscriptions.footerWidget', 'emailSubscriptionsFooterWidget', {"service":null,"extra":null}, 'widget.html', '/widgets/emailSubscriptions/footerWidget/widget.js', null, ' oUhbaTnfejsgpPmhxWVcoUhM', null, ['widget.less']);
+        
+        TH.installWidgetDirective('users.loginFormV2', 'usersLoginFormV2', {"service":null,"extra":null}, 'widget.html', '/widgets/users/loginFormV2/widget.js', null, ' oUhbwfbjZcprBjZcprBC', null, ['loginFormV2.less']);
+        
+        TH.installWidgetDirective('refcardz.mini', 'refcardzMini', {"service":{"asset":"="},"extra":null}, 'widget.html', '', [{name: 'DEFAULT', data: true}], ' oUhbfSbmWfSoUhM', null, ['widget.less']);
+            </script>
+
+</body>
+
+

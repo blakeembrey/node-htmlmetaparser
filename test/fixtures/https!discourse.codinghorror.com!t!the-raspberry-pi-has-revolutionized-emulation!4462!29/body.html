@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" class="desktop-view not-mobile-device  anon">
+  <head>
+    <meta charset="utf-8">
+    <title>The Raspberry Pi Has Revolutionized Emulation - blog - Coding Horror Discussion</title>
+    <meta name="description" content="Every geek goes through a phase where they discover emulation. It&amp;#39;s practically a rite of passage. 
+
+This is a companion discussion topic for the original entry at https://blog.codinghorror.com/the-raspberry-pi-has-revol&amp;hellip;">
+    <meta name="author" content="">
+<meta name="generator" content="Discourse 1.7.0.beta5 - https://github.com/discourse/discourse version 2a9331d061423f2b04d63ad7407f90fa6fd104cd">
+<link rel="icon" type="image/png" href="/images/default-favicon.ico">
+<link rel="apple-touch-icon" type="image/png" href="/images/default-apple-touch-icon.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<link rel="canonical" href="https://discourse.codinghorror.com/t/the-raspberry-pi-has-revolutionized-emulation/4462?page=2" />
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://discourse.codinghorror.com","potentialAction":{"@type":"SearchAction","target":"https://discourse.codinghorror.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<link rel="search" type="application/opensearchdescription+xml" href="https://discourse.codinghorror.com/opensearch.xml" title="Coding Horror Discussion Search">
+
+    
+
+<style>
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url('//discourse-cdn.codinghorror.com/assets/fontawesome-webfont-ff82aeed6b9bb6701696c84d1b223d2e682eb78c89117a438ce6cfea8c498995.woff2?https://discourse.codinghorror.com&amp;2&v=4.5.0') format('woff2'),
+         url('//discourse-cdn.codinghorror.com/assets/fontawesome-webfont-c812ddc9e475d3e65d68a6b3b589ce598a2a5babb7afc55477d59215c4a38a40.woff?https://discourse.codinghorror.com&amp;2&v=4.5.0') format('woff');
+  }
+</style>
+
+      <link href="//discourse-cdn.codinghorror.com/stylesheets/desktop_a4bdf829609340e7d93fcf2ef43286898f02a368.css?__ws=discourse.codinghorror.com" media="all" rel="stylesheet" />
+
+
+  
+
+    
+
+      <meta name="fragment" content="!">
+
+
+    <script>
+      window.EmberENV = window.EmberENV || {};
+      window.EmberENV['FORCE_JQUERY'] = true;
+    </script>
+
+    <script src="//discourse-cdn.codinghorror.com/assets/locales/en-add783a80cacdd22bbd71a7ad30e427516ddb4639569bfc59e39a99b155fd38c.js"></script>
+    <script src="//discourse-cdn.codinghorror.com/assets/ember_jquery-94d39baf2b7a346571d3472782c3994e23b7cf8c4e2c645075bc11f7a82cdccf.js"></script>
+    <script src="//discourse-cdn.codinghorror.com/assets/preload-store-9a5d6688476c54b0eb6e11cf444ab9dc19602f99f10114228f41fe605c31ac4d.js"></script>
+    <script src="//discourse-cdn.codinghorror.com/assets/vendor-9bfd7c5c0e44977c95c75def10cd90ad55ac7c33683f9ce361b0ec455d52d5ac.js"></script>
+    <script src="//discourse-cdn.codinghorror.com/assets/pretty-text-bundle-c921a25bf89cab352a453b96607a6e8a8577e1869bd294b5983c748cc7e31170.js"></script>
+    <script src="//discourse-cdn.codinghorror.com/assets/application-ceba9a24b01a5625f31c0f4b2c306262735426f56042765668eef8f16086e76f.js"></script>
+
+
+      
+
+    
+    <link rel="manifest" href="/manifest.json">
+
+      <link rel="alternate" type="application/rss+xml" title="RSS feed of &#39;The Raspberry Pi Has Revolutionized Emulation&#39;" href="https://discourse.codinghorror.com/t/the-raspberry-pi-has-revolutionized-emulation/4462.rss" />
+  <meta property="og:site_name" content="Coding Horror Discussion" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discourse-cdn.codinghorror.com/user_avatar/discourse.codinghorror.com/adam_sommer/100/74278_1.png" />
+<meta property="og:image" content="https://discourse-cdn.codinghorror.com/user_avatar/discourse.codinghorror.com/adam_sommer/100/74278_1.png" />
+<meta property="og:url" content="https://discourse.codinghorror.com/t/the-raspberry-pi-has-revolutionized-emulation/4462/29" />
+<meta name="twitter:url" content="https://discourse.codinghorror.com/t/the-raspberry-pi-has-revolutionized-emulation/4462/29" />
+<meta property="og:title" content="The Raspberry Pi Has Revolutionized Emulation" />
+<meta name="twitter:title" content="The Raspberry Pi Has Revolutionized Emulation" />
+<meta property="og:description" content="Check out Pico-8 for new &quot;fantasy console&quot; goodness.  Works great with Raspberry Pi Zero, 2, 3, etc." />
+<meta name="twitter:description" content="Check out Pico-8 for new &quot;fantasy console&quot; goodness.  Works great with Raspberry Pi Zero, 2, 3, etc." />
+
+  </head>
+
+  <body class="">
+    
+
+    <div class='debug-eyeline'></div>
+
+    <noscript data-path="/t/the-raspberry-pi-has-revolutionized-emulation/4462/29">
+      <header class="d-header">
+  <div class="wrap">
+    <div class="contents">
+      <div class="row">
+        <div class="title span13">
+          <a href="/">
+              <img src="/images/d-logo-sketch.png" alt="Coding Horror Discussion" id="site-logo">
+          </a>
+        </div>
+            <div class='panel clearfix'>
+              <a href="/login" class='btn btn-primary btn-small login-button'><i class="fa fa-user"></i> Log In</a>
+            </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div id="main-outlet" class="wrap">
+        <!-- preload-content: -->
+        <h1>
+  <a href="/t/the-raspberry-pi-has-revolutionized-emulation/4462">The Raspberry Pi Has Revolutionized Emulation</a>
+</h1>
+
+<div id='breadcrumbs'>
+    <div id="breadcrumb-0" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"
+>
+      <a href="/c/blog" itemprop="url">
+        <span itemprop="title">blog</span>
+      </a>
+    </div>
+</div>
+
+
+
+<hr>
+
+
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/Eldon_Cleary'><b itemprop='author'>Eldon_Cleary</b></a>
+           
+           <time datetime='2016-07-25T22:50:02Z' itemprop='datePublished'>
+             2016-07-25 22:50:02 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#24</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>I make and sell kits like these in my spare time, I noticed a picture from one of my kits here too. The controller style arcade is mine, you can get it for 55 dollars or my more popular bartop kit for 100</p>
+
+<p>Look at this on eBay <a href="http://www.ebay.com/itm/291826294816" rel="nofollow">http://www.ebay.com/itm/291826294816</a></p>
+
+<p>Look at this on eBay <a href="http://www.ebay.com/itm/291820465597" rel="nofollow">http://www.ebay.com/itm/291820465597</a></p>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/6999b3bc5abc7ff5b723133defaf7199f99e5357" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/6/9/6999b3bc5abc7ff5b723133defaf7199f99e5357.jpg" class="lightbox" title="FB_IMG_1461425825903.jpg"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/6/9/6999b3bc5abc7ff5b723133defaf7199f99e5357_1_500x500.jpg" width="500" height="500"><div class="meta">
+<span class="filename">FB_IMG_1461425825903.jpg</span><span class="informations">528x528 28.2 KB</span><span class="expand"></span>
+</div></a></div></p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:1'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/sunk818'><b itemprop='author'>sunk818</b></a>
+           
+           <time datetime='2016-07-25T23:13:59Z' itemprop='datePublished'>
+             2016-07-25 23:13:59 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#25</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>Has anyone looked into what options we have for games with non-standard controller layout or buttons? If I wanted to play Robotron 2084, I'd need two joysticks one for movements and one for firing. Defender? Tron with a joystick and jogdial. Or Tempest with a jog dial and fire button. Centipede, Millipede, and Crystal Castle I've worked out okay with a mouse as a trackball replacement.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:1'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-07-25T23:32:39Z' itemprop='datePublished'>
+             2016-07-25 23:32:39 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#26</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>The best generic layout is arguably two sticks, 6 buttons each, and a trackball. Then you can play dual stick games as a single player using both sticks, and you're covered on most mouse-alike games. Takes a fairly wide cabinet though.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/tobico'><b itemprop='author'>tobico</b></a>
+           
+           <time datetime='2016-07-26T07:52:40Z' itemprop='datePublished'>
+             2016-07-26 07:52:40 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#27</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>Anyone got any tips for a comparable Raspberry Pi 3 kit available in Australia? Everything I've found so far is over twice the price and doesn't include heatsinks.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/Insanity'><b itemprop='author'>Insanity</b></a>
+           
+           <time datetime='2016-07-26T13:04:43Z' itemprop='datePublished'>
+             2016-07-26 13:04:43 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#28</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>Hey, I really like your blog and have been reading on and off for quite some time. <br>Your blog really needs an index at the side. I like to read on my mobile phone, but when I have read the first few articles I spend ages scrolling to find another article I didn't read. Being able to jump to articles based on the title would be great.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/Adam_Sommer'><b itemprop='author'>Adam_Sommer</b></a>
+           
+           <time datetime='2016-07-26T15:22:27Z' itemprop='datePublished'>
+             2016-07-26 15:22:27 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#29</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>Check out <a href="http://www.lexaloffle.com/pico-8.php" rel="nofollow">Pico-8</a> for new "fantasy console" goodness.  Works great with Raspberry Pi Zero, 2, 3, etc.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:1'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-07-26T21:04:41Z' itemprop='datePublished'>
+             2016-07-26 21:04:41 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#30</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>The quick and dirty of <strong>safe</strong> Pi overclocking:</p>
+
+<ul>
+<li>Exit to RetroPi console (press menu button on your controller, then select exit) or press <kbd>f4</kbd> any time</li>
+<li><code>sudo -s</code></li>
+<li><code>nano /boot/config.txt</code></li>
+</ul>
+
+<p>the lines you want are:</p>
+
+<pre><code>sdram_freq=500
+dtoverlay=sdhost,overclock_50=100</code></pre>
+
+<p>I've found the Pi 3 is fast enough that boosting the storage and memory speeds is generally more beneficial to overall performance than CPU power in most cases, and it's safer.</p>
+
+<blockquote>
+<p><img src="//discourse-cdn.codinghorror.com/images/emoji/win10/warning.png?v=3" title=":warning:" class="emoji" alt=":warning:"> I no longer blanket advise CPU overclocking due to minor voltage and heat complications I've seen. Avoid CPU overclocking unless you are absolutely <em>certain</em> you need the extra CPU power for bleeding edge emulators like Dreamcast. </p>
+<p>And before proceeding, make SURE you have:</p>
+<ul>
+<li>a heatsink installed</li>
+<li>a quality power supply designed for large devices (think iPad 3+)</li>
+</ul>
+</blockquote>
+
+<p>If you are sure you also want to overclock the CPU, add these lines too:</p>
+
+<pre><code>arm_freq=1400
+over_voltage=6</code></pre>
+
+<p>You might be able to bump the voltage down if it's stable in your testing. See <a href="http://elinux.org/RPiconfig" rel="nofollow">RPiconfig docs</a> for details.</p>
+
+<p>Save using <kbd>ctrl</kbd>-<kbd>o</kbd>, then exit the nano editor with <kbd>ctrl</kbd>-<kbd>x</kbd>.</p>
+
+<p><code>reboot</code> and see what happens. Be prepared to re-flash the SD card if it doesn't work!</p>
+
+<p>To test, I recommend running the included Quake 3 (under Ports) in a few different modes like botmatch, be sure to turn up the graphics in there to max at 1024x768, select Skirmish mode, and add a ton of bots with a fraglimit of 0. Then let it go.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-07-26T22:01:29Z' itemprop='datePublished'>
+             2016-07-26 22:01:29 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#31</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>It is a bit weird that the Pi 3 ships without a heatsink. It <a href="http://www.sbeddoes.com/blog/2016/3/7/yia8uhjlb9hoau76a38jc21z3blp1e" rel="nofollow">probably should have one</a>:</p>
+
+<p><img src="//discourse-cdn.codinghorror.com/uploads/default/original/3X/7/f/7fbc5f998addda846ba02351516e6b714bb97155.png" width="674" height="389"></p>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/9acc7cecc05f9a5ae92e4dd9d7056474079b5cec" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/9/a/9acc7cecc05f9a5ae92e4dd9d7056474079b5cec.png" class="lightbox" title="pi-bare-load-temps.png"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/9/a/9acc7cecc05f9a5ae92e4dd9d7056474079b5cec_1_690x398.png" width="690" height="398"><div class="meta">
+<span class="filename">pi-bare-load-temps.png</span><span class="informations">1047x604 25.8 KB</span><span class="expand"></span>
+</div></a></div></p>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/120a8f89e9cd769564bdb8e20da5ae7da34ce0d7" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/1/2/120a8f89e9cd769564bdb8e20da5ae7da34ce0d7.png" class="lightbox" title="pi3-heatsink-load-temps.png"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/1/2/120a8f89e9cd769564bdb8e20da5ae7da34ce0d7_1_690x398.png" width="690" height="398"><div class="meta">
+<span class="filename">pi3-heatsink-load-temps.png</span><span class="informations">1041x601 14.2 KB</span><span class="expand"></span>
+</div></a></div></p>
+
+<p>If there's ever a Pi 4 it should <em>absolutely</em> have a heatsink in the default package!</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/Tamas_Csabina'><b itemprop='author'>Tamas_Csabina</b></a>
+           
+           <time datetime='2016-07-27T18:52:20Z' itemprop='datePublished'>
+             2016-07-27 18:52:20 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#32</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>Another site where they build and sell these arcade boxes. They are built around original PCBs:<br><a href="http://www.dragonfly-amusement.com/arcade-uk.shtml" class="onebox" target="_blank" rel="nofollow">http://www.dragonfly-amusement.com/arcade-uk.shtml</a></p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-07-27T20:45:36Z' itemprop='datePublished'>
+             2016-07-27 20:45:36 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#33</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>One thing I hadn't anticipated; the quality of analog audio out from the Pi is quite .. bad. <em>Lots</em> of interference / noise. Not that it matters a ton for an arcade machine, but it's still significantly worse than I expected.</p>
+
+<p>I am adding this USB powered, <a href="https://www.amazon.com/dp/B014QO0DR0?tag=codihorr-20" rel="nofollow">HDMI "audio extractor" box</a> to my build:</p>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/c37a5eadd17757402673066c0840e676450fcdf0" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/c/3/c37a5eadd17757402673066c0840e676450fcdf0.jpg" class="lightbox" title="blob.jpg"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/c/3/c37a5eadd17757402673066c0840e676450fcdf0_1_690x248.jpg" width="690" height="248"><div class="meta">
+<span class="filename">blob.jpg</span><span class="informations">938x338 57.2 KB</span><span class="expand"></span>
+</div></a></div></p>
+
+<p>I found one on eBay that looks similar for $17.</p>
+
+<p>I got it, and <strong>I can confirm this works grrrrreat!</strong> You go from scratchy, fuzzed out analog Pi audio with lots of interference (which you have to crank the volume way up on to hear at all), to pristine digital audio quality. It's a huge, clearly audible difference – I strongly recommend it!</p>
+
+<p>You will need to <strong>force HDMI video</strong> with this adapter installed as the Pi has trouble seeing the monitor at boot. But the fix is simple, just reboot with the monitor directly connected, and make sure these options are set in your <code>/boot/config.txt</code>:</p>
+
+<pre><code>hdmi_force_hotplug=1
+hdmi_group=1
+hdmi_mode=16</code></pre>
+
+<p>Mode 16 is 1080p, 60Hz which is what I expect most will be running but if you need others <a href="http://elinux.org/RPiconfig" rel="nofollow">they are listed here</a>.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/Rageous'><b itemprop='author'>Rageous</b></a>
+           
+           <time datetime='2016-07-28T00:15:14Z' itemprop='datePublished'>
+             2016-07-28 00:15:14 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#34</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>Yo! This is going to be long and probably well beyond the scope of the barcades you're mostly referencing, but I'm a huge arcade parts enthusiast so this is a really fun topic for me and I'm always happy to share knowledge.</p>
+
+<p>Most of the prefab kits you see are going to have generic parts in them, and as you can see just from the pictures in this thread there are a variety of joysticks, push button types and button layouts. If this kind of thing is fun for you, I highly recommend going to <a href="http://slagcoin.com/joystick.html" rel="nofollow">Slagcoin</a> and reading through. They provide the finest baseline on how an arcade joystick interface comes together, including a wide variety of panel layouts that people like myself continue to reference and use on a regular basis today. The most popular setups tend to reflect traditions in various regions, mainly America, Japan and Korea.</p>
+
+<p><strong>Restrictor gates! Know your gates!</strong><br>For your old school ROM needs, or even current-day arcade experiences, you need to understand gates and how they work with your arcade stick lever. A gate is a clip on the underside that restricts the limits of the joystick's movement. Modern portable arcade sticks made for competitive fighting games use <a href="http://slagcoin.com/joystick/restrictors/square_gate2.png" rel="nofollow">square gates</a>, allowing you to reach the diagonal corners easily. GameCube players and King of Fighters arcade enthusiasts will recognize <a href="http://slagcoin.com/joystick/restrictors/octagon_gate.png" rel="nofollow">octogonal gates</a>, which has visible notches for you to easily tell which direction you're aiming. <a href="http://slagcoin.com/joystick/restrictors/circle_gate.png" rel="nofollow">Circle gates</a> are typically used for people with a primary need for up/down/left/right cardinals, and very rarely diagonals. These are all "8-way" gates (four cardinals plus four intermediate). Very old arcade machines like your Pac-Man cocktail cabs and such can even have "4-way" gates (<a href="http://slagcoin.com/joystick/restrictors/plus_gate.png" rel="nofollow">restricting to cardinals only</a>) or "2-way" gates for only <a href="http://slagcoin.com/joystick/restrictors/vertical_gate.png" rel="nofollow">up/down</a> or <a href="http://slagcoin.com/joystick/restrictors/horizontal_gate.png" rel="nofollow">left/right</a>. Picking the right gate (or even experimenting with multiple types, they're dirt cheap!) can go a long way towards having a good experience with your arcade.</p>
+
+<p><strong>American Style</strong><br>If you've ever been to an arcade in the US, you'll be quite familiar with them. They typically come with large <a href="http://www.paradisearcadeshop.com/502-levers-il-industrias-lorenzo" rel="nofollow">bat tops</a> and <a href="http://www.paradisearcadeshop.com/5_il-industrias-lorenzo-sa" rel="nofollow">spring-loaded concave buttons</a>. These setups are designed for you to slam the hell out of them and keep going. The bat tops use a circular gate with a fairly stiff amount of movement resistance (remember they're installed in heavy, stand-up arcades that don't move), and tend to have <a href="http://slagcoin.com/joystick/layout/matrix36_s.png" rel="nofollow">two rows of buttons in a straight line</a> (sometimes 6 buttons, usually 8). For a long time the parts were distributed by Happ, but following a merger with Suzo in 2005, production was shifted to Suzo's facilities in China and the quality took a serious downturn. However, you can now buy parts made by Industrias Lorenzo, the company actually manufacturing Happ's original stuff. If you're an American-style fan, IL is your jam.</p>
+
+<p><strong>Japanese Style</strong><br>Popular amongst arcade enthusiasts but not particularly commonplace in western countries, Japan favors a lighter touch. They use shorter-length arcade sticks with lollipop-style <a href="http://cdn.shopify.com/s/files/1/0748/3745/products/jlf-tprg-8ayt-sk---group.jpg?v=1455517222" rel="nofollow">ball tops</a> instead of bat tops, and light-to-the-touch <a href="http://www.paradisearcadeshop.com/299-buttons-sanwa" rel="nofollow">convex buttons</a> with plastic microswitches in a <a href="http://slagcoin.com/joystick/layout/shift36_s.png" rel="nofollow">Vewlix layout</a>. Because most Japanese arcade machines are sit-down, rather than stand-up, they opt for parts that are quicker and more precise, and require considerably less force than their American counterparts. The ball top format allows for many more (and ergonomically advantageous) hand-holding variations, allowing the legions of Japanese salarymen to hit Taito Station after work for hours on end in comfort. Sanwa is the gold standard manufacturer here -- their JLF lever and OBSC buttons are ubiquitous and widely-accepted with many colors and customization options. The JLF has <a href="http://arcadeshock.com/collections/sanwa-accessories/gate" rel="nofollow">snap-on gates</a> that quickly allow you to switch to circular or octagonal in a matter of seconds, and because the ball tops are removable, people often get customized colors, patterns, swirls, etc. You can even get a bat top that screws into the lever. Other brand makers include Hori (which focuses on high performance fighting game gear) and Seimitsu, which has a slightly heavier feel than Sanwa but also has some really nifty <a href="http://www.paradisearcadeshop.com/2564-large_default/seimitsu-ls-32-triple-restrictor-plate.jpg" rel="nofollow">tri-gates</a> that include a little of everything for you to experiment with (that linked example includes 2-way, 4-way and circular 8-way). For those of you considering assembling a countertop barcade, Japanese style parts are probably your best bet to play comfortably without it sliding around.</p>
+
+<p><strong>Korean Style</strong><br>3D fighting games like Tekken and Virtua Fighter are ridiculously popular in South Korea, so their solutions are based on mostly 4-way inputs (lots of forward-forward-back-back, or down-up movements) with very occasional use of 8-way. To accomplish this, makers Crown and Myoungshin Fanta created a <a href="http://www.etokki.com/Joysticks/Myoungshin-Fanta-stick-Green" rel="nofollow">special type of stick</a> with a rubber grommet to restrict movement instead of plastic gates. The nature of the stick gives way easily to cardinal directions, but has heavy resistance towards diagonals... and a very sharp return to neutral (a fellow player who uses a Fanta full time once quipped, "Neutral is a hell of a drug."). They also prefer Crown's custom-made push buttons (which have a slightly squishy feedback feel) in Namco's <a href="http://slagcoin.com/joystick/layout/sega2_s.png" rel="nofollow">Noir layout</a>. Crown and Myoungshin gear is a bit difficult to obtain stateside, but there are a few specialty shops that will provide parts or fully-assembled Korean-style arcade sticks for your purposes.</p>
+
+<p><strong>A Modern Aside</strong><br>In the last couple years, people have begun creating push buttons with Cherry MX microswitches in them, allowing you to drop in your preferred actuation. This was pioneered by <a href="http://gamerfinger.com/hbfs30.html" rel="nofollow">GamerFinger</a> a few years ago, but refined gorgeously by Paradise Arcade Shop's custom-designed <a href="http://www.paradisearcadeshop.com/obs-mx-button-system/1626-obs-mx-drop-in-kit.html" rel="nofollow">OBS-MX</a> line that drops into standard Sanwa rims. Presumably you can customize it with any microswitch type you want, but they offer MX Red, Blue, Brown, Green, Black and Clear to choose from. (I'm assuming MX Clear for our esteemed host.)</p>
+
+<p><strong>Where do I get all this stuff, or at least fulfill my gear lust curiosity?</strong><br><a href="http://www.paradisearcadeshop.com/" rel="nofollow">Paradise Arcade Shop</a> and <a href="http://arcadeshock.com/" rel="nofollow">Arcade Shock</a> come with my highest recommendation, as well as <a href="http://www.etokki.com/index.php?route=common/home" rel="nofollow">Etokki</a> for exclusively Korean needs. As a general rule for the type of kits you see here, you'll want to pick the "screw-in" button type (which accommodates thicker installation panels) instead of "snap-in" (used on thin metal panels). If you have issues with the noise made by these, Paradise also offers a large line of <a href="http://www.paradisearcadeshop.com/569-button-stuff" rel="nofollow">silencing pads</a> to mute the button click, and you can also get <a href="http://arcadeshock.com/collections/joysticks/products/sanwa-denshi-2014-silent-joystick-2nd-generation-jlf-tprg-8ayt-sk" rel="nofollow">silent joysticks</a> if the microswitch noises are too loud for your tastes.</p>
+
+<p><strong>Hey, I want a real arcade! Not a little one!</strong><br>With some sleuthing on your local Craigslist, you can probably find an old arcade that can be refurbished or repurposed to handle your own needs, and there's also <a href="http://captainsauctionwarehouse.com/" rel="nofollow">Captain's Auction Warehouse</a> if you have something specific in mind. Even though these were all wired up for JAMMA style play with actual arcade boards, there's absolutely nothing stopping you from dropping in your little Raspberry Pi and rewiring the controls directly to it.</p>
+
+<p><a href="http://i.imgur.com/7Url0C3.jpg" rel="nofollow">This</a> is my baby (<a href="http://i.imgur.com/SmVuFik.jpg" rel="nofollow">alternate view</a>). It's a Chinese clone of the Taito Vewlix Japanese-style sit down cab, which our community affectionately calls "Chewlix". Typically they come with only a single player layout, but I was able to get a 2-player arrangement included when I bought it. It's been great for parties and casual fun, and while I don't have kids yet, I anticipate leveraging this as a way to introduce them to gaming as a social activity rather than an isolating one (as most iOS and console games typically are). It was originally wired up for Chinese-format JAMMA, but I've installed two <a href="http://arcadeshock.com/collections/brook/products/brook-universal-fighting-board-ps3-ps4-xbox-360-xbox-one-pc" rel="nofollow">Brook Universal Fighting Boards</a> that allow it to work natively with PS3, PS4, 360, Xbox One or PC. Just plug in the USB cables and you're good to go. When the picture was taken, I had an Xbox 360 in there (with a digital jukebox full of Xbox Live Arcade games). Currently my PS4 occupies the space for Street Fighter V purposes. Again, like I pointed out before... once you have the shell, there's no limit to what interface you put inside it. As long as you can send control inputs to your buttons, signal to your monitor (typically Component/VGA/DVI) and sound to your speakers, anything will work. Getting a Vewlix cab of any kind is a pricey affair, since they have to be shipped overseas and potentially trucked somewhere. I got mine as part of a group buy, where 10 of us all pitched in to split the costs of shipping and customs, enabling us to get our cabs for close to the actual price (I'm into my Chewlix for about $1200 versus over $4000 if you order a single Taito Vewlix from Japan).</p>
+
+<p>A third option is to get an MDF-style build from the US and assemble it yourself. I've seen a couple different types in person that I can recommend with confidence: <a href="http://www.kraylixarcade.com/" rel="nofollow">Kraylix Arcade</a>, and <a href="http://www.recroommasters.com/Default.asp" rel="nofollow">RecRoomMasters</a>. The Kraylix cabs are built to order and absolutely gorgeous, and include options to have them painted and/or assembled by Kray ahead of time. The RecRoomMasters kits are fantastic if you already have your own portable arcade sticks, or have a very specific idea of what kind of cab you want (cocktail, stand up, sit down, etc.). They also offer headless versions for you to mount your own HDTV. Both of these solutions involve a fair amount of elbow grease (such as picking your monitor, adding speakers for sound, considering prefab button panels vs. populating your own), but for the DIYer looking for a great weekend project that the kids will also enjoy, they're phenomenally fun experiences.</p>
+
+<p><strong>Other stuff you can do</strong><br>Some people put <a href="http://www.paradisearcadeshop.com/632-springs" rel="nofollow">heavier springs</a> in their sticks to increase resistance and snappiness. Some add LEDs and translucent buttons, then program <a href="http://www.paradisearcadeshop.com/436-kaimana-led-series" rel="nofollow">Arduino-style boards</a> to light up when they're pressed. Depending on what kind of cab you get, there are well-versed people capable of helping you print laminate marquee artwork to put on your cab. You can customize damn near anything.</p>
+
+<p><strong>A new approach for the modern age</strong><br>One of the things that caught my eye back when I was getting into all of this was a newly-formed company called <a href="http://www.hitboxarcade.com/" rel="nofollow">HitBox Arcade</a>. They realized that the joystick, while commonly-accepted as the primary arcade interface, was outdated and subject to imprecision and error due to the analog input format. Therefore they engineered a new approach from scratch that created a stickless design, using push buttons for the cardinal directions. Right, down and left are executed with your left hand fingers, and up (typically jump in fighting games) is positioned in the low center, akin to a spacebar. To accomplish diagonals, you merely press a combination of the two desired buttons (up and right together, for example). This has been a boon for touch-typists, keyboard gaming warriors and musicians looking to get into arcade play but lacking the years of analog stick muscle memory. The up button at the bottom is a brain bender at first, but many friends of mine only casually interested in arcade games have adapted quickly to the layout and prefer it to joysticks. This has also been embraced by high level players in all communities, from fighting games to even the world's best Tetris players as a viable alternative that offers clean execution inputs. I liked the concept so much, I cleaned up HitBox Arcade's somewhat messy and arbitrary layout by re-engineering a Vewlix-standard version with precise measurements and have open-sourced it to custom arcade panel manufacturers. <a href="http://i.imgur.com/jl6BPJt.jpg" rel="nofollow">Here</a> is a picture of my Hori VLX with a custom epoxy-painted metal panel using my revised HitBox design, manufactured by <a href="https://www.facebook.com/jasenscustoms/" rel="nofollow">Jasen's Customs</a>. This isn't the kind of approach that would be easily included in an official or premade barcade/arcade setup, but if you're the kind of person taking a drill to MDF in order to make your own, this is definitely an option available to you.</p>
+
+<p><strong>I scrolled to the end because you write longer posts than Jeff. For chrissakes, just give me a tl;dr.</strong><br>The bottom line is that setting these up to play your ROMs is only the beginning. You can spend a considerable amount of time customizing your actual gameplay experience to your performance and aesthetic liking, and there are multitudes of different (and reasonably-priced!) ways to do that. The sky is the limit here, and it's a very fun place to fly.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:3'>
+      <meta itemprop='interactionCount' content='UserComments:1'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-07-28T09:51:40Z' itemprop='datePublished'>
+             2016-07-28 09:51:40 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#35</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <h3>Raspbian config changes I found essential:</h3>
+
+<ul>
+<li><p>those saucy brits behind the Pi set the default keyboard to UK layout. Change it to <img src="//discourse-cdn.codinghorror.com/images/emoji/win10/flag_us.png?v=3" title=":flag_us:" class="emoji" alt=":flag_us:"> <img src="//discourse-cdn.codinghorror.com/images/emoji/win10/hash.png?v=3" title=":hash:" class="emoji" alt=":hash:"><img src="//discourse-cdn.codinghorror.com/images/emoji/win10/one.png?v=3" title=":one:" class="emoji" alt=":one:"> via <code>dpkg-reconfigure keyboard-configuration</code></p></li>
+<li><p>you will want a larger font for a 1080p display, change it via <code>dpkg-reconfigure console-setup</code>. I recommend TerminusBold at the setting just under the largest available size.</p></li>
+</ul>
+
+<h3>RetroPie config changes I found essential:</h3>
+
+<ul>
+<li><p>disable "quick system select" via the select menu so ← → don't move you away from the game select page.</p></li>
+<li><p>turn off that incredibly annoying "flipper" menu sound via the select menu. Sound OFF here just means sound in the emulation station UI itself, not in games. Note that holding the stick up or down for a while will move very rapidly between letters, which exacerbates the flipper sound problem.</p></li>
+<li><p>disable "launch menu" for games <a href="https://github.com/retropie/retropie-setup/wiki/runcommand#configuring-runcommand" rel="nofollow">in the retropie run command config page</a> which can accidentally get activated by eager button mashers.</p></li>
+<li><p>turn off overscan override via <code>disable_overscan=1</code> in the <code>config.txt</code> file -- this let the Pi naturally scale perfectly edge-to-edge on my modern HDMI LCD</p></li>
+<li><p>Remove unusued emulators. Zork and ScummVM are bundled out of the box .. really? <em>really?</em> press <kbd>f4</kbd> and use <code>mc</code> to visit the <code>retropie/roms</code> folder, then delete any files in these folders. They'll stop showing up.</p></li>
+</ul>
+
+<h3>Controls</h3>
+
+<p>It's worthwhile to understand the default shortcuts in the shared retroarch / <code>libretro</code> emulation layer. Starting with these basic buttons (an exhaustive list of system controllers and mappings is at the bottom of <a href="https://github.com/retropie/retropie-setup/wiki/retroarch-configuration" rel="nofollow">this page</a>)</p>
+
+<p><img src="//discourse-cdn.codinghorror.com/uploads/default/original/3X/0/a/0ac0f63a60a7e759d878900e406d3dbc1827c982.png" width="530" height="255"></p>
+
+<p>You can use these common controller shortcuts in any emulator based on <code>libretro</code> which is almost all of them!</p>
+
+<p><kbd>select</kbd>+<kbd>start</kbd> — exit<br><kbd>select</kbd>+<kbd>x</kbd> — retroarch GUI menu<br><kbd>select</kbd>+<kbd>b</kbd> — reset game</p>
+
+<p><kbd>select</kbd>+<kbd>r shoulder</kbd> — save state<br><kbd>select</kbd>+<kbd>l shoulder</kbd> — load state<br><kbd>select</kbd>+<kbd>→</kbd> — state slot inc<br><kbd>select</kbd>+<kbd>←</kbd> — state slot dec</p>
+
+<p>Additionally in emulation station, it isn't obvious, but:</p>
+
+<ul>
+<li>Jump directly to any game list index letter (a,b,c etc) via the select menu.</li>
+<li>Hold up or down a while to begin scrolling the game list extremely fast</li>
+<li>Use <kbd>r shoulder</kbd> and <kbd>l shoulder</kbd> to skip up and down a page in the game list</li>
+</ul>
+
+<h3>RetroArch / Libretro keyboard shortcuts</h3>
+
+<p>Any emulator that <a href="http://www.libretro.com/index.php/getting-started-with-retroarch/" rel="nofollow">uses libretro</a> will also work with the following RetroArch keyboard shortcuts, if you have a keyboard attached:</p>
+
+<p><kbd>f8</kbd> take screenshot<br><kbd>o</kbd> movie record toggle<br><kbd>p</kbd> pause<br><kbd>h</kbd> reset game<br><kbd>m</kbd> next shader<br><kbd>n</kbd> prev shader<br><kbd>e</kbd> slow motion (hold down)</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:1'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/EddieJ'><b itemprop='author'>EddieJ</b></a>
+           
+           <time datetime='2016-07-28T23:17:49Z' itemprop='datePublished'>
+             2016-07-28 23:17:49 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#36</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p><img src="//discourse-cdn.codinghorror.com/images/emoji/win10/heart_eyes.png?v=3" title=":heart_eyes:" class="emoji" alt=":heart_eyes:"> It's beautiful. I got my pitendo today <div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/ef8943bf0c3f5ca60f097cc2ce0bf8ade9977d7f" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/e/f/ef8943bf0c3f5ca60f097cc2ce0bf8ade9977d7f.jpg" class="lightbox" title="pitendo.jpg"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/e/f/ef8943bf0c3f5ca60f097cc2ce0bf8ade9977d7f_1_657x500.jpg" width="657" height="500"><div class="meta">
+<span class="filename">pitendo.jpg</span><span class="informations">3928x2988 1.74 MB</span><span class="expand"></span>
+</div></a></div></p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:2'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/AndreasC'><b itemprop='author'>AndreasC</b></a>
+           
+           <time datetime='2016-07-29T14:27:32Z' itemprop='datePublished'>
+             2016-07-29 14:27:32 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#37</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>great post although i didn't go through all of it. In comments you can find valuable tips, i have build my own a few months ago: <a href="https://www.reddit.com/r/RetroPie/comments/4ko627/my_first_bartop_arcade_working_good_many_software/" rel="nofollow">https://www.reddit.com/r/RetroPie/comments/4ko627/my_first_bartop_arcade_working_good_many_software/</a></p>
+
+<p>but with your tips will be even better.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:1'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-07-31T08:55:45Z' itemprop='datePublished'>
+             2016-07-31 08:55:45 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#38</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>A short note on ROMs, I found this post to be exceptionally helpful:</p>
+
+<p><a href="http://dsync.blogspot.com/2015/05/sourcing-and-downloading-best-possible.html" class="onebox" target="_blank" rel="nofollow">http://dsync.blogspot.com/2015/05/sourcing-and-downloading-best-possible.html</a></p>
+
+<p>for MAME, pay very close attention to versions of romsets, as each Pi-compatible emulator expects a certain specific version of the MAME romsets. </p>
+
+<p><a href="https://github.com/retropie/retropie-setup/wiki/MAME" class="onebox" target="_blank" rel="nofollow">https://github.com/retropie/retropie-setup/wiki/MAME</a></p>
+
+<p>The Atari 2600 is oddly left out of these sets, but <a href="http://www.atarimania.com/rom_collection_archive_atari_2600_roms.html" rel="nofollow">can be found here</a>.</p>
+
+<p><img src="//discourse-cdn.codinghorror.com/images/emoji/win10/space_invader.png?v=3" title=":space_invader:" class="emoji" alt=":space_invader:"></p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:1'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-08-03T10:12:07Z' itemprop='datePublished'>
+             2016-08-03 10:12:07 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#39</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>ROM management can be a problem, since the complete romsets are super large for popular systems. In an ideal world I'd have "top 100" popular ROMs for each system and ignore the hundreds (thousands?) of mediocre or bad games released that, let's face it, nobody in their right mind wants to play in anno domini 2016. Wheel of Fortune on NES, anyone??</p>
+
+<p><img src="//discourse-cdn.codinghorror.com/uploads/default/original/3X/7/b/7b437a0b9401e2a13461cd99da22a6b382bf4a85.png" width="256" height="240"></p>
+
+<h3>No-Intro ROMsets</h3>
+
+<p>Assuming you are working with the <strong>no-intro</strong> romsets which have a standardized naming scheme:</p>
+
+<ul>
+<li>delete all non-US ROMs (sorry, other countries! <img src="//discourse-cdn.codinghorror.com/images/emoji/win10/flag_us.png?v=3" title=":flag_us:" class="emoji" alt=":flag_us:"> <img src="//discourse-cdn.codinghorror.com/images/emoji/win10/hash.png?v=3" title=":hash:" class="emoji" alt=":hash:"><img src="//discourse-cdn.codinghorror.com/images/emoji/win10/one.png?v=3" title=":one:" class="emoji" alt=":one:"> )</li>
+<li>delete all prototypes / betas / alphas</li>
+<li>delete all earlier revisions, when multiple revisions of a ROM are stored in the set</li>
+</ul>
+
+<p>Some of this is captured here:</p>
+
+<pre><code>del "*(Japan)*"
+del "*(Europe)*"
+del "*(Korea)*"
+del "*(China)*"
+del "*(Brazil)*"
+del "*(Australia)*"
+del "*(Italy)*"
+del "*(Sweden)*"
+del "*(Germany)*"
+del "*(Canada)*"
+del "*(Asia)*"
+del "*(Japan, Europe)*"
+del "*(Japan, Korea)*"
+del "*(Beta)*"
+del "*(Beta 1)*"
+del "*(Alpha)*"
+del "*(Demo)*"
+del "*(Proto)*"
+del "*(Sample)*"
+del "*(Beta 2)*"
+del "*(Alt 1)*"
+del "*(Program)*"
+del "*(Compilation)*"
+del "*(GEOS)*"
+del "*(Addon)*"</code></pre>
+
+<p>(also, the x-in-1 carts, diagnostic carts, promotional carts, arcade collections that are emulated elsewhere, etc)</p>
+
+<h3>MAME ROMsets</h3>
+
+<p>For <strong>MAME</strong>, specifically, there are so many ROMs (5,000+) that a different strategy is needed. I found some good tips <a href="https://www.reddit.com/r/MAME/comments/31wgl2/filter_out_unwanted_rom_genresclones/" rel="nofollow">here</a>.</p>
+
+<blockquote><p><img src="//discourse-cdn.codinghorror.com/images/emoji/win10/bell.png?v=3" title=":bell:" class="emoji" alt=":bell:">  <strong>Before you begin, make sure you are working with a split ROM set</strong>, that is, each game's zip file contains all the ROMs necessary for that game to work. If you have a merged set, then deleting any individual game file is risky as games can potentially depend on each other for shared ROMs.</p></blockquote>
+
+<ul>
+<li>remove all Neo-Geo games (since that has a dedicated emulator in RetroPie, anyway)</li>
+<li>remove all clones</li>
+<li>remove all bootlegs</li>
+<li>remove all playchoice (nes) / megaplay (genesis)</li>
+<li>remove all gambling games</li>
+</ul>
+
+<p>(some other ideas: remove gambling / casino / mahjong, lightgun, etc)</p>
+
+<p>I recommend dumping <strong>complete info on all games</strong> from <code>mame.exe</code> like so:</p>
+
+<pre><code>mame -listxml &gt;listxml.txt</code></pre>
+
+<p>Then you can use some simple regular expressions on this <code>listinfo.txt</code> file to grab the matches. List all of match 1 to get the names, add <code>.zip</code> at the end of each line, and you're good <img src="//discourse-cdn.codinghorror.com/images/emoji/win10/sunny.png?v=3" title=":sunny:" class="emoji" alt=":sunny:"> </p>
+
+<p>All clone MAME games (2824) </p>
+
+<pre><code>&lt;game name="([^"]+)"[^&gt;]+?cloneof</code></pre>
+
+<p>All Neo-Geo MAME games (150)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^&gt;]+?romof="neogeo"</code></pre>
+
+<p>All PlayChoice and MegaPlay games (61)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^&gt;]+?romof="(playch10|megaplay)"</code></pre>
+
+<blockquote><p><img src="//discourse-cdn.codinghorror.com/images/emoji/win10/warning.png?v=3" title=":warning:" class="emoji" alt=":warning:"> for the matches at this point on to work, first do a global <code>listinfo.txt</code> regex replace of <code>&lt;/game&gt;</code> with <code>}</code> so you have a reliable, unique "end of game" character to work with. Yeah, I had to cheat. Sorry!</p></blockquote>
+
+<p>All bootleg games (328)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^}]*?&lt;manufacturer&gt;bootleg</code></pre>
+
+<p>All gambling games (214)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^}]*?(mahjong|poker|casino)</code></pre>
+
+<p>All lightgun games (117)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^}]*?control="lightgun"</code></pre>
+
+<p>All prototype/beta games (94)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^}]*?(prototype|beta)</code></pre>
+
+<p>All games with disk images (86)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^}]*?&lt;disk</code></pre>
+
+<p>All quiz and trivia games (112)</p>
+
+<pre><code>&lt;game name="([^"]+)"[^}]*?(quiz|trivia)</code></pre>
+
+<p>Other stuff you may want to remove by keyword: beatmania, vs. NES. Removing hard drive games mostly covers this, but it's also <em>probably</em> advisable to delete any ROM over 40mb in size as they are likely to be early 1996-1999 3D games that are hard to emulate.</p>
+
+<p>(Mature / adult is hard to screen for using metadata alone. I found <a href="https://groups.google.com/d/msg/alt.games.mame/oG1fRUmikXI/MohQP1WTRj8J" rel="nofollow">one list</a> here.)</p>
+
+<h3>Neo-Geo ROMsets</h3>
+
+<p>The MAME style 8.3 DOS naming makes this tough. I wish there was a a way to get all Neo-Geo ROMs with proper long filenames. Here are some tips:</p>
+
+<ul>
+<li><p>sort by filesize, remove all the tiny files under 1MB in size; these are clearly minor modifications of existing ROMsets or prototypes.</p></li>
+<li><p>look for files ending in <code>*b.zip</code> or <code>*bl.zip</code> and clean these up as bootleg versions of other ROMs.</p></li>
+<li><p>sort by filename and look at near-identical 8.3 filenames. Compare to filesize; if the name is the same and the filesize is smaller, it's probably a modification or hack and can be removed.</p></li>
+</ul>
+
+<h3>Scraping game info</h3>
+
+<p>Once you have your romsets the way you want, follow the excellent instructions for <a href="https://github.com/retropie/retropie-setup/wiki/scraper" rel="nofollow">scraping metadata</a>: pictures, descriptions, etc. This will require an internet connection, but your RetroPie works fine with DHCP so just plug in an ethernet cable and have at it.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-08-06T07:32:13Z' itemprop='datePublished'>
+             2016-08-06 07:32:13 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#40</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <h3>Spinner / Paddle / Wheel support</h3>
+
+<p>It's pretty easy to get a spinner going on any arcade device!</p>
+
+<p><img src="//discourse-cdn.codinghorror.com/uploads/default/original/3X/0/d/0d4ff1f9702f7691cd8da62de7bb1e2bcd90abbd.jpg" width="600" height="450"></p>
+
+<ul>
+<li><p>grab a <a href="http://groovygamegear.com/webstore/index.php?main_page=product_info&amp;products_id=268" rel="nofollow">TurboTwist 2 spinner</a> which fits directly in any standard 1 1/8" button hole. <em>Very</em> easy installation.</p></li>
+<li><p>it presents as a mouse that only moves along one axis, which is conceptually simple and well supported.</p></li>
+<li><p>it is another USB connection coming out of your existing USB controller, which isn't a big deal. You could use an internal hub inside the controller to combine the two, if you want to get fancy.</p></li>
+</ul>
+
+<p>With that in mind, <a href="https://github.com/retropie/retropie-setup/wiki/Spinners-and-Trackballs" rel="nofollow">here's the only way</a> I could get spinner working in RetroPie:</p>
+
+<ul>
+<li><p>use AdvanceMame. Doesn't seem to work in the other MAME variants.</p></li>
+<li>
+<p>edit <code>/opt/retropie/configs/mame-advancemame/advmame-1.4.rc</code> to specify where mouse input is coming from</p>
+<pre><code>device_mouse raw
+device_raw_mousedev[0] /dev/input/mouse0
+device_raw_mousedev[1] /dev/input/mouse1
+device_raw_mousedev[2] /dev/input/mouse2
+device_raw_mousedev[3] /dev/input/mouse3</code></pre>
+</li>
+<li>
+<p>add default control mappings for dial (assumes motion is on X axis)</p>
+<pre><code>input_map[p1_dialx] mouse[0,x] mouse[1,x] mouse[2,x] mouse[3,x]</code></pre>
+</li>
+<li>
+<p>turn up the <a href="https://wiki.archlinux.org/index.php/Mouse_polling_rate" rel="nofollow">USB pollling rate</a> for better precision. Edit <code>/boot/cmdline.txt</code> and append this to the end, with a space in front:</p>
+<pre><code>usbhid.mousepoll=2</code></pre>
+</li>
+</ul>
+
+<p>While in game, you will almost certainly need to press <kbd>esc</kbd> to bring up the MAME menu and edit the analog settings to turn down the sensitivity a lot. I got really good results in Tempest and Arkanoid this way!</p>
+
+<h3>Trackball Support</h3>
+
+<p>TBD, very similar except you are using a two axis mouse</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/codinghorror'><b itemprop='author'>codinghorror</b></a>
+           
+           <time datetime='2016-08-08T09:51:42Z' itemprop='datePublished'>
+             2016-08-08 09:51:42 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#42</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>Older games are very low resolution relative to the 1920x1080 flat panel LCD you are likely using.</p>
+
+<p>That's not as bad as it sounds, because on an arcade machine or home gaming system, you'd be historically using a CRT which tends to naturally fuzz out those low resolution details:</p>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/ff1d1f6b94b04c1394f5a5bbf29744f78697b230" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/f/f/ff1d1f6b94b04c1394f5a5bbf29744f78697b230.jpg" class="lightbox" title="finalfight_hi.jpg"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/f/f/ff1d1f6b94b04c1394f5a5bbf29744f78697b230_1_690x477.jpg" width="690" height="477"><div class="meta">
+<span class="filename">finalfight_hi.jpg</span><span class="informations">2180x1508 1.11 MB</span><span class="expand"></span>
+</div></a></div></p>
+
+<p>And leads directly to this joke: </p>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/df9dbb37568568b76483889f093befa8e9cb5f6a" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/d/f/df9dbb37568568b76483889f093befa8e9cb5f6a.png" class="lightbox" title="indie-retro-2d.png"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/d/f/df9dbb37568568b76483889f093befa8e9cb5f6a_1_690x414.png" width="690" height="414"><div class="meta">
+<span class="filename">indie-retro-2d.png</span><span class="informations">824x495 244 KB</span><span class="expand"></span>
+</div></a></div></p>
+
+<p>I recommend using the <a href="http://www.scale2x.it/algorithm" rel="nofollow">scale2x</a> or <a href="https://en.wikipedia.org/wiki/Hqx" rel="nofollow">hqx</a> type scalers, which are available in all retro engines, to infer additional detail from the tiny number of pixels in play on older games.</p>
+
+<p><img src="//discourse-cdn.codinghorror.com/uploads/default/original/3X/b/b/bb77548103dacd5b7c1417b1bfe244c92915ab4b.png" width="521" height="205"></p>
+
+<p>It's true that older games were played on monitors that had one of these effects:</p>
+
+<h3>Visible phosphor masks (1988+)</h3>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/121a7db059ebc461b47629ba9efb3b2c32fa42ee" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/1/2/121a7db059ebc461b47629ba9efb3b2c32fa42ee.jpg" class="lightbox" title="metal-slug-tv-closeup.jpg"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/1/2/121a7db059ebc461b47629ba9efb3b2c32fa42ee_1_666x500.jpg" width="666" height="500"><div class="meta">
+<span class="filename">metal-slug-tv-closeup.jpg</span><span class="informations">1408x1056 915 KB</span><span class="expand"></span>
+</div></a></div></p>
+
+<h3>Visible scanlines (1977 - 1988)</h3>
+
+<p><div class="lightbox-wrapper"><a data-download-href="//discourse-cdn.codinghorror.com/uploads/default/2b28f21e1a9d3b1ffc4256fa4daf94374ef94175" href="//discourse-cdn.codinghorror.com/uploads/default/original/3X/2/b/2b28f21e1a9d3b1ffc4256fa4daf94374ef94175.jpg" class="lightbox" title="blob.jpg"><img src="//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/2/b/2b28f21e1a9d3b1ffc4256fa4daf94374ef94175_1_493x500.jpg" width="493" height="500"><div class="meta">
+<span class="filename">blob.jpg</span><span class="informations">568x575 156 KB</span><span class="expand"></span>
+</div></a></div></p>
+
+<p>I recommend enabling those as well, as appropriate for the age of the system or game. (Do note that scanlines should be <em>vertical</em> in arcade games where the monitor was rotated vertically, and horizontal when the monitor was in standard wide or portrait orientation.)</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:0'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/remo'><b itemprop='author'>remo</b></a>
+           
+           <time datetime='2016-08-13T12:48:14Z' itemprop='datePublished'>
+             2016-08-13 12:48:14 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#43</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>I'm intrigued by that Hitbox controller, never seen something like that before. It must be the ultimate controller for VIM users.</p>
+
+<p>If I  want to build my own what kind  of PCB-board should I use? I read that early versions of the Hitbox blocked both sides when back and  forward are pressed simultaneously giving it an unfair advantage against cross-ups. Newer versions seem to result in neutral when forward and back are pressed at the same time.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:1'>
+      <meta itemprop='interactionCount' content='UserComments:1'>
+      <hr>
+  </div>
+  <div itemscope itemtype='http://schema.org/Article'>
+      <div class='creator'>
+        <span>
+          <a href='/users/PrintsCharming'><b itemprop='author'>PrintsCharming</b></a>
+           
+           <time datetime='2016-08-14T04:59:38Z' itemprop='datePublished'>
+             2016-08-14 04:59:38 UTC
+           </time>
+        </span>
+        <span itemprop='position'>#44</span>
+      </div>
+      <div class='post' itemprop='articleBody'>
+        <p>How is the stability of the RetroPie ecosystem as a whole? I guess my real question is the system seems to be running nicely at the moment and I'm typically an "update regularly kind of guy" and I see there are a TON of updates that have been released to both the raspbian os and retropie, and I'm kind of scared to do it.</p>
+      </div>
+      <meta itemprop='interactionCount' content='UserLikes:0'>
+      <meta itemprop='interactionCount' content='UserComments:1'>
+      <hr>
+  </div>
+
+  <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
+      <span itemprop='url'><b><a rel="next" itemprop="name" href="/t/the-raspberry-pi-has-revolutionized-emulation/4462?page=2">next page →</a></b></span>
+  </div>
+
+
+
+
+
+        <!-- :preload-content -->
+        <footer>
+          <nav itemscope itemtype='http://schema.org/SiteNavigationElement'>
+            <a href='/'>Home</a>
+            <a href="/categories">Categories</a>
+            <a href="/guidelines">FAQ/Guidelines</a>
+            <a href="/tos">Terms of Service</a>
+            <a href="/privacy">Privacy Policy</a>
+          </nav>
+        </footer>
+      </div>
+
+      <footer id='noscript-footer'>
+        <p>Powered by <a href="http://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+      </footer>
+    </noscript>
+
+      <div id="top-navbar" class="wrap" style="height:25px; line-height:25px">
+  a companion discussion area for <a href="http://blog.codinghorror.com">blog.codinghorror.com</a>
+</div>
+
+    <section id='main'>
+    </section>
+
+    <div id='offscreen-content'>
+    </div>
+
+      <form id='hidden-login-form' method="post" action="/login" style="display: none;">
+        <input name="username" type="text"     id="signin_username">
+        <input name="password" type="password" id="signin_password">
+        <input name="redirect" type="hidden">
+        <input type="submit" id="signin-button" value="Log In">
+      </form>
+
+      <script>
+      (function() {
+        var ps = require('preload-store').default;
+          ps.store("site", {"default_archetype":"regular","notification_types":{"mentioned":1,"replied":2,"quoted":3,"edited":4,"liked":5,"private_message":6,"invited_to_private_message":7,"invitee_accepted":8,"posted":9,"moved_post":10,"linked":11,"granted_badge":12,"invited_to_topic":13,"custom":14,"group_mentioned":15,"group_message_summary":16,"watching_first_post":17},"post_types":{"regular":1,"moderator_action":2,"small_action":3,"whisper":4},"groups":[{"id":1,"name":"admins"},{"id":0,"name":"everyone"},{"id":2,"name":"moderators"},{"id":3,"name":"staff"},{"id":10,"name":"trust_level_0"},{"id":11,"name":"trust_level_1"},{"id":12,"name":"trust_level_2"},{"id":13,"name":"trust_level_3"},{"id":14,"name":"trust_level_4"}],"filters":["latest","unread","new","read","posted","bookmarks"],"periods":["all","yearly","quarterly","monthly","weekly","daily"],"top_menu_items":["latest","unread","new","read","posted","bookmarks","category","categories","top"],"anonymous_top_menu_items":["latest","top","categories","category","categories","top"],"uncategorized_category_id":1,"is_readonly":false,"disabled_plugins":[],"user_field_max_length":2048,"suppressed_from_homepage_category_ids":[],"post_action_types":[{"name_key":"bookmark","name":"Bookmark","description":"Bookmark this post","long_form":"bookmarked this post","is_flag":false,"icon":null,"id":1,"is_custom_flag":false},{"name_key":"like","name":"Like","description":"Like this post","long_form":"liked this","is_flag":false,"icon":"heart","id":2,"is_custom_flag":false},{"name_key":"off_topic","name":"Off-Topic","description":"This post is not relevant to the current discussion as defined by the title and first post, and should probably be moved elsewhere.","long_form":"flagged this as off-topic","is_flag":true,"icon":null,"id":3,"is_custom_flag":false},{"name_key":"inappropriate","name":"Inappropriate","description":"This post contains content that a reasonable person would consider offensive, abusive, or a violation of <a href=\"/guidelines\">our community guidelines<\/a>.","long_form":"flagged this as inappropriate","is_flag":true,"icon":null,"id":4,"is_custom_flag":false},{"name_key":"vote","name":"Vote","description":"Vote for this post","long_form":"voted for this post","is_flag":false,"icon":null,"id":5,"is_custom_flag":false},{"name_key":"spam","name":"Spam","description":"This post is an advertisement. It is not useful or relevant to the current topic, but promotional in nature.","long_form":"flagged this as spam","is_flag":true,"icon":null,"id":8,"is_custom_flag":false},{"name_key":"notify_user","name":"Send @{{username}} a message","description":"I want to talk to this person directly and privately about their post.","long_form":"messaged user","is_flag":true,"icon":null,"id":6,"is_custom_flag":true},{"name_key":"notify_moderators","name":"Something Else","description":"This post requires staff attention for another reason not listed above.","long_form":"flagged this for staff attention","is_flag":true,"icon":null,"id":7,"is_custom_flag":true}],"topic_flag_types":[{"name_key":"inappropriate","name":"Inappropriate","description":"This topic contains content that a reasonable person would consider offensive, abusive, or a violation of <a href=\"/guidelines\">our community guidelines<\/a>.","long_form":"flagged this as inappropriate","is_flag":true,"icon":null,"id":4,"is_custom_flag":false},{"name_key":"spam","name":"Spam","description":"This topic is an advertisement. It is not useful or relevant to this site, but promotional in nature.","long_form":"flagged this as spam","is_flag":true,"icon":null,"id":8,"is_custom_flag":false},{"name_key":"notify_moderators","name":"Something Else","description":"This topic requires general staff attention based on the <a href=\"/guidelines\">guidelines<\/a>, <a href=\"/tos\">TOS<\/a>, or for another reason not listed above.","long_form":"flagged this for moderator attention","is_flag":true,"icon":null,"id":7,"is_custom_flag":true}],"can_create_tag":false,"can_tag_topics":false,"categories":[{"id":1,"name":"uncategorized","color":"AB9364","text_color":"000000","slug":"uncategorized","topic_count":9,"post_count":299,"position":1,"description":"Topics that don't need a category, or don't fit into any other existing category.","description_text":"","topic_url":"/t//","logo_url":"","background_url":"","read_restricted":false,"permission":null,"notification_level":1,"topic_template":null,"has_children":false},{"id":3,"name":"Meta","color":"808281","text_color":"000000","slug":"meta","topic_count":10,"post_count":58,"position":5,"description":"Discussion about this forum, its organization, how it works, and how we can improve it.","description_text":"Discussion about this forum, its organization, how it works, and how we can improve it.","topic_url":"/t/about-the-meta-category/2","logo_url":"","background_url":"","read_restricted":false,"permission":null,"notification_level":1,"topic_template":null,"has_children":false},{"id":5,"name":"blog","color":"231F20","text_color":"000000","slug":"blog","topic_count":1415,"post_count":94398,"position":5,"description":"Automatically created topics for discussion about Coding Horror blog entries. Replies here will also appear on the blog.","description_text":"Automatically created topics for discussion about Coding Horror blog entries. Replies here will also appear on the blog.","topic_url":"/t/about-the-blog-category/1389","logo_url":"","background_url":"","read_restricted":false,"permission":null,"notification_level":1,"topic_template":null,"has_children":false}],"trust_levels":[{"id":0,"name":"new user"},{"id":1,"name":"basic user"},{"id":2,"name":"member"},{"id":3,"name":"regular"},{"id":4,"name":"leader"}],"archetypes":[{"id":"regular","name":"Regular Topic","options":[]},{"id":"banner","name":"Banner Topic","options":[]}],"user_fields":[]});
+          ps.store("siteSettings", {"title":"Coding Horror Discussion","contact_email":"jatwood@codinghorror.com","contact_url":"","logo_url":"/images/d-logo-sketch.png","logo_small_url":"/images/d-logo-sketch-small.png","mobile_logo_url":"","favicon_url":"/images/default-favicon.ico","allow_user_locale":false,"suggested_topics":5,"track_external_right_clicks":false,"ga_universal_tracking_code":"","ga_universal_domain_name":"auto","ga_tracking_code":"","ga_domain_name":"","gtm_container_id":"","top_menu":"latest|new|unread|top|categories","post_menu":"like-count|like|share|flag|edit|bookmark|delete|admin|reply","post_menu_hidden_items":"flag|bookmark|edit|delete|admin","share_links":"twitter|facebook|email","desktop_category_page_style":"categories_and_latest_topics","category_colors":"BF1E2E|F1592A|F7941D|9EB83B|3AB54A|12A89D|25AAE2|0E76BD|652D90|92278F|ED207B|8C6238|231F20|808281|B3B5B4|283890","category_style":"bullet","enable_mobile_theme":true,"relative_date_duration":30,"category_featured_topics":3,"fixed_category_positions":false,"fixed_category_positions_on_create":false,"show_subcategory_list":false,"enable_badges":true,"enable_badge_sql":false,"enable_whispers":false,"invite_only":false,"login_required":false,"must_approve_users":false,"enable_local_logins":true,"allow_new_registrations":true,"enable_signup_cta":true,"enable_google_oauth2_logins":true,"enable_yahoo_logins":true,"enable_twitter_logins":true,"enable_instagram_logins":false,"enable_facebook_logins":true,"enable_github_logins":false,"enable_sso":false,"sso_overrides_avatar":false,"min_username_length":3,"max_username_length":20,"min_password_length":10,"min_admin_password_length":15,"logout_redirect":"","full_name_required":false,"enable_names":true,"invites_per_page":40,"delete_user_max_post_age":32000,"delete_all_posts_max":100,"show_email_on_profile":false,"prioritize_username_in_ux":true,"enable_user_directory":true,"allow_anonymous_posting":false,"anonymous_posting_min_trust_level":1,"hide_user_profiles_from_public":false,"min_post_length":20,"min_first_post_length":20,"min_private_message_post_length":10,"max_post_length":32000,"min_topic_title_length":15,"max_topic_title_length":255,"min_private_message_title_length":2,"allow_uncategorized_topics":true,"min_title_similar_length":10,"min_body_similar_length":15,"enable_private_messages":true,"edit_history_visible_to_public":true,"delete_removed_posts_after":24,"traditional_markdown_linebreaks":false,"allow_html_tables":false,"suppress_reply_directly_below":true,"suppress_reply_directly_above":true,"max_reply_history":1,"newuser_max_images":1,"newuser_max_attachments":0,"show_pinned_excerpt_mobile":true,"show_pinned_excerpt_desktop":true,"display_name_on_posts":false,"show_time_gap_days":14,"short_progress_text_threshold":10000,"default_code_lang":"auto","autohighlight_all_code":false,"highlighted_languages":"apache|bash|cs|cpp|css|coffeescript|diff|xml|http|ini|json|java|javascript|makefile|markdown|nginx|objectivec|ruby|perl|php|python|sql|handlebars","censored_words":"","enable_emoji":true,"emoji_set":"win10","code_formatting_style":"4-spaces-indent","email_time_window_mins":10,"disable_digest_emails":false,"email_in":false,"disable_emails":false,"bounce_score_threshold":4,"max_image_size_kb":3072,"max_attachment_size_kb":20480,"authorized_extensions":"jpg|jpeg|png|gif|mp4","max_image_width":690,"max_image_height":500,"prevent_anons_from_downloading_files":false,"enable_s3_uploads":false,"allow_profile_backgrounds":true,"allow_uploaded_avatars":true,"allow_animated_avatars":false,"default_avatars":"","external_system_avatars_enabled":true,"external_system_avatars_url":"/letter_avatar_proxy/v2/letter/{first_letter}/{color}/{size}.png","tl1_requires_read_posts":30,"tl3_links_no_follow":false,"use_admin_ip_whitelist":false,"alert_admins_if_errors_per_minute":0,"alert_admins_if_errors_per_hour":0,"max_prints_per_hour_per_user":5,"enable_long_polling":true,"long_polling_base_url":"/","background_polling_interval":60000,"polling_interval":3000,"anon_polling_interval":15000,"flush_timings_secs":20,"verbose_localization":false,"max_new_topics":500,"tos_url":"","privacy_policy_url":"","faq_url":"","maximum_backups":5,"min_search_term_length":3,"version_checks":true,"suppress_uncategorized_badge":true,"topic_views_heat_low":1000,"topic_views_heat_medium":2000,"topic_views_heat_high":5000,"topic_post_like_heat_low":0.5,"topic_post_like_heat_medium":1.0,"topic_post_like_heat_high":2.0,"history_hours_low":12,"history_hours_medium":24,"history_hours_high":48,"cold_age_days_low":14,"cold_age_days_medium":90,"cold_age_days_high":180,"global_notice":"","show_create_topics_notice":true,"bootstrap_mode_min_users":50,"bootstrap_mode_enabled":false,"automatically_unpin_topics":true,"read_time_word_count":500,"disable_mailing_list_mode":false,"default_topics_automatic_unpin":true,"tagging_enabled":false,"tag_style":"simple","max_tags_per_topic":5,"max_tag_length":20,"min_trust_level_to_tag_topics":0,"max_tag_search_results":5,"show_filter_by_tag":false,"tags_sort_alphabetically":false,"staff_tags":"","suppress_overlapping_tags_in_list":false,"affiliate_enabled":true,"affiliate_amazon_ca":"","affiliate_amazon_cn":"","affiliate_amazon_co_jp":"","affiliate_amazon_co_uk":"","affiliate_amazon_com":"codihorr-20","affiliate_amazon_com_au":"","affiliate_amazon_com_br":"","affiliate_amazon_com_mx":"","affiliate_amazon_de":"","affiliate_amazon_es":"","affiliate_amazon_fr":"","affiliate_amazon_in":"","affiliate_amazon_it":"","affiliate_amazon_nl":"","affiliate_ldlc_com":"","details_enabled":true,"poll_enabled":true,"poll_maximum_options":20,"available_locales":"ar|bs_BA|cs|da|de|en|es|et|fa_IR|fi|fr|gl|he|id|it|ja|ko|nb_NO|nl|pl_PL|pt|pt_BR|ro|ru|sk|sq|sv|te|tr_TR|uk|vi|zh_CN|zh_TW"});
+          ps.store("customHTML", {"top":"","footer":""});
+          ps.store("banner", {});
+          ps.store("customEmoji", []);
+          ps.store("translationOverrides", {});
+          ps.store("topic_4462", {"post_stream":{"posts":[{"id":100558,"name":"Eldon Cleary","username":"Eldon_Cleary","avatar_template":"/letter_avatar_proxy/v2/letter/e/dbc845/{size}.png","created_at":"2016-07-25T22:50:02.700Z","cooked":"<p>I make and sell kits like these in my spare time, I noticed a picture from one of my kits here too. The controller style arcade is mine, you can get it for 55 dollars or my more popular bartop kit for 100<\/p>\n\n<p>Look at this on eBay <a href=\"http://www.ebay.com/itm/291826294816\" rel=\"nofollow\">http://www.ebay.com/itm/291826294816<\/a><\/p>\n\n<p>Look at this on eBay <a href=\"http://www.ebay.com/itm/291820465597\" rel=\"nofollow\">http://www.ebay.com/itm/291820465597<\/a><\/p>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/6999b3bc5abc7ff5b723133defaf7199f99e5357\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/6/9/6999b3bc5abc7ff5b723133defaf7199f99e5357.jpg\" class=\"lightbox\" title=\"FB_IMG_1461425825903.jpg\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/6/9/6999b3bc5abc7ff5b723133defaf7199f99e5357_1_500x500.jpg\" width=\"500\" height=\"500\"><div class=\"meta\">\n<span class=\"filename\">FB_IMG_1461425825903.jpg<\/span><span class=\"informations\">528x528 28.2 KB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>","post_number":24,"post_type":1,"updated_at":"2016-07-25T22:50:02.700Z","reply_count":0,"reply_to_post_number":20,"quote_count":0,"avg_time":18,"incoming_link_count":9,"reads":16,"score":94.1,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Eldon Cleary","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://www.ebay.com/itm/291826294816","internal":false,"reflection":false,"title":"Bartop Arcade DIY Flat Pack Tabletop Cabinet Kit MDF Wood with T Molding Slot | eBay","clicks":21},{"url":"http://www.ebay.com/itm/291820465597","internal":false,"reflection":false,"title":"Assembled MDF DIY Mobile Controller Bartop Arcade Wood Kit with T Molding Slot | eBay","clicks":20}],"read":true,"user_title":null,"reply_to_user":{"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"},"actions_summary":[{"id":2,"count":1}],"moderator":false,"admin":false,"staff":false,"user_id":38495,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100559,"name":"sunk818","username":"sunk818","avatar_template":"/user_avatar/discourse.codinghorror.com/sunk818/{size}/73103_1.png","created_at":"2016-07-25T23:13:59.051Z","cooked":"<p>Has anyone looked into what options we have for games with non-standard controller layout or buttons? If I wanted to play Robotron 2084, I'd need two joysticks one for movements and one for firing. Defender? Tron with a joystick and jogdial. Or Tempest with a jog dial and fire button. Centipede, Millipede, and Crystal Castle I've worked out okay with a mouse as a trackball replacement.<\/p>","post_number":25,"post_type":1,"updated_at":"2016-07-25T23:13:59.051Z","reply_count":1,"reply_to_post_number":null,"quote_count":0,"avg_time":18,"incoming_link_count":2,"reads":14,"score":18.7,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"sunk818","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":false,"staff":false,"user_id":36966,"hidden":false,"hidden_reason_id":null,"trust_level":1,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100560,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-07-25T23:32:39.529Z","cooked":"<p>The best generic layout is arguably two sticks, 6 buttons each, and a trackball. Then you can play dual stick games as a single player using both sticks, and you're covered on most mouse-alike games. Takes a fairly wide cabinet though.<\/p>","post_number":26,"post_type":1,"updated_at":"2016-07-25T23:32:39.529Z","reply_count":0,"reply_to_post_number":25,"quote_count":0,"avg_time":11,"incoming_link_count":2,"reads":14,"score":13.35,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"read":true,"user_title":null,"reply_to_user":{"username":"sunk818","avatar_template":"/user_avatar/discourse.codinghorror.com/sunk818/{size}/73103_1.png"},"actions_summary":[],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100565,"name":"Tobias Cohen","username":"tobico","avatar_template":"/user_avatar/discourse.codinghorror.com/tobico/{size}/74276_1.png","created_at":"2016-07-26T07:52:40.778Z","cooked":"<p>Anyone got any tips for a comparable Raspberry Pi 3 kit available in Australia? Everything I've found so far is over twice the price and doesn't include heatsinks.<\/p>","post_number":27,"post_type":1,"updated_at":"2016-07-26T07:52:40.778Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":9,"incoming_link_count":1,"reads":12,"score":7.85,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Tobias Cohen","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":false,"staff":false,"user_id":38497,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100568,"name":"Dylan Meeus","username":"Insanity","avatar_template":"/letter_avatar_proxy/v2/letter/i/3e96dc/{size}.png","created_at":"2016-07-26T13:04:43.902Z","cooked":"<p>Hey, I really like your blog and have been reading on and off for quite some time. <br>Your blog really needs an index at the side. I like to read on my mobile phone, but when I have read the first few articles I spend ages scrolling to find another article I didn't read. Being able to jump to articles based on the title would be great.<\/p>","post_number":28,"post_type":1,"updated_at":"2016-07-26T13:04:43.902Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":14,"incoming_link_count":6,"reads":13,"score":33.3,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Dylan Meeus","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":false,"staff":false,"user_id":38500,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100570,"name":"Adam Sommer","username":"Adam_Sommer","avatar_template":"/user_avatar/discourse.codinghorror.com/adam_sommer/{size}/74278_1.png","created_at":"2016-07-26T15:22:27.027Z","cooked":"<p>Check out <a href=\"http://www.lexaloffle.com/pico-8.php\" rel=\"nofollow\">Pico-8<\/a> for new \"fantasy console\" goodness.  Works great with Raspberry Pi Zero, 2, 3, etc.<\/p>","post_number":29,"post_type":1,"updated_at":"2016-07-26T15:22:27.027Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":14,"incoming_link_count":11,"reads":13,"score":103.3,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Adam Sommer","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://www.lexaloffle.com/pico-8.php","internal":false,"reflection":false,"title":"PICO-8: FANTASY CONSOLE","clicks":20}],"read":true,"user_title":null,"actions_summary":[{"id":2,"count":1}],"moderator":false,"admin":false,"staff":false,"user_id":38501,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100572,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-07-26T21:04:41.214Z","cooked":"<p>The quick and dirty of <strong>safe<\/strong> Pi overclocking:<\/p>\n\n<ul>\n<li>Exit to RetroPi console (press menu button on your controller, then select exit) or press <kbd>f4<\/kbd> any time<\/li>\n<li><code>sudo -s<\/code><\/li>\n<li><code>nano /boot/config.txt<\/code><\/li>\n<\/ul>\n\n<p>the lines you want are:<\/p>\n\n<pre><code>sdram_freq=500\ndtoverlay=sdhost,overclock_50=100<\/code><\/pre>\n\n<p>I've found the Pi 3 is fast enough that boosting the storage and memory speeds is generally more beneficial to overall performance than CPU power in most cases, and it's safer.<\/p>\n\n<blockquote>\n<p><img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/warning.png?v=3\" title=\":warning:\" class=\"emoji\" alt=\":warning:\"> I no longer blanket advise CPU overclocking due to minor voltage and heat complications I've seen. Avoid CPU overclocking unless you are absolutely <em>certain<\/em> you need the extra CPU power for bleeding edge emulators like Dreamcast. <\/p>\n<p>And before proceeding, make SURE you have:<\/p>\n<ul>\n<li>a heatsink installed<\/li>\n<li>a quality power supply designed for large devices (think iPad 3+)<\/li>\n<\/ul>\n<\/blockquote>\n\n<p>If you are sure you also want to overclock the CPU, add these lines too:<\/p>\n\n<pre><code>arm_freq=1400\nover_voltage=6<\/code><\/pre>\n\n<p>You might be able to bump the voltage down if it's stable in your testing. See <a href=\"http://elinux.org/RPiconfig\" rel=\"nofollow\">RPiconfig docs<\/a> for details.<\/p>\n\n<p>Save using <kbd>ctrl<\/kbd>-<kbd>o<\/kbd>, then exit the nano editor with <kbd>ctrl<\/kbd>-<kbd>x<\/kbd>.<\/p>\n\n<p><code>reboot<\/code> and see what happens. Be prepared to re-flash the SD card if it doesn't work!<\/p>\n\n<p>To test, I recommend running the included Quake 3 (under Ports) in a few different modes like botmatch, be sure to turn up the graphics in there to max at 1024x768, select Skirmish mode, and add a ton of bots with a fraglimit of 0. Then let it go.<\/p>","post_number":30,"post_type":1,"updated_at":"2016-08-06T07:44:11.287Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":7,"incoming_link_count":1081,"reads":15,"score":5408.35,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":7,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://elinux.org/RPiconfig","internal":false,"reflection":false,"title":"RPiconfig - eLinux.org","clicks":1}],"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100573,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-07-26T22:01:29.331Z","cooked":"<p>It is a bit weird that the Pi 3 ships without a heatsink. It <a href=\"http://www.sbeddoes.com/blog/2016/3/7/yia8uhjlb9hoau76a38jc21z3blp1e\" rel=\"nofollow\">probably should have one<\/a>:<\/p>\n\n<p><img src=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/7/f/7fbc5f998addda846ba02351516e6b714bb97155.png\" width=\"674\" height=\"389\"><\/p>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/9acc7cecc05f9a5ae92e4dd9d7056474079b5cec\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/9/a/9acc7cecc05f9a5ae92e4dd9d7056474079b5cec.png\" class=\"lightbox\" title=\"pi-bare-load-temps.png\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/9/a/9acc7cecc05f9a5ae92e4dd9d7056474079b5cec_1_690x398.png\" width=\"690\" height=\"398\"><div class=\"meta\">\n<span class=\"filename\">pi-bare-load-temps.png<\/span><span class=\"informations\">1047x604 25.8 KB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/120a8f89e9cd769564bdb8e20da5ae7da34ce0d7\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/1/2/120a8f89e9cd769564bdb8e20da5ae7da34ce0d7.png\" class=\"lightbox\" title=\"pi3-heatsink-load-temps.png\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/1/2/120a8f89e9cd769564bdb8e20da5ae7da34ce0d7_1_690x398.png\" width=\"690\" height=\"398\"><div class=\"meta\">\n<span class=\"filename\">pi3-heatsink-load-temps.png<\/span><span class=\"informations\">1041x601 14.2 KB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>\n\n<p>If there's ever a Pi 4 it should <em>absolutely<\/em> have a heatsink in the default package!<\/p>","post_number":31,"post_type":1,"updated_at":"2016-08-06T08:33:03.169Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":29,"incoming_link_count":43,"reads":16,"score":219.65,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":2,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://www.sbeddoes.com/blog/2016/3/7/yia8uhjlb9hoau76a38jc21z3blp1e","internal":false,"reflection":false,"title":"Raspberry Pi 3 Temperature and CPU Throttling — Steve Beddoes","clicks":65}],"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100577,"name":"Tamas Csabina","username":"Tamas_Csabina","avatar_template":"/letter_avatar_proxy/v2/letter/t/aeb1de/{size}.png","created_at":"2016-07-27T18:52:20.379Z","cooked":"<p>Another site where they build and sell these arcade boxes. They are built around original PCBs:<br><a href=\"http://www.dragonfly-amusement.com/arcade-uk.shtml\" class=\"onebox\" target=\"_blank\" rel=\"nofollow\">http://www.dragonfly-amusement.com/arcade-uk.shtml<\/a><\/p>","post_number":32,"post_type":1,"updated_at":"2016-07-27T18:52:20.379Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":23,"incoming_link_count":11,"reads":10,"score":58.15,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Tamas Csabina","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://www.dragonfly-amusement.com/arcade-uk.shtml","internal":false,"reflection":false,"title":"Dragonfly Amusement - Arcade","clicks":14}],"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":false,"staff":false,"user_id":38504,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100579,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-07-27T20:45:36.657Z","cooked":"<p>One thing I hadn't anticipated; the quality of analog audio out from the Pi is quite .. bad. <em>Lots<\/em> of interference / noise. Not that it matters a ton for an arcade machine, but it's still significantly worse than I expected.<\/p>\n\n<p>I am adding this USB powered, <a href=\"https://www.amazon.com/dp/B014QO0DR0?tag=codihorr-20\" rel=\"nofollow\">HDMI \"audio extractor\" box<\/a> to my build:<\/p>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/c37a5eadd17757402673066c0840e676450fcdf0\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/c/3/c37a5eadd17757402673066c0840e676450fcdf0.jpg\" class=\"lightbox\" title=\"blob.jpg\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/c/3/c37a5eadd17757402673066c0840e676450fcdf0_1_690x248.jpg\" width=\"690\" height=\"248\"><div class=\"meta\">\n<span class=\"filename\">blob.jpg<\/span><span class=\"informations\">938x338 57.2 KB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>\n\n<p>I found one on eBay that looks similar for $17.<\/p>\n\n<p>I got it, and <strong>I can confirm this works grrrrreat!<\/strong> You go from scratchy, fuzzed out analog Pi audio with lots of interference (which you have to crank the volume way up on to hear at all), to pristine digital audio quality. It's a huge, clearly audible difference – I strongly recommend it!<\/p>\n\n<p>You will need to <strong>force HDMI video<\/strong> with this adapter installed as the Pi has trouble seeing the monitor at boot. But the fix is simple, just reboot with the monitor directly connected, and make sure these options are set in your <code>/boot/config.txt<\/code>:<\/p>\n\n<pre><code>hdmi_force_hotplug=1\nhdmi_group=1\nhdmi_mode=16<\/code><\/pre>\n\n<p>Mode 16 is 1080p, 60Hz which is what I expect most will be running but if you need others <a href=\"http://elinux.org/RPiconfig\" rel=\"nofollow\">they are listed here<\/a>.<\/p>","post_number":33,"post_type":1,"updated_at":"2016-07-29T21:44:06.028Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":12,"incoming_link_count":579,"reads":14,"score":2898.4,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":2,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"https://www.amazon.com/dp/B014QO0DR0?tag=codihorr-20","internal":false,"reflection":false,"title":"Amazon.com: aLLreLi 1080P HDMI to HDMI + 3.5mm Audio Cable (RCA L/R) Stereo Audio Extractor | Converter | HDMI Splitter Adapter (HDMI Input, HDMI + Digital / Analog Audio Output): Computers & Accessories","clicks":46},{"url":"http://elinux.org/RPiconfig","internal":false,"reflection":false,"title":"RPiconfig - eLinux.org","clicks":13}],"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100582,"name":"Devon Shaw","username":"Rageous","avatar_template":"/user_avatar/discourse.codinghorror.com/rageous/{size}/74286_1.png","created_at":"2016-07-28T00:15:14.917Z","cooked":"<p>Yo! This is going to be long and probably well beyond the scope of the barcades you're mostly referencing, but I'm a huge arcade parts enthusiast so this is a really fun topic for me and I'm always happy to share knowledge.<\/p>\n\n<p>Most of the prefab kits you see are going to have generic parts in them, and as you can see just from the pictures in this thread there are a variety of joysticks, push button types and button layouts. If this kind of thing is fun for you, I highly recommend going to <a href=\"http://slagcoin.com/joystick.html\" rel=\"nofollow\">Slagcoin<\/a> and reading through. They provide the finest baseline on how an arcade joystick interface comes together, including a wide variety of panel layouts that people like myself continue to reference and use on a regular basis today. The most popular setups tend to reflect traditions in various regions, mainly America, Japan and Korea.<\/p>\n\n<p><strong>Restrictor gates! Know your gates!<\/strong><br>For your old school ROM needs, or even current-day arcade experiences, you need to understand gates and how they work with your arcade stick lever. A gate is a clip on the underside that restricts the limits of the joystick's movement. Modern portable arcade sticks made for competitive fighting games use <a href=\"http://slagcoin.com/joystick/restrictors/square_gate2.png\" rel=\"nofollow\">square gates<\/a>, allowing you to reach the diagonal corners easily. GameCube players and King of Fighters arcade enthusiasts will recognize <a href=\"http://slagcoin.com/joystick/restrictors/octagon_gate.png\" rel=\"nofollow\">octogonal gates<\/a>, which has visible notches for you to easily tell which direction you're aiming. <a href=\"http://slagcoin.com/joystick/restrictors/circle_gate.png\" rel=\"nofollow\">Circle gates<\/a> are typically used for people with a primary need for up/down/left/right cardinals, and very rarely diagonals. These are all \"8-way\" gates (four cardinals plus four intermediate). Very old arcade machines like your Pac-Man cocktail cabs and such can even have \"4-way\" gates (<a href=\"http://slagcoin.com/joystick/restrictors/plus_gate.png\" rel=\"nofollow\">restricting to cardinals only<\/a>) or \"2-way\" gates for only <a href=\"http://slagcoin.com/joystick/restrictors/vertical_gate.png\" rel=\"nofollow\">up/down<\/a> or <a href=\"http://slagcoin.com/joystick/restrictors/horizontal_gate.png\" rel=\"nofollow\">left/right<\/a>. Picking the right gate (or even experimenting with multiple types, they're dirt cheap!) can go a long way towards having a good experience with your arcade.<\/p>\n\n<p><strong>American Style<\/strong><br>If you've ever been to an arcade in the US, you'll be quite familiar with them. They typically come with large <a href=\"http://www.paradisearcadeshop.com/502-levers-il-industrias-lorenzo\" rel=\"nofollow\">bat tops<\/a> and <a href=\"http://www.paradisearcadeshop.com/5_il-industrias-lorenzo-sa\" rel=\"nofollow\">spring-loaded concave buttons<\/a>. These setups are designed for you to slam the hell out of them and keep going. The bat tops use a circular gate with a fairly stiff amount of movement resistance (remember they're installed in heavy, stand-up arcades that don't move), and tend to have <a href=\"http://slagcoin.com/joystick/layout/matrix36_s.png\" rel=\"nofollow\">two rows of buttons in a straight line<\/a> (sometimes 6 buttons, usually 8). For a long time the parts were distributed by Happ, but following a merger with Suzo in 2005, production was shifted to Suzo's facilities in China and the quality took a serious downturn. However, you can now buy parts made by Industrias Lorenzo, the company actually manufacturing Happ's original stuff. If you're an American-style fan, IL is your jam.<\/p>\n\n<p><strong>Japanese Style<\/strong><br>Popular amongst arcade enthusiasts but not particularly commonplace in western countries, Japan favors a lighter touch. They use shorter-length arcade sticks with lollipop-style <a href=\"http://cdn.shopify.com/s/files/1/0748/3745/products/jlf-tprg-8ayt-sk---group.jpg?v=1455517222\" rel=\"nofollow\">ball tops<\/a> instead of bat tops, and light-to-the-touch <a href=\"http://www.paradisearcadeshop.com/299-buttons-sanwa\" rel=\"nofollow\">convex buttons<\/a> with plastic microswitches in a <a href=\"http://slagcoin.com/joystick/layout/shift36_s.png\" rel=\"nofollow\">Vewlix layout<\/a>. Because most Japanese arcade machines are sit-down, rather than stand-up, they opt for parts that are quicker and more precise, and require considerably less force than their American counterparts. The ball top format allows for many more (and ergonomically advantageous) hand-holding variations, allowing the legions of Japanese salarymen to hit Taito Station after work for hours on end in comfort. Sanwa is the gold standard manufacturer here -- their JLF lever and OBSC buttons are ubiquitous and widely-accepted with many colors and customization options. The JLF has <a href=\"http://arcadeshock.com/collections/sanwa-accessories/gate\" rel=\"nofollow\">snap-on gates<\/a> that quickly allow you to switch to circular or octagonal in a matter of seconds, and because the ball tops are removable, people often get customized colors, patterns, swirls, etc. You can even get a bat top that screws into the lever. Other brand makers include Hori (which focuses on high performance fighting game gear) and Seimitsu, which has a slightly heavier feel than Sanwa but also has some really nifty <a href=\"http://www.paradisearcadeshop.com/2564-large_default/seimitsu-ls-32-triple-restrictor-plate.jpg\" rel=\"nofollow\">tri-gates<\/a> that include a little of everything for you to experiment with (that linked example includes 2-way, 4-way and circular 8-way). For those of you considering assembling a countertop barcade, Japanese style parts are probably your best bet to play comfortably without it sliding around.<\/p>\n\n<p><strong>Korean Style<\/strong><br>3D fighting games like Tekken and Virtua Fighter are ridiculously popular in South Korea, so their solutions are based on mostly 4-way inputs (lots of forward-forward-back-back, or down-up movements) with very occasional use of 8-way. To accomplish this, makers Crown and Myoungshin Fanta created a <a href=\"http://www.etokki.com/Joysticks/Myoungshin-Fanta-stick-Green\" rel=\"nofollow\">special type of stick<\/a> with a rubber grommet to restrict movement instead of plastic gates. The nature of the stick gives way easily to cardinal directions, but has heavy resistance towards diagonals... and a very sharp return to neutral (a fellow player who uses a Fanta full time once quipped, \"Neutral is a hell of a drug.\"). They also prefer Crown's custom-made push buttons (which have a slightly squishy feedback feel) in Namco's <a href=\"http://slagcoin.com/joystick/layout/sega2_s.png\" rel=\"nofollow\">Noir layout<\/a>. Crown and Myoungshin gear is a bit difficult to obtain stateside, but there are a few specialty shops that will provide parts or fully-assembled Korean-style arcade sticks for your purposes.<\/p>\n\n<p><strong>A Modern Aside<\/strong><br>In the last couple years, people have begun creating push buttons with Cherry MX microswitches in them, allowing you to drop in your preferred actuation. This was pioneered by <a href=\"http://gamerfinger.com/hbfs30.html\" rel=\"nofollow\">GamerFinger<\/a> a few years ago, but refined gorgeously by Paradise Arcade Shop's custom-designed <a href=\"http://www.paradisearcadeshop.com/obs-mx-button-system/1626-obs-mx-drop-in-kit.html\" rel=\"nofollow\">OBS-MX<\/a> line that drops into standard Sanwa rims. Presumably you can customize it with any microswitch type you want, but they offer MX Red, Blue, Brown, Green, Black and Clear to choose from. (I'm assuming MX Clear for our esteemed host.)<\/p>\n\n<p><strong>Where do I get all this stuff, or at least fulfill my gear lust curiosity?<\/strong><br><a href=\"http://www.paradisearcadeshop.com/\" rel=\"nofollow\">Paradise Arcade Shop<\/a> and <a href=\"http://arcadeshock.com/\" rel=\"nofollow\">Arcade Shock<\/a> come with my highest recommendation, as well as <a href=\"http://www.etokki.com/index.php?route=common/home\" rel=\"nofollow\">Etokki<\/a> for exclusively Korean needs. As a general rule for the type of kits you see here, you'll want to pick the \"screw-in\" button type (which accommodates thicker installation panels) instead of \"snap-in\" (used on thin metal panels). If you have issues with the noise made by these, Paradise also offers a large line of <a href=\"http://www.paradisearcadeshop.com/569-button-stuff\" rel=\"nofollow\">silencing pads<\/a> to mute the button click, and you can also get <a href=\"http://arcadeshock.com/collections/joysticks/products/sanwa-denshi-2014-silent-joystick-2nd-generation-jlf-tprg-8ayt-sk\" rel=\"nofollow\">silent joysticks<\/a> if the microswitch noises are too loud for your tastes.<\/p>\n\n<p><strong>Hey, I want a real arcade! Not a little one!<\/strong><br>With some sleuthing on your local Craigslist, you can probably find an old arcade that can be refurbished or repurposed to handle your own needs, and there's also <a href=\"http://captainsauctionwarehouse.com/\" rel=\"nofollow\">Captain's Auction Warehouse<\/a> if you have something specific in mind. Even though these were all wired up for JAMMA style play with actual arcade boards, there's absolutely nothing stopping you from dropping in your little Raspberry Pi and rewiring the controls directly to it.<\/p>\n\n<p><a href=\"http://i.imgur.com/7Url0C3.jpg\" rel=\"nofollow\">This<\/a> is my baby (<a href=\"http://i.imgur.com/SmVuFik.jpg\" rel=\"nofollow\">alternate view<\/a>). It's a Chinese clone of the Taito Vewlix Japanese-style sit down cab, which our community affectionately calls \"Chewlix\". Typically they come with only a single player layout, but I was able to get a 2-player arrangement included when I bought it. It's been great for parties and casual fun, and while I don't have kids yet, I anticipate leveraging this as a way to introduce them to gaming as a social activity rather than an isolating one (as most iOS and console games typically are). It was originally wired up for Chinese-format JAMMA, but I've installed two <a href=\"http://arcadeshock.com/collections/brook/products/brook-universal-fighting-board-ps3-ps4-xbox-360-xbox-one-pc\" rel=\"nofollow\">Brook Universal Fighting Boards<\/a> that allow it to work natively with PS3, PS4, 360, Xbox One or PC. Just plug in the USB cables and you're good to go. When the picture was taken, I had an Xbox 360 in there (with a digital jukebox full of Xbox Live Arcade games). Currently my PS4 occupies the space for Street Fighter V purposes. Again, like I pointed out before... once you have the shell, there's no limit to what interface you put inside it. As long as you can send control inputs to your buttons, signal to your monitor (typically Component/VGA/DVI) and sound to your speakers, anything will work. Getting a Vewlix cab of any kind is a pricey affair, since they have to be shipped overseas and potentially trucked somewhere. I got mine as part of a group buy, where 10 of us all pitched in to split the costs of shipping and customs, enabling us to get our cabs for close to the actual price (I'm into my Chewlix for about $1200 versus over $4000 if you order a single Taito Vewlix from Japan).<\/p>\n\n<p>A third option is to get an MDF-style build from the US and assemble it yourself. I've seen a couple different types in person that I can recommend with confidence: <a href=\"http://www.kraylixarcade.com/\" rel=\"nofollow\">Kraylix Arcade<\/a>, and <a href=\"http://www.recroommasters.com/Default.asp\" rel=\"nofollow\">RecRoomMasters<\/a>. The Kraylix cabs are built to order and absolutely gorgeous, and include options to have them painted and/or assembled by Kray ahead of time. The RecRoomMasters kits are fantastic if you already have your own portable arcade sticks, or have a very specific idea of what kind of cab you want (cocktail, stand up, sit down, etc.). They also offer headless versions for you to mount your own HDTV. Both of these solutions involve a fair amount of elbow grease (such as picking your monitor, adding speakers for sound, considering prefab button panels vs. populating your own), but for the DIYer looking for a great weekend project that the kids will also enjoy, they're phenomenally fun experiences.<\/p>\n\n<p><strong>Other stuff you can do<\/strong><br>Some people put <a href=\"http://www.paradisearcadeshop.com/632-springs\" rel=\"nofollow\">heavier springs<\/a> in their sticks to increase resistance and snappiness. Some add LEDs and translucent buttons, then program <a href=\"http://www.paradisearcadeshop.com/436-kaimana-led-series\" rel=\"nofollow\">Arduino-style boards<\/a> to light up when they're pressed. Depending on what kind of cab you get, there are well-versed people capable of helping you print laminate marquee artwork to put on your cab. You can customize damn near anything.<\/p>\n\n<p><strong>A new approach for the modern age<\/strong><br>One of the things that caught my eye back when I was getting into all of this was a newly-formed company called <a href=\"http://www.hitboxarcade.com/\" rel=\"nofollow\">HitBox Arcade<\/a>. They realized that the joystick, while commonly-accepted as the primary arcade interface, was outdated and subject to imprecision and error due to the analog input format. Therefore they engineered a new approach from scratch that created a stickless design, using push buttons for the cardinal directions. Right, down and left are executed with your left hand fingers, and up (typically jump in fighting games) is positioned in the low center, akin to a spacebar. To accomplish diagonals, you merely press a combination of the two desired buttons (up and right together, for example). This has been a boon for touch-typists, keyboard gaming warriors and musicians looking to get into arcade play but lacking the years of analog stick muscle memory. The up button at the bottom is a brain bender at first, but many friends of mine only casually interested in arcade games have adapted quickly to the layout and prefer it to joysticks. This has also been embraced by high level players in all communities, from fighting games to even the world's best Tetris players as a viable alternative that offers clean execution inputs. I liked the concept so much, I cleaned up HitBox Arcade's somewhat messy and arbitrary layout by re-engineering a Vewlix-standard version with precise measurements and have open-sourced it to custom arcade panel manufacturers. <a href=\"http://i.imgur.com/jl6BPJt.jpg\" rel=\"nofollow\">Here<\/a> is a picture of my Hori VLX with a custom epoxy-painted metal panel using my revised HitBox design, manufactured by <a href=\"https://www.facebook.com/jasenscustoms/\" rel=\"nofollow\">Jasen's Customs<\/a>. This isn't the kind of approach that would be easily included in an official or premade barcade/arcade setup, but if you're the kind of person taking a drill to MDF in order to make your own, this is definitely an option available to you.<\/p>\n\n<p><strong>I scrolled to the end because you write longer posts than Jeff. For chrissakes, just give me a tl;dr.<\/strong><br>The bottom line is that setting these up to play your ROMs is only the beginning. You can spend a considerable amount of time customizing your actual gameplay experience to your performance and aesthetic liking, and there are multitudes of different (and reasonably-priced!) ways to do that. The sky is the limit here, and it's a very fun place to fly.<\/p>","post_number":34,"post_type":1,"updated_at":"2016-07-28T00:15:14.917Z","reply_count":1,"reply_to_post_number":null,"quote_count":0,"avg_time":22,"incoming_link_count":39,"reads":14,"score":308.9,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Devon Shaw","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://i.imgur.com/7Url0C3.jpg","internal":false,"reflection":false,"title":"7Url0C3.jpg","clicks":43},{"url":"http://i.imgur.com/SmVuFik.jpg","internal":false,"reflection":false,"title":"SmVuFik.jpg","clicks":27},{"url":"http://www.paradisearcadeshop.com/502-levers-il-industrias-lorenzo","internal":false,"reflection":false,"title":"iL (Industrias Lorenzo) - Paradise Arcade Shop","clicks":23},{"url":"http://cdn.shopify.com/s/files/1/0748/3745/products/jlf-tprg-8ayt-sk---group.jpg?v=1455517222","internal":false,"reflection":false,"clicks":16},{"url":"http://slagcoin.com/joystick.html","internal":false,"reflection":false,"title":"slagcoin Joystick Controller page","clicks":16},{"url":"http://www.paradisearcadeshop.com/299-buttons-sanwa","internal":false,"reflection":false,"title":"Sanwa - Paradise Arcade Shop","clicks":14},{"url":"http://slagcoin.com/joystick/layout/shift36_s.png","internal":false,"reflection":false,"title":"shift36_s.png","clicks":14},{"url":"http://www.etokki.com/Joysticks/Myoungshin-Fanta-stick-Green","internal":false,"reflection":false,"title":"Myoungshin Fanta stick Green","clicks":12},{"url":"http://i.imgur.com/jl6BPJt.jpg","internal":false,"reflection":false,"title":"jl6BPJt.jpg","clicks":12},{"url":"http://slagcoin.com/joystick/restrictors/octagon_gate.png","internal":false,"reflection":false,"title":"octagon_gate.png","clicks":12},{"url":"http://www.hitboxarcade.com/","internal":false,"reflection":false,"title":"Hit Box Arcade","clicks":11},{"url":"http://www.paradisearcadeshop.com/5_il-industrias-lorenzo-sa","internal":false,"reflection":false,"title":"iL (Industrias Lorenzo) - Paradise Arcade Shop","clicks":9},{"url":"http://captainsauctionwarehouse.com/","internal":false,"reflection":false,"title":"Captain's Auction Warehouse","clicks":9},{"url":"http://slagcoin.com/joystick/restrictors/square_gate2.png","internal":false,"reflection":false,"title":"square_gate2.png","clicks":9},{"url":"http://arcadeshock.com/collections/brook/products/brook-universal-fighting-board-ps3-ps4-xbox-360-xbox-one-pc","internal":false,"reflection":false,"title":"Brook Universal Fighting Board (PS3 | PS4 | Xbox 360 | Xbox One | PC) – Arcade Shock","clicks":8},{"url":"http://www.kraylixarcade.com/","internal":false,"reflection":false,"title":"Kray's Kustom Arcade","clicks":8},{"url":"http://slagcoin.com/joystick/restrictors/circle_gate.png","internal":false,"reflection":false,"title":"circle_gate.png","clicks":6},{"url":"http://slagcoin.com/joystick/layout/sega2_s.png","internal":false,"reflection":false,"title":"sega2_s.png","clicks":5},{"url":"http://www.recroommasters.com/Default.asp","internal":false,"reflection":false,"title":"recroommasters.com","clicks":5},{"url":"https://www.facebook.com/jasenscustoms/","internal":false,"reflection":false,"title":"Jasen's Custom Creations | Facebook","clicks":4},{"url":"http://slagcoin.com/joystick/layout/matrix36_s.png","internal":false,"reflection":false,"title":"matrix36_s.png","clicks":4},{"url":"http://slagcoin.com/joystick/restrictors/plus_gate.png","internal":false,"reflection":false,"title":"plus_gate.png","clicks":3},{"url":"http://www.paradisearcadeshop.com/obs-mx-button-system/1626-obs-mx-drop-in-kit.html","internal":false,"reflection":false,"title":"Reliability and Sensitivity in one small package","clicks":3},{"url":"http://arcadeshock.com/","internal":false,"reflection":false,"title":"Arcade Shock","clicks":2},{"url":"http://www.paradisearcadeshop.com/","internal":false,"reflection":false,"title":"Paradise Arcade Shop","clicks":2},{"url":"http://gamerfinger.com/hbfs30.html","internal":false,"reflection":false,"title":"HBFS-30 [GAMERFINGER THE LAB]","clicks":2},{"url":"http://slagcoin.com/joystick/restrictors/horizontal_gate.png","internal":false,"reflection":false,"title":"horizontal_gate.png","clicks":2},{"url":"http://slagcoin.com/joystick/restrictors/vertical_gate.png","internal":false,"reflection":false,"title":"vertical_gate.png","clicks":2},{"url":"http://arcadeshock.com/collections/sanwa-accessories/gate","internal":false,"reflection":false,"title":"Accessories – tagged \"gate\" – Arcade Shock","clicks":1},{"url":"http://www.paradisearcadeshop.com/436-kaimana-led-series","internal":false,"reflection":false,"title":"Kaimana RGB LEDs - Paradise Arcade Shop","clicks":1},{"url":"http://www.paradisearcadeshop.com/2564-large_default/seimitsu-ls-32-triple-restrictor-plate.jpg","internal":false,"reflection":false,"title":"seimitsu-ls-32-triple-restrictor-plate.jpg","clicks":1},{"url":"http://www.etokki.com/index.php?route=common/home","internal":false,"reflection":false,"title":"etokki","clicks":0},{"url":"http://www.paradisearcadeshop.com/569-button-stuff","internal":false,"reflection":false,"title":"Button Stuff - Paradise Arcade Shop","clicks":0},{"url":"http://arcadeshock.com/collections/joysticks/products/sanwa-denshi-2014-silent-joystick-2nd-generation-jlf-tprg-8ayt-sk","internal":false,"reflection":false,"title":"Sanwa Denshi 2014 Silent Joystick - 2nd Generation (JLF-TPRG-8AYT-SK) – Arcade Shock","clicks":0},{"url":"http://www.paradisearcadeshop.com/632-springs","internal":false,"reflection":false,"title":"Springs - Paradise Arcade Shop","clicks":0}],"read":true,"user_title":null,"actions_summary":[{"id":2,"count":3}],"moderator":false,"admin":false,"staff":false,"user_id":38492,"hidden":false,"hidden_reason_id":null,"trust_level":1,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100584,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-07-28T09:51:40.067Z","cooked":"<h3>Raspbian config changes I found essential:<\/h3>\n\n<ul>\n<li><p>those saucy brits behind the Pi set the default keyboard to UK layout. Change it to <img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/flag_us.png?v=3\" title=\":flag_us:\" class=\"emoji\" alt=\":flag_us:\"> <img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/hash.png?v=3\" title=\":hash:\" class=\"emoji\" alt=\":hash:\"><img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/one.png?v=3\" title=\":one:\" class=\"emoji\" alt=\":one:\"> via <code>dpkg-reconfigure keyboard-configuration<\/code><\/p><\/li>\n<li><p>you will want a larger font for a 1080p display, change it via <code>dpkg-reconfigure console-setup<\/code>. I recommend TerminusBold at the setting just under the largest available size.<\/p><\/li>\n<\/ul>\n\n<h3>RetroPie config changes I found essential:<\/h3>\n\n<ul>\n<li><p>disable \"quick system select\" via the select menu so ← → don't move you away from the game select page.<\/p><\/li>\n<li><p>turn off that incredibly annoying \"flipper\" menu sound via the select menu. Sound OFF here just means sound in the emulation station UI itself, not in games. Note that holding the stick up or down for a while will move very rapidly between letters, which exacerbates the flipper sound problem.<\/p><\/li>\n<li><p>disable \"launch menu\" for games <a href=\"https://github.com/retropie/retropie-setup/wiki/runcommand#configuring-runcommand\" rel=\"nofollow\">in the retropie run command config page<\/a> which can accidentally get activated by eager button mashers.<\/p><\/li>\n<li><p>turn off overscan override via <code>disable_overscan=1<\/code> in the <code>config.txt<\/code> file -- this let the Pi naturally scale perfectly edge-to-edge on my modern HDMI LCD<\/p><\/li>\n<li><p>Remove unusued emulators. Zork and ScummVM are bundled out of the box .. really? <em>really?<\/em> press <kbd>f4<\/kbd> and use <code>mc<\/code> to visit the <code>retropie/roms<\/code> folder, then delete any files in these folders. They'll stop showing up.<\/p><\/li>\n<\/ul>\n\n<h3>Controls<\/h3>\n\n<p>It's worthwhile to understand the default shortcuts in the shared retroarch / <code>libretro<\/code> emulation layer. Starting with these basic buttons (an exhaustive list of system controllers and mappings is at the bottom of <a href=\"https://github.com/retropie/retropie-setup/wiki/retroarch-configuration\" rel=\"nofollow\">this page<\/a>)<\/p>\n\n<p><img src=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/0/a/0ac0f63a60a7e759d878900e406d3dbc1827c982.png\" width=\"530\" height=\"255\"><\/p>\n\n<p>You can use these common controller shortcuts in any emulator based on <code>libretro<\/code> which is almost all of them!<\/p>\n\n<p><kbd>select<\/kbd>+<kbd>start<\/kbd> — exit<br><kbd>select<\/kbd>+<kbd>x<\/kbd> — retroarch GUI menu<br><kbd>select<\/kbd>+<kbd>b<\/kbd> — reset game<\/p>\n\n<p><kbd>select<\/kbd>+<kbd>r shoulder<\/kbd> — save state<br><kbd>select<\/kbd>+<kbd>l shoulder<\/kbd> — load state<br><kbd>select<\/kbd>+<kbd>→<\/kbd> — state slot inc<br><kbd>select<\/kbd>+<kbd>←<\/kbd> — state slot dec<\/p>\n\n<p>Additionally in emulation station, it isn't obvious, but:<\/p>\n\n<ul>\n<li>Jump directly to any game list index letter (a,b,c etc) via the select menu.<\/li>\n<li>Hold up or down a while to begin scrolling the game list extremely fast<\/li>\n<li>Use <kbd>r shoulder<\/kbd> and <kbd>l shoulder<\/kbd> to skip up and down a page in the game list<\/li>\n<\/ul>\n\n<h3>RetroArch / Libretro keyboard shortcuts<\/h3>\n\n<p>Any emulator that <a href=\"http://www.libretro.com/index.php/getting-started-with-retroarch/\" rel=\"nofollow\">uses libretro<\/a> will also work with the following RetroArch keyboard shortcuts, if you have a keyboard attached:<\/p>\n\n<p><kbd>f8<\/kbd> take screenshot<br><kbd>o<\/kbd> movie record toggle<br><kbd>p<\/kbd> pause<br><kbd>h<\/kbd> reset game<br><kbd>m<\/kbd> next shader<br><kbd>n<\/kbd> prev shader<br><kbd>e<\/kbd> slow motion (hold down)<\/p>","post_number":35,"post_type":1,"updated_at":"2016-08-08T09:26:35.411Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":12,"incoming_link_count":3,"reads":15,"score":33.6,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":6,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"https://github.com/retropie/retropie-setup/wiki/runcommand#configuring-runcommand","internal":false,"reflection":false,"title":"Runcommand · RetroPie/RetroPie-Setup Wiki · GitHub","clicks":4},{"url":"http://www.libretro.com/index.php/getting-started-with-retroarch/","internal":false,"reflection":false,"title":"Getting Started with RetroArch | Libretro","clicks":0},{"url":"https://github.com/retropie/retropie-setup/wiki/retroarch-configuration","internal":false,"reflection":false,"title":"RetroArch Configuration · RetroPie/RetroPie-Setup Wiki · GitHub","clicks":0}],"read":true,"user_title":null,"actions_summary":[{"id":2,"count":1}],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100589,"name":"EddieJ","username":"EddieJ","avatar_template":"/letter_avatar_proxy/v2/letter/e/d26b3c/{size}.png","created_at":"2016-07-28T23:17:49.257Z","cooked":"<p><img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/heart_eyes.png?v=3\" title=\":heart_eyes:\" class=\"emoji\" alt=\":heart_eyes:\"> It's beautiful. I got my pitendo today <div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/ef8943bf0c3f5ca60f097cc2ce0bf8ade9977d7f\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/e/f/ef8943bf0c3f5ca60f097cc2ce0bf8ade9977d7f.jpg\" class=\"lightbox\" title=\"pitendo.jpg\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/e/f/ef8943bf0c3f5ca60f097cc2ce0bf8ade9977d7f_1_657x500.jpg\" width=\"657\" height=\"500\"><div class=\"meta\">\n<span class=\"filename\">pitendo.jpg<\/span><span class=\"informations\">3928x2988 1.74 MB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>","post_number":36,"post_type":1,"updated_at":"2016-07-28T23:17:49.257Z","reply_count":0,"reply_to_post_number":15,"quote_count":0,"avg_time":14,"incoming_link_count":9,"reads":15,"score":108.7,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"EddieJ","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"read":true,"user_title":null,"reply_to_user":{"username":"Pugwash","avatar_template":"/user_avatar/discourse.codinghorror.com/pugwash/{size}/74265_1.png"},"actions_summary":[{"id":2,"count":2}],"moderator":false,"admin":false,"staff":false,"user_id":38482,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100607,"name":"Andreas","username":"AndreasC","avatar_template":"/user_avatar/discourse.codinghorror.com/andreasc/{size}/74291_1.png","created_at":"2016-07-29T14:27:32.520Z","cooked":"<p>great post although i didn't go through all of it. In comments you can find valuable tips, i have build my own a few months ago: <a href=\"https://www.reddit.com/r/RetroPie/comments/4ko627/my_first_bartop_arcade_working_good_many_software/\" rel=\"nofollow\">https://www.reddit.com/r/RetroPie/comments/4ko627/my_first_bartop_arcade_working_good_many_software/<\/a><\/p>\n\n<p>but with your tips will be even better.<\/p>","post_number":37,"post_type":1,"updated_at":"2016-07-29T14:27:32.520Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":14,"incoming_link_count":8,"reads":12,"score":88.1,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Andreas","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"https://www.reddit.com/r/RetroPie/comments/4ko627/my_first_bartop_arcade_working_good_many_software/","internal":false,"reflection":false,"title":"My first bartop arcade, working good! many software issues to solve but it's great :) : RetroPie","clicks":22}],"read":true,"user_title":null,"actions_summary":[{"id":2,"count":1}],"moderator":false,"admin":false,"staff":false,"user_id":38509,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100609,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-07-31T08:55:45.654Z","cooked":"<p>A short note on ROMs, I found this post to be exceptionally helpful:<\/p>\n\n<p><a href=\"http://dsync.blogspot.com/2015/05/sourcing-and-downloading-best-possible.html\" class=\"onebox\" target=\"_blank\" rel=\"nofollow\">http://dsync.blogspot.com/2015/05/sourcing-and-downloading-best-possible.html<\/a><\/p>\n\n<p>for MAME, pay very close attention to versions of romsets, as each Pi-compatible emulator expects a certain specific version of the MAME romsets. <\/p>\n\n<p><a href=\"https://github.com/retropie/retropie-setup/wiki/MAME\" class=\"onebox\" target=\"_blank\" rel=\"nofollow\">https://github.com/retropie/retropie-setup/wiki/MAME<\/a><\/p>\n\n<p>The Atari 2600 is oddly left out of these sets, but <a href=\"http://www.atarimania.com/rom_collection_archive_atari_2600_roms.html\" rel=\"nofollow\">can be found here<\/a>.<\/p>\n\n<p><img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/space_invader.png?v=3\" title=\":space_invader:\" class=\"emoji\" alt=\":space_invader:\"><\/p>","post_number":38,"post_type":1,"updated_at":"2016-07-31T08:56:00.815Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":6,"incoming_link_count":2,"reads":12,"score":27.7,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://dsync.blogspot.com/2015/05/sourcing-and-downloading-best-possible.html","internal":false,"reflection":false,"title":"Sourcing and Downloading the Best Possible ROM Dumps (My Sharing + Workflow) | D.S の Space","clicks":13},{"url":"https://github.com/retropie/retropie-setup/wiki/MAME","internal":false,"reflection":false,"title":"MAME · RetroPie/RetroPie-Setup Wiki · GitHub","clicks":5},{"url":"http://www.atarimania.com/rom_collection_archive_atari_2600_roms.html","internal":false,"reflection":false,"title":"Atari 2600 VCS ROM Collection","clicks":2}],"read":true,"user_title":null,"actions_summary":[{"id":2,"count":1}],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100624,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-08-03T10:12:07.634Z","cooked":"<p>ROM management can be a problem, since the complete romsets are super large for popular systems. In an ideal world I'd have \"top 100\" popular ROMs for each system and ignore the hundreds (thousands?) of mediocre or bad games released that, let's face it, nobody in their right mind wants to play in anno domini 2016. Wheel of Fortune on NES, anyone??<\/p>\n\n<p><img src=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/7/b/7b437a0b9401e2a13461cd99da22a6b382bf4a85.png\" width=\"256\" height=\"240\"><\/p>\n\n<h3>No-Intro ROMsets<\/h3>\n\n<p>Assuming you are working with the <strong>no-intro<\/strong> romsets which have a standardized naming scheme:<\/p>\n\n<ul>\n<li>delete all non-US ROMs (sorry, other countries! <img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/flag_us.png?v=3\" title=\":flag_us:\" class=\"emoji\" alt=\":flag_us:\"> <img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/hash.png?v=3\" title=\":hash:\" class=\"emoji\" alt=\":hash:\"><img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/one.png?v=3\" title=\":one:\" class=\"emoji\" alt=\":one:\"> )<\/li>\n<li>delete all prototypes / betas / alphas<\/li>\n<li>delete all earlier revisions, when multiple revisions of a ROM are stored in the set<\/li>\n<\/ul>\n\n<p>Some of this is captured here:<\/p>\n\n<pre><code>del \"*(Japan)*\"\ndel \"*(Europe)*\"\ndel \"*(Korea)*\"\ndel \"*(China)*\"\ndel \"*(Brazil)*\"\ndel \"*(Australia)*\"\ndel \"*(Italy)*\"\ndel \"*(Sweden)*\"\ndel \"*(Germany)*\"\ndel \"*(Canada)*\"\ndel \"*(Asia)*\"\ndel \"*(Japan, Europe)*\"\ndel \"*(Japan, Korea)*\"\ndel \"*(Beta)*\"\ndel \"*(Beta 1)*\"\ndel \"*(Alpha)*\"\ndel \"*(Demo)*\"\ndel \"*(Proto)*\"\ndel \"*(Sample)*\"\ndel \"*(Beta 2)*\"\ndel \"*(Alt 1)*\"\ndel \"*(Program)*\"\ndel \"*(Compilation)*\"\ndel \"*(GEOS)*\"\ndel \"*(Addon)*\"<\/code><\/pre>\n\n<p>(also, the x-in-1 carts, diagnostic carts, promotional carts, arcade collections that are emulated elsewhere, etc)<\/p>\n\n<h3>MAME ROMsets<\/h3>\n\n<p>For <strong>MAME<\/strong>, specifically, there are so many ROMs (5,000+) that a different strategy is needed. I found some good tips <a href=\"https://www.reddit.com/r/MAME/comments/31wgl2/filter_out_unwanted_rom_genresclones/\" rel=\"nofollow\">here<\/a>.<\/p>\n\n<blockquote><p><img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/bell.png?v=3\" title=\":bell:\" class=\"emoji\" alt=\":bell:\">  <strong>Before you begin, make sure you are working with a split ROM set<\/strong>, that is, each game's zip file contains all the ROMs necessary for that game to work. If you have a merged set, then deleting any individual game file is risky as games can potentially depend on each other for shared ROMs.<\/p><\/blockquote>\n\n<ul>\n<li>remove all Neo-Geo games (since that has a dedicated emulator in RetroPie, anyway)<\/li>\n<li>remove all clones<\/li>\n<li>remove all bootlegs<\/li>\n<li>remove all playchoice (nes) / megaplay (genesis)<\/li>\n<li>remove all gambling games<\/li>\n<\/ul>\n\n<p>(some other ideas: remove gambling / casino / mahjong, lightgun, etc)<\/p>\n\n<p>I recommend dumping <strong>complete info on all games<\/strong> from <code>mame.exe<\/code> like so:<\/p>\n\n<pre><code>mame -listxml &gt;listxml.txt<\/code><\/pre>\n\n<p>Then you can use some simple regular expressions on this <code>listinfo.txt<\/code> file to grab the matches. List all of match 1 to get the names, add <code>.zip<\/code> at the end of each line, and you're good <img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/sunny.png?v=3\" title=\":sunny:\" class=\"emoji\" alt=\":sunny:\"> <\/p>\n\n<p>All clone MAME games (2824) <\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^&gt;]+?cloneof<\/code><\/pre>\n\n<p>All Neo-Geo MAME games (150)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^&gt;]+?romof=\"neogeo\"<\/code><\/pre>\n\n<p>All PlayChoice and MegaPlay games (61)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^&gt;]+?romof=\"(playch10|megaplay)\"<\/code><\/pre>\n\n<blockquote><p><img src=\"//discourse-cdn.codinghorror.com/images/emoji/win10/warning.png?v=3\" title=\":warning:\" class=\"emoji\" alt=\":warning:\"> for the matches at this point on to work, first do a global <code>listinfo.txt<\/code> regex replace of <code>&lt;/game&gt;<\/code> with <code>}<\/code> so you have a reliable, unique \"end of game\" character to work with. Yeah, I had to cheat. Sorry!<\/p><\/blockquote>\n\n<p>All bootleg games (328)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^}]*?&lt;manufacturer&gt;bootleg<\/code><\/pre>\n\n<p>All gambling games (214)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^}]*?(mahjong|poker|casino)<\/code><\/pre>\n\n<p>All lightgun games (117)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^}]*?control=\"lightgun\"<\/code><\/pre>\n\n<p>All prototype/beta games (94)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^}]*?(prototype|beta)<\/code><\/pre>\n\n<p>All games with disk images (86)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^}]*?&lt;disk<\/code><\/pre>\n\n<p>All quiz and trivia games (112)<\/p>\n\n<pre><code>&lt;game name=\"([^\"]+)\"[^}]*?(quiz|trivia)<\/code><\/pre>\n\n<p>Other stuff you may want to remove by keyword: beatmania, vs. NES. Removing hard drive games mostly covers this, but it's also <em>probably<\/em> advisable to delete any ROM over 40mb in size as they are likely to be early 1996-1999 3D games that are hard to emulate.<\/p>\n\n<p>(Mature / adult is hard to screen for using metadata alone. I found <a href=\"https://groups.google.com/d/msg/alt.games.mame/oG1fRUmikXI/MohQP1WTRj8J\" rel=\"nofollow\">one list<\/a> here.)<\/p>\n\n<h3>Neo-Geo ROMsets<\/h3>\n\n<p>The MAME style 8.3 DOS naming makes this tough. I wish there was a a way to get all Neo-Geo ROMs with proper long filenames. Here are some tips:<\/p>\n\n<ul>\n<li><p>sort by filesize, remove all the tiny files under 1MB in size; these are clearly minor modifications of existing ROMsets or prototypes.<\/p><\/li>\n<li><p>look for files ending in <code>*b.zip<\/code> or <code>*bl.zip<\/code> and clean these up as bootleg versions of other ROMs.<\/p><\/li>\n<li><p>sort by filename and look at near-identical 8.3 filenames. Compare to filesize; if the name is the same and the filesize is smaller, it's probably a modification or hack and can be removed.<\/p><\/li>\n<\/ul>\n\n<h3>Scraping game info<\/h3>\n\n<p>Once you have your romsets the way you want, follow the excellent instructions for <a href=\"https://github.com/retropie/retropie-setup/wiki/scraper\" rel=\"nofollow\">scraping metadata<\/a>: pictures, descriptions, etc. This will require an internet connection, but your RetroPie works fine with DHCP so just plug in an ethernet cable and have at it.<\/p>","post_number":39,"post_type":1,"updated_at":"2016-08-08T09:03:45.773Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":9,"incoming_link_count":17,"reads":13,"score":88.05,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":10,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"https://groups.google.com/d/msg/alt.games.mame/oG1fRUmikXI/MohQP1WTRj8J","internal":false,"reflection":false,"title":"Google Groups","clicks":1},{"url":"https://www.reddit.com/r/MAME/comments/31wgl2/filter_out_unwanted_rom_genresclones/","internal":false,"reflection":false,"title":"Filter out unwanted rom genres/clones? : MAME","clicks":0},{"url":"https://github.com/retropie/retropie-setup/wiki/scraper","internal":false,"reflection":false,"title":"Scraper · RetroPie/RetroPie-Setup Wiki · GitHub","clicks":0}],"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100633,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-08-06T07:32:13.715Z","cooked":"<h3>Spinner / Paddle / Wheel support<\/h3>\n\n<p>It's pretty easy to get a spinner going on any arcade device!<\/p>\n\n<p><img src=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/0/d/0d4ff1f9702f7691cd8da62de7bb1e2bcd90abbd.jpg\" width=\"600\" height=\"450\"><\/p>\n\n<ul>\n<li><p>grab a <a href=\"http://groovygamegear.com/webstore/index.php?main_page=product_info&amp;products_id=268\" rel=\"nofollow\">TurboTwist 2 spinner<\/a> which fits directly in any standard 1 1/8\" button hole. <em>Very<\/em> easy installation.<\/p><\/li>\n<li><p>it presents as a mouse that only moves along one axis, which is conceptually simple and well supported.<\/p><\/li>\n<li><p>it is another USB connection coming out of your existing USB controller, which isn't a big deal. You could use an internal hub inside the controller to combine the two, if you want to get fancy.<\/p><\/li>\n<\/ul>\n\n<p>With that in mind, <a href=\"https://github.com/retropie/retropie-setup/wiki/Spinners-and-Trackballs\" rel=\"nofollow\">here's the only way<\/a> I could get spinner working in RetroPie:<\/p>\n\n<ul>\n<li><p>use AdvanceMame. Doesn't seem to work in the other MAME variants.<\/p><\/li>\n<li>\n<p>edit <code>/opt/retropie/configs/mame-advancemame/advmame-1.4.rc<\/code> to specify where mouse input is coming from<\/p>\n<pre><code>device_mouse raw\ndevice_raw_mousedev[0] /dev/input/mouse0\ndevice_raw_mousedev[1] /dev/input/mouse1\ndevice_raw_mousedev[2] /dev/input/mouse2\ndevice_raw_mousedev[3] /dev/input/mouse3<\/code><\/pre>\n<\/li>\n<li>\n<p>add default control mappings for dial (assumes motion is on X axis)<\/p>\n<pre><code>input_map[p1_dialx] mouse[0,x] mouse[1,x] mouse[2,x] mouse[3,x]<\/code><\/pre>\n<\/li>\n<li>\n<p>turn up the <a href=\"https://wiki.archlinux.org/index.php/Mouse_polling_rate\" rel=\"nofollow\">USB pollling rate<\/a> for better precision. Edit <code>/boot/cmdline.txt<\/code> and append this to the end, with a space in front:<\/p>\n<pre><code>usbhid.mousepoll=2<\/code><\/pre>\n<\/li>\n<\/ul>\n\n<p>While in game, you will almost certainly need to press <kbd>esc<\/kbd> to bring up the MAME menu and edit the analog settings to turn down the sensitivity a lot. I got really good results in Tempest and Arkanoid this way!<\/p>\n\n<h3>Trackball Support<\/h3>\n\n<p>TBD, very similar except you are using a two axis mouse<\/p>","post_number":40,"post_type":1,"updated_at":"2016-08-06T07:32:39.483Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":12,"incoming_link_count":3,"reads":12,"score":18.0,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://groovygamegear.com/webstore/index.php?main_page=product_info&products_id=268","internal":false,"reflection":false,"title":"TurboTwist 2 Arcade Spinner Control [TRBOTWST201] : GroovyGameGear.com, Always the best in Arcade, Jukebox, Kiosk, Gaming and Industrial controls","clicks":4},{"url":"https://wiki.archlinux.org/index.php/Mouse_polling_rate","internal":false,"reflection":false,"title":"Mouse polling rate - ArchWiki","clicks":0},{"url":"https://github.com/retropie/retropie-setup/wiki/Spinners-and-Trackballs","internal":false,"reflection":false,"title":"Spinners and Trackballs · RetroPie/RetroPie-Setup Wiki · GitHub","clicks":0}],"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100643,"name":"Jeff Atwood","username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","created_at":"2016-08-08T09:51:42.558Z","cooked":"<p>Older games are very low resolution relative to the 1920x1080 flat panel LCD you are likely using.<\/p>\n\n<p>That's not as bad as it sounds, because on an arcade machine or home gaming system, you'd be historically using a CRT which tends to naturally fuzz out those low resolution details:<\/p>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/ff1d1f6b94b04c1394f5a5bbf29744f78697b230\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/f/f/ff1d1f6b94b04c1394f5a5bbf29744f78697b230.jpg\" class=\"lightbox\" title=\"finalfight_hi.jpg\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/f/f/ff1d1f6b94b04c1394f5a5bbf29744f78697b230_1_690x477.jpg\" width=\"690\" height=\"477\"><div class=\"meta\">\n<span class=\"filename\">finalfight_hi.jpg<\/span><span class=\"informations\">2180x1508 1.11 MB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>\n\n<p>And leads directly to this joke: <\/p>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/df9dbb37568568b76483889f093befa8e9cb5f6a\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/d/f/df9dbb37568568b76483889f093befa8e9cb5f6a.png\" class=\"lightbox\" title=\"indie-retro-2d.png\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/d/f/df9dbb37568568b76483889f093befa8e9cb5f6a_1_690x414.png\" width=\"690\" height=\"414\"><div class=\"meta\">\n<span class=\"filename\">indie-retro-2d.png<\/span><span class=\"informations\">824x495 244 KB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>\n\n<p>I recommend using the <a href=\"http://www.scale2x.it/algorithm\" rel=\"nofollow\">scale2x<\/a> or <a href=\"https://en.wikipedia.org/wiki/Hqx\" rel=\"nofollow\">hqx<\/a> type scalers, which are available in all retro engines, to infer additional detail from the tiny number of pixels in play on older games.<\/p>\n\n<p><img src=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/b/b/bb77548103dacd5b7c1417b1bfe244c92915ab4b.png\" width=\"521\" height=\"205\"><\/p>\n\n<p>It's true that older games were played on monitors that had one of these effects:<\/p>\n\n<h3>Visible phosphor masks (1988+)<\/h3>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/121a7db059ebc461b47629ba9efb3b2c32fa42ee\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/1/2/121a7db059ebc461b47629ba9efb3b2c32fa42ee.jpg\" class=\"lightbox\" title=\"metal-slug-tv-closeup.jpg\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/1/2/121a7db059ebc461b47629ba9efb3b2c32fa42ee_1_666x500.jpg\" width=\"666\" height=\"500\"><div class=\"meta\">\n<span class=\"filename\">metal-slug-tv-closeup.jpg<\/span><span class=\"informations\">1408x1056 915 KB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>\n\n<h3>Visible scanlines (1977 - 1988)<\/h3>\n\n<p><div class=\"lightbox-wrapper\"><a data-download-href=\"//discourse-cdn.codinghorror.com/uploads/default/2b28f21e1a9d3b1ffc4256fa4daf94374ef94175\" href=\"//discourse-cdn.codinghorror.com/uploads/default/original/3X/2/b/2b28f21e1a9d3b1ffc4256fa4daf94374ef94175.jpg\" class=\"lightbox\" title=\"blob.jpg\"><img src=\"//discourse-cdn.codinghorror.com/uploads/default/optimized/3X/2/b/2b28f21e1a9d3b1ffc4256fa4daf94374ef94175_1_493x500.jpg\" width=\"493\" height=\"500\"><div class=\"meta\">\n<span class=\"filename\">blob.jpg<\/span><span class=\"informations\">568x575 156 KB<\/span><span class=\"expand\"><\/span>\n<\/div><\/a><\/div><\/p>\n\n<p>I recommend enabling those as well, as appropriate for the age of the system or game. (Do note that scanlines should be <em>vertical<\/em> in arcade games where the monitor was rotated vertically, and horizontal when the monitor was in standard wide or portrait orientation.)<\/p>","post_number":42,"post_type":1,"updated_at":"2016-08-08T09:56:08.330Z","reply_count":0,"reply_to_post_number":null,"quote_count":0,"avg_time":27,"incoming_link_count":1,"reads":11,"score":8.55,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Jeff Atwood","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"link_counts":[{"url":"http://www.scale2x.it/algorithm","internal":false,"reflection":false,"title":"Scale2x","clicks":1},{"url":"https://en.wikipedia.org/wiki/Hqx","internal":false,"reflection":false,"title":"hqx - Wikipedia, the free encyclopedia","clicks":1}],"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":true,"staff":true,"user_id":1,"hidden":false,"hidden_reason_id":null,"trust_level":2,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100660,"name":"","username":"remo","avatar_template":"/user_avatar/discourse.codinghorror.com/remo/{size}/74320_1.png","created_at":"2016-08-13T12:48:14.647Z","cooked":"<p>I'm intrigued by that Hitbox controller, never seen something like that before. It must be the ultimate controller for VIM users.<\/p>\n\n<p>If I  want to build my own what kind  of PCB-board should I use? I read that early versions of the Hitbox blocked both sides when back and  forward are pressed simultaneously giving it an unfair advantage against cross-ups. Newer versions seem to result in neutral when forward and back are pressed at the same time.<\/p>","post_number":43,"post_type":1,"updated_at":"2016-08-13T12:48:14.647Z","reply_count":1,"reply_to_post_number":34,"quote_count":0,"avg_time":22,"incoming_link_count":5,"reads":11,"score":78.3,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"read":true,"user_title":null,"reply_to_user":{"username":"Rageous","avatar_template":"/user_avatar/discourse.codinghorror.com/rageous/{size}/74286_1.png"},"actions_summary":[{"id":2,"count":1}],"moderator":false,"admin":false,"staff":false,"user_id":38535,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false},{"id":100662,"name":"Ryan Smith","username":"PrintsCharming","avatar_template":"/user_avatar/discourse.codinghorror.com/printscharming/{size}/74321_1.png","created_at":"2016-08-14T04:59:38.324Z","cooked":"<p>How is the stability of the RetroPie ecosystem as a whole? I guess my real question is the system seems to be running nicely at the moment and I'm typically an \"update regularly kind of guy\" and I see there are a TON of updates that have been released to both the raspbian os and retropie, and I'm kind of scared to do it.<\/p>","post_number":44,"post_type":1,"updated_at":"2016-08-14T04:59:38.324Z","reply_count":1,"reply_to_post_number":null,"quote_count":0,"avg_time":17,"incoming_link_count":7,"reads":9,"score":42.65,"yours":false,"topic_id":4462,"topic_slug":"the-raspberry-pi-has-revolutionized-emulation","display_username":"Ryan Smith","primary_group_name":null,"primary_group_flair_url":null,"primary_group_flair_bg_color":null,"primary_group_flair_color":null,"version":1,"can_edit":false,"can_delete":false,"can_recover":false,"can_wiki":false,"read":true,"user_title":null,"actions_summary":[],"moderator":false,"admin":false,"staff":false,"user_id":38536,"hidden":false,"hidden_reason_id":null,"trust_level":0,"deleted_at":null,"user_deleted":false,"edit_reason":null,"can_view_edit_history":true,"wiki":false}],"stream":[100517,100519,100522,100524,100525,100527,100528,100530,100532,100533,100535,100540,100541,100543,100544,100546,100550,100551,100552,100553,100555,100556,100558,100559,100560,100565,100568,100570,100572,100573,100577,100579,100582,100584,100589,100607,100609,100624,100633,100643,100660,100662,100668,100674,100679,100680,100704,100707,100880,100894,100897]},"timeline_lookup":[[1,89],[3,88],[26,87],[31,86],[34,85],[36,84],[37,82],[38,79],[39,76],[40,74],[41,69],[42,68],[43,67],[45,66],[47,60],[49,24],[50,21],[51,20]],"id":4462,"title":"The Raspberry Pi Has Revolutionized Emulation","fancy_title":"The Raspberry Pi Has Revolutionized Emulation","posts_count":51,"created_at":"2016-07-24T22:16:37.879Z","views":3674,"reply_count":22,"participant_count":25,"like_count":22,"last_posted_at":"2016-10-01T17:12:56.284Z","visible":true,"closed":false,"archived":false,"has_summary":true,"archetype":"regular","slug":"the-raspberry-pi-has-revolutionized-emulation","category_id":5,"word_count":8037,"deleted_at":null,"user_id":1,"draft":null,"draft_key":"topic_4462","draft_sequence":null,"unpinned":null,"pinned_globally":false,"pinned":false,"pinned_at":null,"pinned_until":null,"details":{"auto_close_at":null,"auto_close_hours":null,"auto_close_based_on_last_post":false,"created_by":{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"},"last_poster":{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"},"participants":[{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png","post_count":20},{"id":38483,"username":"Jay_Koerner","avatar_template":"/letter_avatar_proxy/v2/letter/j/a6a055/{size}.png","post_count":3},{"id":38492,"username":"Rageous","avatar_template":"/user_avatar/discourse.codinghorror.com/rageous/{size}/74286_1.png","post_count":2},{"id":38536,"username":"PrintsCharming","avatar_template":"/user_avatar/discourse.codinghorror.com/printscharming/{size}/74321_1.png","post_count":2},{"id":35656,"username":"Glaurung","avatar_template":"/letter_avatar_proxy/v2/letter/g/3ab097/{size}.png","post_count":2},{"id":38493,"username":"MrBlastotron","avatar_template":"/letter_avatar_proxy/v2/letter/m/71c47a/{size}.png","post_count":2},{"id":38482,"username":"EddieJ","avatar_template":"/letter_avatar_proxy/v2/letter/e/d26b3c/{size}.png","post_count":2},{"id":36966,"username":"sunk818","avatar_template":"/user_avatar/discourse.codinghorror.com/sunk818/{size}/73103_1.png","post_count":1},{"id":38488,"username":"ButlerPCnet","avatar_template":"/user_avatar/discourse.codinghorror.com/butlerpcnet/{size}/74264_1.png","post_count":1},{"id":38489,"username":"Pugwash","avatar_template":"/user_avatar/discourse.codinghorror.com/pugwash/{size}/74265_1.png","post_count":1},{"id":38484,"username":"nan","avatar_template":"/letter_avatar_proxy/v2/letter/n/cc9497/{size}.png","post_count":1},{"id":38500,"username":"Insanity","avatar_template":"/letter_avatar_proxy/v2/letter/i/3e96dc/{size}.png","post_count":1},{"id":38624,"username":"Matt_Hardwick","avatar_template":"/user_avatar/discourse.codinghorror.com/matt_hardwick/{size}/74381_1.png","post_count":1},{"id":38490,"username":"SimpleCove","avatar_template":"/letter_avatar_proxy/v2/letter/s/74df32/{size}.png","post_count":1},{"id":38497,"username":"tobico","avatar_template":"/user_avatar/discourse.codinghorror.com/tobico/{size}/74276_1.png","post_count":1},{"id":38501,"username":"Adam_Sommer","avatar_template":"/user_avatar/discourse.codinghorror.com/adam_sommer/{size}/74278_1.png","post_count":1},{"id":38504,"username":"Tamas_Csabina","avatar_template":"/letter_avatar_proxy/v2/letter/t/aeb1de/{size}.png","post_count":1},{"id":38629,"username":"Fede","avatar_template":"/user_avatar/discourse.codinghorror.com/fede/{size}/74384_1.png","post_count":1},{"id":38535,"username":"remo","avatar_template":"/user_avatar/discourse.codinghorror.com/remo/{size}/74320_1.png","post_count":1},{"id":38495,"username":"Eldon_Cleary","avatar_template":"/letter_avatar_proxy/v2/letter/e/dbc845/{size}.png","post_count":1},{"id":38540,"username":"Paul_Sanwald","avatar_template":"/user_avatar/discourse.codinghorror.com/paul_sanwald/{size}/74325_1.png","post_count":1},{"id":38481,"username":"dblack","avatar_template":"/user_avatar/discourse.codinghorror.com/dblack/{size}/74259_1.png","post_count":1},{"id":38494,"username":"Rkt88edmo","avatar_template":"/letter_avatar_proxy/v2/letter/r/87869e/{size}.png","post_count":1},{"id":38509,"username":"AndreasC","avatar_template":"/user_avatar/discourse.codinghorror.com/andreasc/{size}/74291_1.png","post_count":1}],"suggested_topics":[{"id":12,"title":"The Road to VR","fancy_title":"The Road to VR","slug":"the-road-to-vr","posts_count":18,"reply_count":0,"highest_post_number":19,"image_url":null,"created_at":"2014-02-16T00:00:00.000Z","last_posted_at":"2014-03-26T21:17:19.758Z","bumped":true,"bumped_at":"2014-03-26T21:17:19.758Z","unseen":false,"pinned":false,"unpinned":null,"visible":true,"closed":false,"archived":false,"bookmarked":null,"liked":null,"archetype":"regular","like_count":4,"views":1113,"category_id":5,"posters":[{"extras":null,"description":"Original Poster","user":{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":66,"username":"Bob_Watts","avatar_template":"/letter_avatar_proxy/v2/letter/b/a183cd/{size}.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":59,"username":"Stalepie","avatar_template":"/letter_avatar_proxy/v2/letter/s/ea666f/{size}.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":70,"username":"Kirkjerk","avatar_template":"/letter_avatar_proxy/v2/letter/k/8dc957/{size}.png"}},{"extras":"latest","description":"Most Recent Poster","user":{"id":35768,"username":"pol84_","avatar_template":"/letter_avatar_proxy/v2/letter/p/a88e4f/{size}.png"}}]},{"id":4226,"title":"They Have To Be Monsters","fancy_title":"They Have To Be Monsters","slug":"they-have-to-be-monsters","posts_count":70,"reply_count":26,"highest_post_number":76,"image_url":null,"created_at":"2016-04-29T21:55:35.234Z","last_posted_at":"2016-10-20T12:14:37.980Z","bumped":true,"bumped_at":"2016-10-20T12:14:37.980Z","unseen":false,"pinned":false,"unpinned":null,"visible":true,"closed":false,"archived":false,"bookmarked":null,"liked":null,"archetype":"regular","like_count":63,"views":3499,"category_id":5,"posters":[{"extras":null,"description":"Original Poster","user":{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":35894,"username":"tomz","avatar_template":"/letter_avatar_proxy/v2/letter/t/e9a140/{size}.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":38298,"username":"William_Lane","avatar_template":"/letter_avatar_proxy/v2/letter/w/f14d63/{size}.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":38277,"username":"Levi_Dettwyler","avatar_template":"/user_avatar/discourse.codinghorror.com/levi_dettwyler/{size}/74136_1.png"}},{"extras":"latest","description":"Most Recent Poster","user":{"id":38656,"username":"jmachado","avatar_template":"/letter_avatar_proxy/v2/letter/j/71e660/{size}.png"}}]},{"id":4036,"title":"We Hire the Best, Just Like Everyone Else","fancy_title":"We Hire the Best, Just Like Everyone Else","slug":"we-hire-the-best-just-like-everyone-else","posts_count":57,"reply_count":25,"highest_post_number":59,"image_url":null,"created_at":"2016-03-04T12:18:10.036Z","last_posted_at":"2016-09-19T21:17:29.696Z","bumped":true,"bumped_at":"2016-09-19T21:17:29.696Z","unseen":false,"pinned":false,"unpinned":null,"visible":true,"closed":false,"archived":false,"bookmarked":null,"liked":null,"archetype":"regular","like_count":30,"views":6126,"category_id":5,"posters":[{"extras":null,"description":"Original Poster","user":{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":38119,"username":"NWGuy","avatar_template":"/letter_avatar_proxy/v2/letter/n/9de0a6/{size}.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":38145,"username":"henrikb","avatar_template":"/letter_avatar_proxy/v2/letter/h/65b543/{size}.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":38114,"username":"Ore","avatar_template":"/letter_avatar_proxy/v2/letter/o/e0b2c6/{size}.png"}},{"extras":"latest","description":"Most Recent Poster","user":{"id":38613,"username":"Dyson_Luu","avatar_template":"/user_avatar/discourse.codinghorror.com/dyson_luu/{size}/74371_1.png"}}]},{"id":3602,"title":"Our Brave New World of 4K Displays","fancy_title":"Our Brave New World of 4K Displays","slug":"our-brave-new-world-of-4k-displays","posts_count":74,"reply_count":40,"highest_post_number":79,"image_url":null,"created_at":"2015-08-18T09:40:09.132Z","last_posted_at":"2016-08-22T09:59:42.127Z","bumped":true,"bumped_at":"2016-08-22T09:59:42.127Z","unseen":false,"pinned":false,"unpinned":null,"visible":true,"closed":false,"archived":false,"bookmarked":null,"liked":null,"archetype":"regular","like_count":12,"views":6445,"category_id":5,"posters":[{"extras":null,"description":"Original Poster","user":{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":37695,"username":"alrayyes","avatar_template":"/user_avatar/discourse.codinghorror.com/alrayyes/{size}/73604_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":37692,"username":"hmblcodr","avatar_template":"/letter_avatar_proxy/v2/letter/h/d2c977/{size}.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":36875,"username":"BrandonLive","avatar_template":"/user_avatar/discourse.codinghorror.com/brandonlive/{size}/73053_1.png"}},{"extras":"latest","description":"Most Recent Poster","user":{"id":38553,"username":"camilus","avatar_template":"/user_avatar/discourse.codinghorror.com/camilus/{size}/74339_1.png"}}]},{"id":1390,"title":"The Trap You Set For Yourself","fancy_title":"The Trap You Set For Yourself","slug":"the-trap-you-set-for-yourself","posts_count":12,"reply_count":3,"highest_post_number":15,"image_url":null,"created_at":"2014-03-19T21:01:16.002Z","last_posted_at":"2016-02-25T06:23:54.271Z","bumped":true,"bumped_at":"2016-02-25T06:23:54.271Z","unseen":false,"pinned":false,"unpinned":null,"visible":true,"closed":false,"archived":false,"bookmarked":null,"liked":null,"archetype":"regular","like_count":9,"views":1909,"category_id":5,"posters":[{"extras":null,"description":"Original Poster","user":{"id":1,"username":"codinghorror","avatar_template":"/user_avatar/discourse.codinghorror.com/codinghorror/{size}/36371_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":35844,"username":"anuragsn7","avatar_template":"/user_avatar/discourse.codinghorror.com/anuragsn7/{size}/36478_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":35946,"username":"qdoan","avatar_template":"/user_avatar/discourse.codinghorror.com/qdoan/{size}/36449_1.png"}},{"extras":null,"description":"Frequent Poster","user":{"id":36100,"username":"walthouser","avatar_template":"/user_avatar/discourse.codinghorror.com/walthouser/{size}/73451_1.png"}},{"extras":"latest","description":"Most Recent Poster","user":{"id":37428,"username":"mbchoe","avatar_template":"/letter_avatar_proxy/v2/letter/m/d78d45/{size}.png"}}]}],"links":[{"url":"http://www.sbeddoes.com/blog/2016/3/7/yia8uhjlb9hoau76a38jc21z3blp1e","title":"Raspberry Pi 3 Temperature and CPU Throttling — Steve Beddoes","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":65,"user_id":1,"domain":"www.sbeddoes.com"},{"url":"https://blog.codinghorror.com/rediscovering-arcade-nostalgia/","title":"Rediscovering Arcade Nostalgia","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":60,"user_id":1,"domain":"blog.codinghorror.com"},{"url":"https://www.amazon.com/dp/B014QO0DR0?tag=codihorr-20","title":"Amazon.com: aLLreLi 1080P HDMI to HDMI + 3.5mm Audio Cable (RCA L/R) Stereo Audio Extractor | Converter | HDMI Splitter Adapter (HDMI Input, HDMI + Digital / Analog Audio Output): Computers & Accessories","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":46,"user_id":1,"domain":"www.amazon.com"},{"url":"https://blog.codinghorror.com/the-raspberry-pi-has-revolutionized-emulation/","title":"The Raspberry Pi Has Revolutionized Emulation","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":44,"user_id":1,"domain":"blog.codinghorror.com"},{"url":"http://i.imgur.com/7Url0C3.jpg","title":"7Url0C3.jpg","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":43,"user_id":38492,"domain":"i.imgur.com"},{"url":"http://i.imgur.com/SmVuFik.jpg","title":"SmVuFik.jpg","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":27,"user_id":38492,"domain":"i.imgur.com"},{"url":"http://www.paradisearcadeshop.com/502-levers-il-industrias-lorenzo","title":"iL (Industrias Lorenzo) - Paradise Arcade Shop","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":23,"user_id":38492,"domain":"www.paradisearcadeshop.com"},{"url":"http://pi-tendo.com","title":"Pitendo","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":23,"user_id":38482,"domain":"pi-tendo.com"},{"url":"https://www.reddit.com/r/RetroPie/comments/4ko627/my_first_bartop_arcade_working_good_many_software/","title":"My first bartop arcade, working good! many software issues to solve but it's great :) : RetroPie","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":22,"user_id":38509,"domain":"www.reddit.com"},{"url":"http://www.ebay.com/itm/291826294816","title":"Bartop Arcade DIY Flat Pack Tabletop Cabinet Kit MDF Wood with T Molding Slot | eBay","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":21,"user_id":38495,"domain":"www.ebay.com"},{"url":"http://imgur.com/a/Ud3E1","title":"Lego Pi-NES Breakdown - Album on Imgur","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":21,"user_id":38489,"domain":"imgur.com"},{"url":"http://www.ebay.com/itm/291820465597","title":"Assembled MDF DIY Mobile Controller Bartop Arcade Wood Kit with T Molding Slot | eBay","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":20,"user_id":38495,"domain":"www.ebay.com"},{"url":"http://www.lexaloffle.com/pico-8.php","title":"PICO-8: FANTASY CONSOLE","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":20,"user_id":38501,"domain":"www.lexaloffle.com"},{"url":"https://web.archive.org/web/20060217065654/http://www.codinghorror.com/mamecocktail/","title":"MAME Cocktail Cabinet","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":17,"user_id":1,"domain":"web.archive.org"},{"url":"http://slagcoin.com/joystick.html","title":"slagcoin Joystick Controller page","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":16,"user_id":38492,"domain":"slagcoin.com"},{"url":"http://cdn.shopify.com/s/files/1/0748/3745/products/jlf-tprg-8ayt-sk---group.jpg?v=1455517222","title":null,"fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":16,"user_id":38492,"domain":"cdn.shopify.com"},{"url":"https://web.archive.org/web/20070302174546/http://blogs.vertigosoftware.com/jatwood/archive/2005/11/18/1654.aspx","title":"Jeff Atwood : Verticade -- Vertigo's full size MAME arcade cabinet","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":16,"user_id":1,"domain":"web.archive.org"},{"url":"http://elinux.org/RPiconfig","title":"RPiconfig - eLinux.org","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":14,"user_id":1,"domain":"elinux.org"},{"url":"http://www.paradisearcadeshop.com/299-buttons-sanwa","title":"Sanwa - Paradise Arcade Shop","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":14,"user_id":38492,"domain":"www.paradisearcadeshop.com"},{"url":"http://slagcoin.com/joystick/layout/shift36_s.png","title":"shift36_s.png","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":14,"user_id":38492,"domain":"slagcoin.com"},{"url":"http://www.dragonfly-amusement.com/arcade-uk.shtml","title":"Dragonfly Amusement - Arcade","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":14,"user_id":38504,"domain":"www.dragonfly-amusement.com"},{"url":"http://www.retrousb.com/","title":"Welcome! - retroUSB","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":14,"user_id":1,"domain":"www.retrousb.com"},{"url":"http://www.recroommasters.com/Arcade_Cabinet_s/4.htm","title":"Arcade Games Machine | Game Room Arcade Games, Arcade Machines & Arcade Cabinet | Game Room Entertainment from RecRoomMasters","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":14,"user_id":1,"domain":"www.recroommasters.com"},{"url":"http://dsync.blogspot.com/2015/05/sourcing-and-downloading-best-possible.html","title":"Sourcing and Downloading the Best Possible ROM Dumps (My Sharing + Workflow) | D.S の Space","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":13,"user_id":1,"domain":"dsync.blogspot.com"},{"url":"http://slagcoin.com/joystick/restrictors/octagon_gate.png","title":"octagon_gate.png","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":12,"user_id":38492,"domain":"slagcoin.com"},{"url":"http://i.imgur.com/jl6BPJt.jpg","title":"jl6BPJt.jpg","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":12,"user_id":38492,"domain":"i.imgur.com"},{"url":"http://www.etokki.com/Joysticks/Myoungshin-Fanta-stick-Green","title":"Myoungshin Fanta stick Green","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":12,"user_id":38492,"domain":"www.etokki.com"},{"url":"http://www.hitboxarcade.com/","title":"Hit Box Arcade","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":11,"user_id":38492,"domain":"www.hitboxarcade.com"},{"url":"http://captainsauctionwarehouse.com/","title":"Captain's Auction Warehouse","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":9,"user_id":38492,"domain":"captainsauctionwarehouse.com"},{"url":"http://slagcoin.com/joystick/restrictors/square_gate2.png","title":"square_gate2.png","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":9,"user_id":38492,"domain":"slagcoin.com"},{"url":"http://www.paradisearcadeshop.com/5_il-industrias-lorenzo-sa","title":"iL (Industrias Lorenzo) - Paradise Arcade Shop","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":9,"user_id":38492,"domain":"www.paradisearcadeshop.com"},{"url":"http://arcadeshock.com/collections/brook/products/brook-universal-fighting-board-ps3-ps4-xbox-360-xbox-one-pc","title":"Brook Universal Fighting Board (PS3 | PS4 | Xbox 360 | Xbox One | PC) – Arcade Shock","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":8,"user_id":38492,"domain":"arcadeshock.com"},{"url":"http://www.kraylixarcade.com/","title":"Kray's Kustom Arcade","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":8,"user_id":38492,"domain":"www.kraylixarcade.com"},{"url":"https://gameroomsolutions.com/shop/bartop-arcade-kit/","title":"Bartop Arcade Kit - Game Room Solutions","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":7,"user_id":1,"domain":"gameroomsolutions.com"},{"url":"http://slagcoin.com/joystick/restrictors/circle_gate.png","title":"circle_gate.png","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":6,"user_id":38492,"domain":"slagcoin.com"},{"url":"https://github.com/retropie/retropie-setup/wiki/MAME","title":"MAME · RetroPie/RetroPie-Setup Wiki · GitHub","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":5,"user_id":1,"domain":"github.com"},{"url":"http://sudomod.com","title":"sudomod","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":5,"user_id":38488,"domain":"sudomod.com"},{"url":"http://techreport.com/review/23291/those-27-inch-ips-displays-from-korea-are-for-real/3","title":"Those 27-inch IPS displays from Korea are for real - The Tech Report - Page 3","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":5,"user_id":1,"domain":"techreport.com"},{"url":"http://slagcoin.com/joystick/layout/sega2_s.png","title":"sega2_s.png","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":5,"user_id":38492,"domain":"slagcoin.com"},{"url":"http://www.recroommasters.com/Default.asp","title":"recroommasters.com","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":5,"user_id":38492,"domain":"www.recroommasters.com"},{"url":"https://github.com/retropie/retropie-setup/wiki/runcommand#configuring-runcommand","title":"Runcommand · RetroPie/RetroPie-Setup Wiki · GitHub","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":4,"user_id":1,"domain":"github.com"},{"url":"http://slagcoin.com/joystick/layout/matrix36_s.png","title":"matrix36_s.png","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":4,"user_id":38492,"domain":"slagcoin.com"},{"url":"http://groovygamegear.com/webstore/index.php?main_page=product_info&products_id=268","title":"TurboTwist 2 Arcade Spinner Control [TRBOTWST201] : GroovyGameGear.com, Always the best in Arcade, Jukebox, Kiosk, Gaming and Industrial controls","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":4,"user_id":1,"domain":"groovygamegear.com"},{"url":"https://www.facebook.com/jasenscustoms/","title":"Jasen's Custom Creations | Facebook","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":4,"user_id":38492,"domain":"www.facebook.com"},{"url":"https://www.amazon.com/dp/B014QP2H1E?tag=codihorr-20","title":null,"fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":4,"user_id":1,"domain":"www.amazon.com"},{"url":"http://www.paradisearcadeshop.com/obs-mx-button-system/1626-obs-mx-drop-in-kit.html","title":"Reliability and Sensitivity in one small package","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":3,"user_id":38492,"domain":"www.paradisearcadeshop.com"},{"url":"https://www.amazon.com/dp/B002B9XB0E?tag=codihorr-20","title":"Amazon.com: Buffalo Classic USB Gamepad for PC: Computers & Accessories","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":3,"user_id":38489,"domain":"www.amazon.com"},{"url":"https://github.com/retropie/retropie-setup/wiki/Overclocking","title":"Overclocking · RetroPie/RetroPie-Setup Wiki · GitHub","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":3,"user_id":1,"domain":"github.com"},{"url":"http://slagcoin.com/joystick/restrictors/plus_gate.png","title":"plus_gate.png","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":3,"user_id":38492,"domain":"slagcoin.com"},{"url":"http://awesomepi.com/how-to-overclock-your-raspberry-pi-2-to-11-ghz/","title":"How to Overclock Your Raspberry Pi 2 to 1,1 GHz – AwesomePi","fancy_title":null,"internal":false,"attachment":false,"reflection":false,"clicks":3,"user_id":1,"domain":"awesomepi.com"}],"notification_level":1,"can_flag_topic":false},"highest_post_number":53,"deleted_by":null,"actions_summary":[{"id":4,"count":0,"hidden":false,"can_act":false},{"id":7,"count":0,"hidden":false,"can_act":false},{"id":8,"count":0,"hidden":false,"can_act":false}],"expandable_first_post":true,"chunk_size":20,"bookmarked":null});
+      })();
+      </script>
+
+    
+
+    <script>
+  Ember.RSVP.configure('onerror', function(e) {
+    // Ignore TransitionAborted exceptions that bubble up
+    if (e && e.message === "TransitionAborted") { return; }
+
+    window.onerror(e && e.message, null,null,null,e);
+  });
+
+
+</script>
+
+<script>
+
+  (function() {
+    var ps = require('preload-store').default;
+
+    Discourse.CDN = '//discourse-cdn.codinghorror.com';
+    Discourse.BaseUrl = 'discourse.codinghorror.com'.replace(/:[\d]*$/,"");
+    Discourse.BaseUri = '';
+    Discourse.Environment = 'production';
+    Discourse.SiteSettings = ps.get('siteSettings');
+    Discourse.LetterAvatarVersion = '5_c0cde1efe2d04fc597c97e478949252e';
+    I18n.defaultLocale = 'en';
+    Discourse.start();
+    Discourse.set('assetVersion','1c0ed6f5556fe430e1effaadb002e457');
+    Discourse.Session.currentProp("disableCustomCSS", false);
+    Discourse.HighlightJSPath = "/highlight-js/discourse.codinghorror.com/133b1767dbeecf92cad6dfc38d42cde22195db05.js";
+  })();
+</script>
+
+<script src="//discourse-cdn.codinghorror.com/assets/browser-update-f57286e74ddbc53aa899689b01ef467078911e4138050c561939955849af35dd.js"></script>
+
+
+    
+
+      
+  </body>
+</html>

@@ -1,0 +1,993 @@
+
+
+
+
+
+<!DOCTYPE html><html lang="en"
+      class="chekov"><head><script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script><meta charset="utf-8"><meta name="xsrf_token" content="MV75Igk5xM6WsrlRUTUSy5MJjBXo20LxGGaK8UGaIK86MTQ3NzEwMjI0NjE3MTgxMA" /><link rel="canonical" href="https://developers.google.com/search/docs/guides/intro-structured-data"><link rel="alternate"
+    
+        href="https://developers.google.com/search/docs/guides/intro-structured-data"
+    
+        hreflang="en"><link rel="shortcut icon" href="https://developers.google.com/_static/a64d8c2aaf/images/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="publisher" href="https://plus.google.com/+GoogleDevelopers/"><link rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"><link rel="stylesheet"
+      href="https://developers.google.com/_static/a64d8c2aaf/css/devsite-google-blue.css"><link rel="apple-touch-icon" href="https://developers.google.com/_static/a64d8c2aaf/images/touch-icon.png"><link rel="search"
+      type="application/opensearchdescription+xml"
+      title="Google Developers"
+      href="https://developers.google.com/s/opensearch.xml"><script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script><meta property="og:site_name" content="Google Developers"><meta property="og:type" content="website"><meta property="og:url" content="https://developers.google.com/search/docs/guides/intro-structured-data"><meta property="og:locale" content="en"><script>
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script><title>Introduction to Structured Data &nbsp;|&nbsp; Search
+      &nbsp;|&nbsp; Google Developers</title><meta property="og:title" content="Introduction to Structured Data &nbsp;|&nbsp; Search
+      &nbsp;|&nbsp; Google Developers"></head><body class="devsite-doc-page
+               
+               
+               "
+        id="top_of_page"><div class="devsite-wrapper"><header class="devsite-top-section nocontent"><div class="devsite-top-logo-row-wrapper-wrapper"><div class="devsite-top-logo-row-wrapper"><div class="devsite-top-logo-row devsite-full-site-width"><button type="button" class="devsite-expand-section-nav devsite-header-icon-button
+                                     button-flat material-icons gc-analytics-event"
+                data-category="Site-Wide Custom Events" data-label="Hamburger menu"></button><div class="devsite-product-name-wrapper"><a class="devsite-product-name-link gc-analytics-event"
+       href="https://developers.google.com/search/"
+       data-category="Site-Wide Custom Events"
+       data-label="Project logo (header)"><img src="https://developers.google.com/site-assets/logo-google-g.svg"
+           class="devsite-product-logo devsite-product-logo-white"
+           alt="Google Search"></a><span class="devsite-product-name"><ul class="devsite-breadcrumb-list"><li class="devsite-breadcrumb-item"><a href="https://developers.google.com/search/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Upper Header"
+       data-value="1">
+    
+    
+      
+        Google Search
+      
+    
+    
+    </a></li></ul></span></div><div class="devsite-header-upper-tabs"><nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper"><ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll"><li class="devsite-doc-set-nav-tab-container"><a href="https://developers.google.com/search/"
+         class="
+                devsite-doc-set-nav-tab gc-analytics-event"
+       
+         data-category="Site-Wide Custom Events"
+       
+         data-label="Tab: Home"
+       >
+        Home
+      </a></li><li class="devsite-doc-set-nav-tab-container"><a href="https://developers.google.com/search/docs/guides/"
+         class="devsite-doc-set-nav-active
+                devsite-doc-set-nav-tab gc-analytics-event"
+       
+         data-category="Site-Wide Custom Events"
+       
+         data-label="Tab: Docs"
+       >
+        Docs
+      </a></li><li class="devsite-doc-set-nav-tab-container"><a href="https://developers.google.com/search/tools/"
+         class="
+                devsite-doc-set-nav-tab gc-analytics-event"
+       
+         data-category="Site-Wide Custom Events"
+       
+         data-label="Tab: Tools"
+       >
+        Tools
+      </a></li><li class="devsite-doc-set-nav-tab-container"><a href="https://developers.google.com/search/pilot/open/"
+         class="
+                devsite-doc-set-nav-tab gc-analytics-event"
+       
+         data-category="Site-Wide Custom Events"
+       
+         data-label="Tab: Partner Access"
+       >
+        Partner Access
+      </a></li></ul></nav></div><form class="devsite-search-form" action="https://developers.google.com/s/results/"
+              method="GET" id="top-search"><div id="searchbox" class="devsite-searchbox"><input placeholder='Search'
+                   type="text"
+                   class="devsite-search-field devsite-search-query"
+                   name="q"
+                   value=""
+                   autocomplete="off"><div class="devsite-search-image material-icons"></div></div><input type="hidden"
+                 name="p"
+                 id="search_project"
+                 value="/search/"
+                 data-project-name="Search"
+                 data-project-path="/search/"
+                 data-query-match=""><input type="hidden" class="suggest-project" value="Search" /></form><a class="devsite-header-link gc-analytics-event"
+           href="https://developers.google.com/products/"
+           data-category="Site-Wide Custom Events"
+           data-label="Site header link"><div class="devsite-header-link-icon material-icons">
+            list
+          </div><div class="devsite-header-link-label">All Products</div></a><button type="button" class="devsite-search-button devsite-header-icon-button button-flat
+                                     material-icons"></button><a href="https://www.google.com/accounts/ServiceLogin?passive=true&continue=https%3A%2F%2Fdevelopers.google.com%2Fsearch%2Fdocs%2Fguides%2Fintro-structured-data&service=ahsid"
+   class="devsite-user-signin devsite-top-button button gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Sign in button">
+  
+  Sign in
+</a></div></div></div><div class="devsite-collapsible-section"><div class="devsite-header-background devsite-full-site-width"
+      ><div class="devsite-product-id-row devsite-full-site-width"><div class="devsite-product-description-row"><ul class="devsite-breadcrumb-list"><li class="devsite-breadcrumb-item">
+    
+    
+    
+      Documentation
+    
+    
+  </li></ul></div></div><div class="devsite-doc-set-nav-row devsite-full-site-width"><nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper"><ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll"><li class="devsite-doc-set-nav-tab-container"><a href="https://developers.google.com/search/docs/guides/"
+         class="devsite-doc-set-nav-active
+                devsite-doc-set-nav-tab gc-analytics-event"
+       
+         data-category="Site-Wide Custom Events"
+       
+         data-label="Tab: Guides"
+       >
+        Guides
+      </a></li><li class="devsite-doc-set-nav-tab-container"><a href="https://developers.google.com/search/docs/data-types/data-type-selector"
+         class="
+                devsite-doc-set-nav-tab gc-analytics-event"
+       
+         data-category="Site-Wide Custom Events"
+       
+         data-label="Tab: Data Types"
+       >
+        Data Types
+      </a></li><button type="button" id="devsite-feedback-project"
+          class="devsite-feedback-button devsite-top-button gc-analytics-event"
+          data-category="Site-Wide Custom Events" data-label="Send Feedback Button"
+          track-type="feedback" track-name="sendFeedbackLink" track-metadata-position="header">
+  
+  Send feedback
+  </button></ul></nav></div></div></div></header><script>
+  if (window.jQuery) {
+    $(document).ready(function() {
+      if (window.devsite && window.devsite.search) {
+        
+        window.devsite.search.init('en')
+      }
+    });
+  }
+</script><div id="gc-wrapper"itemscope itemtype="http://schema.org/Article"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Search&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-24532603-1&quot;}"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {}, &quot;gaid&quot;: &quot;UA-24532603-6&quot;}"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Search&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-49880327-1&quot;}"><script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "language": {"requested": "en", "served": "en"}, "projectName": "Search", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+
+      
+        <div class="devsite-site-mask"></div>
+        
+  
+
+<nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+  
+  <div class="devsite-nav-responsive-tabs-panel">
+    
+      
+        
+
+
+
+<nav class="devsite-nav-responsive-tabs devsite-nav">
+  <ul class="devsite-nav-list">
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+    
+      <a href="https://developers.google.com/search/?nav=true"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                "
+         data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home">
+        Home
+      </a>
+      
+    
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+    
+      <a href="https://developers.google.com/search/docs/guides/?nav=true"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                devsite-nav-active"
+         data-category="Site-Wide Custom Events" data-label="Responsive Tab: Docs">
+        Docs
+      </a>
+      
+        
+
+
+
+<nav class="devsite-nav-responsive-tabs devsite-nav">
+  <ul class="devsite-nav-list">
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+    
+      <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title
+                   devsite-nav-active gc-analytics-event"
+            data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides"
+            tabindex="0">
+        Guides
+      </span>
+    
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+    
+      <a href="https://developers.google.com/search/docs/data-types/data-type-selector?nav=true"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                "
+         data-category="Site-Wide Custom Events" data-label="Responsive Tab: Data Types">
+        Data Types
+      </a>
+      
+    
+    </li>
+  
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      <a href="https://developers.google.com/products/"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+         data-label="Responsive Tab: all_products">
+        All Products
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+
+      
+    
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+    
+      <a href="https://developers.google.com/search/tools/?nav=true"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                "
+         data-category="Site-Wide Custom Events" data-label="Responsive Tab: Tools">
+        Tools
+      </a>
+      
+    
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+    
+      <a href="https://developers.google.com/search/pilot/open/?nav=true"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                "
+         data-category="Site-Wide Custom Events" data-label="Responsive Tab: Partner Access">
+        Partner Access
+      </a>
+      
+    
+    </li>
+  
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      <a href="https://developers.google.com/products/"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+         data-label="Responsive Tab: all_products">
+        All Products
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+
+      
+    
+  </div>
+  
+  
+  <div class="devsite-nav-responsive-sidebar-panel">
+    
+    <div class="devsite-nav-responsive-back" tabindex="0"></div>
+    
+    <nav class="devsite-nav-responsive-sidebar">
+      <ul class="devsite-nav-list"><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="0" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Introduction</a></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Get to Know Search</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/search-features" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Search Features</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/search-gallery" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Search Gallery</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/developer-checklist" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Developer Checklist</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Prepare Your Content</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/quality-pages" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Create Quality Pages</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/associate-resources" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Associate Your Online Resources</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/use-AMP-HTML" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Use AMP HTML</a></li><li class="devsite-nav-item devsite-nav-external devsite-nav-has-status"><a href="https://developers.google.com/webmasters/mobile-sites/" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click"><span class="devsite-nav-text">Make Mobile-friendly Websites</span><span class="devsite-nav-icon-wrapper"><span class="devsite-nav-icon material-icons" title="External"></span></span></a></li><li class="devsite-nav-item devsite-nav-external devsite-nav-has-status"><a href="https://developers.google.com/voice-actions/" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click"><span class="devsite-nav-text">Add Voice Actions</span><span class="devsite-nav-icon-wrapper"><span class="devsite-nav-icon material-icons" title="External"></span></span></a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Index Your Content</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/intro-indexing" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Introduction to Indexing</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/create-URLs" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Create a List of URLs</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/submit-URLs" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Submit URLs to Google</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Help Google Present You</span><li class="devsite-nav-item devsite-nav-active"><a href="https://developers.google.com/search/docs/guides/intro-structured-data" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Introduction to Structured Data</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/enhance-site" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Enhance Your Site's Attributes</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/mark-up-content" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Mark Up Your Content Items</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/mark-up-listings" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Mark Up Your Lists</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Test and Analyze</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/prototype" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Prototype and Test</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/debug" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Debug and Analyze</a></li></li></ul>
+    </nav>
+  </div>
+  
+</nav>
+
+
+        <div class="devsite-main-content clearfix">
+
+        
+        
+
+        
+  
+  
+    
+    
+      
+  <nav class="devsite-section-nav devsite-nav nocontent">
+    <ul class="devsite-nav-list"><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="0" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Introduction</a></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Get to Know Search</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/search-features" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Search Features</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/search-gallery" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Search Gallery</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/developer-checklist" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Developer Checklist</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Prepare Your Content</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/quality-pages" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Create Quality Pages</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/associate-resources" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Associate Your Online Resources</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/use-AMP-HTML" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Use AMP HTML</a></li><li class="devsite-nav-item devsite-nav-external devsite-nav-has-status"><a href="https://developers.google.com/webmasters/mobile-sites/" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click"><span class="devsite-nav-text">Make Mobile-friendly Websites</span><span class="devsite-nav-icon-wrapper"><span class="devsite-nav-icon material-icons" title="External"></span></span></a></li><li class="devsite-nav-item devsite-nav-external devsite-nav-has-status"><a href="https://developers.google.com/voice-actions/" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click"><span class="devsite-nav-text">Add Voice Actions</span><span class="devsite-nav-icon-wrapper"><span class="devsite-nav-icon material-icons" title="External"></span></span></a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Index Your Content</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/intro-indexing" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Introduction to Indexing</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/create-URLs" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Create a List of URLs</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/submit-URLs" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Submit URLs to Google</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Help Google Present You</span><li class="devsite-nav-item devsite-nav-active"><a href="https://developers.google.com/search/docs/guides/intro-structured-data" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Introduction to Structured Data</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/enhance-site" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Enhance Your Site's Attributes</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/mark-up-content" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Mark Up Your Content Items</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/mark-up-listings" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Mark Up Your Lists</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" track-type="leftNav" track-name="expandNavSectionNoLink" track-metadata-position="0">Test and Analyze</span><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/prototype" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Prototype and Test</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/search/docs/guides/debug" class="devsite-nav-title gc-analytics-event" track-type="leftNav" track-name="titleLink" track-metadata-position="1" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Debug and Analyze</a></li></li></ul>
+  </nav>
+
+    
+
+    
+  <nav class="devsite-page-nav devsite-nav"></nav>
+
+
+      <article class="devsite-article">
+        <article class="devsite-article-inner">
+  
+          
+  
+
+
+
+  
+  <nav class="devsite-breadcrumb-nav devsite-nav">
+    
+
+
+<ul class="devsite-breadcrumb-list">
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <a href="https://developers.google.com/products/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="1">
+    
+    
+      Products
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.com/search/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="2">
+    
+    
+      Search
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.com/search/docs/guides/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="3">
+    
+    
+      Docs
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.com/search/docs/guides/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="4">
+    
+    
+      Guides
+    
+    
+    </a>
+    
+  </li>
+  
+</ul>
+
+  </nav>
+  
+  
+  <h1 itemprop="name" class="devsite-page-title">
+    Introduction to Structured Data
+  </h1>
+  
+  
+  <nav class="devsite-page-nav-embedded devsite-nav"></nav>
+  
+  <div class="devsite-article-body clearfix
+            "
+       itemprop="articleBody">
+    
+  
+
+    <p><em>Structured data</em> refers to kinds of data with a high level of organization,  such as
+    information in a relational database.  When information is highly structured and predictable,
+    search engines can more easily organize and display it in creative ways. <em>Structured data
+    markup</em> is a text-based organization of data that is included in a file and served from the
+    web. It typically uses the <a href="http://schema.org/">schema.org</a> vocabulary&mdash;an open community
+    effort to promote standard structured data in a variety of online applications.</p>
+
+    <p>Structured data markup is most easily represented in <a href="http://json-ld.org">JSON-LD</a>
+    format, which stands for JavaScript Object Notation for Linked Data. The following is a simple
+    JSON-LD structured data example you might use for contact information for your company:</p>
+
+<pre class="prettyprint">
+&lt;script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "http://www.your-company-site.com",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+1-401-555-1212",
+    "contactType": "customer service"
+  }]
+}
+&lt;/script>
+</pre>
+
+    <table class="columns">
+      <tr>
+        <td>Structured data markup describes <em>things</em> on the web, along with their
+    <em>properties</em>.  For example, if your site has recipes, you could use markup to describe
+    properties for each recipe, such as the summary, the URL to a photo for the dish, and its
+    overall rating from users.</td>
+        <td width="40%" style="padding:0 0 0 30px"><strong>Recipe Markup In Action</strong>
+          <p>
+            
+            <form method="post" action="https://search.google.com/structured-data/testing-tool">
+<input type="submit" value="See Markup" />
+<textarea name="code" style="display:none">&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;http://schema.org/&quot;,
+  &quot;@type&quot;: &quot;Recipe&quot;,
+  &quot;name&quot;: &quot;Perfect Apple Pie&quot;,
+  &quot;author&quot;: &quot;Gin Blanco&quot;,
+  &quot;image&quot;: &quot;http://images.edge-generalmills.com/56459281-6fe6-4d9d-984f-385c9488d824.jpg&quot;,
+  &quot;description&quot;: &quot;A classic apple pie takes a shortcut with easy Pillsbury® unroll-fill refrigerated pie crust.&quot;,
+  &quot;aggregateRating&quot;: {
+    &quot;@type&quot;: &quot;AggregateRating&quot;,
+    &quot;ratingValue&quot;: &quot;4.5&quot;,
+    &quot;reviewCount&quot;: &quot;276&quot;,
+    &quot;bestRating&quot;: &quot;5&quot;,
+    &quot;worstRating&quot;: &quot;1&quot;
+  },
+  &quot;prepTime&quot;: &quot;PT30M&quot;,
+  &quot;totalTime&quot;: &quot;PT3H&quot;,
+  &quot;recipeYield&quot;: &quot;8&quot;,
+  &quot;nutrition&quot;: {
+    &quot;@type&quot;: &quot;NutritionInformation&quot;,
+    &quot;servingSize&quot;: &quot;1 medium slice&quot;,
+    &quot;calories&quot;: &quot;230 calories&quot;,
+    &quot;fatContent&quot;: &quot;1 g&quot;,
+    &quot;carbohydrateContent&quot;: &quot;43 g&quot;,
+    &quot;cholesterolContent&quot;: &quot;0 mg&quot;,
+    &quot;fiberContent&quot;: &quot;1 g&quot;,
+    &quot;proteinContent&quot;: &quot;1 g&quot;,
+    &quot;saturatedFatContent&quot;: &quot;2 ½ g&quot;,
+    &quot;servingSize&quot;: &quot;1 Serving&quot;,
+    &quot;sodiumContent&quot;: &quot;200 mg&quot;,
+    &quot;sugarContent&quot;: &quot;27 g&quot;,
+    &quot;transFatContent&quot;: &quot;0 g&quot;
+  },
+  &quot;recipeIngredient&quot;: [
+    &quot;1 box Pillsbury™ refrigerated pie crusts, softened as directed on box&quot;,
+    &quot;6 cups thinly sliced, peeled apples (6 medium)&quot;,
+    &quot;3/4 cup sugar&quot;,
+    &quot;2 tablespoons all-purpose flour&quot;,
+    &quot;3/4 teaspoon ground cinnamon&quot;,
+    &quot;1/4 teaspoon salt&quot;,
+    &quot;1/8 teaspoon ground nutmeg&quot;,
+    &quot;1 tablespoon lemon juice&quot;
+  ],
+  &quot;recipeInstructions&quot;: [
+    &quot;1 Heat oven to 425°F. Place 1 pie crust in ungreased 9-inch glass pie plate. Press firmly against side and bottom.&quot;,
+    &quot;2 In large bowl, gently mix filling ingredients; spoon into crust-lined pie plate. Top with second crust. Wrap excess top crust under bottom crust edge, pressing edges together to seal; flute. Cut slits or shapes in several places in top crust.&quot;,
+    &quot;3 Bake 40 to 45 minutes or until apples are tender and crust is golden brown. Cover edge of crust with 2- to 3-inch wide strips of foil after first 15 to 20 minutes of baking to prevent excessive browning. Cool on cooling rack at least 2 hours before serving.&quot;
+   ]
+}
+&lt;/script&gt;
+</textarea>
+</form>
+</p></td>
+      </tr>
+    </table>
+
+    <p>When you provide structured data markup for your online content, you make that
+    content eligible to appear in two categories of Google Search features:
+    <ul>
+      <li><strong>Rich results</strong>&mdash;Structured data for things like recipes, articles, and videos can appear in
+    Rich Cards, as either a single element or a list of items. Other kinds of
+    structured data can enhance the appearance of your site in Search, such as
+    with <a href="https://developers.google.com/search/docs/data-types/breadcrumbs">Breadcrumbs</a>, or a
+    <a href="https://developers.google.com/search/docs/data-types/sitelinks-searchbox">Sitelinks Search Box</a>.</li>
+      <li><strong>Knowledge Graph cards</strong>&mdash;If you're the authority for certain content, Google
+        can treat the structured data on your site as factual and import it into the
+        <a href="http://www.google.com/intl/es419/insidesearch/features/search/knowledge.html">Knowledge Graph</a>,
+        where it can power prominent answers in Search and across Google properties. Knowledge Graph cards
+        appear for authoritative data about <a href="https://developers.google.com/search/docs/data-types/corporate-contacts">organizations</a>,
+        and <a href="https://developers.google.com/search/docs/data-types/events">events</a>.
+        <a href="https://developers.google.com/search/docs/data-types/reviews">Movie reviews</a>, and
+        <a href="https://developers.google.com/search/docs/data-types/tv-movies">movie/music play actions</a>, while based on
+        ranking, can also appear in Knowledge Graph cards once they are reconciled to Knowledge Graph entities.</li>
+    </ul>
+    </p>
+
+    <h2>Common use cases</h2>
+
+    <p>You can use some or all of our supported structured data types to make your content eligible
+    for a variety of Search features, as described in the <a
+    href="https://developers.google.com/search/docs/guides/search-features">Search Features &amp; Experiences</a>
+    guide.  In addition, you can review the <a href="https://developers.google.com/search/docs/data-types/data-type-selector/">Data
+    Type Selector</a> to understand which combination of markup is required for specific Search
+    features.</p>
+
+    <h2>Markup formats and placement</h2>
+
+    <p>You provide structured data markup in your HTML and AMP pages. The table below
+    lists the supported formats, placement recommendations, and corresponding
+    feature support. </p>
+
+    <aside class="note"><strong>JSON-LD is the recommended format.</strong> Google is in the process
+      of adding JSON-LD support for all markup-powered features. The table below lists the exceptions
+      to this. We recommend using JSON-LD where possible.
+    </aside>
+
+    <table classes="details">
+     <tr>
+        <th>Format</th>
+        <th>Description and Placement</th>
+        <th>Supported Data Types</th>
+     </tr>
+     <tr>
+        <td><a href="http://json-ld.org/">JSON-LD</a> (Recommended) </td>
+        <td>JavaScript notation separate from the body of the HTML itself. Markup is placed
+    inside a script tag in the head of the HTML page. The markup does not have to
+    be interleaved with the user-visible text, which makes nested data items easier
+    to express, such as the Country of a PostalAddress of a MusicVenue of an Event.
+     Also, Google can read JSON-LD data when it is dynamically injected into the
+    page's contents, such as by JavaScript code or embedded widgets in your content
+    management system.</td>
+        <td>All public data types except for Breadcrumbs.</td>
+     </tr>
+     <tr>
+        <td><a href="https://www.w3.org/TR/microdata/">Microdata</a></td>
+        <td>An open-community HTML specification used to nest structured data within HTML
+         content. Like RDFa, it uses HTML tag attributes to name the properties you want
+         to expose as structured data.</td>
+       <td>All data types</td>
+     </tr>
+     <tr>
+        <td><a href="https://rdfa.info/">RDFa</a></td>
+        <td>An HTML5 extension that supports linked data by introducing
+          <a href="https://www.w3.org/TR/rdfa-lite/#the-attributes">HTML tag attributes</a> that
+          correspond to the user-visible content you want to describe for search engines.</td>
+       <td>All data types</td>
+      </tr>
+    </table>
+
+
+    <h2>Testing and publishing your markup</h2>
+
+    <p>To verify that your markup is well-formed and can be processed by Google, paste
+    the HTML source of your marked-up page (or just the &lt;script&gt; block) into
+    the <a href="https://search.google.com/structured-data/testing-tool">Structured Data Testing Tool</a>.</p>
+
+    <p>When Google next crawls the page, its indexing algorithms will process the
+    your markup and make its content eligible to be used in Search results.
+    You can ask Google to crawl the page by following the instructions in
+    <a href="https://support.google.com/webmasters/answer/1352276?hl=en&ref_topic=4617736">Search Console Help</a>.
+    Note that this process can take up to a week.</p>
+
+    <h2>Structured data guidelines</h2>
+
+    <p>The following guidelines describe general policies on creating high-quality
+    structured data.</p>
+
+    <aside class="note"><strong>Additional type-specific guidelines</strong>:
+    Some data types have additional policies that can be found in the Data Type
+    reference for each type. Refer to the specific guidelines for
+    <a href="https://developers.google.com/search/docs/data-types/events#guidelines">Events</a>,
+    <a href="https://developers.google.com/search/docs/data-types/products#guidelines">Products</a>,
+    <a href="https://developers.google.com/search/docs/data-types/recipes#guidelines">Recipes</a>, and
+    <a href="https://developers.google.com/search/docs/data-types/reviews#guidelines">Reviews</a>.
+    </aside>
+
+    <h3>Technical guidelines</h3>
+
+    <ul>
+      <li>Publish markup on a page <strong>on your official website</strong>.</li>
+      <li><strong>Use the most specific applicable type and property names</strong> defined by schema.org
+    for your markup. The data may be embedded in your webpage using any of the
+    supported formats: JSON-LD, RDFa, or microdata.</li>
+      <li><strong>Mark up all relevant pages</strong>. In addition to marking up your canonical
+        pages (such as your desktop URLs), you should also mark up AMP HTML page equivalents.
+        This provides the best experience across devices.</li>
+      <li>Pages with markup<strong> must not be blocked to the Googlebot</strong>
+        by <code>robots.txt</code>.</li>
+    </ul>
+
+    <h3>Quality guidelines</h3>
+
+    <p>At Google, our first priority is to help our users find relevant, engaging
+    answers for their search queries. High-quality structured data must not create
+    a misleading or deceptive experience for search users. It should be an
+    up-to-date and accurate reflection of the topic and content already found on
+    the page, such as text, images, and videos. For example:</p>
+
+    <ul>
+      <li> A page about a dinner recipe may use recipe structured data to list the
+    ingredients and describe the cooking steps.
+      <li> Markup should not be used to hide content not visible to users in any form,
+    since it might create a misleading or deceptive search experience. For example,
+    if the JSON-LD markup describes a performer, the HTML body should describe that
+    same performer.
+    </ul>
+
+    <p>We perform algorithmic and manual quality checks to ensure that structured data
+    meets relevancy standards. In cases where we see structured data that does not
+    comply with these standards, we reserve the right to disable rich snippets for
+    a site in order to maintain a high-quality search experience for our users.
+    Read our <a href="https://support.google.com/webmasters/answer/35769?hl=en&ref_topic=6002025">webmaster
+    guidelines</a> for more details. </p>
+
+    <h3>Multiple entities on the same page</h3>
+
+    <p>When you have multiple entity types on a page, we recommend you mark up all
+    entities on that page to help Google algorithms better understand and index
+    your content. For example:
+
+    <ul>
+      <li> A recipe page might have text describing the recipe along with an accompanying
+    video. Each of these types should be marked separately with <a href="https://schema.org/Recipe">schema.org/Recipe</a>
+    and <a href="http://schema.org/VideoObject">schema.org/VideoObject</a> respectively.</li>
+      <li> A category page listing several different products (or recipes, videos, or any
+    other type). Each entity should be marked up using the relevant schema.org
+    type, such as <a href="https://schema.org/Product">schema.org/Product</a> for product category pages. Marking up just one category entity from all
+    listed on the page is against our guidelines.</li>
+      <li> A video play page might have related videos embedded in a separate section on
+        the page. In this case, mark up the main video as well as the related videos.</li>
+    </ul></p>
+
+    <h3>Image markup guidelines</h3>
+
+    <p>When marking up an image URL as a property of a type, make sure that the image
+    actually belongs to the instance of that type. For example, if you mark up
+    the <a href="http://schema.org/image">schema.org/image</a> property of
+    <a href="http://schema.org/NewsArticle">schema.org/NewsArticle</a>, the marked-up image
+    must directly belong to that news article.</p>
+
+    <p>All image URLs should be
+     <a href="https://developers.google.com/webmasters/control-crawl-index/">crawlable and indexable</a>. Otherwise, we will
+      not be able to display them on the search results page.</p>
+
+
+  </div>
+  
+
+  
+        
+<div class="devsite-content-footer nocontent">
+  
+  
+  
+    <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see our <a href="https://developers.google.com/site-policies">Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  
+
+  
+    
+    <p class="devsite-content-footer-date" itemprop="datePublished"
+       content="2016-06-22T20:38:53.528240">
+      
+      Last updated June 22, 2016.
+    </p>
+  
+
+</div>
+
+        </article>
+      </article>
+  
+
+        </div>
+      
+
+<footer class="devsite-footer-promos nocontent"><nav class="devsite-full-site-width"><ul class="devsite-footer-promos-list"><li class="devsite-footer-promo"><a href="http://insidesearch.blogspot.com/"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo"><img class="devsite-footer-promo-icon" src="//www.gstatic.com/images/icons/material/product/2x/blogger_64dp.png">
+          
+          
+            Blog 
+          
+        </a><div class="devsite-footer-promo-description">Find out the latest on Search</div></li><li class="devsite-footer-promo"><a href="//github.com/google/search-samples/"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo"><img class="devsite-footer-promo-icon" src="https://developers.google.com/site-assets/logo-github.svg">
+          
+          
+            Github 
+          
+        </a><div class="devsite-footer-promo-description">Fork our samples and try them yourself</div></li><li class="devsite-footer-promo"><a href="//www.youtube.com/playlist?list=PLOU2XLYxmsIKJztQt-R87yS7ORKu3QV1k"
+           class="devsite-footer-promo-title gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Content Page Footer Promo"><img class="devsite-footer-promo-icon" src="//www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png">
+          
+          
+            Videos 
+          
+        </a><div class="devsite-footer-promo-description">Watch videos and talks</div></li></ul></nav></footer><footer class="devsite-footer-linkboxes nocontent
+               "><nav class="devsite-full-site-width"><ul class="devsite-footer-linkboxes-list"><li class="devsite-footer-linkbox
+                 "><h3 class="devsite-footer-linkbox-heading">Learn</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="//search-codelabs.appspot.com/codelabs/app-indexing#1" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox">
+              
+                App Indexing Tutorial 
+              
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//search-codelabs.appspot.com/codelabs/voice-search#1" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox">
+              
+                Voice Search Tutorial 
+              
+            </a></li></ul></li><li class="devsite-footer-linkbox
+                 "><h3 class="devsite-footer-linkbox-heading">Connect</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="https://plus.google.com/+GoogleDevelopers" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox">
+              
+                Developer community on Google+ 
+              
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//twitter.com/googledevs" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox">
+              
+                Google Developers on Twitter 
+              
+            </a></li></ul></li><li class="devsite-footer-linkbox
+                 "><h3 class="devsite-footer-linkbox-heading">Partners</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/app-indexing/partners/case-studies" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox">
+              
+                Case Studies 
+              
+            </a></li></ul></li><li class="devsite-footer-linkbox
+                 devsite-footer-linkbox-sites"><a href="https://developers.google.com/"
+           class="gc-analytics-event devsite-footer-linkbox-logo-link"
+           data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link"><img class="devsite-footer-linkbox-logo"
+               src="https://developers.google.com/_static/a64d8c2aaf/images/redesign-14/logo-color-knockout.svg"></a><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="https://developer.android.com/index.html" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Android Link">
+              
+                Android
+              
+            </a></li><li class="devsite-footer-linkbox-item"><a href="https://developer.chrome.com/home" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Chrome Link">
+              
+                Chrome
+              
+            </a></li><li class="devsite-footer-linkbox-item"><a href="https://firebase.google.com/" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Firebase Link">
+              
+                Firebase
+              
+            </a></li><li class="devsite-footer-linkbox-item"><a href="https://cloud.google.com/" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Cloud Link">
+              
+                Google Cloud Platform
+              
+            </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/products/" class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Products Link">
+              
+                All Products
+              
+            </a></li></ul></li></ul></nav></footer><footer class="devsite-utility-footer"><nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width"><span class="devsite-utility-footer-links"><a href="https://developers.google.com/site-terms/">Terms</a>
+      &nbsp; | &nbsp;
+      
+      <a href="https://www.google.com/intl/en/privacy/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Privacy Link">Privacy</a></span><form class="devsite-utility-footer-language" action="/i18n/setlang/" method="post"><input type="hidden" name="xsrf_token" value="MV75Igk5xM6WsrlRUTUSy5MJjBXo20LxGGaK8UGaIK86MTQ3NzEwMjI0NjE3MTgxMA" /><input type="hidden" name="next" value="/search/docs/guides/intro-structured-data"><select class="devsite-utility-footer-language-select kd-select" name="language"><option value="ar"
+              >
+            العربيّة
+          </option><option value="bg"
+              >
+            български
+          </option><option value="ca"
+              >
+            català
+          </option><option value="zh-cn"
+              >
+            简体中文
+          </option><option value="zh-tw"
+              >
+            繁體中文
+          </option><option value="hr"
+              >
+            Hrvatski
+          </option><option value="cs"
+              >
+            česky
+          </option><option value="da"
+              >
+            dansk
+          </option><option value="nl"
+              >
+            Nederlands
+          </option><option value="en"
+               selected="selected" >
+            English
+          </option><option value="fa"
+              >
+            فارسی
+          </option><option value="fi"
+              >
+            suomi
+          </option><option value="fr"
+              >
+            français
+          </option><option value="de"
+              >
+            Deutsch
+          </option><option value="el"
+              >
+            Ελληνικά
+          </option><option value="he"
+              >
+            עברית
+          </option><option value="hi"
+              >
+            Hindi
+          </option><option value="hu"
+              >
+            Magyar
+          </option><option value="id"
+              >
+            Bahasa Indonesia
+          </option><option value="it"
+              >
+            italiano
+          </option><option value="ja"
+              >
+            日本語
+          </option><option value="ko"
+              >
+            한국어
+          </option><option value="lv"
+              >
+            latviešu
+          </option><option value="lt"
+              >
+            Lietuviškai
+          </option><option value="nb"
+              >
+            norsk (bokmål)
+          </option><option value="nn"
+              >
+            norsk (nynorsk)
+          </option><option value="pl"
+              >
+            polski
+          </option><option value="pt-br"
+              >
+            Português Brasileiro
+          </option><option value="pt"
+              >
+            Português
+          </option><option value="ro"
+              >
+            Română
+          </option><option value="ru"
+              >
+            Русский
+          </option><option value="sr"
+              >
+            српски
+          </option><option value="sk"
+              >
+            slovenský
+          </option><option value="sl"
+              >
+            Slovenščina
+          </option><option value="es"
+              >
+            español
+          </option><option value="es-419"
+              >
+            Español (América Latina)
+          </option><option value="sv"
+              >
+            svenska
+          </option><option value="th"
+              >
+            ภาษาไทย
+          </option><option value="tr"
+              >
+            Türkçe
+          </option><option value="uk"
+              >
+            Українська
+          </option><option value="vi"
+              >
+            Tiếng Việt
+          </option></select></form></nav></footer><div class="devsite-feedback-dialog devsite-dialog"><div class="devsite-dialog-contents"><h3>Send feedback about...</h3><div class="devsite-feedback-item"><a data-type="documentation" class="gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Docs Feedback Image"
+           track-type="feedback" track-name="feedbackDocIcon" track-metadata-position="header"><div class="devsite-feedback-item-icon-container"><div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs
+                        material-icons"></div></div></a><div class="devsite-feedback-item-name">
+          
+          This page
+        </div><div class="devsite-feedback-item-description"><a data-type="documentation" tabindex="0" class="gc-analytics-event"
+             data-category="Site-Wide Custom Events" data-label="Docs Feedback Text"
+             track-type="feedback" track-name="feedbackDocText" track-metadata-position="header">
+            
+            Documentation feedback
+          </a></div></div><div class="devsite-feedback-item"><a data-type="product" tabindex="0" class="gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Product Feedback Image"
+           track-type="feedback" track-name="feedbackProductIcon" track-metadata-position="header"
+         ><div class="devsite-feedback-item-icon-container"><img src="https://developers.google.com/site-assets/logo-google-g.svg"
+                 class="devsite-feedback-item-icon-white"
+                 alt="Search"></div></a><div class="devsite-feedback-item-name">
+        Search
+        </div><div class="devsite-feedback-item-description"><a data-type="product" tabindex="0" class="gc-analytics-event"
+             data-category="Site-Wide Custom Events" data-label="Product Feedback Text"
+             track-type="feedback" track-name="feedbackProductText" track-metadata-position="header"
+           >
+            
+            Product feedback
+          </a></div></div></div><div class="devsite-dialog-buttons"><button type="button" class="devsite-feedback-cancel button-white gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button"
+              track-type="feedback" track-name="cancelFeedbackButton"
+              track-metadata-position="header">
+        
+        Cancel
+      </button></div></div><script>
+  $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '713504',
+        'bucket': '',
+        'context': '',
+        'version': 'devsite-20161021-r00-rc01.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+  </script></div><script async defer src="//www.gstatic.com/feedback/api.js"></script><script src="https://developers.google.com/_static/a64d8c2aaf/js/jquery_ui-bundle.js"></script><script src="https://developers.google.com/_static2/a64d8c2aaf/jsi18n/"></script><script src="https://developers.google.com/_static/a64d8c2aaf/js/script_foot_closure.js"></script><script src="https://developers.google.com/_static/a64d8c2aaf/js/script_foot.js"></script><script>
+        (function($) {
+          
+          devsite.devsite.Init($, 'devsite', '[]',
+              {'ALLOWED_HOSTS': ['.android.com', '.appspot.com', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.devsitetest.how'], 'VERSION_HASH': 'a64d8c2aaf'}, '', 'en',
+              true, '',
+              true,
+              {"044f63022fa45182fb1e55a4cf633f49": false, "098dafe57affddc137df300142652cfd": false, "4c1e030265e73d132474df5ca11667f1": true, "51470233c56fc1fde50f00b73c52b216": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/search/',
+              'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+
+        var eventfn = function() {
+          if ('None') {
+            devsite.analytics.trackAnalyticsEvent(
+              'Request Latency',
+              'Profile',
+              'None',
+              308.049917221);
+          };
+        }
+        // This only works since this will get called before the load event fires.
+        window.addEventListener("load", eventfn, false);
+      </script><script>
+      $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+      </script><script async defer src="//survey.g.doubleclick.net/async_survey?site=paewx4mdhuzny4k5rewdgkq2cy"></script></div><span id="devsite-request-elapsed" data-request-elapsed="308.640003204"></span></body></html>

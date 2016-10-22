@@ -1,0 +1,21 @@
+{
+  "url": "https://techcrunch.com/2016/06/17/the-europas-awards-2016-honored-the-best-tech-startups-in-europe/",
+  "headers": {
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "link": "<http://wp.me/p1FaB8-5Cht>; rel=shortlink",
+    "server": "nginx",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": [
+      "Accept-Encoding",
+      "Cookie"
+    ],
+    "x-hacker": "If you're reading this, you should visit automattic.com/jobs and apply to join the fun, mention this header."
+  },
+  "originalUrl": "https://techcrunch.com/2016/06/17/the-europas-awards-2016-honored-the-best-tech-startups-in-europe/",
+  "status": 200,
+  "statusText": "OK"
+}

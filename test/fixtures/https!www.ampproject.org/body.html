@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta property="og:description" content="The Accelerated Mobile Pages (AMP) Project is an open source initiative that makes it easy for publishers to create mobile-friendly content once and have it load instantly everywhere. – Accelerated Mobile Pages Project">
+  <meta name="description" content="The Accelerated Mobile Pages (AMP) Project is an open source initiative that makes it easy for publishers to create mobile-friendly content once and have it load instantly everywhere. – Accelerated Mobile Pages Project">
+
+  <title>Accelerated Mobile Pages Project</title>
+  <link rel="shortcut icon" href="/static/img/amp_favicon.png?v=3">
+  <link rel="canonical" href="https://www.ampproject.org/">
+
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/img/icons/120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/img/icons/152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/static/img/icons/167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/icons/180.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+  <style amp-custom>
+.desktop-up,.desktop-only{display:none;visibility:hidden}@media only screen and (min-width: 957px){.desktop-up,.desktop-only{display:block;visibility:visible}}.tablet-up{display:none;visibility:hidden}@media only screen and (min-width: 769px){.tablet-up{display:block;visibility:visible}}.tablet-down{display:none;visibility:hidden}@media only screen and (max-width: 768px){.tablet-down{display:block;visibility:visible}}.mobile-down,.mobile-only{display:none;visibility:hidden}@media only screen and (max-width: 956px){.mobile-down,.mobile-only{display:block;visibility:visible}}@media only screen and (max-width: 956px){.mobile-show{display:block}}@media only screen and (max-width: 956px){.mobile-hide{display:none}}@media only screen and (max-width: 1024px){.tablet-show{display:block}}@media only screen and (max-width: 1024px){.tablet-hide{display:none}}body,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}html,body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;margin:0;overflow-x:hidden;padding:0}body{padding-top:80px}@media only screen and (max-width: 956px){body{padding-top:66px}}img{border:0;max-width:100%}strong,b{font-weight:600}h1,h2,h3,h4,h5{color:#0379C4;font-weight:300;margin-top:1.1em;margin-bottom:0.5em}h1:before,h2:before,h3:before,h4:before,h5:before{display:block;content:" ";margin-top:-90px;height:90px;visibility:hidden}h1{font-size:43px}.home h1,.who h1{margin-top:0}h2{font-size:36px}h3{font-size:26px}a{color:#0379C4;text-decoration:none}a:hover{text-decoration:underline}a.button{padding:1em;display:block;text-align:center}blockquote{color:#797c82;border-left:4px solid #f5f5f5;padding-left:15px;font-size:18px;letter-spacing:-1px;font-style:italic}blockquote>:last-child{margin-bottom:0}.rtl blockquote{border-left:0;border-right:4px solid #f5f5f5;padding-left:0;padding-right:15px}ul li,ol li{color:#424242;font-size:16px;font-weight:300;line-height:24px}@media only screen and (max-width: 956px){ul li,ol li{font-size:16px;line-height:28px}}p{color:#424242;font-size:16px;font-weight:300;line-height:24px}@media only screen and (max-width: 956px){p{font-size:16px;line-height:28px}}p a{font-weight:400}p.subtitle{font-size:28px;line-height:37px}p:last-child{margin-bottom:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}.rtl figure{direction:ltr}.container{box-sizing:border-box;margin:0 auto;max-width:1000px;padding:0 20px}.container.md{max-width:800px}.wrap{margin:0 auto}.centered{text-align:center}@media only screen and (max-width: 956px){.centered{text-align:left}}.align-right{text-align:right}@media only screen and (max-width: 956px){.margin-bottom-mobile:last-child,.margin-bottom-mobile{margin-bottom:40px}}.margin-bottom-sm:last-child,.margin-bottom-sm{margin-bottom:40px}.margin-bottom:last-child,.margin-bottom{margin-bottom:60px}@media only screen and (max-width: 956px){.margin-bottom:last-child.desktop,.margin-bottom.desktop{margin-bottom:inherit}}.hidden{display:none}.go-button{display:inline-block;background-color:#0379C4;padding:0.8em 1em;border:0;border-radius:4px;color:#fff;font-family:Roboto, verdana, arial, sans-serif;font-size:14px;font-weight:400;text-align:center;text-transform:uppercase;box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);-webkit-transition:box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);transition:box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)}.go-button:hover,.go-button:focus{background-color:#0373ba;box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.4)}.go-button:hover{text-decoration:none}.go-button--alt{background-color:#fff;color:#0379C4}.go-button--alt:hover,.go-button--alt:focus{background-color:#fafafa}@media only screen and (min-width: 1025px){.desaturate{-webkit-filter:grayscale(100%);filter:grayscale(100%);opacity:.7;-webkit-transition:all .4s ease-out;transition:all .4s ease-out}.desaturate:hover{-webkit-filter:grayscale(0%);filter:grayscale(0%);opacity:1}}amp-lightbox{background-color:rgba(51,51,51,0.9)}amp-lightbox .lightbox{position:relative;top:50%;padding:50px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}amp-lightbox .lightbox .close-button{cursor:pointer;position:absolute;right:25px;top:5%;width:20px;height:20px;background-image:url("/static/img/close.svg");background-repeat:no-repeat;background-position:center;background-size:contain}@media only screen and (max-width: 956px){amp-lightbox .lightbox{padding:30px}amp-lightbox .lightbox .close-button{right:5px;top:5px}}.watch-video{color:#fff;text-transform:uppercase;font-weight:100;cursor:pointer;padding:5px 5px 5px 40px;background-image:url("/static/img/video-play.svg");background-repeat:no-repeat;background-size:contain;background-position:center left}.center-content{text-align:center}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;display:inline-block;line-height:1;text-transform:none;letter-spacing:normal;word-wrap:normal;white-space:nowrap;direction:ltr;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;-webkit-font-feature-settings:'liga';-moz-font-feature-settings:'liga';font-feature-settings:'liga'}section{padding:100px 0 60px 0}@media only screen and (max-width: 956px){section{padding:50px 0 40px}}.blade h1{font-size:30px;font-weight:300}.blade--hero{padding:65px 0 20px}.blade--hero .container{position:relative}.blade--hero .six.columns{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.blade--get-started{padding:90px 0 120px;background:#f5f5f5}.blade--get-started amp-carousel{max-width:100%}.blade--contributors{background:#e9e9e9}.blade--contributors amp-carousel.single{max-width:100%}.blade--benefits{padding:0;box-shadow:none;background-color:#fff}.blade--blog{background-color:#0379C4;padding:70px 0}@media only screen and (max-width: 956px){.blade--blog{padding-top:40px;padding-bottom:40px}}@media only screen and (max-width: 956px){.blade{padding:60px 0}.blade--benefits{padding:0}}.header{box-shadow:2px 1px 1px rgba(0,0,0,0.15);font-size:14px;font-weight:300;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:#fff}@media only screen and (max-width: 956px){.header .container{padding-right:18px}}.header.fixed{-webkit-transform:translateY(0%);transform:translateY(0%);-webkit-transition:all .4s ease;transition:all .4s ease;left:0;position:fixed;top:0;width:100%;z-index:1000}.header .nav-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.header .left-nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;font-size:20px;margin-left:0;font-weight:300}@media only screen and (max-width: 956px){.header .left-nav{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;text-align:left;width:auto;font-size:15px}}.header .left-nav .header-title{color:#0379C4;padding:40px 40px 40px 60px;margin:0;width:auto;text-transform:none;white-space:nowrap;background-image:url("/static/img/logo-blue.svg");background-repeat:no-repeat;background-size:100%;background-position:center left}@media only screen and (max-width: 956px){.header .left-nav .header-title{width:auto;margin:0}}.header .alt{padding:00;text-align:right;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.header .alt.right{font-size:15px}.header .tab{position:relative;color:#424242;padding:6px;margin:0 4px;text-decoration:none;text-transform:uppercase;font-weight:400;-webkit-transition:.1s ease color;transition:.1s ease color}.header .tab:after{content:"";position:absolute;bottom:0;left:0;right:0;margin:auto;height:3px;background-color:#0379C4;-webkit-transition:.1s ease opacity;transition:.1s ease opacity;opacity:0}.header .tab:hover,.header .tab.active{color:#0379C4}.header .tab.active:after{opacity:1}.header .tab.hamburger{background-color:transparent;background-image:url("/static/img/hamburger.svg");background-repeat:no-repeat;background-size:30px 24px;background-position:center center;border:none;margin:0;padding:0;width:40px;height:40px;display:none;cursor:pointer;-ms-flex-item-align:center;align-self:center}@media only screen and (max-width: 956px){.header div.tab,.header .desktop{display:none}.header .tab.hamburger{display:inline-block}}.header div.tab{position:relative}.header div.tab>a{position:relative;top:25px;color:inherit;text-decoration:none}.header div.tab>a:after{display:inline-block;content:"";width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid currentColor;margin-left:5px;padding-bottom:2px}.header div.tab>ul{list-style:none;position:absolute;min-width:136px;top:54px;left:-8px;text-align:left;opacity:0;pointer-events:none;-webkit-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transition:0.2s ease-out;transition:0.2s ease-out;z-index:1;will-change:transform;background:#fff;box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)}.header div.tab>ul li{padding:6px 14px;box-sizing:border-box;font-weight:400;font-size:inherit}.header div.tab>ul li:hover{background:#f0f0f0}.header div.tab>ul li.external{padding-right:26px}.header div.tab>ul li.external a{background-size:12px 12px;background-repeat:no-repeat;background-position:right 2px;padding-right:16px}.header div.tab>ul li.external:hover a{background-image:url(/static/img/ic_open_in_new_black.svg)}.header div.tab:hover>ul{opacity:1;pointer-events:all;-webkit-transform:translate(0, 0);transform:translate(0, 0)}.rtl header .left-nav .header-title{padding:40px 60px 40px 40px;background-position:center right}@media only screen and (max-width: 956px){.rtl header .left-nav .header-title{width:auto}}.rtl header .alt.right{text-align:left}.main{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.main h1{margin-top:0}.main .content{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-grow:1;-webkit-transition:all 0.25s ease;transition:all 0.25s ease;-webkit-transform:translate(0, 0);transform:translate(0, 0);will-change:transform;word-break:break-word;min-width:0;padding-top:46px;padding-bottom:60px}.main .content h2{border-bottom:2px solid #f0f0f0;padding-bottom:12px}.main .content ul,.main .content ol{margin-left:40px}.main .content{overflow-wrap:break-word;word-wrap:break-word;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.main amp-img,.main amp-youtube,.main amp-iframe{margin:1em 0}.rtl .main .content ul,.rtl .main .content ol{margin-left:0;margin-right:40px}nav{border-right:2px solid #E6E6E6;padding:20px;margin-right:30px;margin-left:-20px;width:200px;-ms-flex-negative:0;flex-shrink:0;background:#0379C4;color:#fff}nav h2{font-size:20px;color:#fff;margin-top:0;margin-bottom:10px}nav a{color:#fff}nav ul li,nav ol li{margin-bottom:10px;list-style:none}nav ul li ul,nav ul li ol,nav ol li ul,nav ol li ol{padding-left:0;margin-left:20px;margin-bottom:1.2em}nav ul li ul li,nav ul li ol li,nav ol li ul li,nav ol li ol li{margin-bottom:6px;font-size:14px;list-style:square;color:#fff}nav ul li ul li.current,nav ul li ol li.current,nav ol li ul li.current,nav ol li ol li.current{color:rgba(255,255,255,0.6)}nav ul li ul li span,nav ul li ol li span,nav ol li ul li span,nav ol li ol li span{font-weight:500;color:rgba(255,255,255,0.6)}nav ul li ul li ul,nav ul li ul li ol,nav ul li ol li ul,nav ul li ol li ol,nav ol li ul li ul,nav ol li ul li ol,nav ol li ol li ul,nav ol li ol li ol{margin-bottom:0;margin-left:0;margin-top:5px;padding-left:20px;border-top:1px solid #418fc1;padding-top:3px;padding-bottom:0px}nav ul li ul li ol li,nav ul li ol li ol li,nav ol li ul li ol li,nav ol li ol li ol li{list-style:decimal}.rtl nav{border-right:0;border-left:2px solid #E6E6E6;margin-left:30px;margin-right:-20px}.rtl nav ul li ul,.rtl nav ul li ol,.rtl nav ol li ul,.rtl nav ol li ol{padding-left:0;padding-right:0;margin-right:20px;margin-left:0}.rtl nav ul li ul li ul,.rtl nav ul li ul li ol,.rtl nav ul li ol li ul,.rtl nav ul li ol li ol,.rtl nav ol li ul li ul,.rtl nav ol li ul li ol,.rtl nav ol li ol li ul,.rtl nav ol li ol li ol{margin-left:0;margin-right:0;padding-right:20px;padding-left:0}@media only screen and (max-width: 956px){.container nav{display:none}}nav a.external::after{display:inline-block;content:'';width:12px;height:12px;margin-left:4px;position:relative;background-image:url(/static/img/ic_open_in_new_white.svg);background-size:100%;top:1px}.column,.columns{width:100%;float:left;box-sizing:border-box}.column.contained img,.columns.contained img{max-width:100%}@media (min-width: 956px){.row.table>.columns{display:table-cell;float:none;vertical-align:middle}.row.table>.columns:nth-child(2){padding-left:4%}}.row:after,.u-cf{content:"";display:table;clear:both}@media (min-width: 956px){.column,.columns{margin-left:4%}.column:first-child,.columns:first-child{margin-left:0}.reversed .column,.reversed .columns{margin-left:0}.reversed .column:first-child,.reversed .columns:first-child{float:right;margin-left:4%}.one.column,.one.columns{width:4.66666666667%}.two.columns{width:13.3333333333%}.three.columns{width:22%}.four.columns{width:30.6666666667%}.five.columns{width:39.3333333333%}.six.columns{width:48%}.seven.columns{width:56.6666666667%}.eight.columns{width:65.3333333333%}.nine.columns{width:74.0%}.ten.columns{width:82.6666666667%}.eleven.columns{width:91.3333333333%}.twelve.columns{width:100%;margin-left:0}.one-third.column{width:30.6666666667%}.two-thirds.column{width:65.3333333333%}.one-half.column{width:48%}.offset-by-one.column,.offset-by-one.columns{margin-left:8.66666666667%}.offset-by-two.column,.offset-by-two.columns{margin-left:17.3333333333%}.offset-by-three.column,.offset-by-three.columns{margin-left:26%}.offset-by-four.column,.offset-by-four.columns{margin-left:34.6666666667%}.offset-by-five.column,.offset-by-five.columns{margin-left:43.3333333333%}.offset-by-six.column,.offset-by-six.columns{margin-left:52%}.offset-by-seven.column,.offset-by-seven.columns{margin-left:60.6666666667%}.offset-by-eight.column,.offset-by-eight.columns{margin-left:69.3333333333%}.offset-by-nine.column,.offset-by-nine.columns{margin-left:78.0%}.offset-by-ten.column,.offset-by-ten.columns{margin-left:86.6666666667%}.offset-by-eleven.column,.offset-by-eleven.columns{margin-left:95.3333333333%}.offset-by-one-third.column,.offset-by-one-third.columns{margin-left:34.6666666667%}.offset-by-two-thirds.column,.offset-by-two-thirds.columns{margin-left:69.3333333333%}.offset-by-one-half.column,.offset-by-one-half.columns{margin-left:52%}}@media (max-width: 956px){.row.row-sm .column,.row.row-sm .columns{margin-left:4%}.row.row-sm .column:first-child,.row.row-sm .columns:first-child{margin-left:0}.row.row-sm .one.column,.row.row-sm .one.columns{width:4.66666666667%}.row.row-sm .two.columns{width:13.3333333333%}.row.row-sm .three.columns{width:22%}.row.row-sm .four.columns{width:30.6666666667%}.row.row-sm .five.columns{width:39.3333333333%}.row.row-sm .six.columns{width:48%}.row.row-sm .seven.columns{width:56.6666666667%}.row.row-sm .eight.columns{width:65.3333333333%}.row.row-sm .nine.columns{width:74.0%}.row.row-sm .ten.columns{width:82.6666666667%}.row.row-sm .eleven.columns{width:91.3333333333%}.row.row-sm .twelve.columns{width:100%;margin-left:0}.row.row-sm .one-third.column{width:30.6666666667%}.row.row-sm .two-thirds.column{width:65.3333333333%}.row.row-sm .one-half.column{width:48%}.row.row-sm .offset-by-one.column,.row.row-sm .offset-by-one.columns{margin-left:8.66666666667%}.row.row-sm .offset-by-two.column,.row.row-sm .offset-by-two.columns{margin-left:17.3333333333%}.row.row-sm .offset-by-three.column,.row.row-sm .offset-by-three.columns{margin-left:26%}.row.row-sm .offset-by-four.column,.row.row-sm .offset-by-four.columns{margin-left:34.6666666667%}.row.row-sm .offset-by-five.column,.row.row-sm .offset-by-five.columns{margin-left:43.3333333333%}.row.row-sm .offset-by-six.column,.row.row-sm .offset-by-six.columns{margin-left:52%}.row.row-sm .offset-by-seven.column,.row.row-sm .offset-by-seven.columns{margin-left:60.6666666667%}.row.row-sm .offset-by-eight.column,.row.row-sm .offset-by-eight.columns{margin-left:69.3333333333%}.row.row-sm .offset-by-nine.column,.row.row-sm .offset-by-nine.columns{margin-left:78.0%}.row.row-sm .offset-by-ten.column,.row.row-sm .offset-by-ten.columns{margin-left:86.6666666667%}.row.row-sm .offset-by-eleven.column,.row.row-sm .offset-by-eleven.columns{margin-left:95.3333333333%}.row.row-sm .offset-by-one-third.column,.row.row-sm .offset-by-one-third.columns{margin-left:34.6666666667%}.row.row-sm .offset-by-two-thirds.column,.row.row-sm .offset-by-two-thirds.columns{margin-left:69.3333333333%}.row.row-sm .offset-by-one-half.column,.row.row-sm .offset-by-one-half.columns{margin-left:52%}}.col-sx-4,.col-md-2{position:relative;min-height:1px;padding-right:15px;padding-left:15px;float:left}.col-xs-4{width:33.33333333%}@media (min-width: 992px){.col-md-2{width:16.66666667%}}div.language{position:relative;height:33px;width:132px;box-shadow:0px 1px 2px #b7b7b7;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}div.language amp-accordion{height:33px;width:132px}div.language section{padding:0}div.language .current{background-image:url("/static/img/lang-icon.svg");font-size:1em;font-weight:normal}div.language .current,div.language .others div{background-color:#f7f7f7;background-repeat:no-repeat;background-position:6px 6px;background-size:20px;padding:8px 10px;margin:0;border:0;border-bottom:1px solid #e7ebec;box-sizing:border-box;height:33px}div.language .current:hover,div.language .others div:hover{background-color:#0379c4;border-bottom:1px solid #0379c4;background-image:url("/static/img/lang-icon-inverted.svg")}div.language .current:hover a,div.language .others div:hover a{color:#fff;text-decoration:none}div.language .current a,div.language .others div a{display:block;padding:0;padding-left:24px;color:#424242;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}div.language .current a span,div.language .others div a span{padding:0;background-color:transparent}div.language .others{box-shadow:0px 1px 2px #b7b7b7}.rtl .language .current a,.rtl .language .others div a{padding-right:26px;padding-left:0;background-position:right 6px}header .language{margin-left:12px;-ms-flex-item-align:center;align-self:center}.rtl header .language{margin-left:0;margin-right:12px}amp-sidebar .language{width:auto;box-shadow:none;height:66px;margin-bottom:0;background:#2196F3}amp-sidebar .language amp-accordion{width:auto;height:66px;z-index:2}amp-sidebar .language .current,amp-sidebar .language .others div{background:#2196F3;border-bottom:1px solid #0976cc;padding-left:16px;padding-top:23px;padding-bottom:6px;height:66px}amp-sidebar .language .current:hover,amp-sidebar .language .others div:hover{background-image:none}amp-sidebar .language .current.current,amp-sidebar .language .others div.current{background:none;border-bottom:1px solid #eee;padding-right:58px}amp-sidebar .language .current.current a::after,amp-sidebar .language .others div.current a::after{content:"▾";display:inline-block;position:relative;color:#fff;top:-5px;left:5px}amp-sidebar .language .current.current span,amp-sidebar .language .others div.current span{color:#fff;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;max-width:104px;display:inline-block}amp-sidebar .language .current a,amp-sidebar .language .others div a{padding-left:0}amp-sidebar .language .current a span,amp-sidebar .language .others div a span{color:#fff}.rtl amp-sidebar .language::before{left:20px;right:auto}.rtl amp-sidebar .language .current,.rtl amp-sidebar .language .others div{padding-left:0;padding-right:16px}pre,code,kbd,samp,tt{font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:0.9em;background:#f2f9ff;border:1px solid #b2e7ff;border-radius:3px;color:#222}code{font-size:13px;padding:2px 5px}a code{color:#035386}h1 code,h2 code,h3 code,h4 code,h5 code{font-size:0.9em}.rtl code{direction:ltr}pre{overflow:auto;-moz-tab-size:2;-o-tab-size:2;tab-size:2;word-break:normal;line-height:1.4;padding:1em}pre>code{white-space:pre;word-wrap:initial;display:block}pre>code td{border:0}.highlight .hll{background-color:#ffffcc}.highlight .c{color:#0099FF;font-style:italic}.highlight .err{color:#AA0000;background-color:#FFAAAA}.highlight .k{color:#006699;font-weight:bold}.highlight .o{color:#555555}.highlight .cm{color:#0099FF;font-style:italic}.highlight .cp{color:#009999}.highlight .c1{color:#0099FF;font-style:italic}.highlight .cs{color:#0099FF;font-weight:bold;font-style:italic}.highlight .gd{background-color:#FFCCCC;border:1px solid #CC0000}.highlight .ge{font-style:italic}.highlight .gr{color:#FF0000}.highlight .gh{color:#003300;font-weight:bold}.highlight .gi{background-color:#CCFFCC;border:1px solid #00CC00}.highlight .go{color:#848484}.highlight .gp{color:#000099;font-weight:bold}.highlight .gs{font-weight:bold}.highlight .gu{color:#003300;font-weight:bold}.highlight .gt{color:#99CC66}.highlight .kc{color:#006699;font-weight:bold}.highlight .kd{color:#006699;font-weight:bold}.highlight .kn{color:#006699;font-weight:bold}.highlight .kp{color:#006699}.highlight .kr{color:#006699;font-weight:bold}.highlight .kt{color:#007788;font-weight:bold}.highlight .m{color:#FF6600}.highlight .s{color:#CC3300}.highlight .na{color:#026abd}.highlight .nb{color:#336666}.highlight .nc{color:#00AA88;font-weight:bold}.highlight .no{color:#336600}.highlight .nd{color:#9999FF}.highlight .ni{color:#999999;font-weight:bold}.highlight .ne{color:#CC0000;font-weight:bold}.highlight .nf{color:#CC00FF}.highlight .nl{color:#9999FF}.highlight .nn{color:#00CCFF;font-weight:bold}.highlight .nt{color:#026abd;font-weight:bold}.highlight .nv{color:#003333}.highlight .ow{color:#000000;font-weight:bold}.highlight .w{color:#bbbbbb}.highlight .mf{color:#FF6600}.highlight .mh{color:#FF6600}.highlight .mi{color:#FF6600}.highlight .mo{color:#FF6600}.highlight .sb{color:#CC3300}.highlight .sc{color:#CC3300}.highlight .sd{color:#CC3300;font-style:italic}.highlight .s2{color:#CC3300}.highlight .se{color:#CC3300;font-weight:bold}.highlight .sh{color:#CC3300}.highlight .si{color:#AA0000}.highlight .sx{color:#CC3300}.highlight .sr{color:#33AAAA}.highlight .s1{color:#CC3300}.highlight .ss{color:#FFCC33}.highlight .bp{color:#336666}.highlight .vc{color:#003333}.highlight .vg{color:#003333}.highlight .vi{color:#003333}.highlight .il{color:#FF6600}.highlight .lineno{-webkit-user-select:none;-moz-user-select:none;-o-user-select:none}.lineno::-moz-selection{background-color:transparent}.lineno::selection{background-color:transparent}table{border-collapse:collapse;width:100%}td,th{border:1px solid #FFFFFF;background:#F7F7F7;padding:0.5rem;text-align:left;color:#424242;font-size:16px;font-weight:300;line-height:24px;vertical-align:top}@media only screen and (max-width: 956px){td,th{font-size:16px;line-height:28px}}.rtl td,.rtl th{text-align:right}th.col-fourty,td.col-fourty{width:40%}th.col-thirty,td.col-thirty{width:30%}th.col-twenty,td.col-twenty{width:20%}th{background:#0379C4;color:#fff;font-weight:400}aside{display:block;font-size:14px;line-height:24px;margin:16px 0;padding:12px 24px 12px 60px}aside::before{float:left;font:normal normal normal 24px/1 'Material Icons';-webkit-font-feature-settings:'liga';-moz-font-feature-settings:'liga';font-feature-settings:'liga';word-wrap:normal;white-space:nowrap;margin-left:-36px}aside.note{background:#e1f5fe;color:#0288d1}aside.note::before{color:#039be5;content:'star'}aside.caution{background:#fff3e0;color:#dd2c00}aside.caution::before{color:#ff6e40;content:'error'}aside.warning{background:#fbe9e7;color:#d50000}aside.warning::before{color:#ff1744;content:'warning'}aside.success{background:#e0f2f1;color:#00897b}aside.success::before{color:#00bfa5;content:'check_circle'}.main .content .toc{padding:1em 1em;margin-left:1em;margin-bottom:1em;border-left:4px solid #0379C4;background:#fff}@media only screen and (min-width: 1025px){.main .content .toc{float:right;max-width:30%}}@media only screen and (min-width: 1461px){.main .content .toc{max-width:auto;position:absolute;right:-260px;width:220px}}.main .content .toc::before{content:"Contents"}.main .content .toc ul,.main .content .toc ol{margin-left:20px;list-style:none}.main .content .toc ul li,.main .content .toc ol li{font-size:13px;line-height:16px;margin-top:8px}.main .content .toc>ul,.main .content .toc>ol{margin-left:0}.main .content .toc+h2::before{display:none}.blog{font-size:15px;line-height:1.3}.blog__section-title{color:#fff;margin-bottom:30px}.blog__viewmore{color:#fff;text-transform:uppercase;font-weight:400;letter-spacing:1px}.blog__title{font-size:20px;margin-bottom:5px;color:#424242;-webkit-transition:color .15s ease-out;transition:color .15s ease-out}.blog__subtitle{font-size:15px;color:#9E9E9E}.blog__tabs{margin-bottom:60px}.blog__tab{display:block;padding:20px 20px 20px 80px;margin-bottom:10px;background-color:#fff;background-image:url("/static/img/blog-icon.svg");background-position:20px center;background-repeat:no-repeat;border-radius:3px;box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);-webkit-transition:.15s ease-out;transition:.15s ease-out}.blog__tab:hover{text-decoration:none;box-shadow:0 4px 7px 1px rgba(0,0,0,0.16),0 4px 12px 1px rgba(0,0,0,0.12)}.blog__tab:hover .blog__title{color:#0379C4}@media only screen and (max-width: 956px){.blog__tabs{margin-bottom:40px}.blog__tab{padding:15px 15px 15px 60px}}.card-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}.card{overflow:hidden;background:#fff;border-radius:2px;box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);margin-bottom:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:0;-ms-flex:0 0 31%;flex:0 0 31%;-webkit-box-flex:0;-ms-flex:0 0 calc(33% - 10px);flex:0 0 calc(33% - 10px)}@media only screen and (max-width: 768px){.card{-ms-flex-preferred-size:100%;flex-basis:100%}}.card__title{font-size:20px;font-weight:300;line-height:1.4;margin-top:0;margin-bottom:16px;color:#424242}.card__content{padding:20px;font-weight:300;border-radius:0 0 2px 2px;text-align:left;-webkit-box-flex:1;-ms-flex:1 0 auto;flex:1 0 auto}.card p{margin:0;color:#616161}.card__action{border-top:1px solid rgba(0,0,0,0.2);text-transform:uppercase;font-size:14px}.card__action a{padding:20px;display:block}.card__image{position:relative}.boxes{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}.box{background-color:#fff;font-size:14px;color:#757575;margin-bottom:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:0;-ms-flex:0 0 48%;flex:0 0 48%;-webkit-box-flex:0;-ms-flex:0 0 calc(50% - 10px);flex:0 0 calc(50% - 10px)}@media only screen and (max-width: 768px){.box{-ms-flex-preferred-size:100%;flex-basis:100%}}.box__inner{padding:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-ms-flex:1 0 0%;flex:1 0 0%}@media only screen and (max-width: 768px){.box__inner{padding:50px 30px 30px}}@media only screen and (max-width: 320px){.box__inner{padding:40px 15px 20px}}.box__content{margin-bottom:20px;line-height:1.7;-webkit-box-flex:1;-ms-flex:1 0 0%;flex:1 0 0%}.box__footer{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.box__image{margin-right:20px}.box__image amp-img{border-radius:50%;overflow:hidden}.box__credit{margin-top:12px;-webkit-box-flex:1;-ms-flex:1 0 0%;flex:1 0 0%}.box__title{font-size:20px;color:#4a4a4a;margin:0;line-height:1.2}.box__subtitle{line-height:1.3}.image-grid{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:start;align-content:flex-start}.image-grid__image{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.image-grid--large .image-grid__image{margin:0 10px;-webkit-box-flex:0;-ms-flex:0 0 22%;flex:0 0 22%;-webkit-box-flex:0;-ms-flex:0 0 calc(25% - 20px);flex:0 0 calc(25% - 20px)}.image-grid--small .image-grid__image{margin:0 10px;-webkit-box-flex:0;-ms-flex:0 0 30%;flex:0 0 30%;-webkit-box-flex:0;-ms-flex:0 0 calc(33% - 20px);flex:0 0 calc(33% - 20px)}.accordion-slider{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}.accordion{width:100%;line-height:1.5;position:initial}.accordion__section{padding:0;border-bottom:1px solid #e9e9e9}.accordion__header{background-color:transparent;border:none;padding:14px 0;-webkit-transition:.15s;transition:.15s;cursor:pointer}.accordion__header:hover,.accordion__header:focus{background-color:#fafafa}.accordion__header:active{-webkit-transition:0.3s ease-out;transition:0.3s ease-out;background-color:#f5f5f5}.accordion__title{color:#0379C4;margin:0;position:relative}.home .accordion__title{margin-bottom:0}@media only screen and (max-width: 956px){.home .accordion__title{font-size:30px}}.accordion__title:after{content:"";display:block;position:absolute;right:0;top:0;bottom:0;margin:auto;width:12px;height:12px;background:transparent url(/static/img/cheveron-down.svg) no-repeat 50% 50%;-webkit-transition:0.15s ease;transition:0.15s ease;-webkit-transform:rotateX(0deg);transform:rotateX(0deg)}.accordion__header:active .accordion__title:after{-webkit-transition:0.3s ease-out;transition:0.3s ease-out;-webkit-transform:rotateX(45deg);transform:rotateX(45deg)}[expanded] .accordion__header:active .accordion__title:after{-webkit-transform:rotateX(235deg);transform:rotateX(235deg)}[expanded] .accordion__title:after{-webkit-transform:rotateX(180deg);transform:rotateX(180deg)}.accordion__content{font-size:16px;color:#616161;margin:0 0 40px}.accordion__figure{padding:40px 40px 0;margin:0 0 20px;background-color:#e9e9e9}.accordion__figure amp-img{max-width:300px;margin:auto}@media only screen and (max-width: 768px){.accordion__figure{padding-left:20%;padding-right:20%}}.accordion__text{margin-top:20px;max-width:34em}.lightbox{background-color:rgba(51,51,51,0.9)}.lightbox__container{position:relative;top:50%;padding:50px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}@media only screen and (max-width: 956px){.lightbox__container{padding:30px}}.lightbox__close{cursor:pointer;position:absolute;right:5px;top:5px;width:40px;height:40px;background-image:url("/static/img/close.svg");background-repeat:no-repeat;background-position:center;background-size:20px}amp-sidebar .hamburger{display:inline-block;background-image:url("/static/img/hamburger_white.svg");background-repeat:no-repeat;background-size:30px 24px;background-position:center center;background-color:transparent;width:40px;height:40px;border:none;position:absolute;top:13px;right:18px;z-index:5}.rtl amp-sidebar ul{padding-right:0;padding-left:1em}.rtl amp-sidebar .hamburger{right:auto;left:18px}amp-sidebar{background:#fff}amp-sidebar nav{margin:0;padding:0;border-right:none;background:#fff}amp-sidebar nav section{margin:0;padding:0}amp-sidebar nav h2.heading{background:#f9f9f9;border:0;padding:12px 12px}amp-sidebar nav section.active h2.heading::after,amp-sidebar nav nav li.current::after{content:'';display:block;width:3px;background:#0379C4;position:absolute;left:0;top:0;bottom:0}amp-sidebar nav ul{padding-right:0;background:#fff}amp-sidebar nav ul li{list-style:none;margin-bottom:0}amp-sidebar nav ul li ul{margin-left:12px;margin-bottom:0}amp-sidebar nav ul li ul li{list-style:none;margin:0}amp-sidebar nav ul li ul li a{padding:6px 15px;font-size:1.2em}amp-sidebar nav a,amp-sidebar nav span,amp-sidebar nav h2{color:#424242;text-transform:uppercase;font-weight:400;display:block;padding:6px 12px;letter-spacing:0.04em;font-size:15px}.rtl amp-sidebar nav{border-left:none;margin:0;padding:0}.rtl amp-sidebar nav ul{padding-left:0}.rtl amp-sidebar nav ul li ul{margin-right:0}amp-sidebar nav nav{background:#f9f9f9;box-sizing:border-box}amp-sidebar nav nav h2{font-style:italic;margin-bottom:0}amp-sidebar nav nav li{font-size:14px}amp-sidebar nav nav li ul li.current{position:relative}amp-sidebar nav nav li ul li.current span{color:#0379C4;font-weight:400}amp-sidebar nav nav li ul li.current ul{border-top:0;margin-top:0;padding-top:0;padding-left:12px}amp-sidebar nav nav li ul li.current::after{left:-12px}amp-sidebar nav nav li ul li a{font-size:1em}.rtl amp-sidebar nav nav{padding-left:0px;padding-right:12px}footer{padding:25px 0 25px 0;background-color:#f5f5f5}footer p{margin:0}footer .footer-image{height:30px;width:30px;margin-right:20px}.rtl footer .footer-image{margin-right:0;margin-left:20px}footer .footer-link{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#0371b7}footer .footer-link span{margin-left:10px}.home h1{font-size:36px;margin-bottom:40px}.home .hero{background-color:#f5f5f5;background-position:top center;background-repeat:no-repeat;background-size:cover;background-image:url("/static/img/background.jpg");position:relative}.home .hero:before{display:block;content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(51,51,51,0.3);background:-webkit-linear-gradient(left top, rgba(51,51,51,0.8), rgba(51,51,51,0.1))}@media only screen and (max-width: 956px){.home .hero:before{width:100%;background:rgba(51,51,51,0.7)}}@media only screen and (max-width: 460px){.home .hero{background-image:url("/static/img/background-mobile.jpg")}}@media only screen and (min-width: 957px){.home .hero{min-height:420px;padding-bottom:4px;padding-top:134px}}.home .hero .container{position:relative}.home .hero h1{color:#fff;font-weight:100}.home .hero h1 br{display:none}@media only screen and (max-width: 956px){.home .hero h1 br{display:block}}.home .hero .hero-phone{position:absolute;right:0;top:-11%;width:360px}@media only screen and (max-width: 1024px){.home .hero .hero-phone{right:0}}.home .hero .video-div{position:absolute;right:21.7%;top:9.25%}.home .hero .intro{color:#fff;font-size:18px;line-height:1.6;max-width:510px;padding-bottom:45px}.home .hero .intro p{margin-top:0}@media only screen and (max-width: 956px){.home .hero .intro{margin-bottom:15px}}.home .hero .go-button{margin-top:40px;font-weight:500}.section-computer{padding:0}.section-computer .computer-wrapper{background-color:#0379C4;margin-bottom:1em}.section-computer .computer-wrapper .computer-interface{display:block;margin:0 auto;max-width:25%;padding:5em 0 2.5em}.image-row{padding:2em 0}@media only screen and (max-width: 956px){.image-row{padding:0}}@media only screen and (max-width: 956px){.partner-image{padding:1.5em}}.publisher-image{margin-left:4%}.video-div{background-color:#fff}.who .content{padding-top:60px}.who h1{margin-bottom:80px}@media only screen and (max-width: 956px){.who h1{margin-bottom:40px}}.who h2{margin-bottom:40px}@media only screen and (max-width: 956px){.who h2{margin-bottom:40px}}.who h3{margin-bottom:20px}.who h1 a,.who h2 a,.who h3 a{color:#aaa;font-size:16px;margin-left:0.5em;display:none}.who h1:hover a,.who h2:hover a,.who h3:hover a{display:inline}.who .items{padding:0;list-style:none;margin-bottom:80px;-webkit-column-count:4;-moz-column-count:4;column-count:4;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;-webkit-column-break-inside:avoid}@media only screen and (max-width: 768px){.who .items{-webkit-column-count:3;-moz-column-count:3;column-count:3}}@media only screen and (max-width: 460px){.who .items{-webkit-column-count:2;-moz-column-count:2;column-count:2}}@media only screen and (max-width: 320px){.who .items{-webkit-column-count:1;-moz-column-count:1;column-count:1}}.who .items .item{padding:6px 0;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;-o-column-break-inside:avoid;-ms-column-break-inside:avoid;column-break-inside:avoid}.who__section{margin-bottom:20px}.roadmap .content ul,.roadmap .content ol{padding-left:40px}.roadmap .content .stages li{list-style-type:none}.roadmap .content h1{margin-bottom:1em;padding-left:12px}.roadmap .content h1 small{display:block;color:#949494;font-size:24px;padding-top:6px}.roadmap .content h3{background:#2196F3;padding:0.5em 16px;color:#fff;margin-bottom:0}.roadmap .content h3 small{display:block;font-size:16px;margin-top:8px;font-style:italic;color:#BBDEFB}.roadmap .content h4{font-weight:normal;font-size:1.2em;margin-top:6px;margin-bottom:1em}.roadmap .content strong{font-weight:500}.roadmap .content p{margin:0}.roadmap .content section{padding-left:0}.roadmap .content .about{margin:2em 12px}.roadmap .content .about ul{margin:0;list-style-type:square}.roadmap .content .about div{margin-bottom:1em}.roadmap .content .workstream{margin-bottom:1em;background:#fff;box-shadow:0px 1px 6px rgba(0,0,0,0.1)}.roadmap .content .workstream-flex{display:-webkit-box;display:-ms-flexbox;display:flex}.roadmap .content .description{-webkit-box-flex:1;-ms-flex:1 1 50%;flex:1 1 50%;padding:1em;padding-right:2em}.roadmap .content .plan{-webkit-box-flex:1;-ms-flex:1 1 50%;flex:1 1 50%;min-width:300px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:1em;padding-bottom:0;border-left:3px solid #E8E8E8}.roadmap .content .plan h4{display:none}.roadmap .content .workstream-headings .description{padding-bottom:0}.roadmap .content .workstream-headings .plan h4{display:block}.roadmap .content .workstream-headings h4{margin-bottom:0}.roadmap .content .themes ul,.roadmap .content .forecast ul{list-style-type:square;margin-top:0;margin-bottom:0}.roadmap .content .forecast{padding:1em;border-top:3px solid #E8E8E8}.roadmap .content .stages{margin:-4px 0 0 0;margin-left:-19px;padding:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-right:1em}.roadmap .content .stages>li{padding-left:12px;padding-top:28px;position:relative;-webkit-box-flex:1;-ms-flex:1 1 100%;flex:1 1 100%}.roadmap .content .stages>li:last-child{padding-bottom:1em}.roadmap .content .stages>li::before{content:attr(data-description);position:absolute;top:3px;left:24px;font-style:italic;color:#777;font-size:12px;overflow:hidden;text-overflow:ellipsis;right:0;white-space:nowrap}.roadmap .content .stages>li::after{position:absolute;top:0;left:-16px;background:#fff;border-radius:20px;width:24px;height:24px;display:block;text-align:center;font-weight:800;line-height:26px}.roadmap .content .stages>li li{position:relative}.roadmap .content .stages>li li::before{content:"";width:10px;height:4px;display:block;position:absolute;border-radius:10px;top:10px;left:-27px}.roadmap .content .stages .stage-0{border-left:3px solid #DCEDC8}.roadmap .content .stages .stage-0:after{content:"0";border:3px solid #DCEDC8}.roadmap .content .stages .stage-0 li:before{background:#DCEDC8}.roadmap .content .stages .stage-1{border-left:3px solid #C5E1A5}.roadmap .content .stages .stage-1:after{content:"1";border:3px solid #C5E1A5}.roadmap .content .stages .stage-1 li:before{background:#C5E1A5}.roadmap .content .stages .stage-2{border-left:3px solid #AED581}.roadmap .content .stages .stage-2:after{content:"2";border:3px solid #AED581}.roadmap .content .stages .stage-2 li:before{background:#AED581}.roadmap .content .stages .stage-3{border-left:3px solid #9CCC65}.roadmap .content .stages .stage-3:after{content:"3";border:3px solid #9CCC65}.roadmap .content .stages .stage-3 li:before{background:#9CCC65}.roadmap .content .stages .stage-4{border-left:3px solid #8BC34A}.roadmap .content .stages .stage-4:after{content:"4";border:3px solid #8BC34A}.roadmap .content .stages .stage-4 li:before{background:#8BC34A}.roadmap .content .stages .stage-5{border-left:3px solid #7CB342}.roadmap .content .stages .stage-5:after{content:"5";border:3px solid #7CB342}.roadmap .content .stages .stage-5 li:before{background:#7CB342}.roadmap .content .stages .stage-6{border-left:3px solid #689F38}.roadmap .content .stages .stage-6:after{content:"6";border:3px solid #689F38}.roadmap .content .stages .stage-6 li:before{background:#689F38}.roadmap .content .stages ul{margin:0;padding:0;margin-left:12px;padding-top:3px}@media only screen and (max-width: 640px){.roadmap .content .workstream-flex{-ms-flex-wrap:wrap;flex-wrap:wrap}.roadmap .content .plan{border-left:0}.roadmap .content .stages{margin-left:24px}.roadmap .content .workstream-flex .plan h4{display:block}.roadmap .content .workstream-headings .plan{display:none}}body.case-studies .card{-webkit-box-flex:0;-ms-flex:0 0 calc(50% - 10px);flex:0 0 calc(50% - 10px);overflow:visible}@media only screen and (max-width: 460px){body.case-studies .card{-webkit-box-flex:0;-ms-flex:0 0 calc(100%);flex:0 0 calc(100%)}}body.case-studies .card.wide{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}@media only screen and (max-width: 460px){body.case-studies .card.wide{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}@media only screen and (max-width: 956px){body.case-studies .card.wide{-webkit-box-flex:0;-ms-flex:0 0 calc(100% + 40px);flex:0 0 calc(100% + 40px);margin-left:-20px;border-radius:0}}body.case-studies .card.wide .card__image{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;background-color:#e8e8e8}@media only screen and (max-width: 460px){body.case-studies .card.wide .card__image{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}}@media only screen and (max-width: 956px){body.case-studies .card.wide .card__image{background-color:#00548a}}body.case-studies .card.wide .card__image a{display:block}body.case-studies .card.wide .card__title{font-size:32px}body.case-studies .card.wide .card__content{-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-right:40px}@media only screen and (max-width: 956px){body.case-studies .card.wide .card__content{background:#0379C4}body.case-studies .card.wide .card__content h4,body.case-studies .card.wide .card__content p,body.case-studies .card.wide .card__content a{color:#fff}}body.case-studies .card.wide .card__content .card__action a{padding-left:0}body.case-studies .card.wide .card__content p:first-of-type{margin-top:0;margin-bottom:1em}body.case-studies .card.wide .card__content p:last-of-type{margin-top:0;margin-bottom:1em}body.case-studies amp-img{margin:0}body.case-studies .logos,body.case-study .logos{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}body.case-studies .logos amp-img,body.case-study .logos amp-img{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto}body.case-studies .logos span,body.case-study .logos span{font-size:20px;margin-left:10px;margin-right:10px;font-weight:500;margin-top:-4px}@media only screen and (max-width: 956px){body.case-studies .logos{display:none}}body.case-study h1{margin-bottom:1em}body.case-study .img-right,body.case-study .img-left{display:inline-block;width:37%;min-width:250px}body.case-study .img-right amp-img,body.case-study .img-left amp-img{margin-top:0}body.case-study .img-right{float:right}body.case-study .img-left{float:left}body.case-study .button{background:aliceblue;margin:2em 2em 0 0;text-transform:uppercase;font-weight:400;display:inline-block}body.case-study .results{border-bottom:1px solid #f0f0f0;padding-bottom:1em;margin-bottom:2em;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;-ms-flex-wrap:wrap;flex-wrap:wrap}body.case-study .results.wordy div{padding:14px 20px 0px 20px}body.case-study .results div{background:#0379C4;color:#fff;border-radius:160px;width:160px;height:160px;text-align:center;font-weight:400;font-size:14px;padding:40px 27px 0px 27px;box-sizing:border-box;margin-bottom:15px}body.case-study .results strong{display:block;font-size:2em;font-weight:400;margin-bottom:0.2em}body.case-study blockquote p{font-size:22px;line-height:35px}@media only screen and (max-width: 956px){body.case-study .results .button{margin-right:0}}@media only screen and (max-width: 600px){body.case-study .img-right,body.case-study .img-left{display:block;float:none;width:auto}}  </style>
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+</head>
+
+<body class="home">
+
+  <amp-analytics type="googleanalytics" id="analytics-ga">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-67833617-1"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+  </amp-analytics>
+
+<amp-sidebar id='sidebar' side='right' layout='nodisplay'>
+  <button class="tab hamburger" id="menu-button" on='tap:sidebar.toggle'></button>
+  <nav>
+<div class="language desktop">
+  <amp-accordion>
+    <section>
+      <h6 class="current">
+        <a class="flag-en"><span>English</span></a>
+      </h6>
+      <div class="others">
+        <div><a href="/ar/" class="flag-ar"><span>العربية</span></a></div>
+        <div><a href="/es/" class="flag-es"><span>español</span></a></div>
+        <div><a href="/fr/" class="flag-fr"><span>français</span></a></div>
+        <div><a href="/id/" class="flag-id"><span>Indonesia</span></a></div>
+        <div><a href="/it/" class="flag-it"><span>italiano</span></a></div>
+        <div><a href="/ja/" class="flag-ja"><span>日本語</span></a></div>
+        <div><a href="/ko/" class="flag-ko"><span>한국어</span></a></div>
+        <div><a href="/nl/" class="flag-nl"><span>Nederlands</span></a></div>
+        <div><a href="/pl/" class="flag-pl"><span>polski</span></a></div>
+        <div><a href="/pt_br/" class="flag-pt_BR"><span>português</span></a></div>
+        <div><a href="/ru/" class="flag-ru"><span>русский</span></a></div>
+        <div><a href="/th/" class="flag-th"><span>ไทย</span></a></div>
+        <div><a href="/tr/" class="flag-tr"><span>Türkçe</span></a></div>
+        <div><a href="/zh_cn/" class="flag-zh_CN"><span>中文</span></a></div>
+      </div>
+    </section>
+  </amp-accordion>
+</div>    <amp-accordion>
+      <section >
+        <h2 class="heading">Learn</h2>
+        <ul>
+          <li><a href="/learn/about-amp/">What Is AMP?</a></li>
+          <li><a href="/learn/how-amp-works/">How AMP Works</a></li>
+          <li><a href="/learn/design-principles/">Design Principles</a></li>
+          <li><a href="/learn/browsers/">Supported Browsers</a></li>
+          <li><a href="/learn/who/">Supported Platforms</a></li>
+          <li><a href="/case-studies/">Case Studies</a></li>
+        </ul>
+      </section>
+      <section >
+        <h2 class="heading">Build</h2>
+        <ul>
+          <!-- TODO: Insert correct menu here -->
+
+<nav>
+  <ul>
+    <li>
+      <h2>Tutorials</h2>
+      <ul>
+        <li>
+          <a href="/docs/get_started/create.html">Create Your First AMP Page</a>
+        </li>
+
+      </ul>
+    </li>
+    <li>
+      <h2>Guides</h2>
+      <ul>
+        <li>
+          <a href="/docs/guides/responsive_amp.html">Styling & Layout</a>
+        </li>
+
+        <li>
+          <a href="/docs/guides/amp_replacements.html">Include Images & Video</a>
+        </li>
+
+        <li>
+          <a href="/docs/guides/iframes.html">Include Iframes</a>
+        </li>
+
+        <li>
+          <a href="/docs/guides/third_party_components.html">Include Third-Party Content</a>
+        </li>
+
+        <li>
+          <a href="/docs/guides/discovery.html">Make Your Page Discoverable</a>
+        </li>
+
+        <li>
+          <a href="/docs/guides/validate.html">Validate AMP Pages</a>
+        </li>
+
+        <li>
+          <a href="/docs/guides/analytics_amp.html">Configure Analytics</a>
+        </li>
+
+      </ul>
+    </li>
+    <li>
+      <h2>Reference</h2>
+      <ul>
+        <li>
+          <a href="/docs/reference/components.html">Components / Tags</a>
+        </li>
+
+        <li>
+          <a href="/docs/reference/spec.html">AMP HTML Specification</a>
+        </li>
+
+        <li>
+          <a href="/docs/reference/experimental.html">Experimental features</a>
+        </li>
+
+        <li>
+          <a href="/docs/reference/validation_errors.html">AMP Validation Errors</a>
+        </li>
+
+      </ul>
+    </li>
+  </ul>
+</nav>        </ul>
+      </section>
+      <section >
+        <h2 class="heading">news</h2>
+        <ul>
+          <li class="external"><a href="https://amphtml.wordpress.com">Blog</a></li>
+          <li class="external"><a href="https://twitter.com/amphtml">Twitter</a></li>
+          <li><a href="/roadmap/">Roadmap</a></li>
+        </ul>
+      </section>
+      <section >
+        <h2 class="heading">Contribute</h2>
+        <ul>
+          <li class="external"><a href="https://github.com/ampproject/amphtml">GitHub</a></li>
+          <li><a href="/contribute/">How to Contribute</a></li>
+          <li class="external"><a href="https://github.com/ampproject/amphtml/issues/new">File a bug</a></li>
+          <li><a href="/contribute/governance/">Open Source Governance</a></li>
+        </ul>
+      </section>
+      <section >
+        <h2 class="heading">Support</h2>
+        <ul>
+          <li><a href="/support/faqs/">FAQ</a></li>
+          <li class="external"><a href="https://stackoverflow.com/questions/tagged/amp-html">Stack Overflow</a></li>
+          <li class="external"><a href="https://groups.google.com/forum/#!forum/amphtml-discuss">Mailing List</a></li>
+          <li class="external"><a href="https://docs.google.com/forms/d/1wAE8w3K5preZnBkRk-MD1QkX8FmlRDxd_vs4bFSeJlQ/viewform?fbzx=4406980310789882877">Slack</a></li>
+          <li class="external"><a href="https://github.com/ampproject/amphtml/issues/new">File a bug</a></li>
+        </ul>
+      </section>
+    </amp-accordion>
+  </nav>
+</amp-sidebar><header class="header fixed">
+  <div class="container">
+    <div class="nav-container">
+      <div class="left-nav">
+        <a href="/" class="tab header-title"><span></span></a>
+      </div>
+      <div class="right alt">
+        <div class="tab">
+          <a href="/learn/about-amp/">Learn</a>
+          <ul>
+            <li>
+              <a href="/learn/about-amp/">What Is AMP?</a>
+            </li>
+            <li>
+              <a href="/learn/how-amp-works/">How AMP Works</a>
+            </li>
+            <li>
+              <a href="/learn/design-principles/">Design Principles</a>
+            </li>
+            <li>
+              <a href="/learn/browsers/">Supported Browsers</a>
+            </li>
+            <li>
+              <a href="/learn/who/">Supported Platforms</a>
+            </li>
+            <li>
+              <a href="/case-studies/">Case Studies</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab">
+          <a href="/docs/get_started/create.html">Build</a>
+          <ul>
+            <li>
+              <a href="/docs/get_started/create.html">Get started</a>
+            </li>
+            <li>
+              <a href="/docs/get_started/create.html">Tutorials</a>
+            </li>
+            <li>
+              <a href="/docs/guides/responsive_amp.html">Guides</a>
+            </li>
+            <li>
+              <a href="/docs/reference/components.html">Reference</a>
+            </li>
+            <li class="external">
+              <a href="https://ampbyexample.com/">Examples</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab">
+          <a class="external" href="https://amphtml.wordpress.com/">news</a>
+          <ul>
+            <li class="external">
+              <a href="https://amphtml.wordpress.com">Blog</a>
+            </li>
+            <li class="external">
+              <a href="https://twitter.com/amphtml">Twitter</a>
+            </li>
+            <li>
+              <a href="/roadmap/">Roadmap</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab">
+          <a href="/contribute/">Contribute</a>
+          <ul>
+            <li class="external">
+              <a href="https://github.com/ampproject/amphtml">GitHub</a>
+            </li>
+            <li>
+              <a href="/contribute/">How to Contribute</a>
+            </li>
+            <li class="external">
+              <a href="https://github.com/ampproject/amphtml/issues/new">File a bug</a>
+            </li>
+            <li>
+              <a href="/contribute/governance/">Open Source Governance</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab">
+          <a href="/support/faqs/">Support</a>
+          <ul>
+            <li>
+              <a href="/support/faqs/">FAQ</a>
+            </li>
+            <li class="external">
+              <a href="https://stackoverflow.com/questions/tagged/amp-html">Stack Overflow</a>
+            </li>
+            <li class="external">
+              <a href="https://groups.google.com/forum/#!forum/amphtml-discuss">Mailing List</a>
+            </li>
+            <li class="external">
+              <a href="https://docs.google.com/forms/d/1wAE8w3K5preZnBkRk-MD1QkX8FmlRDxd_vs4bFSeJlQ/viewform?fbzx=4406980310789882877">Slack</a>
+            </li>
+            <li class="external">
+              <a href="https://github.com/ampproject/amphtml/issues/new">File a bug</a>
+            </li>
+          </ul>
+        </div>
+
+<div class="language desktop">
+  <amp-accordion>
+    <section>
+      <h6 class="current">
+        <a class="flag-en"><span>English</span></a>
+      </h6>
+      <div class="others">
+        <div><a href="/ar/" class="flag-ar"><span>العربية</span></a></div>
+        <div><a href="/es/" class="flag-es"><span>español</span></a></div>
+        <div><a href="/fr/" class="flag-fr"><span>français</span></a></div>
+        <div><a href="/id/" class="flag-id"><span>Indonesia</span></a></div>
+        <div><a href="/it/" class="flag-it"><span>italiano</span></a></div>
+        <div><a href="/ja/" class="flag-ja"><span>日本語</span></a></div>
+        <div><a href="/ko/" class="flag-ko"><span>한국어</span></a></div>
+        <div><a href="/nl/" class="flag-nl"><span>Nederlands</span></a></div>
+        <div><a href="/pl/" class="flag-pl"><span>polski</span></a></div>
+        <div><a href="/pt_br/" class="flag-pt_BR"><span>português</span></a></div>
+        <div><a href="/ru/" class="flag-ru"><span>русский</span></a></div>
+        <div><a href="/th/" class="flag-th"><span>ไทย</span></a></div>
+        <div><a href="/tr/" class="flag-tr"><span>Türkçe</span></a></div>
+        <div><a href="/zh_cn/" class="flag-zh_CN"><span>中文</span></a></div>
+      </div>
+    </section>
+  </amp-accordion>
+</div>
+        <button class="tab hamburger" id="menu-button" on='tap:sidebar.toggle'></button>
+      </div>
+    </div>
+  </div>
+</header>
+  <div class="wrap">
+    <div class="content">
+
+      
+<section class="blade blade--hero hero">
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <div class="intro-container">
+          <h1>Instant. <br> Everywhere.</h1>
+          <p class="intro desktop-only">For many, reading on the mobile web is a slow, clunky and frustrating experience - but it doesn’t have to be that way. The Accelerated Mobile Pages (AMP) Project is an open source initiative that embodies the vision that publishers can create mobile optimized content once and have it load instantly everywhere.</p>
+          <p class="intro mobile-only">The Accelerated Mobile Pages (AMP) Project is an open initiative that embodies the vision that publishers can create mobile optimized content once and have it load instantly everywhere.</p>
+
+          <a on="tap:my-lightbox" class="watch-video" role="button">VIEW VIDEO</a>
+
+          <amp-lightbox id="my-lightbox" class="lightbox" layout="nodisplay" on="tap:my-lightbox.close" role="button" tabindex="1">
+
+            <div class="lightbox__container">
+
+              <amp-youtube
+                data-videoid="WrpkFROqR0Q"
+                layout="responsive"
+                width="480" height="270">
+              </amp-youtube>
+
+            </div>
+
+            <div class="lightbox__close" on="tap:my-lightbox.close" role="button" tabindex="1"></div>
+
+          </amp-lightbox>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blade blade--get-started">
+  <div class="container">
+
+    <div>
+      <h1>Get Started with AMP HTML</h1>
+    </div>
+
+    <div class="tablet-up">
+      <div class="card-container">
+        <div class="card">
+          <div class="card__image">
+            <amp-img
+                noloading
+                height=190
+                width=297
+                layout=responsive
+                src="/static/img/man.jpg">
+            </amp-img>
+          </div>
+          <div class="card__content">
+            <h4 class="card__title">Technical Introduction</h4>
+            <p>If you are new to AMP HTML, our technical introduction is a great place to get started and provides an overview of the project and how AMP HTML works.</p>
+          </div>
+          <div class="card__action">
+            <a href="/docs/get_started/about-amp.html">Learn More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__image">
+            <amp-img
+                noloading
+                height=190
+                width=297
+                layout=responsive
+                src="/static/img/amp.jpg">
+            </amp-img>
+          </div>
+          <div class="card__content">
+            <h4 class="card__title">Tutorial</h4>
+            <p>Ready to build an AMP file? This tutorial will teach you how to create a basic AMP HTML page, stage it, test it, and get it ready for publication.</p>
+          </div>
+          <div class="card__action">
+            <a href="/docs/get_started/create.html">Get Started</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__image">
+            <amp-img
+                noloading
+                height=190
+                width=297
+                layout=responsive
+                src="/static/img/code.jpg">
+            </amp-img>
+          </div>
+          <div class="card__content">
+            <h4 class="card__title">View Code</h4>
+            <p>If you'd like to dive deeper into AMP HTML, you can find all of the source code, code samples, and detailed documentation in our GitHub repository.</p>
+          </div>
+          <div class="card__action">
+            <a href="https://www.github.com/ampproject/amphtml">Visit Github</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <amp-carousel class="tablet-down"
+      width="auto"
+      height="640"
+      type="slides"
+      layout="fixed-height">
+      <div class="card">
+        <div class="card__image">
+          <amp-img
+              noloading
+              height="190"
+              width="297"
+              layout="responsive"
+              src="/static/img/man.jpg">
+          </amp-img>
+        </div>
+        <div class="card__content">
+          <h4 class="card__title">Technical Introduction</h4>
+          <p>If you are new to AMP HTML, our technical introduction is a great place to get started and provides an overview of the project and how AMP HTML works.</p>
+        </div>
+        <div class="card__action">
+          <a href="/docs/get_started/about-amp.html">Learn More</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__image">
+          <amp-img
+              noloading
+              height="190"
+              width="297"
+              layout="responsive"
+              src="/static/img/amp.jpg">
+          </amp-img>
+        </div>
+        <div class="card__content">
+          <h4 class="card__title">Tutorial</h4>
+          <p>Ready to build an AMP file? This tutorial will teach you how to create a basic AMP HTML page, stage it, test it, and get it ready for publication.</p>
+        </div>
+        <div class="card__action">
+          <a href="/docs/get_started/create.html">Get Started</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__image">
+          <amp-img
+              noloading
+              height="190"
+              width="297"
+              layout="responsive"
+              src="/static/img/code.jpg">
+          </amp-img>
+        </div>
+        <div class="card__content">
+          <h4 class="card__title">View Code</h4>
+          <p>If you'd like to dive deeper into AMP HTML, you can find all of the source code, code samples, and detailed documentation in our GitHub repository.</p>
+        </div>
+        <div class="card__action">
+          <a href="https://www.github.com/ampproject/amphtml">Visit Github</a>
+        </div>
+      </div>
+    </amp-carousel>
+
+  </div>
+</section>
+
+<section class="blade blade--blog">
+
+  <div class="container">
+    <div>
+        <h1 class="blog__section-title">Latest blog posts</h1>
+    </div>
+
+    <div class="blog">
+      <div class="blog__tabs">
+          <a class="blog__tab" href="https://amphtml.wordpress.com/2016/10/07/amp-a-year-in-review/amp/" target="_blank">
+            <h3 class="blog__title">AMP: A year in review</h3>
+            <div class="blog__subtitle">October 7, 2016</div>
+          </a>
+          <a class="blog__tab" href="https://amphtml.wordpress.com/2016/10/06/a-faster-mobile-web-wordpress-com-updates-for-accelerated-mobile-pages/amp/" target="_blank">
+            <h3 class="blog__title">A Faster Mobile Web: WordPress.com Updates for Accelerated Mobile Pages</h3>
+            <div class="blog__subtitle">October 6, 2016</div>
+          </a>
+          <a class="blog__tab" href="https://amphtml.wordpress.com/2016/09/30/amp-roadmap-update-for-end-q3-2016/amp/" target="_blank">
+            <h3 class="blog__title">AMP Roadmap Update for End-Q3 2016</h3>
+            <div class="blog__subtitle">September 30, 2016</div>
+          </a>
+      </div>
+
+      <a class="blog__viewmore" href="https://amphtml.wordpress.com/" target="_blank">View More</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="blade blade--contributors">
+  <div class="container">
+
+    <div>
+      <h1>What contributors are saying</h1>
+    </div>
+
+    <amp-carousel class="desktop-up"
+      height="500"
+      layout="flex-item"
+      type="slides">
+
+      <div class="boxes">
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “This is a project of real ambition. It seeks simultaneously to create a great user experience, to give more autonomy to publishers to deliver that and to develop effective advertising for the mobile web. Achieving these in tandem will be vital to building a more sustainable ecosystem where great journalism can flourish. We are keen to see it succeed.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/guardian.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Tony Danker">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Tony Danker</h5>
+                <div class="box__subtitle">Chief Strategy Officer, Guardian News &amp; Media</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “Speed has always been a cornerstone of Google Search and we're thrilled to be working alongside others in the tech industry and publishers around the world to bring the Accelerated Mobile Pages Project to life. An open content ecosystem will give publishers maximum reach and allow users to get the best content no matter which app they are using. AMP HTML will make it all blazing fast, so we can't wait to use it!”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/google.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="David Besbris">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">David Besbris</h5>
+                <div class="box__subtitle">VP Engineering, Google Search</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “At Vox Media, we want our users to have the best experience possible on whatever device or platform they choose, and we have always believed in benefiting and contributing to open web projects. We’re proud to partner with other media and technology companies to create a standardized approach to web publishing that allows our mobile users the most consistent, fast, accessible, and high-quality experience possible.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/vox.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Melissa Bell">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Melissa Bell</h5>
+                <div class="box__subtitle">VP, Growth and Analytics, Vox Media and co-founder of Vox.com</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “Speed is a key part of delivering great mobile experiences for Hearst’s premium content — this initiative is a way to improve the mobile experience for users while allowing publishers the flexibility to design the experience and the product in a way that supports its business requirements for data, analytics and monetization.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/hearst.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Phil Wiser">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Phil Wiser</h5>
+                <div class="box__subtitle">CTO, Hearst</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “We are thrilled to be working alongside Google and other industry leaders to create a better mobile web experience inside of all apps, by partnering with publishers, we are helping them achieve their goals and tell stories with Tweets.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/twitter.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Michael Ducker">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Michael Ducker</h5>
+                <div class="box__subtitle">Product Manager, Twitter</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “As third party mobile platforms become increasingly important, this initiative has the potential to reduce the effort required to distribute content to those platforms, deliver a better user experience and keep economic control in the hands of publishers.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/newyorktimes.jpeg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Kinsey Wilson">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Kinsey Wilson</h5>
+                <div class="box__subtitle">EVP, Product &amp; Technology, The New York Times</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “On mobile devices, the display of news articles listed by Google shall improve significantly. That’s one of the first results of the Digital News Initiative instigated by Google and eight European publishing companies. We expect this project to considerably boost usage of our mobile pages. We will carefully watch how the initiative can contribute toward increasing advertising revenues. The key will be to improve the publishing business in the context of the digital world.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/faz.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Mathias Müller von Blumencron">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Mathias Müller von Blumencron</h5>
+                <div class="box__subtitle">Editor in Chief, FAZ.NET</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “The mobile open web experience is terrible and some have suggested it's too slow to compete. We can choose to see the mobile open web as a relic of its time and flee to the warm embrace of closed platforms and apps. Or we can say that the open web means something important to the world and if it’s broken it’s our job to fix it. I think we should fix it. That’s why Chartbeat is proud to be a part of the Accelerated Mobile Pages Project. It’s our attempt to fix the mobile experience, make it fast and beautiful, and ensure the future of an open web.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/chartbeat.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Tony Haile">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Tony Haile</h5>
+                <div class="box__subtitle">CEO, Chartbeat</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “Once we used to talk about digital first, or mobile first. This was the past. Today legacy media need to bring their journalism outside their websites, on the platforms and on the devices where people are. La Stampa is almost 150 years old. We believe in quality and trust. Combining them with a great user experience will make our journalism thrive for the next 150 years. This is why we are part of the project.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/lastampa.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Mario Calabresi">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Mario Calabresi</h5>
+                <div class="box__subtitle">Editor in Chief, La Stampa</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “We welcome this project because it accelerates the consumption of mobile content and preserves the business model that finances quality journalism.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/folha.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Antonio Manuel Teixeira Mendes">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Antonio Manuel Teixeira Mendes</h5>
+                <div class="box__subtitle">Director-Superintendent, Folha de S.Paulo</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box">
+
+          <div class="box__inner">
+
+            <div class="box__content">
+              “The guiding principles of the AMP Project apply to the mobile web in general. So why restrict it to just publisher-based content?  Speed plays a critical role in eCommerce. Faster pages lead to delighted users, and higher conversion, so when the AMP Project was announced it resonated a lot with our own thinking and approach to smart open source projects.”
+            </div>
+
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="/static/img/quotes/ebay.jpg"
+                    width="90"
+                    height="90"
+                    noloading
+                    alt="Mohan Patt">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">Mohan Patt</h5>
+                <div class="box__subtitle">VP of Product, eBay Shopping Experience</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </amp-carousel>
+
+    <amp-carousel class="single mobile-down"
+      height="550"
+      type="slides"
+      layout="flex-item">
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “This is a project of real ambition. It seeks simultaneously to create a great user experience, to give more autonomy to publishers to deliver that and to develop effective advertising for the mobile web. Achieving these in tandem will be vital to building a more sustainable ecosystem where great journalism can flourish. We are keen to see it succeed.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/guardian.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Tony Danker">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Tony Danker</h5>
+              <div class="box__subtitle">Chief Strategy Officer, Guardian News &amp; Media</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “Speed has always been a cornerstone of Google Search and we're thrilled to be working alongside others in the tech industry and publishers around the world to bring the Accelerated Mobile Pages Project to life. An open content ecosystem will give publishers maximum reach and allow users to get the best content no matter which app they are using. AMP HTML will make it all blazing fast, so we can't wait to use it!”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/google.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="David Besbris">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">David Besbris</h5>
+              <div class="box__subtitle">VP Engineering, Google Search</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “At Vox Media, we want our users to have the best experience possible on whatever device or platform they choose, and we have always believed in benefiting and contributing to open web projects. We’re proud to partner with other media and technology companies to create a standardized approach to web publishing that allows our mobile users the most consistent, fast, accessible, and high-quality experience possible.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/vox.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Melissa Bell">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Melissa Bell</h5>
+              <div class="box__subtitle">VP, Growth and Analytics, Vox Media and co-founder of Vox.com</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “Speed is a key part of delivering great mobile experiences for Hearst’s premium content — this initiative is a way to improve the mobile experience for users while allowing publishers the flexibility to design the experience and the product in a way that supports its business requirements for data, analytics and monetization.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/hearst.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Phil Wiser">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Phil Wiser</h5>
+              <div class="box__subtitle">CTO, Hearst</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “We are thrilled to be working alongside Google and other industry leaders to create a better mobile web experience inside of all apps, by partnering with publishers, we are helping them achieve their goals and tell stories with Tweets.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/twitter.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Michael Ducker">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Michael Ducker</h5>
+              <div class="box__subtitle">Product Manager, Twitter</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “As third party mobile platforms become increasingly important, this initiative has the potential to reduce the effort required to distribute content to those platforms, deliver a better user experience and keep economic control in the hands of publishers.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/newyorktimes.jpeg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Kinsey Wilson">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Kinsey Wilson</h5>
+              <div class="box__subtitle">EVP, Product &amp; Technology, The New York Times</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “On mobile devices, the display of news articles listed by Google shall improve significantly. That’s one of the first results of the Digital News Initiative instigated by Google and eight European publishing companies. We expect this project to considerably boost usage of our mobile pages. We will carefully watch how the initiative can contribute toward increasing advertising revenues. The key will be to improve the publishing business in the context of the digital world.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/faz.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Mathias Müller von Blumencron">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Mathias Müller von Blumencron</h5>
+              <div class="box__subtitle">Editor in Chief, FAZ.NET</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “The mobile open web experience is terrible and some have suggested it's too slow to compete. We can choose to see the mobile open web as a relic of its time and flee to the warm embrace of closed platforms and apps. Or we can say that the open web means something important to the world and if it’s broken it’s our job to fix it. I think we should fix it. That’s why Chartbeat is proud to be a part of the Accelerated Mobile Pages Project. It’s our attempt to fix the mobile experience, make it fast and beautiful, and ensure the future of an open web.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/chartbeat.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Tony Haile">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Tony Haile</h5>
+              <div class="box__subtitle">CEO, Chartbeat</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “Once we used to talk about digital first, or mobile first. This was the past. Today legacy media need to bring their journalism outside their websites, on the platforms and on the devices where people are. La Stampa is almost 150 years old. We believe in quality and trust. Combining them with a great user experience will make our journalism thrive for the next 150 years. This is why we are part of the project.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/lastampa.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Mario Calabresi">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Mario Calabresi</h5>
+              <div class="box__subtitle">Editor in Chief, La Stampa</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “We welcome this project because it accelerates the consumption of mobile content and preserves the business model that finances quality journalism.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/folha.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Antonio Manuel Teixeira Mendes">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Antonio Manuel Teixeira Mendes</h5>
+              <div class="box__subtitle">Director-Superintendent, Folha de S.Paulo</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="box">
+
+        <div class="box__inner">
+
+          <div class="box__content">
+            “The guiding principles of the AMP Project apply to the mobile web in general. So why restrict it to just publisher-based content?  Speed plays a critical role in eCommerce. Faster pages lead to delighted users, and higher conversion, so when the AMP Project was announced it resonated a lot with our own thinking and approach to smart open source projects.”
+          </div>
+
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="/static/img/quotes/ebay.jpg"
+                  width="90"
+                  height="90"
+                  noloading
+                  alt="Mohan Patt">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">Mohan Patt</h5>
+              <div class="box__subtitle">VP of Product, eBay Shopping Experience</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </amp-carousel>
+
+  </div>
+</section>
+
+<section class="blade blade--blog">
+
+  <div class="container">
+    <div>
+        <h1 class="blog__section-title"></h1>
+    </div>
+
+    <div class="blog">
+      <div class="blog__tabs">
+          <a class="blog__tab" href="/case-studies/relay_media/">
+            <h3 class="blog__title">Relay Media helps publishers get AMP’d</h3>
+            <div class="blog__subtitle">October 7, 2016</div>
+          </a>
+          <a class="blog__tab" href="/case-studies/plista/">
+            <h3 class="blog__title">plista grows publisher revenue &amp; user engagement with AMP</h3>
+            <div class="blog__subtitle">October 7, 2016</div>
+          </a>
+          <a class="blog__tab" href="/case-studies/slate/">
+            <h3 class="blog__title">Slate gets efficient with AMP</h3>
+            <div class="blog__subtitle">October 7, 2016</div>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="blade blade--publishers">
+
+  <div class="container">
+    <div>
+      <h1>Publishers</h1>
+    </div>
+
+    <amp-carousel class="tablet-up"
+      height="300"
+      type="slides"
+      layout="fixed-height">
+
+      <div class="image-grid image-grid--large">
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/abril.png"
+              width="100"
+              height="100"
+              noloading
+              alt="abril">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/asahi.png"
+              width="100"
+              height="100"
+              noloading
+              alt="asahi">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/atlantic_media.png"
+              width="100"
+              height="100"
+              noloading
+              alt="atlantic_media">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/bbc_news.png"
+              width="100"
+              height="100"
+              noloading
+              alt="bbc_news">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/buzzfeed.png"
+              width="100"
+              height="100"
+              noloading
+              alt="buzzfeed">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/condenast.png"
+              width="100"
+              height="100"
+              noloading
+              alt="condenast">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/daily_mail.png"
+              width="100"
+              height="100"
+              noloading
+              alt="daily_mail">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/economist.png"
+              width="100"
+              height="100"
+              noloading
+              alt="economist">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/editora_globo.png"
+              width="100"
+              height="100"
+              noloading
+              alt="editora_globo">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/el_pais.png"
+              width="100"
+              height="100"
+              noloading
+              alt="el_pais">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/fairfax_media.png"
+              width="100"
+              height="100"
+              noloading
+              alt="fairfax_media">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/folha_de_s.paulo.png"
+              width="100"
+              height="100"
+              noloading
+              alt="folha_de_s.paulo">
+          </amp-img>
+
+        </div>
+
+      </div>
+      <div class="image-grid image-grid--large">
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/franzfurter_allgemeine.png"
+              width="100"
+              height="100"
+              noloading
+              alt="franzfurter_allgemeine">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/ft.png"
+              width="100"
+              height="100"
+              noloading
+              alt="ft">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/gannett.png"
+              width="100"
+              height="100"
+              noloading
+              alt="gannett">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/guardian.png"
+              width="100"
+              height="100"
+              noloading
+              alt="guardian">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/hearst.png"
+              width="100"
+              height="100"
+              noloading
+              alt="hearst">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/huffington_post.png"
+              width="100"
+              height="100"
+              noloading
+              alt="huffington_post">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/la_stampa.png"
+              width="100"
+              height="100"
+              noloading
+              alt="la_stampa">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/les_echos.png"
+              width="100"
+              height="100"
+              noloading
+              alt="les_echos">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/mainichi.png"
+              width="100"
+              height="100"
+              noloading
+              alt="mainichi">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/mashable.png"
+              width="100"
+              height="100"
+              noloading
+              alt="mashable">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/mcclatchy.png"
+              width="100"
+              height="100"
+              noloading
+              alt="mcclatchy">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/new_york_times.png"
+              width="100"
+              height="100"
+              noloading
+              alt="new_york_times">
+          </amp-img>
+
+        </div>
+
+      </div>
+      <div class="image-grid image-grid--large">
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/newscorp_australia.png"
+              width="100"
+              height="100"
+              noloading
+              alt="newscorp_australia">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/nine_msn.png"
+              width="100"
+              height="100"
+              noloading
+              alt="nine_msn">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/nrc.png"
+              width="100"
+              height="100"
+              noloading
+              alt="nrc">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/ny_daily_news.png"
+              width="100"
+              height="100"
+              noloading
+              alt="ny_daily_news">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/nypost.png"
+              width="100"
+              height="100"
+              noloading
+              alt="nypost">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/pearson.png"
+              width="100"
+              height="100"
+              noloading
+              alt="pearson">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/sankei.png"
+              width="100"
+              height="100"
+              noloading
+              alt="sankei">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/telegraph.png"
+              width="100"
+              height="100"
+              noloading
+              alt="telegraph">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/time.png"
+              width="100"
+              height="100"
+              noloading
+              alt="time">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/uol.png"
+              width="100"
+              height="100"
+              noloading
+              alt="uol">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/us_news.png"
+              width="100"
+              height="100"
+              noloading
+              alt="us_news">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/vox_media.png"
+              width="100"
+              height="100"
+              noloading
+              alt="vox_media">
+          </amp-img>
+
+        </div>
+
+      </div>
+      <div class="image-grid image-grid--large">
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/wallstreetjournal.png"
+              width="100"
+              height="100"
+              noloading
+              alt="wallstreetjournal">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/washington_post.png"
+              width="100"
+              height="100"
+              noloading
+              alt="washington_post">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/zeit_online.png"
+              width="100"
+              height="100"
+              noloading
+              alt="zeit_online">
+          </amp-img>
+
+        </div>
+
+
+      </div>
+
+    </amp-carousel>
+
+    <amp-carousel class="tablet-down"
+      height="240"
+      type="slides"
+      layout="fixed-height">
+
+      <div class="image-grid image-grid--small">
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/abril.png"
+              width="80"
+              height="80"
+              noloading
+              alt="abril">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/asahi.png"
+              width="80"
+              height="80"
+              noloading
+              alt="asahi">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/atlantic_media.png"
+              width="80"
+              height="80"
+              noloading
+              alt="atlantic_media">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/bbc_news.png"
+              width="80"
+              height="80"
+              noloading
+              alt="bbc_news">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/buzzfeed.png"
+              width="80"
+              height="80"
+              noloading
+              alt="buzzfeed">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/condenast.png"
+              width="80"
+              height="80"
+              noloading
+              alt="condenast">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/daily_mail.png"
+              width="80"
+              height="80"
+              noloading
+              alt="daily_mail">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/economist.png"
+              width="80"
+              height="80"
+              noloading
+              alt="economist">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/editora_globo.png"
+              width="80"
+              height="80"
+              noloading
+              alt="editora_globo">
+          </amp-img>
+
+        </div>
+
+      </div>
+      <div class="image-grid image-grid--small">
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/el_pais.png"
+              width="80"
+              height="80"
+              noloading
+              alt="el_pais">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/fairfax_media.png"
+              width="80"
+              height="80"
+              noloading
+              alt="fairfax_media">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/folha_de_s.paulo.png"
+              width="80"
+              height="80"
+              noloading
+              alt="folha_de_s.paulo">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/franzfurter_allgemeine.png"
+              width="80"
+              height="80"
+              noloading
+              alt="franzfurter_allgemeine">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/ft.png"
+              width="80"
+              height="80"
+              noloading
+              alt="ft">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/gannett.png"
+              width="80"
+              height="80"
+              noloading
+              alt="gannett">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/guardian.png"
+              width="80"
+              height="80"
+              noloading
+              alt="guardian">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/hearst.png"
+              width="80"
+              height="80"
+              noloading
+              alt="hearst">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/huffington_post.png"
+              width="80"
+              height="80"
+              noloading
+              alt="huffington_post">
+          </amp-img>
+
+        </div>
+
+      </div>
+      <div class="image-grid image-grid--small">
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/la_stampa.png"
+              width="80"
+              height="80"
+              noloading
+              alt="la_stampa">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/les_echos.png"
+              width="80"
+              height="80"
+              noloading
+              alt="les_echos">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/mainichi.png"
+              width="80"
+              height="80"
+              noloading
+              alt="mainichi">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/mashable.png"
+              width="80"
+              height="80"
+              noloading
+              alt="mashable">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/mcclatchy.png"
+              width="80"
+              height="80"
+              noloading
+              alt="mcclatchy">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/new_york_times.png"
+              width="80"
+              height="80"
+              noloading
+              alt="new_york_times">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/newscorp_australia.png"
+              width="80"
+              height="80"
+              noloading
+              alt="newscorp_australia">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/nine_msn.png"
+              width="80"
+              height="80"
+              noloading
+              alt="nine_msn">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/nrc.png"
+              width="80"
+              height="80"
+              noloading
+              alt="nrc">
+          </amp-img>
+
+        </div>
+
+      </div>
+      <div class="image-grid image-grid--small">
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/ny_daily_news.png"
+              width="80"
+              height="80"
+              noloading
+              alt="ny_daily_news">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/nypost.png"
+              width="80"
+              height="80"
+              noloading
+              alt="nypost">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/pearson.png"
+              width="80"
+              height="80"
+              noloading
+              alt="pearson">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/sankei.png"
+              width="80"
+              height="80"
+              noloading
+              alt="sankei">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/telegraph.png"
+              width="80"
+              height="80"
+              noloading
+              alt="telegraph">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/time.png"
+              width="80"
+              height="80"
+              noloading
+              alt="time">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/uol.png"
+              width="80"
+              height="80"
+              noloading
+              alt="uol">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/us_news.png"
+              width="80"
+              height="80"
+              noloading
+              alt="us_news">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/vox_media.png"
+              width="80"
+              height="80"
+              noloading
+              alt="vox_media">
+          </amp-img>
+
+        </div>
+
+      </div>
+      <div class="image-grid image-grid--small">
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/wallstreetjournal.png"
+              width="80"
+              height="80"
+              noloading
+              alt="wallstreetjournal">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/washington_post.png"
+              width="80"
+              height="80"
+              noloading
+              alt="washington_post">
+          </amp-img>
+
+        </div>
+
+
+        <div class="image-grid__image">
+
+          <amp-img src="/static/img/publishers/zeit_online.png"
+              width="80"
+              height="80"
+              noloading
+              alt="zeit_online">
+          </amp-img>
+
+        </div>
+
+
+      </div>
+
+    </amp-carousel>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <a href="/" class="footer-link">
+          <amp-img class="footer-image"
+              layout=fixed
+              height=30
+              width=30
+              src="/static/img/logo-blue-standalone.svg"
+              alt="Accelerated Mobile Pages Project">
+          </amp-img>
+          <span>Accelerated Mobile Pages Project</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<amp-install-serviceworker src="/service-worker.js?v2" layout="nodisplay"></amp-install-serviceworker>    </div>
+  </div>
+
+</body>
+</html>

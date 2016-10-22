@@ -1,0 +1,26 @@
+{
+  "url": "https://atom.io/themes/aesthetic-ui",
+  "headers": {
+    "cache-control": "max-age=0, private, must-revalidate",
+    "connection": "close",
+    "content-length": "13857",
+    "content-security-policy": "default-src 'self'; connect-src 'self'; font-src https://github-atom-io-herokuapp-com.global.ssl.fastly.net; frame-src 'self' https://www.youtube.com; img-src https://* 'self' https://github-atom-io-herokuapp-com.global.ssl.fastly.net data:; media-src 'none'; object-src 'self' https://github-atom-io-herokuapp-com.global.ssl.fastly.net; script-src 'self' 'unsafe-inline' https://ssl.google-analytics.com https://www.google-analytics.com https://platform.twitter.com https://github-atom-io-herokuapp-com.global.ssl.fastly.net; style-src 'self' 'unsafe-inline' https://github-atom-io-herokuapp-com.global.ssl.fastly.net;",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "etag": "W/\"32162cc1e8040299ceca646810aef8d8\"",
+    "server": "Cowboy",
+    "set-cookie": "_atom_io_session=V1dYRUxnVS8zVndmWVdndy9meE5vdlBlMjRHWTh3SzM2NE5XWENIcTlwbmZoYjljaGFhR052TXp2TFI3L2ExbEZZYUpMQVlOaDFESkVtRzJXQXRiRkg4eFh2eDZDdjBVNTcraThaNC9HaVoyeVlydWp2c21mL1JBZW12UVI3Sk9veDFReDdXVFJUUm9iSit2OTY3SkZPSFBnWURsTE1Wa1JEMTRubGI0ZFZiMFhJZGZlTW1RZ1hWSms1WWJsWUJBLS1OZnpnNldZdG14ZmJWL0NqcWdHdnBRPT0%3D--90b73eaafe432bdca5638bf3d299a90594246a02; path=/; secure; HttpOnly",
+    "status": "200 OK",
+    "strict-transport-security": "max-age=631152000",
+    "via": "1.1 vegur",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-rack-cache": "miss",
+    "x-request-id": "e7ce51b4-dd91-4066-a3e3-547b28c41ae8",
+    "x-runtime": "0.040644",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://atom.io/themes/aesthetic-ui",
+  "status": 200,
+  "statusText": "OK"
+}

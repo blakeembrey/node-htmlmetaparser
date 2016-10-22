@@ -1,0 +1,34 @@
+{
+  "url": "http://www.cnn.com/",
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "age": "56",
+    "cache-control": "max-age=60",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-length": "31691",
+    "content-security-policy": "default-src 'self' http://*.cnn.com:* https://*.cnn.com:* *.cnn.net:* *.turner.com:* *.ugdturner.com:* *.vgtf.net:*; script-src 'unsafe-inline' 'unsafe-eval' 'self' *; style-src 'unsafe-inline' 'self' * blob:; frame-src 'self' *; object-src 'self' *; img-src 'self' * data: blob:; media-src 'self' * blob:; font-src 'self' *; connect-src 'self' *;",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "fastly-debug-digest": "1e206303e0672a50569b0c0a29903ca81f3ef5033de74682ce90ec9d13686981",
+    "set-cookie": [
+      "countryCode=US; Domain=.cnn.com; Path=/",
+      "geoData=San Diego|CA|92122|US|NA; Domain=.cnn.com; Path=/"
+    ],
+    "vary": "Accept-Encoding",
+    "via": [
+      "1.1 varnish",
+      "1.1 varnish"
+    ],
+    "x-cache": "HIT, HIT",
+    "x-cache-hits": "2, 108",
+    "x-served-by": "cache-iad2134-IAD, cache-sea1923-SEA",
+    "x-servedbyhost": "prd-10-61-5-142.nodes.ec2.dmtio.net",
+    "x-timer": "S1477102246.684102,VS0,VE0",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "http://cnn.com/",
+  "status": 200,
+  "statusText": "OK"
+}

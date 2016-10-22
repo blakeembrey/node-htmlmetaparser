@@ -1,0 +1,25 @@
+{
+  "url": "https://pragprog.com/book/btlang/seven-languages-in-seven-weeks",
+  "headers": {
+    "connection": "Close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:43 GMT",
+    "server": "nginx + Phusion Passenger 5.0.27",
+    "set-cookie": "_prag_production_session32=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTU4NWZkMGJmYWNlMjY0ZDQ3YTJjYjBiNGQ3ODBhZTNjBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUl3Z1lVVnZOa01WTlF0Y3IrTHN0T1hjcGlJL3ZNdTJ5enBHVU0vZU1yWms9BjsARg%3D%3D--47ed613418470972cc1f754385fa484e60458c8d; domain=.pragprog.com; path=/; HttpOnly",
+    "status": "200 OK",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "transfer-encoding": "chunked",
+    "x-app-info": "Unknown@localhost@160713161005-2.1.2",
+    "x-frame-options": "DENY",
+    "x-powered-by": "Phusion Passenger 5.0.27",
+    "x-request-id": "6f150970bacb0e581f96902d24efa5f7",
+    "x-runtime": "0.192092",
+    "x-ua-compatible": "IE=Edge,chrome=1",
+    "x-xrds-location": "https://pragprog.com/pragprog.xrds",
+    "x-xss-protection": "1;"
+  },
+  "originalUrl": "https://pragprog.com/book/btlang/seven-languages-in-seven-weeks",
+  "status": 200,
+  "statusText": "OK"
+}

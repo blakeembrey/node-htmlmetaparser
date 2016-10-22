@@ -1,0 +1,33 @@
+{
+  "url": "https://foursquare.com/v/boba-guys/51abb0a3498eb42c0d5cf324",
+  "headers": {
+    "accept-ranges": "bytes",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:11:10 GMT",
+    "pragma": "no-cache",
+    "server": "nginx",
+    "set-cookie": [
+      "lc=%7B%22lat%22%3A37.76011313617431%2C%22lng%22%3A-122.42111797469043%2C%22loc%22%3A%22San+Francisco%2C+CA%22%2C%22cc%22%3A%22US%22%2C%22longGeoId%22%3A%2272057594043319895%22%7D; Expires=Sat, 22 Oct 2016 04:11:10 GMT; Path=/",
+      "bbhive=MULQYDT1KJ1BTQEXNVNGXKJOSDD3QL%3A%3A1477102270; Expires=Mon, 22 Oct 2018 02:11:10 GMT; Path=/; Domain=.foursquare.com"
+    ],
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding,User-Agent,Accept-Language",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-content-type-options": [
+      "nosniff",
+      "nosniff"
+    ],
+    "x-ex": "fastly_cdn",
+    "x-frame-options": "SAMEORIGIN",
+    "x-served-by": "cache-lax8637-LAX",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://foursquare.com/v/boba-guys/51abb0a3498eb42c0d5cf324",
+  "status": 200,
+  "statusText": "OK"
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-us" class="darkcontent">
+
+<head>
+	<title>PNG optimisation</title>
+	<meta charset="UTF-8">
+	<meta id="description" name="description" content="Exporting an identical image from different design tools results in different file sizes. Why? What can be done to optimise them to reduce downloading time and disk space?" />
+	<link rel="stylesheet" href="/css/bjango.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/fonts.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/svg.css" type="text/css" media="screen, projection" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-title" content="Bjango" />
+	<meta name="msapplication-TileColor" content="#fafafa">
+	<meta name="msapplication-TileImage" content="/images/site-icons/icon-144.png">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="/images/site-icons/icon-152.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/site-icons/icon-180.png">
+	<link href="feed://bjango.com/rss/articles.xml" rel="alternate" title="Bjango Articles RSS" type="application/rss+xml" />
+	<link href="feed://bjango.com/rss/releases.xml" rel="alternate" title="Bjango Releases RSS" type="application/rss+xml" />
+	<link href="http://dribbble.com/bjango/shots.rss" rel="alternate" title="Bjango Dribbble RSS" type="application/rss+xml" />
+	<script>
+		function togglemenu()
+		{
+			var e = document.getElementById('menu');
+			var a = document.getElementById('header-more');
+			if(e.style.webkitTransform == 'scaleY(1)')
+			{
+				e.style.opacity = '0';
+				e.style.webkitTransform = 'scaleY(0)';
+				a.style.webkitTransform = 'rotate(0deg)';
+			}
+			else
+			{
+				e.style.opacity = '1';
+				e.style.webkitTransform = 'scaleY(1)';
+				a.style.webkitTransform = 'rotate(180deg)';
+			}
+		}
+	</script>
+	<script>
+		var _gaq=[['_setAccount','UA-1152890-2'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</head>
+
+<body>
+<header>
+	<ul>
+		<li id="header-apps"><a href="/apps/">Apps</a></li>
+		<li id="header-articles"><a href="/articles/">Articles</a></li>
+		<li id="header-home"><a href="/">Home</a></li>
+		<li id="header-help"><a href="/help/">Help</a></li>
+		<li id="header-contact"><a href="/contact/">Contact</a></li>
+		<li id="header-more" onclick="togglemenu()"></li>
+	</ul>
+</header>
+<div id="menu">
+	<ul>
+		<li><a href="/apps/">Apps</a></li>
+		<li><a href="/articles/">Articles</a></li>
+		<li><a href="/help/">Help</a></li>
+		<li><a href="/contact/">Contact</a></li>
+	</ul>
+</div>
+<section>
+
+
+<article>
+
+
+
+<h1 id="png-optimisation">PNG optimisation</h1>
+
+<h2 id="exporting-an-identical-image-from-different-design-tools-results-in-different-file-sizes-why-what-can-be-done-to-optimise-them-to-reduce-downloading-time-and-disk-space">Exporting an identical image from different design tools results in different file sizes. Why? What can be done to optimise them to reduce downloading time and disk space?</h2>
+
+<p>To test, we can use an image that is a single pixel. A 1×1 white pixel PNG shows the efficiency of how various tools package their exports, and if metadata or additonal data chunks are included. Here’s how the various tools and common export methods rank. Sizes are in bytes and smaller is better.</p>
+
+<p><img src="/images/articles/pngoptimisation/graph-all.png" alt="" /></p>
+
+<p>Photoshop’s save as weighs in at 18183 bytes, using the default settings. Removing the ICC profile brings it down to 14994 bytes. It is saving lots of non-image data, which is ideal for photos and in many other situations, but is a bad idea for production assets in software. If we used this method to save the UI images for <a href="/mac/istatmenus/">iStat Menus</a>, it would add approximately 17 MB to the app’s size with no benefit and no visual difference.</p>
+
+<p>Affinity Designer’s default exports are a bit heavy, too.</p>
+
+<p>The graph is easier to read with Photoshop’s save as and Affinity Designer’s default settings removed.</p>
+
+<p><img src="/images/articles/pngoptimisation/graph-nosaveas.png" alt="" /></p>
+
+<p>We’re now looking at more reasonable sizes. Only 113 bytes separates the best and worst. You can also see that the differences are minor enough that this isn’t a reason to choose a design tool — all are acceptable. This exploration is more about curiousity than anything else. Curiosity, and determining the best settings to use.</p>
+
+<p>Running the files through <a href="https://imageoptim.com/mac">ImageOptim</a> helps a lot, but the results still vary. ImageOptim is shown in red, lossy compression disabled.</p>
+
+<p><img src="/images/articles/pngoptimisation/graph-imageoptim.png" alt="" /></p>
+
+<h3 id="photoshop">Photoshop</h3>
+
+<p>Photoshop contains a lot of different ways to export PNGs. The most recent additions, Export As and Quick Export as PNG, are incredibly tidy. <a href="http://cloudinary.com/blog/one_pixel_is_worth_three_thousand_words">68 bytes is pretty much as good as you’re going to get</a> for a 1×1 pixel white PNG.</p>
+
+<p><img src="/images/articles/pngoptimisation/graph-photoshop.png" alt="" /></p>
+
+<p>Generator exported PNGs contain a lot of unneeded additional chunks. What purpose does storing date modified, background colour and physical size have? To my knowledge, they’re not used on any popular platform. We’re only talking about 113 bytes per image, so it’s not too bad though.</p>
+
+<p><img src="/images/articles/pngoptimisation/pngchunks-photoshop.png" alt="" /></p>
+
+<p>If you’re using save for web, you’ll probably want to disable <em>Embed Color Profile</em> and set Metadata to <em>None</em> — they serve no purpose for user interface images (there are exceptions, but they are rare).</p>
+
+<p><img src="/images/articles/pngoptimisation/settings-photoshop.png" alt="" /></p>
+
+<h3 id="sketch">Sketch</h3>
+
+<p>If you’d like your Sketch-generated PNGs to be 3 bytes smaller, disable save for web.</p>
+
+<p><img src="/images/articles/pngoptimisation/graph-sketch.png" alt="" /></p>
+
+<p>Save for web includes a gamma chunk, which is actually 3 bytes longer than the sRGB chunk in the non-save for web version.</p>
+
+<p><img src="/images/articles/pngoptimisation/pngchunks-sketch.png" alt="" /></p>
+
+<h3 id="affinity-designer">Affinity Designer</h3>
+
+<p>With some settings tweaks, Affinity Designer’s exported file sizes are okay.</p>
+
+<p><img src="/images/articles/pngoptimisation/graph-affinitydesigner.png" alt="" /></p>
+
+<p>The default export settings in Affinity Designer include 3400 or so bytes that aren’t needed for user interface images (iTXt, iCCP, pHYs and other chunks).</p>
+
+<p><img src="/images/articles/pngoptimisation/pngchunks-affinitydesigner.png" alt="" /></p>
+
+<p>Clicking <em>More</em> in the export sheet opens some important additional options. The pixel format can be set to 8-bit, ICC profiles can be disabled and metadata can be removed.</p>
+
+<p><img src="/images/articles/pngoptimisation/settings-affinitydesigner.png" alt="" /></p>
+
+<h3 id="illustrator">Illustrator</h3>
+
+<p>There isn’t much of a story to tell with Illustrator’s PNG exports — the file sizes are average and there isn’t really anything that can be done to improve them.</p>
+
+<p><img src="/images/articles/pngoptimisation/graph-illustrator.png" alt="" /></p>
+
+<p>Including “Software” and “Adobe Imageready” as text in the PNGs doesn’t help.</p>
+
+<p><img src="/images/articles/pngoptimisation/pngchunks-illustrator.png" alt="" /></p>
+
+<h3 id="wide-and-deep-colour">Wide and deep colour</h3>
+
+<p>It’s entirely possible some UI assets may require 16-bits per channel, or require an embeded ICC profile, especially for wide gamut support or in cases where non-sRGB assets are needed.</p>
+
+<p>However, in 2016, almost all platforms and devices assume that images with no ICC profile are sRGB, and it is exceptionally rare to need to embed an sRGB profile or other profile, for web or user interface images.</p>
+
+<h3 id="png8-is-great">PNG8 is great</h3>
+
+<p>The indexed colour, PNG8 versions of the images above are all larger than their PNG24, RGBA counterparts. That is because in this extreme example of a 1×1 pixel image, the information to descibe the colour palette is larger than the image data itself. In most cases, if you only need 256 or less unique colours, an indexed colour image will be smaller.</p>
+
+<p>This article isn’t intended to be a conversation about using PNGs vs SVGs vs drawing in code. That’s an entirely different and interesting topic. Just know that many websites, iOS apps, Android apps, and macOS apps use PNGs extensively or exclusively, so optimising them is a good thing.</p>
+
+<p><a href="http://opcoders.com/inspectpng">InspectPNG</a> was used for the analysis above. PNG files were saved using Photoshop CC 2015.5.0, Illustrator CC 2015.3, Sketch 39.1 (31720), and Affinity Designer 1.4.2. It is possible future versions will improve PNG export.</p>
+
+<p><small>Published 1 August 2016.</small></p>
+
+</article>
+
+
+<div id="sidebar">
+	<h4>Recommended</h4>
+	<p><a href="/articles/appdesignworkflow/">My app design workflow</a></p>
+	<p><a href="/articles/icondesignworkflow/">My icon design workflow</a></p>
+	<p><a href="/articles/designdebugging/">Design debugging</a></p>
+	<p><a href="/articles/idontusepdfs/">Why I don’t use PDFs for iOS assets</a></p>
+	<p><a href="/articles/adjustmentlayers/">Creating palettes using adjustment layers</a></p>
+	<p><a href="/articles/photoshop/">Colour management and UI design</a></p>
+	<p><a href="/articles/blendif/">Blend if</a></p>
+	<p><a href="/articles/ppiisatag/">Pixels per inch is just a tag</a></p>
+	<p><a href="/articles/everythingisagrid/">Everything is a grid</a></p>
+	<hr>
+	<h4>Design</h4>
+	<p><a href="/articles/greyprint/">Greyprint</a></p>
+	<p><a href="/articles/pngoptimisation/">PNG optimisation</a></p>
+	<p><a href="/articles/designdebugging/">Design debugging</a></p>
+	<p><a href="/articles/interactiondensity/">Interaction density</a></p>
+	<p><a href="/articles/1pxisnotenough/">1px is not enough</a></p>
+	<p><a href="/articles/idontusepdfs/">Why I don’t use PDFs for iOS assets</a></p>
+	<p><a href="/articles/adjustmentlayers/">Creating palettes using adjustment layers</a></p>
+	<p><a href="/articles/exploration/">Exploration</a></p>
+	<p><a href="/articles/colorpicker/">Images and the OS X Color Picker</a></p>
+	<p><a href="/articles/appdesignworkflow/">My app design workflow</a></p>
+	<p><a href="/articles/icondesignworkflow/">My icon design workflow</a></p>
+	<p><a href="/articles/extractingcolours/">Extracting colours with alpha</a></p>
+	<p><a href="/articles/min-device-pixel-ratio/">Device pixel density tests</a></p>
+	<p><a href="/articles/soulver/">Using Soulver for design</a></p>
+	<p><a href="/articles/appstoredescriptionpreviewer/">App Store description previewer</a></p>
+	<p><a href="/articles/justlikeprint/">Just like print design</a></p>
+	<p><a href="/articles/algebraaspaths/">Using algebra to create paths</a></p>
+	<p><a href="/articles/subpixeltext/">Sub-pixel text rendering</a></p>
+	<p><a href="/articles/ppiisatag/">Pixels per inch is just a tag</a></p>
+	<p><a href="/articles/everythingisagrid/">Everything is a grid</a></p>
+	<p><a href="/articles/designingforretina/">Designing for Retina display</a></p>
+	<p><a href="/articles/designingforretina2/">Designing for Retina display, part two</a></p>
+	<hr>
+	<h4>Skala</h4>
+	<p><a href="/articles/skalaartboards/">Why Skala won’t have artboards</a></p>
+	<p><a href="/articles/skaladec2014/">Skala progress, December 2014</a></p>
+	<hr>
+	<h4>Photoshop</h4>
+	<p><a href="/articles/batchprocessing/">Batch processing with Generator</a></p>
+	<p><a href="/articles/blendifmasking/">Using blend if for masking</a></p>
+	<p><a href="/articles/magictricks/">Magic tricks</a></p>
+	<p><a href="/articles/photoshopcc2015/">Photoshop CC 2015 improvements</a></p>
+	<p><a href="/articles/photoshopgradientpositioning/">Photoshop’s gradient positioning</a></p>
+	<p><a href="/articles/max2014/">Adobe MAX 2014</a></p>
+	<p><a href="/articles/blendif/">Blend if</a></p>
+	<p><a href="/designresources/">Photoshop Actions &amp; Workflows</a></p>
+	<p><a href="/articles/photoshop/">Colour management and UI design</a></p>
+	<p><a href="/articles/photoshopcc2014smartobjects/">2014: Smart Objects and Layer Comps</a></p>
+	<p><a href="/articles/gradientmaps/">Gradient maps</a></p>
+	<p><a href="/articles/photoshopcs6strokes/">Strokes in Photoshop CS6</a></p>
+	<p><a href="/articles/photoshopcs6text/">Text in Photoshop CS6</a></p>
+	<p><a href="/articles/photoshopcs6masking/">Masking in Photoshop CS6</a></p>
+	<p><a href="/articles/photoshopcs6vectorshapes/">Vector shapes in Photoshop CS6</a></p>
+	<p><a href="/articles/layertags/">Layer tags</a></p>
+	<p><a href="/articles/smartobjects/">Smart Objects</a></p>
+	<p><a href="/articles/linkedsmartobjects/">Linked Smart Objects</a></p>
+	<p><a href="/articles/exporting/">Exporting from Photoshop</a></p>
+	<p><a href="/articles/pixelrotation/">Pixel perfect rotation</a></p>
+	<p><a href="/articles/pixelpasting/">Pixel perfect vector pasting</a></p>
+	<p><a href="/articles/pixelnudging/">Pixel perfect vector nudging</a></p>
+	<p><a href="/articles/gradients/">Gradients</a></p>
+	<p><a href="/articles/photoshopcs6/">Photoshop CS6 improvements</a></p>
+	<p><a href="/articles/scalepatternsto100/">Scale Patterns to 100% script</a></p>
+	<p><a href="/articles/illustratorandappdesign/">Illustrator and app design</a></p>
+	<p><a href="/articles/roundrect/">Photoshop roundrect roundup</a></p>
+	<p><a href="/articles/howmanyphotoshoplayers/">How many layers are in my PSD?</a></p>
+	<hr>
+	<h4>Really old</h4>
+	<p><a href="/articles/ituneslinks/">Dissecting iTunes and App Store links</a><br>
+	<p><a href="/articles/ichat/">What if iChat was one window?</a></p>
+	<p><a href="/articles/droboicon/">A new Drobo Dashboard icon</a></p>
+	<p><a href="/articles/photoshopcs6wishlist/">Photoshop CS6 wish list</a></p>
+	<p><a href="/articles/extrapixels/">What to do with all those extra pixels?</a></p>
+	<p><a href="/articles/noise/">Noise and textures</a></p>
+	<p><a href="/articles/pngcompression/">PNG compression and iOS apps</a></p>
+	<hr>
+	<h4>About the author</h4>
+	<p>Marc Edwards is the founder and designer at Bjango. Follow <a href="http://twitter.com/marcedwards">@marcedwards</a> for design-related Tweets. To be notified of new articles, <a href="feed://bjango.com/rss/articles.xml">subscribe via&nbsp;RSS</a>.</p>
+</div>
+
+</section>
+
+<div id="footergap"></div>
+
+<footer>
+	<ul>
+		<li id="twitter"><a href="https://twitter.com/bjango">Bjango on Twitter</a></li>
+		<li id="dribbble"><a href="http://dribbble.com/bjango">Bjango on Dribbble</a></li>
+		<li id="github"><a href="https://github.com/bjango">Bjango on GitHub</a></li>
+		<li id="designresources"><a href="/designresources/">Bjango Design Resources</a></li>
+		<li id="rss"><a href="/follow/">RSS Feeds</a></li>
+	</ul>
+	<p>
+		&copy;<script type="text/javascript">document.write(new Date().getFullYear())</script><noscript>2016</noscript> Bjango Pty Ltd. All&nbsp;rights&nbsp;reserved. ABN&nbsp;88&nbsp;062&nbsp;334&nbsp;580.</p>
+</footer>
+
+</body>
+</html>

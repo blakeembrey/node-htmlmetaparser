@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<!-- Use the latest IE engine to render the page and execute JavaScript -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://stratechery.com/xmlrpc.php">
+
+	<!-- Typekit -->
+	<script src="//use.typekit.net/qcf4iyw.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="https://stratechery.com/wp-content/themes/stratechery/images/favicon.ico" />
+	<link rel="icon" type="image/png" href="https://stratechery.com/wp-content/themes/stratechery/images/StratecheryLogo-5757.png" />
+
+	<!-- Desktop IE Pinning -->
+	<link rel="shortcut icon" type="image/ico" href="https://stratechery.com/wp-content/themes/stratechery/images/IE/favicon.ico" />
+	<meta name="application-name" content="Stratechery" />
+	<meta name="msapplication-starturl" content="http://stratechery.com/" />
+	<meta name="msapplication-navbutton-color" content="#fea634" />
+	<meta name="msapplication-window" content="width=1024;height=768" />
+	<meta name="msapplication-tooltip" content="Stratechery by Ben Thompson" />
+
+	<!-- Windows 8 Pinning -->
+	<meta name="application-name" content="stratechery"/>
+	<meta name="msapplication-TileColor" content="#fea634"/>
+	<meta name="msapplication-square70x70logo" content="https://stratechery.com/wp-content/themes/stratechery/images/IE/tiny.png"/>
+	<meta name="msapplication-square150x150logo" content="https://stratechery.com/wp-content/themes/stratechery/images/IE/square.png"/>
+	<meta name="msapplication-wide310x150logo" content="https://stratechery.com/wp-content/themes/stratechery/images/IE/wide.png"/>
+	<meta name="msapplication-square310x310logo" content="https://stratechery.com/wp-content/themes/stratechery/images/IE/large.jpg"/>
+	<meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=http://stratechery.com/feed/&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=http://stratechery.com/feed/&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=http://stratechery.com/feed/&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=http://stratechery.com/feed/&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=http://stratechery.com/feed/&amp;id=5; cycle=1"/>
+
+	<!-- iDevices -->
+	<!-- For third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://stratechery.com/wp-content/themes/stratechery/images/iOS/e-144144.png">
+	<!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://stratechery.com/wp-content/themes/stratechery/images/iOS/e-114114.png">
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://stratechery.com/wp-content/themes/stratechery/images/iOS/e-7272.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="https://stratechery.com/wp-content/themes/stratechery/images/iOS/e-5757.png">
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-39065009-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+	<title>Google, Uber, and the Evolution of Transportation-as-a-Service &#8211; Stratechery by Ben Thompson</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Stratechery by Ben Thompson &raquo; Feed" href="https://stratechery.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Stratechery by Ben Thompson &raquo; Comments Feed" href="https://stratechery.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/stratechery.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='memberful-wp-profile-widget-css'  href='https://stratechery.com/wp-content/plugins/memberful-wp/stylesheets/widget.css?ver=1.22.3' type='text/css' media='all' />
+<link rel='stylesheet' id='stratechery-bigfoot-css'  href='https://stratechery.com/wp-content/themes/stratechery/css/bigfoot.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='stratechery-membership-css'  href='https://stratechery.com/wp-content/themes/stratechery/css/membership.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='stratechery-style-css'  href='https://stratechery.com/wp-content/themes/stratechery/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='https://stratechery.com/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://stratechery.com/wp-content/plugins/jetpack/css/jetpack.css?ver=4.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://stratechery.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://stratechery.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://stratechery.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://stratechery.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://stratechery.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='A Review of Apple Pay and Apple Leverage, Apple Versus Australia&#8217;s Banks, Consumers and Competition' href='https://stratechery.com/2016/a-review-of-apple-pay-and-apple-leverage-apple-versus-australias-banks-consumers-and-competition/' />
+<link rel='next' title='Apple&#8217;s EU Tax Problem, How Apple Pays Taxes…Eventually, Everyone is a Loser' href='https://stratechery.com/2016/apples-eu-tax-problem-how-apple-pays-taxeseventually-everyone-is-a-loser/' />
+<link rel="canonical" href="https://stratechery.com/2016/google-uber-and-the-evolution-of-transportation-as-a-service/" />
+<link rel='shortlink' href='https://stratechery.com/?p=2258' />
+<link rel="alternate" type="application/json+oembed" href="https://stratechery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstratechery.com%2F2016%2Fgoogle-uber-and-the-evolution-of-transportation-as-a-service%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://stratechery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstratechery.com%2F2016%2Fgoogle-uber-and-the-evolution-of-transportation-as-a-service%2F&#038;format=xml" />
+<script type="text/javascript">
+  window.MemberfulOptions = {
+    site: "https://stratechery.memberful.com",
+    intercept: [
+            "http://stratechery.com?memberful_endpoint=auth",
+            "https://stratechery.com?memberful_endpoint=auth",
+          ],
+    memberSignedIn: false  };
+
+  (function() {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://d35xxde4fgg0cx.cloudfront.net/assets/embedded.js';
+
+    setup = function() { window.MemberfulEmbedded.setup(); }
+
+    if(s.addEventListener) {
+      s.addEventListener("load", setup, false);
+    } else {
+      s.attachEvent("onload", setup);
+    }
+
+    ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+  })();
+</script>
+		<style type="text/css">
+						ol.footnotes li {list-style-type:decimal;}
+						ol.footnotes{font-size:0.8em; color:#666666;}		</style>
+		
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Google, Uber, and the Evolution of Transportation-as-a-Service" />
+<meta property="og:url" content="https://stratechery.com/2016/google-uber-and-the-evolution-of-transportation-as-a-service/" />
+<meta property="og:description" content="The competition between Uber and Google has broken out into the open: who has the advantage in the evolution of transportation-as-a-service, and who will likely win?" />
+<meta property="article:published_time" content="2016-08-31T12:48:44+00:00" />
+<meta property="article:modified_time" content="2016-09-01T18:43:52+00:00" />
+<meta property="og:site_name" content="Stratechery by Ben Thompson" />
+<meta property="og:image" content="https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-288-1024x768.png" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@stratechery" />
+<meta name="twitter:card" content="summary" />
+
+<style id="custom-css-css">.memberful-profile-gravatar{display:none}.memberful-profile-name{margin:0!important}aside#memberful_wp_profile_widget-2{margin-bottom:0}.widget_recent_entries li{margin-bottom:0}.gravity_field input{border:1px solid #ccc}.ginput_container textarea{border:1px solid #ccc}input.gform_button:hover{color:#fff;background-color:#faa634}input.gform_button{color:#faa634;background-color:#fff;border:1px solid #faa634;font-weight:700}input#pwbox-1835{border:1px solid #ccc}input[type="submit"]{color:#faa634;background-color:#fff;border:1px solid #faa634;font-weight:700}.menu-toggle{right:30px;top:20px;height:32px;line-height:0;border:1px solid #faa634;color:#faa634;background-color:#fff}.toggled .menu-toggle{background-color:#faa634;color:#fff}@media only screen
+and (max-width : 799px){body,button,input,optgroup,select,textarea{font-size:17px;font-size:1.0625rem}}#infinite-handle span{border:1px solid #faa634;color:#faa634;font-weight:700;text-align:center;background-color:#fff}.planContainer .button{padding:10px!important;background:#fff;border:2px solid #fea634;width:250px}.planContainer .button:hover{background:#fea634;color:#fff !important}.planContainer .button:hover a{color:#fff}</style>
+</head>
+
+<body class="single single-post postid-2258 single-format-standard">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">
+		Skip to content	</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="grid">
+			<div class="row">
+				<div class="twelve column">
+					<div class="site-branding">
+						<h1 class="site-title">
+							<a href="https://stratechery.com/" rel="home">
+								<span>Stratechery by Ben Thompson</span>
+							</a>
+						</h1><!-- .site-title -->
+													<p class="site-description">On the business, strategy, and impact of technology.</p>
+											</div><!-- .site-branding -->
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span>Menu</span></button>
+						<div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-1611" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1611"><a href="http://stratechery.com/about/">About</a></li>
+<li id="menu-item-1613" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1613"><a href="http://exponent.fm/">Exponent Podcast</a></li>
+<li id="menu-item-1645" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1645"><a href="https://forum.stratechery.com/login">Member Forum</a></li>
+</ul></div>					</nav><!-- #site-navigation -->
+					<div class="widget-area">
+						<aside id="nav_menu-2" class="widget widget_nav_menu"><h1 class="widget-title">By Ben Thompson</h1><div class="menu-primary-container"><ul id="menu-primary" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1611"><a href="http://stratechery.com/about/">About</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1613"><a href="http://exponent.fm/">Exponent Podcast</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1645"><a href="https://forum.stratechery.com/login">Member Forum</a></li>
+</ul></div></aside><aside id="nav_menu-4" class="widget widget_nav_menu"><h1 class="widget-title">Follow</h1><div class="menu-follow-container"><ul id="menu-follow" class="menu"><li id="menu-item-1641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1641"><a href="http://stratechery.com/feed/">RSS Feed</a></li>
+<li id="menu-item-1642" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1642"><a href="http://twitter.com/stratechery">Twitter</a></li>
+<li id="menu-item-1643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643"><a href="https://stratechery.memberful.com/register/">Articles by Email</a></li>
+</ul></div></aside><aside id="nav_menu-3" class="widget widget_nav_menu"><h1 class="widget-title">Subscription</h1><div class="menu-subscribe-container"><ul id="menu-subscribe" class="menu"><li id="menu-item-1608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1608"><a href="https://stratechery.com/membership/">About The Daily Update</a></li>
+<li id="menu-item-1630" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1630"><a href="https://stratechery.memberful.com/checkout?plan=5749">Subscribe Monthly</a></li>
+<li id="menu-item-1609" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1609"><a href="https://stratechery.memberful.com/checkout?plan=5748">Subscribe Annually</a></li>
+</ul></div></aside><aside id="memberful_wp_profile_widget-2" class="widget widget_memberful_wp_profile_widget">  <h1 class="widget-title">Account</h1>  <a href="https://stratechery.com?memberful_endpoint=auth" class="memberful-sign-in-link">Sign in</a></aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="memberful-rss-notice" href="https://stratechery.com/membership/">Subscribe</a> to access the Daily Update via email, RSS, or the web</div>
+		</aside><aside id="rpjc_widget_cat_recent_posts-2" class="widget rpjc_widget_cat_recent_posts widget_recent_entries"><h1 class="widget-title">Recent Articles</h1><ul><li><a href="https://stratechery.com/2016/the-it-era-and-the-internet-revolution/">The IT Era and the Internet Revolution</a></li><li><a href="https://stratechery.com/2016/chat-and-the-consumerization-of-it/">Chat and the Consumerization of IT</a></li><li><a href="https://stratechery.com/2016/google-and-the-limits-of-strategy/">Google and the Limits of Strategy</a></li></ul></aside><aside id="nav_menu-5" class="widget widget_nav_menu"><h1 class="widget-title">Archives</h1><div class="menu-archives-container"><ul id="menu-archives" class="menu"><li id="menu-item-1772" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1772"><a href="https://stratechery.com/category/articles/">Articles</a></li>
+<li id="menu-item-1773" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1773"><a href="https://stratechery.com/category/daily-email/">Daily Updates</a></li>
+<li id="menu-item-1775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1775"><a href="https://stratechery.com/archives-date/">By Date</a></li>
+</ul></div></aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://stratechery.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside>					</div>
+				</div><!-- .twelve -->
+			</div><!-- .row -->
+		</div><!-- .grid -->
+	</header><!-- #masthead -->
+<div id="content" class="site-content">
+	<div class="grid">
+		<div class="row">
+			<div class="nine column content-area">
+				<div id="primary">
+					<main id="main" class="site-main" role="main">
+
+					
+						<article id="post-2258" class="post-2258 post type-post status-publish format-standard hentry category-articles">
+	<header class="entry-header">
+		<h1 class="entry-title">Google, Uber, and the Evolution of Transportation-as-a-Service</h1>
+		<div class="entry-meta">
+			<span class="posted-on"><span class="screen-reader-text">Posted on</span><time class="entry-date published" datetime="2016-08-31T05:48:44+00:00">Wednesday, August 31, 2016</time><time class="updated" datetime="2016-09-01T11:43:52+00:00">Thursday, September 1, 2016</time></span> <span class="byline"><span class="author vcard"><span class="screen-reader-text">Author</span> by <a class="url fn n" href="https://stratechery.com/author/stratechery/">Ben Thompson</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>In the eight months since I wrote <a href="https://stratechery.com/2016/cars-and-the-future/">Cars and the Future</a>, there has been an explosion in news about the future of transportation, much of it in the last few weeks:</p>
+<ul>
+<li>Ford <a href="https://media.ford.com/content/fordmedia/fna/us/en/news/2016/08/16/ford-targets-fully-autonomous-vehicle-for-ride-sharing-in-2021.html">announced plans</a> for its own car-sharing service built around self-driving Fords</li>
+<li>Elon Musk penned a <a href="https://stratechery.com/2016/follow-up-dollar-shave-club-cpg-and-amazon-teslas-master-plan-part-deux/">second master plan</a> envisioning a future car-sharing service built around self-driving Teslas</li>
+<li>Nutonomy <a href="https://app.ft.com/cms/s/2d6bdb28-6a7a-11e6-a0b1-d87a9fea034f">launched a trial in Singapore</a> of its own ride-sharing service built around Renault and Mitsubishi vehicles modified to be self-driving</li>
+<li>Uber <a href="http://www.bloomberg.com/news/features/2016-08-18/uber-s-first-self-driving-fleet-arrives-in-pittsburgh-this-month-is06r7on">announced its own self-driving trial in Pittsburgh</a> in partnership with Volvo. Uber also <a href="http://www.nytimes.com/2016/08/19/technology/uber-self-driving-cars-otto-trucks.html?_r=0">acquired self-driving startup Otto</a>, founded by former members of Google&#8217;s self-driving team</li>
+<li>And, speaking of Google, Alphabet executive David Drummond <a href="http://www.wsj.com/articles/alphabet-executive-david-drummond-leaves-uber-board-1472510812">stepped down from Uber&#8217;s board</a> a day before the company <a href="http://www.wsj.com/article_email/google-takes-on-uber-with-new-ride-share-service-1472584235-lMyQjAxMTA2NDM4MDkzOTAxWj">announced an expansion of its Waze-based ride-sharing service</a> from Israel to Uber&#8217;s home city of San Francisco</li>
+</ul>
+<p>These five bits of news are presented in roughly the order they matter; Uber and Google matter most of all.</p>
+<h4>From UberX to Google&#8217;s Self-Driving Cars</h4>
+<p>When thinking about the future of transportation-as-a-service, it&#8217;s tempting to draw a straight line from UberX to Google self-driving cars:</p>
+<p><a href="https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-287.png"><img src="https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-287-1024x768.png" alt="stratechery Year One - 287" width="640" height="480" class="aligncenter size-large wp-image-2259" srcset="https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-287-1024x768.png 1024w, https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-287-300x225.png 300w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>Uber CEO Travis Kalanick can certainly see the connection; he told <a href="http://www.bloomberg.com/news/features/2016-08-18/uber-s-first-self-driving-fleet-arrives-in-pittsburgh-this-month-is06r7on">Bloomberg</a> earlier this month:</p>
+<blockquote><p>
+  “The minute it was clear to us that our friends in Mountain View were going to be getting in the ride-sharing space, we needed to make sure there is an alternative [self-driving car],” says Kalanick. “Because if there is not, we’re not going to have any business.” Developing an autonomous vehicle, he adds, “is basically existential for us.”
+</p></blockquote>
+<p>The problem for Uber is that their dominant position in the ride-sharing market is predicated on the two-sided market of riders and drivers, which I explained two years ago in <a href="https://stratechery.com/2014/uber-fights/">Why Uber Fights</a>:</p>
+<blockquote><p>
+  Driver and rider markets do interact, and it’s that interaction that creates a winner-take-all dynamic…In the case of Uber and Lyft, ride-sharing is (theoretically) habitual, both companies will ensure the prices are similar, and the primary means of differentiation is car liquidity, which works in the favor of the larger service. Over time it is reasonable to assume that the majority player will become dominant.
+</p></blockquote>
+<p>That is indeed how the ride-sharing market has played out: as of <a href="http://www.bloomberg.com/news/articles/2016-04-14/lyft-is-gaining-on-uber-as-it-spends-big-for-growth">earlier this year</a> Uber provided over 80% of rides in the United States (the only market Lyft competes in), despite Lyft&#8217;s determination to spend hundreds of millions in subsidies and free rides. And, on the flipside, Uber <a href="https://stratechery.com/2016/didi-acquires-uber-china-why-uber-china-was-doomed-was-uber-china-worth-it/">left China earlier this month</a>, tired of spending their own billions in a futile attempt to displace the dominant Didi.</p>
+<p>Self-driving cars change these market dynamics in two important ways: first, drivers are no longer a scarce resource, which means there are no longer two-sided market forces at play. Second, the single best way to change consumer habits and preferences is through lower prices, and eliminating drivers is the most obvious way to do just that.</p>
+<p>Small wonder then that Uber is investing so heavily in self-driving cars, including <a href="http://www.wsj.com/articles/is-uber-a-friend-or-foe-of-carnegie-mellon-in-robotics-1433084582">hiring a huge number of Carnegie Mellon researchers</a> (thus the Pittsburgh location of the self-driving trial), as well as paying ~$680 million for Otto.</p>
+<p>Kalanick told <a href="http://www.businessinsider.com/travis-kalanick-interview-on-self-driving-cars-future-driver-jobs-2016-8">Business Insider</a> that Uber is still behind:</p>
+<blockquote><p>
+  I think we&#8217;re catching up. Look at some of the folks and how long they&#8217;ve been working on it. Lots of respect for an area that they&#8217;ve pioneered, and we&#8217;ve got to do some catch-up. And that&#8217;s OK, but it means we gotta wake up early and we&#8217;re going to bed late.
+</p></blockquote>
+<p>I&#8217;ll take Kalanick at his word; Uber, though, still has some very important advantages that make this race a bit more complicated than it seems, and the journey I depicted above a lot less linear than it may appear.</p>
+<h4>The Five Components of Transportation-as-a-Service</h4>
+<p>Drivers and riders are important to understanding the future of transportation-as-a-service (TaaS), but they are not the only pieces that matter — and not the only areas where Uber still has an advantage. I see five components that really matter:</p>
+<ul>
+<li>Drivers</li>
+<li>Cars</li>
+<li>Mapping</li>
+<li>Routing</li>
+<li>Riders</li>
+</ul>
+<p>The shift from an UberX model to self-driving cars will require changes in every component.</p>
+<p><strong>TaaS 1.0: UberX</strong></p>
+<p>It&#8217;s clear why drivers and riders are the most important pieces here: drivers bring their own cars, existing mapping solutions are good enough, and routing is <em>relatively</em> simple. To be sure, that <em>relatively</em> modifier is important: managing millions of matches a day between drivers and riders is a hugely complicated undertaking, and the fact that Uber has been working on the underlying algorithms for years is a big advantage. It&#8217;s also an advantage that will become ever more critical.</p>
+<p><strong>TaaS 1.5: UberPool</strong></p>
+<p>UberPool is arguably the most important service Uber has launched to date, and looking at the pieces that go into it explain why:</p>
+<ul>
+<li>Drivers: the same as UberX</li>
+<li>Cars: the same as UberX</li>
+<li>Mapping: the same as UberX</li>
+<li>Routing: massive increase in complexity over UberX</li>
+<li>Riders: change in expectations (and behavior with regard to pick-up and drop-off points) relative to UberX</li>
+</ul>
+<p>It&#8217;s the routing piece that is the most important; Uber investor Bill Gurley has called the development of the necessary algorithms to make UberPool a success a <a href="http://abovethecrowd.com/2015/01/30/ubers-new-bhag-uberpool/">BHAG: Big Hairy Audacious Goal</a>, and it&#8217;s an investment that will be critical for Uber going forward.</p>
+<p>First, as Gurley&#8217;s title suggests, getting the algorithms behind UberPool right is an incredibly complex problem. It&#8217;s basically the <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">traveling salesman problem</a> on steroids, and the only real way to solve it is to slowly but surely work out heuristics that work in real world situations.<sup><a href="#footnote_0_2258" id="identifier_0_2258" class="footnote-link footnote-identifier-link" title="Machine learning is relatively ineffective at solving this specific type of problem">1</a></sup> Combine that reality with the fact that Uber has a dominant share of drivers and riders, giving the company sufficient liquidity to offer UberPool in multiple markets, and the result is that Uber is undoubtedly far ahead of competitors — present and potential — in solving these problems.</p>
+<p>The reason this matters is that building a self-driving car is like building a smartphone: it&#8217;s a hard problem, to be sure, but it&#8217;s only half of the equation when it comes to transportation-as-a-service. After all, just how useful would an iPhone or Android device be without the cloud? Similarly, a transportation-as-a-service company built around self-driving cars not only needs cars that can drive themselves, but an entire infrastructure on the back-end that tells those cars exactly where to go in a way that maximizes what will undoubtedly be a massive capital investment in the cars themselves.</p>
+<p>This is likely the motivation behind Google&#8217;s Waze-based ride-sharing service. Kalanick may be right that Google is ahead when it comes to self-driving cars, but they have a lot of catching up to do when it comes to telling those cars where to go.</p>
+<p><strong>TaaS 2.0: Human Self-Driving Cars</strong></p>
+<p>One of the more interesting facts about the new Waze service is that it is true ride-sharing: Google is capping the price at 54 cents a mile, which means it&#8217;s impossible to make money by simply driving-for-hire. More prosaically, that happens to be the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announced">IRS standard mileage rate</a>, which means Google can plausibly claim their service is facilitating, well, ride-sharing and the sharing of gas money without all of the complications of hiring contractors.</p>
+<p>Still, true ride-sharing is itself an important transportation-as-a-service evolution that <a href="https://stratechery.com/2015/uber-2-0-human-self-driving-cars/">I wrote about last year</a>. In the short to medium-term, catching a ride with someone already headed in your direction actually has even better economics than self-driving cars, given that the car is a sunk cost and the driver is going that way anyways. In that article I called this sort of car-pooling service &#8220;human-powered self-driving cars.&#8221;</p>
+<p>Note that this again marks an important shift in the components in transportation-as-a-service:</p>
+<ul>
+<li>Drivers: because they are already headed in that direction, they are effectively free</li>
+<li>Cars: because they have already been bought for the purpose of transporting the driver, they are effectively free</li>
+<li>Mapping: the same as UberX</li>
+<li>Routing: slightly more complex than UberPool</li>
+<li>Riders: similar experience to UberPool</li>
+</ul>
+<p>Uber launched UberCommute just a few weeks after that article; given that the economics of UberCommute are approaching those of self-driving cars, that means the company is ahead when it comes to figuring out the business model as well.</p>
+<p><strong>TaaS 3.0: Self-Driving Cars</strong></p>
+<p>Whenever self-driving cars do arrive, nearly every piece in the transportation-as-a-service puzzle will be different from today&#8217;s UberX:</p>
+<ul>
+<li>Drivers: non-existent!</li>
+<li>Cars: self-driving, which means they will likely be very expensive at least at the beginning, requiring significant capital costs</li>
+<li>Mapping: massively more detailed</li>
+<li>Routing: similar complexity to UberPool</li>
+<li>Riders: similar economics to UberCommute/Waze</li>
+</ul>
+<p>Note that there are two critical leaps that need to be made: cars <em>and</em> maps. Google is clearly well ahead in maps, but Uber is <a href="http://www.ft.com/cms/s/0%2Fe0dfa45e-5522-11e6-befd-2fc0c26b3c60.html?ft_site=falcon&amp;desktop=true#axzz4G0M5oyu8">investing $500 million</a> to catch up, even as it does the same for self-driving technology.</p>
+<p>The point of this analysis, though, is to highlight that for all the work Uber has to do, they are by no means doomed because of Google&#8217;s entry, because there isn&#8217;t a straight line from UberX to Google&#8217;s self-driving cars:</p>
+<p><a href="https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-288.png"><img src="https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-288-1024x768.png" alt="stratechery Year One - 288" width="640" height="480" class="aligncenter size-large wp-image-2260" srcset="https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-288-1024x768.png 1024w, https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-288-300x225.png 300w" sizes="(max-width: 640px) 100vw, 640px" /></a></p>
+<p>Indeed, Uber has their own advantages in routing, business model, and customer attachment, and those are just as formidable and potentially more defensible than Google&#8217;s tech leadership.</p>
+<h4>Handicapping the Future</h4>
+<p>With this framework in mind it&#8217;s easier to understand why I ranked those five pieces of news the way I did:</p>
+<ul>
+<li>Ford certainly knows how to build cars, but self-driving technology is a software problem; there is no evidence to suggest that Ford has the capability to leap ahead of Google or Uber. Moreover, while Ford&#8217;s relatively slim margins may make a ride-sharing service attractive, nearly every aspect of the company would need to transform itself from a product model to a service model, and that is even less likely than the company leading the way in self-driving technology. I think it is much more likely Ford will eventually partner with Google or Uber as an OEM.</li>
+<li>Tesla is a much more technologically advanced company than Ford and is already in the mindset of building computers on wheels. Moreover, it has thousands of cars on the road today both capturing data and beta-testing self-driving technology (<a href="https://stratechery.com/2016/the-tesla-autopilot-fatality-uber-partners-with-hertz/">for better or worse</a>). However, Tesla faces several significant obstacles in building a service business: it has no routing capability; it sells its cars as products, not as a service; and, frankly, it has its hands full building the Model 3 before its negative cash flow catches up to it.<sup><a href="#footnote_1_2258" id="identifier_1_2258" class="footnote-link footnote-identifier-link" title="One company I haven&rsquo;t mentioned is Apple, but I put them in the same category as Tesla: they are a product company with legitimate questions about their cloud capabilities">2</a></sup></li>
+<li>Nutonomy is very interesting, not only because of their technology, but also because of the smart way they are dealing with perhaps the most important piece of transportation-as-a-service: the government. I have argued for years that Singapore was likely to be the first place where self-driving cars take off: the technology already works as long as you get rid of those pesky human drivers, while Singapore has placed strict limits on automobiles for years, and, to put it delicately, Singapore has the government structure to get rid of non-self-driving cars completely. By starting there Nutonomy has a big advantage when it comes to real-world experience and iteration, and could springboard from Singapore to other urban areas.</li>
+</ul>
+<p>That leaves Google and Uber, and, despite yesterday&#8217;s news, I still like Uber&#8217;s chances.</p>
+<p>First, it matters that the development of self-driving cars is, in Kalanick&#8217;s words, &#8220;existential&#8221; for the company. Never underestimate the motivating power of simple survival, and, on the flipside, keep in mind how poorly Google has done in any business that is not advertising-based.</p>
+<p>Second, I suspect Uber&#8217;s routing advantage (as infuriating as it may be when you are matched with a driver who is going the wrong way) is a real one: telling cars where to go at scale is an incredibly difficult problem and Uber has a multi-year head start.</p>
+<p>Third, any discussion of the threat self-driving cars poses to Uber tends to imagine a world where there are magically tens of thousands if not millions of self-driving cars everywhere immediately. That simply isn&#8217;t practical from a pure logistics standpoint; the time it will take to build all of those cars — and, crucially, get government approval — is time Uber has to catch up.</p>
+<p>Moreover, it&#8217;s not at all clear that Google will be willing to make the sort of investment necessary to build a self-driving fleet that could take on Uber. The company&#8217;s <a href="https://www.theinformation.com/articles/inside-the-battle-over-google-fiber">recent scale-back of Google Fiber</a> is instructive in this regard: it is very difficult for a company built on search advertising margins to stomach the capital costs entailed in building out a fleet capable of challenging Uber in more than one or two markets.</p>
+<p>Finally, as the incumbent in the transportation-as-a-service space Uber has the advantage of only needing to be good-enough. To the degree the company can build out UberPool and UberCommute, they can ensure that their own self-driving cars get first consideration from consumers trained to open their app whenever they are out and about.</p>
+<p>Needless to say, the next few years will be fascinating to watch. The only sure thing is that the Uber-Google battle in particular will be quite the ride.</p>
+<ol class="footnotes"><li id="footnote_0_2258" class="footnote">Machine learning is relatively ineffective at solving this specific type of problem [<a href="#identifier_0_2258" class="footnote-link footnote-back-link">&#8617;</a>]</li><li id="footnote_1_2258" class="footnote">One company I haven&#8217;t mentioned is Apple, but I put them in the same category as Tesla: they are a product company with legitimate questions about their cloud capabilities [<a href="#identifier_1_2258" class="footnote-link footnote-back-link">&#8617;</a>]</li></ol><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-2258" class="share-facebook sd-button share-icon" href="https://stratechery.com/2016/google-uber-and-the-evolution-of-transportation-as-a-service/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-2258" class="share-twitter sd-button share-icon" href="https://stratechery.com/2016/google-uber-and-the-evolution-of-transportation-as-a-service/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-2258" class="share-linkedin sd-button share-icon" href="https://stratechery.com/2016/google-uber-and-the-evolution-of-transportation-as-a-service/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="https://stratechery.com/2016/google-uber-and-the-evolution-of-transportation-as-a-service/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-end"></li></ul></div></div></div>			</div><!-- .entry-content -->
+</article><!-- #post-## -->
+						
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://stratechery.com/2016/the-sports-linchpin/" rel="prev"><span class="screen-reader-text">Previous post:</span> <span class="post-title">The Sports Linchpin</span></a></div><div class="nav-next"><a href="https://stratechery.com/2016/beyond-the-iphone/" rel="next"><span class="screen-reader-text">Next post:</span> <span class="post-title">Beyond the iPhone</span></a></div></div>
+	</nav>
+					
+					</main><!-- #main -->
+				</div><!-- #primary -->
+			</div><!-- .nine -->
+
+			
+<div class="three column widget-area">
+	<div id="secondary" role="complementary">
+		<aside id="nav_menu-2" class="widget widget_nav_menu"><h1 class="widget-title">By Ben Thompson</h1><div class="menu-primary-container"><ul id="menu-primary-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1611"><a href="http://stratechery.com/about/">About</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1613"><a href="http://exponent.fm/">Exponent Podcast</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1645"><a href="https://forum.stratechery.com/login">Member Forum</a></li>
+</ul></div></aside><aside id="nav_menu-4" class="widget widget_nav_menu"><h1 class="widget-title">Follow</h1><div class="menu-follow-container"><ul id="menu-follow-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1641"><a href="http://stratechery.com/feed/">RSS Feed</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1642"><a href="http://twitter.com/stratechery">Twitter</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643"><a href="https://stratechery.memberful.com/register/">Articles by Email</a></li>
+</ul></div></aside><aside id="nav_menu-3" class="widget widget_nav_menu"><h1 class="widget-title">Subscription</h1><div class="menu-subscribe-container"><ul id="menu-subscribe-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1608"><a href="https://stratechery.com/membership/">About The Daily Update</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1630"><a href="https://stratechery.memberful.com/checkout?plan=5749">Subscribe Monthly</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1609"><a href="https://stratechery.memberful.com/checkout?plan=5748">Subscribe Annually</a></li>
+</ul></div></aside><aside id="memberful_wp_profile_widget-2" class="widget widget_memberful_wp_profile_widget">  <h1 class="widget-title">Account</h1>  <a href="https://stratechery.com?memberful_endpoint=auth" class="memberful-sign-in-link">Sign in</a></aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><a class="memberful-rss-notice" href="https://stratechery.com/membership/">Subscribe</a> to access the Daily Update via email, RSS, or the web</div>
+		</aside><aside id="rpjc_widget_cat_recent_posts-2" class="widget rpjc_widget_cat_recent_posts widget_recent_entries"><h1 class="widget-title">Recent Articles</h1><ul><li><a href="https://stratechery.com/2016/the-it-era-and-the-internet-revolution/">The IT Era and the Internet Revolution</a></li><li><a href="https://stratechery.com/2016/chat-and-the-consumerization-of-it/">Chat and the Consumerization of IT</a></li><li><a href="https://stratechery.com/2016/google-and-the-limits-of-strategy/">Google and the Limits of Strategy</a></li></ul></aside><aside id="nav_menu-5" class="widget widget_nav_menu"><h1 class="widget-title">Archives</h1><div class="menu-archives-container"><ul id="menu-archives-1" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1772"><a href="https://stratechery.com/category/articles/">Articles</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1773"><a href="https://stratechery.com/category/daily-email/">Daily Updates</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1775"><a href="https://stratechery.com/archives-date/">By Date</a></li>
+</ul></div></aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://stratechery.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside>	</div><!-- #secondary -->
+</div><!-- .widget-area -->		</div><!-- .row -->
+	</div><!-- .grid -->
+</div><!-- #content -->
+
+
+	<section id="daily-updates">
+		<div class="grid">
+			<div class="row">
+				<h1><strong>Subscriber&#8217;s Daily Update</strong></h1>
+
+									<div id="post-2330" class="post-2330 post type-post status-publish format-standard hentry category-daily-email">
+						<span class="entry-meta">
+							Thursday, October 20, 2016						</span>
+						<h1 class="entry-title"><a href="https://stratechery.com/2016/follow-up-snapchat-changes-publisher-monetization-the-return-of-the-bundle/" rel="bookmark">Follow-up, Snapchat Changes Publisher Monetization, The Return of the Bundle?</a></h1>					</div>
+									<div id="post-2321" class="post-2321 post type-post status-publish format-standard hentry category-daily-email">
+						<span class="entry-meta">
+							Tuesday, October 18, 2016						</span>
+						<h1 class="entry-title"><a href="https://stratechery.com/2016/netflixs-earnings-the-apple-car-reset/" rel="bookmark">Netflix&#8217;s Earnings, The Apple Car Reset</a></h1>					</div>
+									<div id="post-2320" class="post-2320 post type-post status-publish format-standard hentry category-daily-email">
+						<span class="entry-meta">
+							Monday, October 17, 2016						</span>
+						<h1 class="entry-title"><a href="https://stratechery.com/2016/nobody-wants-twitter-vwware-cloud-on-aws-amazon-convenience-stores-and-amazon-music-unlimited/" rel="bookmark">Nobody Wants Twitter, VMware Cloud on AWS, Amazon Convenience Stores and Amazon Music Unlimited</a></h1>					</div>
+									<div id="post-2319" class="post-2319 post type-post status-publish format-standard hentry category-daily-email">
+						<span class="entry-meta">
+							Thursday, October 13, 2016						</span>
+						<h1 class="entry-title"><a href="https://stratechery.com/2016/workplace-by-facebook-why-facebook-should-buy-okta-the-oculus-connect-3-keynote/" rel="bookmark">Workplace by Facebook, Why Facebook Should Buy Okta, The Oculus Connect 3 Keynote</a></h1>					</div>
+							</div><!-- .row -->
+		</div><!-- .grid -->
+	</section><!-- #daily-updates -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="grid">
+			<div class="row">
+				<div class="twelve column">
+					<div class="site-info">
+						<div class="site-info-container">
+							<span class="powered-by">
+								Strategy. Technology. Pronunciation.
+							</span><!-- .powered-by -->
+							<span class="copyright">
+								&copy; <a href="http://stratechery.com/">Stratechery LLC</a> 2016							</span>
+						</div><!-- .site-info-container -->
+					</div><!-- .site-info -->
+				</div><!-- .twelve -->
+			</div><!-- .row -->
+		</div><!-- .grid -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+		<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-facebook', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-twitter', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-linkedin', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+			return false;
+		});
+		</script>
+			<div id="sharing_email" style="display: none;">
+		<form action="/2016/google-uber-and-the-evolution-of-transportation-as-a-service/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			
+			<img style="float: right; display: none" class="loading" src="https://stratechery.com/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201642'></script>
+<script type='text/javascript' src='https://stratechery.com/wp-content/themes/stratechery/js/navigation.js?ver=20120206'></script>
+<script type='text/javascript' src='https://stratechery.com/wp-content/themes/stratechery/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='https://stratechery.com/wp-content/themes/stratechery/js/theme.js?ver=1.0'></script>
+<script type='text/javascript' src='https://stratechery.com/wp-content/themes/stratechery/js/bigfoot.min.js?ver=20150428'></script>
+<script type='text/javascript' src='https://stratechery.com/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://stratechery.com/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.3.1'></script>
+</body>
+</html>

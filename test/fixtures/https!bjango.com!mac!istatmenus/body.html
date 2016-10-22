@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<title>iStat Menus</title>
+	<meta charset="UTF-8">
+	<meta id="description" name="description" content="" />
+	<link rel="stylesheet" href="/css/bjango.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/fonts.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/svg.css" type="text/css" media="screen, projection" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-title" content="Bjango" />
+	<meta name="msapplication-TileColor" content="#fafafa">
+	<meta name="msapplication-TileImage" content="/images/site-icons/icon-144.png">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="/images/site-icons/icon-152.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/site-icons/icon-180.png">
+	<link href="feed://bjango.com/rss/articles.xml" rel="alternate" title="Bjango Articles RSS" type="application/rss+xml" />
+	<link href="feed://bjango.com/rss/releases.xml" rel="alternate" title="Bjango Releases RSS" type="application/rss+xml" />
+	<link href="http://dribbble.com/bjango/shots.rss" rel="alternate" title="Bjango Dribbble RSS" type="application/rss+xml" />
+	<script>
+		function togglemenu()
+		{
+			var e = document.getElementById('menu');
+			var a = document.getElementById('header-more');
+			if(e.style.webkitTransform == 'scaleY(1)')
+			{
+				e.style.opacity = '0';
+				e.style.webkitTransform = 'scaleY(0)';
+				a.style.webkitTransform = 'rotate(0deg)';
+			}
+			else
+			{
+				e.style.opacity = '1';
+				e.style.webkitTransform = 'scaleY(1)';
+				a.style.webkitTransform = 'rotate(180deg)';
+			}
+		}
+	</script>
+	<script>
+		var _gaq=[['_setAccount','UA-1152890-2'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</head>
+
+<body>
+<header>
+	<ul>
+		<li id="header-apps"><a href="/apps/">Apps</a></li>
+		<li id="header-articles"><a href="/articles/">Articles</a></li>
+		<li id="header-home"><a href="/">Home</a></li>
+		<li id="header-help"><a href="/help/">Help</a></li>
+		<li id="header-contact"><a href="/contact/">Contact</a></li>
+		<li id="header-more" onclick="togglemenu()"></li>
+	</ul>
+</header>
+<div id="menu">
+	<ul>
+		<li><a href="/apps/">Apps</a></li>
+		<li><a href="/articles/">Articles</a></li>
+		<li><a href="/help/">Help</a></li>
+		<li><a href="/contact/">Contact</a></li>
+	</ul>
+</div>
+<section>
+
+
+<!-- 
+
+Stats in the mornin', stats in the evenin', ain't no other stats like me that's breathin'
+
+-->
+
+<script>
+	function showbuyoverlay()
+	{
+		document.getElementById('buyoverlay').setAttribute('style', 'display:block;');
+	}
+	function hidebuyoverlay()
+	{
+		document.getElementById('buyoverlay').setAttribute('style', 'display:none;');
+	}
+</script>
+<style>
+	section { width: 100%; max-width: 100%; padding: 0; margin: 0; }
+
+	#improvements {
+		width: 100%;
+		background: #1a1a1a url('/images/mac/skalapreview/background-skalapreview.png');
+		background-size: 100% 100%;
+		clear: both;
+		text-align: center;
+	}
+	
+	#improvements h3, #improvements p {
+		color: #f4f4f4;
+	}
+
+	#improvements h5 {
+		font-size: 16px;
+		line-height: 25px;
+		color: #a2a2a2;
+	}
+
+	#improvements h5 a {
+		color: #29b3f1;
+	}
+
+	#improvements h5 a:hover {
+		color: white;
+	}
+
+	.featureimage {
+		max-width: 100%;
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    border-radius: 6px;
+	}
+
+	.featureimagewrap {
+		clear: both;
+		padding: 30px 0 60px 0;
+	}
+
+	.features {
+		width: 100%;
+		background: #1a1a1a;
+		background-size: 100% 100%;
+		clear: both;
+		padding-top: 30px;
+	}
+
+	.features p {
+		padding-right: 25px;
+		color: #a2a2a2;
+	}
+
+	.features p a {
+		font: normal normal 16px/25px pnova-bold, helvetica, sans-serif;
+		color: #29b3f1;
+	}
+
+	.features p a:hover {
+		color: white;
+	}
+
+	.features h4 {
+		font-family: pnova-bold, helvetica, sans-serif;
+		color: #f4f4f4;
+		margin-top: 23px;
+	}
+
+	#detail {
+		padding-top: 20px;
+	}
+
+	#detail p {
+		padding-right: 25px;
+		color: #909090;
+	}
+
+	#detail p a {
+		font: normal normal 16px/25px pnova-bold, helvetica, sans-serif;
+		color: #29b3f1;
+	}
+
+	#detail p a:hover {
+		color: black;
+	}
+
+	#detail h4 {
+		font-family: pnova-bold, helvetica, sans-serif;
+	}
+
+	#detail h3 {
+		margin-top: 23px;
+	}
+
+
+	#quotes {
+		clear: both;
+		padding: 50px 20px 30px 20px;
+	}
+
+	#quotes h5 a {
+		color: #cccccc;
+	}
+
+	#quotes h5 a:hover {
+		color: #29cdfd;
+	}
+
+	#quotes h6 {
+		color: #a2a2a2;
+	}
+
+	.download {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		clear: both;
+		overflow: hidden;
+		height: 129px;
+		background: #292929;
+	}
+
+	.download p {
+		padding-top: 27px;
+		font-size: 12px;
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	.download p a {
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.download p a:hover {
+		color: white;
+	}
+
+	.downloadbuttondiv {
+		width: 620px;
+		margin: 20px auto 0 auto;
+	}
+
+	.download-download, .download-buy, .download-upgrade, .o-buy-single, .o-buy-family, .o-upgrade-single, .o-upgrade-family {
+		background: rgba(255, 255, 255, 0.15) url('/images/mac/istatmenus5/button-istatmenus-download.svg') no-repeat;
+		background-position: center center;
+		width: 300px;
+		height: 60px;
+		float: left;
+		overflow: hidden;
+		opacity: 0.8;
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		border-radius: 8px;
+	}
+
+	.download-buy {
+		background: rgba(255, 255, 255, 0.15) url('/images/mac/istatmenus5/button-istatmenus-buy.svg') no-repeat;
+		background-position: center center;
+		margin-left: 20px;
+	}
+
+	.o-buy-single {
+		background: rgba(255, 255, 255, 0.15) url('/images/mac/istatmenus5/buy-buttons-single.svg') no-repeat;
+		background-position: center center;
+	}
+
+	.o-buy-family {
+		background: rgba(255, 255, 255, 0.15) url('/images/mac/istatmenus5/buy-buttons-family.svg') no-repeat;
+		background-position: center center;
+		margin-left: 20px;
+	}
+
+	.o-upgrade-single {
+		background: rgba(255, 255, 255, 0.15) url('/images/mac/istatmenus5/buy-buttons-single-upgrade.svg') no-repeat;
+		background-position: center center;
+	}
+
+	.o-upgrade-family {
+		background: rgba(255, 255, 255, 0.15) url('/images/mac/istatmenus5/buy-buttons-family-upgrade.svg') no-repeat;
+		background-position: center center;
+		margin-left: 20px;
+	}
+
+	.download-download:hover,
+	.download-buy:hover,
+	.o-buy-single:hover,
+	.o-buy-family:hover,
+	.o-upgrade-single:hover,
+	.o-upgrade-family:hover {
+		opacity: 1;
+	}
+
+	.download-download:active,
+	.download-buy:active,
+	.o-buy-single:active,
+	.o-buy-family:active,
+	.o-upgrade-single:active,
+	.o-upgrade-family:active {
+		-webkit-transform: scale(0.96,0.96);
+	}
+
+	.download-download a,
+	.download-buy a,
+	.o-buy-single a,
+	.o-buy-family a,
+	.o-upgrade-single a,
+	.o-upgrade-family a {
+		padding: 300px;
+		opacity: 0;
+	}
+
+	#buyoverlay {
+		display: none;
+/* 		display: block; */
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.6);
+		z-index: 1 !important;
+		text-align: center;
+	}
+
+	#buyoverlay:target {
+		display: block;
+	}
+
+	#overlayinner {
+		margin: 100px auto 0 auto;
+		max-width: 700px;
+		padding: 20px;
+		background: #292929;
+		border-radius: 6px;
+		box-shadow: 0 3px 30px rgba(0,0,0,0.4);
+	}
+
+	#overlayinner h3 {
+		font-size: 20px;
+		padding: 0;
+		margin: 10px 0 0 0;
+		color: #c0c0c0;
+	}
+
+	.overlayclose {
+		background: rgba(255,255,255,0.1);
+		color: #999;
+		width: 100px;
+		cursor: pointer;
+		margin: 0 auto;
+		border-radius: 6px;
+		opacity: 0.8;
+	}
+
+	.overlayclose:hover {
+		opacity: 1;
+	}
+
+	#header-text {
+		width: 100%;
+		margin: 71px 0;
+		display: inline;
+	}
+
+	#header-text-simple {
+		width: 100%; 
+		margin: 45px 0;
+		display: none;
+	}
+
+	@media only screen and (max-width : 680px) {
+		#detail p {
+			padding-bottom: 25px;
+		}
+		.download {
+			height: 227px;
+		}
+		.download p {
+			text-align: center;
+		}
+		.downloadbuttondiv {
+			width: 100%;
+			height: 140px;
+		}
+		.download-buy, .download-upgrade, .o-buy-single, .o-buy-family, .o-upgrade-single, .o-upgrade-family {
+			margin: 20px 0 0 0;
+		}
+		.download-download, .download-buy, .o-buy-single, .o-buy-family, .o-upgrade-single, .o-upgrade-family {
+			float: none;
+			width: 100%;
+		}
+		#subheading {
+			height: 81px;
+		}
+		#overlayinner {
+			margin: 0 auto;
+		}
+		#overlayinner h3 {
+			font-size: 16px;
+			margin: -10px 0 0 0;
+		}
+		#header-text-simple {
+			display: inline;
+		}
+		#header-text {
+			display: none;
+		}
+	}
+
+	#hero {
+		background: url('/images/mac/istatmenus5/header-background.jpg');
+		-webkit-background-size: cover;
+ 		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+  		width: 100%;
+	}
+	
+	#hero-background {
+		position: relative;
+		background: url('/images/mac/istatmenus5/header-empty.jpg') no-repeat;
+		background-size: contain;
+		background-position: center top;
+		overflow: hidden;
+	}
+
+	@-webkit-keyframes animatecpu {
+		0%    { opacity: 0; }
+		0.7%  { opacity: 1; }
+		45%   { opacity: 1; }
+		47%   { opacity: 0; }
+		100%  { opacity: 0; }
+	}
+
+	@-webkit-keyframes animatenetwork {
+		0%    { opacity: 0; }
+		50%   { opacity: 0; }
+		50.7% { opacity: 1; }
+		95%   { opacity: 1; }
+		97%   { opacity: 0; }
+		100%  { opacity: 0; }
+	}
+
+	@-moz-keyframes animatecpu {
+		0%    { opacity: 0; }
+		0.7%  { opacity: 1; }
+		45%   { opacity: 1; }
+		47%   { opacity: 0; }
+		100%  { opacity: 0; }
+	}
+
+	@-moz-keyframes animatenetwork {
+		0%    { opacity: 0; }
+		50%   { opacity: 0; }
+		50.7% { opacity: 1; }
+		95%   { opacity: 1; }
+		97%   { opacity: 0; }
+		100%  { opacity: 0; }
+	}
+
+	.hero-image {
+		width: 100%; position: absolute; top: 0; left: 0;
+	}
+
+	.hero-image-cpu {
+		opacity: 1;
+		-webkit-animation: animatecpu 14s ease-in-out infinite;
+		-moz-animation: animatecpu 14s ease-in-out infinite;
+	}
+
+	.hero-image-network {
+		opacity: 0;
+		-webkit-animation: animatenetwork 14s ease-in-out infinite;
+		-moz-animation: animatenetwork 14s ease-in-out infinite;
+	}
+</style>
+
+<div id="buyoverlay">
+	<div id="overlayinner">
+		<h3>Buy iStat Menus</h3>
+		<div class="downloadbuttondiv">
+			<div class="o-buy-single">
+				<a href="https://bjango.onfastspring.com/istat-menus-5">Buy single license</a>
+			</div>
+			<div class="o-buy-family">
+				<a href="https://bjango.onfastspring.com/istat-menus-5-family-pack">Buy Family Pack</a>
+			</div>
+		</div>
+		<h3 style="clear:both;padding-top: 30px;">Upgrade from iStat Menus 3 or 4</h3>
+		<div class="downloadbuttondiv">
+			<div class="o-upgrade-single">
+				<a href="https://bjango.onfastspring.com/istat-menus-5-upgrade">Upgrade single license</a>
+			</div>
+			<div class="o-upgrade-family">
+				<a href="https://bjango.onfastspring.com/istat-menus-5-family-pack-upgrade">Upgrade Family Pack</a>
+			</div>
+		</div>
+		<p style="font-size: 12px; clear: both; padding-top: 30px; line-height: 20px;">
+			Family&nbsp;Pack: Up to 5 Macs within a single&nbsp;household. <a href="http://bjango.com/help/istatmenus4/licenseagreement/">License&nbsp;agreement</a>.
+		</p>
+		<p onClick="hidebuyoverlay()" class="overlayclose">Close</p>
+	</div>
+</div>
+
+<div id="hero">
+	<div class="pagewidth">
+		<img src="/images/mac/istatmenus5/header-text.svg" alt="iStat Menus 5" id="header-text">
+		<img src="/images/mac/istatmenus5/header-text-simple.svg" alt="An advanced Mac system monitor for your menubar" id="header-text-simple">
+
+		<div id="hero-background">
+			<img src="/images/mac/istatmenus5/heading-istatmenus.svg" alt="" style="width: 100%; margin-bottom: -4px;">
+			<img src="/images/mac/istatmenus5/header-network.jpg" alt="" class="hero-image hero-image-cpu">
+			<img src="/images/mac/istatmenus5/header-cpu.jpg" alt="" class="hero-image hero-image-network">
+		</div>
+	</div>
+</div>
+
+<div class="download">
+	<div class="pagewidth">
+		<div class="downloadbuttondiv">
+			<div class="download-download">
+				<a href="http://download.bjango.com/istatmenus/">Download iStat Menus for Mac</a>
+			</div>
+			<div class="download-buy">
+				<a href="https://sites.fastspring.com/bjango/product/istatmenus5store" onClick="showbuyoverlay(); return false;">Buy or upgrade iStat Menus for Mac</a>
+			</div>
+		</div>
+		<div style="clear: both;">
+			<p style="line-height: 18px; text-align: center; padding: 16px 0 0 0;">
+				iStat Menus 5.2 (<a href="/mac/istatmenus/versionhistory/">version history</a>). macOS&nbsp;10.8+&nbsp;required. <a href="http://download.bjango.com/istatmenus4/">Download&nbsp;iStat&nbsp;Menus&nbsp;4.22</a>.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div id="detail">
+	<div class="pagewidth">
+		<h3 style="padding: 50px 0 40px 0; margin: 0;text-align:center;">What&rsquo;s new in iStat&nbsp;Menus&nbsp;5, our&nbsp;biggest&nbsp;update&nbsp;ever?</h3>
+		<div class="col-50">
+			<h3>New design</h3>
+			<p>
+				iStat Menus 5 sports a completely new design &mdash; new menubar icons, new dropdown menus, and the app and icon itself have all been redesigned to be cleaner, clearer and more at home on El&nbsp;Capitan and Yosemite. Menubar graphs can now use dark backgrounds, improving legibility.
+			</p>
+		</div>
+		<div class="col-50">
+			<h3>El&nbsp;Capitan, Yosemite and Mavericks</h3>
+			<p>
+				iStat Menus 5 includes many El&nbsp;Capitan-only, Yosemite-only and Mavericks-only features, like showing apps using significant energy, support for compressed memory, support for memory pressure, and for Yosemite’s dark mode menubar.
+			</p>
+		</div>
+	</div>
+	<div class="pagewidth">
+		<div class="featureimagewrap">
+			<img src="/images/mac/istatmenus5/image-newdesign.jpg" alt="iStat Menus 5 sports a completely new design" class="featureimage">
+		</div>
+	</div>
+</div>
+<div id="detail" style="clear: both;">
+	<div class="pagewidth">
+		<div class="col-50">
+			<h3>Better per-app stats</h3>
+			<p>
+				iStat Menus 5 features read and write disk activity on a per-app basis. Upload and download activity is also shown per-app, making it far easier to track down the biggest bandwidth hogs.
+			</p>
+		</div>
+		<div class="col-50">
+			<h3>More stats</h3>
+			<p>
+				Far more detailed network information, including router address, subnet mask, DNS and MAC address. Wi-Fi stats, including channel, signal to noise ratio and many more. Improved GPU monitoring, including active GPU in menubar.
+			</p>
+		</div>
+	</div>
+	<div class="pagewidth">
+		<div class="featureimagewrap">
+			<img src="/images/mac/istatmenus5/image-perapp.jpg" alt="Better per-app stats, more stats" class="featureimage">
+		</div>
+	</div>
+</div>
+<div id="detail" style="clear: both;">
+	<div class="pagewidth">
+		<div class="col-50">
+			<h3>Time &amp; world clocks</h3>
+			<p>
+				A vastly improved time menu, with current time, sunrise, noon, sunset, dawn, dusk, sun azimuth, sun altitude, light map and more for over 120,000 cities.
+			</p>
+			<p>
+				Daylight is now indicated in the clock face (it even fades near sunrise and sunset).
+			</p>
+		</div>
+		<div class="col-50">
+			<h3>Speaks your language</h3>
+			<p>
+				Our menubar and dropdown menus are now localised for Arabic, Catalan, Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Portuguese (Portugal), Romanian, Russian, Slovak, Spanish, Swedish, Thai, Turkish, and Ukrainian.
+			</p>
+		</div>
+	</div>
+	<div class="pagewidth">
+		<div class="featureimagewrap">
+			<img src="/images/mac/istatmenus5/image-lightmap.jpg" alt="A vastly improved time menu" class="featureimage">
+		</div>
+	</div>
+</div>
+
+<div id="improvements">
+	<div class="pagewidth">
+		<h3 style="padding: 50px 0 40px 0; margin: 0;">Hundreds of other improvements</h3>
+		<h5 style="padding: 0 0 50px 0;">New in iStat&nbsp;Menus&nbsp;5: Import and export settings • Hide network interfaces, sensors and disks from dropdown menus • Free&nbsp;disk&nbsp;space no longer includes local Time&nbsp;Machine&nbsp;backups • Process&nbsp;display now combines child processes with&nbsp;parent&nbsp;process • New&nbsp;display&nbsp;options for disks&nbsp;and&nbsp;time • New&nbsp;graph types for disk&nbsp;activity • New&nbsp;CPU&nbsp;cores menubar&nbsp;item • Hyper-Threading cores can now&nbsp;be&nbsp;hidden • GPU&nbsp;processor and GPU&nbsp;memory history graphs (on&nbsp;supported&nbsp;Macs) • Added&nbsp;the ability to hide&nbsp;the&nbsp;calendar • <a href="/mac/istatmenus/versionhistory/">And&nbsp;so&nbsp;much&nbsp;more.</a></h5>
+	</div>
+</div>
+
+<div class="features">
+	<div class="pagewidth">
+		<div class="col-50">
+			<h4>CPU &amp; GPU</h4>
+			<p>
+				Realtime CPU graphs and a list of the top 5 CPU resource hogs. CPU usage can be tracked by individual cores or with all cores combined, to save menubar&nbsp;space.
+			</p>
+			<p>
+				Plus, GPU memory and processor usage on supported Macs, and the active GPU can be shown in the menubar.
+			</p>
+
+			<h4>Memory</h4>
+			<p>
+				Memory stats for your menubar as a pie chart, graph, percentage, bar or any combination of those things. Opening the menu shows a list of the apps using the most memory, and other useful&nbsp;info.
+			</p>
+
+			<h4>Network</h4>
+			<p>
+				A realtime graph to keep on top of what&rsquo;s being sent and received for all network connections, including a bandwidth breakdown for the top&nbsp;5&nbsp;apps.
+			</p>
+
+			<h4>Disk usage &amp; activity</h4>
+			<p>
+				See used and free space for multiple disks in your menubar. S.M.A.R.T. status monitoring and more detail for all your disks is only a click&nbsp;away.
+			</p>
+			<p>
+				Detailed disk I/O in your menubar, displayed as a graph, a variety of different read and write indicators, or&nbsp;both.
+			</p>
+		</div>
+		<div class="col-50">
+			<h4>Sensors</h4>
+			<p>
+				Realtime listings of the sensors in your Mac, including temperatures, hard drive temperatures (where supported), fans, voltages, current and power. Fan speeds can be controlled, with different rules when on battery power, if you&rsquo;d&nbsp;like.
+			</p>
+
+			<h4>Date &amp; time</h4>
+			<p>
+				A highly configurable date, time and calendar for your menubar, including fuzzy clock and moon phase. Open iStat Menus&rsquo; calendar to display upcoming events, or events for any day. Plus, a world clock with sunrise, sunset, moonrise and moonset times for over 120,000&nbsp;cities.
+			</p>
+
+			<h4>Battery &amp; power</h4>
+			<p>
+				Detailed info on your battery&rsquo;s current state and a highly configurable menu item that can change if you&rsquo;re draining, charging, or completely charged. Plus, Magic Mouse, Magic Trackpad and Apple wireless keyboard battery&nbsp;levels.
+			</p>
+
+			<h4>14-day free trial</h4>
+			<p>
+				Download iStat Menus now and use it for a couple of weeks before making up your mind. We&nbsp;think you’re going to&nbsp;really&nbsp;like&nbsp;it.
+			</p>
+		</div>
+	</div>
+	<div id="quotes">
+		<div class="pagewidth">
+			<h5><a href="http://www.macstories.net/reviews/istat-menus-5-brings-new-design-per-app-stats-yosemite-support-and-more/">&ldquo;...it&rsquo;s always there in my Mac&rsquo;s menu bar, and it&rsquo;s one of my must-have apps...&rdquo;</a></h5>
+			<h6>&mdash; Federico Viticci, MacStories</h6>
+	
+			<h5><a href="http://beautifulpixels.com/mac/istat-menus-5/">&ldquo;iStat Menus 5 will not be leaving my menu bar. I can&rsquo;t say I&rsquo;m really shocked at how good it looks but it continues to impress me the more&nbsp;I&nbsp;use&nbsp;it.&rdquo;</a></h5>
+			<h6>&mdash; Mikhail Madnani, Beautiful Pixels</h6>
+	
+			<h5><a href="http://www.imore.com/bjango-releases-istat-menus-5-mac">&ldquo;...there's a new version and it's better, more detailed and more comprehensive&nbsp;than&nbsp;ever.&rdquo;</a></h5>
+			<h6>&mdash; Peter Cohen, iMore</h6>
+
+			<h5><a href="http://www.macworld.com/article/2040025/mac-gems-istat-menus-is-a-standout-app-for-monitoring-your-mac.html">&ldquo;For hardware-level monitoring of your Mac, it&rsquo;s difficult to beat&nbsp;iStat&nbsp;Menus.&rdquo;</a></h5>
+			<h6>&mdash; Chris Barylick, Macworld</h6>
+		</div>
+	</div>
+</div>
+
+<div class="download">
+	<div class="pagewidth">
+		<div class="downloadbuttondiv">
+			<div class="download-download">
+				<a href="http://download.bjango.com/istatmenus/">Download iStat Menus for Mac</a>
+			</div>
+			<div class="download-buy">
+				<a href="http://sites.fastspring.com/bjango/product/istatmenus5store" onClick="showbuyoverlay(); return false;">Buy or upgrade iStat Menus for Mac</a>
+			</div>
+		</div>
+		<div style="clear: both;">
+			<p style="line-height: 18px; text-align: center; padding: 16px 0 0 0;">
+				iStat Menus 5.2 (<a href="/mac/istatmenus/versionhistory/">version history</a>). macOS&nbsp;10.8+&nbsp;required. <a href="http://download.bjango.com/istatmenus4/">Download&nbsp;iStat&nbsp;Menus&nbsp;4.22</a>.
+			</p>
+		</div>
+	</div>
+</div>
+
+
+</section>
+
+<div id="footergap"></div>
+
+<footer>
+	<ul>
+		<li id="twitter"><a href="https://twitter.com/bjango">Bjango on Twitter</a></li>
+		<li id="dribbble"><a href="http://dribbble.com/bjango">Bjango on Dribbble</a></li>
+		<li id="github"><a href="https://github.com/bjango">Bjango on GitHub</a></li>
+		<li id="designresources"><a href="/designresources/">Bjango Design Resources</a></li>
+		<li id="rss"><a href="/follow/">RSS Feeds</a></li>
+	</ul>
+	<p>
+		&copy;<script type="text/javascript">document.write(new Date().getFullYear())</script><noscript>2016</noscript> Bjango Pty Ltd. All&nbsp;rights&nbsp;reserved. ABN&nbsp;88&nbsp;062&nbsp;334&nbsp;580.</p>
+</footer>
+
+</body>
+</html>

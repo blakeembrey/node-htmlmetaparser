@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "cache-control": "no-cache=\"set-cookie\"",
+    "connection": "Close",
+    "content-encoding": "gzip",
+    "content-language": "en",
+    "content-type": "text/html;charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 19:39:38 GMT",
+    "server": "Apache",
+    "set-cookie": [
+      "JSESSIONID=693ED6DD4849DE07812D6D3E3B5BEEF3; Path=/; Secure; HttpOnly",
+      "TH_CSRF=3471356754547344698; path=/; HttpOnly",
+      "AWSELB=2B23F73512874A984846CB61011FAE4304C7C410ACB7A001DFD8BD306C8ECA8B8503C945DE1CD9ED772FB7AFD298970DD47A751F6CDC0D49F5C212D54F76E02DCDD2B1A2FE;PATH=/"
+    ],
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding,User-Agent",
+    "x-frame-options": [
+      "SAMEORIGIN",
+      "SAMEORIGIN"
+    ]
+  },
+  "originalUrl": "https://dzone.com/articles/exploring-graph-representation",
+  "status": 200,
+  "statusText": "OK",
+  "url": "https://dzone.com/articles/exploring-graph-representation"
+}

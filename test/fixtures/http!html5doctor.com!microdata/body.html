@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>
+		  Extending HTML5 — Microdata | HTML5 Doctor    </title>
+    <link rel="stylesheet" href="http://html5doctor.com/wp-content/themes/html5doctor2/style.css" media="screen" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Feed" href="http://html5doctor.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Comments Feed" href="http://html5doctor.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HTML5 Doctor &raquo; Extending HTML5 — Microdata Comments Feed" href="http://html5doctor.com/microdata/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/html5doctor.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.4"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://html5doctor.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='crp_list_style-css'  href='http://html5doctor.com/wp-content/plugins/contextual-related-posts/css/default-style.css?ver=4.5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://html5doctor.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://html5doctor.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://html5doctor.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://html5doctor.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://html5doctor.com/xmlrpc.php?rsd" />
+<link rel='prev' title='HTML5 Simplequiz #4: figures, captions and alt text' href='http://html5doctor.com/html5-simplequiz-4-figures-captions-and-alt-text/' />
+<link rel='next' title='Your Questions #14' href='http://html5doctor.com/your-questions-14/' />
+<link rel="canonical" href="http://html5doctor.com/microdata/" />
+<link rel='shortlink' href='http://html5doctor.com/?p=2643' />
+<link rel="alternate" type="application/json+oembed" href="http://html5doctor.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhtml5doctor.com%2Fmicrodata%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://html5doctor.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhtml5doctor.com%2Fmicrodata%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+	  
+  
+	</head>
+<body class="single single-post postid-2643 single-format-standard" id="com-html5doctor">
+<header role="banner">
+    <div class="inner group">
+    <a href="http://html5doctor.com" rel="home"><div>
+        <div class="logo">
+        <h1>HTML5 Doctor</h1>
+        <h2>Helping you implement HTML5 today</h2>
+        </div><!-- end logo -->
+    </div></a><!-- wrapper div for Firefox 3.x ref: http://01i.jp/html5bll -->
+
+ 	<ul id="menu-top-nav" class="semantic-list"><li id="menu-item-3272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3272"><a href="http://html5doctor.com/about/">About</a></li>
+<li id="menu-item-3275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3275"><a href="http://feeds2.feedburner.com/html5doctor">RSS</a></li>
+<li id="menu-item-3276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3276"><a href="http://feeds.feedburner.com/HTML5DoctorComments">Comments RSS</a></li>
+<li id="menu-item-3253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3253"><a href="#">Doctor Network</a>
+<ul class="sub-menu">
+	<li id="menu-item-3273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3273"><a href="http://html5gallery.com">HTML5 Gallery</a></li>
+	<li id="menu-item-3580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3580"><a href="http://docteurhtml5.com/html5/">Docteur HTML5</a></li>
+	<li id="menu-item-3973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3973"><a href="https://github.com/html5doctor/">HTML5 Doctor on Github</a></li>
+</ul>
+</li>
+</ul>      <!-- end #top-nav -->
+    
+    <nav>
+		<ul id="menu-main_nav" class=""><li id="menu-item-3297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3297"><a href="/">Home</a></li>
+<li id="menu-item-3250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3250"><a href="http://html5doctor.com/article-archive/">Article Archive</a></li>
+<li id="menu-item-3291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3291"><a href="http://html5doctor.com/element-index/">Element Index</a></li>
+<li id="menu-item-3968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3968"><a href="http://html5doctor.com/resources/">Resources</a></li>
+</ul>    	<!-- end ul -->
+    	<ul>
+    		<li><form id="search-form" action="/search/" role="search"  method="get">
+    <div>
+    <input type="text" name="q" value="" />
+    <input type="submit" id="search-button" value="Search" />
+    </div>
+</form>
+</li>
+    	</ul>
+    	<!-- end ul -->	
+    </nav>
+    <!-- end nav -->
+	</div>
+	<!-- end .inner -->
+</header>
+<!-- end header -->
+<main id="content" class="group" role="main">
+    <div class="main">
+        <article class="post group">
+            <header class="post-2643 post type-post status-publish format-standard hentry category-attributes tag-extend tag-javascript tag-microdata tag-vocabulary" id="post-2643">
+                 <h1>Extending HTML5 — Microdata </h1>
+                <small><time datetime="2010-11-23" pubdate>Tuesday, November 23rd, 2010</time> by <a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme" rel="author">Oli Studholme</a>.</small>
+                <p class="tweet"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="html5doctor">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+            </header>
+            <!-- end header -->
+             <ul class="commentlist">
+                        </ul>
+           
+            <div class="entry">
+
+		
+                <p>For those who like (to argue about) semantics, <abbr>HTML</abbr>5 is fantastic. <a href="http://html5doctor.com/i-b-em-strong-element/" title="The i, b, em, &amp; strong elements | HTML5 Doctor">Old presentational elements</a> now have <a href="http://html5doctor.com/small-hr-element/" title="The small &amp; hr elements | HTML5 Doctor">new semantic meanings</a>, there’s a slew of new semantic elements for us to argue about, and we've even in<code>&lt;cite&gt;</code>d a riot or two. But that's not all! Also in <abbr>HTML</abbr>5 is microdata, a new lightweight semantic meta-syntax. Using attributes, we can define nestable groups of name-value pairs of data, called <em>microdata</em>, which are generally based on the page’s content. It gives us a whole new way to <em>add extra semantic information and extend <abbr>HTML</abbr>5</em>.</p>
+
+<nav class="in-page-nav">
+<h2>In-page navigation <a class="permalink" href="#in-page-nav">#</a></h2>
+<ol>
+<li><a href="#syntax">Microdata syntax</a></li>
+<li><a href="#microdata-action">Microdata in action</a>
+<ol>
+<li><a href="#schema-org-vocab">Using schema.org vocabularies</a></li>
+<li><a href="#google-vocab">Using Rich Snippet vocabularies</a></li>
+<li><a href="#whatwg-vocab">Using WHATWG vocabularies</a></li>
+<li><a href="#browsers">Browser support</a></li>
+<li><a href="#tools">Tools for making and using microdata</a></li>
+<li><a href="#other-vocab">Other vocabularies</a></li>
+<li><a href="#new-vocab">Making your own vocabulary</a></li></ol></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#changes"></a>Changes</li></ol>
+</nav>
+
+<div class="relative">
+<blockquote>
+<p>Sometimes, it is desirable to annotate content with specific machine-readable labels, e.g. to allow generic scripts to provide services that are customised to the page, or to enable content from a variety of cooperating authors to be processed by a single script in a consistent manner.</p>
+
+<p>For this purpose, authors can use the microdata features described in this section. Microdata allows nested groups of name-value pairs to be added to documents, in parallel with the existing content.</p>
+
+<footer>— <cite><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/microdata.html" title="5 Microdata &#8212; Web Applications 1.0"><abbr>WHATWG</abbr> <abbr>HTML</abbr> specification</a></cite></footer>
+</blockquote>
+
+<aside class="sidenote"><p>Microdata has been somewhat controversial and so is <a href="http://www.w3.org/TR/microdata/#overview" title="HTML Microdata">a separate specification at <abbr>W3C</abbr></a>, but it's still part of the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/microdata.html" title="5 Microdata &#8212; Web Applications 1.0"><abbr>WHATWG</abbr> <abbr>HTML</abbr></a> specifications. <a href="http://en.wikipedia.org/wiki/File:Keep_Calm_and_Carry_On_Poster.svg" title="File:Keep Calm and Carry On Poster.svg - Wikipedia, the free encyclopedia">Keep calm and carry on</a>.</p></aside>
+</div>
+
+<p>Instead of elements, these name-value pairs are defined via attributes:</p>
+
+<ul>
+<li id="attribute-itemscope"><code>itemscope</code> — defines a group of name-value pair(s), called an <em>item</em></li>
+<li id="attribute-itemprop"><code>itemprop="property-name"</code> — adds a <em>property</em> to a microdata item. The name of the property can be a word or <abbr>URL</abbr>, and the value is the ‘content’ of the element with this attribute:
+<ul>
+<li>For most elements, the value is the element’s text content (not including any <abbr>HTML</abbr> tags)</li>
+<li>For elements with a <abbr>URL</abbr> attribute, the value is the <abbr>URL</abbr> (<code>&lt;img src=""&gt;</code>, <code>&lt;a href=""&gt;</code>, <code>&lt;object data=""&gt;</code>, etc.)</li>
+<li>For the <code>&lt;time&gt;</code> element, the value is the <code>datetime=""</code> attribute</li>
+<li>For <code>&lt;meta itemprop="" content=""&gt;</code>, the value is the <code>content=""</code> attribute</li>
+</ul>
+</li>
+<li id="attribute-itemref"><code>itemref=""</code> — allows a microdata item to include <em>non-descendent properties</em> by referring to the <code>id</code>s of element(s) containing them</li>
+<li id="attribute-itemtype"><code>itemtype=""</code> — defines the item’s <em>type</em> when used on the same element as <code>itemscope</code>. The <code>itemtype</code> value is a <abbr>URL</abbr> that acts as an identifying vocabulary name.</li>
+<li id="attribute-itemid"><code>itemid=""</code> — allows a vocabulary to define a <em>global identifier</em> for a microdata item, for example an <abbr>ISBN</abbr> number on a book. Use <code>itemid</code> on the same element as the item’s <code>itemscope</code> and <code>itemtype</code> attributes.</li>
+</ul>
+
+<p>Let’s go through these new attributes and see how to use them in practice with everyone’s favourite example band, <a href="http://www.saltercane.com/" title="Salter Cane">Salter Cane</a>.</p>
+
+<section id="syntax">
+<h2>Microdata syntax <a class="permalink" href="#syntax">#</a></h2>
+
+<section id="itemscope-itemprop">
+<h3><code>itemscope</code> and <code>itemprop</code> <a class="permalink" href="#itemscope-itemprop">#</a></h3>
+
+<pre><code>&lt;p itemscope&gt;I’m going to the &lt;span itemprop="name"&gt;Salter Cane&lt;/span&gt; gig next week.
+Excited!&lt;/p&gt;
+</code></pre>
+
+<p>The presence of <code>itemscope</code> on the <code>&lt;p&gt;</code> element makes it into a microdata item. The attribute <code>itemprop</code> on a descendent element defines a <em>property</em> of this item (in this case, <code>name</code>) and associates it with the <em>value</em> <code>Salter Cane</code> (the <code>&lt;span&gt;</code>’s content). An item must have at least one <code>itemprop</code> to be valid.</p> <!-- todo: how are name-value pairs formatted eg via microdata.js -->
+
+<p><code>itemprop</code> names can be words or <abbr>URL</abbr> strings. Using <abbr>URL</abbr>s makes the name <em>globally unique</em>. If you use words, it’s best to use a vocabulary and the names defined in the vocabulary, which also makes the names unique. We cover this in the section <a href="#itemtype">Typed items and globally unique names</a>.</p>
+
+<!-- /#itemscope-itemprop --></section>
+
+<section id="itemprop-value">
+<h3><code>itemprop</code> value from an attribute <a class="permalink" href="#itemprop-value">#</a></h3>
+
+<p>For some elements, an <code>itemprop</code>’s value comes from an attribute of the element, not the element’s text. This applies to values from attributes containing <abbr>URL</abbr>s, the <code>datetime</code> attribute, and the <code>content</code> attribute.</p>
+
+<pre><code>&lt;p itemscope&gt;I’m going to the &lt;a itemprop="url"
+  href="http://www.saltercane.com/"&gt;Salter Cane&lt;/a&gt; gig 
+  &lt;time itemprop="date" datetime="2010-07-18"&gt;next week&lt;/time&gt;. Excited!&lt;/p&gt;
+</code></pre>
+
+<p>This defines an item with the properties <code>url</code> and <code>date</code> containing the values <code>http://www.saltercane.com/</code> and <code>2010-07-18</code>, respectively.</p>
+
+<p>Note that the link’s <code>itemprop="url"</code> value is <code>http://www.saltercane.com/</code> and not the element’s “Salter Cane” text content. In microdata, the following elements contribute their <abbr>URL</abbr>s as values:</p>
+
+<ul>
+<li><code>&lt;a href=""&gt;</code></li>
+<li><code>&lt;area href=""&gt;</code></li>
+<li><code>&lt;audio src=""&gt;</code></li>
+<li><code>&lt;embed src=""&gt;</code></li>
+<li><code>&lt;iframe src=""&gt;</code></li>
+<li><code>&lt;img src=""&gt;</code></li>
+<li><code>&lt;link href=""&gt;</code></li>
+<li><code>&lt;object data=""&gt;</code></li>
+<li><code>&lt;source src=""&gt;</code></li>
+<li><code>&lt;video src=""&gt;</code></li>
+</ul>
+
+<p>Similarly, the <code>&lt;time&gt;</code> element’s value is <code>2010-07-18</code> and not its text content (i.e., “next week”).</p>
+
+<p>Conversely, the URL-containing attributes of these <abbr>HTML</abbr>5 elements are not used as property values:</p>
+
+<ul>
+<li><code>&lt;base href=""&gt;</code></li>
+<li><code>&lt;script src=""&gt;</code></li>
+<li><code>&lt;input src=""&gt;</code></li>
+</ul>
+
+<p>It's still possible to use the text of one of these elements as its value — e.g., <code>&lt;a href=""&gt;desired value&lt;/a&gt;</code>. We just need to add an additional <code>itemprop</code>:</p>
+
+<pre><code>&lt;p itemscope&gt;I’m going to the &lt;a itemprop="url" href="http://www.saltercane.com/"&gt;&lt;span itemprop="name"&gt;Salter Cane&lt;/span&gt;&lt;/a&gt; gig &lt;time itemprop="date" datetime="2010-02-18"&gt;next week&lt;/time&gt;. They’re gonna rawk!&lt;/p&gt;
+</code></pre>
+
+<p>This defines an item with three properties: the <code>url</code> is <code>http://www.saltercane.com/</code>, the <code>name</code> is <code>Salter Cane</code>, and the <code>date</code> is <code>2010-07-18</code>.</p>
+
+<p>We’ll return to the <code>&lt;meta&gt;</code> element’s <code>content</code> attribute in just a moment.</p>
+
+<!-- /#itemprop-value --></section>
+
+<section id="nested-items">
+<h3>Nested items <a class="permalink" href="#nested-items">#</a></h3>
+<p>We can make a property into a nested item by adding <code>itemscope</code> to an element with <code>itemprop</code>.</p>
+
+<pre><code>&lt;p itemscope&gt;The &lt;span itemprop="name"&gt;Salter 
+  Cane&lt;/span&gt; drummer is &lt;span itemprop="members"
+  itemscope&gt;&lt;span itemprop="name"&gt;Jamie
+  Freeman&lt;/span&gt;.&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+
+<p>This defines an item with two properties, <code>name</code> and <code>members</code>. The <code>name</code> is <code>Salter Cane</code>, and the <code>members</code> is a nested item, containing the property <code>name</code> with the value <code>Jamie Freeman</code>. Note that <code>members</code> doesn’t have a text value.</p>
+
+<p>Items that aren’t part of other items (i.e., anything with <code>itemscope</code> but not <code>itemprop</code>, or the child of an element with <code>itemprop</code>) are called top-level microdata items. The microdata <abbr>API</abbr> returns top-level microdata items and their properties, which includes nested items.</p>
+<!-- /#nested-items --></section>
+
+<section id="multiple-properties">
+<h3>Multiple properties <a class="permalink" href="#multiple-properties">#</a></h3>
+
+<p>Items can have multiple properties with the same name and different values:</p>
+
+<pre><code>&lt;span itemprop="members" itemscope&gt;The band members are
+  &lt;span itemprop="name"&gt;Chris Askew&lt;/span&gt;,
+  &lt;span itemprop="name"&gt;Jeremy Keith&lt;/span&gt;,
+  &lt;span itemprop="name"&gt;Jessica Spengler&lt;/span&gt; and
+  &lt;span itemprop="name"&gt;Jamie Freeman&lt;/span&gt;.&lt;/span&gt;
+</code></pre>
+
+<p>This defines the property <code>name</code> with four values, <code>Chris Askew</code>, <code>Jeremy Keith</code>, <code>Jessica Spengler</code> and <code>Jamie Freeman</code>.</p>
+
+<!-- is there a short way of representing this? <code>name:Chris Askew</code>? what about properties that are themselves items? -->
+
+<p>One element can also have multiple properties (multiple <code>itemprop=""</code> names separated by spaces) with the same value:</p>
+
+<pre><code>&lt;p itemscope&gt;&lt;span itemprop="guitar vocals"&gt;Chris Askew&lt;/span&gt;
+  is so dreamy.&lt;/p&gt;
+</code></pre>
+
+<p>This defines the properties <code>guitar</code> and <code>vocals</code>, both of which have the value <code>Chris Askew</code>.</p>
+<!-- /#multiple-properties --></section>
+
+<section id="itemref">
+<h3>In-page references via <code>itemref</code> <a class="permalink" href="#itemref">#</a></h3>
+
+<p>Items can use non-descendant properties (name-value pairs that aren’t children of the <code>itemscope</code> element) via the attribute <code>itemref=""</code>. This attribute is a list of the IDs of properties or nested items elsewhere on the page.</p>
+
+<pre><code>&lt;p itemscope itemref="band-members"&gt;I’m going to the
+  &lt;a itemprop="url" href="http://www.saltercane.com/"&gt;
+  &lt;span itemprop="name"&gt;Salter Cane&lt;/span&gt;&lt;/a&gt; gig
+  &lt;time itemprop="date" datetime="2010-07-18"&gt;next 
+  week&lt;/time&gt;. Excited!&lt;/p&gt;
+  …
+  &lt;p&gt;Salter Cane are &lt;span id="band-members"
+  itemprop="members" itemscope&gt;
+  &lt;span itemprop="name"&gt;Chris Askew&lt;/span&gt;, 
+  &lt;span itemprop="name"&gt;Jeremy Keith&lt;/span&gt;, 
+  &lt;span itemprop="name"&gt;Jessica Spengler&lt;/span&gt;
+  and &lt;span itemprop="name"&gt;Jamie Freeman&lt;/span&gt;.&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+
+<p>This defines the properties <code>url</code>, <code>name</code>, and <code>date</code>. Additionally, it references the ID <code>band-members</code>, which contains the item <code>members</code> with four <code>name</code> properties, each of which have a different value.</p>
+<!-- /#item-ref --></section>
+
+<section id="meta">
+<h3>Using <code>&lt;meta&gt;</code> to add content via attributes <a class="permalink" href="#meta">#</a></h3>
+<p>If the text you want to add isn’t already part of the page’s content, you can use the <code>content</code> attribute on the <code>&lt;meta&gt;</code> element (<code>&lt;meta itemprop="" content=""&gt;</code>) to add it.</p>
+
+<pre><code>&lt;p itemscope&gt;&lt;span itemprop="name" itemscope&gt;Jessica Spengler
+  &lt;meta itemprop="likes" content="Mameshiba"&gt;&lt;/span&gt;’s fans are always
+  really raucous.&lt;/p&gt;
+</code></pre>
+
+<p>Unfortunately, some current browsers move <code>&lt;meta&gt;</code> elements into the document's <code>&lt;head&gt;</code>. The elegant workaround is to use an in-page reference via <code>itemref</code>, so it’ll be included by tools that understand microdata even if the browser has moved it.</p>
+
+<pre><code>&lt;p itemscope&gt;&lt;span itemprop="name" itemscope itemref="meta-likes"&gt;
+  Jessica Spengler&lt;meta id="meta-likes" itemprop="likes" content="Mameshiba"&gt;
+  &lt;/span&gt;’s fans are always really raucous.&lt;/p&gt;
+</code></pre>
+
+<p>Both of these code snippets define the property <code>name</code> with the value <code>Jessica Spengler</code> and the nested property <code>likes</code> with the value <code><a href="http://www.youtube.com/watch?v=p-E-8RXRG1M" title="YouTube - Mameshiba 7 - Sweet Bean [with English annotations]">Mameshiba</a></code>.</p>
+
+<aside class="sidenote"><p>Note that there’s no relationship between microdata and the page’s content. Adding all microdata via <code>&lt;meta&gt;</code> or adding metadata using only the page’s content are equivalent, and both give the same output via the microdata <abbr>API</abbr>.</p></aside>
+
+<p>While microdata is best suited for annotating your existing content, by using <code>&lt;meta&gt;</code>-based or hidden values, microdata doesn’t have to be tied to a page’s content. In general, adding hidden content to a page is a bad idea. It’s easy to forget about and not keep up-to-date. If the information would be useful to some users, add it to the page’s content. If it’s inconvenient to add the content inside an item, consider putting it in a <code>&lt;footer&gt;</code> and including via an in-page reference.</p>
+
+<!-- /#meta --></section>
+
+<section id="itemtype">
+<h3>Typed items (<code>itemtype</code>) and globally unique names <a class="permalink" href="#itemtype">#</a></h3>
+
+<p>We can tie an item to a microdata vocabulary by giving it a <em>type</em>, specified via the attribute <code>itemtype=""</code> on an element with <code>itemscope</code>. The <code>itemtype=""</code> value is a <abbr>URL</abbr> representing the microdata vocabulary. Note that this <abbr>URL</abbr> is only a text string that acts as unique vocabulary identifier — it doesn’t actually need to link to an actual webpage (although it’s nice when it does). After doing this, we can use names in the vocabulary as <code>itemprop</code> names to apply vocabulary-defined semantics.</p>
+
+<pre><code>&lt;p itemscope itemtype="http://schema.org/MusicGroup"&gt; I went to
+  hear &lt;a itemprop="url" href="http://saltercane.com/"&gt;&lt;span itemprop="name"&gt;
+  Salter Cane&lt;/span&gt;&lt;/a&gt; last night. They were great!&lt;/p&gt;
+</code></pre>
+
+<p>This example defines the property <code>url</code> with the value <code>http://saltercane.com/</code> and the property <code>name</code> with the value <code>Salter Cane</code> <strong>according to the <code>http://schema.org/MusicGroup</code> vocabulary</strong> (<a href="http://schema.org/MusicGroup" title="MusicGroup - schema.org"><code>MusicGroup</code> is a specialised kind of <code>Organization</code> vocabulary</a> on schema.org).</p>
+
+<p>Alternatively, you can use <abbr>URL</abbr>s for <code>itemprop</code> names. In this case, there’s no need to use <code>itemtype</code> as the vocabulary information is already contained in the name. These are referred to as <em>globally unique names</em>. While vocabulary-based names must be used inside a typed item to have the vocabulary-defined meaning, you can use a <abbr>URL</abbr> <code>itemprop</code> name anywhere.</p>
+
+<p>Let’s rewrite the above example using <abbr>URL</abbr>-based names:</p>
+
+<pre><code>&lt;p itemscope&gt;I went to hear &lt;a
+  itemprop="http://schema.org/MusicGroup/url"
+  href="http://saltercane.com/"&gt;&lt;span
+  itemprop="http://schema.org/MusicGroup/name"&gt;Salter Cane&lt;/span&gt;
+  &lt;/a&gt; last night. They were great!&lt;/p&gt;
+</code></pre>
+
+<p>This allows you to use multiple vocabularies in the same code snippet, even if they use the same property names.</p>
+
+<!-- /#itemtype --></section>
+
+<section id="itemid">
+<h3>Global identifiers with <code>itemid</code> <a class="permalink" href="#itemid">#</a></h3>
+
+<p>Sometimes an item may be identified by a unique identifier, such as a book by its <abbr>ISBN</abbr> number. This can be done in microdata using a <em>global identifier</em> via the attribute <code>itemid=""</code>, <em>if specified by the vocabulary</em>. <code>itemid</code> can only appear on an element with both <code>itemscope</code> and <code>itemtype=""</code>, and must be a valid URL.</p>
+</section>
+
+<pre><code>&lt;p itemscope itemtype="http://vocab.example.com/book"
+  itemid="urn:isbn:0321687299"&gt;
+  &lt;!-- book info… --&gt;
+&lt;/p&gt;
+</code></pre>
+
+<p>This defines an item containing information about a book identified by the <abbr>ISBN</abbr> number 0321687299, <em>as long as</em> the <code>http://vocab.example.com/book</code> vocabulary defines global identifiers like this.</p>
+
+<p>This example uses a theoretical example from the spec, as schema.org Book vocabulary currently only defines <a href="http://schema.org/Book" title="Book - schema.org"><abbr>ISBN</abbr> as an <code>itemprop</code></a>, although they’ve mentioned plans to add <code>itemid</code> global identifiers to their vocabularies in the future. Global identifiers are defined for the WHATWG vocabularies for vCard and vEvent, with values like <code>UID:19950401-080045-40000F192713-0052</code> and <code>UID:19970901T130000Z-123401@host.com</code> respectively<!-- although these are invalid URLs, ref: http://www.w3.org/Bugs/Public/show_bug.cgi?id=13929 -->.</p>
+
+<!-- /#itemid --></section>
+
+<!-- /#syntax --></section>
+
+
+<section id="microdata-action">
+<h2>Microdata in action <a class="permalink" href="#microdata-action">#</a></h2>
+
+<p>So now that we know how, <em>why</em> would we want to use microdata?</p>
+
+<p>One use is adding extra semantics or data that we can manipulate via JavaScript in a similar way to <a href="http://html5doctor.com/html5-custom-data-attributes/" title="HTML5 Custom Data Attributes (data-*) | HTML5 Doctor">custom data attributes (<code>data-*</code>)</a>. But if we use a vocabulary via <code>itemtype</code> or <abbr>URL</abbr>-based <code>itemprop</code> names, microdata becomes considerably more powerful.</p>
+
+<p>While microdata is <em>machine-readable without needing to know the vocabulary</em>, using a vocabulary means others can know what our properties mean. This allows the data to take on a life of its own. Say what? Well, in effect, <strong>using a vocabulary makes microdata a lightweight <abbr>API</abbr> for your content</strong>.</p>
+
+<p>If you visited someone’s homepage, wouldn’t it be great if you could add their contact information to your address book automatically? The same is true for adding an event you’re attending to your calendar. As the syntax examples were a bit example-y, let’s see how to do that using a real-world example — an upcoming event I’m organising (well, it <em>was</em> upcoming!):</p>
+
+<figure>
+<pre><code>&lt;section&gt;
+  &lt;h3&gt;&lt;a href="http://atnd.org/events/5181" title="WDE-ex Vol11『iPad
+  のウェブデザイン：私たちがみつけたこと 』 : ATND"&gt;WDE-ex Vol.11 — Designing
+  for iPad: Our experience so far&lt;/a&gt;&lt;/h3&gt;
+  &lt;p&gt;On &lt;time datetime="2010-07-21T19:00:00+09:00"&gt;July 21st 19:00
+  &lt;/time&gt;-&lt;time datetime="2010-07-21T20:00:00+09:00"&gt;20:00&lt;/time&gt;
+  at &lt;a href="http://www.apple.com/jp/retail/ginza/map/"&gt;Apple Ginza&lt;/a&gt;,
+  &lt;a href="http://informationarchitects.jp/" title="iA"&gt;Oliver Reichenstein,
+  CEO of iA&lt;/a&gt;, will share the lessons they’ve learned while creating
+  three iPad apps and one iPad website.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<blockquote><section>
+  <h3><a href="http://atnd.org/events/5181" title="WDE-ex Vol11『iPad のウェブデザイン：私たちがみつけたこと 』 : ATND">WDE-ex Vol.11 — Designing for iPad: Our experience so far</a></h3>
+  <p>On <time datetime="2010-07-21T19:00:00+09:00">July 21st 19:00</time>-<time datetime="2010-07-21T20:00:00+09:00">20:00</time> at <a href="http://www.apple.com/jp/retail/ginza/map/">Apple Ginza</a>, <a href="http://informationarchitects.jp/" title="iA">Oliver Reichenstein, CEO of iA</a>, will share the lessons they’ve learned while creating three iPad apps and one iPad website.</p>
+</section></blockquote>
+<figcaption>A Web Directions East event — in code and displayed</figcaption>
+</figure>
+
+<p>Now we could start making up our own <code>itemprop</code> names on an ad-hoc basis, but this effectively prevents anyone else from using our data. By using a vocabulary and following its rules, others can also use our data. It’s a good idea to use a vocabulary, so where do we find one?</p>
+
+<section id="schema-org-vocab">
+<h3>Using schema.org vocabularies <a class="permalink" href="#schema-org-vocab">#</a></h3>
+
+<!-- 
+* data-vocabulary rich snippet testing tool doesn’t test schema.org snippets yet (to confirm, eta about now)
+* microdata and schema.org tools http://schema.rdfs.org/tools.html
+	* nascent schema.org generators
+		* http://schema-creator.org/ (Person, Product, Event, Organization, Movie, Book, Review)
+		* http://schemafied.com/ (aggregate rating, article, contact point, creative work, event, local business, media object, nutrition information, offer, organization, person, place, postal address, product, rating, recipe, thing) includes items from other schemas
+		* http://www.microdatagenerator.com/ (Attorney, Auto Dealer, Dentist, HVAC, Local Business Schema (NAP), Locksmith, Physician, Plumber, Real Estate, Restaurant Schemas)
+	* Schema for WordPress plugin http://schemaforwordpress.com/
+	* http://www.productontology.org for more explicit products and services to use with schema.org/Product vocab, sourced from Wikipedia
+		* ref: http://groups.google.com/group/schemaorg-discussion/browse_thread/thread/0b146382537316ed# for integrating productontology schemas
+	* Rich Snippets testing tool adding support for schema.org http://www.google.com/webmasters/tools/richsnippets
+	* Mida, a Microdata parser/extractor library for Ruby http://lawrencewoodman.github.com/mida/
+	* Translate CVS or Microdata using schema.org terms to JSON, RDF/XML or RDF/Turtle http://omnidator.appspot.com/
+* controversy
+	* no RDFa support
+		* http://schema.rdfs.org/
+	* no community input before launch
+* random buildout is random
+* user extensions seem pretty worthless
+
+ -->
+
+<p class="callout changed-block"><em><time datetime="2011-08-16T10:18:42+09:00">2011-08-16</time></em> The schema.org vocabularies have now superseded the old Google vocabularies, so I’ve updated the article to reflect this.</p>
+
+<p>Bing, Google and Yahoo have collaborated on a set of microdata vocabularies under the name <a href="http://schema.org/" title="schema.org">schema.org</a>. By using these vocabularies we can convey semantic information in our content in a way these search engines can understand. While adding semantics using these vocabularies won’t affect your search ranking, the included data may be shown in search results. The main vocabularies schema.org offers are:</p>
+
+<ul>
+<li>Creative works: CreativeWork, Book, Movie, MusicRecording, Recipe, TVSeries…</li>
+<li>Embedded non-text objects: AudioObject, ImageObject, VideoObject</li>
+<li>Event</li>
+<li>Organization</li>
+<li>Person</li>
+<li>Place, LocalBusiness, Restaurant…</li>
+<li>Product, Offer, AggregateOffer</li>
+<li>Review, AggregateRating</li>
+</ul>
+
+<p>They’re the cross-search engine successors to Google’s earlier <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=99170" title="Rich snippets - Webmaster Tools Help">Rich Snippets</a> vocabularies. Unlike Rich Snippets, which came in microformats and RDFa versions, schema.org vocabularies controversially <em>only</em> support microdata at the moment.</p>
+
+<p>Taking our fairly standard <abbr>HTML</abbr>5 code for Oliver’s iPad event above, let’s add some microdata pixie dust using the schema.org vocabularies. First, the speaker (using the <a href="http://schema.org/Person" title="Person - schema.org">http://schema.org/Person vocabulary</a>) and the venue (using the <a href="http://schema.org/Organization" title="Organization - schema.org">http://schema.org/Organization vocabulary</a>):</p>
+
+<figure>
+<pre><code>&lt;section&gt;
+  &lt;h3&gt;&lt;a href="http://atnd.org/events/5181" title="WDE-ex Vol11『iPad
+  のウェブデザイン：私たちがみつけたこと 』 : ATND"&gt;WDE-ex Vol.11 — Designing
+  for iPad: Our experience so far&lt;/a&gt;&lt;/h3&gt;
+  &lt;p&gt;On &lt;time datetime="2010-07-21T19:00:00+09:00"&gt;July 21st 19:00
+  &lt;/time&gt;-&lt;time datetime="2010-07-21T20:00:00+09:00"&gt;20:00&lt;/time&gt; at
+  &lt;span <mark>itemscope itemtype="http://schema.org/Organization"</mark>&gt;
+  &lt;a <mark>itemprop="url"</mark> href="http://www.apple.com/jp/retail/ginza/map/"&gt;
+  &lt;span <mark>itemprop="name"</mark>&gt;Apple Ginza&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;,
+  &lt;span <mark>itemscope itemtype="http://schema.org/Person"</mark>&gt;
+  &lt;a <mark>itemprop="url"</mark> href="http://informationarchitects.jp/" title="iA"&gt;
+  &lt;span <mark>itemprop="name"</mark>&gt;Oliver Reichenstein&lt;/span&gt;, CEO of iA&lt;/a&gt;
+  &lt;/span&gt;, will share the lessons they’ve learned while creating three
+  iPad apps and one iPad website.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<figcaption>Adding schema.org microdata attributes for the speaker and location (ref: <a href="http://html5doctor.com/demos/microdata/example1.html" title="Microdata example 1: schema.org Person and Organization vocabularies">standalone file</a>). Because they’re attributes, there is no change in how the <abbr>HTML</abbr> is displayed</figcaption>
+</figure>
+
+<p>While this content will still look the same, adding these microdata items means the following information is now machine readable:</p>
+
+<ul>
+<li>A company’s name (<code>name</code>)</li>
+<li>That company’s <abbr>URL</abbr> (<code>url</code> on <code>&lt;a&gt;</code>)</li>
+<li>A person’s name (<code>name</code>)</li>
+<li>A <abbr>URL</abbr> associated with that person (<code>url</code> on <code>&lt;a&gt;</code>)</li>
+</ul>
+
+<p>In JSON (ref: <a href="http://foolip.org/microdatajs/live/?html=%3Csection%3E%0A%20%20%3Ch3%3E%3Ca%20href%3D%22http%3A%2F%2Fatnd.org%2Fevents%2F5181%22%20title%3D%22WDE-ex%20Vol11%E3%80%8EiPad%0A%20%20%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%EF%BC%9A%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E3%81%BF%E3%81%A4%E3%81%91%E3%81%9F%E3%81%93%E3%81%A8%20%E3%80%8F%20%3A%20ATND%22%3EWDE-ex%20Vol.11%20%E2%80%94%20Designing%0A%20%20for%20iPad%3A%20Our%20experience%20so%20far%3C%2Fa%3E%3C%2Fh3%3E%0A%20%20%3Cp%3EOn%20%3Ctime%20datetime%3D%222010-07-21T19%3A00%3A00%2B09%3A00%22%3EJuly%2021st%2019%3A00%0A%20%20%3C%2Ftime%3E-%3Ctime%20datetime%3D%222010-07-21T20%3A00%3A00%2B09%3A00%22%3E20%3A00%3C%2Ftime%3E%20at%0A%20%20%3Cspan%20itemscope%20itemtype%3D%22http%3A%2F%2Fschema.org%2FOrganization%22%3E%0A%20%20%3Ca%20itemprop%3D%22url%22%20href%3D%22http%3A%2F%2Fwww.apple.com%2Fjp%2Fretail%2Fginza%2Fmap%2F%22%3E%0A%20%20%3Cspan%20itemprop%3D%22name%22%3EApple%20Ginza%3C%2Fspan%3E%3C%2Fa%3E%3C%2Fspan%3E%2C%0A%20%20%3Cspan%20itemscope%20itemtype%3D%22http%3A%2F%2Fschema.org%2FPerson%22%3E%0A%20%20%3Ca%20itemprop%3D%22url%22%20href%3D%22http%3A%2F%2Finformationarchitects.jp%2F%22%20title%3D%22iA%22%3E%0A%20%20%3Cspan%20itemprop%3D%22name%22%3EOliver%20Reichenstein%3C%2Fspan%3E%2C%20CEO%20of%20iA%3C%2Fa%3E%0A%20%20%3C%2Fspan%3E%2C%20will%20share%20the%20lessons%20they%E2%80%99ve%20learned%20while%20creating%20three%0A%20%20iPad%20apps%20and%20one%20iPad%20website.%3C%2Fp%3E%0A%3C%2Fsection%3E">Live Microdata</a>) this would be:</p>
+
+<pre><code>{
+  "items": [
+    {
+      "type": "http://schema.org/Organization",
+      "properties": {
+        "url": [
+          "http://www.apple.com/jp/retail/ginza/map/"
+        ],
+        "name": [
+          "Apple Ginza"
+        ]
+      }
+    },
+    {
+      "type": "http://schema.org/Person",
+      "properties": {
+        "url": [
+          "http://informationarchitects.jp/"
+        ],
+        "name": [
+          "Oliver Reichenstein"
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+
+<p>So we now have a semantic association between a company and a <abbr>URL</abbr> and between a person and a <abbr>URL</abbr>. With the right tool, we could add this information to an address book automatically.</p>
+
+<p>Next, let’s add microdata attributes to the event data, using the <a href="http://schema.org/Event" title="Event - schema.org">http://schema.org/Event vocabulary</a>:</p>
+
+<figure>
+<pre><code>&lt;section <mark>itemscope itemtype="http://schema.org/Event"</mark>&gt;
+  &lt;h3&gt;&lt;a <mark>itemprop="url"</mark> href="http://atnd.org/events/5181" title="WDE-ex
+  Vol11『iPad のウェブデザイン：私たちがみつけたこと 』 : ATND"&gt;&lt;span
+  <mark>itemprop="summary"</mark>&gt;WDE-ex Vol.11 — Designing for iPad: Our experience so
+  far&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+  &lt;p <mark>itemprop="description"</mark>&gt;On &lt;time <mark>itemprop="startDate"</mark>
+  datetime="2010-07-21T19:00:00+09:00"&gt;July 21st 19:00&lt;/time&gt;-
+  &lt;time <mark>itemprop="endDate"</mark> datetime="2010-07-21T20:00:00+09:00"&gt;20:00
+  &lt;/time&gt; at &lt;span <mark>itemprop="location"</mark> itemscope
+  itemtype="http://schema.org/Organization"&gt;&lt;a itemprop="url"
+  href="http://www.apple.com/jp/retail/ginza/map/"&gt;&lt;span itemprop="name"&gt;
+  Apple Ginza&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;, &lt;span itemscope
+  itemtype="http://schema.org/Person"&gt;&lt;a itemprop="url"
+  href="http://informationarchitects.jp/" title="iA"&gt;&lt;span itemprop="name"&gt;
+  Oliver Reichenstein&lt;/span&gt;, CEO of iA&lt;/a&gt;&lt;/span&gt;, will share
+  the lessons they’ve learned while creating three iPad apps and
+  one iPad website.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<blockquote><section itemscope itemtype="http://schema.org/Event">
+<h3><a itemprop="url" href="http://atnd.org/events/5181" title="WDE-ex Vol11『iPad のウェブデザイン：私たちがみつけたこと 』 : ATND"><span itemprop="summary">WDE-ex Vol.11 — Designing for iPad: Our experience so far</span></a></h3>
+<p itemprop="description">On <time itemprop="startDate" datetime="2010-07-21T19:00:00+09:00">July 21st 19:00</time>-<time itemprop="endDate" datetime="2010-07-21T20:00:00+09:00">20:00</time> at <span itemprop="location" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="http://www.apple.com/jp/retail/ginza/map/"><span itemprop="name">Apple Ginza</span></a></span>, <span itemscope itemtype="http://schema.org/Person"><a itemprop="url" href="http://informationarchitects.jp/" title="iA"><span itemprop="name"> Oliver Reichenstein</span>, CEO of iA</a></span>, will share the lessons they’ve learned while creating three iPad apps and one iPad website.</p>
+</section></blockquote>
+<figcaption>A code sample with microdata describing an event (ref: <a href="http://html5doctor.com/demos/microdata/example2.html" title="Microdata example 2: schema.org Event, Person and Organization vocabularies">standalone file</a>). Adding the microdata attributes doesn’t change how the HTML is displayed.</figcaption>
+</figure>
+
+<aside class="sidenote"><p>While these <code>itemprop</code>s will probably be self-explanatory, you can see descriptions of what each <code>itemprop</code> means on the <a href="http://schema.org/Organization" title="Organization - schema.org">Organization</a>, <a href="http://schema.org/Person" title="Person - schema.org">Person</a>, and <a href="http://schema.org/Event" title="Event - schema.org">Event vocabulary</a> pages.</p></aside>
+
+<p>Now things are a lot more interesting! We can extract the following data:</p>
+
+<ul>
+<li>Event details
+<ul><li>Event name (<code>summary</code>)</li>
+<li>Event start and end time (<code>startDate</code> and <code>endDate</code>)</li>
+<li>Event summary (<code>summary</code>)</li>
+<li>Event <abbr>URL</abbr> (<code>url</code> on <code>&lt;a&gt;</code>)</li>
+<li>Event location (<code>location</code>), which is represented by:
+<ul>
+<li>Company name (<code>name</code>)</li>
+<li>Company <abbr>URL</abbr> (<code>url</code> on <code>&lt;a&gt;</code>)</li>
+</ul>
+</li>
+</ul></li>
+<li>Speaker details (well, someone connected with the event, although this connection isn’t explicit)
+<ul><li>A person’s name (<code>name</code>)</li>
+<li>That person’s associated <abbr>URL</abbr> (<code>url</code>)</li></ul>
+</li>
+</ul>
+
+<p>Google provides a <a href="http://www.google.com/webmasters/tools/richsnippets" title="Webmaster Tools - Rich Snippets Testing Tool">Rich Snippet testing tool</a>, which shows what data it can extract from the schema.org microdata:</p>
+
+<aside class="sidenote"><p>This tool was originally developed for <a href="#google-vocab">Rich Snippets</a>, so it’ll also work for those vocabularies for microdata, microformats and RDFa</p></aside>
+
+<img src="http://html5doctor.com/wp-content/uploads/2011/08/rich-snippet-data2.png" alt="Data extracted from schema.org microdata by the Rich Snippet testing tool" title="Rich Snippet Data" width="495" height="341" class="alignnone size-full wp-image-3628" srcset="http://html5doctor.com/wp-content/uploads/2011/08/rich-snippet-data2.png 495w, http://html5doctor.com/wp-content/uploads/2011/08/rich-snippet-data2-300x206.png 300w" sizes="(max-width: 495px) 100vw, 495px" />
+
+<p>Google could use this additional data in search results as follows:</p>
+
+<img src="http://html5doctor.com/wp-content/uploads/2010/10/rich-snippet.png" alt="Google Rich Snippet testing tool preview, showing data we marked up using microdata" width="507" height="180" class="alignnone size-full wp-image-2659" srcset="http://html5doctor.com/wp-content/uploads/2010/10/rich-snippet.png 507w, http://html5doctor.com/wp-content/uploads/2010/10/rich-snippet-300x106.png 300w" sizes="(max-width: 507px) 100vw, 507px" />
+
+<p>The summary (linked to the event <abbr>URL</abbr>) and the date and venue are included. Nice! Just by using a vocabulary, Google (or a script supporting microdata) can discover lots of useful data about our event without needing one of those pesky natural language interpreters (otherwise known as humans).</p>
+
+<p>Anyone who has used microformats before will also notice these vocabularies look very similar to hCard and hCalendar, although there are a couple of name changes — e.g., hCalendar’s <code>class="dtstart"</code> becomes <code>itemprop="startDate"</code>.</p>
+
+<p>While the schema.org vocabularies are all the search engines are promising to support, you can <a href="http://schema.org/docs/extension.html" title="schema.org - Extending Schemas">extend these vocabularies</a> yourself. The safest ways to do this would be via:</p>
+
+<ul>
+<li>the <a href="http://www.productontology.org" title="The Product Types Ontology: Use Wikipedia pages for describing products or services with GoodRelations and schema.org">Product Types Ontology</a> for products or services, based on Wikipedia</li>
+<li>the <a href="http://www.heppnetz.de/projects/goodrelations/" title="GoodRelations: The Professional Web Vocabulary for E-Commerce">GoodRelations vocabulary terms</a> for e-commerce, which is <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=186036" title="Product properties: GoodRelations and hProduct - Webmaster Tools Help">supported (along with hProduct) by Rich Snippets</a></li>
+<li>making your own schema.org vocabulary extension collaboratively using the <a href="http://groups.google.com/group/schemaorg-discussion" title="Schema.org Discussion | Google Groups">schema.org email list</a> (although read <a href="#new-vocab">Making your own vocabulary</a> later in this article first)</li>
+</ul>
+
+<!-- /#schema-org-vocab --></section>
+
+<section id="google-vocab">
+<h3>Using Google’s Rich Snippets vocabularies <a class="permalink" href="#google-vocab">#</a></h3>
+
+<p>Google also has some basic vocabularies (precursors of schema.org vocabularies) for the following kinds of data, under the moniker of <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=99170" title="Rich snippets - Webmaster Tools Help">Rich Snippets</a>:</p>
+
+<ul>
+<li>people</li>
+<li>businesses and organizations</li>
+<li>events</li>
+<li>products</li>
+<li>reviews</li>
+<li>recipes</li>
+</ul>
+
+<p>These vocabularies support microformats and <abbr>RDFa</abbr>, two other ways to add extra semantics to our content, in addition to microdata. Apart from this difference, they’re basically identical to the matching schema.org vocabularies, except they use <a href="http://www.data-vocabulary.org/" title="Data-Vocabulary.org | Official Website">www.data-vocabulary.org</a> instead of schema.org in the <code>itemtype</code>. While Google still supports them, the newer schema.org offers more vocabularies that are also supported by Bing and Yahoo, so choose schema.org vocabularies as long as you’re happy with microdata. You might still want to check out the <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=99170" title="Rich snippets - Webmaster Tools Help">Rich Snippets documentation</a>, as it includes code samples and is generally better than schema.org’s at the time of writing.</p>
+
+<!-- /#google-vocab --></section>
+
+<section id="whatwg-vocab">
+<h3>Using <abbr>WHATWG</abbr>/microformats.org vocabularies <a class="permalink" href="#whatwg-vocab">#</a></h3>
+
+<p>If you’re familiar with microformats or want more properties than Google’s vocabularies, the <abbr>WHATWG</abbr> <abbr>HTML</abbr>5 specification actually contains microdata vocabularies for both the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#vcard" title="4.12 Links &mdash; HTML5 (including next generation additions still in development)">vCard</a> and <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#vevent" title="4.12 Links &mdash; HTML5 (including next generation additions still in development)">vEvent<!-- todo: iCalendar? check --></a> specifications that hCard and hCalendar are based on, plus <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#licensing-works" title="4.12 Links &mdash; HTML5 (including next generation additions still in development)">a licensing vocabulary</a>.</p>
+
+<p>Let’s take our earlier example and rewrite it using these vocabularies instead:</p>
+
+<figure>
+<pre><code>&lt;section itemscope
+  itemtype="http://microformats.org/profile/hcalendar#vevent"&gt;
+  &lt;h3&gt;&lt;a itemprop="url" href="http://atnd.org/events/5181" title="WDE-ex
+  Vol11『iPad のウェブデザイン：私たちがみつけたこと 』 : ATND"&gt;&lt;span
+  itemprop="summary"&gt;WDE-ex Vol.11 — Designing for iPad: Our experience so
+  far&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+  &lt;p itemprop="description"&gt;On &lt;time itemprop="dtstart"
+  datetime="2010-07-21T19:00:00+09:00"&gt;July 21st 19:00&lt;/time&gt;-
+  &lt;time itemprop="dtend" datetime="2010-07-21T20:00:00+09:00"&gt;20:00&lt;/time&gt;
+  at &lt;span itemprop="location" itemscope
+  itemtype="http://microformats.org/profile/hcard"&gt;&lt;a itemprop="url"
+  href="http://www.apple.com/jp/retail/ginza/map/"&gt;&lt;span itemprop="fn org"&gt;
+  Apple Ginza&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;, &lt;span itemscope
+  itemtype="http://microformats.org/profile/hcard"&gt;&lt;a itemprop="url"
+  href="http://informationarchitects.jp/" title="iA"&gt;&lt;span itemprop="fn"&gt;
+  Oliver Reichenstein&lt;/span&gt;, CEO of iA&lt;/a&gt;&lt;/span&gt;, will share
+  the lessons they’ve learned while creating three iPad apps and one
+  iPad website.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+<figcaption>An HTML code sample with microdata describing an event, using vCard- and vEvent-based vocabularies (ref: <a href="http://html5doctor.com/demos/microdata/example3.html" title="Microdata example 3: WHATWG/microformats.org vEvent and vCard vocabularies">standalone file</a>)</figcaption>
+</figure>
+
+<p>Currently, search engines don’t map these vocabularies to schema.org ones. It’s possible they will at some stage, so decide which vocabularies to use based on what information you want to mark up, as the data is accessible regardless.</p>
+
+<section id="uf-wiki">
+<h4>Criticism on microformats.org <a class="permalink" href="#uf-wiki">#</a></h4>
+
+<p>Despite these vocabularies being based on vCard and vEvent and using microformats.org as their <abbr>URL</abbr>s, the microformats wiki actually warns against using the vCard and vEvent microdata vocabularies, stating:</p>
+
+<blockquote><p>For common semantics on the web … microformats are still simpler and easier than microdata, and are already well implemented across numerous services and tools.</p>
+<footer><cite><a href="http://microformats.org/wiki/microdata#summary" title="microdata · Microformats Wiki">Microdata — Microformats wiki</a></cite></footer>
+</blockquote>
+
+<p>Personally, I think the difference is marginal. If you use the recommended microformat <code>profile</code> links, I’d say it’s a wash. (But of course no one does ;). Microdata is actually simpler to use for date/time data than the microformat equivalents (although it is less permissive for <a href="http://html5doctor.com/the-time-element/" title="The time element (and microformats) | HTML5 Doctor">fuzzy or ancient antiquity times</a>), and it's more explicit, for example, avoiding the internationalisation issues of the “implied <code>fn</code> optimisation”. Tool support is a valid concern, but again I expect this to change over time — microdata is relatively new after all.</p>
+
+<!-- /#uf-wiki --></section>
+<!-- /#whatwg-vocab --></section>
+
+<section id="browsers">
+<h3>Browser support <a class="permalink" href="#browsers">#</a></h3>
+
+<p>The microdata specification describes the <a href="http://www.w3.org/TR/microdata/#using-the-microdata-dom-api" title="HTML Microdata">microdata <abbr>DOM</abbr> <abbr>API</abbr></a>, which allows us to access top-level items and their properties. <del datetime="2011-08-16T11:03:53+0900">Unfortunately, no browser supports this yet.</del> <ins datetime="2011-08-16T11:16:22+0900"><a href="http://my.opera.com/desktopteam/blog/2011/07/27/latency-microdata-qresync" title="Opera Desktop Team - Network latency improvements, Microdata and QRESYNC">Opera has experimental support in their latest snapshot</a>, with support expected in Opera 12.</ins> It’s also <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=591467">being implemented by Mozilla</a>.</p>
+
+<table>
+	<caption>Browser support for microdata <i>(as of <time datetime="2011-08-16">16th August, 2011</time>)</i></caption>
+<thead>
+	<tr><th scope="col">Browser</th><th scope="col">Support</th></tr>
+</thead>
+<tbody>
+	<tr><th scope="row">Chrome</th><td>No</td></tr>
+	<tr><th scope="row">Safari</th><td>No</td></tr>
+	<tr><th scope="row">Firefox</th><td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=591467">Work in progress</a></td></tr>
+	<tr><th scope="row">Opera</th><td><a href="http://my.opera.com/desktopteam/blog/2011/07/27/latency-microdata-qresync" title="Opera Desktop Team - Network latency improvements, Microdata and QRESYNC">In snapshot 12.00-1033</a></td></tr>
+	<tr><th scope="row">Internet Explorer</th><td>No</td></tr>
+</tbody>
+</table>
+
+<p>But that’s okay because this data is still useful for search engine robots and third party tools. For example, Bing, Google, and Yahoo are using microdata with the schema.org vocabularies in search results.</p>
+
+<!-- /#browsers --></section>
+
+<section id="tools">
+<h3>Tools for making and using microdata <a class="permalink" href="#tools">#</a></h3>
+
+<p>With the right tools, we could use this data complete with its explicit semantics to, for example, add a microdata-annotated event directly into a calendar — very handy if you were planning to attend. With the release of schema.org, <a href="http://schema.rdfs.org/tools.html" title="schema.rdfs.org - Tools">tools for microdata are starting to appear</a>, but are still somewhat thin on the ground. (No Firefox plugin?! Inconceivable!). However we have libraries for three languages now:</p>
+
+<ul>
+<li><a href="http://foolip.org/microdatajs/live/" title="Live Microdata">Live Microdata</a> and the associated <a href="http://gitorious.net/microdatajs/microdatajs" title="microdatajs in HTML5 Microdata JavaScript - Gitorious">microdatajs</a> by <a href="http://twitter.com/foolip" title="@foolip on Twitter">Philip Jägenstedt</a></li>
+<li><ins datetime="2011-07-14T06:25:19+0900">the <a href="http://soyrex.com/php-microdata/" title="PHP Microdata Parser - Library to parse microdata from HTML">PHP Microdata Parser</a> by <a href="https://twitter.com/soyrex">Alex Holt</a></ins></li>
+<li><ins datetime="2011-08-16T11:22:17+0900"><a href="http://lawrencewoodman.github.com/mida/" title="Mida - A Microdata extractor/parser library for Ruby">Mida</a>, a Microdata parser/extractor library for Ruby and command line tool by <a href="http://techtinkering.com/" title="TechTinkering">Lawrence Woodman</a></ins></li>
+</ul>
+
+<p>Live Microdata converts microdata into <abbr>JSON</abbr>. If you’re using <abbr>WHATWG</abbr>/microformats.org vocabularies for vCard or vEvent, it also produces vCard and iCal output. <ins datetime="2011-07-14T06:31:07+0900">The PHP Microdata library allows you to parse microdata in an HTML file, returning JSON or a PHP array.</ins> <ins datetime="2011-08-16T11:30:16+0900">Mida allows you to extract microdata as JSON, and search for or inspect items. It supports defining vocabularies, and includes schema.org vocabularies. You can even use it from the command line.</ins></p>
+
+<p>Until there is native <abbr>API</abbr> support in browsers, we can use these libraries to access microdata. For example, you could put microdatajs on your own server to provide vCard and iCal file downloads, to allow adding the data to an address book or calendar app.</p>
+
+<p><a href="http://validator.nu/">Validator.nu</a> will validate your use of microdata, but not whether it conforms to a vocabulary. Google’s <a href="http://www.google.com/webmasters/tools/richsnippets" title="Webmaster Tools - Rich Snippets Testing Tool">Rich Snippets testing tool</a> also validates microdata. In addition, if you’re using the schema.org or Rich Snippets vocabularies it <em>should</em> display how that data could be incorporated into search results, as we saw in the <a href="#schema-org-vocab">Using schema.org vocabularies</a> examples above. At the time of writing it isn’t, possibly due to this tool being updated for schema.org vocabularies.</p>
+
+<p>If you have valid microdata in these vocabularies search engines <em>will</em> understand that data, but currently you have to <a href="http://www.google.com/support/webmasters/bin/request.py?contact_type=rich_snippets_feedback" title="Interested in Rich Snippets? - Webmaster Tools Help">“register your interest” in having your rich snippets actually be displayed</a> (<a href="http://knol.google.com/k/google-rich-snippets-tips-and-tricks#Frequently_Asked_Questions" title="Google Rich Snippets Tips and Tricks - Google Rich Snippetsさんのコレクション">more information</a>).</p>
+
+<p>If you’d like a simple way to create microdata, with schema.org there are now several web-based form options:</p>
+
+<ul>
+<li><a href="http://schema-creator.org/" title="Schema Creator">Schema Creator</a> supports the schema.org vocabularies for Person, Product, Event, Organization, Movie, Book, and Review</li>
+<li><a href="http://schemafied.com/" title="schemafied">Schemafied</a> supports the schema.org vocabularies for aggregate rating, article, contact point, creative work, event, local business, media object, nutrition information, offer, organization, person, place, postal address, product, rating, recipe, and thing, and also includes relevant items from other schemas</li>
+<li><a href="http://www.microdatagenerator.com/" title="Schema.org Generator For Local SEO | Rich Snippets &amp; Microdata Generator">Microdata Generator</a> supports the schema.org vocabularies for Attorney, Auto Dealer, Dentist, HVAC, Local Business Schema (NAP), Locksmith, Physician, Plumber, Real Estate, and Restaurant</li>
+<li><a href="http://microdata.freebaseapps.com/">HTML5 Microdata Templates</a> supports the WHATWG and Rich Snippets vocabularies for events, organisations, people, reviews, and content</li>
+</ul>
+
+<p>For <abbr>CMS</abbr>s, there’s a <a href="http://schemaforwordpress.com/" title="Schema for WordPress &#124; Home">Schema for WordPress plugin</a>, and initial work on adding microdata to Drupal too.</p>
+
+<!-- /#tools --></section>
+
+<section id="other-vocab">
+<h3>Other vocabularies <a class="permalink" href="#other-vocab">#</a></h3>
+
+<p>Here's a short list of microdata vocabularies and their <code>itemtype</code>s:</p>
+
+<dl>
+<dt>Person</dt>
+<dd><ul>
+<li><a href="http://schema.org/Person">schema.org Person</a> — <code>http://schema.org/Person</code></li>
+<li><a href="http://microformats.org/profile/hcard" title="hCard 1.0.1 XMDP profile">vCard</a> — <code>http://microformats.org/profile/hcard</code></li>
+<li><a href="http://data-vocabulary.org/Person" title="Data-Vocabulary.org | Person microdata description">Rich Snippets Person</a> — <code>http://data-vocabulary.org/Person</code></li>
+</ul></dd>
+<dt>Organisation or business</dt>
+<dd><ul>
+<li><a href="http://schema.org/Organization">schema.org Organization</a> — <code>http://schema.org/Organization</code></li>
+<li><a href="http://microformats.org/profile/hcard" title="hCard 1.0.1 XMDP profile">vCard</a> (using <code>fn org</code>) — <code>http://microformats.org/profile/hcard</code></li>
+<li><a href="http://data-vocabulary.org/Organization" title="Data-Vocabulary.org | Organization microdata description">Rich Snippets Organization</a> — <code>http://data-vocabulary.org/Organization</code></li>
+</ul></dd>
+<dt>Calendar</dt>
+<dd><ul>
+<li><a href="http://schema.org/Event">schema.org Event</a> — <code>http://schema.org/Event</code></li>
+<li><a href="http://microformats.org/profile/hcalendar#vevent" title="hCalendar 1.0.1 XMDP profile">vEvent</a> — <code>http://microformats.org/profile/hcalendar#vevent</code></li>
+<li><a href="http://data-vocabulary.org/Event" title="Data-Vocabulary.org | Event microdata description">Rich Snippets Event</a> — <code>http://data-vocabulary.org/Event</code></li>
+</ul></dd>
+<dt>Review</dt>
+<dd><ul>
+<li><a href="http://schema.org/Review">schema.org Review</a> — <code>http://schema.org/Review</code></li>
+<li><a href="http://www.schema.org/AggregateRating">schema.org AggregateRating</a> — <code>http://www.schema.org/<mark>AggregateRating</mark></code> (different to Rich Snippets <code>itemtype</code>)</li>
+<li><a href="http://microformats.org/wiki/hreview" title="hReview 0.3 &middot; Microformats Wiki">hReview</a> — <code>http://microformats.org/wiki/hreview</code></li>
+<li><a href="http://data-vocabulary.org/Review" title="Data-Vocabulary.org | Review microdata description">Rich Snippets Review</a> — <code>http://data-vocabulary.org/Review</code></li>
+<li><a href="http://www.data-vocabulary.org/Review-aggregate/" title="Data-Vocabulary.org | Review microdata description">Rich Snippets Review-aggregate</a> — <code>http://www.data-vocabulary.org/Review-aggregate</code></li>
+</ul></dd>
+<dt>License</dt>
+<dd><ul><li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#licensing-works" title="4.12 Links &mdash; HTML5 (including next generation additions still in development)">Licensing works</a> — <code>http://n.whatwg.org/work</code></li></ul></dd>
+<dt>Products and services</dt>
+<dd><ul>
+<li><a href="http://schema.org/Product">schema.org Product</a> — <code>http://schema.org/Product</code>
+<ul><li>This can be extended with <a href="http://www.productontology.org" title="The Product Types Ontology: Use Wikipedia pages for describing products or services with GoodRelations and schema.org">productontology.org descriptions</a> (<a href="http://www.productontology.org/#microdata">example</a>)</li></ul>
+</li>
+<li><a href="http://microformats.org/wiki/hproduct" title="hProduct &middot; Microformats Wiki">hProduct</a> — <code>http://microformats.org/wiki/hproduct</code></li>
+<li><a href="http://purl.org/goodrelations/">GoodRelations Product</a> — <code>http://purl.org/goodrelations/</code> (e.g. <code>&lt;a itemprop="http://purl.org/goodrelations/v1#availableDeliveryMethods"      href="hhttp://purl.org/goodrelations/v1#UPS"&gt;via UPS&lt;/a&gt;</code>)</li>
+<li><a href="http://data-vocabulary.org/Product" title="Data-Vocabulary.org | Product microdata description">Rich Snippets Product</a> — <code>http://data-vocabulary.org/Product</code></li>
+</ul></dd>
+<dt>Atom feed</dt>
+<dd><ul>
+<li><a href="http://microformats.org/wiki/hatom" title="hAtom 0.1 &middot; Microformats Wiki">hAtom</a> — <code>http://microformats.org/wiki/hatom</code></li>
+</ul></dd>
+<dt>Recipes</dt>
+<dd><ul>
+<li><a href="http://schema.org/Recipe" title="Recipe - schema.org">schema.org Recipe</a> — <code>http://schema.org/Recipe</code></li>
+<li><a href="http://microformats.org/wiki/hrecipe" title="hRecipe 0.22 &middot; Microformats Wiki">hRecipe</a> — <code>http://microformats.org/wiki/hrecipe</code></li>
+<li><a href="http://data-vocabulary.org/Recipe" title="Data-Vocabulary.org | Recipe microdata description">Rich Snippets Recipe</a> — <code>http://data-vocabulary.org/Recipe</code></li>
+</ul></dd>
+</dl>
+
+<p>It’s also possible to use <abbr>RDFa</abbr> vocabularies by <strong>both</strong> specifying the <code>itemtype</code> and using URLs for <code>itemprop</code> names. Refer to <a href="http://schema.rdfs.org/" title="schema.rdfs.org - Home">schema.rdfs.org</a> for Linked Data versions of schema.org vocabularies, and the <abbr>RDF</abbr> vocabulary clearing-house (“namespace lookup”) <a href="http://prefix.cc/">http://prefix.cc</a>.</p>
+
+<!-- /#other-vocab --></section>
+
+<section id="new-vocab">
+<h3>Making your own vocabulary <a class="permalink" href="#new-vocab">#</a></h3>
+
+<p>If you don’t see a suitable vocabulary, you could make your own. The microdata vocabularies in the <abbr>HTML</abbr>5 spec are included as examples of how to do it. Basically:</p>
+
+<ol>
+<li><strong>Work out your vocabulary’s rules.</strong> This is a little like setting up a database — work out names for each type of data, then think what kind of data each name’s value should/must contain (<abbr>URL</abbr>, datetime, free text, text with restrictions…), and whether something needs to be the child of something else.</li>
+<li><strong>Make up a <abbr>URL</abbr></strong> on a domain you control, and ideally put your vocabulary specification there.</li>
+<li><strong>Use the URL in <code>itemtype=""</code></strong> to reference your vocabulary.</li>
+</ol>
+
+<p>There are, however, very good reasons <em>not</em> to make your own vocabulary. They can be quite hard to create, as evidenced by the work that goes into <a href="http://microformats.org/wiki/process" title="process &middot; Microformats Wiki">microformats vocabularies</a>. For truly site-specific data, you’re fine with <a href="http://html5doctor.com/html5-custom-data-attributes/" title="HTML5 Custom Data Attributes (data-*) | HTML5 Doctor">HTML5 custom <code>data-*</code> attributes</a>, or using microdata the same way. But to really get the quasi-<abbr>API</abbr> benefits of microdata, you need to use a vocabulary that’s on more than just your site. To make a vocabulary like that, you need to cover not just your own needs, but 80% of the needs of everyone else in the same subject area.</p>
+
+<p>First, check out <a href="http://microformats.org/wiki" title="Microformats">microformats.org</a> to see if there’s anything in roughly the same area you can just microdata-ify. After that, try <abbr>RDFa</abbr> vocabularies. If you still have no luck, try collaborating on a vocabulary with other people in your subject domain. If you’re going to write your own microdata vocabulary from scratch, I’d recommend <a href="http://microformats.org/wiki/process" title="process &middot; Microformats Wiki">trying to write a microformat first</a>, as you’ll get a lot of good feedback and they have good info on how to write one. It’s easy to then convert the resulting microformat vocabulary into a microdata vocabulary.</p>
+
+<!-- /#new-vocab --></section>
+
+<!-- /#microdata-action --></section>
+
+<section id="conclusion">
+<h2>Conclusion <a class="permalink" href="#conclusion">#</a></h2>
+
+<p>We’ve gone through the building blocks of microdata: a simple five-attribute combo of <code>itemscope</code>, <code>itemprop=""</code>, <code>itemref=""</code>, <code>itemtype=""</code>, and <code>itemid=""</code> on most any element, plus using <code>content</code> on <code>&lt;meta&gt;</code>. We’ve looked at how to combine these attributes to add complex semantic annotations and relationships to your content. We’ve also looked at using common vocabularies, or even creating a vocabulary, to allow the annotated data to be reused widely. This makes creating a meta-<abbr>API</abbr> for your website easy enough that <em>even a designer</em> could do it! ;-)</p>
+
+<p>But microdata is not the only way to extend the semantics of <abbr>HTML</abbr>5 and add extra meaning. We’ve already looked at <a href="http://html5doctor.com/microformats/" title="Extending HTML5 — Microformats | HTML5 Doctor">Microformats</a>, and RDFa is up next.</p>
+
+<section id="further-reading">
+<h3>Further reading and related links <a class="permalink" href="#further-reading">#</a></h3>
+<ul>
+<li>Dive into HTML5 — <a href="http://diveinto.html5doctor.com/extensibility.html" title="Distributed Extensibility - Dive Into HTML 5">“Distributed,” “Extensibility,” &amp; Other Fancy Words</a>, by Mark Pilgrim</li>
+<li><a href="http://blog.foolip.org/2009/08/23/microformats-vs-rdfa-vs-microdata/" title="Microformats vs RDFa vs Microdata &laquo; Philip Jägenstedt">Microformats vs RDFa vs Microdata</a> by Philip Jägenstedt</li>
+<li><a href="http://www.google.com/support/webmasters/bin/topic.py?topic=21997" title="Rich snippets and structured markup - Webmaster Tools Help">Google Help — Rich Snippets</a>; contains a great introduction to microdata, microformats and <abbr>RDFa</abbr>, with code samples in each language</li>
+<li><a href="http://knol.google.com/k/google-rich-snippets-tips-and-tricks#" title="Google Rich Snippets Tips and Tricks">Knol — Rich Snippets Tips and Tricks</a> has more information on Google’s Rich Snippets</li>
+</ul>
+<!-- /#further-reading --></section>
+
+<p><small>My thanks to <a href="http://saltercane.com/" title="Salter Cane">Salter Cane</a> for agreeing to be microdata-ified. Much obliged! Their new album <a href="http://saltercane.com/sorrow/" title="Salter Cane: Sorrow">Sorrow</a> is worth checking out… ;-)</small></p>
+<!-- /#conclusion --></section>
+
+<section id="changes" class="changes">
+<h2>Changes <a class="permalink" href="#changes">#</a></h2>
+
+<ol class="semantic-list">
+<li><time datetime="2011-07-14">2011-07-14</time> Added PHP Microdata Parser to the <a href="#tools">tools section</a></li>
+<li><time datetime="2011-08-16">2011-08-16</time> Updating article for <a href="#schema-org-vocab">schema.org vocabularies</a> which are also supported by Bing and Yahoo, and supersede the <a href="#google-vocab">Google-only Rich Snippets</a> ones. Also updating <a href="#browsers">browser support</a> (Opera) and <a href="#tools">tools</a> (Mida) sections</li>
+<li><time datetime="2011-08-29T10:38:31+09:00">2011-08-29</time> Finished <a href="#schema-org-vocab">schema.org updates</a>, added valicator.nu to the <a href="#tools">tools section</a>, and rewrote <a href="#itemid"><code>itemid</code> section</a> for clarity, since <a href="http://www.brucelawson.co.uk/2011/microdata-help-please/" title="Bruce Lawson&#8217;s  personal site&nbsp;: microdata help, please">Dr Bruce was having a spot of bother</a> with it</li>
+</ol>
+<!-- /#changes --></section>
+                        
+            </div>
+            <!-- end .entry -->
+            
+            <aside>
+                <ul class="semantic-list">
+                    <li class="category">
+                        <h3>Category</h3>
+                        <ul class="semantic-list"><li><a href="http://html5doctor.com/category/attributes/" rel="category tag">Attributes</a></li></ul>
+
+                    </li>
+                    <li class="tags">
+                        <ul class="semantic-list"><li><h3>Tags</h3></li><li><a href="http://html5doctor.com/tag/extend/" rel="tag">extend</a></li><li><a href="http://html5doctor.com/tag/javascript/" rel="tag">javascript</a></li><li><a href="http://html5doctor.com/tag/microdata/" rel="tag">microdata</a></li><li><a href="http://html5doctor.com/tag/vocabulary/" rel="tag">vocabulary</a></li></ul>                    </li>
+                </ul>
+
+		 
+            </aside>
+            <!-- end aside -->
+            
+            <aside id="author-bio">
+                <h4><a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme" rel="author">Oli Studholme</a></h4>
+                <div class="author-blurb author">
+                    <p class="vcard">This article was written by <span class="fn"><a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme" rel="author">Oli Studholme</a></span>. He works as a developer for <a href="http://informationarchitects.net/" title="Information Architects | iA plans, designs and implements digital products.">Information Architects, Inc.</a> in Tokyo, Japan. He wrote “<a href="http://thewebevolved.com/" title="Beginning HTML5 and CSS3 — The Web Evolved (a book by Richard Clark, Oli Studholme, Divya Manian, and Christopher Murphy)">Beginning HTML5 and CSS3—The Web Evolved</a>” (Apress) with Rich Clark, Divya Manian, and Christopher Murphy. He also writes at <a href="http://oli.jp/" title="Oli.jp — Writing &amp; such by Oli Studholme (@boblet)">oli.jp</a> and tweets as <a href="http://twitter.com/boblet" title="Follow @boblet on Twitter">@boblet</a>. 宜しくね！＾＾</p>
+                    <img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=128&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=256&amp;d=mm&amp;r=g 2x' class='avatar avatar-128 photo' height='128' width='128' />                </div>
+            </aside>
+            <!-- end #author-bio -->
+            
+            <section id="comments">
+                
+<!-- You can start editing here. -->
+
+	<h3>53 Responses on the article “Extending HTML5 — Microdata”</h3>
+
+		<li class="comment even thread-even depth-1" id="comment-12096">
+				<div id="div-comment-12096" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/d656c4ab1e862ddb258d6250e980ab47?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d656c4ab1e862ddb258d6250e980ab47?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.getlocalload.com/' rel='external nofollow' class='url'>Brian LePore</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12096">
+			November 23, 2010 at 4:20 pm</a>		</div>
+
+		<p>Hmm, this seems very interesting. I think I am going to look in to converting <a href="http://www.getlocalload.com/" rel="nofollow">Local Load</a> to use Microdata instead of data-* as that seems to be a more appropriate</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12096#respond' onclick='return addComment.moveForm( "div-comment-12096", "12096", "respond", "2643" )' aria-label='Reply to Brian LePore'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-12097">
+				<div id="div-comment-12097" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/d00bed295c719c43bcbfb9171f69d994?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d00bed295c719c43bcbfb9171f69d994?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.synbydesign.com' rel='external nofollow' class='url'>Eric</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12097">
+			November 23, 2010 at 4:56 pm</a>		</div>
+
+		<p>Interesting. Are there any tools out there similar to the ones for microformats that you can use to help auto-generate the markup for you for microdata?  I&#8217;ve often used tools like this <a href="http://microformats.org/code/hcard/creator" rel="nofollow">http://microformats.org/code/hcard/creator</a> as a starting point to do most of the heavy lifting and then I just go in and tweak the markup afterward.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12097#respond' onclick='return addComment.moveForm( "div-comment-12097", "12097", "respond", "2643" )' aria-label='Reply to Eric'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-12100">
+				<div id="div-comment-12100" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12100">
+			November 24, 2010 at 1:35 am</a>		</div>
+
+		<p>@Brian — interesting project! I linked you up</p>
+<p>@Eric — <a href="http://html5doctor.com/microdata/#tools" rel="nofollow">http://html5doctor.com/microdata/#tools</a>, specifically <a href="http://microdata.freebaseapps.com/" rel="nofollow">microdata.freebaseapps.com</a>. Looks like I better add in-page navigation :) As with microformats you can write microdata by hand, but it can be tedious. I also think snippets or code generators are the way to go.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12100#respond' onclick='return addComment.moveForm( "div-comment-12100", "12100", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-12108">
+				<div id="div-comment-12108" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/7a84628e27924a00b54142c441563ab2?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7a84628e27924a00b54142c441563ab2?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://op111.net/' rel='external nofollow' class='url'>Demetris</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12108">
+			November 25, 2010 at 9:17 am</a>		</div>
+
+		<p>What’s a monkier? :-)</p>
+<p>Thank you for this article, and for your previous one on microformats and HTML5.  My confusion about microdata persists, but I think I am making some progress.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12108#respond' onclick='return addComment.moveForm( "div-comment-12108", "12108", "respond", "2643" )' aria-label='Reply to Demetris'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-12109">
+				<div id="div-comment-12109" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12109">
+			November 25, 2010 at 11:50 am</a>		</div>
+
+		<p>@Demetris — a letter-transposition monkey? :) Well spotted! If you have any questions leave a comment…</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12109#respond' onclick='return addComment.moveForm( "div-comment-12109", "12109", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-12130">
+				<div id="div-comment-12130" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/5a46b78cc6eb7e733d1b5a096ae7b13b?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5a46b78cc6eb7e733d1b5a096ae7b13b?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Molot</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12130">
+			November 30, 2010 at 1:35 pm</a>		</div>
+
+		<p>Interesting article, thanks the author</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12130#respond' onclick='return addComment.moveForm( "div-comment-12130", "12130", "respond", "2643" )' aria-label='Reply to Molot'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-12180">
+				<div id="div-comment-12180" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/3c3256ae98b2d42cf1907384147365c1?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3c3256ae98b2d42cf1907384147365c1?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.webascrazy.net' rel='external nofollow' class='url'>jkulak</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12180">
+			December 7, 2010 at 1:07 pm</a>		</div>
+
+		<p>Thanks for sharing. A bit confusing and complex in the beggining, but gives the global overview on the subject.</p>
+<p>I&#8217;m sticking to microformats for the time being.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12180#respond' onclick='return addComment.moveForm( "div-comment-12180", "12180", "respond", "2643" )' aria-label='Reply to jkulak'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-12184">
+				<div id="div-comment-12184" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12184">
+			December 7, 2010 at 3:52 pm</a>		</div>
+
+		<p>@jkulak — if you have a chance, please let me know what bits you found confusing and complex. I’d love to improve the article with your feedback. <a href="http://html5doctor.com/microformats/" rel="nofollow">Microformats</a> are good too ;)</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12184#respond' onclick='return addComment.moveForm( "div-comment-12184", "12184", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-12974">
+				<div id="div-comment-12974" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/7a92b5cf897d056ab1b6075977ecd0ae?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7a92b5cf897d056ab1b6075977ecd0ae?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://artminister.com' rel='external nofollow' class='url'>vinay</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-12974">
+			December 18, 2010 at 11:43 am</a>		</div>
+
+		<p>This has been very informational. Oli you have done a great job in explaining the basics as well as the complex bits of Microdata.  :)</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=12974#respond' onclick='return addComment.moveForm( "div-comment-12974", "12974", "respond", "2643" )' aria-label='Reply to vinay'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-13370">
+				<div id="div-comment-13370" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/7e2a7049a480970c717e421079e3370a?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7e2a7049a480970c717e421079e3370a?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://singlecelldesign.com' rel='external nofollow' class='url'>Karl</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-13370">
+			December 31, 2010 at 8:55 am</a>		</div>
+
+		<p>I must admit I started to lose interest when the examples were kind of hand-crafted HTML &#8211; basic HTML is still a challenge for content authors with other jobs. Using microdata for events and vcards etc where you can control the information capture and exposure is more practical for me though. I implemented microformats back in 2006 on our county council&#8217;s Intranet for the address book and events calendar so I like the look of your microdata tool for helping model future HTML5 work. Cheers! :)</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=13370#respond' onclick='return addComment.moveForm( "div-comment-13370", "13370", "respond", "2643" )' aria-label='Reply to Karl'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-13914">
+				<div id="div-comment-13914" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-13914">
+			January 18, 2011 at 6:05 am</a>		</div>
+
+		<p>I recently got an email enquiry about whether you can have several events at the same location, but only mark up the location microdata once (a canonical location). You can do this via <a href="http://html5doctor.com/microdata/#itemref" title="Extending HTML5 — Microdata | HTML5 Doctor" rel="nofollow">the <code>itemref</code> property</a>. For example in the <a href="http://html5doctor.com/microdata/#google-vocab" title="Extending HTML5 — Microdata | HTML5 Doctor" rel="nofollow">example with microdata using Google vocabularies</a>, you can declare the location item in the event, and use <code>itemref</code> to link to the canonical location info somewhere on the same page</p>
+<pre><code>…&lt;span itemprop="location" itemscope
+  itemtype="http://www.data-vocabulary.org/Organization/" <mark>itemref="location"</mark>&gt;&lt;a
+  href="#location"&gt;Apple Ginza&lt;/a&gt;&lt;/span&gt;…</code></pre>
+<p>The location microdata at <code>id="location"</code> will then be used in the event.</p>
+<pre><code>&lt;p <mark>id="location"</mark>&gt;
+  &lt;a itemprop="url" href="http://www.apple.com/jp/retail/ginza/map/"&gt;
+  &lt;span itemprop="name"&gt;Apple Ginza&lt;/span&gt;&lt;/a&gt;
+  …
+&lt;/p&gt;</code></pre>
+<p>Remember to add an in-page link to the <code>itemref</code> so that humans can get to the canonical info too!</p>
+<p>HTH</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=13914#respond' onclick='return addComment.moveForm( "div-comment-13914", "13914", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-13921">
+				<div id="div-comment-13921" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/35d15750b8ccddc331ed4c7660ca14c4?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/35d15750b8ccddc331ed4c7660ca14c4?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Alohci</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-13921">
+			January 18, 2011 at 2:39 pm</a>		</div>
+
+		<p>@Oli</p>
+<p>I think it is itemref=&#8221;location&#8221; not itemref=&#8221;#location&#8221;</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=13921#respond' onclick='return addComment.moveForm( "div-comment-13921", "13921", "respond", "2643" )' aria-label='Reply to Alohci'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-13970">
+				<div id="div-comment-13970" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-13970">
+			January 21, 2011 at 6:39 am</a>		</div>
+
+		<p>@Alohci — d’oh. thanks, fixed.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=13970#respond' onclick='return addComment.moveForm( "div-comment-13970", "13970", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-14092">
+				<div id="div-comment-14092" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/a9b044960d076e43d18e07f09f7a15c6?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/a9b044960d076e43d18e07f09f7a15c6?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://github.com/KrofDrakula' rel='external nofollow' class='url'>Klemen Slavič</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-14092">
+			February 4, 2011 at 8:04 am</a>		</div>
+
+		<p>Given the toolset you&#8217;ve outlined in the article, I haven&#8217;t seen any that would allow you to browse and validate against vocabularies, so I made my own tool:</p>
+<p><a href="http://krofdrakula.github.com/microdata-tool/" rel="nofollow">Microdata tool</a></p>
+<p>It&#8217;s still a work-in-progress, but it already contains validation for most of Google&#8217;s data-vocabulary.org types.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=14092#respond' onclick='return addComment.moveForm( "div-comment-14092", "14092", "respond", "2643" )' aria-label='Reply to Klemen Slavič'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-14283">
+				<div id="div-comment-14283" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/065dac26912ac544576075319b92a052?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/065dac26912ac544576075319b92a052?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.michaeljbyers.com' rel='external nofollow' class='url'>Michael Byers</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-14283">
+			February 23, 2011 at 10:25 am</a>		</div>
+
+		<p>I have occassionally used Microformats on websites but I think you&#8217;ve shown me that Microdata would be a better approach especially when using HTML5.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=14283#respond' onclick='return addComment.moveForm( "div-comment-14283", "14283", "respond", "2643" )' aria-label='Reply to Michael Byers'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-15109">
+				<div id="div-comment-15109" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-15109">
+			June 3, 2011 at 7:19 am</a>		</div>
+
+		<p>Microdata goes mainstream with <a href="http://schema.org" rel="nofollow">Schema.org</a>, supported by Bing, Yahoo and Google. If you’ve already implemented microdata (say, after reading this article ;) ) here’s a <a href="http://diveintomark.org/archives/2011/06/02/schema-org" rel="nofollow">Rich Snippets to Schema.org migration guide</a>.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=15109#respond' onclick='return addComment.moveForm( "div-comment-15109", "15109", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-15205">
+				<div id="div-comment-15205" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/872a2ff94319ac7f9f23c1373776ecc5?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/872a2ff94319ac7f9f23c1373776ecc5?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.brainsap-development.com/' rel='external nofollow' class='url'>Lukas Najduk</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-15205">
+			June 22, 2011 at 3:03 am</a>		</div>
+
+		<p>A very good and well explained Article about all this Microdata.</p>
+<p>Especially the part which explaining when values are taken from href=&#8221;&#8221;, content=&#8221;&#8221; and other attributes like that was very helpful for me. I was watching about 10 other Websites and couldnt find this information there. Wondering why these guys dont pass this information, as from my understanding it&#8217;s an important part of Microdata.</p>
+<p>Keep up the good work.</p>
+<p>kind regards,<br />
+Lukas</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=15205#respond' onclick='return addComment.moveForm( "div-comment-15205", "15205", "respond", "2643" )' aria-label='Reply to Lukas Najduk'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-16154">
+				<div id="div-comment-16154" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/2cd702bd2879a841b0206cacbe1f817e?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2cd702bd2879a841b0206cacbe1f817e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.stutimandal.com' rel='external nofollow' class='url'>Animesh</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-16154">
+			July 12, 2011 at 7:20 pm</a>		</div>
+
+		<p>I need microdata for a poetry website &#8212; we have common entries like poets, their books, and references to some other books/stories (prose).</p>
+<p>Is it already available?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=16154#respond' onclick='return addComment.moveForm( "div-comment-16154", "16154", "respond", "2643" )' aria-label='Reply to Animesh'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-16241">
+				<div id="div-comment-16241" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-16241">
+			July 13, 2011 at 10:23 pm</a>		</div>
+
+		<p>@Animesh — it depends what you want it for. What do you hope microdata will do for you?</p>
+<p>@All — added a link to the <a href="http://soyrex.com/php-microdata/" rel="nofollow">PHP Microdata Parser</a> by <a href="https://twitter.com/soyrex" rel="nofollow">Alex Holt</a></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=16241#respond' onclick='return addComment.moveForm( "div-comment-16241", "16241", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-16431">
+				<div id="div-comment-16431" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/2cd702bd2879a841b0206cacbe1f817e?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2cd702bd2879a841b0206cacbe1f817e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Animesh</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-16431">
+			July 16, 2011 at 4:49 pm</a>		</div>
+
+		<p>@Oli Studholme:</p>
+<p>I&#8217;ve a poetry website. The poem is in archaic language and is distributed as a GIF file in a custom script (unicode option doesn&#8217;t work very well for us).  Most of the poems are excerpts from classic texts or books. We also translate these poems.</p>
+<p>Within the above constraints, I wish to provide the following semantic information to the search engines (or any parser):</p>
+<p>&#8211; First few lines of the poem in unicode.<br />
+&#8211; Specify first few lines of the translations.<br />
+&#8211; The poet of the poem.<br />
+&#8211; The book from which the poem has been taken.<br />
+&#8211; Any information on current publishers of the poem or the book.<br />
+&#8211; Classify the poem into genres (this might be useless for the search engines).</p>
+<p>Probably I am making more sense to you now, or not?</p>
+<p>Best regards,<br />
+Animesh</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=16431#respond' onclick='return addComment.moveForm( "div-comment-16431", "16431", "respond", "2643" )' aria-label='Reply to Animesh'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-16924">
+				<div id="div-comment-16924" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-16924">
+			July 25, 2011 at 2:33 am</a>		</div>
+
+		<p>@Animesh — To start with (and stating the obvious), any content you want search engines to read needs to be included as text. Just like a visually impaired user, search engines can’t read gif images. I’m sad to hear that Unicode doesn’t support all the glyphs you need, as that would make this much easier. However if you’re able to give the first few lines in Unicode, you can also include <em>all</em> of the poem’s text, even if it’s not perfect. I assume that there are some rules for writing your script in Unicode that deal with missing glyphs, so just follow those and do the best you can. Also ask about planned support for your script on a Unicode mailing list to find out about possible future support. If the issue is font support organise with others to create a free font you can then use via <code>@font-face</code> and offer for download.</p>
+<p>As far as citation information in microdata, you could use the <a href="http://schema.org/Article" rel="nofollow">schema.org Creative Work vocabulary</a> (for the poem), together with the <a href="http://schema.org/Book" rel="nofollow">Book vocabulary</a> (for the book):</p>
+<ul>
+<li>Creative Work
+<ul>
+<li><code>name</code> — poem’s name</li>
+<li><code>author</code> — poem author’s name</li>
+<li><code>genre</code> — poem’s genre</li>
+<li><code>inLanguage</code> — poem’s language (must be from <a href="http://tools.ietf.org/html/bcp47" title="BCP 47 - Tags for Identifying Languages" rel="nofollow">IETF BCP 47</a>)</li>
+</ul>
+</li>
+<li>Book
+<ul>
+<li><code>name</code> — book’s name</li>
+<li><code>author</code> — book author’s name</li>
+<li><code>publisher</code> — book’s publisher</li>
+<li><code>publishDate</code> — book’s date of publication</li>
+<li><code>isbn</code> — book’s ISBN number</li>
+</ul>
+</li>
+</ul>
+<p>There’s nothing for the first few lines of the original or translation, but as I said above you really should put all of the original and all of the translation in as text. You can use HTML5’s standard <code>lang=""</code> attribute to indicate the language of the content. I cover this in passing in <a href="http://html5doctor.com/blockquote-q-cite/" rel="nofollow">Quoting and citing with blockquote, q, cite, and the cite attribute</a>.</p>
+<p>HTH</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=16924#respond' onclick='return addComment.moveForm( "div-comment-16924", "16924", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-16929">
+				<div id="div-comment-16929" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/f8f358a79847af0a6d95677e93e8df0e?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f8f358a79847af0a6d95677e93e8df0e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.bartekszkurlat.se' rel='external nofollow' class='url'>Bartek Szkurlatg</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-16929">
+			July 26, 2011 at 1:07 pm</a>		</div>
+
+		<p>Great guide to Microdata! Love it!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=16929#respond' onclick='return addComment.moveForm( "div-comment-16929", "16929", "respond", "2643" )' aria-label='Reply to Bartek Szkurlatg'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-16972">
+				<div id="div-comment-16972" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-16972">
+			July 27, 2011 at 7:39 pm</a>		</div>
+
+		<p><a href="http://my.opera.com/desktopteam/blog/2011/07/27/latency-microdata-qresync" rel="nofollow">Opera drops teh awesum</a> and becomes the first browser to support the microdata DOM API. Rock!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=16972#respond' onclick='return addComment.moveForm( "div-comment-16972", "16972", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-16980">
+				<div id="div-comment-16980" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/2cd702bd2879a841b0206cacbe1f817e?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2cd702bd2879a841b0206cacbe1f817e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Animesh Kumar</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-16980">
+			July 28, 2011 at 2:59 pm</a>		</div>
+
+		<p>Thanks a bunch Dr. Oli Studholme</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=16980#respond' onclick='return addComment.moveForm( "div-comment-16980", "16980", "respond", "2643" )' aria-label='Reply to Animesh Kumar'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor even thread-even depth-1" id="comment-17393">
+				<div id="div-comment-17393" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-17393">
+			August 29, 2011 at 3:38 am</a>		</div>
+
+		<p>I’ve updated “Extending HTML5 — Microdata” with info on schema.org, browser and tool support, and a clearer description of <code>itemid</code>. Thanks for the prompt Philip!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=17393#respond' onclick='return addComment.moveForm( "div-comment-17393", "17393", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-17523">
+				<div id="div-comment-17523" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/4ab9f60f625e67726d03de12e16a1645?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4ab9f60f625e67726d03de12e16a1645?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Niklas Auteranu</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-17523">
+			September 8, 2011 at 4:03 pm</a>		</div>
+
+		<p>Nice guide. It is saved me a lot of time.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=17523#respond' onclick='return addComment.moveForm( "div-comment-17523", "17523", "respond", "2643" )' aria-label='Reply to Niklas Auteranu'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-21420">
+				<div id="div-comment-21420" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/f09446c49d915c1a0d55d1473e8fd817?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f09446c49d915c1a0d55d1473e8fd817?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://au.linkedin.com/in/mathewhammond' rel='external nofollow' class='url'>Mathew</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-21420">
+			January 22, 2012 at 11:36 pm</a>		</div>
+
+		<p>Say that i have a resort website, which has some content that microdata can easily be applied to but does not contain other things like contact number, location, etc.. ( probably a bad example, what resort site would not have this info :P )</p>
+<p>Are there any known negative effects or penalties that can be applied if oneself was to use the <ins><code>&lt;meta></code></ins> tag to define other properties? </p>
+<p>To me this holds potential for negative effects because essentially you&#8217;re putting hidden information into the webpage. yet on the other hand, you&#8217;re simply providing extra information to the search engines to help them provide better information to the user.</p>
+<p>Opinions?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=21420#respond' onclick='return addComment.moveForm( "div-comment-21420", "21420", "respond", "2643" )' aria-label='Reply to Mathew'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-21428">
+				<div id="div-comment-21428" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-21428">
+			January 23, 2012 at 2:13 am</a>		</div>
+
+		<p>@Matthew — I’m a little unsure of your question. re: your first paragraph, there’s generally no problem with only including some of a vocabulary’s properties. For example, checking with Google’s validator <a href="http://oli.jp/2011/schema-org-properties/" rel="nofollow">the requirements for schema.org vocabularies are surprisingly minimal</a> (I haven’t checked with the schema.org list about this yet).</p>
+<p>Re: your second paragraph, it’s possible to extend a vocabulary, and <a href="http://schema.org/docs/extension.html" rel="nofollow">schema.org has information on their “extension mechanism”</a>.</p>
+<p>A couple of first principles: extensions to a schema.org vocabulary, or using a custom vocabulary, will not provide extra information to search engines, as despite being machine-readable microdata is opaque unless you know the vocabulary. The only thing it may do is give them an indication of popular data/vocabularies they should add support for. Also, while there’s no requirement for microdata to be connected with content on the page, microdata that isn’t will tend to <a href="http://en.wikipedia.org/wiki/Metacrap" rel="nofollow">metacrap</a>. Any public vocabulary microdata value (schema.org etc) <em>should</em> be content.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=21428#respond' onclick='return addComment.moveForm( "div-comment-21428", "21428", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-21437">
+				<div id="div-comment-21437" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/f09446c49d915c1a0d55d1473e8fd817?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f09446c49d915c1a0d55d1473e8fd817?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://au.linkedin.com/in/mathewhammond' rel='external nofollow' class='url'>Mathew</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-21437">
+			January 23, 2012 at 4:17 am</a>		</div>
+
+		<p>@ Dr. Oli Studholme &#8211; Thank you for your response. </p>
+<p>Apologies. I&#8217;ve worded my first paragraph badly, additionally i put brackets around &#8220;meta&#8221; tag which was then completely scrubbed from the post. <ins><i>[fixed (I hope) —oli]</i></ins></p>
+<p>What i was hoping to get was an opinion on whether it is good or bad practise to use the meta tag to define an itemprop.</p>
+<p>For Example:<br />
+meta itemprop=&#8221;openingHours&#8221; content=&#8221;Mo-Su 7:00-11:00&#8243;</p>
+<p>I know that Google will not use content hidden via css display:none but does this apply to the meta tag?</p>
+<p>On a side note: I liked the comment about Metacrap. I watched a video on how it is very easy to provide fake data such as ratings through the use of microdata.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=21437#respond' onclick='return addComment.moveForm( "div-comment-21437", "21437", "respond", "2643" )' aria-label='Reply to Mathew'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-21726">
+				<div id="div-comment-21726" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/460c9854061f31362affe053aa308ad9?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/460c9854061f31362affe053aa308ad9?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.domblogger.net/' rel='external nofollow' class='url'>Alice Wonder</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-21726">
+			January 27, 2012 at 12:28 am</a>		</div>
+
+		<p>I lost all interest as soon as I saw it using meta elements outside the document head, where it belongs.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=21726#respond' onclick='return addComment.moveForm( "div-comment-21726", "21726", "respond", "2643" )' aria-label='Reply to Alice Wonder'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-21730">
+				<div id="div-comment-21730" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/460c9854061f31362affe053aa308ad9?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/460c9854061f31362affe053aa308ad9?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.domblogger.net/' rel='external nofollow' class='url'>Alice Wonder</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-21730">
+			January 27, 2012 at 2:14 am</a>		</div>
+
+		<p>OK &#8211; I haven&#8217;t lost *all* interest, but it seems to me that if your content is properly presented so that your users can figure out what the smurf you are talking about, then a search engine should be able to as well.</p>
+<p>If search engines are written sloppily enough that they can&#8217;t and rely on Microdata to get it right, then this will be abused the same way the keywords meta tag was abused. SEO tricks that are dishonest and exist just to get users to a site hoping they click the annoying hover ads.</p>
+<p>I&#8217;ll have to look into it some more, keywords meta tag has legitimate use even though search engines ignore it now (I sometimes use them to benefit site specific search), maybe this could be of benefit in some respects to internal web app stuff, though data-* is largely what I use for that.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=21730#respond' onclick='return addComment.moveForm( "div-comment-21730", "21730", "respond", "2643" )' aria-label='Reply to Alice Wonder'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-22156">
+				<div id="div-comment-22156" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-22156">
+			January 31, 2012 at 2:11 pm</a>		</div>
+
+		<p>@Mathew — I’ve hopefully fixed up your missing <code>&lt;meta&gt;</code>. Unfortunately we haven’t updated the commenting system yet, so you’ll need to escape &lt; in code samples using <code>&amp;lt;</code>.</p>
+<p>There’s <a href="http://html5doctor.com/microdata/#meta" rel="nofollow">no difference between adding an <code>itemprop</code> to <code>&lt;meta&gt;</code> or to another element</a> (see sidenote), but you still generally shouldn’t do it as you’re making the data inaccessible to anyone <em>but</em> search engines. Opening hours are a terrible thing to put in <code>&lt;meta&gt;</code>.</p>
+<p>Google doesn’t treat <code>&lt;meta&gt;</code> as spam, but the info is only <a href="http://html5doctor.com/microdata/#schema-org-vocab" rel="nofollow">used to make your listing more informative, and will not affect rankings</a>.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=22156#respond' onclick='return addComment.moveForm( "div-comment-22156", "22156", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-25071">
+				<div id="div-comment-25071" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/4aaecfa00ae763e292412b549ea9d9bc?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4aaecfa00ae763e292412b549ea9d9bc?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://finalshine.blogspot.com' rel='external nofollow' class='url'>Shawn</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-25071">
+			March 16, 2012 at 2:21 am</a>		</div>
+
+		<p>Thanks! I was unsure for a while how to use anything that had multiple values(i.e. <code>itemprop="keywords"</code>).</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=25071#respond' onclick='return addComment.moveForm( "div-comment-25071", "25071", "respond", "2643" )' aria-label='Reply to Shawn'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-25331">
+				<div id="div-comment-25331" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/f09446c49d915c1a0d55d1473e8fd817?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/f09446c49d915c1a0d55d1473e8fd817?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Mathew</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-25331">
+			April 23, 2012 at 6:58 am</a>		</div>
+
+		<p>@Issac Lisitano: Cool Story Bro&#8230;</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=25331#respond' onclick='return addComment.moveForm( "div-comment-25331", "25331", "respond", "2643" )' aria-label='Reply to Mathew'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-28541">
+				<div id="div-comment-28541" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/1302cc13d5b88f057b46ff56c1afe916?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1302cc13d5b88f057b46ff56c1afe916?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.irvo.net' rel='external nofollow' class='url'>Irvo</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-28541">
+			June 25, 2012 at 2:17 pm</a>		</div>
+
+		<p>Great article! Now I&#8217;m use HTML5 Microdata on my site.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=28541#respond' onclick='return addComment.moveForm( "div-comment-28541", "28541", "respond", "2643" )' aria-label='Reply to Irvo'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-28688">
+				<div id="div-comment-28688" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/6e9fdf63118962b33876b47b44bdc2e7?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6e9fdf63118962b33876b47b44bdc2e7?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://mom2mom.fr' rel='external nofollow' class='url'>Inoe</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-28688">
+			July 17, 2012 at 1:09 pm</a>		</div>
+
+		<p>Thanks for this comprehensive overview.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=28688#respond' onclick='return addComment.moveForm( "div-comment-28688", "28688", "respond", "2643" )' aria-label='Reply to Inoe'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-28996">
+				<div id="div-comment-28996" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/2b66ed717583e84160307403e2f5ef6b?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2b66ed717583e84160307403e2f5ef6b?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">mazi fko</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-28996">
+			October 7, 2012 at 7:00 am</a>		</div>
+
+		<p>How do you actually put or integrate the microdata into a webpage html. We sell products online, and I don&#8217;t know how I can use this microdata stuff on my website. Can you help?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=28996#respond' onclick='return addComment.moveForm( "div-comment-28996", "28996", "respond", "2643" )' aria-label='Reply to mazi fko'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-olib bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-29021">
+				<div id="div-comment-29021" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/75690a036a5769d87b86e9c36a80357e?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://oli.jp' rel='external nofollow' class='url'>Oli Studholme</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29021">
+			October 12, 2012 at 3:50 pm</a>		</div>
+
+		<p>@mazi fko — umm use a text editor? :S For example, from this:</p>
+<pre><code>&lt;a href="http://informationarchitects.jp/">Oliver Reichenstein&lt;/a></code></pre>
+<p>to this:</p>
+<pre><code>&lt;span itemscope itemtype="http://schema.org/Person">&lt;a itemprop="url" href="http://informationarchitects.jp/">&lt;span itemprop="name">Oliver Reichenstein&lt;/span>&lt;/a>&lt;/span></code></pre>
+<p>If that still doesn’t make much sense, maybe you should try the <a href="http://schema-creator.org/product.php" rel="nofollow">Schema Creator for product microdata</a>…</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29021#respond' onclick='return addComment.moveForm( "div-comment-29021", "29021", "respond", "2643" )' aria-label='Reply to Oli Studholme'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-29090">
+				<div id="div-comment-29090" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/37a1279ac2a89d8737448e344a790c03?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/37a1279ac2a89d8737448e344a790c03?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">loupiote</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29090">
+			October 23, 2012 at 11:11 am</a>		</div>
+
+		<p>can itemref=&#8221;&#8230;&#8221; be used in a  element?</p>
+<p>if yes, doesn&#8217;t this conflict with the fact that  are supposed to have a content=&#8221;&#8221; attribute?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29090#respond' onclick='return addComment.moveForm( "div-comment-29090", "29090", "respond", "2643" )' aria-label='Reply to loupiote'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-29091">
+				<div id="div-comment-29091" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/37a1279ac2a89d8737448e344a790c03?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/37a1279ac2a89d8737448e344a790c03?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">loupiote</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29091">
+			October 23, 2012 at 11:13 am</a>		</div>
+
+		<p>can itemref=”…” be used in a &lt;meta &#8230;&gt; element?</p>
+<p>if yes, doesn’t this conflict with the fact that &lt;meta &#8230;&gt; are supposed to have a content=”&#8221; attribute?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29091#respond' onclick='return addComment.moveForm( "div-comment-29091", "29091", "respond", "2643" )' aria-label='Reply to loupiote'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-29092">
+				<div id="div-comment-29092" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/37a1279ac2a89d8737448e344a790c03?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/37a1279ac2a89d8737448e344a790c03?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">loupiote</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29092">
+			October 23, 2012 at 11:17 am</a>		</div>
+
+		<p>in other words, is this legal:</p>
+<p>&lt;meta itemscope itemref=&#8221;band-members&#8221;&gt;</p>
+<p>or</p>
+<p>&lt;meta itemprop=&#8221;author&#8221; itemscope itemref=&#8221;author-id&#8221;&gt;</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29092#respond' onclick='return addComment.moveForm( "div-comment-29092", "29092", "respond", "2643" )' aria-label='Reply to loupiote'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-29187">
+				<div id="div-comment-29187" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/717762d9f066a6fc73330db1b1a70e7d?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/717762d9f066a6fc73330db1b1a70e7d?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">John B</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29187">
+			November 12, 2012 at 12:32 pm</a>		</div>
+
+		<p>is this legal:</p>
+<p>&#8230;</p>
+<p>Well, no &#8211; but not because it&#8217;s a meta tag.  itemref should surround a block of html which contains information about an item (ie your band members), so unless you are using a &lt;/meta&gt; to close the tag, better stick to spans, divs, ps, etc.</p>
+<p>As to whether it will validate &#8211; that&#8217;s another question!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29187#respond' onclick='return addComment.moveForm( "div-comment-29187", "29187", "respond", "2643" )' aria-label='Reply to John B'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-29206">
+				<div id="div-comment-29206" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/3ff406fae457e8ae75232c42e51f44d7?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3ff406fae457e8ae75232c42e51f44d7?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.VipulSChawathe.ind.in/' rel='external nofollow' class='url'>Vipul S. Chawathe</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29206">
+			November 14, 2012 at 12:35 pm</a>		</div>
+
+		<p>Mapping amongst microdata RDFa microformat is documented by W3 at <a href="https://dvcs.w3.org/hg/htmldata/raw-file/default/ED/html-data-guide/index.html" rel="nofollow">https://dvcs.w3.org/hg/htmldata/raw-file/default/ED/html-data-guide/index.html</a><br />
+IMHO, microformat is generalized parseable RDFa snippet that when nested into XHTML5, note the &#8220;X&#8221;, makes XSL transformation applicable, so serving hNews as atom feed maybe left to server &amp; consumer of content has better flexibility with regards to consumption technique.<br />
+Search providers just needed short-hand vocabulary for simpler parsing by their crawling bots as the transformations besides updating their indexing database benefit the consumer in the content providers&#8217; interest rather than build the search providers reputations. So they used their monopoly over consumers thereby saving on parsing effort, by putting the onus on content provider for overloading the markup with their short-hand towards SEO, viz. the overly restrictive microdata that beyond schema.org&#8217;s vocabulary serves only academic fancy.<br />
+I dare say with regards to being restrictive, microdata is anti-OWL of sorts.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29206#respond' onclick='return addComment.moveForm( "div-comment-29206", "29206", "respond", "2643" )' aria-label='Reply to Vipul S. Chawathe'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-29208">
+				<div id="div-comment-29208" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/fd34d8e812f47ff34ffba86f824fd02a?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/fd34d8e812f47ff34ffba86f824fd02a?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.VipulSChawathe.ind.in/' rel='external nofollow' class='url'>Vipul S. Chawathe</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29208">
+			November 14, 2012 at 12:37 pm</a>		</div>
+
+		<p>Btw, gr8 article!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29208#respond' onclick='return addComment.moveForm( "div-comment-29208", "29208", "respond", "2643" )' aria-label='Reply to Vipul S. Chawathe'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-29446">
+				<div id="div-comment-29446" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/3ff406fae457e8ae75232c42e51f44d7?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3ff406fae457e8ae75232c42e51f44d7?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.vipulschawathe.ind.in/' rel='external nofollow' class='url'>Vipul S. Chawathe</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-29446">
+			December 14, 2012 at 8:42 pm</a>		</div>
+
+		<p>Vocabularies recognized to serve initial context are seen at <a href="http://www.w3.org/2011/rdfa-context/rdfa-1.1.html" rel="nofollow">http://www.w3.org/2011/rdfa-context/rdfa-1.1.html</a> The prefixes are to the best of my understanding imported by using rel=&#8221;profile&#8221; to enable RDFa as mentioned at 1.4.1.3 in <a href="http://dev.w3.org/html5/rdfa/rdfa-module.html" rel="nofollow">http://dev.w3.org/html5/rdfa/rdfa-module.html</a> I experimented with Bing Webmaster Diagnostic Tool Markup Validation as well as Google Structured Data Tester &amp; the result clearly shows lack of sportsman spirit towards non-schema.org vocabularies leading them towards becoming orphan step-children of semantic web. Dialects like gr &amp; foaf &amp; even individual microformats have precisely specific scopes whereas schema.org certainly aims to cause loss of context to the semantic content composer. The predecessors of schema.org that made it to W3Cs RDFa initial context &amp; the prefix notation from RDFa are the minimum that major players should accommodate rather than harshly monopolise their implementation to interpret <strong>item<em>type</em></strong> attribute, considering validator.nu as validator finds the markup to be valid.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=29446#respond' onclick='return addComment.moveForm( "div-comment-29446", "29446", "respond", "2643" )' aria-label='Reply to Vipul S. Chawathe'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-36712">
+				<div id="div-comment-36712" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/2f914c1ddd3a222d32a784dc375b8564?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2f914c1ddd3a222d32a784dc375b8564?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Eoin Oliver</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-36712">
+			July 19, 2013 at 3:21 pm</a>		</div>
+
+		<p>I&#8217;m sorry I couldn&#8217;t help myself.</p>
+<p>You open up with the sentence:</p>
+<blockquote><p>For those who like (to argue about) semantics, HTML5 is fantastic.</p></blockquote>
+<p>It should read:</p>
+<blockquote><p>For those who like [to argue about] semantics, HTML5 is fantastic.</p></blockquote>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=36712#respond' onclick='return addComment.moveForm( "div-comment-36712", "36712", "respond", "2643" )' aria-label='Reply to Eoin Oliver'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-38008">
+				<div id="div-comment-38008" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/02cc40eb2f8a88df8e1c9cfd8f8b6721?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/02cc40eb2f8a88df8e1c9cfd8f8b6721?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://htwp2.com/' rel='external nofollow' class='url'>TJ Greene</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-38008">
+			September 12, 2013 at 6:07 pm</a>		</div>
+
+		<p>Hey Oli,</p>
+<p>Thanks for this great reference. </p>
+<p>I agree with you, HTML is fantastic. We just converted our site from XHTML to HTML5 and are really enjoying the added benefits. </p>
+<p>Actually, we are using the Genesis Theme Framework and their latest version fully supports HTML5. Converting it was super easy and took less than 15 minutes. I wrote a <a href="http://htwp2.com/upgrade-to-genesis-2-0-and-html5/" rel="nofollow">tutorial</a> to help other Genesis users make the switch and included a link to your site for anyone needing more information.</p>
+<p>Thanks again.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=38008#respond' onclick='return addComment.moveForm( "div-comment-38008", "38008", "respond", "2643" )' aria-label='Reply to TJ Greene'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-198758">
+				<div id="div-comment-198758" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/eb5a66b7ccb67005cc89e4922316dafd?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/eb5a66b7ccb67005cc89e4922316dafd?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">clair marr</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-198758">
+			August 6, 2014 at 2:42 pm</a>		</div>
+
+		<p>I have a question. I have not built my client website which is in test form but have been given limited access to a series of three or four .php templates. I am clear (almost) in how to update the head of the template document but struggling with micro data.</p>
+<p>Is there a way of integrating the micro data into these templates to flag items like company name, name, address etc?<br />
+Content wise the client is using an e-commerce plugin that allows us the add micro data seamlessly when they populate certain fields.</p>
+<p>I can cut and paste code if that helps. Thanks!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=198758#respond' onclick='return addComment.moveForm( "div-comment-198758", "198758", "respond", "2643" )' aria-label='Reply to clair marr'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-275561">
+				<div id="div-comment-275561" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/c51d39fe0d256f16e0d743cde9f71cc2?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c51d39fe0d256f16e0d743cde9f71cc2?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.la-grange.net/karl/' rel='external nofollow' class='url'>karl, La Grange</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-275561">
+			August 24, 2014 at 3:23 am</a>		</div>
+
+		<p>Should the browser support table be updated with recent information.</p>
+<p>For example, Firefox has implemented it and there is a proposal for removing it from Firefox.</p>
+<p>And I&#8217;m not sure since the switch from Opera to Blink there is a support for it.<br />
+Removed from Webkit, Removed from Blink.<br />
+<a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/b54nW_mGSVU/87CLF5jmPdoJ" rel="nofollow">https://groups.google.com/a/chromium.org/d/msg/blink-dev/b54nW_mGSVU/87CLF5jmPdoJ</a></p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=275561#respond' onclick='return addComment.moveForm( "div-comment-275561", "275561", "respond", "2643" )' aria-label='Reply to karl, La Grange'>Reply</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment byuser comment-author-brucel odd alt depth-2" id="comment-580302">
+				<div id="div-comment-580302" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/6f3ec7315ad0715ae2a5f89a52877218?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6f3ec7315ad0715ae2a5f89a52877218?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://www.brucelawson.co.uk' rel='external nofollow' class='url'>Bruce Lawson</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-580302">
+			October 14, 2014 at 11:46 am</a>		</div>
+
+		<p>Good idea, Karl &#8211; do you know if it will be removed from FF? (Can you link to the bug?)</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=580302#respond' onclick='return addComment.moveForm( "div-comment-580302", "580302", "respond", "2643" )' aria-label='Reply to Bruce Lawson'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-601877">
+				<div id="div-comment-601877" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/35d15750b8ccddc331ed4c7660ca14c4?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/35d15750b8ccddc331ed4c7660ca14c4?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn">Alohci</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-601877">
+			October 17, 2014 at 2:31 am</a>		</div>
+
+		<p>Hi Bruce, The FF bug appears to be <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=909633" rel="nofollow">https://bugzilla.mozilla.org/show_bug.cgi?id=909633</a></p>
+<p>Seems a shame to me, but we manage perfectly well without a built-in API for RDFa, I see no reason why Microdata should be different.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=601877#respond' onclick='return addComment.moveForm( "div-comment-601877", "601877", "respond", "2643" )' aria-label='Reply to Alohci'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-1578999">
+				<div id="div-comment-1578999" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://2.gravatar.com/avatar/e924bc1b8e58d163f4d084ee292854f6?s=48&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e924bc1b8e58d163f4d084ee292854f6?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='http://anet.eroticaplexus.net/' rel='external nofollow' class='url'>Alice Wonder</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-1578999">
+			February 16, 2015 at 1:20 am</a>		</div>
+
+		<p>I do not understand. Microdata information is useful to bots, but we put it in html that is far more often served to non-bots ??</p>
+<p>Why can&#8217;t we put it in an external file referenced with a &lt;link /&gt; tag, where it can be ignored by browsers that don&#8217;t use it and cached by browsers that do make some use of it?</p>
+<p>I really hate CSS and I think CSS needs to be re-written from the ground up. But one thing I do like about CSS is CSS selectors.</p>
+<p>If we put the microdata stuff in an external file, we could just use CSS selectors to specify where it should be applied.</p>
+<p>I think the current implementation of microdata is fundamentally wrong. Keep style and content separate. And microdata too.</p>
+<p>Thoughts?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=1578999#respond' onclick='return addComment.moveForm( "div-comment-1578999", "1578999", "respond", "2643" )' aria-label='Reply to Alice Wonder'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-2019732">
+				<div id="div-comment-2019732" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/909c8a1abb254b53853dcdc5065e82fc?s=48&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/909c8a1abb254b53853dcdc5065e82fc?s=96&amp;d=mm&amp;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' />			<cite class="fn"><a href='https://jaaadesign.nl/' rel='external nofollow' class='url'>Nick van de Veerdonk</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://html5doctor.com/microdata/#comment-2019732">
+			August 27, 2015 at 12:42 pm</a>		</div>
+
+		<p>Hi Oli thanks for a great article!</p>
+<p>Not too long ago I have added Microdata markup to my website and found it strange that 99% of the websites out there hardly use any markup, and/or often (including the Genesis theme) full of errors. In fact it was VERY hard to find websites that had extensive implementation.</p>
+<p>Do you have an explanation for this? Is the learning curve to big, not worth the effort, has the initiative failed? Love to hear your opinion!</p>
+<p>Kind regards,</p>
+<p>Nick</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://html5doctor.com/microdata/?replytocom=2019732#respond' onclick='return addComment.moveForm( "div-comment-2019732", "2019732", "respond", "2643" )' aria-label='Reply to Nick van de Veerdonk'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+
+ 
+
+
+<div id="form">
+
+<h3>Join the discussion.</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/microdata/#respond" style="display:none;">Click here to cancel reply.</a></small>
+</div>
+
+
+<form action="http://html5doctor.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p>
+<label for="author">Name (required)</label><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true" required />
+</p>
+
+<p>
+<label for="email">Mail (will not be published) (required)</label><input type="email" name="email" id="email" value="" size="22" tabindex="2" aria-required="true" required />
+</p>
+
+<p>
+<label for="url">Website</label><input type="url" name="url" id="url" value="" size="22" tabindex="3" />
+</p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+<div id="form-code">
+    <h4>Some HTML is ok</h4>
+    <p>You can use these tags:<br><code><span class="tag">&lt;a </span><span class="atn">href</span><span class="tag">=</span><span class="atv">""</span><span class="tag"> </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;abbr </span><span class="atn">title</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;b&gt;</span></code><br> <code><span class="tag">&lt;blockquote </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;cite&gt;</span></code><br> <code><span class="tag">&lt;del </span><span class="atn">datetime</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;em&gt;</span></code><br> <code><span class="tag">&lt;i&gt;</span></code><br> <code><span class="tag">&lt;q </span><span class="atn">cite</span><span class="tag">=</span><span class="atv">""</span><span class="tag">&gt;</span></code><br> <code><span class="tag">&lt;strong&gt;</span></code></p><p>You can also use <code><span class="tag">&lt;code&gt;</span></code>, and <strong>remember to use <code><span class="pun">&amp;</span><span class="pln">lt</span><span class="pun">;</span></code> and <code><span class="pun">&amp;</span><span class="pln">gt</span><span class="pun">;</span></code> for brackets</strong>.</p>
+</div>
+<p><label class="screenreader" for="comment">Enter comment</label>
+<textarea aria-required="true" required name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type='hidden' name='comment_post_ID' value='2643' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ab7a578102" /></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="61"/></p>
+</form>
+
+</div>
+
+            </section>
+                <!-- end #comments -->
+                
+        </article>
+        <!-- end .post -->
+    </div>
+    <!-- end .main -->	
+                    
+ 	     <aside class="secondary">
+            
+        <section class="mod ads">
+            <h3>Element Index</h3>
+            <a href="/element-index/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/element-index.png" width="260" height="158" alt="View the HTML5 Element Index" /></a>
+        </section>
+        <!-- end nav -->
+            
+		            <aside class="mod ads group">
+                <h3>Sponsors</h3>
+                <div id="bsap_1242929" class="bsarocks bsap_ab161e2bf71edb940eeca26a4739f522"></div>
+            </aside>        
+		                       <!-- end nav -->
+        
+        <nav class="ui-tabs mod">
+          <h3>More HTML5 Doctor</h3>
+          <ul class="ui-tabs-nav group">
+            <li class="ui-tabs-selected"><a href="#articles">Articles</a></li>
+            <li class="ui-tab"><a href="#categories">Categories</a></li>
+            <li class="ui-tab"><a href="#authors">Authors</a></li>
+          </ul>
+          
+          <div class="tab" id="articles">
+              <ul>
+			<li><a href='http://html5doctor.com/computer-says-no-to-html5-document-outline/'>Computer says NO to HTML5 document outline</a></li>
+	<li><a href='http://html5doctor.com/the-woes-of-date-input/'>The woes of date input</a></li>
+	<li><a href='http://html5doctor.com/html-developers-please-consider/'>HTML Developers: Please Consider</a></li>
+	<li><a href='http://html5doctor.com/on-html-belts-and-aria-braces/'>On HTML belts and ARIA braces (The Default Implicit ARIA semantics they didn&#8217;t want you to know about)</a></li>
+	<li><a href='http://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/'>HTML5 &#8211; Check it Before you Wreck it with Mike[tm] Smith</a></li>
+              </ul>
+              <p class="btn"><a href="/article-archive/">View article archive</a></p>
+          </div>
+
+
+          <div class="tab" id="categories">
+                <ul>
+                    	<li class="cat-item cat-item-6"><a href="http://html5doctor.com/category/accessibility/" >Accessibility</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://html5doctor.com/category/attributes/" >Attributes</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://html5doctor.com/category/boilerplates/" >Boilerplates</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://html5doctor.com/category/browser-compatibility/" >Browser Compatibility</a>
+</li>
+	<li class="cat-item cat-item-69"><a href="http://html5doctor.com/category/comment/" >Comment</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://html5doctor.com/category/css/" >CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://html5doctor.com/category/elements/" >Elements</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="http://html5doctor.com/category/events/" >Events</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="http://html5doctor.com/category/forms/" >forms</a>
+</li>
+	<li class="cat-item cat-item-380"><a href="http://html5doctor.com/category/interviews/" >interviews</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://html5doctor.com/category/javascript-apis/" >JavaScript APIs</a>
+</li>
+	<li class="cat-item cat-item-51"><a href="http://html5doctor.com/category/marketing/" >Marketing</a>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://html5doctor.com/category/misc/" >Misc</a>
+</li>
+	<li class="cat-item cat-item-128"><a href="http://html5doctor.com/category/multimedia/" >multimedia</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://html5doctor.com/category/questions/" >Questions</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://html5doctor.com/category/quick-tips/" >Quick Tips</a>
+</li>
+	<li class="cat-item cat-item-135"><a href="http://html5doctor.com/category/reviews/" >Reviews</a>
+</li>
+	<li class="cat-item cat-item-145"><a href="http://html5doctor.com/category/simplequiz/" >Simplequiz</a>
+</li>
+	<li class="cat-item cat-item-68"><a href="http://html5doctor.com/category/specification-changes/" >Specification Changes</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://html5doctor.com/category/structure/" >Structure</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="http://html5doctor.com/category/validation/" >Validation</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://html5doctor.com/category/wai-aria/" >WAI-ARIA</a>
+</li>
+ 
+                </ul>
+          </div>
+          <div class="tab" id="authors">
+                <ul>
+                    <li><a href="http://html5doctor.com/author/alexg/" title="Posts by Alex Gibson">Alex Gibson</a></li><li><a href="http://html5doctor.com/author/brucel/" title="Posts by Bruce Lawson">Bruce Lawson</a></li><li><a href="http://html5doctor.com/author/cennyddb/" title="Posts by Cennydd Bowles">Cennydd Bowles</a></li><li><a href="http://html5doctor.com/author/chrisb/" title="Posts by Chris Bewick">Chris Bewick</a></li><li><a href="http://html5doctor.com/author/derekj/" title="Posts by Derek Johnson">Derek Johnson</a></li><li><a href="http://html5doctor.com/author/iand/" title="Posts by Ian Devlin">Ian Devlin</a></li><li><a href="http://html5doctor.com/author/jacko/" title="Posts by Jack Osborne">Jack Osborne</a></li><li><a href="http://html5doctor.com/author/markb/" title="Posts by Mark Boas">Mark Boas</a></li><li><a href="http://html5doctor.com/author/miker/" title="Posts by Mike Robinson">Mike Robinson</a></li><li><a href="http://html5doctor.com/author/olib/" title="Posts by Oli Studholme">Oli Studholme</a></li><li><a href="http://html5doctor.com/author/peterg/" title="Posts by Peter Gasston">Peter Gasston</a></li><li><a href="http://html5doctor.com/author/remys/" title="Posts by Remy Sharp">Remy Sharp</a></li><li><a href="http://html5doctor.com/author/richc/" title="Posts by Richard Clark">Richard Clark</a></li><li><a href="http://html5doctor.com/author/stevef/" title="Posts by Steve Faulkner">Steve Faulkner</a></li><li><a href="http://html5doctor.com/author/taba/" title="Posts by Tab Atkins Jnr">Tab Atkins Jnr</a></li><li><a href="http://html5doctor.com/author/toml/" title="Posts by Tom Leadbetter">Tom Leadbetter</a></li>            	            	
+                </ul>
+          </div>
+        </nav>
+        <!-- end .mod -->
+        
+        <section class="ads mod">
+          <h3>Submit your site to the Gallery</h3>
+          <a href="http://html5gallery.com/"><img src="http://html5doctor.com/wp-content/themes/html5doctor2/images/the-gallery.png" alt="HTML5 Gallery" style="width:93%;" /></a>
+        </section>
+        <!-- end .mod --> 
+                 
+	<div class="mod">
+         	<h3><a href="http://thewebevolved.com">Beginning HTML5 &amp; CSS3</a></h3> 
+		<a href="http://thewebevolved.com">
+			<img class="book" src="/wp-content/uploads/2013/01/web-evolved.jpg" alt="Cover image of Beginning HTML5 and CSS3: The Web Evolved.">
+		</a>
+		<p>The Web Evolved: A new book on HTML5 &amp; CSS3 by Richard Clark, Oli Studholme, Christopher Murphy and Divya Manian.</p>
+		<p><a class="btn" href="http://thewebevolved.com">Buy it now</a></p>
+	</div>      
+		
+    </aside>
+    <!-- end .secondary -->                   
+        <aside id="sub-footer" class="sub-footer group">
+        <div>
+            <div class="mod">
+                                <div id="crp_related" class="crp_related"><h3>Related Posts:</h3><ul class="related"><li><a href="http://html5doctor.com/using-aria-in-html/"     class="crp_title">Using ARIA in HTML</a></li><li><a href="http://html5doctor.com/cite-and-blockquote-reloaded/"     class="crp_title">cite and blockquote &#8211; reloaded</a></li><li><a href="http://html5doctor.com/web-manifest-specification/"     class="crp_title">The W3C App Manifest specification</a></li><li><a href="http://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/"     class="crp_title">HTML5 &#8211; Check it Before you Wreck it with Mike[tm]&hellip;</a></li><li><a href="http://html5doctor.com/the-woes-of-date-input/"     class="crp_title">The woes of date input</a></li></ul><div class="crp_clear"></div></div>                        
+            </div><!-- end .mod -->
+            <div class="mod">
+                <h3>Recent Posts</h3>
+                <ul class="related">
+                                                        <li><a href="http://html5doctor.com/computer-says-no-to-html5-document-outline/">Computer says NO to HTML5 document outline</a></li>
+                                        <li><a href="http://html5doctor.com/the-woes-of-date-input/">The woes of date input</a></li>
+                                        <li><a href="http://html5doctor.com/html-developers-please-consider/">HTML Developers: Please Consider</a></li>
+                                        <li><a href="http://html5doctor.com/on-html-belts-and-aria-braces/">On HTML belts and ARIA braces (The Default Implicit ARIA semantics they didn&#8217;t want you to know about)</a></li>
+                                        <li><a href="http://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/">HTML5 &#8211; Check it Before you Wreck it with Mike[tm] Smith</a></li>
+                                                </ul>
+            </div><!-- end .mod -->
+        </div> 
+        <!-- end div -->
+        <div class="ads">
+            <div class="mod">
+                <h3>Recommended</h3>
+                <a href="http://introducinghtml5.com"><img src="http://html5doctor.com/wp-content/themes/html5doctor/img/introducing-html5-ad.jpg" alt="Introducing HTML5 Book by Bruce Lawson and Remy Sharp" /></a>
+                <p class="btn"><a href="http://introducinghtml5.com">Buy this book</a></p>
+            </div>
+        </div>
+        <!-- end .ads -->
+    </aside>
+    <!-- end #sub-footer -->
+	
+
+    
+</main>
+<!-- end #content -->
+
+<footer role="contentinfo">
+	<div class="inner">
+    	<img width="64" height="64" class="w3c-logo" alt="W3C HTML5 logo (not CSS3!)" src="http://html5doctor.com/wp-content/themes/html5doctor2/images/HTML5_Badge_64.png">
+		<p id="copyright">This site is licensed under a <a href="http://creativecommons.org/licenses/by-nc/2.0/uk/" rel="license">Creative Commons Attribution-Non-Commercial 2.0</a> share alike license. Feel free to change, reuse modify and extend it. Some authors will retain their copyright on certain articles.</p>
+        <p>Copyright &copy; 2016 HTML5 Doctor. All rights reserved. Hosted by <a href="http://www.mediatemple.net/go/order/?refdom=richclarkdesign.com">(mt) Media Temple</a>. Branding by <a href="http://olik.co.uk/">Oliver Ker</a>.</p>
+	</div>
+    <!-- end .inner -->
+</footer>
+<!-- end footer -->
+
+    <!-- BuySellAds.com Ad Code -->
+    <script>
+    (function(){
+      var bsa = document.createElement('script');
+         bsa.type = 'text/javascript';
+         bsa.async = true;
+         bsa.src = '//s3.buysellads.com/ac/bsa.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+    })();
+    </script>
+    <!-- END BuySellAds.com Ad Code -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<!-- TODO: move scripts in head to before /body —oli -->
+	   
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/searchhi.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/prettify.js"></script>    
+	<script src="http://html5doctor.com/wp-content/themes/html5doctor2/js/master.js"></script>    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8916679-1']);
+  _gaq.push(['_setDomainName', 'html5doctor.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script async type="text/javascript" src="//cdn.fancybar.net/ac/fancybar.js?zoneid=1502&serve=C6ADVKE&placement=html5doctor" id="_fancybar_js"></script>
+</body>
+</html>
+<!-- Dynamic page generated in 1.098 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2016-10-22 00:56:41 -->
+
+<!-- super cache -->

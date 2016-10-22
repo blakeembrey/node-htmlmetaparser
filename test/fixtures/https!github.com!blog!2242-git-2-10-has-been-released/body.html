@@ -1,0 +1,385 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-c07ca57e8924150abac5f078c979cff71dc056c6015560c7bf45898e963137e4.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-2d1b79a5296eab9613c29bbac983651835f5ea62fb87eb9b860b7240dd28d934.css" media="all" rel="stylesheet" />
+    
+    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-4a18dc1c93cc7113ea22c7c6b62826f621b52a57f32caea97c682100ac10de36.css" media="all" rel="stylesheet" />
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>Git 2.10 has been released · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://cloud.githubusercontent.com/assets/121322/16134794/284be2e6-33d4-11e6-9165-58068a872ec2.png" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary_large_image" name="twitter:card" /><meta content="Git 2.10 has been released" name="twitter:title" /><meta content="The open source Git project has just released Git 2.10.0, with features and bugfixes from over 70 contributors. Here&#39;s our look at some of the most interesting new features:
+
+Progress reporting for..." name="twitter:description" />
+      <meta content="https://cloud.githubusercontent.com/assets/121322/16134794/284be2e6-33d4-11e6-9165-58068a872ec2.png" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="article" property="og:type" /><meta content="Git 2.10 has been released" property="og:title" /><meta content="https://github.com/blog/2242-git-2-10-has-been-released" property="og:url" /><meta content="The open source Git project has just released Git 2.10.0, with features and bugfixes from over 70 contributors. Here&#39;s our look at some of the most interesting new features:
+
+Progress reporting for..." property="og:description" /><meta content="262588213843476" property="article:author" /><meta content="262588213843476" property="article:publisher" /><meta content="blog/general" property="article:section" /><meta content="2016-09-03 02:23:46 UTC" property="article:published_time" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+    <meta name="request-id" content="424BF412:0FDB:22D4735:580ACAA6" data-pjax-transient>
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="general" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="424BF412:0FDB:22D4735:580ACAA6" name="octolytics-dimension-request_id" />
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="ZTY0MzEwNGM2ZmE4MmRhODQ2ZTQ4NTAzODZiZDAyZmFjMjNiMGRhNGQ2NWQxOGU0YjY2ZGVkOGUyNDRmYTNlYXx7InJlbW90ZV9hZGRyZXNzIjoiNjYuNzUuMjQ0LjE4IiwicmVxdWVzdF9pZCI6IjQyNEJGNDEyOjBGREI6MjJENDczNTo1ODBBQ0FBNiIsInRpbWVzdGFtcCI6MTQ3NzEwMjI0NiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="602336a49011f02deb1baac2454e721199adaaab">
+    <meta content="43ab81c84655bdf426b15ae4f26af2e427b60ef8" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="652dbe6bce423dc2278528a8b423ddbe">
+    
+
+      <link rel="alternate" type="application/atom+xml" title="The GitHub Blog’s featured posts" href="https://github.com/blog.atom">
+<link rel="alternate" type="application/atom+xml" title="The GitHub Blog: All posts" href="https://github.com/blog/all.atom">
+<link rel="alternate" type="application/atom+xml" title="The GitHub Blog: Broadcasts only" href="https://github.com/blog/broadcasts.atom">
+  <meta name="viewport" content="width=device-width">
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-4a18dc1c93cc7113ea22c7c6b62826f621b52a57f32caea97c682100ac10de36.css" media="all" rel="stylesheet" />
+
+
+      <link rel="canonical" href="https://github.com/blog/2242-git-2-10-has-been-released" data-pjax-transient>
+  </head>
+
+
+  <body class="logged-out  env-production">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+          <header class="site-header js-details-container" role="banner">
+  <div class="container-responsive">
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+
+    <button class="btn-link float-right site-header-toggle js-details-target" type="button" aria-label="Toggle navigation">
+      <svg aria-hidden="true" class="octicon octicon-three-bars" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg>
+    </button>
+
+    <div class="site-header-menu">
+      <nav class="site-header-nav site-header-nav-main">
+        <a href="/personal" class="js-selected-navigation-item nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+          Personal
+</a>        <a href="/open-source" class="js-selected-navigation-item nav-item nav-item-opensource" data-ga-click="Header, click, Nav menu - item:opensource" data-selected-links="/open-source /open-source">
+          Open source
+</a>        <a href="/business" class="js-selected-navigation-item nav-item nav-item-business" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/partners /business/features /business/customers /business">
+          Business
+</a>        <a href="/explore" class="js-selected-navigation-item nav-item nav-item-explore" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship /explore">
+          Explore
+</a>      </nav>
+
+      <div class="site-header-actions">
+            <a class="btn btn-primary site-header-actions-btn" href="/join?source=header" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+          <a class="btn site-header-actions-btn mr-2" href="/login?return_to=%2Fblog%2F2242-git-2-10-has-been-released" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+      </div>
+
+        <nav class="site-header-nav site-header-nav-secondary">
+          <a class="nav-item" href="/pricing">Pricing</a>
+          <a class="nav-item" href="/blog">Blog</a>
+          <a class="nav-item" href="https://help.github.com">Support</a>
+          <a class="nav-item header-search-link" href="https://github.com/search">Search GitHub</a>
+              <div class="header-search   js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/search" class="js-site-search-form" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope"></div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus "
+        data-hotkey="s"
+        name="q"
+        placeholder="Search GitHub"
+        aria-label="Search GitHub"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+        </nav>
+    </div>
+  </div>
+</header>
+
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main">
+        
+
+
+
+
+  <div id="js-pjax-container" data-pjax-container>
+      <div class="border-bottom py-4 mb-4 position-relative separation">
+    <div class="container">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/blog/search" class="blog-search" data-pjax="true" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <svg aria-hidden="true" class="octicon octicon-search" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+        <input class="form-control blog-search-input" type="text" name="q" id="blog-search" value="" tabindex="2">
+</form>
+      <h1 class="my-0 blog-title-group">
+          <a href="/blog" id="blog-home" class="blog-home"><svg aria-hidden="true" class="octicon octicon-home" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M16 9l-3-3V2h-2v2L8 1 0 9h2l1 5c0 .55.45 1 1 1h8c.55 0 1-.45 1-1l1-5h2zm-4 5H9v-4H7v4H4L2.81 7.69 8 2.5l5.19 5.19L12 14z"></path></svg></a><a href="/blog/2242-git-2-10-has-been-released" class=" blog-title">Git 2.10 has been released</a>
+      </h1>
+    </div>
+  </div><!-- /.pagehead -->
+
+  <div class="container" id="blog-main">
+    
+<div class="blog-aside">
+
+  <ul class="menu" role="navigation" data-pjax>
+    <a href="/blog" class="js-selected-navigation-item menu-item" data-selected-links=" /blog">Featured</a>
+    <a href="/blog/category/all" class="js-selected-navigation-item menu-item" data-selected-links="all /blog/category/all">All Posts</a>
+    <a href="/blog/category/ship" class="js-selected-navigation-item menu-item" data-selected-links="ship /blog/category/ship">New Features</a>
+    <a href="/blog/category/engineering" class="js-selected-navigation-item menu-item" data-selected-links="engineering /blog/category/engineering">Engineering</a>
+    <a href="/blog/category/enterprise" class="js-selected-navigation-item menu-item" data-selected-links="enterprise /blog/category/enterprise">Enterprise</a>
+    <a href="/blog/category/conferences" class="js-selected-navigation-item menu-item" data-selected-links="conferences /blog/category/conferences">Conferences</a>
+    <a href="/blog/category/meetup" class="js-selected-navigation-item menu-item" data-selected-links="meetup /blog/category/meetup">Meetups</a>
+    <a href="/blog/category/hire" class="js-selected-navigation-item menu-item" data-selected-links="hire /blog/category/hire">New Hires</a>
+    <a href="/blog/category/watercooler" class="js-selected-navigation-item menu-item" data-selected-links="watercooler /blog/category/watercooler">Watercooler</a>
+  </ul>
+
+  <a class="rss" href="/blog/subscribe" data-pjax>
+    <svg aria-hidden="true" class="octicon octicon-rss" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path d="M2 13H0v-2c1.11 0 2 .89 2 2zM0 3v1a9 9 0 0 1 9 9h1C10 7.48 5.52 3 0 3zm0 4v1c2.75 0 5 2.25 5 5h1c0-3.31-2.69-6-6-6z"></path></svg>
+    Subscribe
+  </a>
+
+  <a href="/universe-2016" class="link-gray-dark">
+    <img src="https://assets-cdn.github.com/images/modules/site/universe-logo.png" alt="" class="img-responsive mt-5 mb-3 px-5">
+    <h4 class="mb-1 text-center">A whole new GitHub&nbsp;Universe</h4>
+  </a>
+  <p class="text-gray mb-1 text-center">
+    Learn about the exciting features and announcements revealed at this year's GitHub Universe conference. <a href="/universe-2016">Learn&nbsp;more</a>
+  </p>
+</div>
+
+    <div class="blog-content">
+        <ul class="blog-post-meta">
+    <li class="meta-item">
+      <svg aria-hidden="true" class="octicon octicon-calendar" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 2h-1v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H6v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H2c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H2V5h11v9zM5 3H4V1h1v2zm6 0h-1V1h1v2zM6 7H5V6h1v1zm2 0H7V6h1v1zm2 0H9V6h1v1zm2 0h-1V6h1v1zM4 9H3V8h1v1zm2 0H5V8h1v1zm2 0H7V8h1v1zm2 0H9V8h1v1zm2 0h-1V8h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1zm2 0h-1v-1h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1z"></path></svg>
+      September  3, 2016
+    </li>
+
+  <li class="fn meta-item">
+    <img alt="@peff" class="author-avatar" height="18" src="https://avatars0.githubusercontent.com/u/45925?v=3&amp;s=36" width="18" /> <a href="/peff">peff</a>
+  </li>
+
+    <li class="meta-item">
+      <svg aria-hidden="true" class="octicon octicon-file-directory" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 4H7V3c0-.66-.31-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1zM6 4H1V3h5v1z"></path></svg>
+      <a href="/blog/category/general">General</a>
+    </li>
+
+</ul>
+
+
+  <div class="blog-post-body markdown-body">
+    <p>The open source Git project has just released Git 2.10.0, with features and bugfixes from over <a href="http://public-inbox.org/git/xmqqtwdxsp5q.fsf@gitster.mtv.corp.google.com/">70 contributors</a>. Here's our look at some of the most interesting new features:</p>
+
+<h2>
+<a id="progress-reporting-for-pushes" class="anchor" href="#progress-reporting-for-pushes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Progress reporting for pushes</h2>
+
+<p>When you run <code>git push</code>, you've probably seen a progress meter telling you how many objects you've sent, how many are left, and how fast the data is moving. But what happens after all of the data has made it to the server? Are we done?</p>
+
+<p>Not quite. Even though the receiver of a push does as much work as possible while the data is flowing in, there are a few CPU-intensive tasks it can't start until the whole thing has arrived. And while that's happening, Git is completely silent. Most pushes are small enough that this phase finishes quickly, and you never notice. But when pushing a large number of objects, this can take many seconds or even minutes, leaving you to wonder if things are still working.</p>
+
+<p>Worse, because the network connection is completely silent during this phase, you run the risk of the connection being dropped by HTTP proxies or other network infrastructure. That's an easy way to turn your wondering into frustration.</p>
+
+<p>Git 2.10 adds progress reports for these post-receive operations, to keep you entertained and to make sure the network knows we're still going.</p>
+
+<p><a href="https://cloud.githubusercontent.com/assets/3477155/18064845/34bb6956-6dff-11e6-8e3e-8a92c0bddaef.gif" target="_blank"><img src="https://cloud.githubusercontent.com/assets/3477155/18064845/34bb6956-6dff-11e6-8e3e-8a92c0bddaef.gif" alt="Push progress" style="max-width:100%;"></a></p>
+
+<p>Of course you're not always around to watch those progress meters. For pushes without a terminal (or run with <code>--quiet</code>), Git 2.10 also sends periodic "keepalive" packets to keep the network connection running.</p>
+
+<p>The progress reporting and keepalives are all implemented on the server side of the connection, and are backwards-compatible with all existing versions of Git. So you don't even need to upgrade to see them (but your hosting provider does).</p>
+
+<p>A few other progress-related improvements came along for the ride, too.  <code>git clone</code> now gives an accurate progress meter when checking that it received all of the necessary objects. And some progress messages, like those from an auto-gc of the remote repository, are more clearly marked as coming from the remote.</p>
+
+<p>[<a href="https://github.com/git/git/compare/67b3a5d4c084c3f579205a07b65169e742d39c02...83558686ceaeb634b630d5177818d571cafafbf4">source</a>, <a href="https://github.com/git/git/commit/860a2ebecd26563e6ac0f89c90052b41a17d1703">source</a>]</p>
+
+<h2>
+<a id="signature-verification-improvements" class="anchor" href="#signature-verification-improvements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Signature verification improvements</h2>
+
+<p>GPG-signed tags and commits have been a part of Git for a long time, but the workflows and tooling around them are still not that convenient to use. Git 2.10 takes a few incremental steps in this area. Along with some behind-the-scenes robustness improvements, it adds a new configuration option, <code>log.showSignature</code>, to verify signatures for every invocation of <code>git log</code>.</p>
+
+<p>The default output format for signature verification has also been changed to show 64-bit GPG key-ids, even when using older versions of GPG (64-bit ids are already the default on newer versions). This is in response to the <a href="https://evil32.com/">Evil 32</a> project, which showed how easy it is to generate "fake" keys which collide in the 32-bit key-id space. That project is two years old, but got new attention recently as somebody uploaded all of the fake keys from their dataset to the public keyservers.</p>
+
+<p>If you're not yet signing your commits and tags, there are <a href="https://help.github.com/articles/generating-a-new-gpg-key/">several</a> <a href="https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work">guides</a> to help you get started.</p>
+
+<p>[<a href="https://github.com/git/git/commit/fce04c3ca695d32c1b3c59e1bfc1fb4019025c72">source</a>,
+<a href="https://github.com/git/git/commit/b624a3e67f498cb41f704c9bd28e7d53076611c8">source</a>,
+<a href="https://github.com/git/git/compare/1d77bed8b02d902f11310f578debe933b90791f6...efee9553a4f97b2ecd8f49be19606dd4cf7d9c28">source</a>]</p>
+
+<h2>
+<a id="more-color-attributes" class="anchor" href="#more-color-attributes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More color attributes</h2>
+
+<p>You've probably seen that Git can produce colorful output in your terminal.  But did you know that those colors are configurable, or that you can use them in custom <code>log</code> formats and prompts? Some people <a href="https://github.com/olivierverdier/zsh-git-prompt">get</a> <a href="https://coderwall.com/p/euwpig/a-better-git-log">pretty</a> <a href="https://github.com/magicmonty/bash-git-prompt">fancy</a>.</p>
+
+<p>Git 2.10 comes with a few new options: its color code now understands italic and strikethrough attributes.</p>
+
+<p><a href="https://cloud.githubusercontent.com/assets/3477155/18064846/34bdb0f8-6dff-11e6-8ae5-4177e25d5f39.gif" target="_blank"><img src="https://cloud.githubusercontent.com/assets/3477155/18064846/34bdb0f8-6dff-11e6-8ae5-4177e25d5f39.gif" alt="new-color-options" style="max-width:100%;"></a></p>
+
+<p>In addition, the <code>%C(auto)</code> placeholder has been fixed (which is handy if you are designing custom <code>log</code> output), color support now works out of the box on FreeBSD, and the default colors for <code>HEAD</code> decorations have been tweaked to increase visibility.</p>
+
+<p>[<a href="https://github.com/git/git/compare/bb2d8a817df91c68742e10ace2a791de176f7247...9dc3515cf005639317fb95492b3157aadf056923">source</a>, <a href="https://github.com/git/git/commit/b15a3e005af07843116c73205742adfbab3d2e82">source</a>, <a href="https://github.com/git/git/commit/995bc22d7f8c611e342095a211065f8585a08e65">source</a>, <a href="https://github.com/git/git/commit/a903e233f65a3e93cad74007cc0d5a178f712263">source</a>]</p>
+
+<h2>
+<a id="odds-and-ends" class="anchor" href="#odds-and-ends" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Odds and ends</h2>
+
+<ul>
+<li><p>You shouldn't ever need to debug your HTTP connections, but if you do, Git 2.10 supports the <code>GIT_TRACE_CURL</code> environment variable. It supersedes the old <code>GIT_CURL_VERBOSE</code> variable, and gives more details, supports redirecting to a file (to avoid tangling with the rest of Git's output), and most importantly, will automatically scrub your authentication information from the result, making it safe to share the output with a fellow debugger.  [<a href="https://github.com/git/git/commit/74c682d3c63bff8860af5caf9bd38a5413568709">source</a>]</p></li>
+<li><p>The smart-http protocol will now grow its negotiation windows more aggressively, which should result in fewer round-trips when fetching a large repository over HTTP. [<a href="https://github.com/git/git/commit/da470981defcace6e909b74ebc4ab5a40a702728">source</a>]</p></li>
+<li><p><code>submodule update</code> and <code>clone --recursive</code> have learned to retry a single cloning failure for each submodule, to make ephemeral server and network failures less annoying.  [<a href="https://github.com/git/git/compare/89b8710fce0d1b3d99c0a1c218bacb82ff0811e4...bb9d91b4ed54df7bd970c82971ba2851e6735d72">source</a>]</p></li>
+<li><p>Manpages in the terminal will now have <code>literal</code> phrases shown in <strong>bold</strong> (these are generally shown in a fixed-space typewriter font in the HTML pages, but were not decorated at all in the terminal). [<a href="https://github.com/git/git/commit/5945717009cbd07fc303939452df6475ac342fe7">source</a>]</p></li>
+<li><p>Git's internal date-formatting code can now correctly show dates past the year 2100. Phew, fixed with only 84 years to spare. [<a href="https://github.com/git/git/commit/bab748371a104c58058c0eff9f4073b710ce0355">source</a>]</p></li>
+<li><p>Similarly, <code>git archive</code> can now generate tarfiles with POSIX extensions to handle files larger than 8GB, and timestamps later than the year 2242 (8 giga-seconds since 1970). [<a href="https://github.com/git/git/compare/42bd66816bd117ed5e6d15f38dbe9e655ebc76a5...5caeeb83bcb88622db739fe27ee8bfc64e9cbf21">source</a>]</p></li>
+</ul>
+
+<h2>
+<a id="the-whole-enchilada" class="anchor" href="#the-whole-enchilada" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The whole enchilada</h2>
+
+<p>That's just a sampling of the changes in Git 2.10, which contains over 600 commits. Check out the <a href="https://github.com/git/git/blob/v2.10.0/Documentation/RelNotes/2.10.0.txt">the full release notes</a> for the complete list.</p>
+  </div>
+
+  <div class="blog-feedback">
+    <h2 class="blog-feedback-header with-twitter">
+      Have feedback on this post? Let <a href="https://twitter.com/intent/tweet?text=@github%20&amp;related=github&amp;url=https://github.com/blog/2242-git-2-10-has-been-released" target="blank">@github</a> know on Twitter.
+    </h2>
+    <p class="blog-feedback-description">
+      Need help or found a bug? <a href="/contact">Contact us</a>.
+    </p>
+  </div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+  <div class="modal-backdrop js-touch-events"></div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.02580s from github-fe163-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+      </button>
+      You can't perform that action at this time.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/compat-30ce4c86c27f88c3d1b4eb03efda59b45d8d7c871880dee0b8f73d5ef1b25fdf.js"></script>
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-33b22a6d8d4e7a6df6f3868fc101644ec8b92539c1d828b23b34dff4b2f613f7.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-92f407d1e778dafd05b0c49cf3a0018d2db470807dabea8eff08954ab1689f7e.js"></script>
+      
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+

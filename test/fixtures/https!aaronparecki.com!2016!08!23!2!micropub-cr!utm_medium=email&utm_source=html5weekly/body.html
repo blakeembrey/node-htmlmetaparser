@@ -1,0 +1,1199 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Micropub CR &bull; Aaron Parecki</title>
+    <link rel="webmention" href="https://webmention.io/aaronpk/webmention">
+    <link rel="hub" href="https://switchboard.p3k.io/">
+    <link rel="openid.delegate" href="https://aaronparecki.com/">
+    <link rel="openid.server" href="https://openid.indieauth.com/openid">
+        <link rel="authorization_endpoint" href="https://aaronparecki.com/auth">
+    <link rel="token_endpoint" href="https://aaronparecki.com/auth/token">
+    <link rel="micropub" href="https://aaronparecki.com/micropub">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+    <script src="/assets/jquery-1.12.0.min.js"></script>
+    <script src="/semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="/assets/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/weather-icons/css/weather-icons.css">
+    <script src="/assets/featherlight-1.5.0/featherlight.min.js"></script>
+    <link rel="stylesheet" href="/assets/featherlight-1.5.0/featherlight.min.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/site/styles.css">
+    <link rel="stylesheet" href="/assets/carbon.css">
+    <script src="/assets/photo-albums/justified-layout.js"></script>
+    <script src="/assets/photo-albums/photo-layout.js"></script>
+  </head>
+  <body>
+
+    <div class="sticky-footer-content">
+      <div class="top-bar">
+        <div class="ui container">
+          <form action="/search" method="get" class="search item">
+            <div class="ui icon input">
+              <input type="text" name="q" placeholder="Search..." value="">
+              <i class="search icon"></i>
+            </div>      
+          </form>
+                      <span class="item">53&deg;F</span>
+            <span class="weather item">
+              <i class="wi wi-night-alt-showers" title="Rain in Portland"></i>
+            </span>
+                                <span class="time item">7:10pm</span>
+                                <span class="battery item" title="95%, last updated 7:00pm"><span class="battery-icon" style="background-position: -0px 0;"></span></span>
+                    <div id="logged-in-menu"></div>
+        </div>
+      </div>
+              <div class="ui container">
+        <div class="site-header">
+  <div class="align-bottom">
+
+    <div class="left">
+      <h1><a href="/">Aaron Parecki</a></h1>
+    </div>
+
+    <div class="right">
+      <ul>
+                  <li><a href="/articles">Articles</a></li>
+                  <li><a href="/notes">Notes</a></li>
+                <li><a href="/projects/">Projects</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+        <div class="post-list">
+  <ul>
+    <li class="h-entry post-entry  post">
+      <div style="" class="content-area   has-responses">
+            <div class="pad">
+          <h2 class="p-name">Micropub CR</h2>
+
+              <div class="metaline"><a href="https://aaronparecki.com/2016/08/23/2/micropub-cr">Tue, Aug 23, 2016 10:00am -07:00</a></div>
+      
+            <div class="post-text e-content "><p>I'm excited to announce that <a href="https://www.w3.org/TR/micropub/">Micropub</a> is now a W3C Candidate Recommendation!</p>
+
+<p><a href="https://www.w3.org/TR/micropub/"><img src="https://aaronparecki.com/2016/08/23/2/micropub-cr.png" class="u-featured"></a></p>
+
+<h3>Three Years of Incubation and <a href="https://indieweb.org/selfdogfood">Selfdogfooding</a></h3>
+
+<p>Micropub began in 2013 when I outlined a simple API to create blog posts and short notes for my website, and then implemented it both on my server, several new clients, and started using it day-to-day. Micropub aims to be simple to understand and implement, built on top of existing standards such as OAuth 2.0 and the Microformats 2 vocabulary.</p>
+
+<h3>Designed for Incremental Implementation</h3>
+
+<p>Micropub is also intended to be implemented incrementally. You can start by implementing just the basics of creating simple posts, and then expand your implementation to support additional properties of posts, and later expand to enable editing posts as well.</p>
+
+<h3>Widespread Interoperability Across Numerous Implementations</h3>
+
+<p>One of the benefits of supporting Micropub is that it allows you to leverage other peoples' work in building an interface to create posts on your own website. By 2014, there were already six independent server implementations: five created by individuals for their own websites, as well as a plugin for the <a href="https://withknown.com">Known content management system</a>. In addition to the <a href="https://quill.p3k.io">client</a> I wrote, there were four other people who built their posting interfaces using Micropub, which meant that anybody else with a Micropub server could sign in and use them!</p>
+
+<p>Over the next several months, more and more people built out Micropub support in their blogging systems, including plugins for Wordpress and Drupal! I continued to build Micropub clients like <a href="https://ownyourgram.com">OwnYourGram</a>, which imports your Instagram photos to your website, and <a href="https://teacup.p3k.io">Teacup</a> which I use to track everything I <a href="https://aaronparecki.com/ate">eat</a> and <a href="https://aaronparecki.com/drank">drink</a>, even posting <a href="https://aaronparecki.com/2014/10/12/13/micropub-pebble-indiewebcamp">from my watch</a>.</p>
+
+<p>See also: <a href="http://indieweb.org/Micropub#Examples">Complete list of live Micropub implementations</a></p>
+
+<h3>Openly Iterated and Formally Standardized</h3>
+
+<p>I gave a talk on Micropub <a href="https://www.youtube.com/watch?v=YM1Y85zKZbQ&amp;index=87&amp;list=PLfwE4lxvXUNmuWwoNBoywOqrBcZZLiV4o">at Open Source Bridge in 2015</a>, when we had just started prototyping clients and servers that could start editing posts.</p>
+
+<p>At the beginning on 2016, we <a href="https://www.w3.org/blog/news/archives/5286">published the First Public Working Draft</a> of Micropub under the W3C Social Web Working Group. For the past several months, we've been iterating on the spec, refining the language, clarifying how to edit and delete posts, and working on ways to ensure a good user experience for applications that post photos and videos.</p>
+
+<h3>W3C Official Call For Micropub Implementations</h3>
+
+<p>Last week the <a href="https://www.w3.org/blog/news/archives/5729">W3C announced</a> that Micropub is now a Candidate Recommendation, and is inviting a wider audience to implement it and provide feedback.</p>
+
+<p>Stay tuned for updates as I build out the test suite and debugging tools to help you build Micropub clients and servers. They will be launched at <a href="https://micropub.rocks/">micropub.rocks</a> in the coming months!</p>
+</div>
+        </div>
+        <div class="metaline pad">
+  <i class="marker icon"></i>
+      <span class="p-location h-adr">
+          <span class="p-locality">Portland</span>,
+        <span class="p-region">Oregon</span>
+                <data class="p-latitude" value="45.521947103595"></data>
+      <data class="p-longitude" value="-122.63860775169"></data>
+      </span>
+  </div>
+    
+      <div class="metaline tags pad" style="float: right;">
+      #<a href="/tag/w3c" class="p-category">w3c</a>
+      #<a href="/tag/socialwg" class="p-category">socialwg</a>
+      #<a href="/tag/micropub" class="p-category">micropub</a>
+      #<a href="/tag/indieweb" class="p-category">indieweb</a>
+  </div>
+    <div class="metaline pad">
+      <a href="https://aaronparecki.com/2016/08/23/2/micropub-cr" class="u-url">
+      <time class="dt-published" datetime="2016-08-23T10:00:00-07:00">
+        Tue, Aug 23, 2016 10:00am -07:00
+      </time>
+    </a>
+        <span class="syndications">
+              <a href="https://twitter.com/aaronpk/status/768134005346607104" class="u-syndication syndication"><i class="twitter icon"></i></a>
+              <a href="https://news.indieweb.org/en/aaronparecki.com/2016/08/23/2/micropub-cr" class="u-syndication syndication"><i class="icon-indiewebcamp"></i></a>
+              <a href="https://www.facebook.com/photo.php?fbid=10102670383342286&amp;set=a.592544034956.2220740.11500459&amp;type=3" class="u-syndication syndication"><i class="facebook square icon"></i></a>
+          </span>
+  </div>
+<a class="u-author" href="/"></a>
+    <div class="metaline responses-summary pad">
+      <span><i class="star empty icon"></i> 58 likes</span>
+        <span><i class="retweet icon"></i> 7 reposts</span>
+          <span><i class="comment outline icon"></i> 4 replies</span>
+        <span><i class="file text outline icon"></i> 17 mentions</span>
+    </div>
+    
+  <div style="clear:both;"></div>
+</div>
+  <div class="responses">
+      <ul class="facepile">
+    <li class="group"><i class="star empty icon"></i></li>
+    <!-- TODO: add overlay with twitter/facebook/instagram icon depending on author URL -->
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-14476022" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/68e3313ed43369bb8644095cfd8934027a5c1b863347b0d920d8d8d347078bc5.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/webrocker">Tom Tinkerson</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-17296531" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/c8a1634473f6a028fe7bbb758bad6571bd4181fed22b05552baba70a8284ffdb.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/biglesp">biglesp</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-2149850018" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/d2be45e4991251a8eed8db7f396c8fb74d00f25c95e2d6dbf2819ffed34984fc.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/uhhyeahbret">Bret Comnes</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-13645402" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/9fa2995740ad8948392b39416947c43002dbfaef59aa335ba21f456b0ed9c5d4.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/ChrisAldrich">ChrisAldrich</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-3178591381" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/9ceab8a3391d1b0d12e7e0274f7d20f3c69c84336fa1562181f7c7bdded300c1.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/_Ryan_Tharp">Ryan Tharp</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10101819051313496" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/9d02da34c11c9877cd72ce5021338c93aae4b10764db560a20e93bb17676d906.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10101819051313496">Nick Cummings</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-14124984" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/ecff1cf2ca983f55de915a46bb939fcafe8b9c81474685581c9adaa23afad51d.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/williamj">william j. moner</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-718952792132444160" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/f6763b8fe1ab265b75e0b04c52f05ed2192ddae1cac2fef27d0693b5824be20a.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/going_to_maine">Going T. Maine</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-13684" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/d0407c3adc84ad2b1dbf0ec085b8cbc291393ae4605c1df1cc168cc6978cdb39.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/bdielman">Brad Dielman</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-608093" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/384d8831a3526012a978d84a938259437ac0e9d7b9dd92bfd610616b424cdee7.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/donpdonp">Don Park</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-11764" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/aa8c65174129918e4a5eb35d9ec3594e14540ba5769de895590d025708922297.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/cdevroe">Colin Devroe</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-100003040678433" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/b19e70dd9d6e22f9f0bb829ca52216c1bea8d98286b482ac2029cb9d12238559.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/100003040678433">Joschi Kuphal</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-739837529462083585" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/fb3c4e61412ed62bbdf2bb3a7f88fcd89b9e804ec041a7e4f25a7cd386877b23.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/sfeldeu">Sebastian Feldmann</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-15509444" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/d9dc81fa637a3bbdde06c1d32d855baf2c6d50dcfaa1942eefe2ecdb93d7c860.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/jkapaldo">Jonathan Kapaldo</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-796896" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/4fc241681df1e19d6c65b280bb8abf933755e0f40ed8f3ca75a5f68bd64f2217.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/tylersticka">Tyler Sticka</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10205055929256030" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/bbd1328fba881731d835eee070a283b7acd9fdf9c18ce3ea6ce260e411aaa88e.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10205055929256030">Michal Young</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-19320995" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/d06102dc7b160d21e6a72cd4ccb64c167860b1e27e63df652475c621b263c7d7.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/grantmacken">Grant MacKenzie</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-10493102" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/5a26c2b1c75eef16ad665ca4a093c45e789fcd2604daf1811d6f4177b51fabfc.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/joostvanderborg">Joost van der Borg</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-18028906" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/54422af5a9ec27cd22d5f4af0bfc7271b713bc22964fcc6906e760e4562181f8.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/jburrows">Jill Burrows</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10101372174607996" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/2b33f1ae7d962259a6e4bb56d6ad565b7154845972587ff653a9bd6eeff85182.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10101372174607996">Andrew S. Parnell</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10202944195699849" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/f2b73ff98fdf2481399a50da610ef4020049cd9d071236f93616030891d85171.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10202944195699849">Juliane Sch&uuml;tz</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10153076750621804" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/3d2f647ec46e551bcb1c09c289487fdc3a57fbfaac67c8c27b1ecf088fc6233b.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10153076750621804">Mike Richmond</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-5373862" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/5c14a5b4fc4bbbd83cf7182fd3a05abeb936266dbce59c08302ac8e0890e0209.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/wrumsby">Rap Game Grady Booch</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10154156191711140" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/d467d830ac8f302cfa22fa59d1abd4281149f3913d9fc06e9b46b0f8b5c05afe.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10154156191711140">Boaz Sender</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10203928565400799" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/32cf887de815d256aee159c1e04e3e8b7b1a77a3220c75f1f75849a6f222d5d6.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10203928565400799">Brian Hendrickson</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-58448784" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/33e1c06aa2b70a01228a4748f32f6f0b9b942b112325a8911db520651cceafb1.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/m_ott">Matthias Ott</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-36802236" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/aebdd18bc48fbdc1845aeace0a93f4ce96a307699df78c8ff0dd1ca17d57777f.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/36802236">Ben Werdm&uuml;ller</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-14847576" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/fac3ade58137ff14ef7079e3e9240ef77094216140e9fbad85fe3ee6f922f175.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/ryepdx">ryepdx</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-214611" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/d346a928c7676aff2667e4092f58fc41bee61028d3e1c53c31bf038baede5b51.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/214611">Tantek &Ccedil;elik</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-15269782" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/76b9e43e96ad558b76a5e01d4134b6c60f6345d8513c9e7d252a631be1b28961.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/riccardoerra">Riccardo Erra</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-132978921" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/64780b0d6a82b94dcbefad20c18066a821ddb199ccf9881316cafde4ccce20e3.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/geekcode">Mike Bijon</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10101373755005866" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/ab4b59e19c6031628ac8906361af17846df39e7a27f7f8e54376316f8fc2d0d4.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10101373755005866">Emre Yildirim</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-6092342" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/5c5af4b0818d526c52c46868b04b18540009d7994f84c6d38d7ec89ad5b2c921.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/silverton">Michael</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10154065753200624" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/06bb54d7f7265c10527a654f1ad62abfbc119b5f40b7cfb6a1b6a3f4dd6edbf5.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10154065753200624">Daniel Patrick Johnson</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-113539049" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/27d1969974be29f5887ed96999e2ba60c9226d80738d9894d98f53ce301a84f8.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/ThatAmyMac">Amy MacKinnon</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-73257391" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/0b4160a2635de870650dad5f5c283d84c8297ada7013003bcecfc3acf71cd7a9.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/jorgeegomez">Jorge E. G&oacute;mez</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10154083569751678" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/d3a631b160a21b3c97c7ca4dd2f91500a065971ff560ad8d82e639c2b82cac8d.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10154083569751678">Al Pascual</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10152090016504611" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/4c5d8ca6327b12cfa201bd5addd6b5f446e751f0222e050a2f8e95eade4ea4a2.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10152090016504611">Paul Fenwick</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-5748782" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/ec2acddcfa38dc3df34a12519c3e6666ccebe2a73d26678890ed4de7ab9e5976.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/egoexpress">Bj&ouml;rn Stierand</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10152959874238191" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/e7e96c7ee1b56920b181db22b7f775ebefd3704d761f55d47fd89372282809cd.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10152959874238191">Georg Rehm</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-591203629" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/0b90da4ce759ea803d9b0af0ce3e91e215adf7ddfbc0c93e2d9b9bbd767b8797.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/the_Zieger">Eric Zieger</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-499657186827699" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/4dab7d3139ce4d5f689a0f037ef2bceb54cdae8a00b74a56a3e0d1235fce0704.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/499657186827699">Andi Galpern</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10152064711469849" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/af4cf4840ee891b756f894c3c4be209ccc7d1b6cc39121418495305d357f4995.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10152064711469849">Mike Merrill</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-77453936" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/9cde1bbe5a2afea10c13003cef693abb960732a2643f611a5b3916f174653e8b.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/calum_ryan">Calum Ryan</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10152877074885986" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/019515d963fa4d553a823b760891227aba401851897a7b6b6f5e1b15c1f13eef.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10152877074885986">Jessy Kate Schingler</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10152470564767617" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/fcfa70aee654953a04c1f4bb57c850a64e05b06b9e540c723805a0bdafecd9f4.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10152470564767617">Shane Becker</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-625871840" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/482298135f437dba0cb9f9abf16422863b45134d61655e122f9bc2ad4d013da7.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/625871840">Will Norris</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-10036452" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/e6752c029cf8212d343b21e52cc6fbb8564097369d563adb8600d8828782ea3b.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/annbass">Ann Bassetti</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10153117899234347" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/e1d49f9e07b8c6f1ad2fda6246d0b18748a61eeef81dd088903f460140df240b.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10153117899234347">Ann Bassetti</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#liked-by-10152149262524635" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/25dcb67df3ead99bfbdbf87eeed86b3cdee82560371566027c4d35b7a03868f1.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://www.facebook.com/10152149262524635">Amalia Parecki</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-2993046466" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/bc2e5821d5e12f930c964dec388bc1a9b9a465feec6da1828db5b952c049e5f6.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/GuardiolaNews">Tammy Watson</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-2171481822" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/393c869841cde40970ef52ef4e28f532bc456cff78f5e9bfcf9eb83672868520.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/Ue623CHEN">Lillian Fournier</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-765811357904203776" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/abs.twimg.com/20a1c8ec3489f36fca107bd67b44d0e8e072211fff6229bfd001669e052ff1f7.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/Ghost13231">Rauf Isgenderov</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-1366001034" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/e09d30b585b05a6001ee696ed5be646bf6b12d3d6da0901e2b8e2c736ad34000.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/Ocampo125Yosel">Wendy Petersen</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-6108812" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/55e7027f18e2266738b2c07097b3bfb89888854a6a008518c26cbf2230a881a0.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/emjayess">Matt J. Sorenson, ND</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-447955313" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/08ccc81816371a436413ee84c08fda20a065bdabf16cb85c94aedd08f89e157d.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/yzgami">Юзаев Гаптулгали</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://twitter.com/aaronpk/status/768134005346607104#favorited-by-364348088" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/abs.twimg.com/02da9a9a540b937b14bd7f8be371fad69e08db8d4b7c3dfe1f787c8730d089c0.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/olyashapkina">olyashapkina</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-like h-cite">
+        <a href="https://snarfed.org/2016-08-23_aaron-parecki-18" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/secure.gravatar.com/92d8eadb8aad00f6eae2fdb23dc3c3577bbfcaa1af023c07b5aeb4503d561833.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://snarfed.org/">Ryan Barrett</a>
+          </span>
+        </a>
+      </li>
+      </ul>
+  <div style="clear:both;"></div>
+  
+      <ul class="facepile">
+    <li class="group"><i class="retweet icon"></i></li>
+    <!-- TODO: add overlay with twitter/facebook/instagram icon depending on author URL -->
+          <li class="p-repost h-cite">
+        <a href="https://twitter.com/ShaneHudson/status/768134615596929024" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/4119b3eae66a344fd13043b937bff82c2a2b9b4267ec26cb12d13d7e70e88ab1.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://shanehudson.net/work">Shane Hudson</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-repost h-cite">
+        <a href="https://twitter.com/miklb/status/768135560703647745" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/1e64a23de7967fb65288aaf4eb3371ac65c60665391a668148fd7ecb3d562cfa.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="http://miklb.com">Michael Bishop</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-repost h-cite">
+        <a href="https://twitter.com/adactio/status/768137806967345152" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/a240df5a339ff8e5e69eaa76411c77061e8ec1be9c0b79eb0c73ecf14f012c2e.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://adactio.com">Jeremy Keith</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-repost h-cite">
+        <a href="https://twitter.com/voxpelli/status/768138743127695360" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/500a4883279015b8c0bf56f607034761ddc0c366c0275632662441f25af5351c.png" height="36">
+            <a style="display:none;" class="p-name u-url" href="http://voxpelli.com">Pelle Wessman</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-repost h-cite">
+        <a href="https://twitter.com/cdevroe/status/768140575325519872" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/aa8c65174129918e4a5eb35d9ec3594e14540ba5769de895590d025708922297.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="http://cdevroe.com">Colin Devroe</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-repost h-cite">
+        <a href="https://twitter.com/going_to_maine/status/768141432255188992" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/f6763b8fe1ab265b75e0b04c52f05ed2192ddae1cac2fef27d0693b5824be20a.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://twitter.com/going_to_maine">Going T. Maine</a>
+          </span>
+        </a>
+      </li>
+          <li class="p-repost h-cite">
+        <a href="https://barryfrost.com/2016/08/micropub-is-now-a-w3c-cr" class="u-url">
+          <span class="p-author h-card">
+            <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/barryf.s3.amazonaws.com/a3216644fe765c08d8913f3aabcf3cabd95908c8646c03fa6fecfa5dd7cad1f7.jpeg" height="36">
+            <a style="display:none;" class="p-name u-url" href="https://barryfrost.com/">Barry Frost</a>
+          </span>
+        </a>
+      </li>
+      </ul>
+  <div style="clear:both;"></div>
+  
+  
+  
+          <ul>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/commentpara.de/ef200c8b639d79d1cfbc0abf0e25f42dcbc585b4398003dd90f5a56c9d56e3bf.svg" width="48">
+                          <a class="p-name u-url" href="https://commentpara.de/user/3.htm">Anonymous</a>
+          <a class="author_url" href="https://commentpara.de/user/3.htm">commentpara.de/user/3.htm</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">And look, we have anonymous comments via Micropub, too!</div>
+                    <div class="metaline">
+        <a href="https://commentpara.de/comment/45.htm" class="u-url">
+                    <time class="dt-published" datetime="2016-09-07T03:46:58-07:00">
+            Wed, Sep 7, 2016 3:46am -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/aae81fb360d91e37e1e935050ca883b7686254b3e83d85fe9999f15545c0fb03.jpeg" width="48">
+                          <a class="p-name u-url" href="https://www.facebook.com/10101819051298526">Nina Pavlich</a>
+          <a class="author_url" href="https://www.facebook.com/10101819051298526">www.facebook.com/10101819051298526</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">😮</div>
+                    <div class="metaline">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#wow-by-10101819051298526" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T10:50:48-07:00">
+            Tue, Aug 23, 2016 10:50am -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/react/facebook/11500459/10102670383342286/10101819051298526/10102670383342286_wow_by_10101819051298526">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/graph.facebook.com/6106541793e130ed575bd112dd80fbd0cf9482c6a1a6889dbfc1454283c93234.jpeg" width="48">
+                          <a class="p-name u-url" href="https://www.facebook.com/10152051745921984">Valentina Bettencourt</a>
+          <a class="author_url" href="https://www.facebook.com/10152051745921984">www.facebook.com/10152051745921984</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">❤️</div>
+                    <div class="metaline">
+        <a href="https://www.facebook.com/11500459/posts/10102670383342286#love-by-10152051745921984" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T10:50:57-07:00">
+            Tue, Aug 23, 2016 10:50am -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/react/facebook/11500459/10102670383342286/10152051745921984/10102670383342286_love_by_10152051745921984">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/commentpara.de/ef200c8b639d79d1cfbc0abf0e25f42dcbc585b4398003dd90f5a56c9d56e3bf.svg" width="48">
+                          <a class="p-name u-url" href="https://commentpara.de/user/3.htm">Anonymous</a>
+          <a class="author_url" href="https://commentpara.de/user/3.htm">commentpara.de/user/3.htm</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Most of the micropub implementations are islands; people built their own client and their own server, and those two speak with each other. Real interoperability (clients speaking with different servers) has not been achieved yet.</div>
+                    <div class="metaline">
+        <a href="https://commentpara.de/comment/53.htm" class="u-url">
+                    <time class="dt-published" datetime="2016-09-07T03:51:16-07:00">
+            Wed, Sep 7, 2016 3:51am -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+    </ul>
+  <div style="clear:both;"></div>
+  
+      <h3>Other Mentions</h3>
+    <ul>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                                            <a class="p-name u-url" href="http://html5weekly.com">
+            html5weekly.com
+          </a>
+              </div>
+                                  <div class="metaline">
+        <a href="http://html5weekly.com/issues/254" class="u-url">
+                    <time class="dt-published" datetime="2016-08-24T04:43:20-07:00">
+            Wed, Aug 24, 2016 4:43am -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                                            <a class="p-name u-url" href="http://us1.campaign-archive.com">
+            us1.campaign-archive.com
+          </a>
+              </div>
+                                  <div class="metaline">
+        <a href="http://us1.campaign-archive.com/?u=0618f6a79d6bb9675f313ceb2&amp;id=2a1eb8f9be" class="u-url">
+                    <time class="dt-published" datetime="2016-08-24T11:05:28-07:00">
+            Wed, Aug 24, 2016 11:05am -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                                            <a class="p-name u-url" href="https://indieweb.org">
+            indieweb.org
+          </a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">This Week in the IndieWeb: August 19-26, 2016</div>
+                    <div class="metaline">
+        <a href="https://indieweb.org/this-week/2016-08-26.html" class="u-url">
+                    <time class="dt-published" datetime="2016-08-25T22:28:24-07:00">
+            Thu, Aug 25, 2016 10:28pm -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                                            <a class="p-name u-url" href="https://habrahabr.ru">
+            habrahabr.ru
+          </a>
+              </div>
+                                  <div class="metaline">
+        <a href="https://habrahabr.ru/post/308698/" class="u-url">
+                    <time class="dt-published" datetime="2016-08-28T13:01:18-07:00">
+            Sun, Aug 28, 2016 1:01pm -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                                            <a class="p-name u-url" href="https://habrahabr.ru">
+            habrahabr.ru
+          </a>
+              </div>
+                                  <div class="metaline">
+        <a href="https://habrahabr.ru/post/308698/?utm_source=habrahabr&amp;utm_medium=rss&amp;utm_campaign=best" class="u-url">
+                    <time class="dt-published" datetime="2016-08-28T12:58:36-07:00">
+            Sun, Aug 28, 2016 12:58pm -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/stream.boffosocko.com/d0ba9f65fcbf0cef3bdbcccc0b6a1f42b1310f7ab2e07208c7a396166cde26b1.jpeg" width="48">
+                          <a class="p-name u-url" href="http://stream.boffosocko.com/profile/chrisaldrich">Chris Aldrich</a>
+          <a class="author_url" href="http://stream.boffosocko.com/profile/chrisaldrich">stream.boffosocko.com/profile/chrisaldrich</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content"><p class="p-name">Micropub is now a W3C Candidate Recommendation! I love it on @WordPresshttps://twitter.com/aaronpk/status/768134005346607104https://aaronparecki.com/2016/08/23/2/micropub-cr </p></div>
+                    <div class="metaline">
+        <a href="http://stream.boffosocko.com/2016/micropub-is-now-a-w3c-candidate-recommendation-i-love-it" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T10:24:43-07:00">
+            Tue, Aug 23, 2016 10:24am -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/9fa2995740ad8948392b39416947c43002dbfaef59aa335ba21f456b0ed9c5d4.jpeg" width="48">
+                          <a class="p-name u-url" href="http://www.boffosocko.com">ChrisAldrich</a>
+          <a class="author_url" href="http://www.boffosocko.com">www.boffosocko.com</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Micropub is now a W3C Candidate Recommendation! I love it on @WordPresstwitter.com/aaronpk/status…aaronparecki.com/2016/08/23/2/m…</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/ChrisAldrich/status/768136903371608064" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T10:24:43-07:00">
+            Tue, Aug 23, 2016 10:24am -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/768136903371608064">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/6c3af84907a692cc5de8f49cae642e4520da3dc7757a76f4c321dd556aaef876.jpeg" width="48">
+                          <a class="p-name u-url" href="http://4unow.net/freegifts">web development</a>
+          <a class="author_url" href="http://4unow.net/freegifts">4unow.net/freegifts</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">#webdevelopment
+I'm excited to announce that Micropub is now a W3C Candidate Recommendation! aaronparecki.com/2016/08/23/2/m… …</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/web_DEVE__Lop/status/768137858871943169" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T10:28:31-07:00">
+            Tue, Aug 23, 2016 10:28am -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/768137858871943169">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/bear.im/3488535cc9cba5ef5417946923f38988c90c3a7f4d1338e13790b0b7845f4c69.jpeg" width="48">
+                          <a class="p-name u-url" href="https://bear.im/">Mike Taylor</a>
+          <a class="author_url" href="https://bear.im/">bear.im</a>
+              </div>
+                        <a class="p-name name" href="https://bear.im/bearlog/2016/236/micropub-accepted-as-a-candidate-recommendation.html">
+            Micropub accepted as a Candidate Recommendation
+          </a>
+                          <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content"><p>Congratulations to Aaron on getting Micropub as a CR (Candidate Recommendation)!</p>
+
+<p>It makes me very happy to see something that came from the Indieweb community start to become a standard, it means the community is working together to ensure implementations are functional and useful!</p></div>
+                    <div class="metaline">
+        <a href="https://bear.im/bearlog/2016/236/micropub-accepted-as-a-candidate-recommendation.html" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T10:34:38-07:00">
+            Tue, Aug 23, 2016 10:34am -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/tantek.com/f135ca08b898c78d3ba33a2433bc81c77f7c6688152ce3e90baab65a21495876.jpeg" width="48">
+                          <a class="p-name u-url" href="http://tantek.com/">Tantek &Ccedil;elik</a>
+          <a class="author_url" href="http://tantek.com/">tantek.com</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Micropub^1 is a @W3C Candidate Recommendation!https://aaronparecki.com/2016/08/23/2/micropub-cr(replaces AtomPub^2 &amp; MetaWeblog^3)Congrats editor @aaronpk, and @socialwg!^1 https://www.w3.org/TR/2016/CR-micropub-20160816/^2 https://tools.ietf.org/html/rfc5023^3 https://en.wikipedia.org/wiki/MetaWeblogGreat work @aaronpk with brainstorming publicly, selfdogfooding, incubating in indieweb.org, proposing @W3C Social Web Working Group, and patiently working through issues raised, iteratively improving the draft accordingly, all the while helping grow the number of deployed and live interoperable implementations!</div>
+                    <div class="metaline">
+        <a href="http://tantek.com/2016/236/t1/micropub-candidate-recommendation" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T15:14:00-07:00">
+            Tue, Aug 23, 2016 3:14pm -07:00
+          </time>
+        </a>
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/38f635b64f6add618dfb72c1f115322b8c92777ddc5efd2784806c2d3f20df2e.jpeg" width="48">
+                          <a class="p-name u-url" href="http://tantek.com/">⚡️</a>
+          <a class="author_url" href="http://tantek.com/">tantek.com</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Micropub^1 is a @W3C Candidate Recommendation!aaronparecki.com/2016/08/23/2/m…
+(replaces AtomPub^2 &amp; MetaWeblog^3)... tantek.com/t4iw1</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/t/status/768209767806361600" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T15:14:15-07:00">
+            Tue, Aug 23, 2016 3:14pm -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/768209767806361600">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/38f635b64f6add618dfb72c1f115322b8c92777ddc5efd2784806c2d3f20df2e.jpeg" width="48">
+                          <a class="p-name u-url" href="http://tantek.com/">⚡️</a>
+          <a class="author_url" href="http://tantek.com/">tantek.com</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Micropub^1 is a @W3C Candidate Recommendation!aaronparecki.com/2016/08/23/2/m…
+(replaces AtomPub^2 &amp; MetaWeblog^3)... tantek.com/t4iw1</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/t/status/768209767806361600" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T15:14:15-07:00">
+            Tue, Aug 23, 2016 3:14pm -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/t/768209767806361600">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/f994dd581779dcb87b22d0cb9ad3f66c2813a4be2155ed8659a8ff8c12925266.png" width="48">
+                          <a class="p-name u-url" href="http://www.micropub.info/">Micropub Info</a>
+          <a class="author_url" href="http://www.micropub.info/">www.micropub.info</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Micropub^1 is a @W3C Candidate Recommendation! aaronparecki.com/2016/08/23/2 ...: Micropub^1 is a @W3... bit.ly/2c4yUrg</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/MicropubInfo/status/768235352477663232" class="u-url">
+                    <time class="dt-published" datetime="2016-08-23T16:55:55-07:00">
+            Tue, Aug 23, 2016 4:55pm -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/768235352477663232">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/e1ce7fd4e7f9bcb9e5f94064dc01eafe4083574cc421fb9edbe74af5d4f2d83e.jpeg" width="48">
+                          <a class="p-name u-url" href="http://frontendfocus.co">Front-End Daily</a>
+          <a class="author_url" href="http://frontendfocus.co">frontendfocus.co</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Micropub is Now a W3C Candidate Recommendation: aaronparecki.com/2016/08/23/2/m…</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/FrontEndDaily/status/768540381680197632" class="u-url">
+                    <time class="dt-published" datetime="2016-08-24T13:08:00-07:00">
+            Wed, Aug 24, 2016 1:08pm -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/768540381680197632">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/dc4e2e4b04e06208a0edb5cc5bf9efe0c6a08fededfbe753b710085f8f988c4a.jpeg" width="48">
+                          <a class="p-name u-url" href="https://twitter.com/pulprk">Paul</a>
+          <a class="author_url" href="https://twitter.com/pulprk">twitter.com/pulprk</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Micropub is Now a W3C Candidate Recommendation: aaronparecki.com/2016/08/23/2/m… twitter.com/FrontEndDaily/… via FrontEndDaily</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/pulprk/status/768541020082536449" class="u-url">
+                    <time class="dt-published" datetime="2016-08-24T13:10:32-07:00">
+            Wed, Aug 24, 2016 1:10pm -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/768541020082536449">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/b6af0ccd49a233b9fe0bbb035ae00a1331fab3f9970d455ce5a04acd7775ff14.jpeg" width="48">
+                          <a class="p-name u-url" href="http://o.wzm.me/creator/rivervanrain/">RiverVanRain</a>
+          <a class="author_url" href="http://o.wzm.me/creator/rivervanrain/">o.wzm.me/creator/rivervanrain</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">#Micropub is now a #W3C Candidate Recommendation aaronparecki.com/2016/08/23/2/m… via o.wzm.me/river/v/64351</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/RiverVanRain/status/770040471691419648" class="u-url">
+                    <time class="dt-published" datetime="2016-08-28T16:28:49-07:00">
+            Sun, Aug 28, 2016 4:28pm -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/770040471691419648">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+  
+    <li class="p-comment h-cite comment">
+      <div class="p-author h-card author">
+                  <img class="u-photo" src="https://s3-us-west-2.amazonaws.com/aaronparecki.com/pbs.twimg.com/f994dd581779dcb87b22d0cb9ad3f66c2813a4be2155ed8659a8ff8c12925266.png" width="48">
+                          <a class="p-name u-url" href="http://www.micropub.info/">Micropub Info</a>
+          <a class="author_url" href="http://www.micropub.info/">www.micropub.info</a>
+              </div>
+                                <!-- TODO: should this be p-summary if I've truncated it or if it came from the summary? -->
+          <div class="p-content comment-content">Comment #45: Comment #45. Anonymous wrote the following reply to aaronparecki.com/2016/08/23/2/m…... bit.ly/2bNNnm5</div>
+                    <div class="metaline">
+        <a href="https://twitter.com/MicropubInfo/status/771544834297298944" class="u-url">
+                    <time class="dt-published" datetime="2016-09-01T20:06:37-07:00">
+            Thu, Sep 1, 2016 8:06pm -07:00
+          </time>
+        </a>
+                  (<a href="https://brid-gy.appspot.com/post/twitter/aaronpk/771544834297298944">via brid-gy.appspot.com</a>)
+              </div>
+    </li>
+    </ul>
+  <div style="clear:both;"></div>
+  
+</div>
+  </li>
+  </ul>
+
+  <div class="additional-info">
+          Posted in
+              <a href="/articles" class="u-p3k-channel">/articles</a>
+                  <!-- TODO: show privacy/visibility here, and allow editing if logged in -->
+    <!-- TODO: allow editing tags and channels here -->
+  </div>
+
+</div>
+        </div>
+          </div>
+
+    <footer class="sticky-footer">
+              <div class="subfooter">
+          <div class="ui container h-card">
+  <div class="about">
+    <div class="image"><a href="/" class="u-url u-uid"><img src="/images/aaronpk-2016-256.jpg" class="u-photo"></a></div>
+    <div class="bio">
+      <div class="p-note">
+        <p>Hi, I'm <span class="p-name">Aaron<span style="display:none;"> Parecki</span></span>,  co-founder of
+<a class="p-org h-card" href="https://indieweb.org/">IndieWebCamp</a>.
+I maintain <a class="p-org h-card" href="https://oauth.net/">oauth.net</a>, <a href="https://www.oauth.com/">write about OAuth</a>, and
+am the editor of the W3C <a href="https://www.w3.org/TR/webmention/">Webmention</a> and <a href="https://www.w3.org/TR/micropub/">Micropub</a> specifications.</p>
+
+<p>I've been <a href="/gps/">tracking my location</a> since 2008,
+and write down everything I <a href="/ate">eat</a> and <a href="/drank">drink</a>.
+I've <a href="/presentations">spoken</a> at conferences around the world about
+<a href="/presentations?tag=indieweb">owning your data</a>,
+<a href="/presentations?tag=oauth">OAuth</a>,
+<a href="/presentations?tag=quantifiedself">quantified self</a>,
+and explained <a href="https://www.youtube.com/watch?v=FGVJ0eXTRpw">why R is a vowel</a>.</p> <time class="dt-bday" datetime="--12-28"></time>      </div>
+    </div>
+    <div class="right">
+      <div class="orgs">
+        <ul>
+            <li class="p-org h-card">
+              <img src="/images/indiewebcamp.png" alt="" class="u-photo">
+              <a href="https://indieweb.org/" class="u-url">
+                <span class="p-name">IndieWebCamp</span>
+              </a> 
+              <a class="p-role" href="https://indieweb.org/founders">Founder</a>
+            </li>
+            <li class="p-org h-card">
+              <img src="/images/w3c.png" alt="" class="u-photo">
+              <a href="https://www.w3.org/" class="u-url">
+                <span class="p-name">W3C</span>
+              </a> 
+              <a class="p-role" href="/w3c/">Editor</a>
+            </li>
+            <li>These are a few of <a href="https://aaronparecki.com/favorite-things/">my favorite things</a>.</li>
+          </ul>
+
+<link rel="pgpkey" href="/key.txt">
+<link rel="me" href="sms:+15035678642">      </div>
+      <div class="search">
+        <form action="/search" method="get">
+          <div class="ui fluid icon input">
+            <input type="text" name="q" placeholder="Search..." value="">
+            <i class="search icon"></i>
+          </div>      
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="channels">
+    <ul class="footer-links">
+              <li><a href="/all">All</a></li>
+              <li><a href="/articles">Articles</a></li>
+              <li><a href="/bookmarks">Bookmarks</a></li>
+              <li><a href="/notes">Notes</a></li>
+              <li><a href="/photos">Photos</a></li>
+              <li><a href="/sleep">Sleep</a></li>
+              <li><a href="/travel">Travel</a></li>
+            <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+    <div class="elsewhere">
+    <ul class="footer-links">
+              <li><a href="https://twitter.com/aaronpk" rel=""><img src="/icons/twitter.ico" width="16" height="16"></a></li>
+              <li><a href="https://facebook.com/aaronpk" rel=""><img src="/icons/facebook.ico" width="16" height="16"></a></li>
+              <li><a href="https://instagram.com/aaronpk" rel=""><img src="/icons/instagram.ico" width="16" height="16"></a></li>
+              <li><a href="http://flickr.com/aaronpk" rel=""><img src="/icons/flickr.ico" width="16" height="16"></a></li>
+              <li><a href="https://github.com/aaronpk" rel=""><img src="/icons/github.ico" width="16" height="16"></a></li>
+              <li><a href="https://youtube.com/TheAaronpk" rel=""><img src="/icons/link.ico" width="16" height="16"></a></li>
+              <li><a href="https://google.com/+aaronpk" rel=""><img src="/icons/googleplus.ico" width="16" height="16"></a></li>
+              <li><a href="http://foursquare.com/aaronpk" rel=""><img src="/icons/foursquare.ico" width="16" height="16"></a></li>
+              <li><a href="http://www.linkedin.com/in/aaronparecki" rel=""><img src="/icons/linkedin.ico" width="16" height="16"></a></li>
+              <li><a href="https://alpha.app.net/aaronpk" rel=""><img src="/icons/appdotnet.ico" width="16" height="16"></a></li>
+              <li><a href="http://plancast.com/aaronpk" rel=""><img src="/icons/plancast.ico" width="16" height="16"></a></li>
+              <li><a href="http://lanyrd.com/people/aaronpk" rel=""><img src="/icons/lanyrd.ico" width="16" height="16"></a></li>
+              <li><a href="http://aaronpk.eventbrite.com/" rel=""><img src="/icons/eventbrite.ico" width="16" height="16"></a></li>
+              <li><a href="http://www.slideshare.net/aaronpk" rel=""><img src="/icons/slideshare.ico" width="16" height="16"></a></li>
+              <li><a href="https://www.beeminder.com/aaronpk" rel=""><img src="/icons/beeminder.ico" width="16" height="16"></a></li>
+              <li><a href="http://www.last.fm/user/aaron_pk" rel=""><img src="/icons/lastfm.ico" width="16" height="16"></a></li>
+              <li><a href="https://keybase.io/aaronpk/" rel=""><img src="/icons/keybase.ico" width="16" height="16"></a></li>
+              <li><a href="https://gratipay.com/~aaronpk/" rel=""><img src="/icons/gratipay.ico" width="16" height="16"></a></li>
+              <li><a href="https://cash.me/$aaronpk" rel=""><img src="/icons/squarecash.ico" width="16" height="16"></a></li>
+              <li><a href="https://venmo.com/aaronpk" rel=""><img src="/icons/venmo.ico" width="16" height="16"></a></li>
+              <li><a href="https://paypal.me/apk" rel=""><img src="/icons/paypal.ico" width="16" height="16"></a></li>
+              <li><a href="http://www.colourlovers.com/lover/aaronpk" rel=""><img src="/icons/colourlovers.ico" width="16" height="16"></a></li>
+              <li><a href="mailto:aaron@parecki.com" rel=""><img src="/icons/email.png" width="16" height="16"></a></li>
+          </ul>
+  </div>
+</div>
+        </div>
+      
+      <div class="footer">
+        <a href="/login" class="hidden-login"></a>
+        <div>
+          <span>&copy; 1999-2016 by Aaron Parecki.</span>
+          <span>Powered by <a href="http://p3k.io/">p3k</a>.</span>
+          <span>This site supports <a href="http://webmention.net/">Webmention</a>.</span>
+        </div>
+        <div>
+          <span>Except where otherwise noted, text content on this site is licensed
+            under a <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">Creative Commons Attribution 3.0 License</a>.</span>
+        </div>
+      </div>
+    </footer>
+
+    <input type="hidden" id="permalink" value="https://aaronparecki.com/2016/08/23/2/micropub-cr">
+
+    <script src="/assets/script.js"></script>
+
+    <script src="/assets/admin.js"></script>
+
+        <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4617305-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+        
+  </body>
+</html>

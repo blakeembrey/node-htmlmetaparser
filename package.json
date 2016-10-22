@@ -1,0 +1,63 @@
+{
+  "name": "htmlmetaparser",
+  "version": "0.0.0",
+  "description": "Extract rich metadata from HTML",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "vendor/",
+    "typings.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "tslint \"src/**/*.ts\"",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "pretest": "npm run lint && npm run build",
+    "test": "jest",
+    "prepublish": "typings install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/node-htmlmetaparser.git"
+  },
+  "keywords": [
+    "metadata",
+    "scraper",
+    "rich",
+    "html",
+    "info",
+    "rdfa",
+    "open graph",
+    "oembed",
+    "microdata",
+    "json-ld"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/node-htmlmetaparser/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
+  "devDependencies": {
+    "filenamify": "^1.2.1",
+    "htmlparser2": "^3.9.2",
+    "jest": "^16.0.2",
+    "popsicle": "^8.2.0",
+    "thenify": "^3.2.1",
+    "tslint": "^3.10.2",
+    "tslint-config-standard": "^1.3.0",
+    "typescript": "^2.0.3",
+    "typings": "^1.3.2"
+  },
+  "dependencies": {
+    "setvalue": "^1.0.0"
+  }
+}

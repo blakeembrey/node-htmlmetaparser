@@ -1,0 +1,1258 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-c07ca57e8924150abac5f078c979cff71dc056c6015560c7bf45898e963137e4.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-2d1b79a5296eab9613c29bbac983651835f5ea62fb87eb9b860b7240dd28d934.css" media="all" rel="stylesheet" />
+    
+    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-4a18dc1c93cc7113ea22c7c6b62826f621b52a57f32caea97c682100ac10de36.css" media="all" rel="stylesheet" />
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>[misc] typescript: refactor constructor and ISO format hack by seansfkelley · Pull Request #3323 · moment/moment · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars0.githubusercontent.com/u/2101409?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="[misc] typescript: refactor constructor and ISO format hack by seansfkelley · Pull Request #3323 · moment/moment" name="twitter:title" /><meta content="This commit was adapted from 1ec036686e70ad0d837ed2443684d54bca13af01 in DefinitelyTyped.
+See DefinitelyTyped/DefinitelyTyped#8765 for context. The original
+body of the commit message follows.
+
+The..." name="twitter:description" />
+      <meta content="https://avatars0.githubusercontent.com/u/2101409?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="[misc] typescript: refactor constructor and ISO format hack by seansfkelley · Pull Request #3323 · moment/moment" property="og:title" /><meta content="https://github.com/moment/moment/pull/3323" property="og:url" /><meta content="This commit was adapted from 1ec036686e70ad0d837ed2443684d54bca13af01 in DefinitelyTyped.
+See DefinitelyTyped/DefinitelyTyped#8765 for context. The original
+body of the commit message follows.
+
+The..." property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+    <meta name="request-id" content="424BF412:0FDD:2FDDDC0:580ACAA6" data-pjax-transient>
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_pulls" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="424BF412:0FDD:2FDDDC0:580ACAA6" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/pull_requests/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="NTBjNTA3ODA0NzBhNWYxNzAxM2YyNGU4OTUzYjdhMGQyOTU5OWI4ODEyMTZhYWMxZjExMmZkNjM4MTFhZTJlZHx7InJlbW90ZV9hZGRyZXNzIjoiNjYuNzUuMjQ0LjE4IiwicmVxdWVzdF9pZCI6IjQyNEJGNDEyOjBGREQ6MkZERERDMDo1ODBBQ0FBNiIsInRpbWVzdGFtcCI6MTQ3NzEwMjI0NiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="9974ac243dd986c8fc86daa38f8052ba0deb72c6">
+    <meta content="f68925f21155a5ca2921a13f32ddfa2d985bb1cb" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="652dbe6bce423dc2278528a8b423ddbe">
+    
+
+        <style type="text/css" media="screen">
+    span.labelstyle-fef2c0, .linked-labelstyle-fef2c0 {  background-color: #fef2c0 !important;  color: #333026 !important;}.labelstyle-fef2c0.selected {  background-color: #fef2c0 !important;  color: #333026 !important;}.label-select-menu .labelstyle-fef2c0.selected {  background:rgba(254, 242, 192, 0.12) !important;  color: #989173 !important;}
+
+span.labelstyle-e11d21, .linked-labelstyle-e11d21 {  background-color: #e11d21 !important;  color: #fff !important;}.labelstyle-e11d21.selected {  background-color: #e11d21 !important;  color: #fff !important;}.label-select-menu .labelstyle-e11d21.selected {  background:rgba(225, 29, 33, 0.12) !important;  color: #991316 !important;}
+
+span.labelstyle-009800, .linked-labelstyle-009800 {  background-color: #009800 !important;  color: #fff !important;}.labelstyle-009800.selected {  background-color: #009800 !important;  color: #fff !important;}.label-select-menu .labelstyle-009800.selected {  background:rgba(0, 152, 0, 0.12) !important;  color: #009900 !important;}
+
+span.labelstyle-444444, .linked-labelstyle-444444 {  background-color: #444444 !important;  color: #fff !important;}.labelstyle-444444.selected {  background-color: #444444 !important;  color: #fff !important;}.label-select-menu .labelstyle-444444.selected {  background:rgba(68, 68, 68, 0.12) !important;  color: #999999 !important;}
+
+span.labelstyle-f7c6c7, .linked-labelstyle-f7c6c7 {  background-color: #f7c6c7 !important;  color: #332829 !important;}.labelstyle-f7c6c7.selected {  background-color: #f7c6c7 !important;  color: #332829 !important;}.label-select-menu .labelstyle-f7c6c7.selected {  background:rgba(247, 198, 199, 0.12) !important;  color: #997a7b !important;}
+
+span.labelstyle-fad8c7, .linked-labelstyle-fad8c7 {  background-color: #fad8c7 !important;  color: #332c28 !important;}.labelstyle-fad8c7.selected {  background-color: #fad8c7 !important;  color: #332c28 !important;}.label-select-menu .labelstyle-fad8c7.selected {  background:rgba(250, 216, 199, 0.12) !important;  color: #988479 !important;}
+
+span.labelstyle-bfe5bf, .linked-labelstyle-bfe5bf {  background-color: #bfe5bf !important;  color: #2a332a !important;}.labelstyle-bfe5bf.selected {  background-color: #bfe5bf !important;  color: #2a332a !important;}.label-select-menu .labelstyle-bfe5bf.selected {  background:rgba(191, 229, 191, 0.12) !important;  color: #7f997f !important;}
+
+span.labelstyle-d4c5f9, .linked-labelstyle-d4c5f9 {  background-color: #d4c5f9 !important;  color: #2b2833 !important;}.labelstyle-d4c5f9.selected {  background-color: #d4c5f9 !important;  color: #2b2833 !important;}.label-select-menu .labelstyle-d4c5f9.selected {  background:rgba(212, 197, 249, 0.12) !important;  color: #827999 !important;}
+
+span.labelstyle-eb6420, .linked-labelstyle-eb6420 {  background-color: #eb6420 !important;  color: #fff !important;}.labelstyle-eb6420.selected {  background-color: #eb6420 !important;  color: #fff !important;}.label-select-menu .labelstyle-eb6420.selected {  background:rgba(235, 100, 32, 0.12) !important;  color: #994114 !important;}
+
+span.labelstyle-fbca04, .linked-labelstyle-fbca04 {  background-color: #fbca04 !important;  color: #332900 !important;}.labelstyle-fbca04.selected {  background-color: #fbca04 !important;  color: #332900 !important;}.label-select-menu .labelstyle-fbca04.selected {  background:rgba(251, 202, 4, 0.12) !important;  color: #997b02 !important;}
+
+span.labelstyle-bfd4f2, .linked-labelstyle-bfd4f2 {  background-color: #bfd4f2 !important;  color: #282c33 !important;}.labelstyle-bfd4f2.selected {  background-color: #bfd4f2 !important;  color: #282c33 !important;}.label-select-menu .labelstyle-bfd4f2.selected {  background:rgba(191, 212, 242, 0.12) !important;  color: #788699 !important;}
+
+span.labelstyle-006b75, .linked-labelstyle-006b75 {  background-color: #006b75 !important;  color: #fff !important;}.labelstyle-006b75.selected {  background-color: #006b75 !important;  color: #fff !important;}.label-select-menu .labelstyle-006b75.selected {  background:rgba(0, 107, 117, 0.12) !important;  color: #008b99 !important;}
+
+span.labelstyle-5319e7, .linked-labelstyle-5319e7 {  background-color: #5319e7 !important;  color: #fff !important;}.labelstyle-5319e7.selected {  background-color: #5319e7 !important;  color: #fff !important;}.label-select-menu .labelstyle-5319e7.selected {  background:rgba(83, 25, 231, 0.12) !important;  color: #361099 !important;}
+  </style>
+
+  <meta name="description" content="moment - Parse, validate, manipulate, and display dates in javascript.">
+  <meta name="go-import" content="github.com/moment/moment git https://github.com/moment/moment.git">
+
+  <meta content="4129662" name="octolytics-dimension-user_id" /><meta content="moment" name="octolytics-dimension-user_login" /><meta content="1424470" name="octolytics-dimension-repository_id" /><meta content="moment/moment" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="1424470" name="octolytics-dimension-repository_network_root_id" /><meta content="moment/moment" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/moment/moment/commits/97b57bd1da0ef01b24570705eb3c28d74219f974.atom" rel="alternate" title="Recent Commits to moment:97b57bd1da0ef01b24570705eb3c28d74219f974" type="application/atom+xml">
+
+
+  </head>
+
+
+  <body class="logged-out  env-production  vis-public">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+          <header class="site-header js-details-container" role="banner">
+  <div class="container-responsive">
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+
+    <button class="btn-link float-right site-header-toggle js-details-target" type="button" aria-label="Toggle navigation">
+      <svg aria-hidden="true" class="octicon octicon-three-bars" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"></path></svg>
+    </button>
+
+    <div class="site-header-menu">
+      <nav class="site-header-nav site-header-nav-main">
+        <a href="/personal" class="js-selected-navigation-item nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+          Personal
+</a>        <a href="/open-source" class="js-selected-navigation-item nav-item nav-item-opensource" data-ga-click="Header, click, Nav menu - item:opensource" data-selected-links="/open-source /open-source">
+          Open source
+</a>        <a href="/business" class="js-selected-navigation-item nav-item nav-item-business" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/partners /business/features /business/customers /business">
+          Business
+</a>        <a href="/explore" class="js-selected-navigation-item nav-item nav-item-explore" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship /explore">
+          Explore
+</a>      </nav>
+
+      <div class="site-header-actions">
+            <a class="btn btn-primary site-header-actions-btn" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+          <a class="btn site-header-actions-btn mr-2" href="/login?return_to=%2Fmoment%2Fmoment%2Fpull%2F3323" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+      </div>
+
+        <nav class="site-header-nav site-header-nav-secondary">
+          <a class="nav-item" href="/pricing">Pricing</a>
+          <a class="nav-item" href="/blog">Blog</a>
+          <a class="nav-item" href="https://help.github.com">Support</a>
+          <a class="nav-item header-search-link" href="https://github.com/search">Search GitHub</a>
+              <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/moment/moment/search" class="js-site-search-form" data-scoped-search-url="/moment/moment/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+        </nav>
+    </div>
+  </div>
+</header>
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fmoment%2Fmoment"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/moment/moment/watchers"
+     aria-label="854 users are watching this repository">
+    854
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fmoment%2Fmoment"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/moment/moment/stargazers"
+      aria-label="28324 users starred this repository">
+      28,324
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fmoment%2Fmoment"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+        Fork
+      </a>
+
+    <a href="/moment/moment/network" class="social-count"
+       aria-label="3994 users are forked this repository">
+      3,994
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a href="/moment" class="url fn" rel="author">moment</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/moment/moment" data-pjax="#js-repo-pjax-container">moment</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/moment/moment" class="js-selected-navigation-item reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /moment/moment" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/moment/moment/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /moment/moment/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">158</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/moment/moment/pulls" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /moment/moment/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">35</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+  <a href="/moment/moment/projects" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /moment/moment/projects">
+    <svg class="octicon" aria-hidden="true" version="1.1" width="15" height="16" viewBox="0 0 15 16">
+      <path d="M1 15h13V1H1v14zM15 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1zm-4.41 11h1.82c.59 0 .59-.41.59-1V3c0-.59 0-1-.59-1h-1.82C10 2 10 2.41 10 3v8c0 .59 0 1 .59 1zm-4-2h1.82C9 10 9 9.59 9 9V3c0-.59 0-1-.59-1H6.59C6 2 6 2.41 6 3v6c0 .59 0 1 .59 1zM2 13V3c0-.59 0-1 .59-1h1.82C5 2 5 2.41 5 3v10c0 .59 0 1-.59 1H2.59C2 14 2 13.59 2 13z"></path>
+    </svg>
+    Projects
+    <span class="counter">0</span>
+</a>
+
+
+  <a href="/moment/moment/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /moment/moment/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"></path></svg>
+    Pulse
+</a>
+  <a href="/moment/moment/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /moment/moment/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"></path></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<!-- base sha1: &quot;9622b266f485f559f14a7bad8965d9886e321519&quot; -->
+<!-- head sha1: &quot;97b57bd1da0ef01b24570705eb3c28d74219f974&quot; -->
+
+
+<div class="issues-listing" data-pjax>
+    <div class="clearfix js-issues-results">
+    
+  <div
+    id="partial-discussion-header"
+    class="gh-header js-details-container js-socket-channel js-updatable-content pull request"
+    data-channel="tenant:1:pull_request:78594281"
+    data-url="/moment/moment/pull/3323/show_partial?partial=pull_requests%2Ftitle">
+
+  <div class="gh-header-show ">
+      <div class="gh-header-actions">
+      </div>
+
+    <h1 class="gh-header-title">
+      <span class="js-issue-title">
+        [misc] typescript: refactor constructor and ISO format hack
+      </span>
+      <span class="gh-header-number">#3323</span>
+    </h1>
+  </div>
+
+
+  <div class="flex-table gh-header-meta">
+    <div class="flex-table-item">
+        <div class="state state-closed">
+          <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+          Closed
+        </div>
+    </div>
+    <div class="flex-table-item flex-table-item-primary">
+          <a href="/seansfkelley" class="author pull-header-username css-truncate css-truncate-target expandable">
+    seansfkelley
+  </a>
+   wants to merge 1 commit into
+
+
+
+  <span class="commit-ref current-branch css-truncate user-select-contain expandable base-ref" title="moment/moment:develop"><span class="css-truncate-target user">moment</span>:<span class="css-truncate-target">develop</span></span>
+
+  <div class="commit-ref-dropdown">
+    <div class="select-menu js-menu-container js-select-menu commitish-suggester js-load-contents" data-contents-url="/moment/moment/pull/3323/show_partial?partial=pull_requests%2Fdescription_branches_dropdown">
+      <button class="btn btn-sm select-menu-button js-menu-target branch" type="button" aria-label="Choose a base branch" aria-haspopup="true">
+        <i>base:</i>
+        <span class="js-select-button css-truncate css-truncate-target" title="base: develop">develop</span>
+      </button>
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container"
+        aria-hidden="true">
+        <div class="select-menu-modal">
+          <div class="js-select-menu-deferred-content"></div>
+          <div class="select-menu-loading-overlay anim-pulse">
+            <svg aria-hidden="true" class="octicon octicon-octoface" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+from
+
+<span class="commit-ref current-branch css-truncate user-select-contain expandable head-ref" title="seansfkelley/moment:union-types-for-typings"><span class="css-truncate-target user">seansfkelley</span>:<span class="css-truncate-target">union-types-for-typings</span></span>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+      <include-fragment src="/moment/moment/pull/3323/show_partial?partial=pull_requests%2Ftabs">
+    
+<div class="tabnav tabnav-pr">
+
+  <nav class="tabnav-tabs">
+    <a href="/moment/moment/pull/3323" class="tabnav-tab selected js-pjax-history-navigate">
+      <svg aria-hidden="true" class="octicon octicon-comment-discussion" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15 1H6c-.55 0-1 .45-1 1v2H1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h1v3l3-3h4c.55 0 1-.45 1-1V9h1l3 3V9h1c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zM9 11H4.5L3 12.5V11H1V5h4v3c0 .55.45 1 1 1h3v2zm6-3h-2v1.5L11.5 8H6V2h9v6z"></path></svg>
+      Conversation
+
+      <span id="conversation_tab_counter" class="counter">
+        6
+      </span>
+    </a>
+
+    <a href="/moment/moment/pull/3323/commits" class="tabnav-tab  js-pjax-history-navigate">
+      <svg aria-hidden="true" class="octicon octicon-git-commit" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"></path></svg>
+      Commits
+
+      <span id="commits_tab_counter" class="counter">
+        1
+      </span>
+    </a>
+
+      <link rel="pjax-prefetch" href="/moment/moment/pull/3323/files">
+    <a href="/moment/moment/pull/3323/files" class="tabnav-tab  js-pjax-history-navigate">
+      <svg aria-hidden="true" class="octicon octicon-diff" height="16" version="1.1" viewBox="0 0 13 16" width="13"><path d="M6 7h2v1H6v2H5V8H3V7h2V5h1v2zm-3 6h5v-1H3v1zM7.5 2L11 5.5V15c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h6.5zM10 6L7 3H1v12h9V6zM8.5 0H3v1h5l4 4v8h1V4.5L8.5 0z"></path></svg>
+      Files changed
+
+    </a>
+  </nav>
+</div>
+
+  </include-fragment>
+
+
+    <div id="discussion_bucket" class="clearfix pull-request-tab-content is-visible">
+      <div class="discussion-sidebar js-sticky">
+  <div id="partial-discussion-sidebar"
+  class="js-socket-channel js-updatable-content"
+  data-channel="tenant:1:pull_request:78594281"
+  data-url="/moment/moment/issues/3323/show_partial?partial=issues%2Fsidebar">
+
+  <div class="discussion-sidebar-item js-discussion-sidebar-item">
+  
+  <h3 class="discussion-sidebar-heading">
+    Projects
+  </h3>
+
+
+  <span class="css-truncate">
+    None yet
+</span>
+
+</div>
+
+  <div class="discussion-sidebar-item sidebar-labels js-discussion-sidebar-item">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/moment/moment/issues/3323?partial=issues%2Fsidebar%2Fshow%2Flabels" class="js-issue-sidebar-form" data-form-nonce="f68925f21155a5ca2921a13f32ddfa2d985bb1cb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="bA3BfIIT49e0xsbs4+dxsBfXFr1iOiQDpMOXSnTY22WrRg8SOeo/DJos0Rmmnhv3MmL9QjWnqJMbFqRrD/ZYXg==" /></div>
+      
+  <h3 class="discussion-sidebar-heading">
+    Labels
+  </h3>
+
+
+    <div class="labels css-truncate">
+      <a href="/moment/moment/labels/TypeScript" class="label css-truncate-target linked-labelstyle-bfd4f2" title="TypeScript">TypeScript</a>
+
+</div>
+
+</form></div>
+
+  <div class="discussion-sidebar-item sidebar-milestone js-discussion-sidebar-item">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/moment/moment/issues/3323/set_milestone?partial=issues%2Fsidebar%2Fshow%2Fmilestone" class="js-issue-sidebar-form" data-form-nonce="f68925f21155a5ca2921a13f32ddfa2d985bb1cb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="J7zLRImsVAC0/WUf69p/0tb++3aBOB9EQnZz41hj3W9jJXI9e86jk62nob1L8r8N+QyV+sfSbpVsy1zrXsYXKw==" /></div>
+    
+  <h3 class="discussion-sidebar-heading">
+    Milestone
+  </h3>
+
+
+      <span class="progress-bar progress-bar-small"><span class="progress" style="width: 100.0%">&nbsp;</span></span>
+  <a title="2.15.0" href="/moment/moment/milestone/33" class="milestone-name css-truncate">
+    <strong class="css-truncate-target">2.15.0</strong>
+  </a>
+
+</form></div>
+
+  <div class="discussion-sidebar-item sidebar-assignee js-discussion-sidebar-item">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/moment/moment/issues/3323?partial=issues%2Fsidebar%2Fshow%2Fassignees" class="js-issue-sidebar-form" data-form-nonce="f68925f21155a5ca2921a13f32ddfa2d985bb1cb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="N/3lqWaEmRLSS+HVosTVyooPAqHSQ/Uxz4BEaXJQIAcQZadQGjyiaYJp4+JTn93eokEjTGhnEUDhip3+OKNQMA==" /></div>
+    
+  <h3 class="discussion-sidebar-heading">
+    Assignees
+  </h3>
+
+
+    <span class="css-truncate">
+    No one assigned
+</span>
+
+</form></div>
+
+  <div id="partial-users-participants" class="discussion-sidebar-item">
+  <div class="participation">
+
+    <h3 class="discussion-sidebar-heading">
+      5 participants
+    </h3>
+    <div class="participation-avatars">
+        <a class="participant-avatar tooltipped tooltipped-n" aria-label="seansfkelley" href="/seansfkelley"><img alt="@seansfkelley" class="avatar" height="26" src="https://avatars1.githubusercontent.com/u/2101409?v=3&amp;s=52" width="26" /> </a>
+        <a class="participant-avatar tooltipped tooltipped-n" aria-label="maggiepint" href="/maggiepint"><img alt="@maggiepint" class="avatar" height="26" src="https://avatars1.githubusercontent.com/u/6054610?v=3&amp;s=52" width="26" /> </a>
+        <a class="participant-avatar tooltipped tooltipped-n" aria-label="blakeembrey" href="/blakeembrey"><img alt="@blakeembrey" class="avatar" height="26" src="https://avatars1.githubusercontent.com/u/1088987?v=3&amp;s=52" width="26" /> </a>
+        <a class="participant-avatar tooltipped tooltipped-n" aria-label="ichernev" href="/ichernev"><img alt="@ichernev" class="avatar" height="26" src="https://avatars1.githubusercontent.com/u/757060?v=3&amp;s=52" width="26" /> </a>
+        <a class="participant-avatar tooltipped tooltipped-n" aria-label="mj1856" href="/mj1856"><img alt="@mj1856" class="avatar" height="26" src="https://avatars2.githubusercontent.com/u/1396388?v=3&amp;s=52" width="26" /> </a>
+    </div>
+  </div>
+</div>
+
+
+  
+  
+
+</div>
+
+
+</div>
+
+<div class="discussion-timeline pull-discussion-timeline js-pull-discussion-timeline js-quote-selection-container js-review-state-classes  ">
+  <div class="js-discussion js-socket-channel" data-channel="tenant:1:marked-as-read:pull-request:78594281">
+    
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/seansfkelley"><img alt="@seansfkelley" class="timeline-comment-avatar" height="44" src="https://avatars2.githubusercontent.com/u/2101409?v=3&amp;s=88" width="44" /></a>
+    
+
+<div id="issue-167225925"
+     class="comment previewable-edit timeline-comment js-comment js-task-list-container
+                    
+                      "
+     data-body-version="baa8fdd46fa6f86438b34c44c39dad43">
+
+  <div class="timeline-comment-header ">
+
+    <div class="timeline-comment-actions">
+    </div>
+
+
+
+  <div class="timeline-comment-header-text">
+
+    <strong>
+      <a href="/seansfkelley" class="author">seansfkelley</a> 
+    </strong>
+
+    commented
+
+      <a href="#issue-167225925" class="timestamp">
+        <relative-time datetime="2016-07-24T09:48:23Z">Jul 24, 2016</relative-time>
+      </a>
+
+      &#8226;
+      <span class="timestamp timestamp-edited tooltipped tooltipped-n"
+            aria-label="seansfkelley edited this pull request 3 months ago">
+        edited
+      </span>
+  </div>
+</div>
+
+
+  <div class="edit-comment-hide">
+    <div class="comment-body markdown-body markdown-format js-comment-body">
+        <p>This commit was adapted from 1ec036686e70ad0d837ed2443684d54bca13af01 in DefinitelyTyped.<br>
+See <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8765" class="issue-link js-issue-link" data-url="https://github.com/DefinitelyTyped/DefinitelyTyped/issues/8765" data-id="144405423" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">DefinitelyTyped/DefinitelyTyped#8765</a> for context. The original<br>
+body of the commit message follows.</p>
+
+<p>These changes do two things.</p>
+
+<ol>
+<li><p>Replace very lax typings like <code>any[]</code> with stricter, more-correct versions. In particular,<br>
+the <code>ISO_8601</code> constant, while <em>technically</em> a void function, is actually an opaque sentinel<br>
+that a consumer should not know anything about it. The function type was replaced with a<br>
+sentinel type using the principle of "brands" that can be seen in the Typescript compiler:<br>
+<a href="https://github.com/Microsoft/TypeScript/blob/413d9a639f933df7539070b236c1677de8302a93/src/compiler/types.ts#L9">https://github.com/Microsoft/TypeScript/blob/413d9a639f933df7539070b236c1677de8302a93/src/compiler/types.ts#L9</a></p></li>
+<li><p>Replace the many overloads of the parsing methods with a smaller representative set that<br>
+uses union types instead. Aside from succinctness, this allows callers to provide a union<br>
+type as the argument, as long as it matches, which was not possible before (Typescript does<br>
+not explode the union type to see if overloads cover all the possibilities).</p></li>
+</ol>
+    </div>
+  </div>
+
+
+    
+
+<div class="comment-reactions  js-reactions-container "
+
+    >
+</div>
+
+</div>
+
+  </div>
+  
+<div class="discussion-item discussion-commits" id="commits-pushed-97b57bd">
+  <div class="discussion-item-body">
+    <table class="timeline-commits">
+        
+<tr class="commit js-details-container js-socket-channel js-updatable-content" data-channel="tenant:1:repo:1424470:commit:97b57bd1da0ef01b24570705eb3c28d74219f974" data-url="/moment/moment/pull/3323/commit/97b57bd1da0ef01b24570705eb3c28d74219f974/show_partial?partial=commit%2Fpull_condensed">
+  <td class="commit-icon">
+    <svg aria-hidden="true" class="octicon octicon-git-commit" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"></path></svg>
+  </td>
+
+  <td class="commit-gravatar">
+      <a href="/seansfkelley">
+    <img alt="@seansfkelley" class="avatar avatar-small" height="16" src="https://avatars3.githubusercontent.com/u/2101409?v=3&amp;s=32" width="16" />
+  </a>
+
+  </td>
+
+  <td class="commit-author">
+    <strong><a href="/seansfkelley" class="author" rel="contributor">seansfkelley</a></strong>
+  </td>
+
+  <td class="commit-message">
+    <code><a href="/moment/moment/pull/3323/commits/97b57bd1da0ef01b24570705eb3c28d74219f974" class="message" data-pjax="true" title="Make moment&#39;s typings for parsing stricter and also allow them to accept union types.
+
+This commit was adapted from 1ec036686e70ad0d837ed2443684d54bca13af01 in DefinitelyTyped.
+See https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8765 for context. The original
+body of the commit message follows.
+
+These changes do two things.
+
+1. Replace very lax typings like `any[]` with stricter, more-correct versions. In particular,
+the ISO_8601 constant, while /technically/ a void function, is actually an opaque sentinel
+that a consumer should not know anything about it. The function type was replaced with a
+sentinel type using the principle of &quot;brands&quot; that can be seen in the Typescript compiler:
+https://github.com/Microsoft/TypeScript/blob/413d9a639f933df7539070b236c1677de8302a93/src/compiler/types.ts#L9
+
+2. Replace the many overloads of the parsing methods with a smaller representative set that
+uses union types instead. Aside from succinctness, this allows callers to provide a union
+type as the argument, as long as it matches, which was not possible before (Typescript does
+not explode the union type to see if overloads cover all the possibilities).">Make moment's typings for parsing stricter and also allow them to acc…</a></code>
+
+      <span class="hidden-text-expander inline">
+        <button type="button" class="ellipsis-expander js-details-target">&hellip;</button>
+      </span>
+      <div class="commit-desc"><pre>…ept union types.
+
+This commit was adapted from 1ec036686e70ad0d837ed2443684d54bca13af01 in DefinitelyTyped.
+See <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8765" class="issue-link js-issue-link" data-url="https://github.com/DefinitelyTyped/DefinitelyTyped/issues/8765" data-id="144405423" data-error-text="Failed to load issue title" data-permission-text="Issue title is private">DefinitelyTyped/DefinitelyTyped#8765</a> for context. The original
+body of the commit message follows.
+
+These changes do two things.
+
+1. Replace very lax typings like `any[]` with stricter, more-correct versions. In particular,
+the ISO_8601 constant, while /technically/ a void function, is actually an opaque sentinel
+that a consumer should not know anything about it. The function type was replaced with a
+sentinel type using the principle of "brands" that can be seen in the Typescript compiler:
+<a href="https://github.com/Microsoft/TypeScript/blob/413d9a639f933df7539070b236c1677de8302a93/src/compiler/types.ts#L9">https://github.com/Microsoft/TypeScript/blob/413d9a639f933df7539070b236c1677de8302a93/src/compiler/types.ts#L9</a>
+
+2. Replace the many overloads of the parsing methods with a smaller representative set that
+uses union types instead. Aside from succinctness, this allows callers to provide a union
+type as the argument, as long as it matches, which was not possible before (Typescript does
+not explode the union type to see if overloads cover all the possibilities).</pre></div>
+
+  </td>
+
+  <td class="commit-sig-status">
+    
+
+  </td>
+
+  <td class="commit-ci-status">
+      
+
+    <div class="commit-build-statuses">
+        <a class="text-green tooltipped tooltipped-w"
+           aria-label="Success: The Travis CI build passed"
+           href="https://travis-ci.org/moment/moment/builds/146968321">
+          <svg aria-hidden="true" class="octicon octicon-check" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"></path></svg>
+        </a>
+    </div>
+
+  </td>
+
+  <td class="commit-meta">
+    <code><a href="/moment/moment/pull/3323/commits/97b57bd1da0ef01b24570705eb3c28d74219f974" class="commit-id">97b57bd</a></code>
+  </td>
+</tr>
+
+    </table>
+  </div>
+</div>
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/maggiepint"><img alt="@maggiepint" class="timeline-comment-avatar" height="44" src="https://avatars2.githubusercontent.com/u/6054610?v=3&amp;s=88" width="44" /></a>
+    
+
+<div id="issuecomment-236468508"
+     class="comment previewable-edit timeline-comment js-comment js-task-list-container
+                    
+                      "
+     data-body-version="1b8a669d1cf851b353b9a5b9a646aae4">
+
+  <div class="timeline-comment-header ">
+
+    <div class="timeline-comment-actions">
+    </div>
+
+    <span class="timeline-comment-label">Moment.js member</span>
+
+
+  <div class="timeline-comment-header-text">
+
+    <strong>
+      <a href="/maggiepint" class="author">maggiepint</a> 
+    </strong>
+
+    commented
+
+      <a href="#issuecomment-236468508" class="timestamp">
+        <relative-time datetime="2016-08-01T00:59:27Z">Aug 1, 2016</relative-time>
+      </a>
+
+  </div>
+</div>
+
+
+  <div class="edit-comment-hide">
+    <div class="comment-body markdown-body markdown-format js-comment-body">
+        <p>Given that this deals with the base factory functions, I want this looked at by the typings team before we move forward with it.  <a href="https://github.com/blakeembrey" class="user-mention">@blakeembrey</a> can you code review this please?</p>
+    </div>
+  </div>
+
+
+    
+
+<div class="comment-reactions has-reactions js-reactions-container "
+
+    >
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/moment/moment/reactions/update" class="js-pick-reaction" data-form-nonce="f68925f21155a5ca2921a13f32ddfa2d985bb1cb" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="b/x4d5pUKYTYmmQw3tPbIlMeENaVYrgD+kKwbRBMDsLmpG32g4wpj4qgUfgU9Qj0nAiKF+D/csjK8Cn0dxFbZA==" /></div>
+      <input type="hidden" name="reaction[subject_id]" value="236468508">
+      <input type="hidden" name="reaction[subject_type]" value="IssueComment">
+      <div class="comment-reactions-options">
+          <button disabled
+                  class="btn-link reaction-summary-item tooltipped tooltipped-se tooltipped-multiline "
+                  name="reaction[content]"
+                  type="submit"
+                  value="heart react"
+                  aria-label="blakeembrey reacted with heart emoji">
+            <g-emoji alias="heart" class="emoji mr-1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2764.png" ios-version="6.0">❤️</g-emoji>
+            1
+          </button>
+      </div>
+</form></div>
+
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/blakeembrey"><img alt="@blakeembrey" class="timeline-comment-avatar" height="44" src="https://avatars2.githubusercontent.com/u/1088987?v=3&amp;s=88" width="44" /></a>
+    
+
+<div id="issuecomment-236551575"
+     class="comment previewable-edit timeline-comment js-comment js-task-list-container
+                    
+                      "
+     data-body-version="7d478ccb37ece397705c6cf13b4d7d8c">
+
+  <div class="timeline-comment-header ">
+
+    <div class="timeline-comment-actions">
+    </div>
+
+
+
+  <div class="timeline-comment-header-text">
+
+    <strong>
+      <a href="/blakeembrey" class="author">blakeembrey</a> 
+    </strong>
+
+    commented
+
+      <a href="#issuecomment-236551575" class="timestamp">
+        <relative-time datetime="2016-08-01T11:02:27Z">Aug 1, 2016</relative-time>
+      </a>
+
+  </div>
+</div>
+
+
+  <div class="edit-comment-hide">
+    <div class="comment-body markdown-body markdown-format js-comment-body">
+        <p>Looks like a good change <g-emoji alias="+1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" ios-version="6.0">👍</g-emoji> </p>
+
+<p>The overloads are nicely consolidated and using a uniquely branded type looks like a nice trick to avoid accidental use of other function types there.</p>
+    </div>
+  </div>
+
+
+    
+
+<div class="comment-reactions  js-reactions-container "
+
+    >
+</div>
+
+</div>
+
+  </div>
+  
+
+
+      
+
+
+  <div class="discussion-item discussion-item-labeled">
+    <div class="discussion-item-header" id="event-741679220">
+
+      <span class="discussion-item-icon">
+        <svg aria-hidden="true" class="octicon octicon-tag" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg>
+      </span>
+      <img alt="@maggiepint" class="avatar" height="16" src="https://avatars3.githubusercontent.com/u/6054610?v=3&amp;s=32" width="16" />
+      <a href="/maggiepint" class="author">maggiepint</a>
+      
+      added the <span class="label-color" style="background-color: #009800;"><a href="/moment/moment/labels/Pending%20Next%20Release" style="color: #fff">Pending Next Release</a></span> label <a href="#event-741679220" class="timestamp"><relative-time class="timestamp" datetime="2016-08-01T23:06:40Z">Aug 1, 2016</relative-time></a>
+    </div>
+  </div>
+
+
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/maggiepint"><img alt="@maggiepint" class="timeline-comment-avatar" height="44" src="https://avatars2.githubusercontent.com/u/6054610?v=3&amp;s=88" width="44" /></a>
+    
+
+<div id="issuecomment-236734908"
+     class="comment previewable-edit timeline-comment js-comment js-task-list-container
+                    
+                      "
+     data-body-version="48528946c9aabd84626f5981f84725ae">
+
+  <div class="timeline-comment-header ">
+
+    <div class="timeline-comment-actions">
+    </div>
+
+    <span class="timeline-comment-label">Moment.js member</span>
+
+
+  <div class="timeline-comment-header-text">
+
+    <strong>
+      <a href="/maggiepint" class="author">maggiepint</a> 
+    </strong>
+
+    commented
+
+      <a href="#issuecomment-236734908" class="timestamp">
+        <relative-time datetime="2016-08-01T23:08:34Z">Aug 1, 2016</relative-time>
+      </a>
+
+      &#8226;
+      <span class="timestamp timestamp-edited tooltipped tooltipped-n"
+            aria-label="maggiepint edited this comment 3 months ago">
+        edited
+      </span>
+  </div>
+</div>
+
+
+  <div class="edit-comment-hide">
+    <div class="comment-body markdown-body markdown-format js-comment-body">
+        <p><img class="emoji" title=":shipit:" alt=":shipit:" src="https://assets-cdn.github.com/images/icons/emoji/shipit.png" height="20" width="20" align="absmiddle"> </p>
+    </div>
+  </div>
+
+
+    
+
+<div class="comment-reactions  js-reactions-container "
+
+    >
+</div>
+
+</div>
+
+  </div>
+  
+      
+
+
+  <div class="discussion-item discussion-item-milestoned">
+    <div class="discussion-item-header" id="event-746186078">
+
+      <span class="discussion-item-icon">
+        <svg aria-hidden="true" class="octicon octicon-milestone" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M8 2H6V0h2v2zm4 5H2c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h10l2 2-2 2zM8 4H6v2h2V4zM6 16h2V8H6v8z"></path></svg>
+      </span>
+      <img alt="@mj1856" class="avatar" height="16" src="https://avatars0.githubusercontent.com/u/1396388?v=3&amp;s=32" width="16" />
+      <a href="/mj1856" class="author">mj1856</a>
+      
+       modified the milestone: <a href="/moment/moment/milestone/33" class="discussion-item-entity" title="by mj1856 at 2016-08-05 04:28:53">2.15.0</a>  <a href="#event-746186078" class="timestamp"><relative-time class="timestamp" datetime="2016-08-05T04:28:53Z">Aug 5, 2016</relative-time></a>
+    </div>
+  </div>
+
+
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/ichernev"><img alt="@ichernev" class="timeline-comment-avatar" height="44" src="https://avatars2.githubusercontent.com/u/757060?v=3&amp;s=88" width="44" /></a>
+    
+
+<div id="issuecomment-239360564"
+     class="comment previewable-edit timeline-comment js-comment js-task-list-container
+                    
+                      "
+     data-body-version="2f553866770453ff71599579d22b8e71">
+
+  <div class="timeline-comment-header ">
+
+    <div class="timeline-comment-actions">
+    </div>
+
+
+
+  <div class="timeline-comment-header-text">
+
+    <strong>
+      <a href="/ichernev" class="author">ichernev</a> 
+    </strong>
+
+    commented
+
+      <a href="#issuecomment-239360564" class="timestamp">
+        <relative-time datetime="2016-08-12T04:51:29Z">Aug 12, 2016</relative-time>
+      </a>
+
+  </div>
+</div>
+
+
+  <div class="edit-comment-hide">
+    <div class="comment-body markdown-body markdown-format js-comment-body">
+        <p>So the <code>shipit</code> icon is a hamster with a hat?</p>
+    </div>
+  </div>
+
+
+    
+
+<div class="comment-reactions  js-reactions-container "
+
+    >
+</div>
+
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/mj1856"><img alt="@mj1856" class="timeline-comment-avatar" height="44" src="https://avatars1.githubusercontent.com/u/1396388?v=3&amp;s=88" width="44" /></a>
+    
+
+<div id="issuecomment-239367384"
+     class="comment previewable-edit timeline-comment js-comment js-task-list-container
+                    
+                      "
+     data-body-version="a41251ccd8e5d367201bdc4c584487ae">
+
+  <div class="timeline-comment-header ">
+
+    <div class="timeline-comment-actions">
+    </div>
+
+    <span class="timeline-comment-label">Moment.js member</span>
+
+
+  <div class="timeline-comment-header-text">
+
+    <strong>
+      <a href="/mj1856" class="author">mj1856</a> 
+    </strong>
+
+    commented
+
+      <a href="#issuecomment-239367384" class="timestamp">
+        <relative-time datetime="2016-08-12T05:59:49Z">Aug 12, 2016</relative-time>
+      </a>
+
+  </div>
+</div>
+
+
+  <div class="edit-comment-hide">
+    <div class="comment-body markdown-body markdown-format js-comment-body">
+        <p><a href="https://github.com/ichernev" class="user-mention">@ichernev</a> - <a href="https://www.quora.com/GitHub-What-is-the-significance-of-the-Ship-It-squirrel">It's a squirrel</a>!</p>
+    </div>
+  </div>
+
+
+    
+
+<div class="comment-reactions  js-reactions-container "
+
+    >
+</div>
+
+</div>
+
+  </div>
+  
+
+
+      
+
+
+  <div class="discussion-item discussion-item-labeled">
+    <div class="discussion-item-header" id="event-753608117">
+
+      <span class="discussion-item-icon">
+        <svg aria-hidden="true" class="octicon octicon-tag" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg>
+      </span>
+      <img alt="@mj1856" class="avatar" height="16" src="https://avatars0.githubusercontent.com/u/1396388?v=3&amp;s=32" width="16" />
+      <a href="/mj1856" class="author">mj1856</a>
+      
+      added the <span class="label-color" style="background-color: #bfd4f2;"><a href="/moment/moment/labels/TypeScript" style="color: #282c33">TypeScript</a></span> label <a href="#event-753608117" class="timestamp"><relative-time class="timestamp" datetime="2016-08-12T06:02:37Z">Aug 12, 2016</relative-time></a>
+    </div>
+  </div>
+
+
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/ichernev"><img alt="@ichernev" class="timeline-comment-avatar" height="44" src="https://avatars2.githubusercontent.com/u/757060?v=3&amp;s=88" width="44" /></a>
+    
+
+<div id="issuecomment-245213939"
+     class="comment previewable-edit timeline-comment js-comment js-task-list-container
+                    
+                      "
+     data-body-version="d7817a91f96a2293f6e68b7f493f723e">
+
+  <div class="timeline-comment-header ">
+
+    <div class="timeline-comment-actions">
+    </div>
+
+
+
+  <div class="timeline-comment-header-text">
+
+    <strong>
+      <a href="/ichernev" class="author">ichernev</a> 
+    </strong>
+
+    commented
+
+      <a href="#issuecomment-245213939" class="timestamp">
+        <relative-time datetime="2016-09-07T08:39:13Z">Sep 7, 2016</relative-time>
+      </a>
+
+  </div>
+</div>
+
+
+  <div class="edit-comment-hide">
+    <div class="comment-body markdown-body markdown-format js-comment-body">
+        <p>Merged in <a href="https://github.com/moment/moment/commit/9d9cd863bbd8f7cddc86da3c1e8a2b6aebd5b5f1" class="commit-link"><tt>9d9cd86</tt></a></p>
+    </div>
+  </div>
+
+
+    
+
+<div class="comment-reactions has-reactions js-reactions-container "
+
+    >
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/moment/moment/reactions/update" class="js-pick-reaction" data-form-nonce="f68925f21155a5ca2921a13f32ddfa2d985bb1cb" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="evbM1GKEg2QvxXgCuxV7t/2NhgofWaDF6+BLFA+mVFuCokkNWPkwSpZv/AwtfvBVKEaBNStELqWGk0mz/6TnHw==" /></div>
+      <input type="hidden" name="reaction[subject_id]" value="245213939">
+      <input type="hidden" name="reaction[subject_type]" value="IssueComment">
+      <div class="comment-reactions-options">
+          <button disabled
+                  class="btn-link reaction-summary-item tooltipped tooltipped-se tooltipped-multiline "
+                  name="reaction[content]"
+                  type="submit"
+                  value="heart react"
+                  aria-label="blakeembrey reacted with heart emoji">
+            <g-emoji alias="heart" class="emoji mr-1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2764.png" ios-version="6.0">❤️</g-emoji>
+            1
+          </button>
+      </div>
+</form></div>
+
+</div>
+
+  </div>
+  
+
+
+      
+
+
+  <div class="discussion-item discussion-item-renamed">
+    <div class="discussion-item-header" id="event-780578538">
+
+      <span class="discussion-item-icon">
+        <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
+      </span>
+      <img alt="@ichernev" class="avatar" height="16" src="https://avatars3.githubusercontent.com/u/757060?v=3&amp;s=32" width="16" />
+      <a href="/ichernev" class="author">ichernev</a>
+      
+      changed the title from  <span class="renamed-was">Make moment&#39;s typings for parsing stricter and also allow them to accept union types.</span> to <span class="renamed-is">[misc] typescript: refactor constructor and ISO format hack</span> <a href="#event-780578538" class="timestamp"><relative-time class="timestamp" datetime="2016-09-07T08:39:13Z">Sep 7, 2016</relative-time></a>
+    </div>
+  </div>
+
+
+
+
+
+      
+
+
+  <div class="discussion-item discussion-item-closed">
+    <div class="discussion-item-header" id="event-780578540">
+
+      <span class="discussion-item-icon">
+        <svg aria-hidden="true" class="octicon octicon-circle-slash" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 1.3c1.3 0 2.5.44 3.47 1.17l-8 8A5.755 5.755 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zm0 11.41c-1.3 0-2.5-.44-3.47-1.17l8-8c.73.97 1.17 2.17 1.17 3.47 0 3.14-2.56 5.7-5.7 5.7z"></path></svg>
+      </span>
+      <img alt="@ichernev" class="avatar" height="16" src="https://avatars3.githubusercontent.com/u/757060?v=3&amp;s=32" width="16" />
+      <a href="/ichernev" class="author">ichernev</a>
+      
+      closed this   <a href="#event-780578540" class="timestamp"><relative-time class="timestamp" datetime="2016-09-07T08:39:13Z">Sep 7, 2016</relative-time></a>
+    </div>
+  </div>
+
+  <div class="closed-banner"></div>
+
+
+
+
+      
+
+
+
+      
+
+
+  <div class="discussion-item discussion-item-unlabeled">
+    <div class="discussion-item-header" id="event-786220854">
+
+      <span class="discussion-item-icon">
+        <svg aria-hidden="true" class="octicon octicon-tag" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg>
+      </span>
+      <img alt="@mj1856" class="avatar" height="16" src="https://avatars0.githubusercontent.com/u/1396388?v=3&amp;s=32" width="16" />
+      <a href="/mj1856" class="author">mj1856</a>
+      
+      removed the <span class="label-color" style="background-color: #009800;"><a href="/moment/moment/labels/Pending%20Next%20Release" style="color: #fff">Pending Next Release</a></span> label <a href="#event-786220854" class="timestamp"><relative-time class="timestamp" datetime="2016-09-12T16:24:21Z">Sep 12, 2016</relative-time></a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-- Rendered timeline since 2016-09-12 09:24:21 -->
+<div id="partial-timeline-marker"
+      class="js-timeline-marker js-socket-channel js-updatable-content"
+      data-channel="tenant:1:pull_request:78594281"
+      data-url="/moment/moment/pull/3323/show_partial?partial=pull_requests%2Ftimeline_marker&amp;since=1473697461"
+      data-last-modified="Mon, 12 Sep 2016 16:24:21 GMT">
+
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/moment/moment/notifications/mark?ids=156117850" class="d-none js-timeline-marker-form" data-form-nonce="f68925f21155a5ca2921a13f32ddfa2d985bb1cb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="QlpMWocEEef1nKShPgqd2pT1NHzxoNxbGZfU8x+80HAX/+UDCz6JaIfDmfSa2ANYo4ETp80z/mVrxMh1UtB4eQ==" /></div>
+</form></div>
+
+
+  </div>
+
+    <div class="discussion-timeline-actions">
+          <div class="signed-out-comment">
+    <a href="/join?source=comment-repo" class="btn btn-primary" rel="nofollow">Sign up for free</a>
+    <strong>to join this conversation on GitHub</strong>.
+    Already have an account?
+    <a href="/login?return_to=https%3A%2F%2Fgithub.com%2Fmoment%2Fmoment%2Fpull%2F3323" rel="nofollow">Sign in to comment</a>
+</div>
+
+
+    </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.20809s from github-fe118-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+      </button>
+      You can't perform that action at this time.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/compat-30ce4c86c27f88c3d1b4eb03efda59b45d8d7c871880dee0b8f73d5ef1b25fdf.js"></script>
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-33b22a6d8d4e7a6df6f3868fc101644ec8b92539c1d828b23b34dff4b2f613f7.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-92f407d1e778dafd05b0c49cf3a0018d2db470807dabea8eff08954ab1689f7e.js"></script>
+      
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"></path></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+

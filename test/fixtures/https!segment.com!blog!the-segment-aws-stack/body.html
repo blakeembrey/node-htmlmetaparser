@@ -1,0 +1,558 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Segment AWS Stack</title>
+    <meta name="description" content="Segment is the analytics API you&#x27;ve always wanted. It&#x27;s the easiest way to install all of your favorite analytics tools at once!">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/blog/index.css">
+    <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Segment Blog">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Segment" />
+    <meta property="og:title" content="The Segment AWS Stack" />
+    <meta property="og:description" content="Segment is the analytics API you&#x27;ve always wanted. It&#x27;s the easiest way to install all of your favorite analytics tools at once!" />
+    <meta property="og:url" content="https://segment.com/blog/the-segment-aws-stack/" />
+    <meta property="article:published_time" content="2016-06-15T00:00:00+00:00" />
+    <meta name="author" content="Calvin French-Owen" />
+
+      <meta property="og:image" content="https://segment.com/blog/the-segment-aws-stack/images/main.png">
+
+    <meta name="twitter:site" content="@segment" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="twitter:creator" content="@calvinfo">
+
+    <link rel="icon" sizes="192x192" href="https://segment.com/build/public/public/images/touch-icon.png">
+    <link rel="apple-touch-icon" href="https://segment.com/build/public/public/images/touch-icon.png">
+    <link rel="mask-icon" href="https://segment.com/build/public/public/images/favicon-mask.svg" color="#49B882">
+
+    <meta name="application-name" content="Segment">
+    <meta name="theme-color" content="#00386C">
+
+    <meta class="swiftype" name="section" data-type="enum" content="Blog" />
+    <meta class="swiftype" name="priority" data-type="integer" content="2" />
+
+    <script src="//cdn.optimizely.com/js/170430035.js"></script>
+    <script>!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+analytics.load("zaySL4FGIiLsxt3I7omU5uLxXqxaBMPh")
+}}();</script>
+  </head>
+
+  <body>
+      <div class="Navigation Navigation--light">
+        <div class="Navigation-body">
+          <nav class="Navigation-left">
+            <h1 class="Navigation-item">
+              <a href="/" class="Navigation-logo">Segment</a>
+            </h1>
+            <nav class="Navigation-LinkList Navigation-item">
+              <a href="/sources">Sources</a>
+              <a href="/warehouses">Warehouses</a>
+              <a href="/catalog">Catalog</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/blog" class="selected">Blog</a>
+            </nav>
+          </nav>
+          <nav class="Navigation-right">
+            <form class="Subscribe-form" action="https://segment.us2.list-manage.com/subscribe/post" method="POST" novalidate data-location="navigation">
+              <fieldset>
+                <!-- "MERGE0" is for Mailchimp -->
+                <input name="MERGE0" id="MERGE0" class="TextField" type="email" placeholder="Get our newsletter via email">
+                <button class="SquareButton Button uppercase">Subscribe</button>
+              </fieldset>
+            
+              <!-- Mailchimp account and list tokens -->
+              <input type="hidden" name="u" value="e386c08e96bf7e1661a855d90">
+              <input type="hidden" name="id" value="022d800576">
+            </form>
+            
+            <a href="/blog/atom.xml" class="Cta-link rss" link="rss" ></a>
+          </nav>
+        </div>
+      </div>
+      <main data-page-type="Post" data-collection="articles,engineering" data-author="Calvin French-Owen" data-published="15 June 2016">
+        <div class="Page-sticky-wrap">
+
+          <article class="Article Article--featured"
+                    data-collection="articles,engineering"
+                    data-author="Calvin French-Owen"
+                    data-published="15 June 2016">
+            <div class="Page-alignment">
+              <div class="content-wrap">
+
+                <section class="Article">
+                  <time class="uppercase Article-date--heading" datetime="2016-06-15T00:00:00+00:00">
+                    15 June 2016
+                  </time>
+                      <a href="/blog/categories/engineering/"
+                        <span class="Category uppercase">engineering</span>
+                      </a>
+                  <h2 class="Article-title">The Segment AWS Stack</h2>
+                </section>
+
+                 <aside class="Sidebar" content="author">
+                  <div class="Sidebar-wrap">
+                    <div class="Author">
+                          <div class="Sidebar-Author">
+                            <figure class="Author-avatar">
+                                <img class="Author-avatarPic" src="https://c19f7be2e84987e7904e-bf41efcb49679c193a4ec0f3210da86f.ssl.cf1.rackcdn.com/photos/40528-2-1.jpg">
+                                <img class="Author-avatarGif" data-aload="https://i.giphy.com/3o6gaWVlTihQHsKMo0.gif">
+                            </figure>
+                            
+                            <section class="Author-details">
+                                <cite>
+                                  <a href="/blog/authors/calvin-french-owen/" class="Author-name">
+                                    Calvin French-Owen
+                                  </a>
+                                </cite>
+                            
+                                <p class="Author-role">
+                                    Co-Founder at
+                                  Segment
+                                </p>
+                            
+                              <section class="Author-social">
+                                  <a href="http://twitter.com/calvinfo"
+                                      class="SocialMedia-link"
+                                      rel="author"
+                                      data-icon="twitter">
+                                    calvinfo
+                                  </a>
+                            
+                                  <div class="twitter-widget">
+                                    <a class="twitter-follow-button SocialMedia-link"
+                                        href="https://twitter.com/calvinfo"
+                                        data-show-screen-name="true"
+                                        data-show-count="false"
+                                        data-lang="en">
+                                        Follow @calvinfo
+                                    </a>
+                                  </div>
+                              </section>
+                            </section>
+                          </div>
+                      <div class="Sidebar-CTAwrapper Sidebar-CTAwrapper--wideScreen">
+                          <a href="/jobs" class="ui-Button u-Space--bottomSmaller" id="jobsCTA" extras="fluid" size="small" modifier="secondary" u-space="bottom:smaller">We’re hiring</a>
+                      </div>
+                      
+                      <script type="text/javascript">
+                        window.twttr=(function(d,s,id){
+                        var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};
+                        if(d.getElementById(id))return;
+                          js=d.createElement(s);
+                          js.id=id;
+                          js.src="https://platform.twitter.com/widgets.js";
+                          fjs.parentNode.insertBefore(js,fjs);
+                          t._e=[];
+                          t.ready=function(f){
+                            t._e.push(f);
+                          };return t;}(document,"script","twitter-wjs"));
+                      </script>
+                    </div>
+                  </div>
+                </aside>
+
+                <div class="Article-body" data-swiftype-name="body" data-swiftype-type="text">
+                  <p>AWS is the default for running production infrastructure. It’s cheap, scalable, and flexible to whatever configuration you’d like to run on top of it. But that flexibility comes with a cost: it makes AWS <em>endlessly</em> configurable.</p>
+<p>You can build whatever you want on top of AWS, but that means <a href="https://segment.com/blog/rebuilding-our-infrastructure/">it’s difficult to know whether you’re taking the right approach</a>. Pretty much every startup we talk with has the same question: <em>“</em><a href="https://twitter.com/hueypetersen/status/730177176708911104"><em>What’s the right</em></a><em> </em><a href="https://twitter.com/n1alloc/status/723479989761507329"><em>way to setup our infrastructure</em></a><a href="https://twitter.com/astrostl/status/714162717825761280"><em>?</em></a><em>”</em></p>
+<p>To help solve that problem, we’re excited to open source the <a href="https://github.com/segmentio/stack">Segment AWS Stack</a>. It’s our first pass at building a collection of <a href="https://www.terraform.io/">Terraform</a> modules for creating production-ready architecture on AWS. It’s largely based on the service architecture we use internally to <a href="https://segment.com/blog/scaling-nsq/">process billions of messages every month</a>, but built solely on AWS.</p>
+<p>The steps are incredibly simple. Add 5 lines of Terraform, run <strong>terraform apply</strong>, and you’ll have your base infrastructure up and running in just <em>three minutes</em>.</p>
+<!-- animation of the stack provisioning -->
+<script type="text/javascript" src="https://asciinema.org/a/82qbi703715a2or4xs9rruykl.js" id="asciicast-82qbi703715a2or4xs9rruykl" data-autoplay="true" data-preload="true" async></script>
+
+<p>It’s like a mini-Heroku that you host yourself. No magic, just AWS.</p>
+<p><img src="./images/main.png" alt=""></p>
+<h2 id="batteries-included">Batteries Included</h2>
+<p>Our major goals with Stack are:</p>
+<ul>
+<li>to provide a good set of defaults for production infrastructure</li>
+<li>make the AWS setup process incredibly simple</li>
+<li>allow users to easily customize the core abstractions and run their  own infrastructure</li>
+</ul>
+<p>To achieve those goals, Stack is built with Hashicorp’s Terraform.</p>
+<p>Terraform provides a means of configuring infrastructure as code. You write code that represents things like EC2 instances, S3 buckets, and more–and then use Terraform to create them.</p>
+<p>Terraform manages the state of your infrastructure internally by building a dependency graph of which resources depend on one another:</p>
+<p><img src="./images/dag.png" alt=""></p>
+<p>and then applies only the “diff” of changes to your production environment. Terraform makes changing your infrastructure incredibly seamless because it already knows which resources have to be re-created and which can remain untouched.</p>
+<p>Terraform provides easy-to-use, high level abstractions for provisioning cloud infrastructure, but also exposes the low-level AWS resources for custom configuration. This low-level access provides a marvelous “escape hatch” for truly custom needs.</p>
+<p>To give you a flavor of what the setup process looks like, run <code>terraform apply</code> against this basic configuration:</p>
+<pre><code>module &quot;stack&quot; {
+  source      = &quot;github.com/segmentio/stack&quot;
+  environment = &quot;prod&quot;
+  key_name    = &quot;my-key-name&quot;
+  name        = &quot;my-app&quot;
+}
+</code></pre><p>It will automatically create all of the following:</p>
+<p><strong>Networking: </strong>Stack includes a new VPC, with public and private subnets. All routing tables, Internet Gateways, NAT Gateways, and basic security groups are automatically provisioned.</p>
+<p><strong>Auto-scaling default cluster: </strong>Stack ships with an auto-scaling group and basic lifecycle rules to automatically add new instances to the default cluster as they are needed.</p>
+<p><strong>ECS configuration: </strong>in Stack, all services run atop ECS. Simply create a new service, and the auto-scaling default cluster will automatically pick it up. Each instance ships with Docker and the latest ecs-agent.</p>
+<p><strong>CloudWatch logging &amp; metrics: </strong>Stack sends all container logs to CloudWatch. Because all requests between services go through ELBs, metrics around latency and status codes are automatically collected as well.</p>
+<p><strong>Bastion: </strong>Stack also includes a bastion host for manual SSH access to your cluster. Besides the public services, it’s the only instance exposed to the outside world and acts as the “jump point” for manual access.</p>
+<hr>
+<p>This basic setup uses the <code>stack</code>  module as a unit, but Terraform can also reference the components of Stack individually.</p>
+<pre><code># This terraform creates only a bastion node, passing in
+# custom values from our pre-existing infrastructure.
+
+module &quot;bastion&quot; {
+  source          = &quot;github.com/segmentio/stack/bastion&quot;
+  region          = &quot;us-west-2&quot;
+  security_groups = &quot;sg-24feafedde&quot;
+  vpc_id          = &quot;vpc-egf231094&quot;
+  subnet_id       = &quot;subnet-34800af&quot;
+  key_name        = &quot;bastion&quot;
+  environment     = &quot;prod&quot;
+}
+</code></pre><p>That means that you can reference <em>any</em> of the internal modules that the stack uses, while continuing to use your own custom networking and instance configuration.</p>
+<p>Want to only create Stack services, but bring your own VPC? Just source the <strong>service</strong> module and pass in your existing VPC ID. Don’t need a bastion and want custom security groups? Source only the <strong>vpc</strong> and <strong>cluster </strong>modules to set up only the default networking.</p>
+<p>You’re free to take the pieces you want and leave the rest.</p>
+<p>If you’d like to dig into more about how this works in-depth, and each of the modules individually, check out the <a href="https://github.com/segmentio/stack#architecture">Architecture section</a> of the Readme.</p>
+<p>Now, let’s walkthrough how to provision a new app and add our internal services.</p>
+<h2 id="walkthrough">Walkthrough</h2>
+<p><em>Note: this walkthrough assumes you have an AWS account and Terraform installed. If not, first get the pre-requisites from the </em><a href="https://github.com/segmentio/stack#requirements"><em>requirements section</em></a><em>.</em></p>
+<p>For this tutorial, we’ll reference the pieces of the demo app we’ve built: <a href="https://github.com/segmentio/pingdummy">Pingdummy</a>, a web-based uptime monitoring system.</p>
+<p><img src="./images/pingdummy.png" alt=""></p>
+<p><em>All of the Docker images we use in this example are public, so you can try them yourself!</em></p>
+<p>The Pingdummy infrastructure runs a few different services to demonstrate how services can be deployed and integrated using Stack.</p>
+<ul>
+<li>the <strong>pingdummy-frontend</strong> is the main webpage users hit to register and create healthchecks. It uses the <strong>web-service </strong>module to run as a service that is publicly accessible to the internet.</li>
+<li>the <strong>pingdummy-beacon</strong> is an internal service which makes requests to other third-party services, and responds with their status. It uses the <strong>service </strong>module, and is not internet facing. (<em>though here it’s used for example purposes, this service could eventually be run in many regions for HA requests)</em></li>
+<li>the <strong>pingdummy-worker </strong>is a worker which periodically sends requests to the pingdummy-beacon service.  It uses the <strong>worker</strong> module as it only needs a service definition, not a load balancer.</li>
+<li>an <strong>RDS </strong>instance used for persistence</li>
+</ul>
+<p>First, you’ll want to add a Terraform file to define all of the pieces of your infrastructure on AWS. Start by creating a <code>terraform.tf</code>  file in your project directory.</p>
+<p>Then, copy the basic stack setup to it:</p>
+<pre><code>module &quot;stack&quot; {
+  source      = &quot;github.com/segmentio/stack&quot; # the module source
+  name        = &quot;pingdummy&quot; # the name for our project
+  environment = &quot;prod&quot; # the environment we&#39;re running in
+  key_name    = &quot;&lt;my-ssh-key&gt;&quot; # reference a key you&#39;ve previously created
+}
+</code></pre><p>And then use the Terraform CLI to actually apply the infrastructure:</p>
+<pre><code>$ terraform get    # fetch dependencies
+$ terraform plan   # plan the changelog and see if it all looks good
+$ terraform apply  # apply our changes to production
+</code></pre><p>This will create all the basic pieces of infrastructure we described in the first section.</p>
+<p><em>Note: for managing Terraform’s remote state with more than a single user, we recommend </em><a href="https://www.terraform.io/docs/commands/remote-config.html"><em>configuring the remote state</em></a><em> to use </em><a href="https://www.hashicorp.com/terraform.html"><em>Terraform Enterprise</em></a><em> or S3. You can use our </em><a href="https://github.com/segmentio/pingdummy/blob/master/Makefile#L7-L16"><em>pingdummy repo’s Makefile</em></a><em> as an example.</em></p>
+<p>Now we’ll add RDS as our persistence layer. We can pull the <strong>rds </strong>module from Stack, and then reference the outputs of the base networking and security groups we’ve already created. Terraform will automatically interpolate these and set up a dependency graph to re-create the resources if they change.</p>
+<pre><code>module &quot;rds&quot; {
+  source             = &quot;github.com/segmentio/stack/rds-cluster&quot; # rds module source
+  name               = &quot;pingdummy&quot;
+  database_name      = &quot;pingdummy&quot;
+  master_username    = &quot;root&quot;
+  master_password    = &quot;password&quot;
+
+  # these options are automatically generated by the stack :)
+  environment        = &quot;${module.stack.environment}&quot;
+  vpc_id             = &quot;${module.stack.vpc_id}&quot;
+  security_groups    = &quot;${module.stack.cluster_security_group_id}&quot;
+  subnet_ids         = &quot;${module.stack.private_subnets}&quot;
+  availability_zones = &quot;${module.stack.availability_zones}&quot;
+}
+</code></pre><p>Again, we’ll need to run plan and apply again to create the new resources:</p>
+<pre><code>$ terraform plan
+$ terraform apply
+</code></pre><p>And presto! Our VPC now has an RDS cluster to use for persistence, managed by Terraform.</p>
+<p>Now that we have our persistence and base layers setup, it’s time to add the services that run the Pingdummy app.</p>
+<p>We can start with the internal <strong>beacon</strong> service for our health-checks. This service will listens on port <strong>3001</strong> and makes outbound HTTP requests to third-parties to check if a given URL is responding properly.</p>
+<p>We’ll need to use the <strong>service</strong> module which creates an internal service that sits behind an ELB. That ELB will be automatically addressable at <strong>beacon.stack.local, </strong>and<strong> </strong>ECS will automatically add the service containers to the ELB once they pass the health check.</p>
+<pre><code>module &quot;beacon&quot; {
+  source         = &quot;github.com/segmentio/stack/service&quot;
+  name           = &quot;beacon&quot;
+  image          = &quot;segment/pingdummy-beacon&quot;
+  port           = 3001
+  container_port = 3001
+  dns_name       = &quot;beacon&quot;
+
+  # these variables are automatically provisioned by stack
+  environment     = &quot;${module.stack.environment}&quot;
+  cluster         = &quot;${module.stack.cluster}&quot;
+  zone_id         = &quot;${module.stack.zone_id}&quot;
+  iam_role        = &quot;${module.stack.iam_role}&quot;
+  security_groups = &quot;${module.stack.internal_elb}&quot;
+  subnet_ids      = &quot;${module.stack.internal_subnets}&quot;
+  log_bucket      = &quot;${module.stack.log_bucket_id}&quot;
+}
+</code></pre><p>Next, we’ll add the <strong>pingdummy-worker</strong> service. It is responsible for making requests to our internal beacon service.</p>
+<pre><code>module &quot;worker&quot; {
+  source      = &quot;github.com/segmentio/stack/worker&quot;
+  environment = &quot;${module.stack.environment}&quot;
+  name        = &quot;worker&quot;
+  image       = &quot;segment/pingdummy-worker&quot;
+  cluster     = &quot;${module.stack.cluster}&quot;
+  # we can pass in custom configuration via ENV variables
+  # or arguments to the cmd block
+  env         = &lt;&lt;EOF
+  [
+    { &quot;name&quot;: &quot;BEACON_URL&quot;, &quot;value&quot;: &quot;${module.beacon.dns}&quot; }
+  ]
+  EOF
+}
+</code></pre><p>As you can see, we’ve used the <strong>worker </strong>module since this program doesn’t need a load balancer or DNS name. We can also pass custom configuration to it via environment variables or command line flags. In this case, it’s passed the address of the beacon service.</p>
+<p>Finally, we can add our <strong>pingdummy-frontend</strong> web app which will be Internet-accessible. This will use the <strong>web-service </strong>module so that the ELB can serve requests from the public subnet.</p>
+<p>In order to make the frontend work, we need a few extra pieces of configuration beyond just what the base <strong>web-service </strong>module provides.</p>
+<p>We’ll first need to add an SSL certificate that’s been uploaded to AWS. Sadly, there’s no terraform configuration for doing this (it requires a manual step), but you can <a href="http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/ssl-server-cert.html#upload-cert">find instructions in the AWS docs</a>.</p>
+<p>From there, we can tell our module that we’d like it to be accessible on the <em>public </em>subnets and security groups and be externally facing. The <strong>stack</strong> module creates these all individually, so we can merely pass them in and we’ll be off to the races.</p>
+<pre><code>module &quot;pingdummy&quot; {
+  source             = &quot;github.com/segmentio/stack/web-service&quot;
+  image              = &quot;segment/pingdummy&quot;  # a public image on docker hub
+  version            = &quot;0.4&quot;
+  port               = 3000
+  ssl_certificate_id = &quot;&lt;your-ssl-cert&gt;&quot;  # you&#39;ll need to generate this
+
+  # these options are automatically created by Stack, no work required :)
+  environment     = &quot;${module.stack.environment}&quot;
+  cluster         = &quot;${module.stack.cluster}&quot;
+  domain          = &quot;${module.stack.domain_name}&quot;
+  zone_id         = &quot;${module.stack.zone_id}&quot;
+  iam_role        = &quot;${module.stack.iam_role}&quot;
+  security_groups = &quot;${module.stack.external_elb}&quot;
+  subnet_ids      = &quot;${module.stack.external_subnets}&quot;
+  log_bucket      = &quot;${module.stack.log_bucket_id}&quot;
+}
+</code></pre><p>Finally, run the plan and apply commands one more time:</p>
+<pre><code>$ terraform plan
+$ terraform apply
+</code></pre><p>And we’re done! Just like that, we have a multi-AZ microservice architecture running on vanilla AWS.</p>
+<p>Looking in the AWS console, you should see logs streaming into CloudWatch from our brand new services. And whenever a request is made to the service, you should see HTTP metrics on each of the service ELBs.</p>
+<p>To deploy new versions of these services, simply change the versions in the Terraform configuration, then re-apply. New task definitions will be created and the appropriate containers will be cycled with zero downtime.</p>
+<p>There’s a few other pieces you’ll need to add, which you can see examples for in the main Pingdummy terraform file. Keep in mind that the example is a dummy app, and is <em>not</em> how we’d recommend doing things like security groups or configuration in production. We’ll have more on that in terraform to come :).</p>
+<h2 id="one-more-thing-">One More Thing…</h2>
+<p>Additionally, we’re excited to open source a few other pieces that were involved in releasing the Stack:</p>
+<p><a href="http://github.com/yields">Amir Abu Shareb</a> created <a href="https://github.com/segmentio/terraform-docs"><strong>terraform-docs</strong></a>, a command-line tool to automatically generate documentation for Terraform modules. You can think of it as the godoc of the Terraform world, automatically extracting inputs, outputs, and module usage in an easily consumable format.</p>
+<p><img src="./images/terraform-docs.png" alt=""></p>
+<p>We use terraform-docs to build all of the <a href="https://github.com/segmentio/stack/blob/master/docs.md">module reference documentation</a> for Stack.</p>
+<p><a href="https://github.com/achille-roussel">Achille Roussel</a> created <a href="https://github.com/segmentio/ecs-logs"><strong>ecs-logs</strong></a>, an agent for sending logs from journald to CloudWatch. It provides all the built-in logging for Stack, and makes sure to create a log group for each service and a single log stream per container.</p>
+<p><img src="./images/cloudwatch.png" alt=""></p>
+<h2 id="go-forth-and-stack">Go Forth, and Stack</h2>
+<p>It’s our hope that this post gave you a brief look at the raw power of what can be achieved with the AWS APIs these days. The ease of Terraform paired with the flexibility and scale of AWS is an extremely powerful combination.</p>
+<p>Stack is a “first pass” of what combining these technologies can achieve. It’s by no means finished, and only provides the foundation for many of the ideas that we’ve put into production. Additionally, we’re trying some new experiments around log drivers and instances (<em>reflected by the 0.1 tag</em>) which we think will pay off in the future.</p>
+<p>Nonetheless, we’ve open sourced Stack today as the first step to gather as much community wisdom around running infrastructure atop AWS.</p>
+<p>In that vein, we’ll happily accept pull requests for new modules that fall within the spirit of the project. It’s our goal to provide the community with a good set of Terraform modules that provide sane defaults and simpler abstractions on top of the raw AWS infrastructure.</p>
+<p>So go ahead and try out the Stack today, and please let us know what you think!</p>
+<hr>
+<p><img src="./images/team.jpg" alt=""></p>
+<p><em>Part of the Segment infrastructure team hacking on The Segment Stack: <a href="https://github.com/yields">Amir Abu Shareb</a>, <a href="https://github.com/rbranson">Rick Branson</a>, <a href="https://github.com/calvinfo">Calvin French-Owen</a>, <a href="https://github.com/liquidy">Kevin Lo</a>, and <a href="https://github.com/achille">Achille Roussel</a>. Open sourced at a team-offsite in Amsterdam.</em></p>
+
+                </div>
+                <footer class="Article-footer">
+                  <a href="/blog" class="ui-Button u-Space--bottomSmaller" modifier="secondary" size="medium" link="back">Back to blog</a>
+                    <a href="/jobs" class="ui-Button u-Space--bottomSmaller" id="jobsCTA" size="medium" modifier="secondary" u-space="bottom:smaller">We’re hiring</a>
+                  <form class="Subscribe-form" action="https://segment.us2.list-manage.com/subscribe/post" method="POST" novalidate data-location="article-footer">
+                    <fieldset>
+                      <!-- "MERGE0" is for Mailchimp -->
+                      <input name="MERGE0" id="MERGE0" class="TextField" type="email" placeholder="Get our newsletter via email">
+                      <button class="SquareButton Button uppercase">Subscribe</button>
+                    </fieldset>
+                  
+                    <!-- Mailchimp account and list tokens -->
+                    <input type="hidden" name="u" value="e386c08e96bf7e1661a855d90">
+                    <input type="hidden" name="id" value="022d800576">
+                  </form>
+                  
+                  <a href="/blog/atom.xml" class="Cta-link rss" link="rss" ></a>
+                </footer>
+              </div>
+            </div>
+          </article>
+
+          <section class="Articles-list">
+            <div class="Page-alignment">
+              <header class="Articles-list-header uppercase">
+                Suggested Reading
+              </header>
+              <ul>
+                  <li class="Suggested-reading Article-list--item">
+                    <div class="content-wrap"><h2 class="Article-title">
+  <a href="/blog/mobile-app-size-effect-on-downloads/" class="Article-title Action-link">
+    Effect of Mobile App Size on Downloads
+  </a>
+</h2>
+
+<p class="Article-teaser">A few months ago we were at a conference in Half Moon Bay talking with a general manager at a large mobile company, and he said, “One of my projects for the next six months is to reduce SDK bloat in all our apps.” Six months is a substantial investment! So we asked why this mattered so much to him.
+</p>
+
+<div class="Author Author--singleLine">
+    <figure class="Author-avatar">
+        <img class="Author-avatarPic" src="/blog/public/avatars/peter-reinhardt.jpg">
+    </figure>
+
+    <div class="Author-details">
+        <cite class="Author-name">Peter Reinhardt</cite>
+      <time class="Article-date">5 October 2016</time>
+        <a href="/blog/categories/engineering/"
+          <span class="Category uppercase">engineering</span>
+        </a>
+    </div>
+</div>
+</div>
+                  </li>
+                  <li class="Suggested-reading Article-list--item">
+                    <div class="content-wrap"><h2 class="Article-title">
+  <a href="/blog/ci-at-segment/" class="Article-title Action-link">
+    Continuous Integration at Segment
+  </a>
+</h2>
+
+<p class="Article-teaser">As part of our push to open up what’s going on internally at Segment – we’d like to share how we run our CI builds. Most of our approaches follow standard practices, but we wanted to share a few tips and tricks we use to speed up our build pipeline.
+</p>
+
+<div class="Author Author--singleLine">
+    <figure class="Author-avatar">
+        <img class="Author-avatarPic" src="https://c19f7be2e84987e7904e-bf41efcb49679c193a4ec0f3210da86f.ssl.cf1.rackcdn.com/photos/40528-2-1.jpg">
+    </figure>
+
+    <div class="Author-details">
+        <cite>
+          <a href="/blog/authors/calvin-french-owen/" class="Author-name">
+            Calvin French-Owen
+          </a>
+        </cite>
+      <time class="Article-date">23 June 2016</time>
+        <a href="/blog/categories/engineering/"
+          <span class="Category uppercase">engineering</span>
+        </a>
+    </div>
+</div>
+</div>
+                  </li>
+                  <li class="Suggested-reading Article-list--item">
+                    <div class="content-wrap"><h2 class="Article-title">
+  <a href="/blog/queuefile-reliable-request-batching-android/" class="Article-title Action-link">
+    Why We Chose QueueFile for Reliable Request Batching on Android
+  </a>
+</h2>
+
+<p class="Article-teaser">Segment’s mobile SDKs are designed to track behavioral data from your app and translate and route that data to hundreds of downstream integrations. One of the SDK’s core tasks is to upload behavioral data to our servers. Since every network request requires your app to power up the device’s radio, uploading this data in real-time can quickly drain a battery.
+</p>
+
+<div class="Author Author--singleLine">
+    <figure class="Author-avatar">
+        <img class="Author-avatarPic" src="https://c19f7be2e84987e7904e-bf41efcb49679c193a4ec0f3210da86f.ssl.cf1.rackcdn.com/photos/40557-1-1.jpg">
+    </figure>
+
+    <div class="Author-details">
+        <cite>
+          <a href="/blog/authors/prateek-srivastava/" class="Author-name">
+            Prateek Srivastava
+          </a>
+        </cite>
+      <time class="Article-date">14 June 2016</time>
+        <a href="/blog/categories/engineering/"
+          <span class="Category uppercase">engineering</span>
+        </a>
+    </div>
+</div>
+</div>
+                  </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div class="Page-alignment">
+        <footer class="Footer">
+          <div class="Footer-unit Footer-unit--large">
+            <a href="/" class="Footer-logo">Segment</a>
+          </div>
+          <nav class="Footer-unit Footer-unit--small">
+            <h4 class="Footer-title">Features</h4>
+            <a href="/sources">Sources</a>
+            <a href="/catalog#integrations/all">Integrations</a>
+            <a href="/warehouses">Warehouses</a>
+            <a href="/mobile">Mobile</a>
+            <a href="/pricing">Pricing</a>
+          </nav>
+          <nav class="Footer-unit Footer-unit--small">
+            <h4 class="Footer-title">Company</h4>
+            <a href="/customers">Customers</a>
+            <a href="/jobs">Jobs</a>
+            <a href="/partners">Partners</a>
+            <a href="/team">Team</a>
+          </nav>
+          <nav class="Footer-unit Footer-unit--small">
+            <h4 class="Footer-title">Resources</h4>
+            <a href="/academy">Academy</a>
+            <a href="/docs">Documentation</a>
+            <a href="/help">Help</a>
+            <a href="/blog">Blog</a>
+            <a href="https://github.com/segmentio/press-kit">Press Kit</a>
+          </nav>
+          <nav class="Footer-unit Footer-unit--small">
+            <h4 class="Footer-title">Contact</h4>
+            <p>
+              <a href="/blog/guest-author">Write for Us</a>
+            </p>
+            <address>
+              101 15th Street<br>
+              San Francisco, CA 94010
+            </address>
+          </nav>
+          <div class="Footer-legal">
+            &copy; 2014 Segment
+            <nav class="Footer-legalNav">
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Service</a>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="/blog/index.js"></script>
+
+
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Segment",
+        "url": "https://segment.com"
+      }, {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Segment",
+        "url": "https://segment.com",
+        "logo": "https://segment.com/build/public/public/images/touch-icon.png",
+        "sameAs": [
+          "https://twitter.com/segment",
+          "https://www.linkedin.com/company/segment-io"
+        ]
+      }
+    ]
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://segment.com/blog/the-segment-aws-stack/"
+      },
+      "headline": "The Segment AWS Stack",
+      "description": "Segment is the analytics API you&#x27;ve always wanted. It&#x27;s the easiest way to install all of your favorite analytics tools at once!",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://segment.com/blog/the-segment-aws-stack/images/main.png"
+        },
+      "datePublished": "2016-06-15T00:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Calvin French-Owen"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Segment",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://segment.com/build/public/public/images/touch-icon.png"
+        }
+      }
+    }
+    </script>
+  </body>
+</html>

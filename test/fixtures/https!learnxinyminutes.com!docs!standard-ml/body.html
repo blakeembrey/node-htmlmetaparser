@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title>Learn Standard ML in Y Minutes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="/css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="/css/github.css" media="screen" rel="stylesheet" type="text/css" />
+
+        <link rel="canonical" href="https://learnxinyminutes.com/docs/standard-ml/">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="share">
+    <span class="sharemsg">
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flearnxinyminutes.com%2Fdocs%2Fstandard-ml%2F&text=Learn+X+in+Y+minutes%2C+where+X%3DStandard+ML">
+        Share this page
+      </a></span>
+
+      <span class='st_facebook_large' displayText='Facebook'></span>
+      <span class='st_twitter_large' displayText='Tweet'></span>
+  </div>
+  <h1><a href="/">Learn X in Y minutes</a></h2>
+  <h2>Where X=Standard ML</h2>
+  
+  <div id="doc">
+    <p>Standard ML is a functional programming language with type inference and some
+side-effects.  Some of the hard parts of learning Standard ML are: Recursion,
+pattern matching, type inference (guessing the right types but never allowing
+implicit type conversion). Standard ML is distinguished from Haskell by including
+references, allowing variables to be updated.</p>
+<pre class="highlight ocaml"><code><span class="c">(* Comments in Standard ML begin with (* and end with *).  Comments can be
+   nested which means that all (* tags must end with a *) tag.  This comment,
+   for example, contains two nested comments. *)</span>
+
+<span class="c">(* A Standard ML program consists of declarations, e.g. value declarations: *)</span>
+<span class="k">val</span> <span class="n">rent</span> <span class="p">=</span> <span class="mi">1200</span>
+<span class="k">val</span> <span class="n">phone_no</span> <span class="p">=</span> <span class="mi">5551337</span>
+<span class="k">val</span> <span class="n">pi</span> <span class="p">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span>
+<span class="k">val</span> <span class="n">negative_number</span> <span class="p">=</span> <span class="p">~</span><span class="mi">15</span>  <span class="c">(* Yeah, unary minus uses the 'tilde' symbol *)</span>
+
+<span class="c">(* Optionally, you can explicitly declare types. This is not necessary as
+   ML will automatically figure out the types of your values. *)</span>
+<span class="k">val</span> <span class="n">diameter</span> <span class="p">=</span> <span class="mi">7926</span> <span class="p">:</span> <span class="kt">int</span>
+<span class="k">val</span> <span class="n">e</span> <span class="p">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">718</span> <span class="p">:</span> <span class="n">real</span>
+<span class="k">val</span> <span class="n">name</span> <span class="p">=</span> <span class="s2">"Bobby"</span> <span class="p">:</span> <span class="kt">string</span>
+
+<span class="c">(* And just as importantly, functions: *)</span>
+<span class="k">fun</span> <span class="n">is_large</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="kt">int</span><span class="p">)</span> <span class="p">=</span> <span class="k">if</span> <span class="n">x</span> <span class="p">&gt;</span> <span class="mi">37</span> <span class="k">then</span> <span class="bp">true</span> <span class="k">else</span> <span class="bp">false</span>
+
+<span class="c">(* Floating-point numbers are called "reals". *)</span>
+<span class="k">val</span> <span class="n">tau</span> <span class="p">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="p">*</span> <span class="n">pi</span>         <span class="c">(* You can multiply two reals *)</span>
+<span class="k">val</span> <span class="n">twice_rent</span> <span class="p">=</span> <span class="mi">2</span> <span class="p">*</span> <span class="n">rent</span>  <span class="c">(* You can multiply two ints *)</span>
+<span class="c">(* val meh = 1.25 * 10 *)</span>  <span class="c">(* But you can't multiply an int and a real *)</span>
+<span class="k">val</span> <span class="n">yeh</span> <span class="p">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">25</span> <span class="p">*</span> <span class="p">(</span><span class="nn">Real</span><span class="p">.</span><span class="n">fromInt</span> <span class="mi">10</span><span class="p">)</span> <span class="c">(* ...unless you explicitly convert
+                                      one or the other *)</span>
+
+<span class="c">(* +, - and * are overloaded so they work for both int and real. *)</span>
+<span class="c">(* The same cannot be said for division which has separate operators: *)</span>
+<span class="k">val</span> <span class="n">real_division</span> <span class="p">=</span> <span class="mi">14</span><span class="p">.</span><span class="mi">0</span> <span class="o">/</span> <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>  <span class="c">(* gives 3.5 *)</span>
+<span class="k">val</span> <span class="n">int_division</span>  <span class="p">=</span> <span class="mi">14</span> <span class="n">div</span> <span class="mi">4</span>    <span class="c">(* gives 3, rounding down *)</span>
+<span class="k">val</span> <span class="n">int_remainder</span> <span class="p">=</span> <span class="mi">14</span> <span class="ow">mod</span> <span class="mi">4</span>    <span class="c">(* gives 2, since 3*4 = 12 *)</span>
+
+<span class="c">(* ~ is actually sometimes a function (e.g. when put in front of variables) *)</span>
+<span class="k">val</span> <span class="n">negative_rent</span> <span class="p">=</span> <span class="o">~(</span><span class="n">rent</span><span class="p">)</span>  <span class="c">(* Would also have worked if rent were a "real" *)</span>
+
+<span class="c">(* There are also booleans and boolean operators *)</span>
+<span class="k">val</span> <span class="n">got_milk</span> <span class="p">=</span> <span class="bp">true</span>
+<span class="k">val</span> <span class="n">got_bread</span> <span class="p">=</span> <span class="bp">false</span>
+<span class="k">val</span> <span class="n">has_breakfast</span> <span class="p">=</span> <span class="n">got_milk</span> <span class="n">andalso</span> <span class="n">got_bread</span>  <span class="c">(* 'andalso' is the operator *)</span>
+<span class="k">val</span> <span class="n">has_something</span> <span class="p">=</span> <span class="n">got_milk</span> <span class="n">orelse</span> <span class="n">got_bread</span>   <span class="c">(* 'orelse' is the operator *)</span>
+<span class="k">val</span> <span class="n">is_sad</span> <span class="p">=</span> <span class="n">not</span><span class="p">(</span><span class="n">has_something</span><span class="p">)</span>                 <span class="c">(* not is a function *)</span>
+
+<span class="c">(* Many values can be compared using equality operators: = and &lt;&gt; *)</span>
+<span class="k">val</span> <span class="n">pays_same_rent</span> <span class="p">=</span> <span class="p">(</span><span class="n">rent</span> <span class="p">=</span> <span class="mi">1300</span><span class="p">)</span>  <span class="c">(* false *)</span>
+<span class="k">val</span> <span class="n">is_wrong_phone_no</span> <span class="p">=</span> <span class="p">(</span><span class="n">phone_no</span> <span class="o">&lt;&gt;</span> <span class="mi">5551337</span><span class="p">)</span>  <span class="c">(* false *)</span>
+
+<span class="c">(* The operator &lt;&gt; is what most other languages call !=. *)</span>
+<span class="c">(* 'andalso' and 'orelse' are called &amp;&amp; and || in many other languages. *)</span>
+
+<span class="c">(* Actually, most of the parentheses above are unnecessary.  Here are some
+   different ways to say some of the things mentioned above: *)</span>
+<span class="k">fun</span> <span class="n">is_large</span> <span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">&gt;</span> <span class="mi">37</span>  <span class="c">(* The parens above were necessary because of ': int' *)</span>
+<span class="k">val</span> <span class="n">is_sad</span> <span class="p">=</span> <span class="n">not</span> <span class="n">has_something</span>
+<span class="k">val</span> <span class="n">pays_same_rent</span> <span class="p">=</span> <span class="n">rent</span> <span class="p">=</span> <span class="mi">1300</span>  <span class="c">(* Looks confusing, but works *)</span>
+<span class="k">val</span> <span class="n">is_wrong_phone_no</span> <span class="p">=</span> <span class="n">phone_no</span> <span class="o">&lt;&gt;</span> <span class="mi">5551337</span>
+<span class="k">val</span> <span class="n">negative_rent</span> <span class="p">=</span> <span class="p">~</span><span class="n">rent</span>  <span class="c">(* ~ rent (notice the space) would also work *)</span>
+
+<span class="c">(* Parentheses are mostly necessary when grouping things: *)</span>
+<span class="k">val</span> <span class="n">some_answer</span> <span class="p">=</span> <span class="n">is_large</span> <span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>      <span class="c">(* Without parens, this would break! *)</span>
+<span class="c">(* val some_answer = is_large 5 + 5 *)</span>  <span class="c">(* Read as: (is_large 5) + 5. Bad! *)</span>
+
+
+<span class="c">(* Besides booleans, ints and reals, Standard ML also has chars and strings: *)</span>
+<span class="k">val</span> <span class="n">foo</span> <span class="p">=</span> <span class="s2">"Hello, World!</span><span class="se">\n</span><span class="s2">"</span>  <span class="c">(* The \n is the escape sequence for linebreaks *)</span>
+<span class="k">val</span> <span class="n">one_letter</span> <span class="p">=</span> <span class="p">#</span><span class="s2">"a"</span>        <span class="c">(* That funky syntax is just one character, a *)</span>
+
+<span class="k">val</span> <span class="n">combined</span> <span class="p">=</span> <span class="s2">"Hello "</span> <span class="o">^</span> <span class="s2">"there, "</span> <span class="o">^</span> <span class="s2">"fellow!</span><span class="se">\n</span><span class="s2">"</span>  <span class="c">(* Concatenate strings *)</span>
+
+<span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="n">print</span> <span class="n">foo</span>       <span class="c">(* You can print things. We are not interested in the *)</span>
+<span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="n">print</span> <span class="n">combined</span>  <span class="c">(* result of this computation, so we throw it away. *)</span>
+<span class="c">(* val _ = print one_letter *)</span>  <span class="c">(* Only strings can be printed this way *)</span>
+
+
+<span class="k">val</span> <span class="n">bar</span> <span class="p">=</span> <span class="p">[</span> <span class="p">#</span><span class="s2">"H"</span><span class="p">,</span> <span class="p">#</span><span class="s2">"e"</span><span class="p">,</span> <span class="p">#</span><span class="s2">"l"</span><span class="p">,</span> <span class="p">#</span><span class="s2">"l"</span><span class="p">,</span> <span class="p">#</span><span class="s2">"o"</span> <span class="p">]</span>  <span class="c">(* SML also has lists! *)</span>
+<span class="c">(* val _ = print bar *)</span>  <span class="c">(* Lists are unfortunately not the same as strings *)</span>
+
+<span class="c">(* Fortunately they can be converted.  String is a library and implode and size
+   are functions available in that library that take strings as argument. *)</span>
+<span class="k">val</span> <span class="n">bob</span> <span class="p">=</span> <span class="nn">String</span><span class="p">.</span><span class="n">implode</span> <span class="n">bar</span>          <span class="c">(* gives "Hello" *)</span>
+<span class="k">val</span> <span class="n">bob_char_count</span> <span class="p">=</span> <span class="nn">String</span><span class="p">.</span><span class="n">size</span> <span class="n">bob</span>  <span class="c">(* gives 5 *)</span>
+<span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="n">print</span> <span class="p">(</span><span class="n">bob</span> <span class="o">^</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>            <span class="c">(* For good measure, add a linebreak *)</span>
+
+<span class="c">(* You can have lists of any kind *)</span>
+<span class="k">val</span> <span class="n">numbers</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">229</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">248</span><span class="p">]</span>  <span class="c">(* : int list *)</span>
+<span class="k">val</span> <span class="n">names</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">"Fred"</span><span class="p">,</span> <span class="s2">"Jane"</span><span class="p">,</span> <span class="s2">"Alice"</span> <span class="p">]</span>    <span class="c">(* : string list *)</span>
+
+<span class="c">(* Even lists of lists of things *)</span>
+<span class="k">val</span> <span class="n">groups</span> <span class="p">=</span> <span class="p">[</span> <span class="p">[</span> <span class="s2">"Alice"</span><span class="p">,</span> <span class="s2">"Bob"</span> <span class="o">],</span>
+               <span class="p">[</span> <span class="s2">"Huey"</span><span class="p">,</span> <span class="s2">"Dewey"</span><span class="p">,</span> <span class="s2">"Louie"</span> <span class="o">],</span>
+               <span class="p">[</span> <span class="s2">"Bonnie"</span><span class="p">,</span> <span class="s2">"Clyde"</span> <span class="p">]</span> <span class="p">]</span>     <span class="c">(* : string list list *)</span>
+
+<span class="k">val</span> <span class="n">number_count</span> <span class="p">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">length</span> <span class="n">numbers</span>     <span class="c">(* gives 7 *)</span>
+
+<span class="c">(* You can put single values in front of lists of the same kind using
+   the :: operator, called "the cons operator" (known from Lisp). *)</span>
+<span class="k">val</span> <span class="n">more_numbers</span> <span class="p">=</span> <span class="mi">13</span> <span class="p">::</span> <span class="n">numbers</span>  <span class="c">(* gives [13, 1, 3, 3, 7, ...] *)</span>
+<span class="k">val</span> <span class="n">more_groups</span>  <span class="p">=</span> <span class="p">[</span><span class="s2">"Batman"</span><span class="p">,</span><span class="s2">"Superman"</span><span class="p">]</span> <span class="p">::</span> <span class="n">groups</span>
+
+<span class="c">(* Lists of the same kind can be appended using the @ ("append") operator *)</span>
+<span class="k">val</span> <span class="n">guest_list</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">"Mom"</span><span class="p">,</span> <span class="s2">"Dad"</span> <span class="p">]</span> <span class="o">@</span> <span class="p">[</span> <span class="s2">"Aunt"</span><span class="p">,</span> <span class="s2">"Uncle"</span> <span class="p">]</span>
+
+<span class="c">(* This could have been done with the "cons" operator.  It is tricky because the
+   left-hand-side must be an element whereas the right-hand-side must be a list
+   of those elements. *)</span>
+<span class="k">val</span> <span class="n">guest_list</span> <span class="p">=</span> <span class="s2">"Mom"</span> <span class="p">::</span> <span class="s2">"Dad"</span> <span class="p">::</span> <span class="p">[</span> <span class="s2">"Aunt"</span><span class="p">,</span> <span class="s2">"Uncle"</span> <span class="p">]</span>
+<span class="k">val</span> <span class="n">guest_list</span> <span class="p">=</span> <span class="s2">"Mom"</span> <span class="p">::</span> <span class="p">(</span><span class="s2">"Dad"</span> <span class="p">::</span> <span class="p">(</span><span class="s2">"Aunt"</span> <span class="p">::</span> <span class="p">(</span><span class="s2">"Uncle"</span> <span class="p">::</span> <span class="bp">[]</span><span class="o">)))</span>
+
+<span class="c">(* If you have many lists of the same kind, you can concatenate them all *)</span>
+<span class="k">val</span> <span class="n">everyone</span> <span class="p">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">concat</span> <span class="n">groups</span>  <span class="c">(* [ "Alice", "Bob", "Huey", ... ] *)</span>
+
+<span class="c">(* A list can contain any (finite) number of values *)</span>
+<span class="k">val</span> <span class="n">lots</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span>  <span class="c">(* still just an int list *)</span>
+
+<span class="c">(* Lists can only contain one kind of thing... *)</span>
+<span class="c">(* val bad_list = [ 1, "Hello", 3.14159 ] : ??? list *)</span>
+
+
+<span class="c">(* Tuples, on the other hand, can contain a fixed number of different things *)</span>
+<span class="k">val</span> <span class="n">person1</span> <span class="p">=</span> <span class="p">(</span><span class="s2">"Simon"</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">)</span>  <span class="c">(* : string * int * real *)</span>
+
+<span class="c">(* You can even have tuples inside lists and lists inside tuples *)</span>
+<span class="k">val</span> <span class="n">likes</span> <span class="p">=</span> <span class="p">[</span> <span class="p">(</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="s2">"ice cream"</span><span class="o">),</span>
+              <span class="p">(</span><span class="s2">"Bob"</span><span class="p">,</span>   <span class="s2">"hot dogs"</span><span class="o">),</span>
+              <span class="p">(</span><span class="s2">"Bob"</span><span class="p">,</span>   <span class="s2">"Alice"</span><span class="p">)</span> <span class="p">]</span>     <span class="c">(* : (string * string) list *)</span>
+
+<span class="k">val</span> <span class="n">mixup</span> <span class="p">=</span> <span class="p">[</span> <span class="p">(</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="mi">39</span><span class="o">),</span>
+              <span class="p">(</span><span class="s2">"Bob"</span><span class="p">,</span>   <span class="mi">37</span><span class="o">),</span>
+              <span class="p">(</span><span class="s2">"Eve"</span><span class="p">,</span>   <span class="mi">41</span><span class="p">)</span> <span class="p">]</span>  <span class="c">(* : (string * int) list *)</span>
+
+<span class="k">val</span> <span class="n">good_bad_stuff</span> <span class="p">=</span>
+  <span class="o">([</span><span class="s2">"ice cream"</span><span class="p">,</span> <span class="s2">"hot dogs"</span><span class="p">,</span> <span class="s2">"chocolate"</span><span class="o">],</span>
+   <span class="p">[</span><span class="s2">"liver"</span><span class="p">,</span> <span class="s2">"paying the rent"</span> <span class="o">])</span>           <span class="c">(* : string list * string list *)</span>
+
+
+<span class="c">(* Records are tuples with named slots *)</span>
+
+<span class="k">val</span> <span class="n">rgb</span> <span class="p">=</span> <span class="p">{</span> <span class="n">r</span><span class="p">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">23</span><span class="p">,</span> <span class="n">g</span><span class="p">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">56</span><span class="p">,</span> <span class="n">b</span><span class="p">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">91</span> <span class="p">}</span> <span class="c">(* : {b:real, g:real, r:real} *)</span>
+
+<span class="c">(* You don't need to declare their slots ahead of time. Records with
+   different slot names are considered different types, even if their
+   slot value types match up. For instance... *)</span>
+
+<span class="k">val</span> <span class="nc">Hsl</span> <span class="p">=</span> <span class="p">{</span> <span class="nc">H</span><span class="p">=</span><span class="mi">310</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span> <span class="n">s</span><span class="p">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">51</span><span class="p">,</span> <span class="n">l</span><span class="p">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">23</span> <span class="p">}</span> <span class="c">(* : {H:real, l:real, s:real} *)</span>
+<span class="k">val</span> <span class="nc">Hsv</span> <span class="p">=</span> <span class="p">{</span> <span class="nc">H</span><span class="p">=</span><span class="mi">310</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span> <span class="n">s</span><span class="p">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">51</span><span class="p">,</span> <span class="n">v</span><span class="p">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">23</span> <span class="p">}</span> <span class="c">(* : {H:real, s:real, v:real} *)</span>
+
+<span class="c">(* ...trying to evaluate `Hsv = Hsl` or `rgb = Hsl` would give a type
+   error. While they're all three-slot records composed only of `real`s,
+   they each have different names for at least some slots. *)</span>
+
+<span class="c">(* You can use hash notation to get values out of tuples. *)</span>
+
+<span class="k">val</span> <span class="nc">H</span> <span class="p">=</span> <span class="p">#</span><span class="nc">H</span> <span class="nc">Hsv</span> <span class="c">(* : real *)</span>
+<span class="k">val</span> <span class="n">s</span> <span class="p">=</span> <span class="p">#</span><span class="n">s</span> <span class="nc">Hsl</span> <span class="c">(* : real *)</span>
+
+<span class="c">(* Functions! *)</span>
+<span class="k">fun</span> <span class="n">add_them</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>    <span class="c">(* A simple function that adds two numbers *)</span>
+<span class="k">val</span> <span class="n">test_it</span> <span class="p">=</span> <span class="n">add_them</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c">(* gives 7 *)</span>
+
+<span class="c">(* Larger functions are usually broken into several lines for readability *)</span>
+<span class="k">fun</span> <span class="n">thermometer</span> <span class="n">temp</span> <span class="p">=</span>
+    <span class="k">if</span> <span class="n">temp</span> <span class="p">&lt;</span> <span class="mi">37</span>
+    <span class="k">then</span> <span class="s2">"Cold"</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="n">temp</span> <span class="p">&gt;</span> <span class="mi">37</span>
+         <span class="k">then</span> <span class="s2">"Warm"</span>
+         <span class="k">else</span> <span class="s2">"Normal"</span>
+
+<span class="k">val</span> <span class="n">test_thermo</span> <span class="p">=</span> <span class="n">thermometer</span> <span class="mi">40</span>  <span class="c">(* gives "Warm" *)</span>
+
+<span class="c">(* if-sentences are actually expressions and not statements/declarations.
+   A function body can only contain one expression.  There are some tricks
+   for making a function do more than just one thing, though. *)</span>
+
+<span class="c">(* A function can call itself as part of its result (recursion!) *)</span>
+<span class="k">fun</span> <span class="n">fibonacci</span> <span class="n">n</span> <span class="p">=</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="p">=</span> <span class="mi">0</span> <span class="k">then</span> <span class="mi">0</span> <span class="k">else</span>                   <span class="c">(* Base case *)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="p">=</span> <span class="mi">1</span> <span class="k">then</span> <span class="mi">1</span> <span class="k">else</span>                   <span class="c">(* Base case *)</span>
+    <span class="n">fibonacci</span> <span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span> <span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">2</span><span class="p">)</span>  <span class="c">(* Recursive case *)</span>
+
+<span class="c">(* Sometimes recursion is best understood by evaluating a function by hand:
+
+ fibonacci 4
+   ~&gt; fibonacci (4 - 1) + fibonacci (4 - 2)
+   ~&gt; fibonacci 3 + fibonacci 2
+   ~&gt; (fibonacci (3 - 1) + fibonacci (3 - 2)) + fibonacci 2
+   ~&gt; (fibonacci 2 + fibonacci 1) + fibonacci 2
+   ~&gt; ((fibonacci (2 - 1) + fibonacci (2 - 2)) + fibonacci 1) + fibonacci 2
+   ~&gt; ((fibonacci 1 + fibonacci 0) + fibonacci 1) + fibonacci 2
+   ~&gt; ((1 + fibonacci 0) + fibonacci 1) + fibonacci 2
+   ~&gt; ((1 + 0) + fibonacci 1) + fibonacci 2
+   ~&gt; (1 + fibonacci 1) + fibonacci 2
+   ~&gt; (1 + 1) + fibonacci 2
+   ~&gt; 2 + fibonacci 2
+   ~&gt; 2 + (fibonacci (2 - 1) + fibonacci (2 - 2))
+   ~&gt; 2 + (fibonacci (2 - 1) + fibonacci (2 - 2))
+   ~&gt; 2 + (fibonacci 1 + fibonacci 0)
+   ~&gt; 2 + (1 + fibonacci 0)
+   ~&gt; 2 + (1 + 0)
+   ~&gt; 2 + 1
+   ~&gt; 3  which is the 4th Fibonacci number, according to this definition
+
+ *)</span>
+
+<span class="c">(* A function cannot change the variables it can refer to.  It can only
+   temporarily shadow them with new variables that have the same names.  In this
+   sense, variables are really constants and only behave like variables when
+   dealing with recursion.  For this reason, variables are also called value
+   bindings. An example of this: *)</span>
+
+<span class="k">val</span> <span class="n">x</span> <span class="p">=</span> <span class="mi">42</span>
+<span class="k">fun</span> <span class="n">answer</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="p">=</span>
+    <span class="k">if</span> <span class="n">question</span> <span class="p">=</span> <span class="s2">"What is the meaning of life, the universe and everything?"</span>
+    <span class="k">then</span> <span class="n">x</span>
+    <span class="k">else</span> <span class="k">raise</span> <span class="nc">Fail</span> <span class="s2">"I'm an exception. Also, I don't know what the answer is."</span>
+<span class="k">val</span> <span class="n">x</span> <span class="p">=</span> <span class="mi">43</span>
+<span class="k">val</span> <span class="n">hmm</span> <span class="p">=</span> <span class="n">answer</span> <span class="s2">"What is the meaning of life, the universe and everything?"</span>
+<span class="c">(* Now, hmm has the value 42.  This is because the function answer refers to
+   the copy of x that was visible before its own function definition. *)</span>
+
+
+<span class="c">(* Functions can take several arguments by taking one tuples as argument: *)</span>
+<span class="k">fun</span> <span class="n">solve2</span> <span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="n">real</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="n">real</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="n">real</span><span class="p">)</span> <span class="p">=</span>
+    <span class="p">(</span> <span class="o">(~</span><span class="n">b</span> <span class="o">+</span> <span class="nn">Math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span> <span class="p">*</span> <span class="n">b</span> <span class="p">-</span> <span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">*</span><span class="n">a</span><span class="p">*</span><span class="n">c</span><span class="o">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="p">*</span> <span class="n">a</span><span class="o">),</span>
+      <span class="o">(~</span><span class="n">b</span> <span class="p">-</span> <span class="nn">Math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span> <span class="p">*</span> <span class="n">b</span> <span class="p">-</span> <span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">*</span><span class="n">a</span><span class="p">*</span><span class="n">c</span><span class="o">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="p">*</span> <span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="c">(* Sometimes, the same computation is carried out several times. It makes sense
+   to save and re-use the result the first time. We can use "let-bindings": *)</span>
+<span class="k">fun</span> <span class="n">solve2</span> <span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="n">real</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="n">real</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="n">real</span><span class="p">)</span> <span class="p">=</span>
+    <span class="k">let</span> <span class="k">val</span> <span class="n">discr</span>  <span class="p">=</span> <span class="n">b</span> <span class="p">*</span> <span class="n">b</span> <span class="p">-</span> <span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">*</span><span class="n">a</span><span class="p">*</span><span class="n">c</span>
+        <span class="k">val</span> <span class="n">sqr</span> <span class="p">=</span> <span class="nn">Math</span><span class="p">.</span><span class="n">sqrt</span> <span class="n">discr</span>
+        <span class="k">val</span> <span class="n">denom</span> <span class="p">=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="p">*</span> <span class="n">a</span>
+    <span class="k">in</span> <span class="o">((~</span><span class="n">b</span> <span class="o">+</span> <span class="n">sqr</span><span class="p">)</span> <span class="o">/</span> <span class="n">denom</span><span class="p">,</span>
+        <span class="o">(~</span><span class="n">b</span> <span class="p">-</span> <span class="n">sqr</span><span class="p">)</span> <span class="o">/</span> <span class="n">denom</span><span class="p">)</span> <span class="k">end</span>
+
+
+<span class="c">(* Pattern matching is a funky part of functional programming.  It is an
+   alternative to if-sentences.  The fibonacci function can be rewritten: *)</span>
+<span class="k">fun</span> <span class="n">fibonacci</span> <span class="mi">0</span> <span class="p">=</span> <span class="mi">0</span>  <span class="c">(* Base case *)</span>
+  <span class="p">|</span> <span class="n">fibonacci</span> <span class="mi">1</span> <span class="p">=</span> <span class="mi">1</span>  <span class="c">(* Base case *)</span>
+  <span class="p">|</span> <span class="n">fibonacci</span> <span class="n">n</span> <span class="p">=</span> <span class="n">fibonacci</span> <span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span> <span class="p">(</span><span class="n">n</span> <span class="p">-</span> <span class="mi">2</span><span class="p">)</span>  <span class="c">(* Recursive case *)</span>
+
+<span class="c">(* Pattern matching is also possible on composite types like tuples, lists and
+   records. Writing "fun solve2 (a, b, c) = ..." is in fact a pattern match on
+   the one three-tuple solve2 takes as argument. Similarly, but less intuitively,
+   you can match on a list consisting of elements in it (from the beginning of
+   the list only). *)</span>
+<span class="k">fun</span> <span class="n">first_elem</span> <span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">xs</span><span class="p">)</span> <span class="p">=</span> <span class="n">x</span>
+<span class="k">fun</span> <span class="n">second_elem</span> <span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">y</span><span class="p">::</span><span class="n">xs</span><span class="p">)</span> <span class="p">=</span> <span class="n">y</span>
+<span class="k">fun</span> <span class="n">evenly_positioned_elems</span> <span class="p">(</span><span class="n">odd</span><span class="p">::</span><span class="n">even</span><span class="p">::</span><span class="n">xs</span><span class="p">)</span> <span class="p">=</span> <span class="n">even</span><span class="p">::</span><span class="n">evenly_positioned_elems</span> <span class="n">xs</span>
+  <span class="p">|</span> <span class="n">evenly_positioned_elems</span> <span class="p">[</span><span class="n">odd</span><span class="p">]</span> <span class="p">=</span> <span class="bp">[]</span>  <span class="c">(* Base case: throw away *)</span>
+  <span class="p">|</span> <span class="n">evenly_positioned_elems</span> <span class="bp">[]</span>    <span class="p">=</span> <span class="bp">[]</span>  <span class="c">(* Base case *)</span>
+
+<span class="c">(* When matching on records, you must use their slot names, and you must bind
+   every slot in a record. The order of the slots doesn't matter though. *)</span>
+
+<span class="k">fun</span> <span class="n">rgbToTup</span> <span class="p">{</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">}</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>    <span class="c">(* fn : {b:'a, g:'b, r:'c} -&gt; 'c * 'b * 'a *)</span>
+<span class="k">fun</span> <span class="n">mixRgbToTup</span> <span class="p">{</span><span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">r</span><span class="p">}</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="c">(* fn : {b:'a, g:'b, r:'c} -&gt; 'c * 'b * 'a *)</span>
+
+<span class="c">(* If called with {r=0.1, g=0.2, b=0.3}, either of the above functions
+   would return (0.1, 0.2, 0.3). But it would be a type error to call them
+   with {r=0.1, g=0.2, b=0.3, a=0.4} *)</span>
+
+<span class="c">(* Higher order functions: Functions can take other functions as arguments.
+   Functions are just other kinds of values, and functions don't need names
+   to exist.  Functions without names are called "anonymous functions" or
+   lambda expressions or closures (since they also have a lexical scope). *)</span>
+<span class="k">val</span> <span class="n">is_large</span> <span class="p">=</span> <span class="p">(</span><span class="n">fn</span> <span class="n">x</span> <span class="o">=&gt;</span> <span class="n">x</span> <span class="p">&gt;</span> <span class="mi">37</span><span class="p">)</span>
+<span class="k">val</span> <span class="n">add_them</span> <span class="p">=</span> <span class="n">fn</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="k">val</span> <span class="n">thermometer</span> <span class="p">=</span>
+    <span class="n">fn</span> <span class="n">temp</span> <span class="o">=&gt;</span> <span class="k">if</span> <span class="n">temp</span> <span class="p">&lt;</span> <span class="mi">37</span>
+               <span class="k">then</span> <span class="s2">"Cold"</span>
+               <span class="k">else</span> <span class="k">if</span> <span class="n">temp</span> <span class="p">&gt;</span> <span class="mi">37</span>
+                    <span class="k">then</span> <span class="s2">"Warm"</span>
+                    <span class="k">else</span> <span class="s2">"Normal"</span>
+
+<span class="c">(* The following uses an anonymous function directly and gives "ColdWarm" *)</span>
+<span class="k">val</span> <span class="n">some_result</span> <span class="p">=</span> <span class="p">(</span><span class="n">fn</span> <span class="n">x</span> <span class="o">=&gt;</span> <span class="n">thermometer</span> <span class="p">(</span><span class="n">x</span> <span class="p">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">^</span> <span class="n">thermometer</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="o">))</span> <span class="mi">37</span>
+
+<span class="c">(* Here is a higher-order function that works on lists (a list combinator) *)</span>
+<span class="k">val</span> <span class="n">readings</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">37</span> <span class="p">]</span>  <span class="c">(* first an int list *)</span>
+<span class="k">val</span> <span class="n">opinions</span> <span class="p">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">map</span> <span class="n">thermometer</span> <span class="n">readings</span> <span class="c">(* gives [ "Cold", "Warm", ... ] *)</span>
+
+<span class="c">(* And here is another one for filtering lists *)</span>
+<span class="k">val</span> <span class="n">warm_readings</span> <span class="p">=</span> <span class="nn">List</span><span class="p">.</span><span class="n">filter</span> <span class="n">is_large</span> <span class="n">readings</span>  <span class="c">(* gives [39, 38] *)</span>
+
+<span class="c">(* You can create your own higher-order functions, too.  Functions can also take
+   several arguments by "currying" them. Syntax-wise this means adding spaces
+   between function arguments instead of commas and surrounding parentheses. *)</span>
+<span class="k">fun</span> <span class="n">map</span> <span class="n">f</span> <span class="bp">[]</span> <span class="p">=</span> <span class="bp">[]</span>
+  <span class="p">|</span> <span class="n">map</span> <span class="n">f</span> <span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">xs</span><span class="p">)</span> <span class="p">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">::</span> <span class="n">map</span> <span class="n">f</span> <span class="n">xs</span>
+
+<span class="c">(* map has type ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list and is called polymorphic. *)</span>
+<span class="c">(* 'a is called a type variable. *)</span>
+
+
+<span class="c">(* We can declare functions as infix *)</span>
+<span class="k">val</span> <span class="n">plus</span> <span class="p">=</span> <span class="n">add_them</span>   <span class="c">(* plus is now equal to the same function as add_them *)</span>
+<span class="n">infix</span> <span class="n">plus</span>            <span class="c">(* plus is now an infix operator *)</span>
+<span class="k">val</span> <span class="n">seven</span> <span class="p">=</span> <span class="mi">2</span> <span class="n">plus</span> <span class="mi">5</span>  <span class="c">(* seven is now bound to 7 *)</span>
+
+<span class="c">(* Functions can also be made infix before they are declared *)</span>
+<span class="n">infix</span> <span class="n">minus</span>
+<span class="k">fun</span> <span class="n">x</span> <span class="n">minus</span> <span class="n">y</span> <span class="p">=</span> <span class="n">x</span> <span class="p">-</span> <span class="n">y</span> <span class="c">(* It becomes a little hard to see what's the argument *)</span>
+<span class="k">val</span> <span class="n">four</span> <span class="p">=</span> <span class="mi">8</span> <span class="n">minus</span> <span class="mi">4</span>  <span class="c">(* four is now bound to 4 *)</span>
+
+<span class="c">(* An infix function/operator can be made prefix with 'op' *)</span>
+<span class="k">val</span> <span class="n">n</span> <span class="p">=</span> <span class="n">op</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>   <span class="c">(* n is now 10 *)</span>
+
+<span class="c">(* 'op' is useful when combined with high order functions because they expect
+   functions and not operators as arguments. Most operators are really just
+   infix functions. *)</span>
+<span class="k">val</span> <span class="n">sum_of_numbers</span> <span class="p">=</span> <span class="n">foldl</span> <span class="n">op</span><span class="o">+</span> <span class="mi">0</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+
+<span class="c">(* Datatypes are useful for creating both simple and complex structures *)</span>
+<span class="n">datatype</span> <span class="n">color</span> <span class="p">=</span> <span class="nc">Red</span> <span class="p">|</span> <span class="nc">Green</span> <span class="p">|</span> <span class="nc">Blue</span>
+
+<span class="c">(* Here is a function that takes one of these as argument *)</span>
+<span class="k">fun</span> <span class="n">say</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="p">=</span>
+    <span class="k">if</span> <span class="n">col</span> <span class="p">=</span> <span class="nc">Red</span> <span class="k">then</span> <span class="s2">"You are red!"</span> <span class="k">else</span>
+    <span class="k">if</span> <span class="n">col</span> <span class="p">=</span> <span class="nc">Green</span> <span class="k">then</span> <span class="s2">"You are green!"</span> <span class="k">else</span>
+    <span class="k">if</span> <span class="n">col</span> <span class="p">=</span> <span class="nc">Blue</span> <span class="k">then</span> <span class="s2">"You are blue!"</span> <span class="k">else</span>
+    <span class="k">raise</span> <span class="nc">Fail</span> <span class="s2">"Unknown color"</span>
+
+<span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="n">print</span> <span class="p">(</span><span class="n">say</span><span class="p">(</span><span class="nc">Red</span><span class="p">)</span> <span class="o">^</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c">(* Datatypes are very often used in combination with pattern matching *)</span>
+<span class="k">fun</span> <span class="n">say</span> <span class="nc">Red</span>   <span class="p">=</span> <span class="s2">"You are red!"</span>
+  <span class="p">|</span> <span class="n">say</span> <span class="nc">Green</span> <span class="p">=</span> <span class="s2">"You are green!"</span>
+  <span class="p">|</span> <span class="n">say</span> <span class="nc">Blue</span>  <span class="p">=</span> <span class="s2">"You are blue!"</span>
+  <span class="p">|</span> <span class="n">say</span> <span class="p">_</span>     <span class="p">=</span> <span class="k">raise</span> <span class="nc">Fail</span> <span class="s2">"Unknown color"</span>
+
+
+<span class="c">(* Here is a binary tree datatype *)</span>
+<span class="n">datatype</span> <span class="k">'</span><span class="n">a</span> <span class="n">btree</span> <span class="p">=</span> <span class="nc">Leaf</span> <span class="k">of</span> <span class="k">'</span><span class="n">a</span>
+                  <span class="p">|</span> <span class="nc">Node</span> <span class="k">of</span> <span class="k">'</span><span class="n">a</span> <span class="n">btree</span> <span class="p">*</span> <span class="k">'</span><span class="n">a</span> <span class="p">*</span> <span class="k">'</span><span class="n">a</span> <span class="n">btree</span> <span class="c">(* three-arg constructor *)</span>
+
+<span class="c">(* Here is a binary tree *)</span>
+<span class="k">val</span> <span class="n">myTree</span> <span class="p">=</span> <span class="nc">Node</span> <span class="p">(</span><span class="nc">Leaf</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="nc">Node</span> <span class="p">(</span><span class="nc">Leaf</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="nc">Leaf</span> <span class="mi">7</span><span class="o">))</span>
+
+<span class="c">(* Drawing it, it might look something like...
+
+           8
+          / \
+ leaf -&gt; 9   5
+            / \
+   leaf -&gt; 3   7 &lt;- leaf
+ *)</span>
+
+<span class="c">(* This function counts the sum of all the elements in a tree *)</span>
+<span class="k">fun</span> <span class="n">count</span> <span class="p">(</span><span class="nc">Leaf</span> <span class="n">n</span><span class="p">)</span> <span class="p">=</span> <span class="n">n</span>
+  <span class="p">|</span> <span class="n">count</span> <span class="p">(</span><span class="nc">Node</span> <span class="p">(</span><span class="n">leftTree</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">rightTree</span><span class="o">))</span> <span class="p">=</span> <span class="n">count</span> <span class="n">leftTree</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">count</span> <span class="n">rightTree</span>
+
+<span class="k">val</span> <span class="n">myTreeCount</span> <span class="p">=</span> <span class="n">count</span> <span class="n">myTree</span>  <span class="c">(* myTreeCount is now bound to 32 *)</span>
+
+
+<span class="c">(* Exceptions! *)</span>
+<span class="c">(* Exceptions can be raised/thrown using the reserved word 'raise' *)</span>
+<span class="k">fun</span> <span class="n">calculate_interest</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">=</span> <span class="k">if</span> <span class="n">n</span> <span class="p">&lt;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+                            <span class="k">then</span> <span class="k">raise</span> <span class="nc">Domain</span>
+                            <span class="k">else</span> <span class="n">n</span> <span class="p">*</span> <span class="mi">1</span><span class="p">.</span><span class="mi">04</span>
+
+<span class="c">(* Exceptions can be caught using "handle" *)</span>
+<span class="k">val</span> <span class="n">balance</span> <span class="p">=</span> <span class="n">calculate_interest</span> <span class="p">~</span><span class="mi">180</span><span class="p">.</span><span class="mi">0</span>
+              <span class="n">handle</span> <span class="nc">Domain</span> <span class="o">=&gt;</span> <span class="p">~</span><span class="mi">180</span><span class="p">.</span><span class="mi">0</span>    <span class="c">(* x now has the value ~180.0 *)</span>
+
+<span class="c">(* Some exceptions carry extra information with them *)</span>
+<span class="c">(* Here are some examples of built-in exceptions *)</span>
+<span class="k">fun</span> <span class="n">failing_function</span> <span class="bp">[]</span>    <span class="p">=</span> <span class="k">raise</span> <span class="nc">Empty</span>  <span class="c">(* used for empty lists *)</span>
+  <span class="p">|</span> <span class="n">failing_function</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span>   <span class="p">=</span> <span class="k">raise</span> <span class="nc">Fail</span> <span class="s2">"This list is too short!"</span>
+  <span class="p">|</span> <span class="n">failing_function</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">]</span> <span class="p">=</span> <span class="k">raise</span> <span class="nc">Overflow</span>  <span class="c">(* used for arithmetic *)</span>
+  <span class="p">|</span> <span class="n">failing_function</span> <span class="n">xs</span>    <span class="p">=</span> <span class="k">raise</span> <span class="nc">Fail</span> <span class="s2">"This list is too long!"</span>
+
+<span class="c">(* We can pattern match in 'handle' to make sure
+   a specfic exception was raised, or grab the message *)</span>
+<span class="k">val</span> <span class="n">err_msg</span> <span class="p">=</span> <span class="n">failing_function</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="n">handle</span> <span class="nc">Fail</span> <span class="p">_</span> <span class="o">=&gt;</span> <span class="s2">"Fail was raised"</span>
+                                          <span class="p">|</span> <span class="nc">Domain</span> <span class="o">=&gt;</span> <span class="s2">"Domain was raised"</span>
+                                          <span class="p">|</span> <span class="nc">Empty</span>  <span class="o">=&gt;</span> <span class="s2">"Empty was raised"</span>
+                                          <span class="p">|</span> <span class="p">_</span>      <span class="o">=&gt;</span> <span class="s2">"Unknown exception"</span>
+
+<span class="c">(* err_msg now has the value "Unknown exception" because Overflow isn't
+   listed as one of the patterns -- thus, the catch-all pattern _ is used. *)</span>
+
+<span class="c">(* We can define our own exceptions like this *)</span>
+<span class="k">exception</span> <span class="nc">MyException</span>
+<span class="k">exception</span> <span class="nc">MyExceptionWithMessage</span> <span class="k">of</span> <span class="kt">string</span>
+<span class="k">exception</span> <span class="nc">SyntaxError</span> <span class="k">of</span> <span class="kt">string</span> <span class="p">*</span> <span class="p">(</span><span class="kt">int</span> <span class="p">*</span> <span class="kt">int</span><span class="p">)</span>
+
+<span class="c">(* File I/O! *)</span>
+<span class="c">(* Write a nice poem to a file *)</span>
+<span class="k">fun</span> <span class="n">writePoem</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="p">=</span>
+    <span class="k">let</span> <span class="k">val</span> <span class="n">file</span> <span class="p">=</span> <span class="nn">TextIO</span><span class="p">.</span><span class="n">openOut</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="nn">TextIO</span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">"Roses are red,</span><span class="se">\n</span><span class="s2">Violets are blue.</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="nn">TextIO</span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">"I have a gun.</span><span class="se">\n</span><span class="s2">Get in the van.</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">in</span> <span class="nn">TextIO</span><span class="p">.</span><span class="n">closeOut</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">end</span>
+
+<span class="c">(* Read a nice poem from a file into a list of strings *)</span>
+<span class="k">fun</span> <span class="n">readPoem</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="p">=</span>
+    <span class="k">let</span> <span class="k">val</span> <span class="n">file</span> <span class="p">=</span> <span class="nn">TextIO</span><span class="p">.</span><span class="n">openIn</span> <span class="n">filename</span>
+        <span class="k">val</span> <span class="n">poem</span> <span class="p">=</span> <span class="nn">TextIO</span><span class="p">.</span><span class="n">inputAll</span> <span class="n">file</span>
+        <span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="nn">TextIO</span><span class="p">.</span><span class="n">closeIn</span> <span class="n">file</span>
+    <span class="k">in</span> <span class="nn">String</span><span class="p">.</span><span class="n">tokens</span> <span class="p">(</span><span class="n">fn</span> <span class="n">c</span> <span class="o">=&gt;</span> <span class="n">c</span> <span class="p">=</span> <span class="p">#</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span> <span class="n">poem</span>
+    <span class="k">end</span>
+
+<span class="k">val</span> <span class="p">_</span> <span class="p">=</span> <span class="n">writePoem</span> <span class="s2">"roses.txt"</span>
+<span class="k">val</span> <span class="n">test_poem</span> <span class="p">=</span> <span class="n">readPoem</span> <span class="s2">"roses.txt"</span>  <span class="c">(* gives [ "Roses are red,",
+                                                 "Violets are blue.",
+                                                 "I have a gun.",
+                                                 "Get in the van." ] *)</span>
+
+<span class="c">(* We can create references to data which can be updated *)</span>
+<span class="k">val</span> <span class="n">counter</span> <span class="p">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="c">(* Produce a reference with the ref function *)</span>
+
+<span class="c">(* Assign to a reference with the assignment operator *)</span>
+<span class="k">fun</span> <span class="n">set_five</span> <span class="n">reference</span> <span class="p">=</span> <span class="n">reference</span> <span class="p">:=</span> <span class="mi">5</span>
+
+<span class="c">(* Read a reference with the dereference operator *)</span>
+<span class="k">fun</span> <span class="n">equals_five</span> <span class="n">reference</span> <span class="p">=</span> <span class="o">!</span><span class="n">reference</span> <span class="p">=</span> <span class="mi">5</span>
+
+<span class="c">(* We can use while loops for when recursion is messy *)</span>
+<span class="k">fun</span> <span class="n">decrement_to_zero</span> <span class="n">r</span> <span class="p">=</span> <span class="k">if</span> <span class="o">!</span><span class="n">r</span> <span class="p">&lt;</span> <span class="mi">0</span>
+                          <span class="k">then</span> <span class="n">r</span> <span class="p">:=</span> <span class="mi">0</span>
+                          <span class="k">else</span> <span class="k">while</span> <span class="o">!</span><span class="n">r</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">do</span> <span class="n">r</span> <span class="p">:=</span> <span class="o">!</span><span class="n">r</span> <span class="p">-</span> <span class="mi">1</span>
+
+<span class="c">(* This returns the unit value (in practical terms, nothing, a 0-tuple) *)</span>
+
+<span class="c">(* To allow returning a value, we can use the semicolon to sequence evaluations *)</span>
+<span class="k">fun</span> <span class="n">decrement_ret</span> <span class="n">x</span> <span class="n">y</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">:=</span> <span class="o">!</span><span class="n">x</span> <span class="p">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y</span><span class="p">)</span>
+</code></pre>
+
+<h2>Further learning</h2>
+
+<ul>
+<li>Install an interactive compiler (REPL), for example
+<a href="http://www.polyml.org/">Poly/ML</a>,
+<a href="http://mosml.org">Moscow ML</a>,
+<a href="http://smlnj.org/">SML/NJ</a>.</li>
+<li>Follow the Coursera course <a href="https://www.coursera.org/course/proglang">Programming Languages</a>.</li>
+<li>Get the book <em>ML for the Working Programmer</em> by Larry C. Paulson.</li>
+<li>Use <a href="http://stackoverflow.com/questions/tagged/sml">StackOverflow&rsquo;s sml tag</a>.</li>
+</ul>
+
+    <hr>
+    <p>Got a suggestion? A correction, perhaps? <a href="https://github.com/adambard/learnxinyminutes-docs/issues/new">Open an Issue</a> on the Github Repo, or make a pull request yourself!
+    </p>
+    <p class="contributed">
+    Originally contributed by Simon Shine, and updated by <a href="https://github.com/adambard/learnxinyminutes-docs/blame/master/standard-ml.html.markdown">8 contributor(s)</a>.
+    </p>
+
+    <footer>
+    <a style="float: left" rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
+    <p>
+    &copy; 2016
+    
+      
+        <a href="http://shine.eu.org/">Simon Shine</a>,
+      
+    
+      
+        <a href="http://lonelyproton.com/">David Pedersen</a>,
+      
+    
+      
+        <a href="http://www.jbaker.io/">James Baker</a>,
+      
+    
+      
+        <a href="http://langnostic.inaimathi.ca/">Leo Zovic</a>
+      
+    
+    </p>
+
+    <p>
+    
+
+    </footer>
+  </div>
+
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="/js/script.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-3525624-21'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

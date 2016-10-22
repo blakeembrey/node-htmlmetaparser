@@ -1,0 +1,29 @@
+{
+  "url": "https://www.amazon.com/gp/product/1937785734?ref%5F=s9%5Fqpp%5Fgw%5Fd99%5Fg14%5Fi5%5Fr&redirect=true&fpl=fresh&pf%5Frd%5Fm=ATVPDKIKX0DER&pf%5Frd%5Fs=desktop-1&pf%5Frd%5Fr=92JG667YC8526036ANPR&pf%5Frd%5Ft=36701&pf%5Frd%5Fp=6aad23bd-3035-4a40-b691-0eefb1a18396&pf%5Frd%5Fi=desktop&pldnSite=1",
+  "headers": {
+    "cache-control": "no-cache, no-transform",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:47 GMT",
+    "expires": "-1",
+    "p3p": "policyref=\"https://www.amazon.com/w3c/p3p.xml\",CP=\"CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC \"",
+    "pragma": "no-cache",
+    "server": "Server",
+    "set-cookie": [
+      "x-wl-uid=1j7wxePt8hrAiBTPUBKh82OtRKFolZie/YcFQorFAFwGwRfInyYwDsU6zubqIqrJs+fQl5zofsGg=; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT",
+      "ubid-main=156-7883569-4806605; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT",
+      "session-id-time=2082787201l; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT",
+      "session-id=156-1988293-0105640; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036 08:00:01 GMT"
+    ],
+    "strict-transport-security": "max-age=47474747; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding,User-Agent",
+    "x-amz-id-1": "RPGJF0BVXYPQ350P74BR",
+    "x-frame-options": "SAMEORIGIN",
+    "x-ua-compatible": "IE=edge"
+  },
+  "originalUrl": "https://smile.amazon.com/gp/product/1937785734/ref=s9_qpp_gw_d99_g14_i5_r?ie=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=desktop-1&pf_rd_r=92JG667YC8526036ANPR&pf_rd_t=36701&pf_rd_p=6aad23bd-3035-4a40-b691-0eefb1a18396&pf_rd_i=desktop",
+  "status": 200,
+  "statusText": "OK"
+}

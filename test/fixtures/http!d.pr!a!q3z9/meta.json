@@ -1,0 +1,21 @@
+{
+  "url": "http://d.pr/a/q3z9",
+  "headers": {
+    "cache-control": "max-age=0, private, must-revalidate",
+    "connection": "close",
+    "content-length": "24902",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "etag": "\"9b5430eb6e8ef8911d66b920979092ea\"",
+    "server": "nginx/1.9.15",
+    "set-cookie": "_droplr_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVEkiJWQ3MGZjNmFjZDRlZDJlZjFhZDZkMzczMTdmN2Y5MDhlBjsAVEkiCmR1bW15BjsARkkiCmR1bW15BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMW9DREdpeEhrS1Noa2M4OGFDZDNFYUV2NlovaG94UkdoQnVnWnNVdVJNams9BjsARg%3D%3D--aab71ff3c85f6a4ceb4342c810cbd66636afe571; path=/; HttpOnly",
+    "vary": "Origin",
+    "x-rack-cache": "miss",
+    "x-request-id": "448e86af6a2da70fa7d462e9322e7bed",
+    "x-runtime": "0.045025",
+    "x-ua-compatible": "IE=Edge,chrome=1"
+  },
+  "originalUrl": "http://d.pr/a/q3z9",
+  "status": 200,
+  "statusText": "OK"
+}

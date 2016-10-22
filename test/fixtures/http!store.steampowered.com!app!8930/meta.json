@@ -1,0 +1,26 @@
+{
+  "url": "http://store.steampowered.com/app/8930/",
+  "headers": {
+    "accept-ranges": "bytes",
+    "cache-control": "no-cache",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-length": "34699",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Mon, 26 Jul 1997 05:00:00 GMT",
+    "server": "Apache",
+    "set-cookie": [
+      "steamCountry=US%7Cfa26a75ed5ca6e197bdd79459e6bab90; path=/",
+      "browserid=169275336579929130; expires=Sun, 22-Oct-2017 02:10:46 GMT; path=/",
+      "recentapps=%7B%228930%22%3A1477102246%7D; expires=Fri, 20-Jan-2017 02:10:46 GMT; path=/",
+      "sessionid=b6775819c5793dca2959d332; path=/"
+    ],
+    "vary": "Accept-Encoding",
+    "x-frame-options": "DENY",
+    "x-varnish": "3363348559"
+  },
+  "originalUrl": "http://store.steampowered.com/app/8930/",
+  "status": 200,
+  "statusText": "OK"
+}

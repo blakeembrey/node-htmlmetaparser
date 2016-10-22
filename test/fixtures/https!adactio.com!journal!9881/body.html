@@ -1,0 +1,7152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+<meta name="theme-color" content="#ffffff" />
+<title>Adactio: Journal—Metadata markup</title>
+<meta name="description" content="So many standards to choose from." />
+<meta name="author" content="Jeremy Keith" />
+<meta name="robots" content="index,follow" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@adactio" />
+<meta name="twitter:site:id" content="11250" />
+<meta name="twitter:creator" content="@adactio" />
+<meta name="twitter:creator:id" content="11250" />
+<meta name="twitter:image" property="og:image" content="https://adactio.com/images/photo-300.jpg" />
+<meta name="twitter:url" property="og:url" content="https://adactio.com/journal/9881" />
+<meta name="twitter:title" property="og:title" content="Metadata markup" />
+<meta name="twitter:description" property="og:description" content="So many standards to choose from." />
+<link rel="canonical" href="https://adactio.com/journal/9881">
+<link rel="alternate amphtml" type="text/html" href="https://adactio.com/journal/9881/amp" />
+<link rel="me" href="mailto:jeremy@adactio.com" />
+<link rel="me" href="sms:+447792069292" />
+<link rel="me" href="ni:///sha-256;y5LuBRUHdxOlutHxDS2OnyEHuyFDai-rTxWMTuauXlI?ct=application/x-x509-user-cert" />
+<link rel="webmention" href="https://adactio.com/webmention" />
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+<link rel="authorization_endpoint" href="https://indiecert.net/auth" />
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+<link rel="token_endpoint" href="https://indiecert.net/token" />
+<link rel="micropub" href="https://adactio.com/micropub" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://adactio.com/opensearch.xml" title="Adactio" />
+<link rel="openid.server" href="https://indieauth.com/openid" />
+<link rel="openid.delegate" href="https://adactio.com/" />
+<link rel="alternate" type="application/rss+xml" title="Journal RSS" href="/journal/rss" />
+<link rel="alternate" type="application/rss+xml" title="Links RSS" href="/links/rss" />
+<link rel="alternate" type="application/rss+xml" title="Articles RSS" href="/articles/rss" />
+<link rel="alternate" type="application/rss+xml" title="Notes RSS" href="/notes/rss" />
+<link rel="alternate" type="application/rss+xml" title="Journal, links, articles and notes RSS" href="/rss/" />
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png" />
+<link rel="icon apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" type="image/png" />
+<link rel="author" href="/about/myself" title="About the author" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="stylesheet" href="/skins/default/global.css" />
+<link rel="stylesheet" href="/includes/css/print.css" media="print" title="print" />
+
+<!-- Ah, I see you want a peek at the source code. -->
+<!-- That's the great thing about the web: -->
+<!-- reverse engineering. -->
+<!-- If you have any questions, feel free to write to me: -->
+<!-- jeremy at adactio dot com -->
+
+</head>
+<body>
+
+<header role="banner">
+
+<!-- Begin with the logo -->
+
+<div id="logo">
+<a href="//adactio.com" accesskey="1" title="Home"><span>adactio</span></a>
+</div>
+
+
+<!-- Show any nice pictures here -->
+
+<div role="presentation">
+<div class="journal"></div>
+</div>
+
+<!-- Now we have the navigation -->
+
+<div role="navigation">
+
+<nav>
+<ul>
+<li><a class="here" href="/journal/" title="My thoughts and ramblings">Journal</a></li>
+<li><a href="/links/" title="Handpicked hyperlinks">Links</a></li>
+<li><a href="/articles/" title="Longer thoughts and ramblings">Articles</a></li>
+<li><a href="/notes/" title="Brief observations">Notes</a></li>
+<li><a href="/about/" title="Background information">About</a></li>
+</ul>
+</nav>
+
+</div>
+
+</header>
+
+<!-- Here's the main content -->
+
+<main role="main">
+<div class="h-entry">
+
+<h1 class="p-name">
+Metadata markup
+</h1>
+<h2>
+<time class="dt-published" datetime="2015-11-28T17:58:16">
+November 28th, 2015
+</time>
+</h2>
+
+<div class="e-content">
+<p>When something on your website is shared on Twitter or Facebook, you probably want a nice preview to appear with it, right?</p>
+
+<p>For Twitter, you can use <a href="https://dev.twitter.com/cards/overview">Twitter cards</a>—a collection of <code>meta</code> elements you place in the head of your document.</p>
+
+<p>For Facebook, you can use the grandiosely-titled <a href="http://ogp.me/">Open Graph protocol</a>—a collection of <code>meta</code> elements you place in the head of your document.</p>
+
+<p>What&#8217;s that you say? They sound awfully similar? Why, no! I mean, just look at the difference. Here&#8217;s how you&#8217;d mark up a blog post for Twitter:</p>
+
+<pre><code>&lt;meta name="twitter:url" content="https://adactio.com/journal/9881"&gt;
+&lt;meta name="twitter:title" content="Metadata markup"&gt;
+&lt;meta name="twitter:description" content="So many standards to choose from."&gt;
+&lt;meta name="twitter:image" content="https://adactio.com/icon.png"&gt;
+</code></pre>
+
+<p>Whereas here&#8217;s how you&#8217;d mark up the same blog post for Facebook:</p>
+
+<pre><code>&lt;meta property="og:url" content="https://adactio.com/journal/9881"&gt;
+&lt;meta property="og:title" content="Metadata markup"&gt;
+&lt;meta property="og:description" content="So many standards to choose from."&gt;
+&lt;meta property="og:image" content="https://adactio.com/icon.png"&gt;
+</code></pre>
+
+<p>See? Completely different.</p>
+
+<p>Okay, I&#8217;ll attempt to dial down my sarcasm, but I find this wastage annoying. It adds unnecessary complexity, which in turn, I suspect, puts a lot of people off even trying to implement this stuff. In short: <a href="https://xkcd.com/927/">927</a>.</p>
+
+<p>We&#8217;ve seen this kind of waste before. I remember when Netscape and Microsoft were battling it out in the browser wars: Internet Explorer added a proprietary <code>acronym</code> element, while Netscape added the <code>abbr</code> element. They both basically did the same thing. For years, Internet Explorer refused to implement the <code>abbr</code> element out of sheer spite.</p>
+
+<p>A more recent example of the negative effects of competing <q class="air">standards</q> was on display at this year&#8217;s Edge conference in London. In <a href="https://www.youtube.com/watch?v=F32zw1CvZpM">a session on front-end data</a>, <a href="http://nolanlawson.com/">Nolan Lawson</a> decried the fact that developers weren&#8217;t making more use of the client-side storage options available in browsers today. After all, there are so many to choose from: LocalStorage, WebSQL, IndexedDB&#8230;</p>
+
+<p>(Hint: if developers aren&#8217;t showing much enthusiasm for the latest and greatest API which is <em>sooooo</em> much better than the previous APIs they were also encouraged to use at the time, perhaps their reticence is understandable.)</p>
+
+<p>Anyway, back to <a href="http://www.well.com/~doctorow/metacrap.htm">metacrap</a>.</p>
+
+<p><a href="http://a.wholelottanothing.org/">Matt</a> has written a guide to what you need to do in order to <a href="https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254">get a preview of your posts to appear in Slack</a>. Fortunately the answer is <em>not</em> yet another collection of <code>meta</code> elements to place in the head of your document. Instead, Slack piggybacks on the existing combatants: <a href="http://oembed.com/">oEmbed</a>, Twitter Cards, and Open Graph.</p>
+
+<p>So to placate both Twitter and Facebook (with Slack thrown in for good measure), your metadata markup is supposed to look something like this:</p>
+
+<pre><code>&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:site" content="@adactio"&gt;
+&lt;meta name="twitter:url" content="https://adactio.com/journal/9881"&gt;
+&lt;meta name="twitter:title" content="Metadata markup"&gt;
+&lt;meta name="twitter:description" content="So many standards to choose from."&gt;
+&lt;meta name="twitter:image" content="https://adactio.com/icon.png"&gt;
+&lt;meta property="og:url" content="https://adactio.com/journal/9881"&gt;
+&lt;meta property="og:title" content="Metadata markup"&gt;
+&lt;meta property="og:description" content="So many standards to choose from."&gt;
+&lt;meta property="og:image" content="https://adactio.com/icon.png"&gt;
+</code></pre>
+
+<p>There are two things on display here: redundancy, and also, redundancy.</p>
+
+<p>Now the eagle-eyed amongst you will have spotted a crucial difference between the Twitter metacrap and the Facebook metacrap. The Twitter metacrap uses the <code>name</code> attribute on the <code>meta</code> element, whereas the Facebook metacrap uses the <code>property</code> attribute. Technically, <a href="http://dev.w3.org/html5/spec-preview/the-meta-element.html">there is no <code>property</code> attribute in HTML</a>—it&#8217;s <a href="http://www.w3.org/TR/rdfa-lite/#vocab-typeof-and-property">an RDFa thing</a>. But the fact that they&#8217;re using two different attributes means that we can squish the <code>meta</code> elements together like this:</p>
+
+<pre><code>&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:site" content="@adactio"&gt;
+&lt;meta name="twitter:url" property="og:url" content="https://adactio.com/journal/9881"&gt;
+&lt;meta name="twitter:title" property="og:title" content="Metadata markup"&gt;
+&lt;meta name="twitter:description" property="og:description" content="So many standards to choose from."&gt;
+&lt;meta name="twitter:image" property="og:image" content="https://adactio.com/icon.png"&gt;
+</code></pre>
+
+<p>There. I saved you at least a little bit of typing.</p>
+
+<p>The metacrap situation is even more ridiculous for &#8220;add to homescreen&#8221;/&#8221;pin to start&#8221;/whatever else browser makers can&#8217;t agree on&#8230;</p>
+
+<p>Microsoft:</p>
+
+<pre><code>&lt;meta name="msapplication-starturl" content="https://adactio.com" /&gt;
+&lt;meta name="msapplication-window" content="width=800;height=600"&gt;
+&lt;meta name="msapplication-tooltip" content="Kill me now..."&gt;
+</code></pre>
+
+<p>Apple:</p>
+
+<pre><code>&lt;link rel="apple-touch-icon" href="https://adactio.com/icon.png"&gt;
+</code></pre>
+
+<p>(Repeat <a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">four or five times</a> with different variations of icon sizes, and be sure to create icons with new sizes after every. single. Apple. keynote.)</p>
+
+<p>Fortunately Google, Opera, and Mozilla appear to be converging on <a href="https://adactio.com/journal/9814">using an external manifest file</a>:</p>
+
+<pre><code>&lt;link rel="manifest" href="https://adactio.com/manifest.json"&gt;
+</code></pre>
+
+<p>Perhaps our long national nightmare of balkanised metacrap is finally coming to an end, and clearer <code>head</code>s will prevail.</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<time datetime="2015-11-28T17:58:16Z">
+5:58pm
+</time>
+</p>
+<p class="meta">
+Tagged with
+<a rel="tag" href="/journal/tags/metadata">metadata</a>
+<a rel="tag" href="/journal/tags/metacrap">metacrap</a>
+<a rel="tag" href="/journal/tags/markup">markup</a>
+<a rel="tag" href="/journal/tags/html">html</a>
+<a rel="tag" href="/journal/tags/twitter">twitter</a>
+<a rel="tag" href="/journal/tags/facebook">facebook</a>
+<a rel="tag" href="/journal/tags/slack">slack</a>
+</p>
+<p class="meta">
+Also on
+<a rel="alternate amphtml" href="/journal/9881/amp"><abbr title="Accelerated Mobile Pages">AMP</abbr></a>
+<a rel="syndication" class="u-syndication" href="https://medium.com/@adactio/8441c50f617c">Medium</a>
+</p>
+</footer>
+
+<p>
+<a rel="prev" href="/journal/9859" title="Notice">&laquo; Older</a>
+<a rel="next" href="/journal/9888" title="Cache-limiting in Service Workers …again">Newer &raquo;</a>
+</p>
+
+<form method="post" action="/webmention">
+<p>Have you published a response to this? <label for="webmention-source">Let me know the <abbr title="Uniform Resource Locator">URL</abbr></label>:</p>
+<input type="url" name="source" id="webmention-source" />
+<input type="hidden" name="target" value="https://adactio.com/journal/9881" />
+<button type="submit">Ping!</button>
+</form>
+
+<section>
+<h2>Responses</h2>
+<article class="p-comment h-entry" id="comment25126">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/cote/status/670668080184455168">
+Coté
+</a>
+</h3>
+
+<div class="e-content">
+<p>&#8220;We’ve seen this kind of waste before&#8221; - a programmer&#8217;s waste is a shareholder&#8217;s profit <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25126" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/cote/status/670668080184455168">
+Coté</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-28T18:18:25">
+Saturday,
+November 28th, 2015
+at
+6:18pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25127">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Toon/status/670670943291883520">
+Toon Vanagt
+</a>
+</h3>
+
+<div class="e-content">
+<p>Webdevs all agree MetaCrap to generate content &#8220;previews&#8221; gets summarised as: &#8220;redundancy, and also, redundancy.&#8221; <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25127" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Toon/status/670670943291883520">
+Toon Vanagt</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-28T18:29:48">
+Saturday,
+November 28th, 2015
+at
+6:29pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25132">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/rmondello/status/670744484389527556">
+Ricky Mondello
+</a>
+</h3>
+
+<div class="e-content">
+<p>A nice primer on using metadata to make links look better when shared on social media. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25132" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/rmondello/status/670744484389527556">
+Ricky Mondello</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-28T23:22:01">
+Saturday,
+November 28th, 2015
+at
+11:22pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25134">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/vernalkick/status/670772515447382016">
+Kevin Clark
+</a>
+</h3>
+
+<div class="e-content">
+<p>Good tips on adding social metacrap to your website. (via <a href="https://twitter.com/rmondello">@rmondello</a>) <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25134" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/vernalkick/status/670772515447382016">
+Kevin Clark</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T01:13:24">
+Sunday,
+November 29th, 2015
+at
+1:13am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25133">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/rmondello/status/670772635719069697">
+Ricky Mondello
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/vernalkick">@vernalkick</a> lol
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25133" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/rmondello/status/670772635719069697">
+Ricky Mondello</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T01:13:53">
+Sunday,
+November 29th, 2015
+at
+1:13am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25135">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/calvinccc/status/670775469701140480">
+Calvin Chong
+</a>
+</h3>
+
+<div class="e-content">
+<p>On merging Twitter and Facebook’s metacrap… <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25135" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/calvinccc/status/670775469701140480">
+Calvin Chong</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T01:25:09">
+Sunday,
+November 29th, 2015
+at
+1:25am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25136">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/cheeaun/status/670805936034959360">
+Lim Chee Aun
+</a>
+</h3>
+
+<div class="e-content">
+<p>&#8220;Metadata markup&#8221; <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23metacrap">#metacrap</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25136" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/cheeaun/status/670805936034959360">
+Lim Chee Aun</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T03:26:12">
+Sunday,
+November 29th, 2015
+at
+3:26am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25138">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/HrvojeKC/status/670868399627640832">
+Hrvoje Blažeković
+</a>
+</h3>
+
+<div class="e-content">
+<p>Exactly &#8220;Metadata markup&#8221; by <a href="https://twitter.com/adactio">@adactio</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25138" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/HrvojeKC/status/670868399627640832">
+Hrvoje Blažeković</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T07:34:25">
+Sunday,
+November 29th, 2015
+at
+7:34am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25139">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/psinkinson/status/670889953874870272">
+Paul Sinkinson
+</a>
+</h3>
+
+<div class="e-content">
+<p>&#8220;Metadata markup&#8221; <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25139" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/psinkinson/status/670889953874870272">
+Paul Sinkinson</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T09:00:04">
+Sunday,
+November 29th, 2015
+at
+9:00am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25140">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/nsteiner/status/670901091400294400">
+Nate Steiner
+</a>
+</h3>
+
+<div class="e-content">
+<p>Helpful method from <a href="https://twitter.com/adactio">@adactio</a> to reduce social metadata junk by merging some tags. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25140" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/nsteiner/status/670901091400294400">
+Nate Steiner</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T09:44:19">
+Sunday,
+November 29th, 2015
+at
+9:44am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25141">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/43north/status/670904839732248576">
+43 North Design
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25141" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/43north/status/670904839732248576">
+43 North Design</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T09:59:13">
+Sunday,
+November 29th, 2015
+at
+9:59am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25142">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/fjordaan/status/670912966888394753">
+Francois Jordaan
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metacrap and competing standards <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> Great post by <a href="https://twitter.com/adactio">@adactio</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25142" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/fjordaan/status/670912966888394753">
+Francois Jordaan</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T10:31:30">
+Sunday,
+November 29th, 2015
+at
+10:31am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25143">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/steveblamey/status/670929715079852032">
+Steve Blamey
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup<a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25143" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/steveblamey/status/670929715079852032">
+Steve Blamey</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T11:38:04">
+Sunday,
+November 29th, 2015
+at
+11:38am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25144">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/erwinheiser/status/670964322579914754">
+erwinheiser
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/matuvu">@matuvu</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> Great minds think alike :) <a href="https://twitter.com/search?q=%23metacrap">#metacrap</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25144" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/erwinheiser/status/670964322579914754">
+erwinheiser</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T13:55:35">
+Sunday,
+November 29th, 2015
+at
+1:55pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25151">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/CSSTricks_Bot/status/671027405306200064">
+CSS Tricks
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://dlvr.it/Csx5pj">dlvr.it/Csx5pj</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25151" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/CSSTricks_Bot/status/671027405306200064">
+CSS Tricks</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:06:15">
+Sunday,
+November 29th, 2015
+at
+6:06pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25148">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/benbrownlol/status/671027498415624193">
+Ben Brown
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://dlvr.it/Csx8bx">dlvr.it/Csx8bx</a> <p>
+<a class="link" href="https://twitter.com/benbrownlol/status/671027498415624193">
+</a>
+</p>
+
+<p><a class="u-mention" href="https://adactio.com/journal/9881"></a></p></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25148" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/benbrownlol/status/671027498415624193">
+Ben Brown</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:06:37">
+Sunday,
+November 29th, 2015
+at
+6:06pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25156">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/INKWEST/status/671027641483313153">
+Ron Williams
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1Rf036p">bit.ly/1Rf036p</a> [CSS Tricks]
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25156" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/INKWEST/status/671027641483313153">
+Ron Williams</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:07:11">
+Sunday,
+November 29th, 2015
+at
+6:07pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25159">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/sujann143/status/671027654250885121">
+Sujit Mourya
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1SqrOqV">bit.ly/1SqrOqV</a> <a href="https://twitter.com/search?q=%23programming">#programming</a> <a href="https://twitter.com/search?q=%23api">#api</a> <a href="https://twitter.com/search?q=%23php">#php</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25159" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/sujann143/status/671027654250885121">
+Sujit Mourya</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:07:14">
+Sunday,
+November 29th, 2015
+at
+6:07pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25157">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/TarvosMedia/status/671027663910252544">
+Tarvos Media
+</a>
+</h3>
+
+<div class="e-content">
+<p>[CSS-Tricks] &gt;&gt; Metadata Markup <a href="http://bit.ly/1XnFbP8">bit.ly/1XnFbP8</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25157" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/TarvosMedia/status/671027663910252544">
+Tarvos Media</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:07:16">
+Sunday,
+November 29th, 2015
+at
+6:07pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25155">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/starkwebdesign/status/671027722106241025">
+Stark Web Design
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1XnFbP8">bit.ly/1XnFbP8</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25155" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/starkwebdesign/status/671027722106241025">
+Stark Web Design</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:07:30">
+Sunday,
+November 29th, 2015
+at
+6:07pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25154">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/DengSip/status/671027764007309314">
+Denis
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23css">#css</a> Metadata Markup: Jeremy Keith looks at the competing standards for the metadata that goes in the head whi&#8230; <a href="http://bit.ly/1XnFbP8">bit.ly/1XnFbP8</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25154" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/DengSip/status/671027764007309314">
+Denis</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:07:40">
+Sunday,
+November 29th, 2015
+at
+6:07pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25158">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/MusicHackFest/status/671027847113347072">
+Hackathon News
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1SqrOqV">bit.ly/1SqrOqV</a> <a href="https://twitter.com/search?q=%23programming">#programming</a> <a href="https://twitter.com/search?q=%23api">#api</a> <a href="https://twitter.com/search?q=%23php">#php</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25158" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/MusicHackFest/status/671027847113347072">
+Hackathon News</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:08:00">
+Sunday,
+November 29th, 2015
+at
+6:08pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25153">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/chriswagoner/status/671027884513996800">
+Chris Wagoner
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://j.mp/1LGQsOr">j.mp/1LGQsOr</a> by Robin Rendle
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25153" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/chriswagoner/status/671027884513996800">
+Chris Wagoner</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:08:09">
+Sunday,
+November 29th, 2015
+at
+6:08pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25167">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/j3ltedev/status/671027888628609024">
+WebDev Tweets
+</a>
+</h3>
+
+<div class="e-content">
+<p>&#8220;Metadata Markup&#8221; - <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23dev">#dev</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25167" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/j3ltedev/status/671027888628609024">
+WebDev Tweets</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:08:10">
+Sunday,
+November 29th, 2015
+at
+6:08pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25149">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/mrnoeberlin/status/671028292061929472">
+mr noe design
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25149" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/mrnoeberlin/status/671028292061929472">
+mr noe design</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:09:46">
+Sunday,
+November 29th, 2015
+at
+6:09pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25165">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/WebDesignMO/status/671028468365307904">
+Visionary Solutions
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+Jeremy Keith looks at the competing standards for the metadata that goes in the head which ultima…
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25165" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/WebDesignMO/status/671028468365307904">
+Visionary Solutions</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:10:28">
+Sunday,
+November 29th, 2015
+at
+6:10pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25152">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/devnewsbot/status/671028543585968128">
+Developer News
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25152" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/devnewsbot/status/671028543585968128">
+Developer News</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:10:46">
+Sunday,
+November 29th, 2015
+at
+6:10pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25164">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/ErikKyleNielsen/status/671028878341742592">
+Erik Nielsen
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> .<a href="https://twitter.com/cliquechicago">@CliqueChicago</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25164" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/ErikKyleNielsen/status/671028878341742592">
+Erik Nielsen</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:12:06">
+Sunday,
+November 29th, 2015
+at
+6:12pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25147">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Hackbuild/status/671029004950966272">
+Hackbuild
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1SqrOqV">bit.ly/1SqrOqV</a> <a href="https://twitter.com/search?q=%23programming">#programming</a> <a href="https://twitter.com/search?q=%23api">#api</a> <a href="https://twitter.com/search?q=%23php">#php</a> <a href="http://amzn.to/1ZowliF">amzn.to/1ZowliF</a> <a href="https://twitter.com/search?q=%23hack">#hack</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25147" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Hackbuild/status/671029004950966272">
+Hackbuild</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:12:36">
+Sunday,
+November 29th, 2015
+at
+6:12pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25162">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/WebArtFreebies/status/671029058893971457">
+Web Art Freebies
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25162" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/WebArtFreebies/status/671029058893971457">
+Web Art Freebies</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:12:49">
+Sunday,
+November 29th, 2015
+at
+6:12pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25161">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/davbrn/status/671029134718590977">
+davbrn ✎
+</a>
+</h3>
+
+<div class="e-content">
+<p>CSS Tricks - Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25161" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/davbrn/status/671029134718590977">
+davbrn ✎</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:13:07">
+Sunday,
+November 29th, 2015
+at
+6:13pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25150">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/AlexRodDesign/status/671029139760128000">
+AlexRodDesign
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23CSS">#CSS</a> Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25150" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/AlexRodDesign/status/671029139760128000">
+AlexRodDesign</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:13:08">
+Sunday,
+November 29th, 2015
+at
+6:13pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25166">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/vishualmedia/status/671029341069942787">
+Vishual Media
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25166" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/vishualmedia/status/671029341069942787">
+Vishual Media</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:13:56">
+Sunday,
+November 29th, 2015
+at
+6:13pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25163">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/4x4developer/status/671029489401491456">
+David Moral
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25163" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/4x4developer/status/671029489401491456">
+David Moral</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:14:32">
+Sunday,
+November 29th, 2015
+at
+6:14pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25160">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/onebasemedia/status/671029612474966017">
+One Base Media
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25160" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/onebasemedia/status/671029612474966017">
+One Base Media</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:15:01">
+Sunday,
+November 29th, 2015
+at
+6:15pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25168">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/webdevfeeds/status/671030001240682496">
+Web Dev Feeds
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://j.mp/1lSBxfp">j.mp/1lSBxfp</a> <a href="https://twitter.com/search?q=%23webdevfeeds">#webdevfeeds</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25168" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/webdevfeeds/status/671030001240682496">
+Web Dev Feeds</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:16:34">
+Sunday,
+November 29th, 2015
+at
+6:16pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25171">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/RHJOfficial/status/671030338282360832">
+яєαℓιѕт נανѕтαн
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23css">#css</a> <a href="https://twitter.com/search?q=%23dev">#dev</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25171" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/RHJOfficial/status/671030338282360832">
+яєαℓιѕт נανѕтαн</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:17:54">
+Sunday,
+November 29th, 2015
+at
+6:17pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25174">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671030415260573696">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT DengSip <a href="https://twitter.com/search?q=%23css">#css</a> Metadata Markup: Jeremy Keith looks at the competing standards for the metadata that goes in the h… <a href="http://bit.ly/1XnFbP8">bit.ly/1XnFbP8</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25174" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671030415260573696">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:18:12">
+Sunday,
+November 29th, 2015
+at
+6:18pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25172">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671030423640776704">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT AlexRodDesign <a href="https://twitter.com/search?q=%23CSS">#CSS</a> Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25172" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671030423640776704">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:18:14">
+Sunday,
+November 29th, 2015
+at
+6:18pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25169">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671030425758904320">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT 4x4developer Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25169" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671030425758904320">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:18:15">
+Sunday,
+November 29th, 2015
+at
+6:18pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25173">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/studiomobius/status/671030498597208066">
+Mobius
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1NClKO3">bit.ly/1NClKO3</a> <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25173" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/studiomobius/status/671030498597208066">
+Mobius</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:18:32">
+Sunday,
+November 29th, 2015
+at
+6:18pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25170">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/bashooka/status/671030514548154369">
+bashooka
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25170" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/bashooka/status/671030514548154369">
+bashooka</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:18:36">
+Sunday,
+November 29th, 2015
+at
+6:18pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25183">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Un1v3rs0Z3r0/status/671031029470257152">
+Un1v3rs0 Z3r0
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25183" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Un1v3rs0Z3r0/status/671031029470257152">
+Un1v3rs0 Z3r0</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:20:39">
+Sunday,
+November 29th, 2015
+at
+6:20pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25186">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/ImTalkingPixels/status/671031266490363904">
+DeanMcDonagh
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25186" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/ImTalkingPixels/status/671031266490363904">
+DeanMcDonagh</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:21:35">
+Sunday,
+November 29th, 2015
+at
+6:21pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25177">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/wdadnews/status/671031350439378944">
+Design And Dev. News
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25177" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/wdadnews/status/671031350439378944">
+Design And Dev. News</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:21:55">
+Sunday,
+November 29th, 2015
+at
+6:21pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25181">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/PurMuseDesigns/status/671031372295835648">
+Purple Muse Designs
+</a>
+</h3>
+
+<div class="e-content">
+<p>New post: &#8220;Metadata Markup&#8221; <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25181" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/PurMuseDesigns/status/671031372295835648">
+Purple Muse Designs</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:22:00">
+Sunday,
+November 29th, 2015
+at
+6:22pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25175">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/abcwarr/status/671031468936835074">
+ABC Warrior
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23joyofhack">#joyofhack</a> <a href="http://amzn.to/1ZowliF">amzn.to/1ZowliF</a> Metadata Markup <a href="http://bit.ly/1SqrOqV">bit.ly/1SqrOqV</a> <a href="https://twitter.com/search?q=%23programming">#programming</a> <a href="https://twitter.com/search?q=%23api">#api</a> <a href="https://twitter.com/search?q=%23php">#php</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25175" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/abcwarr/status/671031468936835074">
+ABC Warrior</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:22:24">
+Sunday,
+November 29th, 2015
+at
+6:22pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25189">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/wpegg3/status/671031603221630976">
+William Pegg
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23csstricks">#csstricks</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25189" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/wpegg3/status/671031603221630976">
+William Pegg</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:22:56">
+Sunday,
+November 29th, 2015
+at
+6:22pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25178">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/MusicHackFest/status/671031844406763524">
+Hackathon News
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1SqrOqV">bit.ly/1SqrOqV</a> <a href="https://twitter.com/search?q=%23programming">#programming</a> <a href="https://twitter.com/search?q=%23api">#api</a> <a href="https://twitter.com/search?q=%23php">#php</a> <a href="http://amzn.to/1ZowliF">amzn.to/1ZowliF</a> <a href="https://twitter.com/search?q=%23hack">#hack</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25178" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/MusicHackFest/status/671031844406763524">
+Hackathon News</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:23:53">
+Sunday,
+November 29th, 2015
+at
+6:23pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25182">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/MusicHackFest/status/671031867592851456">
+Hackathon News
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23joyofhack">#joyofhack</a> <a href="http://amzn.to/1ZowliF">amzn.to/1ZowliF</a> Metadata Markup <a href="http://bit.ly/1SqrOqV">bit.ly/1SqrOqV</a> <a href="https://twitter.com/search?q=%23programming">#programming</a> <a href="https://twitter.com/search?q=%23api">#api</a> <a href="https://twitter.com/search?q=%23php">#php</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25182" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/MusicHackFest/status/671031867592851456">
+Hackathon News</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:23:59">
+Sunday,
+November 29th, 2015
+at
+6:23pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25187">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671032045544558593">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT RHJOfficial Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23css">#css</a> <a href="https://twitter.com/search?q=%23dev">#dev</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25187" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671032045544558593">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:24:41">
+Sunday,
+November 29th, 2015
+at
+6:24pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25180">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671032055183077376">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT ImTalkingPixels Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25180" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671032055183077376">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:24:43">
+Sunday,
+November 29th, 2015
+at
+6:24pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25185">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671032061512294400">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT wpegg3 Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> <a href="https://twitter.com/search?q=%23csstricks">#csstricks</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25185" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671032061512294400">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:24:45">
+Sunday,
+November 29th, 2015
+at
+6:24pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25179">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dom_turnbull/status/671033274224009216">
+It's Dom
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup - <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> via chriscoyier <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25179" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dom_turnbull/status/671033274224009216">
+It's Dom</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:29:34">
+Sunday,
+November 29th, 2015
+at
+6:29pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25190">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/brianleedigital/status/671033443850059776">
+Brian Lee
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1l0tixI">bit.ly/1l0tixI</a> <a href="https://twitter.com/search?q=%23digital">#digital</a> <a href="https://twitter.com/search?q=%23design">#design</a> <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25190" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/brianleedigital/status/671033443850059776">
+Brian Lee</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:30:14">
+Sunday,
+November 29th, 2015
+at
+6:30pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25176">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/AlexRodDesign/status/671033459977101312">
+AlexRodDesign
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://buff.ly/1YBJweE">buff.ly/1YBJweE</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25176" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/AlexRodDesign/status/671033459977101312">
+AlexRodDesign</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:30:18">
+Sunday,
+November 29th, 2015
+at
+6:30pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25188">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/twok3design/status/671034190897508353">
+twok3design
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT ► Metadata Markup <a href="http://bit.ly/1l0tixI">bit.ly/1l0tixI</a> <a href="https://twitter.com/search?q=%23digital">#digital</a> <a href="https://twitter.com/search?q=%23design">#design</a> <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> | <a href="http://twitter.com/brianleedigital/status/671033443850059776">twitter.com/brianleedigita…</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25188" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/twok3design/status/671034190897508353">
+twok3design</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:33:12">
+Sunday,
+November 29th, 2015
+at
+6:33pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25191">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/itsfreshmade/status/671035028554383360">
+freshmade
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://dlvr.it/Csxjdb">dlvr.it/Csxjdb</a> via <a href="https://twitter.com/chriscoyier">@chriscoyier</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25191" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/itsfreshmade/status/671035028554383360">
+freshmade</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:36:32">
+Sunday,
+November 29th, 2015
+at
+6:36pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25184">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Evolutdesigns/status/671035032710942720">
+Evolutionary Designs
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://dlvr.it/CsxjMX">dlvr.it/CsxjMX</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25184" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Evolutdesigns/status/671035032710942720">
+Evolutionary Designs</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:36:33">
+Sunday,
+November 29th, 2015
+at
+6:36pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25196">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671036097770758144">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT dom_turnbull Metadata Markup - <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> via chriscoyier <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25196" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671036097770758144">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:40:47">
+Sunday,
+November 29th, 2015
+at
+6:40pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25195">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/i0ewx76/status/671037096698773504">
+Christopher Wheat
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT brianleedigital Metadata Markup <a href="http://bit.ly/1l0tixI">bit.ly/1l0tixI</a> <a href="https://twitter.com/search?q=%23digital">#digital</a> <a href="https://twitter.com/search?q=%23design">#design</a> <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25195" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/i0ewx76/status/671037096698773504">
+Christopher Wheat</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:44:45">
+Sunday,
+November 29th, 2015
+at
+6:44pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25194">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/pete_barry/status/671039557836660736">
+Pete Barry
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1Tf5l02">bit.ly/1Tf5l02</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25194" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/pete_barry/status/671039557836660736">
+Pete Barry</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T18:54:32">
+Sunday,
+November 29th, 2015
+at
+6:54pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25200">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/bitcatcha/status/671043275961327616">
+Bitcatcha
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1HxZW3B">bit.ly/1HxZW3B</a> <a href="https://twitter.com/Real_CSS_Tricks">@Real<em>CSS</em>Tricks</a> <a href="https://twitter.com/bitcatcha">@Bitcatcha</a> <a href="https://twitter.com/search?q=%23css">#css</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25200" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/bitcatcha/status/671043275961327616">
+Bitcatcha</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T19:09:19">
+Sunday,
+November 29th, 2015
+at
+7:09pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25201">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/fr2dev/status/671044256052748288">
+fr2dev
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://buff.ly/1Istj2m">buff.ly/1Istj2m</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25201" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/fr2dev/status/671044256052748288">
+fr2dev</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T19:13:12">
+Sunday,
+November 29th, 2015
+at
+7:13pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25203">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671047143646433281">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT bitcatcha Metadata Markup <a href="http://bit.ly/1HxZW3B">bit.ly/1HxZW3B</a> Real<em>CSS</em>Tricks Bitcatcha <a href="https://twitter.com/search?q=%23css">#css</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25203" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671047143646433281">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T19:24:41">
+Sunday,
+November 29th, 2015
+at
+7:24pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25202">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/i0ewx76/status/671048098572083200">
+Christopher Wheat
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT bitcatcha Metadata Markup <a href="http://bit.ly/1HxZW3B">bit.ly/1HxZW3B</a> Real<em>CSS</em>Tricks Bitcatcha <a href="https://twitter.com/search?q=%23css">#css</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25202" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/i0ewx76/status/671048098572083200">
+Christopher Wheat</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T19:28:28">
+Sunday,
+November 29th, 2015
+at
+7:28pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25205">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/redcrew/status/671049421803659266">
+DeborahEdwards-Onoro
+</a>
+</h3>
+
+<div class="e-content">
+<p>&#8220;There are two things on display here: redundancy, and also, redundancy.&#8221; &gt;&gt; Metadata markup <a href="http://bit.ly/1TlCSpZ">bit.ly/1TlCSpZ</a> <a href="https://twitter.com/search?q=%23html">#html</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25205" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/redcrew/status/671049421803659266">
+DeborahEdwards-Onoro</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T19:33:44">
+Sunday,
+November 29th, 2015
+at
+7:33pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25218">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/eli_oat/status/671066322952962048">
+Eli Mellen
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup, <a href="http://j.mp/1PUU3jH">j.mp/1PUU3jH</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25218" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/eli_oat/status/671066322952962048">
+Eli Mellen</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T20:40:53">
+Sunday,
+November 29th, 2015
+at
+8:40pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25219">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/ElricReffuveill/status/671067232512942080">
+Elric Reffuveille
+</a>
+</h3>
+
+<div class="e-content">
+<p>Afficher de beaux aperçus de sites lors des partages sociaux!<a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25219" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/ElricReffuveill/status/671067232512942080">
+Elric Reffuveille</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T20:44:30">
+Sunday,
+November 29th, 2015
+at
+8:44pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25220">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/caztcha/status/671069204917780480">
+caztcha
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23clip">#clip</a> Adactio: Journal—Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25220" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/caztcha/status/671069204917780480">
+caztcha</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T20:52:20">
+Sunday,
+November 29th, 2015
+at
+8:52pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25222">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/wdfeed/status/671071426074402816">
+WDFEED
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup - <a href="http://wdfeed.com/post/6341">wdfeed.com/post/6341</a> <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> <a href="https://twitter.com/Entrepreneur">@Entrepreneur</a> <a href="https://twitter.com/printmag">@printmag</a> <a href="https://twitter.com/HubSpot">@HubSpot</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25222" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/wdfeed/status/671071426074402816">
+WDFEED</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T21:01:10">
+Sunday,
+November 29th, 2015
+at
+9:01pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25223">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/GlobaleParade/status/671073147198832640">
+Emmanuel
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23Metadata">#Metadata</a> Markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25223" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/GlobaleParade/status/671073147198832640">
+Emmanuel</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T21:08:00">
+Sunday,
+November 29th, 2015
+at
+9:08pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25224">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/alex_gibson/status/671078006895546372">
+Alex Gibson
+</a>
+</h3>
+
+<div class="e-content">
+<p>“Metacrap” is such an apt term. Hopefully manifest.json can be an end to repetition. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25224" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/alex_gibson/status/671078006895546372">
+Alex Gibson</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T21:27:19">
+Sunday,
+November 29th, 2015
+at
+9:27pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25225">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/xtools_at/status/671080372923428864">
+Cave Johnson
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a> <a href="http://bit.ly/1OyCGlw">bit.ly/1OyCGlw</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25225" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/xtools_at/status/671080372923428864">
+Cave Johnson</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T21:36:43">
+Sunday,
+November 29th, 2015
+at
+9:36pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25226">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/i0ewx76/status/671082165568933890">
+Christopher Wheat
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT xtools_at Metadata markup <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a> <a href="http://bit.ly/1OyCGlw">bit.ly/1OyCGlw</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25226" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/i0ewx76/status/671082165568933890">
+Christopher Wheat</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T21:43:51">
+Sunday,
+November 29th, 2015
+at
+9:43pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25227">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/twok3design/status/671082902776623104">
+twok3design
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT ► Metadata markup <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a> <a href="http://bit.ly/1OyCGlw">bit.ly/1OyCGlw</a> | <a href="http://twitter.com/xtools_at/status/671080372923428864">twitter.com/xtools_at/stat…</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25227" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/twok3design/status/671082902776623104">
+twok3design</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T21:46:46">
+Sunday,
+November 29th, 2015
+at
+9:46pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25231">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/grant_vinson/status/671088463492460544">
+Grant Vinson
+</a>
+</h3>
+
+<div class="e-content">
+<p>How to get Twitter, Slack and Facebook to display your site&#8217;s preview correctly: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23metadata">#metadata</a> <a href="https://twitter.com/search?q=%23frontend">#frontend</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25231" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/grant_vinson/status/671088463492460544">
+Grant Vinson</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:08:52">
+Sunday,
+November 29th, 2015
+at
+10:08pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25235">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/_MatiWeb_/status/671089352638898179">
+MatiWeb
+</a>
+</h3>
+
+<div class="e-content">
+<p>[ <a href="https://twitter.com/search?q=%23Webdesign">#Webdesign</a> ]- Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25235" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/_MatiWeb_/status/671089352638898179">
+MatiWeb</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:12:24">
+Sunday,
+November 29th, 2015
+at
+10:12pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25233">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/portenkirchner/status/671090362925105156">
+Georg Portenkirchner
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23HTML">#HTML</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25233" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/portenkirchner/status/671090362925105156">
+Georg Portenkirchner</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:16:25">
+Sunday,
+November 29th, 2015
+at
+10:16pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25234">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/i0ewx76/status/671090576771674112">
+Christopher Wheat
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT <em>MatiWeb</em> [ <a href="https://twitter.com/search?q=%23Webdesign">#Webdesign</a> ]- Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25234" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/i0ewx76/status/671090576771674112">
+Christopher Wheat</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:17:16">
+Sunday,
+November 29th, 2015
+at
+10:17pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25232">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/i0ewx76/status/671090649807118336">
+Christopher Wheat
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT grant_vinson How to get Twitter, Slack and Facebook to display your site&#8217;s preview correctly: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23metadata">#metadata</a> <a href="https://twitter.com/search?q=%23fronte">#fronte</a>…</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25232" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/i0ewx76/status/671090649807118336">
+Christopher Wheat</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:17:33">
+Sunday,
+November 29th, 2015
+at
+10:17pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25236">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/twok3design/status/671091320132386821">
+twok3design
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT ► [ <a href="https://twitter.com/search?q=%23Webdesign">#Webdesign</a> ]- Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> | <a href="http://twitter.com/_MatiWeb_/status/671089352638898179">twitter.com/<em>MatiWeb</em>/stat…</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25236" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/twok3design/status/671091320132386821">
+twok3design</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:20:13">
+Sunday,
+November 29th, 2015
+at
+10:20pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25241">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/magicroundabout/status/671096802670678016">
+Ross Wintle
+</a>
+</h3>
+
+<div class="e-content">
+<p>Awesomely neat trick from <a href="https://twitter.com/adactio">@adactio</a> to reduce two things: &lt;meta&gt; redundancy, and &lt;meta&gt; redundancy (via <a href="https://twitter.com/Malarkey">@malarkey</a>) <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25241" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/magicroundabout/status/671096802670678016">
+Ross Wintle</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:42:00">
+Sunday,
+November 29th, 2015
+at
+10:42pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25244">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/puni2powan/status/671099924386304000">
+puni2powan
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25244" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/puni2powan/status/671099924386304000">
+puni2powan</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T22:54:25">
+Sunday,
+November 29th, 2015
+at
+10:54pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25246">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/kevinmarks/status/671104326530547712">
+Kevin Marks
+</a>
+</h3>
+
+<div class="e-content">
+<p>“There are two things on display here: redundancy, and also, redundancy.” <a href="http://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25246" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/kevinmarks/status/671104326530547712">
+Kevin Marks</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T23:11:54">
+Sunday,
+November 29th, 2015
+at
+11:11pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25247">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/mahemoff/status/671106123844485120">
+!FALSE
+</a>
+</h3>
+
+<div class="e-content">
+<p>A familiar problem: Injecting wads of redundant metadata to satisfy competing standards <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a>
+Thx <a href="https://twitter.com/kevinmarks">@kevinmarks</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25247" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/mahemoff/status/671106123844485120">
+!FALSE</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-29T23:19:03">
+Sunday,
+November 29th, 2015
+at
+11:19pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25252">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/yuichigrut/status/671118379512647680">
+ゆいっつぁん
+</a>
+</h3>
+
+<div class="e-content">
+<p>Daily Pickup : Metadata Markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a> - via: CSS-Tricks <a href="https://css-tricks.com">css-tricks.com</a>
+<a class="u-mention" href="https://css-tricks.com/"></a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25252" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/yuichigrut/status/671118379512647680">
+ゆいっつぁん</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T00:07:45">
+Monday,
+November 30th, 2015
+at
+12:07am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25253">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jasonbyrne/status/671129972078206977">
+Jason Byrne
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25253" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jasonbyrne/status/671129972078206977">
+Jason Byrne</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T00:53:48">
+Monday,
+November 30th, 2015
+at
+12:53am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25254">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/DanBoulet/status/671151214541672448">
+Dan Boulet
+</a>
+</h3>
+
+<div class="e-content">
+<p>Never noticed that Twitter card and OG meta tags use different attributes. <a href="https://twitter.com/ADAction">@adaction</a> shows how they can be merged: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25254" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/DanBoulet/status/671151214541672448">
+Dan Boulet</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T02:18:13">
+Monday,
+November 30th, 2015
+at
+2:18am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25255">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/marakossk/status/671179731484692480">
+Marek Králík
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metacrap! Perfect name, for such a stupid thing. They are really lacking some communication there! <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25255" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/marakossk/status/671179731484692480">
+Marek Králík</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T04:11:32">
+Monday,
+November 30th, 2015
+at
+4:11am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25258">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/harrypujols/status/671212259717287938">
+Harry Pujols
+</a>
+</h3>
+
+<div class="e-content">
+<p>The sorry mess of the proprietary social media meta tags <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25258" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/harrypujols/status/671212259717287938">
+Harry Pujols</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T06:20:47">
+Monday,
+November 30th, 2015
+at
+6:20am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25259">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/artofwp/status/671215135059480576">
+The Art Of WordPress
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://buff.ly/1Nk1ZZG">buff.ly/1Nk1ZZG</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25259" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/artofwp/status/671215135059480576">
+The Art Of WordPress</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T06:32:13">
+Monday,
+November 30th, 2015
+at
+6:32am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25261">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/logogulf/status/671222220031696896">
+Logo Gulf
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="http://ow.ly/Vfkp3">ow.ly/Vfkp3</a> Metadata markup <a href="https://twitter.com/search?q=%23html">#html</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25261" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/logogulf/status/671222220031696896">
+Logo Gulf</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T07:00:22">
+Monday,
+November 30th, 2015
+at
+7:00am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25260">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dirfooddrink/status/671222405562507264">
+Barbara Pollack
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT logogulf <a href="http://ow.ly/Vfkp3">ow.ly/Vfkp3</a> Metadata markup <a href="https://twitter.com/search?q=%23html">#html</a> <a href="https://twitter.com/search?q=%23css">#css</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25260" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dirfooddrink/status/671222405562507264">
+Barbara Pollack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T07:01:06">
+Monday,
+November 30th, 2015
+at
+7:01am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25262">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/LimoenGroen/status/671234790859894785">
+LimoenGroen
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup - leuk artikel over de benodigde metatags voor FB en Twitter. <a href="http://ow.ly/3yuEfe">ow.ly/3yuEfe</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25262" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/LimoenGroen/status/671234790859894785">
+LimoenGroen</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T07:50:19">
+Monday,
+November 30th, 2015
+at
+7:50am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25264">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/alexhorre/status/671237563701592064">
+Alexander Horré
+</a>
+</h3>
+
+<div class="e-content">
+<p>So relevant right now. Metadata markup - Adactio <a href="http://nzzl.us/dZeYVWM">nzzl.us/dZeYVWM</a> via <a href="https://twitter.com/nuzzel">@nuzzel</a> thanks <a href="https://twitter.com/joelambert">@joelambert</a>
+<a class="u-mention" href="http://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25264" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/alexhorre/status/671237563701592064">
+Alexander Horré</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T08:01:20">
+Monday,
+November 30th, 2015
+at
+8:01am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25263">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/andreasnrb/status/671237982280679424">
+Andreas Nurbo
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://buff.ly/1Nk1ZZu">buff.ly/1Nk1ZZu</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25263" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/andreasnrb/status/671237982280679424">
+Andreas Nurbo</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T08:03:00">
+Monday,
+November 30th, 2015
+at
+8:03am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25266">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/yoann_lc/status/671245323336073216">
+Yoann LC
+</a>
+</h3>
+
+<div class="e-content">
+<p>Mixing facebook and twitter metadata markup <a href="http://bit.ly/1PmSz1z">bit.ly/1PmSz1z</a> <a href="https://twitter.com/search?q=%23html">#html</a> <a href="https://twitter.com/search?q=%23opengraph">#opengraph</a> <a href="https://twitter.com/search?q=%23twittercards">#twittercards</a> by <a href="https://twitter.com/adactio">@adactio</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25266" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/yoann_lc/status/671245323336073216">
+Yoann LC</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T08:32:10">
+Monday,
+November 30th, 2015
+at
+8:32am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25267">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/EXDE601E/status/671250772433219585">
+George M
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/adactioJournal">@adactioJournal</a> you can generate Twitter Cards with OpenGraph as well, see: <a href="https://dev.twitter.com/cards/getting-started#opengraph">dev.twitter.com/cards/getting-…</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25267" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/EXDE601E/status/671250772433219585">
+George M</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T08:53:50">
+Monday,
+November 30th, 2015
+at
+8:53am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25269">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/SkweezeDesign/status/671251192555642880">
+Skweeze
+</a>
+</h3>
+
+<div class="e-content">
+<p>CSS Tricks of the trade: Metadata Markup <a href="http://buff.ly/1HxTR7u">buff.ly/1HxTR7u</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25269" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/SkweezeDesign/status/671251192555642880">
+Skweeze</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T08:55:30">
+Monday,
+November 30th, 2015
+at
+8:55am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25268">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Allah_6229/status/671254639958970368">
+Allah.Alphonse
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="https://adactio.com/journal/9881?z9qxS">adactio.com/journal/9881?z…</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25268" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Allah_6229/status/671254639958970368">
+Allah.Alphonse</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T09:09:12">
+Monday,
+November 30th, 2015
+at
+9:09am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25270">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/viibfa/status/671265172313501696">
+Vicent Ibáñez
+</a>
+</h3>
+
+<div class="e-content">
+<p>La guia definitiva de les metadades <a href="https://twitter.com/search?q=%23seo">#seo</a> <a href="https://twitter.com/search?q=%23socialmedia">#socialmedia</a> <a href="https://adactio.com/journal/9881?utm_source=dlvr.it&amp;utm_medium=facebook">adactio.com/journal/9881?u…</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25270" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/viibfa/status/671265172313501696">
+Vicent Ibáñez</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T09:51:03">
+Monday,
+November 30th, 2015
+at
+9:51am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25272">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/AdelaideSeoSA/status/671265430749736960">
+Adelaide Seo
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT viibfa La guia definitiva de les metadades <a href="https://twitter.com/search?q=%23seo">#seo</a> <a href="https://twitter.com/search?q=%23socialmedia">#socialmedia</a> <a href="https://adactio.com/journal/9881?utm_source=dlvr.it&amp;utm_medium=facebook">adactio.com/journal/9881?u…</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25272" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/AdelaideSeoSA/status/671265430749736960">
+Adelaide Seo</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T09:52:04">
+Monday,
+November 30th, 2015
+at
+9:52am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25271">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/ElitLasVegasSEO/status/671265476257832960">
+Elite Las Vegas SEO
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT <a href="http://twitter.com/viibfa/status/671265172313501696">twitter.com/viibfa/status/…</a> La guia definitiva de les metadades <a href="https://twitter.com/search?q=%23seo">#seo</a> <a href="https://twitter.com/search?q=%23socialmedia">#socialmedia</a> <a href="https://adactio.com/journal/9881?utm_source=dlvr.it&amp;utm_medium=facebook">adactio.com/journal/9881?u…</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25271" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/ElitLasVegasSEO/status/671265476257832960">
+Elite Las Vegas SEO</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T09:52:15">
+Monday,
+November 30th, 2015
+at
+9:52am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25273">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/kingstonrichard/status/671275208490250240">
+Richard Kingston
+</a>
+</h3>
+
+<div class="e-content">
+<p>Today I&#8217;ll be reading: &#8216;Metadata markup&#8217; <a href="http://bit.ly/1jsXAr8">bit.ly/1jsXAr8</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25273" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/kingstonrichard/status/671275208490250240">
+Richard Kingston</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T10:30:56">
+Monday,
+November 30th, 2015
+at
+10:30am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25274">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/AdelineYaw/status/671277694420520960">
+Adeline Yaw
+</a>
+</h3>
+
+<div class="e-content">
+<p>&#8220;Metadata Markup&#8221; <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25274" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/AdelineYaw/status/671277694420520960">
+Adeline Yaw</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T10:40:48">
+Monday,
+November 30th, 2015
+at
+10:40am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25275">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jacmaes/status/671281651973009408">
+Jacques Maes
+</a>
+</h3>
+
+<div class="e-content">
+<p>Avoid redundancy: <a href="https://twitter.com/adactio">@adactio</a> shows us how to merge Twitter’s and Facebook’s meta tags <a href="https://twitter.com/search?q=%23webdev">#webdev</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25275" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jacmaes/status/671281651973009408">
+Jacques Maes</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T10:56:32">
+Monday,
+November 30th, 2015
+at
+10:56am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25276">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/i0ewx76/status/671283738488258560">
+Christopher Wheat
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT jacmaes Avoid redundancy: adactio shows us how to merge Twitter’s and Facebook’s meta tags <a href="https://twitter.com/search?q=%23webdev">#webdev</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25276" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/i0ewx76/status/671283738488258560">
+Christopher Wheat</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T11:04:49">
+Monday,
+November 30th, 2015
+at
+11:04am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25277">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jodyvanv/status/671285877608435712">
+JodyVanV
+</a>
+</h3>
+
+<div class="e-content">
+<p>This is good, it is annoying - Metadata markup <a href="http://buff.ly/1PVF8pB">buff.ly/1PVF8pB</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25277" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jodyvanv/status/671285877608435712">
+JodyVanV</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T11:13:19">
+Monday,
+November 30th, 2015
+at
+11:13am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25278">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/sebastiendhoine/status/671286354681139200">
+Sébastien D'hoine
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23HTML">#HTML</a> Metadata Markup <a href="http://ow.ly/3yuJ8y">ow.ly/3yuJ8y</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25278" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/sebastiendhoine/status/671286354681139200">
+Sébastien D'hoine</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T11:15:13">
+Monday,
+November 30th, 2015
+at
+11:15am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25279">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dropseed/status/671301472001355776">
+Dropseed Solutions
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup - <a href="http://bit.ly/1TlxEKR">bit.ly/1TlxEKR</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25279" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dropseed/status/671301472001355776">
+Dropseed Solutions</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T12:15:17">
+Monday,
+November 30th, 2015
+at
+12:15pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25282">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/_techstories/status/671333567641886720">
+Tech Stories
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup (<a href="http://adactio.com">adactio.com</a>) <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a>
+<a class="u-mention" href="http://adactio.com/"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25282" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/_techstories/status/671333567641886720">
+Tech Stories</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T14:22:49">
+Monday,
+November 30th, 2015
+at
+2:22pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25281">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Twittociate/status/671333991622971392">
+Social Media Baba
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup (<a href="http://adactio.com">adactio.com</a>) <a href="http://dlvr.it/CtKyy6">dlvr.it/CtKyy6</a> <p>
+<a class="link" href="https://twitter.com/Twittociate/status/671333991622971392">
+</a>
+</p>
+
+<p><a class="u-mention" href="https://adactio.com/journal/9881"></a>
+<a class="u-mention" href="http://adactio.com/"></a></p></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25281" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Twittociate/status/671333991622971392">
+Social Media Baba</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T14:24:31">
+Monday,
+November 30th, 2015
+at
+2:24pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25283">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/kanitkornk/status/671338202247004160">
+Kanitkorn Sujautra
+</a>
+</h3>
+
+<div class="e-content">
+<p>Combine Facebook and Twitter meta tag. much wow
+Metadata markup by <a href="https://twitter.com/adactio">@adactio</a><a href="http://bit.ly/1SrRx25">bit.ly/1SrRx25</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25283" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/kanitkornk/status/671338202247004160">
+Kanitkorn Sujautra</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T14:41:14">
+Monday,
+November 30th, 2015
+at
+2:41pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25285">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/VhMendrone/status/671340402016952320">
+Vitor Mendrone
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23frontend">#frontend</a> <a href="https://twitter.com/search?q=%23html">#html</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25285" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/VhMendrone/status/671340402016952320">
+Vitor Mendrone</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T14:49:59">
+Monday,
+November 30th, 2015
+at
+2:49pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25284">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/clever4/status/671340491108179968">
+clever4
+</a>
+</h3>
+
+<div class="e-content">
+<p>So simple, why did we not spot this earlier? <a href="https://twitter.com/adactio">@adactio</a> shows how to slim down your <a href="https://twitter.com/search?q=%23social">#social</a> <a href="https://twitter.com/search?q=%23metacrap">#metacrap</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25284" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/clever4/status/671340491108179968">
+clever4</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T14:50:20">
+Monday,
+November 30th, 2015
+at
+2:50pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25286">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/webstandards_ru/status/671343032541847552">
+Веб-стандарты
+</a>
+</h3>
+
+<div class="e-content">
+<p>Метаданные в разметке, Джереми Кит полон надежды, что веб-манифест положит конец этой свалке <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <p>
+<a class="link" href="https://twitter.com/webstandards_ru/status/671343032541847552">
+</a>
+</p></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25286" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/webstandards_ru/status/671343032541847552">
+Веб-стандарты</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:00:26">
+Monday,
+November 30th, 2015
+at
+3:00pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25287">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/kingkool68/status/671345996203429888">
+Russell Heimlich
+</a>
+</h3>
+
+<div class="e-content">
+<p>That <a href="https://twitter.com/adactio">@adactio</a> is so smart. How to combine all those social media meta tags and reduce meta tag crap <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25287" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/kingkool68/status/671345996203429888">
+Russell Heimlich</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:12:13">
+Monday,
+November 30th, 2015
+at
+3:12pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25288">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jaicab_/status/671348195822276608">
+Jaime Caballero
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25288" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jaicab_/status/671348195822276608">
+Jaime Caballero</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:20:57">
+Monday,
+November 30th, 2015
+at
+3:20pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25289">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/SecNewsBot/status/671348998318497795">
+Sec News Bot
+</a>
+</h3>
+
+<div class="e-content">
+<p>Hacker News - Combine tags for social media cards markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25289" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/SecNewsBot/status/671348998318497795">
+Sec News Bot</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:24:08">
+Monday,
+November 30th, 2015
+at
+3:24pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25290">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/macengr/status/671352119891480576">
+Scott McWilliams
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25290" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/macengr/status/671352119891480576">
+Scott McWilliams</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:36:33">
+Monday,
+November 30th, 2015
+at
+3:36pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25293">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/MichaelvanLaar/status/671355764674576384">
+Michael van Laar
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> and <a href="https://twitter.com/search?q=%23seo">#seo</a>: Metadata Markup <a href="http://bit.ly/1IuKxfh">bit.ly/1IuKxfh</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25293" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/MichaelvanLaar/status/671355764674576384">
+Michael van Laar</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:51:02">
+Monday,
+November 30th, 2015
+at
+3:51pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25294">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/AdelaideSeoSA/status/671356325046132736">
+Adelaide Seo
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT MichaelvanLaar <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> and <a href="https://twitter.com/search?q=%23seo">#seo</a>: Metadata Markup <a href="http://bit.ly/1IuKxfh">bit.ly/1IuKxfh</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25294" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/AdelaideSeoSA/status/671356325046132736">
+Adelaide Seo</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:53:15">
+Monday,
+November 30th, 2015
+at
+3:53pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25292">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/twok3design/status/671356570475868160">
+twok3design
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT ► <a href="https://twitter.com/search?q=%23webdesign">#webdesign</a> and <a href="https://twitter.com/search?q=%23seo">#seo</a>: Metadata Markup <a href="http://bit.ly/1IuKxfh">bit.ly/1IuKxfh</a> | <a href="http://twitter.com/MichaelvanLaar/status/671355764674576384">twitter.com/MichaelvanLaar…</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25292" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/twok3design/status/671356570475868160">
+twok3design</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:54:14">
+Monday,
+November 30th, 2015
+at
+3:54pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25291">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/indigitis/status/671356870041423872">
+Indigitis
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ow.ly/Vf3UR">ow.ly/Vf3UR</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25291" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/indigitis/status/671356870041423872">
+Indigitis</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T15:55:25">
+Monday,
+November 30th, 2015
+at
+3:55pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25295">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/nzgb/status/671373437030547456">
+Nicolas Bevacqua
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup rant <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25295" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/nzgb/status/671373437030547456">
+Nicolas Bevacqua</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T17:01:15">
+Monday,
+November 30th, 2015
+at
+5:01pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25296">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/palimadra/status/671374277145321473">
+Pali Madra
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup - Adactio <a href="http://nzzl.us/dZeYVWM">nzzl.us/dZeYVWM</a> via <a href="https://twitter.com/nuzzel">@nuzzel</a> thanks <a href="https://twitter.com/PSD2HTML">@PSD2HTML</a>
+<a class="u-mention" href="http://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25296" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/palimadra/status/671374277145321473">
+Pali Madra</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T17:04:35">
+Monday,
+November 30th, 2015
+at
+5:04pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25298">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/adrianh/status/671393759830089728">
+Adrian Howard
+</a>
+</h3>
+
+<div class="e-content">
+<p>“There are two things on display here: redundancy, and also, redundancy.” <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25298" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/adrianh/status/671393759830089728">
+Adrian Howard</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T18:22:00">
+Monday,
+November 30th, 2015
+at
+6:22pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25300">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/PinPopular/status/671412408938659840">
+Pinboard Popular
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25300" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/PinPopular/status/671412408938659840">
+Pinboard Popular</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T19:36:07">
+Monday,
+November 30th, 2015
+at
+7:36pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25302">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Real_CSS_Tricks/status/671426045434703873">
+CSS-Tricks
+</a>
+</h3>
+
+<div class="e-content">
+<p>➤ Metadata Markup :: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a>
+(Particularly relevant conversation to be having on Blue Beanie Day: <a href="http://bluebeanieday.tumblr.com/">bluebeanieday.tumblr.com</a>)</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25302" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Real_CSS_Tricks/status/671426045434703873">
+CSS-Tricks</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T20:30:18">
+Monday,
+November 30th, 2015
+at
+8:30pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25301">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/nighcrawl/status/671428559160872960">
+Ange Chierchia
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://bit.ly/1To5lM6">bit.ly/1To5lM6</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25301" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/nighcrawl/status/671428559160872960">
+Ange Chierchia</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T20:40:17">
+Monday,
+November 30th, 2015
+at
+8:40pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25304">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/frontendfront/status/671429408046063616">
+Front-End Front
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25304" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/frontendfront/status/671429408046063616">
+Front-End Front</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T20:43:40">
+Monday,
+November 30th, 2015
+at
+8:43pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25303">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/markconroy/status/671429457870233600">
+Mark Conroy
+</a>
+</h3>
+
+<div class="e-content">
+<p>Cut the meta data crap says <a href="https://twitter.com/adactio">@adactio</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25303" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/markconroy/status/671429457870233600">
+Mark Conroy</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T20:43:51">
+Monday,
+November 30th, 2015
+at
+8:43pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25305">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/linkesch/status/671435587203780610">
+Pavel Linkesch
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://bit.ly/1jsZXtV">bit.ly/1jsZXtV</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25305" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/linkesch/status/671435587203780610">
+Pavel Linkesch</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T21:08:13">
+Monday,
+November 30th, 2015
+at
+9:08pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25306">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/nathanbussiere/status/671446919504338944">
+Nathan Bussiere
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://buff.ly/1LIEa8c">buff.ly/1LIEa8c</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25306" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/nathanbussiere/status/671446919504338944">
+Nathan Bussiere</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T21:53:15">
+Monday,
+November 30th, 2015
+at
+9:53pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25308">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/we_sort/status/671476185654800384">
+We Sort.
+</a>
+</h3>
+
+<div class="e-content">
+<p>Sage words on meta-data / meta-crap / meta-mess by <a href="https://twitter.com/adactio">@adactio</a> &gt;&gt; <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25308" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/we_sort/status/671476185654800384">
+We Sort.</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-11-30T23:49:32">
+Monday,
+November 30th, 2015
+at
+11:49pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25309">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/kazuhito/status/671486955985747968">
+Kazuhito Kidachi
+</a>
+</h3>
+
+<div class="e-content">
+<p>Adactio: Journal—Metadata markup <a href="http://ift.tt/1MWyzx4">ift.tt/1MWyzx4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25309" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/kazuhito/status/671486955985747968">
+Kazuhito Kidachi</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T00:32:20">
+Tuesday,
+December 1st, 2015
+at
+12:32am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25310">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/uxs/status/671497572284928001">
+UX Sweden
+</a>
+</h3>
+
+<div class="e-content">
+<p>CSS-Tricks on Twitter: &#8220;➤ Metadata Markup :: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> (Particularly relevant conversation t&#8230; <a href="http://rdg.st/1TpnJ7b">rdg.st/1TpnJ7b</a> <a href="https://twitter.com/search?q=%23ux">#ux</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25310" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/uxs/status/671497572284928001">
+UX Sweden</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T01:14:31">
+Tuesday,
+December 1st, 2015
+at
+1:14am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25312">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/smokenight/status/671519408788013057">
+Francisco Capone
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup - <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25312" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/smokenight/status/671519408788013057">
+Francisco Capone</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T02:41:17">
+Tuesday,
+December 1st, 2015
+at
+2:41am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25314">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/kylemillennial/status/671596663207796736">
+Millennial Monitor
+</a>
+</h3>
+
+<div class="e-content">
+<p>Twitter Facebook meta markup
+Millennial Monitor<a href="https://twitter.com/search?q=%23MillennialMonitorTech">#MillennialMonitorTech</a><a href="https://goo.gl/ENv8PJ">goo.gl/ENv8PJ</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25314" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/kylemillennial/status/671596663207796736">
+Millennial Monitor</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T07:48:16">
+Tuesday,
+December 1st, 2015
+at
+7:48am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25315">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/laur_lawr/status/671614391494778880">
+Laur
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25315" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/laur_lawr/status/671614391494778880">
+Laur</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T08:58:43">
+Tuesday,
+December 1st, 2015
+at
+8:58am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25316">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/lzodevelopement/status/671623544850276352">
+Lzo Developement
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25316" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/lzodevelopement/status/671623544850276352">
+Lzo Developement</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T09:35:05">
+Tuesday,
+December 1st, 2015
+at
+9:35am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25333">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/mediacomem/status/671649205522403328">
+Media Engineering
+</a>
+</h3>
+
+<div class="e-content">
+<p>Informative rant from <a href="https://twitter.com/adactio">@adactio</a> about the saddening state of necessary meta-elements in HTML. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25333" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/mediacomem/status/671649205522403328">
+Media Engineering</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T11:17:03">
+Tuesday,
+December 1st, 2015
+at
+11:17am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25332">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jalonsoa/status/671651464318599168">
+juan alonso
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23HTML">#HTML</a> Metadata markup <a href="http://bit.ly/1LKGThq">bit.ly/1LKGThq</a> <a href="https://twitter.com/adactio">@adactio</a> <a href="https://twitter.com/search?q=%23programacionweb">#programacionweb</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25332" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jalonsoa/status/671651464318599168">
+juan alonso</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T11:26:02">
+Tuesday,
+December 1st, 2015
+at
+11:26am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25345">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/lynchy010/status/671692023351627776">
+Adam Lynch
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://bit.ly/1NjVbuS">bit.ly/1NjVbuS</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25345" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/lynchy010/status/671692023351627776">
+Adam Lynch</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T14:07:12">
+Tuesday,
+December 1st, 2015
+at
+2:07pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25348">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/miralize/status/671694140007194625">
+Sean O'Grady
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/lynchy010">@lynchy010</a> A billion times this… my meta markup is insane
+<a class="u-mention" href="http://bit.ly/1NjVbuS"></a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25348" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/miralize/status/671694140007194625">
+Sean O'Grady</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T14:15:37">
+Tuesday,
+December 1st, 2015
+at
+2:15pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25356">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jgarber/status/671703684645044224">
+Jason Garber
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/adactioJournal">@adactioJournal</a> It looks as though you&#8217;re also de facto supporting Google+ by adding the Open Graph properties: <a href="https://developers.google.com/+/web/snippet/">developers.google.com/+/web/snippet/</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25356" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jgarber/status/671703684645044224">
+Jason Garber</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T14:53:32">
+Tuesday,
+December 1st, 2015
+at
+2:53pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25359">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/imheror/status/671721974746382337">
+heror
+</a>
+</h3>
+
+<div class="e-content">
+<p>meat mark<a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25359" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/imheror/status/671721974746382337">
+heror</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T16:06:13">
+Tuesday,
+December 1st, 2015
+at
+4:06pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25360">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/cjsthe2nd/status/671723253040287745">
+Charles Sanders
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://bit.ly/1Nh0Q0C">bit.ly/1Nh0Q0C</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25360" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/cjsthe2nd/status/671723253040287745">
+Charles Sanders</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T16:11:18">
+Tuesday,
+December 1st, 2015
+at
+4:11pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25361">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jungshadow/status/671729387482587136">
+Jared Marcotte
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata, standards (or lack thereof), Twitter, Facebook, potential hope, and why I love <a href="https://twitter.com/adactio">@adactio</a>: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25361" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jungshadow/status/671729387482587136">
+Jared Marcotte</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T16:35:40">
+Tuesday,
+December 1st, 2015
+at
+4:35pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25362">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/IneedHTML/status/671736329726730240">
+IneedHTML. psd2html
+</a>
+</h3>
+
+<div class="e-content">
+<p>Сool reading! Metadata markup <a href="https://goo.gl/0fHZna">goo.gl/0fHZna</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25362" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/IneedHTML/status/671736329726730240">
+IneedHTML. psd2html</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T17:03:15">
+Tuesday,
+December 1st, 2015
+at
+5:03pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25363">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/RBSpatzDesign/status/671746836550582272">
+RBSpatzDesign
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup, by Jeremy Keith<a href="http://buff.ly/1Qb6HtA">buff.ly/1Qb6HtA</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25363" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/RBSpatzDesign/status/671746836550582272">
+RBSpatzDesign</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T17:45:00">
+Tuesday,
+December 1st, 2015
+at
+5:45pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25366">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/think_ltd/status/671751461605351428">
+think creative
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://ow.ly/VhgG5">ow.ly/VhgG5</a> <a href="https://twitter.com/search?q=%23web">#web</a> <a href="https://twitter.com/search?q=%23digital">#digital</a> <a href="https://twitter.com/search?q=%23social">#social</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25366" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/think_ltd/status/671751461605351428">
+think creative</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T18:03:23">
+Tuesday,
+December 1st, 2015
+at
+6:03pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25369">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/tarmolov/status/671757899526488065">
+Alexander Tarmolov
+</a>
+</h3>
+
+<div class="e-content">
+<p>Today I got to know a new term — <a href="https://twitter.com/search?q=%23metacrap">#metacrap</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25369" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/tarmolov/status/671757899526488065">
+Alexander Tarmolov</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T18:28:58">
+Tuesday,
+December 1st, 2015
+at
+6:28pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25370">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/devevangelist/status/671784141315309568">
+Robbie Jack
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://bit.ly/1QRd2Ml">bit.ly/1QRd2Ml</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25370" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/devevangelist/status/671784141315309568">
+Robbie Jack</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T20:13:15">
+Tuesday,
+December 1st, 2015
+at
+8:13pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25371">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/dbjorns/status/671788134653255680">
+Dane Snyder
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup for posting to Twitter and Facebook <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23html">#html</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25371" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/dbjorns/status/671788134653255680">
+Dane Snyder</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T20:29:07">
+Tuesday,
+December 1st, 2015
+at
+8:29pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25372">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/J3nsT/status/671801474515640321">
+Jens Tangermann
+</a>
+</h3>
+
+<div class="e-content">
+<p>There are two things on display here: redundancy, and also, redundancy &#8230; <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25372" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/J3nsT/status/671801474515640321">
+Jens Tangermann</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T21:22:07">
+Tuesday,
+December 1st, 2015
+at
+9:22pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25373">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/sweimer/status/671817808242720768">
+sweimer
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="http://buff.ly/1OoiZP4">buff.ly/1OoiZP4</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25373" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/sweimer/status/671817808242720768">
+sweimer</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T22:27:01">
+Tuesday,
+December 1st, 2015
+at
+10:27pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25375">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/kylemillennial/status/671827080989032448">
+Millennial Monitor
+</a>
+</h3>
+
+<div class="e-content">
+<p>Twitter Facebook meta markup
+Millennial Monitor<a href="https://twitter.com/search?q=%23MillennialMonitorTech">#MillennialMonitorTech</a><a href="http://goo.gl/ENv8PJ">goo.gl/ENv8PJ</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25375" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/kylemillennial/status/671827080989032448">
+Millennial Monitor</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T23:03:52">
+Tuesday,
+December 1st, 2015
+at
+11:03pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25376">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/eight4eight/status/671830294496829440">
+Kelly Maurice
+</a>
+</h3>
+
+<div class="e-content">
+<p>Useful tips for sharing web site previews on FB or Twitter:<a href="https://twitter.com/search?q=%23metatags">#metatags</a> <a href="https://twitter.com/search?q=%23pagepreviews">#pagepreviews</a>&#8230; <a href="http://fb.me/4s5rmcCWm">fb.me/4s5rmcCWm</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25376" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/eight4eight/status/671830294496829440">
+Kelly Maurice</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-01T23:16:38">
+Tuesday,
+December 1st, 2015
+at
+11:16pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25377">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/chris_tofe/status/671868113638551552">
+Chris Humbert
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25377" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/chris_tofe/status/671868113638551552">
+Chris Humbert</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-02T01:46:55">
+Wednesday,
+December 2nd, 2015
+at
+1:46am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25378">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/boromino/status/671951592745246720">
+Boromino
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/adactio">@adactio</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25378" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/boromino/status/671951592745246720">
+Boromino</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-02T07:18:38">
+Wednesday,
+December 2nd, 2015
+at
+7:18am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25379">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/RemeJuan/status/672050922428739584">
+Reme Le Hane
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup - <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> via <a href="https://twitter.com/remelehane">@remelehane</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25379" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/RemeJuan/status/672050922428739584">
+Reme Le Hane</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-02T13:53:20">
+Wednesday,
+December 2nd, 2015
+at
+1:53pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25382">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/remelehane/status/672067914426642432">
+Reme Le Hane
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata Markup - <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> via <a href="https://twitter.com/remelehane">@remelehane</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25382" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/remelehane/status/672067914426642432">
+Reme Le Hane</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-02T15:00:51">
+Wednesday,
+December 2nd, 2015
+at
+3:00pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25389">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/xraytext/status/672099450660212736">
+X·RAY TEXT
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25389" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/xraytext/status/672099450660212736">
+X·RAY TEXT</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-02T17:06:10">
+Wednesday,
+December 2nd, 2015
+at
+5:06pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25397">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/daaveey/status/672133894985027584">
+daaveey
+</a>
+</h3>
+
+<div class="e-content">
+<p>Taking a look at Metadata markup:<a href="http://bit.ly/1MROwGW">bit.ly/1MROwGW</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25397" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/daaveey/status/672133894985027584">
+daaveey</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-02T19:23:02">
+Wednesday,
+December 2nd, 2015
+at
+7:23pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25414">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/richbs/status/672197583260016640">
+Earn &#36;&#36;s with richbs
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup: <a href="https://twitter.com/adactio">@adactio</a> strives for a clearer &lt;head&gt;. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25414" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/richbs/status/672197583260016640">
+Earn &#36;&#36;s with richbs</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-02T23:36:07">
+Wednesday,
+December 2nd, 2015
+at
+11:36pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25417">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/cssradar/status/672248643051790337">
+Yuya Saito
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://bit.ly/1MRIoOY">bit.ly/1MRIoOY</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25417" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/cssradar/status/672248643051790337">
+Yuya Saito</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-03T02:59:00">
+Thursday,
+December 3rd, 2015
+at
+2:59am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25419">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Trublux/status/672321266376904704">
+Israel Martín García
+</a>
+</h3>
+
+<div class="e-content">
+<p>Ingenioso &#8220;truco&#8221; lo de juntar los metas de <a href="https://twitter.com/search?q=%23FaceBook">#FaceBook</a> y <a href="https://twitter.com/search?q=%23Twitter">#Twitter</a> para evitar redundancia <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25419" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Trublux/status/672321266376904704">
+Israel Martín García</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-03T07:47:35">
+Thursday,
+December 3rd, 2015
+at
+7:47am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25428">
+
+<h3>
+<a class="p-name u-url" href="https://barryfrost.com/2015/12/metadata-markup">
+Barry Frost
+</a>
+</h3>
+
+<div class="e-content">
+<p>How to (more efficiently) include Twitter/Facebook/Open Graph metadata in your pages</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25428" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://barryfrost.com/2015/12/metadata-markup">
+Barry Frost</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-03T16:09:54">
+Thursday,
+December 3rd, 2015
+at
+4:09pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25440">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/bboywattsy/status/672586839270756352">
+Steven Watts
+</a>
+</h3>
+
+<div class="e-content">
+<p>Adactio: Journal%u2014Metadata markup - <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25440" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/bboywattsy/status/672586839270756352">
+Steven Watts</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T01:22:53">
+Friday,
+December 4th, 2015
+at
+1:22am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25441">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/meetmicah/status/672597735414104065">
+Micah Choquette
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata wars and why developers are paying the price. <a href="http://buff.ly/1O6t12S">buff.ly/1O6t12S</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25441" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/meetmicah/status/672597735414104065">
+Micah Choquette</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T02:06:11">
+Friday,
+December 4th, 2015
+at
+2:06am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25442">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/tosbourn/status/672602479348068352">
+Toby Osbourn
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://buff.ly/1Rnx1Sb">buff.ly/1Rnx1Sb</a> a great post on <a href="https://twitter.com/search?q=%23metacrap">#metacrap</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25442" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/tosbourn/status/672602479348068352">
+Toby Osbourn</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T02:25:02">
+Friday,
+December 4th, 2015
+at
+2:25am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25444">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/IE_DevTeam/status/672676984795889664">
+IE DevTeam
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://buff.ly/1Rnx28w">buff.ly/1Rnx28w</a> a great post on <a href="https://twitter.com/search?q=%23metacrap">#metacrap</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25444" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/IE_DevTeam/status/672676984795889664">
+IE DevTeam</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T07:21:05">
+Friday,
+December 4th, 2015
+at
+7:21am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25445">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/bvdputte/status/672686482709192705">
+Bart Vandeputte
+</a>
+</h3>
+
+<div class="e-content">
+<p>Improve Metadata markup (twitter/facebook) - <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25445" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/bvdputte/status/672686482709192705">
+Bart Vandeputte</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T07:58:50">
+Friday,
+December 4th, 2015
+at
+7:58am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25446">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/_BobbyLie/status/672688233424097280">
+Bobby
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metacrap, so meta, much redundancy. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25446" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/_BobbyLie/status/672688233424097280">
+Bobby</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T08:05:47">
+Friday,
+December 4th, 2015
+at
+8:05am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25454">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/purplehayz/status/672763894402797568">
+purplehayz
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="http://dld.bz/ecs5p">dld.bz/ecs5p</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25454" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/purplehayz/status/672763894402797568">
+purplehayz</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T13:06:26">
+Friday,
+December 4th, 2015
+at
+1:06pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25464">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/SebAshton/status/672837850560339969">
+Seb Ashton
+</a>
+</h3>
+
+<div class="e-content">
+<p>&#8220;Metadata markup&#8221; <a href="http://buff.ly/1IGTbaD">buff.ly/1IGTbaD</a>
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25464" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/SebAshton/status/672837850560339969">
+Seb Ashton</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-04T18:00:18">
+Friday,
+December 4th, 2015
+at
+6:00pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25621">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/rachelober/status/673177546532511745">
+Rachel Ober
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup (aka “Metacrap”) <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25621" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/rachelober/status/673177546532511745">
+Rachel Ober</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-05T16:30:08">
+Saturday,
+December 5th, 2015
+at
+4:30pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25752">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/ferra_andre/status/673509117978390532">
+Andrea Ferrato
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25752" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/ferra_andre/status/673509117978390532">
+Andrea Ferrato</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-06T14:27:41">
+Sunday,
+December 6th, 2015
+at
+2:27pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25753">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/brunomertins/status/673531062526599168">
+Bruno Mertins
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23Metadata">#Metadata</a> <a href="https://twitter.com/search?q=%23markup">#markup</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25753" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/brunomertins/status/673531062526599168">
+Bruno Mertins</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-06T15:54:53">
+Sunday,
+December 6th, 2015
+at
+3:54pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25760">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/steambros/status/673598687180808192">
+Stefanie Ambrosch
+</a>
+</h3>
+
+<div class="e-content">
+<p>Adactio: Journal—Metadata markup. About the annoying metacrap. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25760" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/steambros/status/673598687180808192">
+Stefanie Ambrosch</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-06T20:23:36">
+Sunday,
+December 6th, 2015
+at
+8:23pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25761">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Eroan/status/673622412584476672">
+Eroan Boyer
+</a>
+</h3>
+
+<div class="e-content">
+<p>Le cauchemar des balises meta multiples pour les réseaux sociaux, enfin une bonne idée : <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25761" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Eroan/status/673622412584476672">
+Eroan Boyer</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-06T21:57:53">
+Sunday,
+December 6th, 2015
+at
+9:57pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25762">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/juergengenser/status/673634838579146752">
+Jürgen Genser
+</a>
+</h3>
+
+<div class="e-content">
+<p>a clever way to reduce metadata markup - <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25762" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/juergengenser/status/673634838579146752">
+Jürgen Genser</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-06T22:47:15">
+Sunday,
+December 6th, 2015
+at
+10:47pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25764">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jarridb/status/673641297794633733">
+Jarrid Bainbridge
+</a>
+</h3>
+
+<div class="e-content">
+<p>Lots metacrap metadata, <a href="https://twitter.com/adactio">@adactio</a> has some answers. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25764" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jarridb/status/673641297794633733">
+Jarrid Bainbridge</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-06T23:12:55">
+Sunday,
+December 6th, 2015
+at
+11:12pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25773">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/influxweb/status/673704682880114688">
+Matt Zimmermann
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25773" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/influxweb/status/673704682880114688">
+Matt Zimmermann</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-07T03:24:47">
+Monday,
+December 7th, 2015
+at
+3:24am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25775">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/COBETHIK/status/673754993086881792">
+Den
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> actual topic of Metadata markup</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25775" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/COBETHIK/status/673754993086881792">
+Den</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-07T06:44:42">
+Monday,
+December 7th, 2015
+at
+6:44am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25776">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Gehirnfussel/status/673821726111883264">
+Jan ⚓️
+</a>
+</h3>
+
+<div class="e-content">
+<p>TIL: You can combine the metatags from Twitter and Facebook: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23webdev">#webdev</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25776" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Gehirnfussel/status/673821726111883264">
+Jan ⚓️</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-07T11:09:53">
+Monday,
+December 7th, 2015
+at
+11:09am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25777">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Si/status/673823578014523392">
+Si Jobling
+</a>
+</h3>
+
+<div class="e-content">
+<p>How to consolidate all that metacrap on your site for social sharing richness <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25777" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Si/status/673823578014523392">
+Si Jobling</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-07T11:17:14">
+Monday,
+December 7th, 2015
+at
+11:17am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25779">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/RplusTW/status/673840312851128321">
+R+
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup
+by Jeremy Keith,<a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a><a href="https://twitter.com/search?q=%23frontend">#frontend</a>
+將部份的 social metadata 併在一起
+url,&#8230; <a href="http://fb.me/6YOkWTsek">fb.me/6YOkWTsek</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25779" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/RplusTW/status/673840312851128321">
+R+</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-07T12:23:44">
+Monday,
+December 7th, 2015
+at
+12:23pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25808">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/Joulse_/status/674212378817503233">
+Joulse
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25808" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/Joulse_/status/674212378817503233">
+Joulse</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-08T13:02:12">
+Tuesday,
+December 8th, 2015
+at
+1:02pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25809">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/mborn319/status/674241893698510848">
+Michael Born
+</a>
+</h3>
+
+<div class="e-content">
+<p>This: metadata, metacrap, standards bloat, and more. Great article.<a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25809" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/mborn319/status/674241893698510848">
+Michael Born</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-08T14:59:28">
+Tuesday,
+December 8th, 2015
+at
+2:59pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25820">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/DavideCesarano/status/674507108193312768">
+Davide Cesarano
+</a>
+</h3>
+
+<div class="e-content">
+<p>How we can combat social metadata redundancy by merging some tags. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23seo">#seo</a> <a href="https://twitter.com/search?q=%23OpenGraph">#OpenGraph</a> <a href="https://twitter.com/search?q=%23TwitterCards">#TwitterCards</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25820" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/DavideCesarano/status/674507108193312768">
+Davide Cesarano</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-09T08:33:20">
+Wednesday,
+December 9th, 2015
+at
+8:33am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25818">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/janerolnd9/status/674507617847390208">
+Jane Roland
+</a>
+</h3>
+
+<div class="e-content">
+<p>RT <a href="http://twitter.com/DavideCesarano/status/674507108193312768">twitter.com/DavideCesarano…</a> How we can combat social metadata redundancy by merging some tags. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/search?q=%23seo">#seo</a> <a href="https://twitter.com/search?q=%23OpenGraph">#OpenGraph</a> <a href="https://twitter.com/search?q=%23Tw">#Tw</a>…</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25818" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/janerolnd9/status/674507617847390208">
+Jane Roland</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-09T08:35:22">
+Wednesday,
+December 9th, 2015
+at
+8:35am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25821">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/walking_fishy/status/674540534225092608">
+Martin Blackburn
+</a>
+</h3>
+
+<div class="e-content">
+<p>Genius idea on combining meta data for social media: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25821" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/walking_fishy/status/674540534225092608">
+Martin Blackburn</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-09T10:46:10">
+Wednesday,
+December 9th, 2015
+at
+10:46am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25823">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/svenkaemper/status/674576167370924032">
+Sven Kaemper
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23Metadata">#Metadata</a> markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25823" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/svenkaemper/status/674576167370924032">
+Sven Kaemper</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-09T13:07:45">
+Wednesday,
+December 9th, 2015
+at
+1:07pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25922">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/artysmedia/status/675231234121998337">
+Artysmedia
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup<a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a><a href="https://twitter.com/search?q=%23webdesign">#webdesign</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25922" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/artysmedia/status/675231234121998337">
+Artysmedia</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-11T08:30:46">
+Friday,
+December 11th, 2015
+at
+8:30am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment26102">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/LucyCount/status/677432190838448128">
+Lucia Conti
+</a>
+</h3>
+
+<div class="e-content">
+<p>Squishing Twitter and Facebook’s meta elements together <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment26102" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/LucyCount/status/677432190838448128">
+Lucia Conti</a>
+</cite>
+on
+<abbr class="dt-published" title="2015-12-17T10:16:35">
+Thursday,
+December 17th, 2015
+at
+10:16am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment26713">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/cronofy/status/684117254573834240">
+Cronofy
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup (via <a href="https://twitter.com/adactio">@adactio</a>): <a href="http://ln.cronofy.com/1OkM2EL">ln.cronofy.com/1OkM2EL</a> <p>
+<a class="link" href="https://twitter.com/cronofy/status/684117254573834240">
+</a>
+</p>
+
+<p><a class="u-mention" href="https://adactio.com/journal/9881"></a></p></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment26713" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/cronofy/status/684117254573834240">
+Cronofy</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-01-04T21:00:38">
+Monday,
+January 4th, 2016
+at
+9:00pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment26950">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/sdlamber/status/686341743197970433">
+Scott Lambert
+</a>
+</h3>
+
+<div class="e-content">
+<p>Looking to optimize your HTML? Cut the metadata in half! Adactio: Journal—Metadata markup by <a href="https://twitter.com/adactioJournal">@adactioJournal</a> <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment26950" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/sdlamber/status/686341743197970433">
+Scott Lambert</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-01-11T00:19:57">
+Monday,
+January 11th, 2016
+at
+12:19am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment28368">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/nhoizey/status/695212669259923456">
+Nicolas Hoizey
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/adactio">@adactio</a> &#8220;comments&#8221; on <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> are a tweets mess, do you put &#8220;real&#8221; comments and webmentions upfront when there are some?</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment28368" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/nhoizey/status/695212669259923456">
+Nicolas Hoizey</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-02-04T11:49:51">
+Thursday,
+February 4th, 2016
+at
+11:49am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment28351">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/adactio/status/695212952975237120">
+Jeremy Keith
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/nhoizey">@nhoizey</a> What do you mean by “a tweets mess”?
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment28351" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/adactio/status/695212952975237120">
+Jeremy Keith</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-02-04T11:50:59">
+Thursday,
+February 4th, 2016
+at
+11:50am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment30949">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/astronomyblog/status/722346996753948672">
+Stuart ⋆✴✭☄
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/owlice">@owlice</a> I don&#8217;t suppose it is possible to add Twitter/FB meta data to APOD entries is it? As shown at <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment30949" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/astronomyblog/status/722346996753948672">
+Stuart ⋆✴✭☄</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-04-19T08:51:59">
+Tuesday,
+April 19th, 2016
+at
+8:51am
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment31510">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/enginnr/status/727203564729319424">
+ᄃЯӨЩП ƬΉIΣF
+</a>
+</h3>
+
+<div class="e-content">
+<p>Metadata markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a> <a href="https://twitter.com/adactio">@adactio</a> have you seen: <a href="https://raw.githubusercontent.com/gguynn/h5bp-redux/master/index.html">raw.githubusercontent.com/gguynn/h5bp-re…</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment31510" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/enginnr/status/727203564729319424">
+ᄃЯӨЩП ƬΉIΣF</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-05-02T18:30:15">
+Monday,
+May 2nd, 2016
+at
+6:30pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment34906">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/zeldman/status/746106807433764864">
+Jeffrey Zeldman
+</a>
+</h3>
+
+<div class="e-content">
+<p>✎ Old gold: <a href="https://twitter.com/adactio">@adactio</a> on the redundancy of Twitter card and Open Graph protocol markup—and how to write less of it. <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment34906" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/zeldman/status/746106807433764864">
+Jeffrey Zeldman</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-06-23T23:24:59">
+Thursday,
+June 23rd, 2016
+at
+11:24pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment34940">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/jbmoelker/status/746322361088155648">
+Jasper Moelker
+</a>
+</h3>
+
+<div class="e-content">
+<p>Limit the &lt;meta&gt;crap in your &lt;head&gt;.
+A critical look: <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a>
+Essential tags: <a href="https://css-tricks.com/essential-meta-tags-social-media/">css-tricks.com/essential-meta…</a>
+Don&#8217;t forget to test.</p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment34940" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/jbmoelker/status/746322361088155648">
+Jasper Moelker</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-06-24T13:41:31">
+Friday,
+June 24th, 2016
+at
+1:41pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment36064">
+
+<h3>
+<a class="p-name u-url" href="https://twitter.com/alexmezaruiz/status/757705954288922624">
+Александр
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://twitter.com/search?q=%23Metadata">#Metadata</a> markup <a href="https://adactio.com/journal/9881">adactio.com/journal/9881</a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment36064" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://twitter.com/alexmezaruiz/status/757705954288922624">
+Александр</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-07-25T23:35:51">
+Monday,
+July 25th, 2016
+at
+11:35pm
+</abbr>
+</p>
+</footer>
+
+</article>
+<article class="p-comment h-entry" id="comment25336">
+
+<h3>
+<a class="p-name u-url" href="https://plus.google.com/+RobbieJack/posts/ABno4mfBtga">
+Robbie Jack
+</a>
+</h3>
+
+<div class="e-content">
+<p><a href="https://adactio.com/journal/9881" class="ot-anchor">https://adactio.com/journal/9881</a>﻿
+<a class="u-mention" href="https://adactio.com/journal/9881"></a></p>
+
+</div>
+
+<footer>
+<p class="meta">
+<a href="#comment25336" rel="bookmark">#</a>
+Posted by
+<cite class="h-card p-author">
+<a class="u-url p-name" href="https://plus.google.com/+RobbieJack/posts/ABno4mfBtga">
+Robbie Jack</a>
+</cite>
+on
+<abbr class="dt-published" title="2016-09-29T19:27:30">
+Thursday,
+September 29th, 2016
+at
+7:27pm
+</abbr>
+</p>
+</footer>
+
+</article>
+</section>
+
+</div>
+</main>
+
+<aside role="complementary">
+
+<h2>More information</h2>
+
+<!-- Begin the extra content -->
+
+<div class="box">
+
+<h3>About this site</h3>
+
+<address class="vcard h-card">
+<a href="https://adactio.com/" class="url u-url" rel="me">Adactio</a> is the online home of <a href="mailto:jeremy@adactio.com" class="email fn p-name u-email">Jeremy Keith</a>, a <span class="role p-role">web developer</span> and <span class="title p-job-title">author</span> living and working in <span class="adr p-adr"><span class="locality p-locality">Brighton</span>, <span class="country-name p-country-name">England</span></span>.
+</address>
+<p><a href="/contact/">Get in touch</a></p>
+</div>
+
+<div class="box">
+
+<h3>Customise</h3>
+
+<form method="get" action="/journal/9881" id="skinselection">
+<p>
+<label for="skin">Choose a theme&hellip;</label><br />
+<select name="skin" id="skin">
+<option value="default" selected="selected">default</option>
+<option value="tatemodern">tatemodern</option>
+<option value="seaside">seaside</option>
+<option value="zeldman">zeldman</option>
+<option value="adactizilla">adactizilla</option>
+<option value="sci-fi">sci-fi</option>
+<option value="renaissance">renaissance</option>
+<option value="hirnlego">hirnlego</option>
+</select>
+<input type="submit" value="Go!" id="submitskin" />
+<a href="/about/site/" title="what is this?">?</a>
+</p>
+</form>
+<p>This is the plain vanilla look.</p>
+
+</div>
+
+<div class="box">
+
+<h3>Search</h3>
+
+<form action="/journal/search/" method="get">
+<p><label for="query">Search the journal:</label><br /><input accesskey="4" type="search" name="query" id="query" value="" />
+<button type="submit">Go!</button></p>
+</form>
+<ul>
+<li>Peruse the <a rel="contents" href="/journal/archive/" title="chronologically ordered">archive</a></li>
+<li>Browse the <a href="/journal/tags/">tags</a></li>
+</ul>
+
+</div>
+<div class="box">
+
+<h3>Subscribe</h3>
+
+<p>You can subscribe to the <a href="/journal/rss" rel="alternate" type="application/rss+xml" title="Journal RSS">journal RSS feed</a> or you can follow <a href="https://twitter.com/adactioJournal">@adactioJournal</a> on Twitter.</p>
+
+</div>
+
+<div class="box">
+
+<h3>Recommended reading</h3>
+<p>Hand-picked highlights from the archive.</p>
+<ul>
+<li>
+<h4><a href="/journal/9016">Web! What is it good for?</a></h4>
+Not absolutely nothing, but not absolutely everything either.
+</li>
+<li>
+<h4><a href="/journal/6786">Seams</a></h4>
+There is a crack, a crack in everything. That’s how the light gets in.
+</li>
+<li>
+<h4><a href="/journal/1283">Hyperdrive</a></h4>
+Last night in San Francisco.
+</li>
+<li>
+<h4><a href="/journal/1376">Design doing</a></h4>
+The opposite of design thinking.
+</li>
+<li>
+<h4><a href="/journal/1530">Iron Man and me</a></h4>
+The story of how one of my Flickr pictures came to be used in a Hollywood movie.
+</li>
+</ul>
+
+</div>
+</aside>
+
+
+<!-- The large print giveth and the small print taketh away -->
+
+<footer role="contentinfo">
+<p>&copy; 1998 - 2016 <a href="mailto:jeremy@adactio.com">Jeremy Keith</a>.</p>
+</footer>
+
+<script src="/includes/javascript/global.js" defer="defer"></script>
+<script src="/mint/?js"></script>
+<script>
+<!--
+// Register our service-worker
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/serviceworker.js', {
+        scope: '/'
+    });
+    window.addEventListener('load', function() {
+        if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
+        }
+    });
+}
+//-->
+</script>
+
+</body>
+</html>
