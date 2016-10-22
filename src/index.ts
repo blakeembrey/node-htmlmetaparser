@@ -598,6 +598,11 @@ export class Handler {
                 href: resolveUrl(this.options.url, hrefAttr)
               })
             }
+          } else if (rel === 'meta') {
+            this.result.alternate.push({
+              type: normalize(attributes['type']) || 'application/rdf+xml',
+              href: resolveUrl(this.options.url, hrefAttr)
+            })
           }
         }
       }

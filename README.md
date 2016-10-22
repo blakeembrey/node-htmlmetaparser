@@ -147,7 +147,7 @@ Object {
 */
 ```
 
-**Please note:** No HTTP requests are made by `htmlmetaparser`. You must decide what you want to retrieve by traversing the `alternate` array and making requests manually (E.g. external JSON-LD documents, OEmbed, RSS).
+**Please note:** No HTTP requests are made by `htmlmetaparser`. You must decide what you want to retrieve by traversing the `alternate` array and making requests manually (E.g. external JSON-LD documents, RDF documents, OEmbed, RSS).
 
 ## Development
 

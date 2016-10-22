@@ -218,6 +218,10 @@ exports[`htmlmetaparser http!dublincore.org 1`] = `
 Object {
   "alternate": Array [
     Object {
+      "href": "http://dublincore.org/index.shtml.rdf",
+      "type": "application/rdf+xml",
+    },
+    Object {
       "href": "http://dublincore.org/news.rss",
       "hreflang": undefined,
       "media": undefined,
