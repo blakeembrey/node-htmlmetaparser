@@ -214,6 +214,23 @@ Object {
 }
 `;
 
+exports[`htmlmetaparser http!dublincore.org 1`] = `
+Object {
+  "alternate": Array [
+    Object {
+      "href": "http://dublincore.org/news.rss",
+      "hreflang": undefined,
+      "media": undefined,
+      "title": "RSS",
+      "type": "application/rss+xml",
+    },
+  ],
+  "html": Object {
+    "title": "DCMI Home: Dublin Core® Metadata Initiative (DCMI)",
+  },
+}
+`;
+
 exports[`htmlmetaparser http!franz.com!agraph!allegrograph 1`] = `
 Object {
   "alternate": Array [

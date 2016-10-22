@@ -109,6 +109,7 @@ const FIXTURES = [
   'http://cnn.com/',
   'https://www.ampproject.org/',
   'http://microformats.org/',
+  'http://dublincore.org/',
   // Blog/article posts.
   'http://www.lifehacker.com.au/2016/08/some-bill-providers-automatically-update-your-credit-card-when-you-get-a-new-one/',
   'http://www.theverge.com/2016/8/10/12416766/google-white-house-ostp-emails?utm_campaign=theverge&utm_content=chorus&utm_medium=social&utm_source=twitter',
