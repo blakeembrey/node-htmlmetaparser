@@ -867,12 +867,8 @@ function getValueMap (url: string, tagName: string, attributes: any) {
 /**
  * Merge values together.
  */
-function merge <T> (left: undefined | T | T[], right: undefined | T | T[]): T | T[] {
-  let result = Array.isArray(left) ? left : (left == null ? [] : [left])
-
-  if (right != null) {
-    result = result.concat(right)
-  }
+function merge <T> (left: undefined | T | T[], right: T | T[]): T | T[] {
+  const result = (Array.isArray(left) ? left : (left == null ? [] : [left])).concat(right)
 
   return result.length > 1 ? result : result[0]
 }
@@ -907,7 +903,7 @@ function getPrefix (value: string) {
  * Split a space-separated string.
  */
 function split (value: string) {
-  return value ? value.split(/\s+/g) : []
+  return value.split(/\s+/g)
 }
 
 /**
