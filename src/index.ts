@@ -129,7 +129,7 @@ export const HandlerFlags = {
   microdataScope: (1 << 6)
 }
 
-export interface HtmlMetaParserResultTwitter {
+export interface ResultTwitter {
   card?: string
   site?: string
   'site:id'?: string
@@ -155,7 +155,7 @@ export interface HtmlMetaParserResultTwitter {
   [key: string]: string | undefined
 }
 
-export interface HtmlMetaParserResultDublinCore {
+export interface ResultDublinCore {
   title?: string
   date?: string // Date
   'date.issued'?: string // Date
@@ -163,7 +163,7 @@ export interface HtmlMetaParserResultDublinCore {
   [key: string]: string | undefined
 }
 
-export interface HtmlMetaParserResultSailthru {
+export interface ResultSailthru {
   title?: string
   description?: string
   author?: string
@@ -177,11 +177,11 @@ export interface HtmlMetaParserResultSailthru {
   [key: string]: string | undefined
 }
 
-export interface HtmlMetaParserResultJsonLd {
+export interface ResultJsonLd {
   [key: string]: any
 }
 
-export interface HtmlMetaParserResultApplinks {
+export interface ResultApplinks {
   'ios:url'?: string
   'ios:app_store_id'?: string
   'ios:app_name'?: string
@@ -209,7 +209,7 @@ export interface HtmlMetaParserResultApplinks {
   [key: string]: string | undefined
 }
 
-export interface HtmlMetaParserResultHtml {
+export interface ResultHtml {
   date?: string // Date
   keywords?: string // "*,*,..."
   author?: string
@@ -236,25 +236,25 @@ export interface Alternative {
   hreflang?: string
 }
 
-export interface HtmlMetaParserResult {
+export interface Result {
   alternate: Array<Alternative>
-  jsonld?: HtmlMetaParserResultJsonLd | HtmlMetaParserResultJsonLd[]
-  rdfa?: HtmlMetaParserResultJsonLd
-  microdata?: HtmlMetaParserResultJsonLd
-  applinks?: HtmlMetaParserResultApplinks
-  twitter?: HtmlMetaParserResultTwitter
-  dublincore?: HtmlMetaParserResultDublinCore
-  sailthru?: HtmlMetaParserResultSailthru
-  html?: HtmlMetaParserResultHtml
+  jsonld?: ResultJsonLd | ResultJsonLd[]
+  rdfa?: ResultJsonLd
+  microdata?: ResultJsonLd
+  applinks?: ResultApplinks
+  twitter?: ResultTwitter
+  dublincore?: ResultDublinCore
+  sailthru?: ResultSailthru
+  html?: ResultHtml
 }
 
-export interface HtmlMetaParserOptions {
+export interface Options {
   url: string
 }
 
 export class Handler {
 
-  protected result: HtmlMetaParserResult = { alternate: [] }
+  protected result: Result = { alternate: [] }
   protected contexts: HandlerContext[] = [{ tagName: '', text: '', flags: 0 }]
   protected langs: string[] = []
 
@@ -269,8 +269,8 @@ export class Handler {
   private _microdataNodes: any[] = [{}]
 
   constructor (
-    protected callback: (err: Error | null, result: HtmlMetaParserResult) => void,
-    protected options: HtmlMetaParserOptions
+    protected callback: (err: Error | null, result: Result) => void,
+    protected options: Options
   ) {}
 
   onend () {
@@ -810,11 +810,7 @@ function setContext (node: any, key: string, value: string) {
  * Normalize a HTML value, trimming and removing whitespace.
  */
 function normalize (value?: string): string | undefined {
-  if (value == null) {
-    return
-  }
-
-  return value.trim().replace(/\s+/g, ' ')
+  return value == null ? undefined : value.trim().replace(/\s+/g, ' ')
 }
 
 /**
