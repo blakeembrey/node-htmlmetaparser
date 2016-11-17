@@ -22,6 +22,7 @@ const FIXTURES = [
   'https://soundcloud.com/lifeofdesiigner/desiigner-panda',
   'https://soundcloud.com/tobiasvanschneider/ntmy-episode-1-pieter-levels',
   'https://slant6.bandcamp.com/',
+  'https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg',
   // Movie pages.
   'http://www.imdb.com/title/tt1375666/',
   'https://www.rottentomatoes.com/m/inception/',
@@ -57,6 +58,7 @@ const FIXTURES = [
   'http://cloudinary.com/pricing',
   // Forum posts.
   'https://discourse.codinghorror.com/t/the-raspberry-pi-has-revolutionized-emulation/4462/29',
+  'http://lifehacks.stackexchange.com/questions/14477/how-do-i-get-the-last-lines-of-dust-into-the-dustpan',
   // Video pages.
   'https://www.youtube.com/watch?v=W9ZnpIGvZUo',
   'https://www.ted.com/talks/tim_harford_how_messy_problems_can_inspire_creativity',

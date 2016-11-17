@@ -677,6 +677,54 @@ Object {
 }
 `;
 
+exports[`htmlmetaparser http!lifehacks.stackexchange.com!questions!14477!how-do-i-get-the-last-lines-of-dust-into-the-dustpa 1`] = `
+Object {
+  "alternate": Array [
+    Object {
+      "href": "http://lifehacks.stackexchange.com/feeds/question/14477",
+      "hreflang": undefined,
+      "media": undefined,
+      "title": "Feed for question \'How do I get the last lines of dust into the dustpan?\'",
+      "type": "application/atom+xml",
+    },
+  ],
+  "html": Object {
+    "canonical": "http://lifehacks.stackexchange.com/questions/14477/how-do-i-get-the-last-lines-of-dust-into-the-dustpan",
+    "title": "cleaning - How do I get the last lines of dust into the dustpan? - Lifehacks Stack Exchange",
+  },
+  "rdfa": Object {
+    "@context": Object {
+      "og": "http://ogp.me/ns#",
+    },
+    "@graph": Array [
+      Object {
+        "og:description": "While cleaning up my room with a broomstick, I use the dustpan to collect dust and garbage, but those last lines of dust don\'t go in the dustpan. That\'s why I have to leave it there. How do I get ...",
+        "og:image": "http://cdn.sstatic.net/Sites/lifehacks/img/apple-touch-icon.png?v=13f7bc4a8856&a",
+        "og:title": "How do I get the last lines of dust into the dustpan?",
+        "og:type": "website",
+        "og:url": "http://lifehacks.stackexchange.com/questions/14477/how-do-i-get-the-last-lines-of-dust-into-the-dustpan",
+      },
+    ],
+  },
+  "twitter": Object {
+    "app:country": "US",
+    "app:id:googleplay": "com.stackexchange.marvin",
+    "app:id:ipad": "871299723",
+    "app:id:iphone": "871299723",
+    "app:name:googleplay": "Stack Exchange Android",
+    "app:name:ipad": "Stack Exchange iOS",
+    "app:name:iphone": "Stack Exchange iOS",
+    "app:url:googleplay": "http://lifehacks.stackexchange.com/questions/14477/how-do-i-get-the-last-lines-of-dust-into-the-dustpan",
+    "app:url:ipad": "se-zaphod://lifehacks.stackexchange.com/questions/14477/how-do-i-get-the-last-lines-of-dust-into-the-dustpan",
+    "app:url:iphone": "se-zaphod://lifehacks.stackexchange.com/questions/14477/how-do-i-get-the-last-lines-of-dust-into-the-dustpan",
+    "card": "summary",
+    "description": "While cleaning up my room with a broomstick, I use the dustpan to collect dust and garbage, but those last lines of dust don\'t go in the dustpan. That\'s why I have to leave it there. How do I get ...",
+    "domain": "lifehacks.stackexchange.com",
+    "title": "How do I get the last lines of dust into the dustpan?",
+  },
+}
+`;
+
 exports[`htmlmetaparser http!mashable.com!2016!06!17!battle-of-the-bastards-game-of-thrones-fantasy-ending!#L2pP7_P5k5q3 1`] = `
 Object {
   "alternate": Array [
@@ -6684,6 +6732,1066 @@ Object {
   "html": Object {
     "title": "For a Better Economy, Add Commuter Rail? | Hacker News",
     "viewport": "width=device-width, initial-scale=1.0",
+  },
+}
+`;
+
+exports[`htmlmetaparser https!open.spotify.com!user!hsuze!playlist!6UPEizbzsiGRgpbgBoTQbg 1`] = `
+Object {
+  "alternate": Array [],
+  "applinks": Object {
+    "android:app_name": "Spotify",
+    "android:package": "com.spotify.music",
+    "android:url": "spotify://user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+    "ios:app_name": "Spotify",
+    "ios:app_store_id": "324684580",
+    "ios:url": "spotify://user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+  },
+  "html": Object {
+    "canonical": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+    "title": "HRX on Spotify",
+    "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+  },
+  "jsonld": Object {
+    "@context": "http://schema.googleapis.com/",
+    "@id": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+    "@type": "MusicGroup",
+    "description": "Let&#x27;s make&#x2F;share beautiful music together!",
+    "name": "HRX",
+    "potentialAction": Object {
+      "@type": "ListenAction",
+      "expectsAcceptanceOf": Object {
+        "@type": "Offer",
+        "category": "free",
+        "eligibleRegion": Array [
+          Object {
+            "@type": "Country",
+            "name": "AD",
+          },
+          Object {
+            "@type": "Country",
+            "name": "AR",
+          },
+          Object {
+            "@type": "Country",
+            "name": "AT",
+          },
+          Object {
+            "@type": "Country",
+            "name": "AU",
+          },
+          Object {
+            "@type": "Country",
+            "name": "BE",
+          },
+          Object {
+            "@type": "Country",
+            "name": "BG",
+          },
+          Object {
+            "@type": "Country",
+            "name": "BO",
+          },
+          Object {
+            "@type": "Country",
+            "name": "BR",
+          },
+          Object {
+            "@type": "Country",
+            "name": "CA",
+          },
+          Object {
+            "@type": "Country",
+            "name": "CH",
+          },
+          Object {
+            "@type": "Country",
+            "name": "CL",
+          },
+          Object {
+            "@type": "Country",
+            "name": "CO",
+          },
+          Object {
+            "@type": "Country",
+            "name": "CR",
+          },
+          Object {
+            "@type": "Country",
+            "name": "CY",
+          },
+          Object {
+            "@type": "Country",
+            "name": "CZ",
+          },
+          Object {
+            "@type": "Country",
+            "name": "DE",
+          },
+          Object {
+            "@type": "Country",
+            "name": "DK",
+          },
+          Object {
+            "@type": "Country",
+            "name": "DO",
+          },
+          Object {
+            "@type": "Country",
+            "name": "EC",
+          },
+          Object {
+            "@type": "Country",
+            "name": "EE",
+          },
+          Object {
+            "@type": "Country",
+            "name": "ES",
+          },
+          Object {
+            "@type": "Country",
+            "name": "FI",
+          },
+          Object {
+            "@type": "Country",
+            "name": "FR",
+          },
+          Object {
+            "@type": "Country",
+            "name": "GB",
+          },
+          Object {
+            "@type": "Country",
+            "name": "GR",
+          },
+          Object {
+            "@type": "Country",
+            "name": "GT",
+          },
+          Object {
+            "@type": "Country",
+            "name": "HK",
+          },
+          Object {
+            "@type": "Country",
+            "name": "HN",
+          },
+          Object {
+            "@type": "Country",
+            "name": "HU",
+          },
+          Object {
+            "@type": "Country",
+            "name": "ID",
+          },
+          Object {
+            "@type": "Country",
+            "name": "IE",
+          },
+          Object {
+            "@type": "Country",
+            "name": "IS",
+          },
+          Object {
+            "@type": "Country",
+            "name": "IT",
+          },
+          Object {
+            "@type": "Country",
+            "name": "JP",
+          },
+          Object {
+            "@type": "Country",
+            "name": "LI",
+          },
+          Object {
+            "@type": "Country",
+            "name": "LT",
+          },
+          Object {
+            "@type": "Country",
+            "name": "LU",
+          },
+          Object {
+            "@type": "Country",
+            "name": "LV",
+          },
+          Object {
+            "@type": "Country",
+            "name": "MC",
+          },
+          Object {
+            "@type": "Country",
+            "name": "MT",
+          },
+          Object {
+            "@type": "Country",
+            "name": "MX",
+          },
+          Object {
+            "@type": "Country",
+            "name": "MY",
+          },
+          Object {
+            "@type": "Country",
+            "name": "NI",
+          },
+          Object {
+            "@type": "Country",
+            "name": "NL",
+          },
+          Object {
+            "@type": "Country",
+            "name": "NO",
+          },
+          Object {
+            "@type": "Country",
+            "name": "NZ",
+          },
+          Object {
+            "@type": "Country",
+            "name": "PA",
+          },
+          Object {
+            "@type": "Country",
+            "name": "PE",
+          },
+          Object {
+            "@type": "Country",
+            "name": "PH",
+          },
+          Object {
+            "@type": "Country",
+            "name": "PL",
+          },
+          Object {
+            "@type": "Country",
+            "name": "PT",
+          },
+          Object {
+            "@type": "Country",
+            "name": "PY",
+          },
+          Object {
+            "@type": "Country",
+            "name": "SE",
+          },
+          Object {
+            "@type": "Country",
+            "name": "SG",
+          },
+          Object {
+            "@type": "Country",
+            "name": "SK",
+          },
+          Object {
+            "@type": "Country",
+            "name": "SV",
+          },
+          Object {
+            "@type": "Country",
+            "name": "TR",
+          },
+          Object {
+            "@type": "Country",
+            "name": "TW",
+          },
+          Object {
+            "@type": "Country",
+            "name": "US",
+          },
+          Object {
+            "@type": "Country",
+            "name": "UY",
+          },
+        ],
+      },
+      "target": Array [
+        Object {
+          "@type": "EntryPoint",
+          "actionPlatform": Array [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.googleapis.com/GoogleAudioCast",
+            "http://schema.googleapis.com/GoogleVideoCast",
+          ],
+          "urlTemplate": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg?autoplay=true",
+        },
+        "android-app://com.spotify.music/spotify/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg/play",
+      ],
+    },
+    "url": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+  },
+  "rdfa": Object {
+    "@context": Object {
+      "fb": "http://ogp.me/ns/fb#",
+      "music": "http://ogp.me/ns/music#",
+      "og": "http://ogp.me/ns#",
+    },
+    "@graph": Array [
+      Object {
+        "al:android:app_name": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "Spotify",
+        },
+        "al:android:package": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "com.spotify.music",
+        },
+        "al:android:url": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "spotify://user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+        },
+        "al:ios:app_name": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "Spotify",
+        },
+        "al:ios:app_store_id": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "324684580",
+        },
+        "al:ios:url": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "spotify://user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+        },
+        "fb:app_id": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "174829003346",
+        },
+        "music:creator": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "https://open.spotify.com/user/hsuze",
+        },
+        "music:song": Array [
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/3p2X9QGuuHtHYDGNfwt9Oq",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/6SWdELTwJE6cyVdoBEVAoH",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/4uebxn8GU88Tvc4gLUNfKp",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/0iQLl5lgOhnlxrWnFWLyDa",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/00aQGaqM6SFzGfbgKOite0",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/6aKEtd7dEepK0II3qqarDb",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/5KXx0rWkNUyjUTTqZGa6pp",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/3U1NVPoUjdSHRsU0e1c7t4",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/5ey0QpbtmSW71r5dWzkAlB",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/2j1zYaCXkvrMjz7JCvccJi",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/0Zg4tjgfqw9qzq7lXX2sUM",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/2Ym1nV0qgNUmDqwprsKwGT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/732bvElpqPDV5t1Y5RlihX",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/22iOPxdSVaVleX3UlnSTv5",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/4HLc8s6MiXUgRgyDQlvwL2",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/1sW8AxMW4vuoV5LCDZj7r7",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/7kkmzZURNWG57z2edDcQJL",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/0L0k6ebsUYiGMA30Pye9uX",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/0TaLEGNb6f3nL2VME9SxAR",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/10Kdm54khBqzRNu2yifpu4",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/3wQ2F1MjiNMENmvy4xUeXy",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/5qZVuornKKdSdsHPnsJjWT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/2prLNGoNAy6GXAjqp3HVvt",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/6sLZmlIz35Igd2Itci5484",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/7braYuqLa055fDFRA7kuQM",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/4DucgpxTbwSyxm4Cw1xUM9",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/7AQOtHHGqRc2XO2zahEyb0",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/7nEDPfVvSbWUSTZKWY50tF",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/5SOt2NdHbsUz3PyTG4sV1s",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "https://open.spotify.com/track/0QOPtwpqVM8qRyDs8zVKil",
+          },
+        ],
+        "music:song:track": Array [
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "1",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "2",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "3",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "4",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "5",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "6",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "7",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "8",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "9",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "10",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "11",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "12",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "13",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "14",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "15",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "16",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "17",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "18",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "19",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "20",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "21",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "22",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "23",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "24",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "25",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "26",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "27",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "28",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "29",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "30",
+          },
+        ],
+        "music:song_count": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "110",
+        },
+        "og:description": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "Let&#x27;s make&#x2F;share beautiful music together!",
+        },
+        "og:image": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "http://profile-images.scdn.co/artists/default/198bbb5f81ba4d0af18256e4a4d90d6ea64a8879",
+        },
+        "og:restrictions:country:allowed": Array [
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "AD",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "AR",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "AT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "AU",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "BE",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "BG",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "BO",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "BR",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "CA",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "CH",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "CL",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "CO",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "CR",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "CY",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "CZ",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "DE",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "DK",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "DO",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "EC",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "EE",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "ES",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "FI",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "FR",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "GB",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "GR",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "GT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "HK",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "HN",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "HU",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "ID",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "IE",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "IS",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "IT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "JP",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "LI",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "LT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "LU",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "LV",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "MC",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "MT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "MX",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "MY",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "NI",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "NL",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "NO",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "NZ",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "PA",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "PE",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "PH",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "PL",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "PT",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "PY",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "SE",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "SG",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "SK",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "SV",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "TR",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "TW",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "US",
+          },
+          Object {
+            "@language": "en",
+            "@type": undefined,
+            "@value": "UY",
+          },
+        ],
+        "og:site_name": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "Spotify",
+        },
+        "og:title": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "HRX, a playlist by hsuze on Spotify",
+        },
+        "og:type": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "music.playlist",
+        },
+        "og:url": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+        },
+        "twitter:app:id:googleplay": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "com.spotify.music",
+        },
+        "twitter:app:id:iphone": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "324684580",
+        },
+        "twitter:audio:artist_name": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "Yancey Boys, Marian Hill, Glass Animals, and others",
+        },
+        "twitter:audio:partner": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "Spotify",
+        },
+        "twitter:audio:source": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "https://open.spotify.com/twitter/vmap/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg?utm_campaign=twitter-player&utm_source=open&utm_medium=twitter",
+        },
+        "twitter:card": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "audio",
+        },
+        "twitter:description": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "Let&#x27;s make&#x2F;share beautiful music together!",
+        },
+        "twitter:image:src": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "",
+        },
+        "twitter:player": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "https://open.spotify.com/embed/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg?utm_campaign=twitter-player&utm_source=open&utm_medium=twitter",
+        },
+        "twitter:player:height": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "380",
+        },
+        "twitter:player:width": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "300",
+        },
+        "twitter:site": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "@spotify",
+        },
+        "twitter:title": Object {
+          "@language": "en",
+          "@type": undefined,
+          "@value": "HRX",
+        },
+      },
+    ],
+  },
+  "twitter": Object {
+    "app:id:googleplay": "com.spotify.music",
+    "app:id:iphone": "324684580",
+    "audio:artist_name": "Yancey Boys, Marian Hill, Glass Animals, and others",
+    "audio:partner": "Spotify",
+    "audio:source": "https://open.spotify.com/twitter/vmap/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg?utm_campaign=twitter-player&utm_source=open&utm_medium=twitter",
+    "card": "audio",
+    "description": "Let&#x27;s make&#x2F;share beautiful music together!",
+    "player": "https://open.spotify.com/embed/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg?utm_campaign=twitter-player&utm_source=open&utm_medium=twitter",
+    "player:height": "380",
+    "player:width": "300",
+    "site": "@spotify",
+    "title": "HRX",
   },
 }
 `;
