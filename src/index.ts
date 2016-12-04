@@ -353,6 +353,7 @@ export class Handler {
       if (itempropAttr) {
         this._addMicrodataProperty(last(this._microdataNodes), context.id, split(itempropAttr), newNode)
       } else {
+        this.result.microdata = this._microdata
         pushToGraph(this._microdata, newNode)
         this._microdataScopes.push([])
         context.flags = context.flags | HandlerFlags.microdataScope
@@ -715,7 +716,6 @@ export class Handler {
 
     if (!this._microdata.hasOwnProperty('@graph')) {
       this.result.microdata = this._microdata
-
       pushToGraph(this._microdata, node)
     }
   }
@@ -738,9 +738,8 @@ export class Handler {
     addJsonldProperty(node, property, value)
 
     if (!this._rdfa.hasOwnProperty('@graph')) {
-      pushToGraph(this._rdfa, node)
-
       this.result.rdfa = this._rdfa
+      pushToGraph(this._rdfa, node)
     }
   }
 
@@ -784,6 +783,7 @@ export class Handler {
     }
 
     const node: any = { '@id': id }
+    this.result.rdfa = this._rdfa
     pushToGraph(this._rdfa, node)
     return node
   }
