@@ -84,48 +84,39 @@ Object {
         "fb:admins": Array [
           Object {
             "@language": "en-us",
-            "@type": undefined,
             "@value": "592156917",
           },
           Object {
             "@language": "en-us",
-            "@type": undefined,
             "@value": "108943",
           },
           Object {
             "@language": "en-us",
-            "@type": undefined,
             "@value": "10103365229664579",
           },
         ],
         "og:description": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Unbeatable software and support with a great camera, wrapped in a familiar exterior.",
         },
         "og:image": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "https://cdn.arstechnica.net/wp-content/uploads/2016/10/pixel-feature-640x320.jpg",
         },
         "og:site_name": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Ars Technica",
         },
         "og:title": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Google Pixel review: The best Android phone, even if it is a little pricey",
         },
         "og:type": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "http://arstechnica.com/gadgets/2016/10/google-pixel-review-bland-pricey-but-still-best-android-phone/",
         },
       },
@@ -218,27 +209,22 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1598785373777362",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Shared with Droplr",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://d.pr/i/q3z9.png",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "table.jpeg",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://d.pr/i/q3z9",
         },
       },
@@ -503,42 +489,34 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "44615671688",
         },
         "og:description": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "The recent hack that targeted Democratic officials and led to the resignation of Democratic National Committee chairwoman Debbie Wasserman Schultz was much bigger than initially suspected, according to a new report from the New York Times.",
         },
         "og:image": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://i.kinja-img.com/gawker-media/image/upload/s--D8tZJKTC--/c_fill,fl_progressive,g_center,h_450,q_80,w_800/uwwyvlh7dwqyodgah0mr.jpg",
         },
         "og:locale": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Gizmodo",
         },
         "og:title": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "The DNC Hack Was Much Bigger Than We Thought",
         },
         "og:type": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "http://gizmodo.com/the-dnc-hack-was-much-bigger-than-we-thought-1785145268",
         },
       },
@@ -726,107 +704,86 @@ Object {
       Object {
         "article:modified_time": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-01-04T02:52:30+00:00",
         },
         "article:published_time": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2015-04-09T14:00:45+00:00",
         },
         "article:publisher": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.facebook.com/WordPresscom",
         },
         "fb:pages": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "29092950651",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Timothy Doner started teaching himself to speak in other languages when he was 13, and was quickly hailed as a prodigy for his linguistic proficiency. But as he soon realized, there’s more to…",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://tedideas.files.wordpress.com/2015/04/timdoner_ted_polyglot.jpg?w=1200",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "720",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1200",
         },
         "og:locale": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ideas.ted.com",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Why I taught myself 20 languages — and what I learned about myself in the process",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://ideas.ted.com/why-i-learned-20-languages-and-what-i-learned-about-myself-in-the-process/",
         },
         "twitter:app:id:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.ted.android",
         },
         "twitter:app:id:ipad": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "376183339",
         },
         "twitter:app:id:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "376183339",
         },
         "twitter:app:name:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TED Talks",
         },
         "twitter:app:name:ipad": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TED Talks",
         },
         "twitter:app:name:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TED Talks",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "summary_large_image",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "@tedtalks",
         },
       },
@@ -1054,57 +1011,46 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "122071082108",
         },
         "fb:page_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "18807449704",
         },
         "og:article:modified_time": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-07-13T23:46:37Z",
         },
         "og:article:published_time": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-06-17T15:35:08Z",
         },
         "og:article:publisher": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.facebook.com/mashable",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Let us count the ways we hope Ramsey will die.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://a.amz.mshcdn.com/media/ZgkyMDE2LzA2LzE3LzMyL2JhdHRsZW9mdGhlYmFzdGFyZHMuYzkwZTQuanBnCnAJdGh1bWIJMTIwMHg2MzAKZQlqcGc/8e6659fa/25e/battleofthebastards.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Mashable",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "50 things we want from \'Battle of the Bastards,\' the next \'Game of Thrones\' episode",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://mashable.com/2016/06/17/battle-of-the-bastards-game-of-thrones-fantasy-ending/",
         },
       },
@@ -1396,91 +1342,74 @@ Object {
       Object {
         "article:modified_time": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "2016-09-19T06:57:11-04:00",
         },
         "article:published_time": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "2016-09-01T12:32:06-04:00",
         },
         "article:publisher": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://www.facebook.com/waitbutwhy",
         },
         "article:section": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Uncategorized",
         },
         "article:tag": Array [
           Object {
             "@language": "en-US",
-            "@type": undefined,
             "@value": "psychology",
           },
           Object {
             "@language": "en-US",
-            "@type": undefined,
             "@value": "selfhelp",
           },
         ],
         "fb:admins": Array [
           Object {
             "@language": "en-US",
-            "@type": undefined,
             "@value": "1329510068",
           },
           Object {
             "@language": "en-US",
-            "@type": undefined,
             "@value": "4269",
           },
         ],
         "fb:app_id": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "689761124373742",
         },
         "og:description": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "We\'re forced to make a black-and-white, binary decision in the most important moment of our lives. Let\'s take a deep breath and figure this out together.",
         },
         "og:image": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "http://waitbutwhy.com/wp-content/uploads/2016/09/MarriageDecision_FB2.jpg",
         },
         "og:locale": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Wait But Why",
         },
         "og:title": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "The Marriage Decision: Everything Forever or Nothing Ever Again",
         },
         "og:type": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "article",
         },
         "og:updated_time": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "2016-09-19T06:57:11-04:00",
         },
         "og:url": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "http://waitbutwhy.com/2016/09/marriage-decision.html",
         },
       },
@@ -1988,32 +1917,26 @@ Object {
       Object {
         "og:description": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "4.7-inch (diagonal) Retina HD display with 1334-by-750 resolution; 3D Touch; A9 chip with M9 motion coprocessor",
         },
         "og:image": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "http://pisces.bbystatic.com//image2/BestBuy_US/images/products/4447/4447801_sa.jpg;maxHeight=210;maxWidth=210",
         },
         "og:site_name": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Best Buy",
         },
         "og:title": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Apple - iPhone 6s 64GB - Space Gray (Verizon)",
         },
         "og:type": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "product",
         },
         "og:url": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "/site/apple-iphone-6s-64gb-space-gray-verizon/4447801.p?skuId=4447801",
         },
       },
@@ -2469,37 +2392,30 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "102628213125203",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Add style without losing comfort with this 3-person outdoor sofa. Made out of weather resistant wicker on an aluminum frame, it will endure in any of your outdoor spaces. The synthetic resin wicker provides a durable exterior, while still preserving its classic yet modern appearance. | eBay!",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://i.ebayimg.com/images/i/381228738769-0-1/s-l1000.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "eBay",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Outdoor Wicker Patio Furniture Sofa 3 Seater Luxury Comfort Brown Wicker Couch | eBay",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ebay-objects:item",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.ebay.com/itm/Outdoor-Wicker-Patio-Furniture-Sofa-3-Seater-Luxury-Comfort-Brown-Wicker-Couch-/381228738769",
         },
       },
@@ -3095,42 +3011,34 @@ Object {
       Object {
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "When you get a new credit card, you typically have to go through the process of updating your automatic bill pay information. Some services, though, will update automatically. So how do they know your new credit card number?...",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i.kinja-img.com/gawker-media/image/upload/t_original/ittdz6udygdrrkbv8eey.jpg",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Some Bill Providers Automatically Update Your Credit Card When You Get A New One",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.lifehacker.com.au/2016/08/some-bill-providers-automatically-update-your-credit-card-when-you-get-a-new-one/",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "summary_large_image",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i.kinja-img.com/gawker-media/image/upload/t_original/ittdz6udygdrrkbv8eey.jpg",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "@LifehackerAU",
         },
       },
@@ -3492,72 +3400,58 @@ Object {
       Object {
         "article:modified_time": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-06-21T00:43:32+00:00",
         },
         "article:published_time": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-06-21T00:44:04+00:00",
         },
         "article:publisher": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.facebook.com/WordPresscom",
         },
         "fb:admins": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1533025129,653135158,737988273",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "113758722003364",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "A British man accused of trying to take a police officer\'s gun and kill Donald Trump during a rally in Las Vegas will not be released on bail.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://secure.gravatar.com/blavatar/99ae28ba58e6719abd9d8575bdc18a54?s=200&ts=1477102246",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "200",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "200",
         },
         "og:locale": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "News.com.au",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "UK man in ‘Trump shooting bid’ denied bail",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.news.com.au/world/breaking-news/uk-man-tried-to-kill-trump-court-papers/news-story/c4116603f54f1b7c88339cd039c7e123",
         },
       },
@@ -3774,179 +3668,144 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "NYTimes",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.nytimes.android",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "nytimes://reader/id/100000004471911",
         },
         "al:ipad:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "NYTimes",
         },
         "al:ipad:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "357066198",
         },
         "al:ipad:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "nytimes://www.nytimes.com/2016/06/15/opinion/campaign-stops/decoding-donald-trump.html",
         },
         "al:iphone:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "NYTimes",
         },
         "al:iphone:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "284862083",
         },
         "al:iphone:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "nytimes://www.nytimes.com/2016/06/15/opinion/campaign-stops/decoding-donald-trump.html",
         },
         "article:author": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.nytimes.com/by/andrew-rosenthal",
         },
         "article:collection": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://static01.nyt.com/services/json/sectionfronts/opinion/index.jsonp",
         },
         "article:modified": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-06-15T08:09:01-04:00",
         },
         "article:published": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-06-15T03:21:06-04:00",
         },
         "article:section": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Opinion",
         },
         "article:section-taxonomy-id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "AD8090D7-4137-4D71-84C8-70DA3BD89778",
         },
         "article:section_url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.nytimes.com/pages/opinion/index.html",
         },
         "article:tag": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Orlando, Fla, Shooting (2016)",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Trump, Donald J",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Clinton, Hillary Rodham",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Muslims and Islam",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Discrimination",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Homosexuality and Bisexuality",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Gun Control",
           },
         ],
         "article:top-level-section": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "opinion",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "9869919170",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "What the candidate did — and did not — say after the killings in Orlando reveals a lot about him.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://static01.nyt.com/images/2016/06/15/opinion/15rosenthalWeb/15rosenthalWeb-facebookJumbo.jpg",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Decoding Donald Trump",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.nytimes.com/2016/06/15/opinion/campaign-stops/decoding-donald-trump.html",
         },
         "twitter:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "What the candidate did — and did not — say after the killings in Orlando reveals a lot about him.",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://static01.nyt.com/images/2016/06/15/opinion/15rosenthalWeb/15rosenthalWeb-videoSixteenByNineJumbo1600.jpg",
         },
         "twitter:image:alt": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Donald Trump as seen through a television camera eyepiece, at an event Monday.",
         },
         "twitter:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Decoding Donald Trump",
         },
         "twitter:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.nytimes.com/2016/06/15/opinion/campaign-stops/decoding-donald-trump.html",
         },
       },
@@ -4990,148 +4849,120 @@ Object {
       Object {
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Yelp",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "284910350",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.yelp.com/biz/boba-guys-san-francisco-4?utm_campaign=biz_details&utm_medium=organic&utm_source=apple",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "97534753161",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Specialties: High-quality bubble milk teas made with next-level quality ingredients like organic milk, homemade syrup, and homemade almond jelly. Home of the original Horchata Boba and Tea Frescas. Established in 2011. We started Boba Guys…",
         },
         "og:image": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://s3-media2.fl.yelpcdn.com/bphoto/FE1lCskaigmVupQGk86T4g/o.jpg",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://s3-media2.fl.yelpcdn.com/assets/srv0/seo_metadata/e98ed5a1460f/assets/img/logos/yelp_og_image.png",
           },
         ],
         "og:image:height": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1300",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "576",
           },
         ],
         "og:image:width": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "2000",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "576",
           },
         ],
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Yelp",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Boba Guys - Mission - San Francisco, CA",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "yelpyelp:business",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.yelp.com/biz/boba-guys-san-francisco-4",
         },
         "twitter:app:id:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.yelp.android",
         },
         "twitter:app:id:ipad": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "id284910350",
         },
         "twitter:app:id:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "id284910350",
         },
         "twitter:app:name:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Yelp",
         },
         "twitter:app:name:ipad": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Yelp",
         },
         "twitter:app:name:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Yelp",
         },
         "twitter:app:url:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "intent://yelp.com/biz/18TtLS_JtiS2OH30FLqNrw?utm_source=twitter-card#Intent;scheme=http;package=com.yelp.android;end;",
         },
         "twitter:app:url:ipad": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "yelp:///biz/18TtLS_JtiS2OH30FLqNrw?utm_campaign=default&utm_source=twitter-card",
         },
         "twitter:app:url:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "yelp:///biz/18TtLS_JtiS2OH30FLqNrw?utm_campaign=default&utm_source=twitter-card",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "summary",
         },
         "twitter:domain": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "yelp.com",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://s3-media1.fl.yelpcdn.com/bphoto/FE1lCskaigmVupQGk86T4g/258s.jpg",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "@yelp",
         },
       },
@@ -5252,22 +5083,18 @@ Object {
       Object {
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "So many standards to choose from.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://adactio.com/images/photo-300.jpg",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Metadata markup",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://adactio.com/journal/9881",
         },
       },
@@ -5492,27 +5319,22 @@ Object {
       Object {
         "og:locale": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "en",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Google Developers",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Introduction to Structured Data | Search | Google Developers",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "website",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://developers.google.com/search/docs/guides/intro-structured-data",
         },
       },
@@ -6235,27 +6057,22 @@ Object {
       Object {
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Check out Pico-8 for new \"fantasy console\" goodness. Works great with Raspberry Pi Zero, 2, 3, etc.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://discourse-cdn.codinghorror.com/user_avatar/discourse.codinghorror.com/adam_sommer/100/74278_1.png",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Coding Horror Discussion",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "The Raspberry Pi Has Revolutionized Emulation",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://discourse.codinghorror.com/t/the-raspberry-pi-has-revolutionized-emulation/4462/29",
         },
       },
@@ -6428,47 +6245,38 @@ Object {
       Object {
         "article:published_time": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "2016-05-10T09:35:26+00:00",
         },
         "article:section": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Uncategorized",
         },
         "og:description": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Get screenshots, annotations and effortless sharing with Droplr for Chrome. Just take a screenshot or make an annotation and Droplr will copy a short link to clipboard that you can share your screenshot in chat, email, text, or anywhere. You can also manage all your images, create collections, view stats, customize your urls, and more... View Article",
         },
         "og:image": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "http://droplr.com/wp-content/uploads/2016/05/Drop-with-Chrome-300x187.jpg",
         },
         "og:locale": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Droplr",
         },
         "og:title": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Droplr addition: Google Chrome Extension! - Droplr",
         },
         "og:type": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://droplr.com/droplr-addition-google-chrome-extension",
         },
       },
@@ -6563,37 +6371,30 @@ Object {
       Object {
         "article:wordcount": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1647",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "A graph is a data structure composed of vertices and edges. These terms are synonymous with the following: vertices, dots, nodes, things, pointsedges, lines,...",
         },
         "og:image:secure_url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://dzone.com/themes/dz20/images/ArticleImg_7.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "dzone.com",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Exploring a Graph Representation of Wikipedia Using Gremlin - DZone Database",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://dzone.com/articles/exploring-graph-representation",
         },
       },
@@ -8385,145 +8186,118 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1401488693436528",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub is where people build software. More than 15 million people use GitHub to discover, fork, and contribute to over 38 million projects.",
         },
         "og:image": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://assets-cdn.github.com/images/modules/open_graph/github-logo.png",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://assets-cdn.github.com/images/modules/open_graph/github-mark.png",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://assets-cdn.github.com/images/modules/open_graph/github-octocat.png",
           },
         ],
         "og:image:height": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1200",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "620",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "620",
           },
         ],
         "og:image:type": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "image/png",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "image/png",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "image/png",
           },
         ],
         "og:image:width": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1200",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1200",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1200",
           },
         ],
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Build software better, together",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://github.com",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "summary_large_image",
         },
         "twitter:creator": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "github",
         },
         "twitter:creator:id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "13334762",
         },
         "twitter:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub is where people build software. More than 15 million people use GitHub to discover, fork, and contribute to over 38 million projects.",
         },
         "twitter:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1200",
         },
         "twitter:image:src": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://assets-cdn.github.com/images/modules/open_graph/github-logo.png",
         },
         "twitter:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1200",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "github",
         },
         "twitter:site:id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "13334762",
         },
         "twitter:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub",
         },
       },
@@ -8643,37 +8417,30 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1401488693436528",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Test code declare var x: Object; declare var y: RegExp; y = x; A lot of people misunderstand what Object is. We should consider trying to elaborate the issue in some way. Type \'Object\' is not as...",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://avatars3.githubusercontent.com/u/972891?v=3&s=400",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Give a better error message for assigning from Object to anything else · Issue #10462 · Microsoft/TypeScript",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "object",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://github.com/Microsoft/TypeScript/issues/10462",
         },
       },
@@ -8793,42 +8560,34 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1401488693436528",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "blakeembrey has 219 repositories available. Follow their code on GitHub.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://avatars0.githubusercontent.com/u/1088987?v=3&s=400",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "blakeembrey (Blake Embrey)",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "profile",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://github.com/blakeembrey",
         },
         "profile:username": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "blakeembrey",
         },
       },
@@ -8970,37 +8729,30 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1401488693436528",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "popsicle - Simple HTTP requests for node and the browser",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://avatars0.githubusercontent.com/u/1088987?v=3&s=400",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "blakeembrey/popsicle",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "object",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://github.com/blakeembrey/popsicle",
         },
       },
@@ -9058,57 +8810,46 @@ Object {
       Object {
         "article:author": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "262588213843476",
         },
         "article:published_time": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2016-09-03 02:23:46 UTC",
         },
         "article:publisher": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "262588213843476",
         },
         "article:section": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "blog/general",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1401488693436528",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "The open source Git project has just released Git 2.10.0, with features and bugfixes from over 70 contributors. Here\'s our look at some of the most interesting new features: Progress reporting for...",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://cloud.githubusercontent.com/assets/121322/16134794/284be2e6-33d4-11e6-9165-58068a872ec2.png",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Git 2.10 has been released",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://github.com/blog/2242-git-2-10-has-been-released",
         },
       },
@@ -9223,37 +8964,30 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1401488693436528",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "This commit was adapted from 1ec036686e70ad0d837ed2443684d54bca13af01 in DefinitelyTyped. See DefinitelyTyped/DefinitelyTyped#8765 for context. The original body of the commit message follows. The...",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://avatars0.githubusercontent.com/u/2101409?v=3&s=400",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "GitHub",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "[misc] typescript: refactor constructor and ISO format hack by seansfkelley · Pull Request #3323 · moment/moment",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "object",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://github.com/moment/moment/pull/3323",
         },
       },
@@ -9395,55 +9129,44 @@ Object {
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "116556461780510",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Read reviews, compare customer ratings, see screenshots, and learn more about Pokémon GO. Download Pokémon GO and enjoy it on your iPhone, iPad, and iPod touch.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://is5.mzstatic.com/image/thumb/Purple71/v4/97/0a/71/970a71f1-9c94-cc61-c960-304191a8dc42/source/1200x630bf.jpg",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "630",
         },
         "og:image:secure_url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://is5-ssl.mzstatic.com/image/thumb/Purple71/v4/97/0a/71/970a71f1-9c94-cc61-c960-304191a8dc42/source/1200x630bf.jpg",
         },
         "og:image:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "image/jpg",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1200",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "App Store",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Pokémon GO on the App Store",
         },
       },
       Object {
-        "@id": undefined,
         "@type": "BreadcrumbList",
         "itemListElement": Object {
-          "@id": undefined,
           "@type": "ListItem",
           "name": Object {
             "@language": "en-US",
@@ -9451,7 +9174,6 @@ Object {
           },
           "position": Object {
             "@language": "en-US",
-            "@type": undefined,
             "@value": "1",
           },
         },
@@ -9768,50 +9490,40 @@ Object {
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Watch trailers, read customer and critic reviews, and buy The Avengers directed by Joss Whedon for $19.99.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://is1.mzstatic.com/image/thumb/Video/v4/2c/8d/c4/2c8dc46e-8d93-67b4-72a3-99ff76c8a4b9/source/1200x630bf.jpg",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "630",
         },
         "og:image:secure_url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://is1-ssl.mzstatic.com/image/thumb/Video/v4/2c/8d/c4/2c8dc46e-8d93-67b4-72a3-99ff76c8a4b9/source/1200x630bf.jpg",
         },
         "og:image:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "image/jpg",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1200",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "iTunes",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "The Avengers on iTunes",
         },
       },
       Object {
-        "@id": undefined,
         "@type": "BreadcrumbList",
         "itemListElement": Object {
-          "@id": undefined,
           "@type": "ListItem",
           "name": Object {
             "@language": "en-US",
@@ -9819,7 +9531,6 @@ Object {
           },
           "position": Object {
             "@language": "en-US",
-            "@type": undefined,
             "@value": "1",
           },
         },
@@ -9934,7 +9645,6 @@ Object {
         "article:publisher": "https://www.facebook.com/medium",
         "cc:attributionName": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://medium.com/@mathowie",
         },
         "cc:attributionUrl": Object {
@@ -10270,748 +9980,600 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Spotify",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.spotify.music",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "spotify://user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Spotify",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "324684580",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "spotify://user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "174829003346",
         },
         "music:creator": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://open.spotify.com/user/hsuze",
         },
         "music:song": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/3p2X9QGuuHtHYDGNfwt9Oq",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/6SWdELTwJE6cyVdoBEVAoH",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/4uebxn8GU88Tvc4gLUNfKp",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/0iQLl5lgOhnlxrWnFWLyDa",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/00aQGaqM6SFzGfbgKOite0",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/6aKEtd7dEepK0II3qqarDb",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/5KXx0rWkNUyjUTTqZGa6pp",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/3U1NVPoUjdSHRsU0e1c7t4",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/5ey0QpbtmSW71r5dWzkAlB",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/2j1zYaCXkvrMjz7JCvccJi",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/0Zg4tjgfqw9qzq7lXX2sUM",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/2Ym1nV0qgNUmDqwprsKwGT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/732bvElpqPDV5t1Y5RlihX",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/22iOPxdSVaVleX3UlnSTv5",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/4HLc8s6MiXUgRgyDQlvwL2",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/1sW8AxMW4vuoV5LCDZj7r7",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/7kkmzZURNWG57z2edDcQJL",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/0L0k6ebsUYiGMA30Pye9uX",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/0TaLEGNb6f3nL2VME9SxAR",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/10Kdm54khBqzRNu2yifpu4",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/3wQ2F1MjiNMENmvy4xUeXy",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/5qZVuornKKdSdsHPnsJjWT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/2prLNGoNAy6GXAjqp3HVvt",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/6sLZmlIz35Igd2Itci5484",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/7braYuqLa055fDFRA7kuQM",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/4DucgpxTbwSyxm4Cw1xUM9",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/7AQOtHHGqRc2XO2zahEyb0",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/7nEDPfVvSbWUSTZKWY50tF",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/5SOt2NdHbsUz3PyTG4sV1s",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://open.spotify.com/track/0QOPtwpqVM8qRyDs8zVKil",
           },
         ],
         "music:song:track": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "2",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "3",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "4",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "5",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "6",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "7",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "8",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "9",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "10",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "11",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "12",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "13",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "14",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "15",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "16",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "17",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "18",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "19",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "20",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "21",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "22",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "23",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "24",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "25",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "26",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "27",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "28",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "29",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "30",
           },
         ],
         "music:song_count": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "110",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Let&#x27;s make&#x2F;share beautiful music together!",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://profile-images.scdn.co/artists/default/198bbb5f81ba4d0af18256e4a4d90d6ea64a8879",
         },
         "og:restrictions:country:allowed": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "AD",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "AR",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "AT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "AU",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "BE",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "BG",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "BO",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "BR",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "CA",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "CH",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "CL",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "CO",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "CR",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "CY",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "CZ",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "DE",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "DK",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "DO",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "EC",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "EE",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "ES",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "FI",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "FR",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "GB",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "GR",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "GT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "HK",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "HN",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "HU",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "ID",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "IE",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "IS",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "IT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "JP",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "LI",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "LT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "LU",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "LV",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "MC",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "MT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "MX",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "MY",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "NI",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "NL",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "NO",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "NZ",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "PA",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "PE",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "PH",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "PL",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "PT",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "PY",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SE",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SG",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SK",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SV",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "TR",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "TW",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "US",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "UY",
           },
         ],
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Spotify",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "HRX, a playlist by hsuze on Spotify",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "music.playlist",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
         },
         "twitter:app:id:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.spotify.music",
         },
         "twitter:app:id:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "324684580",
         },
         "twitter:audio:artist_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Yancey Boys, Marian Hill, Glass Animals, and others",
         },
         "twitter:audio:partner": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Spotify",
         },
         "twitter:audio:source": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://open.spotify.com/twitter/vmap/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg?utm_campaign=twitter-player&utm_source=open&utm_medium=twitter",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "audio",
         },
         "twitter:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Let&#x27;s make&#x2F;share beautiful music together!",
         },
         "twitter:image:src": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "",
         },
         "twitter:player": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://open.spotify.com/embed/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg?utm_campaign=twitter-player&utm_source=open&utm_medium=twitter",
         },
         "twitter:player:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "380",
         },
         "twitter:player:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "300",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "@spotify",
         },
         "twitter:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "HRX",
         },
       },
@@ -11192,7 +10754,6 @@ Object {
         },
         "rdfs:subClassOf": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
       },
@@ -11202,18 +10763,15 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CommunicateAction",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rdfs:comment": Object {
@@ -11230,12 +10788,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -11252,12 +10808,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -11274,12 +10828,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -11296,12 +10848,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -11318,12 +10868,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Person",
         },
         "rdfs:comment": Object {
@@ -11341,48 +10889,39 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Brand",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Offer",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Place",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Product",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Service",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/AggregateRating",
         },
         "rdfs:comment": Object {
@@ -11399,12 +10938,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -11421,12 +10958,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/MediaObject",
         },
         "rdfs:comment": Object {
@@ -11444,33 +10979,27 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/LodgingBusiness",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/PlayAction",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Product",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Service",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Audience",
         },
         "rdfs:comment": Object {
@@ -11487,12 +11016,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/AudioObject",
         },
         "rdfs:comment": Object {
@@ -11510,24 +11037,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Rating",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -11546,33 +11069,27 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Product",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Service",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -11589,12 +11106,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Person",
         },
         "rdfs:comment": Object {
@@ -11611,18 +11126,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
         ],
@@ -11641,18 +11153,15 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/RsvpAction",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Comment",
         },
         "rdfs:comment": Object {
@@ -11669,12 +11178,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Integer",
         },
         "rdfs:comment": Object {
@@ -11691,12 +11198,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Place",
         },
         "rdfs:comment": Object {
@@ -11713,12 +11218,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -11736,24 +11239,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -11771,18 +11270,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -11800,12 +11296,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Number",
         },
         "rdfs:comment": Object {
@@ -11823,24 +11317,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/UserComments",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -11859,24 +11349,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/DataFeedItem",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Date",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/DateTime",
           },
         ],
@@ -11895,24 +11381,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/DataFeedItem",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Date",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/DateTime",
           },
         ],
@@ -11930,12 +11412,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Date",
         },
         "rdfs:comment": Object {
@@ -11952,12 +11432,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/URL",
         },
         "rdfs:comment": Object {
@@ -11974,12 +11452,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Person",
         },
         "rdfs:comment": Object {
@@ -11996,12 +11472,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/AlignmentObject",
         },
         "rdfs:comment": Object {
@@ -12018,12 +11492,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -12040,12 +11512,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/MediaObject",
         },
         "rdfs:comment": Object {
@@ -12062,12 +11532,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rdfs:comment": Object {
@@ -12084,18 +11552,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -12114,34 +11579,28 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -12160,24 +11619,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/MusicGroup",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -12195,12 +11650,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rdfs:comment": Object {
@@ -12217,12 +11670,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -12240,34 +11691,28 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CommunicateAction",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/WriteAction",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Language",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
         ],
@@ -12285,12 +11730,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/InteractionCounter",
         },
         "rdfs:comment": Object {
@@ -12307,12 +11750,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -12330,23 +11771,19 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/PublicationEvent",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Boolean",
         },
         "rdfs:comment": Object {
@@ -12363,23 +11800,19 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Product",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -12397,12 +11830,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Boolean",
         },
         "rdfs:comment": Object {
@@ -12419,12 +11850,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rdfs:comment": Object {
@@ -12441,12 +11870,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -12463,12 +11890,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -12485,18 +11910,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -12514,12 +11936,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Place",
         },
         "rdfs:comment": Object {
@@ -12536,12 +11956,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rdfs:comment": Object {
@@ -12558,12 +11976,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rdfs:comment": Object {
@@ -12581,33 +11997,27 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/AggregateOffer",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Product",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Service",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Offer",
         },
         "rdfs:comment": Object {
@@ -12625,24 +12035,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/ListItem",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Integer",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
         ],
@@ -12660,18 +12066,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -12690,54 +12093,44 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/BusTrip",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Flight",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Invoice",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/ParcelDelivery",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Reservation",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Service",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/TrainTrip",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -12755,12 +12148,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/PublicationEvent",
         },
         "rdfs:comment": Object {
@@ -12777,18 +12168,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -12806,12 +12194,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/URL",
         },
         "rdfs:comment": Object {
@@ -12828,12 +12214,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Event",
         },
         "rdfs:comment": Object {
@@ -12850,12 +12234,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/PublicationEvent",
         },
         "rdfs:comment": Object {
@@ -12873,48 +12255,39 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Brand",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Offer",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Place",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Product",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Service",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Review",
         },
         "rdfs:comment": Object {
@@ -12931,18 +12304,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -12960,12 +12330,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Organization",
         },
         "rdfs:comment": Object {
@@ -12982,12 +12350,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Place",
         },
         "rdfs:comment": Object {
@@ -13005,34 +12371,28 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -13050,23 +12410,19 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/DateTime",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -13084,12 +12440,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -13106,12 +12460,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/URL",
         },
         "rdfs:comment": Object {
@@ -13128,12 +12480,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Duration",
         },
         "rdfs:comment": Object {
@@ -13151,24 +12501,20 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
         ],
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Organization",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Person",
           },
         ],
@@ -13187,18 +12533,15 @@ Object {
         "domainIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Event",
           },
         ],
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -13215,18 +12558,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Number",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/Text",
           },
         ],
@@ -13244,12 +12584,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/VideoObject",
         },
         "rdfs:comment": Object {
@@ -13266,12 +12604,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/CreativeWork",
         },
         "rdfs:comment": Object {
@@ -13288,12 +12624,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/URL",
         },
         "rdfs:comment": Object {
@@ -13310,12 +12644,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -13332,12 +12664,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -13354,12 +12684,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -13376,18 +12704,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/ImageObject",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -13405,18 +12730,15 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/CreativeWork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://schema.org/URL",
           },
         ],
@@ -13434,12 +12756,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Text",
         },
         "rdfs:comment": Object {
@@ -13456,12 +12776,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Action",
         },
         "rdfs:comment": Object {
@@ -13478,12 +12796,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/URL",
         },
         "rdfs:comment": Object {
@@ -13500,12 +12816,10 @@ Object {
         "@type": "rdfs:Property",
         "domainIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/Thing",
         },
         "rangeIncludes": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://schema.org/URL",
         },
         "rdfs:comment": Object {
@@ -24406,234 +23720,190 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.soundcloud.android",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:237603952",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "336353151",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:237603952",
         },
         "al:web:should_fallback": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "false",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "19507961798",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "It\'s the OFFICIAL track that you have all been waiting. This is PANDA!!",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i1.sndcdn.com/artworks-000179308245-paabn9-t500x500.jpg",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "500",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "500",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Desiigner- \"Panda\" (Prod. By: Menace)",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "music.song",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://soundcloud.com/lifeofdesiigner/desiigner-panda",
         },
         "soundcloud:comments_count": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "30615",
         },
         "soundcloud:download_count": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "0",
         },
         "soundcloud:like_count": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2212918",
         },
         "soundcloud:play_count": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "133727261",
         },
         "soundcloud:user": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://soundcloud.com/lifeofdesiigner",
         },
         "twitter:app:id:googleplay": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "com.soundcloud.android",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "com.soundcloud.android",
           },
         ],
         "twitter:app:id:ipad": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
         ],
         "twitter:app:id:iphone": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
         ],
         "twitter:app:name:googleplay": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
         ],
         "twitter:app:name:ipad": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
         ],
         "twitter:app:name:iphone": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
         ],
         "twitter:app:url:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:237603952",
         },
         "twitter:app:url:ipad": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:237603952",
         },
         "twitter:app:url:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:237603952",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "player",
         },
         "twitter:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "It\'s the OFFICIAL track that you have all been waiting. This is PANDA!!",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i1.sndcdn.com/artworks-000179308245-paabn9-t500x500.jpg",
         },
         "twitter:player": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F237603952&auto_play=false&show_artwork=true&visual=true&origin=twitter",
         },
         "twitter:player:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "400",
         },
         "twitter:player:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "435",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "twitter:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Desiigner- \"Panda\" (Prod. By: Menace)",
         },
       },
@@ -24783,214 +24053,174 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.soundcloud.android",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:229122811",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "336353151",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:229122811",
         },
         "al:web:should_fallback": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "false",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "19507961798",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "This is the very first Episode of the NYTM show. Today with maker & founder of NomadList Pieter Levels. You can follow Pieter Levels here: https://twitter.com/levelsio or read about his work here: ht",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i1.sndcdn.com/artworks-000133297269-bwi3mi-t500x500.jpg",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "500",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "500",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "NTMY - Episode 1 - Pieter Levels",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "music.song",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://soundcloud.com/tobiasvanschneider/ntmy-episode-1-pieter-levels",
         },
         "soundcloud:user": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://soundcloud.com/tobiasvanschneider",
         },
         "twitter:app:id:googleplay": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "com.soundcloud.android",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "com.soundcloud.android",
           },
         ],
         "twitter:app:id:ipad": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
         ],
         "twitter:app:id:iphone": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "336353151",
           },
         ],
         "twitter:app:name:googleplay": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
         ],
         "twitter:app:name:ipad": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
         ],
         "twitter:app:name:iphone": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "SoundCloud",
           },
         ],
         "twitter:app:url:googleplay": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:229122811",
         },
         "twitter:app:url:ipad": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:229122811",
         },
         "twitter:app:url:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "soundcloud://sounds:229122811",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "player",
         },
         "twitter:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "This is the very first Episode of the NYTM show. Today with maker & founder of NomadList Pieter Levels. You can follow Pieter Levels here: https://twitter.com/levelsio or read about his work here: ht",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i1.sndcdn.com/artworks-000133297269-bwi3mi-t500x500.jpg",
         },
         "twitter:player": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F229122811&auto_play=false&show_artwork=true&visual=true&origin=twitter",
         },
         "twitter:player:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "400",
         },
         "twitter:player:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "435",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "SoundCloud",
         },
         "twitter:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "NTMY - Episode 1 - Pieter Levels",
         },
       },
@@ -25065,47 +24295,38 @@ Object {
       Object {
         "article:modified_time": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "2016-09-01T18:43:52+00:00",
         },
         "article:published_time": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "2016-08-31T12:48:44+00:00",
         },
         "og:description": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "The competition between Uber and Google has broken out into the open: who has the advantage in the evolution of transportation-as-a-service, and who will likely win?",
         },
         "og:image": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://stratechery.com/wp-content/uploads/2016/08/stratechery-Year-One-288-1024x768.png",
         },
         "og:locale": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Stratechery by Ben Thompson",
         },
         "og:title": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Google, Uber, and the Evolution of Transportation-as-a-Service",
         },
         "og:type": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://stratechery.com/2016/google-uber-and-the-evolution-of-transportation-as-a-service/",
         },
       },
@@ -25282,47 +24503,38 @@ Object {
       Object {
         "fb:admins": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "543710097,771265067,1661021707,1550970059,663677613,1178144075,726995222,506404657,4700188",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "187288694643718",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://tctechcrunch2011.files.wordpress.com/2016/10/nintendo-switch.jpg?w=764&h=400&crop=1",
         },
         "og:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "social.techcrunch.com",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TechCrunch",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TechCrunch",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "website",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://social.techcrunch.com/",
         },
       },
@@ -25552,52 +24764,42 @@ The Europas was supported by Level39, TechHub, Ticketbase, Twitter, Metro Group 
       Object {
         "article:publisher": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.facebook.com/techcrunch",
         },
         "fb:admins": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "543710097,771265067,1661021707,1550970059,663677613,1178144075,726995222,506404657,4700188",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "187288694643718",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "This week The Europas Startup Conference and Awards -- the new type of tech event devised in partnership with TechCrunch and myself -- honored The Best Tech..",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://tctechcrunch2011.files.wordpress.com/2016/06/awardsstage.jpg?w=764&h=400&crop=1",
         },
         "og:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "social.techcrunch.com",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TechCrunch",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "The Europas Awards 2016 honored the best tech startups in Europe",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://social.techcrunch.com/2016/06/17/the-europas-awards-2016-honored-the-best-tech-startups-in-europe/",
         },
       },
@@ -26790,37 +25992,30 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2231777543",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "“This is a very cool thread https://t.co/r6VKiMIYoI”",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pbs.twimg.com/profile_images/344513261583570457/837e1e55170ee3b03dd4ef88168e9414_400x400.png",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Twitter",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "¯\\_(ツ)_/¯ on Twitter",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://twitter.com/SeanTAllen/status/764993929469161472",
         },
       },
@@ -27197,42 +26392,34 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2231777543",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "“Don\'t squander this. 💻 https://t.co/eWmq6oxK73”",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pbs.twimg.com/media/Cp3RFyXXYAANGoA.jpg:large",
         },
         "og:image:user_generated": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "true",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Twitter",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Alexis Ohanian on Twitter",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://twitter.com/alexisohanian/status/764997551384776704",
         },
       },
@@ -27972,37 +27159,30 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2231777543",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "“🔥 Clean up @github issues with the HTML5 &lt;details&gt; tag – https://t.co/poNw69GO9s https://t.co/QEXZgk4LJx”",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pbs.twimg.com/profile_images/617160371216842752/TQ_Bfpkz_400x400.png",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Twitter",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Eric Clemmons on Twitter",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://twitter.com/ericclemmons/status/749223563790471169",
         },
       },
@@ -28379,37 +27559,30 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "2231777543",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "“.d.ts files should be simple to manage - check out our plans to make that happen in TypeScript 2.0! https://t.co/fkfz8uL4I4”",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pbs.twimg.com/profile_images/743155381661143040/bynNY5dJ_400x400.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Twitter",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TypeScript on Twitter",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://twitter.com/typescriptlang/status/743113612407889920",
         },
       },
@@ -28970,112 +28143,90 @@ Object {
       Object {
         "airbedandbreakfast:city": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "New York",
         },
         "airbedandbreakfast:country": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "United States",
         },
         "airbedandbreakfast:locality": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "New York",
         },
         "airbedandbreakfast:location:latitude": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "40.74605875234752",
         },
         "airbedandbreakfast:location:longitude": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "-74.00312881132955",
         },
         "airbedandbreakfast:rating": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "5.0",
         },
         "airbedandbreakfast:region": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "NY",
         },
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Airbnb",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.airbnb.android",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "airbnb://d/listing?id=2250401&ref=monorail_deep_link",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Airbnb",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "401626263",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "airbnb://d/listing?id=2250401&ref=monorail_deep_link",
         },
         "al:web:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.airbnb.com/rooms/2250401",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "138566025676",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Apartment in New York, United States. A cute boutique studio located on arguably the best street in Chelsea. A block from the Highline, endless Galleries and Restaurants, the wonderful Chelsea Market and the lively Meatpacking District. 1 Ave from the A-C-E subway and just blocks fro...",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://a1.muscache.com/im/pictures/43670185/606e6e19_original.jpg?aki_policy=x_large",
         },
         "og:locale": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Airbnb",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Bright, Chelsea Studio - Apartments for Rent in New York",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "airbedandbreakfast:listing",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.airbnb.com/rooms/2250401",
         },
       },
@@ -29694,97 +28845,78 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Etsy",
         },
         "al:android:package": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "com.etsy.android",
         },
         "al:android:url": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "etsy://listing/230389421?ref=applinks_android",
         },
         "al:ios:app_name": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Etsy",
         },
         "al:ios:app_store_id": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "477128284",
         },
         "al:ios:url": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "etsy://listing/230389421?ref=applinks_ios",
         },
         "etsymarketplace:currency_code": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "USD",
         },
         "etsymarketplace:currency_symbol": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "$",
         },
         "etsymarketplace:price": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "US$2.99",
         },
         "etsymarketplace:price_value": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "2.99",
         },
         "etsymarketplace:shop": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://www.etsy.com/shop/InfernoDecals",
         },
         "fb:app_id": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "89186614300",
         },
         "og:description": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Die cut sticker is cut in the shape of the graphic with no background and all one color. Available in several colors and a variety of sizes. Please rely on dimensions listed or measure area where you will be applying the decal. Select options from drop down menus. Agents of Shield Hydra logo also available: https://www.etsy.com/your/shops/InfernoDecals/tools/listings/230718253 Sizes listed are in inches. (1 inch = 2.54 centimeters) Made from quality outdoor vinyl that is water proof, UV resistant and rated to last 6 years outdoors and longer indoors. Self adhesive vinyl is removable and does not damage hard surfaces or vehicle paint. Not reuseable or repositionable. Can be applied to any clean smooth surface such as vehicle body, window, laptop, water bottle, mirror, helmet, guitar etc. Ships in cardboard mailer or with cardboard inside envelope to protect from damage during shipping. Easy to install, comes with full instructions included. How to install vinyl decals: 1. Clean the area thoroughly with rubbing alcohol or soap and water. Do not use Windex or similar products, it will leave a residue behind that will prevent the sticker from adhering well. 2. Prepare the sticker for application by firmly rubbing a squeegee or credit card across the clear transfer tape. This removes any air bubbles that may have formed and makes the sticker cling to the transfer tape. 3. Peel the white paper backing off the sticker. If the sticker clings to the backing, slowly replace the paper backing and repeat Step 2. 4. Slowly lower the sticker onto the surface and rub it in place firmly with a squeegee or credit card. Wait 10 minutes or more. For best results, wait 24 hours before moving to the next step. 5. Slowly peel the clear transfer tape off at an angle. Be careful not to pull the sticker off the surface. If sticker pulls away from the surface repeat Step 4. *Use a pin to poke any air bubbles in the center and push the air out through the hole. *For best results do not apply a sticker in extreme hot or cold temperatures.",
         },
         "og:image": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://img0.etsystatic.com/058/0/10499963/il_570xN.759424778_ojd8.jpg",
         },
         "og:locale": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Etsy",
         },
         "og:title": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "Agents of Shield decal sticker for car, truck, laptop in ANY COLOR die cut vinyl",
         },
         "og:type": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "etsymarketplace:item",
         },
         "og:url": Object {
           "@language": "en-US",
-          "@type": undefined,
           "@value": "https://www.etsy.com/listing/230389421/agents-of-shield-decal-sticker-for-car?utm_source=OpenGraph&utm_medium=PageTools&utm_campaign=Share",
         },
       },
@@ -30037,22 +29169,18 @@ Object {
       Object {
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.facebook.com/images/fb_icon_325x325.png",
         },
         "og:locale": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Facebook",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.facebook.com/",
         },
       },
@@ -30140,17 +29268,14 @@ Object {
       Object {
         "al:ios:app_name": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Flickr",
         },
         "al:ios:app_store_id": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "328407587",
         },
         "al:ios:url": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "flickr://flickr.com/photos/timdrivas/27999498362",
         },
         "cc:license": Object {
@@ -30158,97 +29283,78 @@ Object {
         },
         "fb:app_id": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "137206539707334",
         },
         "flickr_photos:by": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "https://www.flickr.com/people/timdrivas/",
         },
         "flickr_photos:camera": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "https://www.flickr.com/cameras/canon/eos_5d_mark_ii/",
         },
         "flickr_photos:groups": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "https://www.flickr.com/groups/inexplore/,https://www.flickr.com/groups/new_york_photography/,https://www.flickr.com/groups/usaunitedstatesofamerica/,https://www.flickr.com/groups/nightphotography/,https://www.flickr.com/groups/flickrsocialmedia/",
         },
         "og:description": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "The Macy\'s 4th of July firework show in NYC",
         },
         "og:image": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "https://c2.staticflickr.com/8/7371/27999498362_17c8d4d490_b.jpg",
         },
         "og:image:height": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "683",
         },
         "og:image:width": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "1024",
         },
         "og:site_name": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Flickr",
         },
         "og:title": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "The Fourth",
         },
         "og:type": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "flickr_photos:photo",
         },
         "og:updated_time": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "2016-10-22T02:10:46.370Z",
         },
         "og:url": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "https://www.flickr.com/photos/timdrivas/27999498362/",
         },
         "twitter:app:id:iphone": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "328407587",
         },
         "twitter:app:name:iphone": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "Flickr",
         },
         "twitter:app:url:iphone": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "flickr://flickr.com/photos/timdrivas/27999498362/",
         },
         "twitter:card": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "photo",
         },
         "twitter:description": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "The Macy\'s 4th of July firework show in NYC",
         },
         "twitter:site": Object {
           "@language": "en-us",
-          "@type": undefined,
           "@value": "@flickr",
         },
       },
@@ -30668,164 +29774,132 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Instagram",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.instagram.android",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.instagram.com/p/BG0m4IDGaqk/",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Instagram",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "389801252",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "instagram://media?id=1275815577152760484",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "124024574287414",
         },
         "instapp:hashtags": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "regram",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "nomadlife",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "laundry",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "newyorkcity",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "office",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "newyork",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "laptop",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "officeoftheday",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "welltraveled",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "myoffice",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "tompkinssquare",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "digitalnomad",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "locationindependent",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "roamtheplanet",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "nyc",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "justgoshoot",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "laundromat",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "hustle",
           },
         ],
         "instapp:owner_user_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1178566641",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "See this Instagram photo by @minaalofficial • 105 likes",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://scontent-lax3-1.cdninstagram.com/t51.2885-15/e35/13355676_1724260121146276_372407195_n.jpg?ig_cache_key=MTI3NTgxNTU3NzE1Mjc2MDQ4NA%3D%3D.2",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Instagram",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Instagram photo by Minaal • Jun 19, 2016 at 4:04am UTC",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "instapp:photo",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.instagram.com/p/BG0m4IDGaqk/",
         },
       },
@@ -30901,52 +29975,42 @@ Object {
       Object {
         "fb:admins": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "100000121497109,1305017,100001572496923",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "160249463991765",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "The difference between a bond and a stock.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://img.youtube.com/vi/rs1md3e4aYU/0.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Khan Academy",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Bonds vs. stocks",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "video.other",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/stocks-intro-tutorial/v/bonds-vs-stocks",
         },
         "og:video": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.youtube.com/v/rs1md3e4aYU",
         },
         "og:video:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "application/x-shockwave-flash",
         },
       },
@@ -30997,134 +30061,108 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "69103156693",
         },
         "kickstarter:creator": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.kickstarter.com/profile/lactate-threshold",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "LVL is a wearable hydration monitor that gives you the complete picture of your health by also tracking activity, sleep, mood and HR.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://ksr-ugc.imgix.net/assets/013/622/325/ba3e0c3ba83ec7a7f6621d52f78773b9_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1473713981&auto=format&q=92&s=06bc55ef9203f6b52b87f7bf978ae915",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1152",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1536",
         },
         "og:locale": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "en_US",
         },
         "og:locale:alternate": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "en_US",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "de_DE",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "es_ES",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "fr_FR",
           },
         ],
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Kickstarter",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "LVL – The First Wearable Hydration Monitor",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "kickstarter:project",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.kickstarter.com/projects/lactate-threshold/lvl-the-first-wearable-hydration-monitor",
         },
         "twitter:app:id:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "596961532",
         },
         "twitter:app:name:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Kickstarter",
         },
         "twitter:app:url:iphone": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ksr://www.kickstarter.com/projects/1655571865/361230638?app_banner=1&ref=category_featured",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "summary_large_image",
         },
         "twitter:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "LVL is a wearable hydration monitor that gives you the complete picture of your health by also tracking activity, sleep, mood and HR.",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://ksr-ugc.imgix.net/assets/013/622/325/ba3e0c3ba83ec7a7f6621d52f78773b9_original.jpg?w=640&h=360&fit=fill&bg=000000&v=1473713981&auto=format&q=92&s=468b71562ed1d30cbf4aa9f9a1d7be1a",
         },
         "twitter:maxage": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "60",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "@kickstarter",
         },
         "twitter:site:id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "16186995",
         },
         "twitter:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "LVL – The First Wearable Hydration Monitor",
         },
         "twitter:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.kickstarter.com/projects/lactate-threshold/lvl-the-first-wearable-hydration-monitor",
         },
       },
@@ -31176,22 +30214,18 @@ Object {
       Object {
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "MuleSoft",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1-415-229-2009",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "article",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.mulesoft.com/contact",
         },
       },
@@ -31303,27 +30337,22 @@ Object {
       Object {
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Convert a string to a valid safe filename",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.npmjs.com/static/images/touch-icons/open-graph.png",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "npm",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "filenamify",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.npmjs.com/package/filenamify",
         },
       },
@@ -31390,42 +30419,34 @@ Object {
       Object {
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "4910 points and 7055 comments so far on reddit",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.redditstatic.com/icon.png",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "reddit",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "\'UK man\' tried to kill Trump: court papers • /r/news",
         },
         "og:ttl": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "600",
         },
         "twitter:card": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "summary",
         },
         "twitter:site": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "reddit",
         },
         "twitter:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "\'UK man\' tried to kill Trump: court papers • /r/news",
         },
       },
@@ -32118,27 +31139,22 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "326803741017",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Inception",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "video.movie",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.rottentomatoes.com/m/inception/",
         },
       },
@@ -32171,32 +31187,26 @@ Object {
       Object {
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "174829003346",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Spotify is all the music you’ll ever need.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://d2c87l0yth4zbw.global.ssl.fastly.net/i/_global/open-graph-default.png",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Music for everyone.",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "website",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.spotify.com/us/",
         },
       },
@@ -32235,118 +31245,95 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TED",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.ted.android",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ted://playlists/321/talks_to_form_better_habits?source=facebook",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TED",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "376183339",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ted://playlists/321/talks_to_form_better_habits?source=facebook",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "201021956610141",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "There\'s never a bad time to start a good habit. Let these talks set the framework for a healthier, happier life.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pi.tedcdn.com/r/pf.tedcdn.com/images/playlists/talks_to_form_better_habits_1200x627.jpg?c=1050%2C550&w=1050",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "550",
         },
         "og:image:secure_url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pi.tedcdn.com/r/pf.tedcdn.com/images/playlists/talks_to_form_better_habits_1200x627.jpg?c=1050%2C550&w=1050",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1050",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "8 TED Talks to form better habits",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "video.other",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.ted.com/playlists/321/talks_to_form_better_habits?utm_campaign=social&utm_medium=referral&utm_source=facebook.com&utm_content=playlist&utm_term=social-science",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pi.tedcdn.com/r/pf.tedcdn.com/images/playlists/talks_to_form_better_habits_1200x627.jpg?c=1050%2C550&w=1050",
         },
         "video:duration": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "5861",
         },
         "video:release_date": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1454517695",
         },
         "video:tag": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "happiness",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "health",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "life",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "personal growth",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "psychology",
           },
         ],
@@ -32688,148 +31675,119 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TED",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.ted.android",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ted://talks/tim_harford_how_messy_problems_can_inspire_creativity?source=facebook",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "TED",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "376183339",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ted://talks/2401?source=facebook",
         },
         "al:web:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://applinks.org/documentation",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "201021956610141",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Challenges and problems can derail your creative process ... or they can make you more creative than ever. In the surprising story behind the best-selling solo piano album of all time, Tim Harford may just convince you of the advantages of having to work with a little mess.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/8a6d334cc40db487ceb771ace385e609b660568b_2880x1620.jpg?c=1050%2C550&w=1050",
         },
         "og:image:height": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "550",
         },
         "og:image:secure_url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/8a6d334cc40db487ceb771ace385e609b660568b_2880x1620.jpg?c=1050%2C550&w=1050",
         },
         "og:image:width": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1050",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "How frustration can make us more creative",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "video.other",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.ted.com/talks/tim_harford_how_messy_problems_can_inspire_creativity",
         },
         "twitter:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/8a6d334cc40db487ceb771ace385e609b660568b_2880x1620.jpg?w=1200",
         },
         "video:duration": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "932",
         },
         "video:release_date": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "1452530143",
         },
         "video:tag": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "cognitive science",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "collaboration",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "composing",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "creativity",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "innovation",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "music",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "potential",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "psychology",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "success",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "work",
           },
         ],
@@ -32984,59 +31942,48 @@ Object {
       Object {
         "article:author": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ThinkGeek",
         },
         "article:publisher": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ThinkGeek",
         },
         "fb:app_id": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "199842396712737",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "199842396712737",
           },
         ],
         "fb:page_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "6399067073",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Whether you perform with them or just break out the occasional flourish in a friendly poker game, Citizen Playing Cards will impress people with their elegance. The tuck case features a combination of gold foil, hot stamping, and bronze foil.",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.thinkgeek.com/images/products/zoom/jjip_citizen_playing_cards.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "ThinkGeek",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Citizen Playing Cards",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "product",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "http://www.thinkgeek.com/product/jjip/?cpg=fbl_jjip",
         },
       },
@@ -33169,13 +32116,11 @@ Object {
           "@value": "Abstract JSON is a useful data serialization and messaging format. This specification defines JSON-LD, a JSON-based format to serialize Linked Data. The syntax is designed to easily integrate into deployed systems that already use JSON, and provides a smooth upgrade path from JSON to JSON-LD. It is primarily intended to be a way to use Linked Data in Web-based programming environments, to build interoperable Web services, and to store Linked Data in JSON-based storage engines.",
         },
         "dcterms:issued": Object {
-          "@language": "en",
           "@type": "xsd:dateTime",
           "@value": "2014-01-15T23:00:00.000Z",
         },
         "dcterms:language": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "en",
         },
         "dcterms:replaces": Object {
@@ -33351,188 +32296,153 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "YouTube",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.google.android.youtube",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "vnd.youtube://www.youtube.com/watch?v=W9ZnpIGvZUo&feature=applinks",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "YouTube",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "544007664",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "vnd.youtube://www.youtube.com/watch?v=W9ZnpIGvZUo&feature=applinks",
         },
         "al:web:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.youtube.com/watch?v=W9ZnpIGvZUo&feature=applinks",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "87741124305",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "\"Marvel makes cinematic history as it unites the Super Hero team of a lifetime. Iron Man (Robert Downey Jr.), Captain America (Chris Evans), The Hulk (Mark R...",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i.ytimg.com/vi/W9ZnpIGvZUo/maxresdefault.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "YouTube",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "Marvel\'s The Avengers",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "video",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.youtube.com/watch?v=W9ZnpIGvZUo",
         },
         "og:video:height": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "720",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "720",
           },
         ],
         "og:video:secure_url": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://www.youtube.com/embed/W9ZnpIGvZUo",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://www.youtube.com/v/W9ZnpIGvZUo?version=3&autohide=1",
           },
         ],
         "og:video:tag": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Marvel\'s The Avengers",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Marvel",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Walt Disney Pictures",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Robert Downey Jr.",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Chris Evans",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Mark Ruffalo",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Chris Hemsworth",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Scarlett Johansson",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Jeremy Renner",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Samuel L. Jackson",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Joss Whedon",
           },
         ],
         "og:video:type": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "text/html",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "application/x-shockwave-flash",
           },
         ],
         "og:video:url": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://www.youtube.com/embed/W9ZnpIGvZUo",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://www.youtube.com/v/W9ZnpIGvZUo?version=3&autohide=1",
           },
         ],
         "og:video:width": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1280",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1280",
           },
         ],
@@ -33730,148 +32640,121 @@ Object {
       Object {
         "al:android:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "YouTube",
         },
         "al:android:package": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "com.google.android.youtube",
         },
         "al:android:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "vnd.youtube://www.youtube.com/watch?v=ZynZdGqxT7Q&feature=applinks",
         },
         "al:ios:app_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "YouTube",
         },
         "al:ios:app_store_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "544007664",
         },
         "al:ios:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "vnd.youtube://www.youtube.com/watch?v=ZynZdGqxT7Q&feature=applinks",
         },
         "al:web:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.youtube.com/watch?v=ZynZdGqxT7Q&feature=applinks",
         },
         "fb:app_id": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "87741124305",
         },
         "og:description": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "",
         },
         "og:image": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://i.ytimg.com/vi/ZynZdGqxT7Q/maxresdefault.jpg",
         },
         "og:site_name": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "YouTube",
         },
         "og:title": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "15. Typings with Blake Embrey",
         },
         "og:type": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "video",
         },
         "og:url": Object {
           "@language": "en",
-          "@type": undefined,
           "@value": "https://www.youtube.com/watch?v=ZynZdGqxT7Q",
         },
         "og:video:height": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "720",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "720",
           },
         ],
         "og:video:secure_url": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://www.youtube.com/embed/ZynZdGqxT7Q",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://www.youtube.com/v/ZynZdGqxT7Q?version=3&autohide=1",
           },
         ],
         "og:video:tag": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "#hangoutsonair",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "Hangouts On Air",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "#hoa",
           },
         ],
         "og:video:type": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "text/html",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "application/x-shockwave-flash",
           },
         ],
         "og:video:url": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "https://www.youtube.com/embed/ZynZdGqxT7Q",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "http://www.youtube.com/v/ZynZdGqxT7Q?version=3&autohide=1",
           },
         ],
         "og:video:width": Array [
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1280",
           },
           Object {
             "@language": "en",
-            "@type": undefined,
             "@value": "1280",
           },
         ],

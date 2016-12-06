@@ -374,7 +374,7 @@ export class Handler {
           last(this._microdataNodes),
           context.id,
           props,
-          simplifyJsonLdValue({
+          normalizeJsonLdValue({
             '@value': value,
             '@language': last(this.langs)
           })
@@ -487,7 +487,7 @@ export class Handler {
         this._addRdfaProperty(
           last(this._rdfaNodes),
           properties,
-          simplifyJsonLdValue({
+          normalizeJsonLdValue({
             '@value': value,
             '@language': last(this.langs),
             '@type': normalize(attributes['datatype'])
@@ -495,7 +495,11 @@ export class Handler {
         )
       } else {
         if ((typeOfAttr || resourceAttr) && !(context.flags & HandlerFlags.rdfaLink)) {
-          const newNode: any = { '@id': resourceAttr }
+          const newNode: any = {}
+
+          if (resourceAttr) {
+            newNode['@id'] = resourceAttr
+          }
 
           this._addRdfaProperty(last(this._rdfaNodes), properties, newNode)
 
@@ -678,7 +682,7 @@ export class Handler {
     currentContext.text += prevContext.text
 
     if (text) {
-      const schemaValue = simplifyJsonLdValue({
+      const schemaValue = normalizeJsonLdValue({
         '@value': text,
         '@language': last(this.langs)
       })
@@ -782,7 +786,8 @@ export class Handler {
       }
     }
 
-    const node: any = { '@id': id }
+    const node: any = {}
+    if (id) { node['@id'] = id }
     this.result.rdfa = this._rdfa
     pushToGraph(this._rdfa, node)
     return node
@@ -923,9 +928,19 @@ function splitItemtype (value: string) {
 /**
  * Simplify a JSON-LD value for putting into the graph.
  */
-function simplifyJsonLdValue (value: JsonLdValue): string | JsonLdValue {
-  if (value['@type'] != null || value['@language'] != null) {
-    return value
+function normalizeJsonLdValue (value: JsonLdValue): string | JsonLdValue {
+  if (value['@type'] || value['@language']) {
+    const result: JsonLdValue = {
+      '@value': value['@value']
+    }
+
+    if (value['@type']) {
+      result['@type'] = value['@type']
+    } else if (value['@language']) {
+      result['@language'] = value['@language']
+    }
+
+    return result
   }
 
   return value['@value']
