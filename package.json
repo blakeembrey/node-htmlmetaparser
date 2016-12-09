@@ -48,7 +48,7 @@
     "filenamify": "^1.2.1",
     "htmlparser2": "^3.9.2",
     "jest": "^17.0.3",
-    "popsicle": "^8.2.0",
+    "popsicle": "^9.0.0",
     "thenify": "^3.2.1",
     "tslint": "^4.0.2",
     "tslint-config-standard": "^2.0.0",
