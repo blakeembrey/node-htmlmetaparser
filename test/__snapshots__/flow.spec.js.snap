@@ -30,6 +30,18 @@ Object {
     "title": "Google Pixel review: The best Android phone, even if it is a little pricey | Ars Technica",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://cdn.arstechnica.net/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+    Object {
+      "href": "https://cdn.arstechnica.net/wp-content/themes/ars-mobile/assets/images/material-ars.png",
+      "sizes": "192x192",
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -145,6 +157,33 @@ Object {
     "title": "Cloudinary - Pricing",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "http://cloudinary.com/images/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://cloudinary.com/images/favicon-160x160.png",
+      "sizes": "160x160",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://cloudinary.com/images/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://cloudinary.com/images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://cloudinary.com/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+  ],
 }
 `;
 
@@ -158,6 +197,7 @@ Object {
     "title": "CNN - Breaking News, Latest News and Videos",
     "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0",
   },
+  "icons": Array [],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -200,6 +240,13 @@ Object {
     "title": "table.jpeg • Droplr",
     "viewport": "initial-scale=1.0, width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://d1zjcuqflbd5k.cloudfront.net/files/acc_138123/JfQ3?Expires=1477102546&Signature=brvcLfYmZqEVOJNbjS8qFJtbyiG566R-PtfIDPB6Fw9z-Wk-0fgQ3Px1p9D1nhjS1L1WzAGiIgijaEilD5UR07RXlYbfEahumKH8v-hi8MTEvwaVImWMkRB-x9RUlNTFKI7tFs94q~RpCdOO~hWpklNQe1~EbXIv~eKgLBYAsY8_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA",
+      "sizes": "80x80",
+      "type": "image/png",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -262,6 +309,7 @@ Object {
   "html": Object {
     "title": "DCMI Home: Dublin Core® Metadata Initiative (DCMI)",
   },
+  "icons": Array [],
 }
 `;
 
@@ -330,6 +378,7 @@ Object {
     "keywords": "Franz Inc, Lisp, Enterprise Development Tools, Common Lisp, Allegro CL, ACL, Allegro Common Lisp AllegroCache, RDF, OWL, SPARQL, Semantic Web Technology, AllegroGraph Web 3.0 Database, Triple Store, RacerPro, TopBraid Composer",
     "title": "AllegroGraph - Semantic Graph Database",
   },
+  "icons": Array [],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -436,6 +485,13 @@ Object {
     "title": "The DNC Hack Was Much Bigger Than We Thought",
     "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://i.kinja-img.com/gawker-media/image/upload/s--O07tru6M--/c_fill,fl_progressive,g_center,h_80,q_80,w_80/fdj3buryz5nuzyf2k620.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "Article",
@@ -548,6 +604,13 @@ Object {
     "title": "Hacker News",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://news.ycombinator.com/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
 }
 `;
 
@@ -594,6 +657,7 @@ Object {
     "canonical": "http://html5doctor.com/microdata/",
     "title": "Extending HTML5 — Microdata | HTML5 Doctor",
   },
+  "icons": Array [],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -694,6 +758,13 @@ Object {
     "title": "Why I taught myself 20 languages — and what I learned about myself |",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "http://1.gravatar.com/blavatar/3d3e4c72b49d7eab0db4c9061886d370?s=32",
+      "sizes": "16x16",
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -812,6 +883,18 @@ Object {
     "title": "Knex.js - A SQL Query Builder for Javascript",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "http://knexjs.org/assets/favicons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://knexjs.org/assets/favicons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+  ],
 }
 `;
 
@@ -830,6 +913,13 @@ Object {
     "canonical": "http://lifehacks.stackexchange.com/questions/14477/how-do-i-get-the-last-lines-of-dust-into-the-dustpan",
     "title": "cleaning - How do I get the last lines of dust into the dustpan? - Lifehacks Stack Exchange",
   },
+  "icons": Array [
+    Object {
+      "href": "http://cdn.sstatic.net/Sites/lifehacks/img/favicon.ico?v=4a0b79bd7c34",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -962,6 +1052,33 @@ Object {
     "title": "50 things we want from \'Battle of the Bastards,\' the next \'Game of Thrones\' episode",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "http://mashable.com/favicon-32x32.png?v=m2Pmw8zNwl",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://mashable.com/android-chrome-192x192.png?v=m2Pmw8zNwl",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://mashable.com/favicon-96x96.png?v=m2Pmw8zNwl",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://mashable.com/favicon-16x16.png?v=m2Pmw8zNwl",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://mashable.com/favicon.ico?v=m2Pmw8zNwl",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "Article",
@@ -1096,6 +1213,13 @@ Object {
   "html": Object {
     "title": "Microformats",
   },
+  "icons": Array [
+    Object {
+      "href": "http://microformats.org/favicon.ico",
+      "sizes": undefined,
+      "type": "image/ico",
+    },
+  ],
 }
 `;
 
@@ -1121,6 +1245,7 @@ Object {
     "description": "The Open Graph protocol enables any web page to become a rich object in a social graph.",
     "title": "The Open Graph protocol",
   },
+  "icons": Array [],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -1160,6 +1285,13 @@ Object {
     "title": "Boosted Dual+ – Boosted Boards",
     "viewport": "width=device-width,initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "http://cdn.shopify.com/s/files/1/0325/7933/t/14/assets/favicon.png?13925167845345008098",
+      "sizes": undefined,
+      "type": "image/png",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -1231,6 +1363,13 @@ Object {
     "title": "Sid Meier\'s Civilization® V on Steam",
     "viewport": "width=device-width,initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "http://store.steampowered.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -1332,6 +1471,13 @@ Object {
     "title": "The Marriage Decision: Everything Forever or Nothing Ever Again",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "http://28oa9i1t08037ue3m1l0i861.wpengine.netdna-cdn.com/wp-content/themes/waitbutwhy/images/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -1436,6 +1582,13 @@ Object {
     "title": "Apple iPhone 6s 64GB Gray MKRY2LL/A - Best Buy",
     "viewport": "width=1024",
   },
+  "icons": Array [
+    Object {
+      "href": "http://www.bestbuy.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "BreadcrumbList",
@@ -2130,6 +2283,7 @@ Object {
     "description": "Add style without losing comfort with this 3-person outdoor sofa. Made out of weather resistant wicker on an aluminum frame, it will endure in any of your outdoor spaces. The synthetic resin wicker provides a durable exterior, while still preserving its classic yet modern appearance. | eBay!",
     "title": "Outdoor Wicker Patio Furniture Sofa 3 Seater Luxury Comfort Brown Wicker Couch | eBay",
   },
+  "icons": Array [],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -2440,6 +2594,23 @@ Object {
     "keywords": "Reviews, Showtimes, DVDs, Photos, Message Boards, User Ratings, Synopsis, Trailers, Credits",
     "title": "Inception (2010) - IMDb",
   },
+  "icons": Array [
+    Object {
+      "href": "http://ia.media-imdb.com/images/G/01/imdb/images/safari-favicon-517611381._CB282921673_.svg",
+      "sizes": "any",
+      "type": undefined,
+    },
+    Object {
+      "href": "http://ia.media-imdb.com/images/G/01/imdb/images/favicon-2165806970._CB282921871_.ico",
+      "sizes": undefined,
+      "type": "image/ico",
+    },
+    Object {
+      "href": "http://ia.media-imdb.com/images/G/01/imdb/images/desktop-favicon-2165806970._CB282919592_.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -2785,6 +2956,13 @@ Object {
     "robots": "noarchive",
     "title": "Some Bill Providers Automatically Update Your Credit Card When You Get A New One | Lifehacker Australia",
   },
+  "icons": Array [
+    Object {
+      "href": "http://edge.alluremedia.com.au/assets/technetwork/ico/favicon_lifehacker.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -3061,6 +3239,28 @@ Object {
     "title": "ASAP Pack | Mystery Ranch Backpacks",
     "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
   },
+  "icons": Array [
+    Object {
+      "href": "http://www.mysteryranch.com/c.999464/shopflow/images/favicons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://www.mysteryranch.com/c.999464/shopflow/images/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://www.mysteryranch.com/c.999464/shopflow/images/favicons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://www.mysteryranch.com/c.999464/shopflow/images/favicons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -3312,6 +3512,13 @@ Object {
     "robots": "index,follow",
     "title": "XYZprinting da Vinci 2.0 Duo FFF (Fused Filament Fabrication) ABS/PLA Dual Nozzle 3D Printer-Newegg.com",
   },
+  "icons": Array [
+    Object {
+      "href": "http://images10.newegg.com/WebResource/Themes/2005/Nest/Newegg.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -3390,6 +3597,28 @@ Object {
     "title": "UK man in ‘Trump shooting bid’ denied bail | News.com.au",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://secure.gravatar.com/blavatar/99ae28ba58e6719abd9d8575bdc18a54?s=32",
+      "sizes": "16x16",
+      "type": "image/x-icon",
+    },
+    Object {
+      "href": "http://www.news.com.au/wp-content/themes/vip/newscorpau-nca/assets/dist/img/common/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://www.news.com.au/wp-content/themes/vip/newscorpau-nca/assets/dist/img/common/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+    Object {
+      "href": "http://www.news.com.au/wp-content/themes/vip/newscorpau-nca/assets/dist/img/common/favicon/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -3513,6 +3742,13 @@ Object {
     "title": "Decoding Donald Trump - The New York Times",
     "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://static01.nyt.com/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -3849,6 +4085,18 @@ Object {
     "title": "reddit: the front page of the internet",
     "viewport": "width=1024",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.redditstatic.com/icon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://www.redditstatic.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
 }
 `;
 
@@ -3871,6 +4119,18 @@ Object {
     "title": "more-arrow",
     "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
   },
+  "icons": Array [
+    Object {
+      "href": "https://cdn0.vox-cdn.com/images/verge/favicon.v86bfa84.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+    Object {
+      "href": "https://cdn0.vox-cdn.com/images/verge/2.0/verge-icon-196x196.v503bbf1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -4220,6 +4480,13 @@ Object {
     "title": "Boba Guys - 1026 Photos & 906 Reviews - Coffee & Tea - 3491 19th St, Mission, San Francisco, CA - Phone Number - Menu - Yelp",
     "viewport": "width=1020",
   },
+  "icons": Array [
+    Object {
+      "href": "https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/118ff475a341/assets/img/logos/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -5007,6 +5274,13 @@ Object {
   "html": Object {
     "title": "xkcd: Regular Expressions",
   },
+  "icons": Array [
+    Object {
+      "href": "http://xkcd.com/s/919f27.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
 }
 `;
 
@@ -5017,6 +5291,7 @@ Object {
     "title": "Micropub CR • Aaron Parecki",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [],
 }
 `;
 
@@ -5075,6 +5350,28 @@ Object {
     "title": "Adactio: Journal—Metadata markup",
     "viewport": "width=device-width, initial-scale=1.0, shrink-to-fit=no",
   },
+  "icons": Array [
+    Object {
+      "href": "https://adactio.com/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://adactio.com/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://adactio.com/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://adactio.com/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "og": "http://ogp.me/ns#",
@@ -5129,6 +5426,13 @@ Object {
     "description": "At GitHub, we’re building the text editor we’ve always wanted: hackable to the core, but approachable on the first day without ever touching a config file. We can’t wait to see what you build with it.",
     "title": "aesthetic-ui",
   },
+  "icons": Array [
+    Object {
+      "href": "https://atom.io/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "og": "http://ogp.me/ns#",
@@ -5193,6 +5497,13 @@ Object {
     "title": "PNG optimisation",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://bjango.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
 }
 `;
 
@@ -5226,6 +5537,13 @@ Object {
     "title": "iStat Menus",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://bjango.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
 }
 `;
 
@@ -5247,6 +5565,18 @@ Object {
     "title": "Embeds « WordPress Codex",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://codex.wordpress.org/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.w.org/favicon.ico?2",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
 }
 `;
 
@@ -5259,6 +5589,13 @@ Object {
     "title": "Player Card | Twitter Developers",
     "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://abs.twimg.com/favicons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "twitter": Object {
     "card": "summary",
     "description": "Video clips and audio streams have a special place on the Twitter platform thanks to the Player Card. By implementing a few HTML meta tags to your website and following the Twitter Rules of the Road, you can delivery your rich media to users across the globe.",
@@ -5289,6 +5626,13 @@ Object {
     "title": "Introduction to Structured Data | Search | Google Developers",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://developers.google.com/_static/a64d8c2aaf/images/favicon.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -5361,6 +5705,13 @@ Object {
     "title": "The Raspberry Pi Has Revolutionized Emulation - blog - Coding Horror Discussion",
     "viewport": "width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes",
   },
+  "icons": Array [
+    Object {
+      "href": "https://discourse.codinghorror.com/images/default-favicon.ico",
+      "sizes": undefined,
+      "type": "image/png",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -6095,6 +6446,13 @@ Object {
     "title": "Bay Area Guide to Mission Series/Banners - Google Docs",
     "viewport": "width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://ssl.gstatic.com/docs/documents/images/kix-favicon6.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -6135,6 +6493,13 @@ Object {
   "html": Object {
     "title": "Digital Nomad list - Google Sheets",
   },
+  "icons": Array [
+    Object {
+      "href": "https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -6175,6 +6540,13 @@ Object {
   "html": Object {
     "title": "Overfitting.pdf - Google Drive",
   },
+  "icons": Array [
+    Object {
+      "href": "https://ssl.gstatic.com/docs/doclist/images/icon_14_pdf_favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -6230,6 +6602,13 @@ Object {
     "canonical": "https://droplr.com/droplr-addition-google-chrome-extension",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://droplr.com/wp-content/themes/droplr-marketing-oct-2016/favicon.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -6295,6 +6674,13 @@ Object {
     "title": "Exploring a Graph Representation of Wikipedia Using Gremlin - DZone Database",
     "viewport": "width=device-width, initial-scale=1, user-scalable=no",
   },
+  "icons": Array [
+    Object {
+      "href": "https://dzone.com/themes/dz20/images/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -6426,6 +6812,13 @@ Object {
     "generator": "MediaWiki 1.28.0-wmf.22",
     "title": "Jean-Luc Picard - Wikipedia",
   },
+  "icons": Array [
+    Object {
+      "href": "https://en.wikipedia.org/static/favicon/wikipedia.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
 }
 `;
 
@@ -6445,6 +6838,13 @@ Object {
     "generator": "MediaWiki 1.28.0-wmf.22",
     "title": "TypeScript - Wikipedia",
   },
+  "icons": Array [
+    Object {
+      "href": "https://en.wikipedia.org/static/favicon/wikipedia.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
 }
 `;
 
@@ -6558,6 +6958,13 @@ Object {
     "keywords": "Boba Guys, 3491 19th St, San Francisco, CA, boba guys,boba guys milk tea & snack bar,boba guys - milk tea & snack bar,boba guys - milk tea and snack bar,bubble tea, Bubble Tea, Dessert",
     "title": "Boba Guys - Mission District - 129 tips from 4037 visitors",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -6773,6 +7180,13 @@ Object {
     "keywords": "Bondi Beach, Queen Elizabeth Dr., Bondi Beach, NSW, at the beach nth bondi,at the beach, nth bondi,beach,bondi,bondi beach,bondi beach swimrun,bondi beach the north bondi hill,bondi beach (north end),bondi beach (northern end), Beach, Surf Spot",
     "title": "Bondi Beach - Beach",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -6985,6 +7399,13 @@ Object {
     "keywords": "Bourke Street Bakery, 633 Bourke St., Sydney, NSW, bourke street bakery,bourke street bakery (633 bourke st, surry hills, nsw),bourke street bakery 633 bourke st surry hills nsw, Bakery, Café, Coffee Shop, Lunch, Brunch & more",
     "title": "Bourke Street Bakery - Surry Hills - 158 tips from 2672 visitors",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -7199,6 +7620,13 @@ Object {
     "keywords": "Darling Harbour, Darling Harbour, NSW, darling habour,darling harbour,darling harbour australia,darling harbour sydney,darling harbour sydney nsw,darling harbour, sydney nsw,darling harbs,docks darling harbour, Harbor / Marina, Park, Plaza",
     "title": "Darling Harbour - 150 tips from 18966 visitors",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -7412,6 +7840,13 @@ Object {
     "keywords": "Mrs. Macquarie\'s Point, Mrs Macquaries Rd., Sydney, NSW, mrs macquarie\'s point,mrs macquaries point,mrs. macquarie\'s point,mrs. macquaries point, Scenic Lookout",
     "title": "Mrs. Macquarie\'s Point - Central Business District - Mrs Macquaries Rd.",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -7624,6 +8059,13 @@ Object {
     "keywords": "Royal Botanic Garden, Macquarie St, Sydney, NSW, botanical gardens,botannical gardens,royal botanic garden,royal botanic gardens,royal botanic gardens sydney,royal botanical gardens, Botanical Garden, Garden",
     "title": "Royal Botanic Garden - Central Business District - 115 tips from 9719 visitors",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -7838,6 +8280,13 @@ Object {
     "keywords": "Sydney Opera House, 2 Macquarie St, Sydney, NSW, opera house,opera house sydney,sidney opera house,sydney opera house, Opera House, Concert Hall, Art Gallery",
     "title": "Sydney Opera House - Opera House in Circular Quay",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -8058,6 +8507,13 @@ Object {
     "keywords": "The Baxter Inn, 152 - 156 Clarence St., Sydney, NSW, baxter inn,the baxter inn, Whisky Bar, Bar, Speakeasy",
     "title": "The Baxter Inn - Whisky Bar in Sydney",
   },
+  "icons": Array [
+    Object {
+      "href": "https://foursquare.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -8174,6 +8630,13 @@ Object {
     "title": "How people build software · GitHub",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://assets-cdn.github.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -8334,6 +8797,13 @@ Object {
     "title": "Give a better error message for assigning from Object to anything else · Issue #10462 · Microsoft/TypeScript · GitHub",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://assets-cdn.github.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -8472,6 +8942,13 @@ Object {
     "title": "blakeembrey (Blake Embrey) · GitHub",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://assets-cdn.github.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -8620,6 +9097,13 @@ Object {
     "title": "GitHub - blakeembrey/popsicle: Simple HTTP requests for node and the browser",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://assets-cdn.github.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -8798,6 +9282,13 @@ Object {
     "title": "Git 2.10 has been released · GitHub",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://assets-cdn.github.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -8881,6 +9372,13 @@ Object {
     "title": "[misc] typescript: refactor constructor and ISO format hack by seansfkelley · Pull Request #3323 · moment/moment · GitHub",
     "viewport": "width=device-width",
   },
+  "icons": Array [
+    Object {
+      "href": "https://assets-cdn.github.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -9012,6 +9510,7 @@ Object {
     "keywords": "Pokémon GO, Niantic, Inc., Games, Health & Fitness, ios apps, app, appstore, app store, iphone, ipad, ipod touch, itouch, itunes",
     "title": "Pokémon GO on the App Store",
   },
+  "icons": Array [],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -9200,6 +9699,7 @@ Object {
     "keywords": "download, The Avengers, Action & Adventure, Joss Whedon, movies, film, rent, buy, itunes, apple tv",
     "title": "The Avengers on iTunes",
   },
+  "icons": Array [],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -9556,6 +10056,7 @@ Object {
     "title": "Learn Standard ML in Y Minutes",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [],
 }
 `;
 
@@ -9579,6 +10080,13 @@ Object {
     "title": "Everything you ever wanted to know about unfurling but were afraid to ask /or/ How to make your… – Slack Platform Blog – Medium",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://cdn-static-1.medium.com/_/fp/icons/favicon-medium.TAS6uQ-Y7kcKgi0xjcYHXw.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "NewsArticle",
@@ -9681,6 +10189,13 @@ Object {
     "title": "For a Better Economy, Add Commuter Rail? | Hacker News",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://news.ycombinator.com/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
 }
 `;
 
@@ -9700,6 +10215,13 @@ Object {
     "title": "HRX on Spotify",
     "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://d4gv47jue7myv.cloudfront.net/images/favicon.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.googleapis.com/",
     "@id": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
@@ -10614,6 +11136,13 @@ Object {
     "title": "The Pragmatic Bookshelf | Seven Languages in Seven Weeks",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://pragprog.com/favicon.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -10736,6 +11265,7 @@ Object {
     "description": "Schema.org Type: WebSite - A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.",
     "title": "WebSite - schema.org",
   },
+  "icons": Array [],
   "rdfa": Object {
     "@context": Object {
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -12842,6 +13372,7 @@ Object {
   "html": Object {
     "title": "Schema.org master file: RDFS in RDFa",
   },
+  "icons": Array [],
   "rdfa": Object {
     "@context": Object {
       "dc": "http://purl.org/dc/terms/",
@@ -23313,6 +23844,13 @@ Object {
     "title": "The Segment AWS Stack",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://segment.com/build/public/public/images/touch-icon.png",
+      "sizes": "192x192",
+      "type": undefined,
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "NewsArticle",
@@ -23388,6 +23926,13 @@ Object {
     "generator": "Bandcamp",
     "title": "Slant 6",
   },
+  "icons": Array [
+    Object {
+      "href": "https://f4.bcbits.com/img/a1638428842_3.jpg",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -23581,6 +24126,7 @@ Object {
     "keywords": "Jim Wilson,Node.js the Right Way: Practical, Server-Side JavaScript That Scales,Pragmatic Bookshelf,1937785734,Computer - Internet,Computer Books: Languages,Computers,Computers / Programming Languages / JavaScript,Computers / Web / Web Programming,Computers/Programming Languages - JavaScript,Computing: Textbooks & Study Guides,Programming Languages - JavaScript,Web - Web Programming,Web programming",
     "title": "Node.js the Right Way: Practical, Server-Side JavaScript That Scales: Jim Wilson: 9781937785734: Amazon.com: Books",
   },
+  "icons": Array [],
 }
 `;
 
@@ -23630,6 +24176,13 @@ Object {
     "title": "Desiigner- \"Panda\" (Prod. By: Menace) by LifeOfDesiigner | Life Of Desiigner | Free Listening on SoundCloud",
     "viewport": "width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no",
   },
+  "icons": Array [
+    Object {
+      "href": "https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14b.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -23977,6 +24530,13 @@ Object {
     "title": "NTMY - Episode 1 - Pieter Levels by Tobias van Schneider | Free Listening on SoundCloud",
     "viewport": "width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no",
   },
+  "icons": Array [
+    Object {
+      "href": "https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14b.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -24286,6 +24846,23 @@ Object {
     "title": "Google, Uber, and the Evolution of Transportation-as-a-Service – Stratechery by Ben Thompson",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://stratechery.com/wp-content/themes/stratechery/images/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+    Object {
+      "href": "https://stratechery.com/wp-content/themes/stratechery/images/StratecheryLogo-5757.png",
+      "sizes": undefined,
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://stratechery.com/wp-content/themes/stratechery/images/IE/favicon.ico",
+      "sizes": undefined,
+      "type": "image/ico",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -24367,6 +24944,13 @@ Object {
     "title": "TechCrunch - The latest technology news and information on startups",
     "viewport": "initial-scale=1.0,width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://s0.wp.com/wp-content/themes/vip/techcrunch-2013/assets/images/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "ItemList",
@@ -24594,6 +25178,13 @@ Object {
     "title": "The Europas Awards 2016 honored the best tech startups in Europe | TechCrunch",
     "viewport": "initial-scale=1.0,width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://s0.wp.com/wp-content/themes/vip/techcrunch-2013/assets/images/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "Article",
@@ -24835,6 +25426,13 @@ Object {
     "title": "Kung Fury (2015) - Trakt.tv",
     "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no",
   },
+  "icons": Array [
+    Object {
+      "href": "https://walter.trakt.tv/hotlink-ok/public/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -25621,6 +26219,13 @@ Object {
     "robots": "NOODP",
     "title": "Twitter. It\'s what\'s happening.",
   },
+  "icons": Array [
+    Object {
+      "href": "https://abs.twimg.com/favicons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
 }
 `;
 
@@ -25983,6 +26588,13 @@ Object {
     "robots": "NOODP",
     "title": "¯\\_(ツ)_/¯ on Twitter: \"This is a very cool thread https://t.co/r6VKiMIYoI\"",
   },
+  "icons": Array [
+    Object {
+      "href": "https://abs.twimg.com/favicons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -26383,6 +26995,13 @@ Object {
     "robots": "NOODP",
     "title": "Alexis Ohanian on Twitter: \"Don\'t squander this. 💻 https://t.co/eWmq6oxK73 https://t.co/JKKVsNBcS1\"",
   },
+  "icons": Array [
+    Object {
+      "href": "https://abs.twimg.com/favicons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -26788,6 +27407,13 @@ Object {
     "robots": "NOODP",
     "title": "Blake Embrey (@blakeembrey) | Twitter",
   },
+  "icons": Array [
+    Object {
+      "href": "https://abs.twimg.com/favicons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
 }
 `;
 
@@ -27150,6 +27776,13 @@ Object {
     "robots": "NOODP",
     "title": "Eric Clemmons on Twitter: \"🔥 Clean up @github issues with the HTML5 <details> tag – https://t.co/poNw69GO9s https://t.co/QEXZgk4LJx\"",
   },
+  "icons": Array [
+    Object {
+      "href": "https://abs.twimg.com/favicons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -27550,6 +28183,13 @@ Object {
     "robots": "NOODP",
     "title": "TypeScript on Twitter: \".d.ts files should be simple to manage - check out our plans to make that happen in TypeScript 2.0! https://t.co/fkfz8uL4I4\"",
   },
+  "icons": Array [
+    Object {
+      "href": "https://abs.twimg.com/favicons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -28053,6 +28693,18 @@ Object {
     "title": "Bright, Chelsea Studio - Apartments for Rent in New York",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://a1.muscache.com/airbnb/static/icons/android-icon-192x192-c0465f9f0380893768972a31a614b670.png",
+      "sizes": "192x192",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://a1.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico",
+      "sizes": "76x76",
+      "type": "image/x-icon",
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -28261,6 +28913,13 @@ Object {
     "title": "Accelerated Mobile Pages Project",
     "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.ampproject.org/static/img/amp_favicon.png?v=3",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "og": "http://ogp.me/ns#",
@@ -28403,6 +29062,13 @@ Object {
     "title": "Buy Battlefield 1 – Battlefield Official Site",
     "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.battlefield.com/assets/dist/images/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -28503,6 +29169,33 @@ Object {
     "robots": "NOODP",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-194x194.png",
+      "sizes": "194x194",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-blue-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-blue-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-blue-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@id": "https://www.coursera.org/learn/machine-learning",
@@ -28768,13 +29461,6 @@ Object {
       "href": "https://www.etsy.com/shop/InfernoDecals/rss/",
       "hreflang": undefined,
       "media": undefined,
-      "title": "Shop RSS for InfernoDecals on Etsy",
-      "type": "application/rss+xml",
-    },
-    Object {
-      "href": "https://www.etsy.com/shop/InfernoDecals/rss/",
-      "hreflang": undefined,
-      "media": undefined,
       "title": "RSS",
       "type": "application/rss+xml",
     },
@@ -28793,6 +29479,13 @@ Object {
     "title": "Agents of Shield decal sticker for car truck by InfernoDecals",
     "viewport": "width=1024",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.etsy.com/images/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -29155,6 +29848,13 @@ Object {
     "robots": "noodp,noydir",
     "title": "Facebook - Log In or Sign Up",
   },
+  "icons": Array [
+    Object {
+      "href": "https://static.xx.fbcdn.net/rsrc.php/yV/r/hzMapiNYYpW.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -29215,6 +29915,18 @@ Object {
     "title": "All sizes | Yellow Motion (Explore #15) | Flickr - Photo Sharing!",
     "viewport": "width=1036",
   },
+  "icons": Array [
+    Object {
+      "href": "https://s.yimg.com/pw/images/icon_black_white.svg",
+      "sizes": "any",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.yimg.com/pw/favicon.ico",
+      "sizes": undefined,
+      "type": "image/ico",
+    },
+  ],
 }
 `;
 
@@ -29234,6 +29946,13 @@ Object {
     "robots": "noarchive",
     "title": "3d pan white",
   },
+  "icons": Array [
+    Object {
+      "href": "https://s.yimg.com/pw/favicon.ico",
+      "sizes": undefined,
+      "type": "image/ico",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "BreadcrumbList",
@@ -29378,6 +30097,13 @@ Object {
     "title": "Google Maps",
     "viewport": "initial-scale=1.0, user-scalable=no",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.google.com/images/branding/product/ico/maps_32dp.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -29765,6 +30491,18 @@ Object {
     "title": "Instagram",
     "viewport": "width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://instagramstatic-a.akamaihd.net/h1/images/ico/favicon-192.png/b407fa101800.png",
+      "sizes": "192x192",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://instagramstatic-a.akamaihd.net/h1/images/ico/favicon.ico/dfa85bb1fd63.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -29917,6 +30655,13 @@ Object {
     "title": "Bonds vs. stocks | Stocks and bonds (video) | Khan Academy",
     "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.khanacademy.org/favicon.ico?leaf",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -30042,6 +30787,7 @@ Object {
     "title": "youtube icon",
     "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
   },
+  "icons": Array [],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -30194,6 +30940,13 @@ Object {
     "title": "Contact | MuleSoft",
     "viewport": "width=device-width, initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.mulesoft.com/sites/all/themes/muletheme/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "article": "http://ogp.me/ns/article#",
@@ -30295,6 +31048,38 @@ Object {
     "title": "filenamify",
     "viewport": "width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.npmjs.com/static/images/touch-icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://www.npmjs.com/static/images/touch-icons/favicon-230x230.png",
+      "sizes": "230x230",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://www.npmjs.com/static/images/touch-icons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://www.npmjs.com/static/images/touch-icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://www.npmjs.com/static/images/touch-icons/coast-228x228.png",
+      "sizes": "228x228",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://www.npmjs.com/static/images/touch-icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "SoftwareApplication",
@@ -30375,6 +31160,7 @@ Object {
     "robots": "noarchive",
     "title": "How to impress a computer programmer on a date - Quora",
   },
+  "icons": Array [],
   "twitter": Object {
     "card": "summary",
     "description": "Answer (1 of 55): My worst ever first date began with the question: \"So what\'s your favorite programming language?\" So, maybe something not that.",
@@ -30411,6 +31197,18 @@ Object {
     "title": "\'UK man\' tried to kill Trump: court papers : news",
     "viewport": "width=1024",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.redditstatic.com/icon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+    },
+    Object {
+      "href": "https://www.redditstatic.com/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "og": "http://ogp.me/ns#",
@@ -30468,6 +31266,13 @@ Object {
     "title": "Inception (2010) - Rotten Tomatoes",
     "viewport": "width=device-width,initial-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://staticv2.rottentomatoes.com/static/images/icons/favicon.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+  ],
   "jsonld": Object {
     "@context": "http://schema.org",
     "@type": "Movie",
@@ -31178,6 +31983,13 @@ Object {
     "title": "Music for everyone - Spotify",
     "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
   },
+  "icons": Array [
+    Object {
+      "href": "https://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/_global/favicon.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -31235,6 +32047,18 @@ Object {
     "title": "Cancel search",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://pa.tedcdn.com/favicon.svg",
+      "sizes": "any",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://pa.tedcdn.com/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "rdfa": Object {
     "@context": Object {
       "fb": "http://ogp.me/ns/fb#",
@@ -31596,6 +32420,18 @@ Object {
     "title": "Cancel search",
     "viewport": "width=device-width, initial-scale=1.0",
   },
+  "icons": Array [
+    Object {
+      "href": "https://pa.tedcdn.com/favicon.svg",
+      "sizes": "any",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://pa.tedcdn.com/favicon.ico",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -31828,6 +32664,13 @@ Object {
     "keywords": "Citizen Playing Cards - custom playing cards poker texas holdem hold\'em night gamble gambling card game thinkgeek think geek gifts for geeks",
     "title": "Citizen Playing Cards | ThinkGeek",
   },
+  "icons": Array [
+    Object {
+      "href": "https://www.thinkgeek.com/images/favicon.png",
+      "sizes": undefined,
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -32011,6 +32854,7 @@ Object {
   "html": Object {
     "title": "JSON-LD 1.0",
   },
+  "icons": Array [],
   "rdfa": Object {
     "@context": Object {
       "dcterms": "http://purl.org/dc/terms/",
@@ -32183,6 +33027,33 @@ Object {
     "keywords": "Marvel\'s The Avengers, Marvel, Walt Disney Pictures, Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Samuel...",
     "title": "Marvel\'s The Avengers - YouTube",
   },
+  "icons": Array [
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon-vflz7uhzw.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_32-vfl8NGn4k.png",
+      "sizes": "32x32",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_48-vfl1s0rGh.png",
+      "sizes": "48x48",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_96-vfldSA3ca.png",
+      "sizes": "96x96",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_144-vflWmzoXw.png",
+      "sizes": "144x144",
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {
@@ -32518,6 +33389,33 @@ Object {
     "keywords": "#hangoutsonair, Hangouts On Air, #hoa",
     "title": "15. Typings with Blake Embrey - YouTube",
   },
+  "icons": Array [
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon-vflz7uhzw.ico",
+      "sizes": undefined,
+      "type": "image/x-icon",
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_32-vfl8NGn4k.png",
+      "sizes": "32x32",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_48-vfl1s0rGh.png",
+      "sizes": "48x48",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_96-vfldSA3ca.png",
+      "sizes": "96x96",
+      "type": undefined,
+    },
+    Object {
+      "href": "https://s.ytimg.com/yts/img/favicon_144-vflWmzoXw.png",
+      "sizes": "144x144",
+      "type": undefined,
+    },
+  ],
   "microdata": Object {
     "@graph": Array [
       Object {

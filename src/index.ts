@@ -236,8 +236,15 @@ export interface Alternative {
   hreflang?: string
 }
 
+export interface Icon {
+  type?: string
+  sizes?: string
+  href: string
+}
+
 export interface Result {
   alternate: Array<Alternative>
+  icons: Array<Icon>
   jsonld?: ResultJsonLd | ResultJsonLd[]
   rdfa?: ResultJsonLd
   microdata?: ResultJsonLd
@@ -254,7 +261,7 @@ export interface Options {
 
 export class Handler {
 
-  protected result: Result = { alternate: [] }
+  protected result: Result = { alternate: [], icons: [] }
   protected contexts: HandlerContext[] = [{ tagName: '', text: '', flags: 0 }]
   protected langs: string[] = []
 
@@ -587,15 +594,16 @@ export class Handler {
         const rels = split(relAttr)
 
         for (const rel of rels) {
+          const typeAttr = normalize(attributes['type'])
+
           if (rel === 'canonical' || rel === 'amphtml') {
             set(this.result, ['html', rel], resolveUrl(this.options.url, hrefAttr))
           } else if (rel === 'alternate') {
-            const typeAttr = normalize(attributes['type'])
             const mediaAttr = normalize(attributes['media'])
             const hreflangAttr = normalize(attributes['hreflang'])
 
             if (typeAttr || mediaAttr || hreflangAttr) {
-              this.result.alternate.push({
+              appendAndDedupe(this.result.alternate, ['type', 'hreflang', 'media', 'href'], {
                 type: typeAttr || 'text/html',
                 media: mediaAttr,
                 hreflang: hreflangAttr,
@@ -604,8 +612,14 @@ export class Handler {
               })
             }
           } else if (rel === 'meta') {
-            this.result.alternate.push({
-              type: normalize(attributes['type']) || 'application/rdf+xml',
+            appendAndDedupe(this.result.alternate, ['type'], {
+              type: typeAttr || 'application/rdf+xml',
+              href: resolveUrl(this.options.url, hrefAttr)
+            })
+          } else if (rel === 'icon') {
+            appendAndDedupe(this.result.icons, ['href'], {
+              type: typeAttr,
+              sizes: normalize(attributes['sizes']),
               href: resolveUrl(this.options.url, hrefAttr)
             })
           }
@@ -944,4 +958,31 @@ function normalizeJsonLdValue (value: JsonLdValue): string | JsonLdValue {
   }
 
   return value['@value']
+}
+
+/**
+ * Copy properties from `a` to `b`, when "defined".
+ */
+export function copy <T extends { [key: string]: any }> (a: T, b: T) {
+  for (const prop of Object.keys(b)) {
+    if (b[prop] != null) {
+      a[prop] = b[prop]
+    }
+  }
+}
+
+/**
+ * Append/merge a href entry to a list.
+ */
+function appendAndDedupe <T extends { href: string }> (list: T[], props: Array<keyof T>, value: T): void {
+  for (const entry of list) {
+    const matches = props.every(x => entry[x] === value[x])
+
+    if (matches) {
+      copy(entry, value)
+      return
+    }
+  }
+
+  list.push(value)
 }
