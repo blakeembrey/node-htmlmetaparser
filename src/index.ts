@@ -113,8 +113,7 @@ export interface HandlerContext {
   tagName: string
   text: string
   flags: number
-  id?: string
-  scriptType?: string
+  attributes: { [key: string]: string }
   rdfaTextProperty?: string[]
   microdataTextProperty?: string[]
 }
@@ -225,6 +224,7 @@ export interface ResultHtml {
   title?: string
   canonical?: string
   amphtml?: string
+  pingback?: string
   [key: string]: string | undefined
 }
 
@@ -242,9 +242,29 @@ export interface Icon {
   href: string
 }
 
+export interface Link {
+  href: string
+  text: string
+  download: boolean
+  hreflang?: string
+  rel?: string
+  type?: string
+  target?: string
+}
+
+export interface Image {
+  src: string
+  alt?: string
+  longdesc?: string
+  sizes?: string[]
+  srcset?: string[]
+}
+
 export interface Result {
   alternate: Array<Alternative>
   icons: Array<Icon>
+  links: Array<Link>
+  images: Array<Image>
   jsonld?: ResultJsonLd | ResultJsonLd[]
   rdfa?: ResultJsonLd
   microdata?: ResultJsonLd
@@ -261,8 +281,8 @@ export interface Options {
 
 export class Handler {
 
-  protected result: Result = { alternate: [], icons: [] }
-  protected contexts: HandlerContext[] = [{ tagName: '', text: '', flags: 0 }]
+  protected result: Result = { alternate: [], icons: [], links: [], images: [] }
+  protected contexts: HandlerContext[] = [{ tagName: '', text: '', flags: 0, attributes: {} }]
   protected langs: string[] = []
 
   private _rdfa: any = {}
@@ -295,12 +315,10 @@ export class Handler {
     this.callback(error, this.result)
   }
 
-  onopentagname (tagName: string) {
-    this.contexts.push({ tagName, text: '', flags: 0 })
-  }
-
   onopentag (tagName: string, attributes: { [attribute: string]: string }) {
-    const context = last(this.contexts)
+    const context: HandlerContext = { tagName, text: '', flags: 0, attributes }
+
+    this.contexts.push(context)
 
     // HTML attributes.
     const relAttr = normalize(attributes['rel'])
@@ -330,12 +348,8 @@ export class Handler {
     }
 
     // Store `id` references for later (microdata itemrefs).
-    if (idAttr) {
-      context.id = idAttr
-
-      if (!this._microdataRefs.hasOwnProperty(idAttr)) {
-        this._microdataRefs[idAttr] = {}
-      }
+    if (idAttr && !this._microdataRefs.hasOwnProperty(idAttr)) {
+      this._microdataRefs[idAttr] = {}
     }
 
     // Microdata item.
@@ -358,7 +372,8 @@ export class Handler {
 
       // Set child scopes on the root scope.
       if (itempropAttr) {
-        this._addMicrodataProperty(last(this._microdataNodes), context.id, split(itempropAttr), newNode)
+        const id = normalize(context.attributes['id'])
+        this._addMicrodataProperty(last(this._microdataNodes), id, split(itempropAttr), newNode)
       } else {
         this.result.microdata = this._microdata
         pushToGraph(this._microdata, newNode)
@@ -379,7 +394,7 @@ export class Handler {
       if (value != null) {
         this._addMicrodataProperty(
           last(this._microdataNodes),
-          context.id,
+          normalize(context.attributes['id']),
           props,
           normalizeJsonLdValue({
             '@value': value,
@@ -393,13 +408,16 @@ export class Handler {
 
     // Microdata `itemid=""`.
     if (itemidAttr) {
-      this._setMicrodataProperty(last(this._microdataNodes), context.id, '@id', itemidAttr)
+      const id = normalize(context.attributes['id'])
+
+      this._setMicrodataProperty(last(this._microdataNodes), id, '@id', itemidAttr)
     }
 
     // Microdata `itemtype=""`.
     if (itemtypeAttr) {
       const [vocab, type] = splitItemtype(itemtypeAttr)
       const vocabs = last(this._microdataScopes)
+      const id = normalize(context.attributes['id'])
 
       if (type && vocab !== last(vocabs)) {
         setContext(last(this._microdataNodes), '@vocab', vocab)
@@ -408,7 +426,7 @@ export class Handler {
         context.flags = context.flags | HandlerFlags.microdataVocab
       }
 
-      this._addMicrodataProperty(last(this._microdataNodes), context.id, '@type', type || itemtypeAttr)
+      this._addMicrodataProperty(last(this._microdataNodes), id, '@type', type || itemtypeAttr)
     }
 
     // RDFa `vocab=""`.
@@ -596,7 +614,7 @@ export class Handler {
         for (const rel of rels) {
           const typeAttr = normalize(attributes['type'])
 
-          if (rel === 'canonical' || rel === 'amphtml') {
+          if (rel === 'canonical' || rel === 'amphtml' || rel === 'pingback') {
             set(this.result, ['html', rel], resolveUrl(this.options.url, hrefAttr))
           } else if (rel === 'alternate') {
             const mediaAttr = normalize(attributes['media'])
@@ -625,11 +643,6 @@ export class Handler {
           }
         }
       }
-    }
-
-    // Detect metadata scripts (E.g. JSON-LD).
-    if (tagName === 'script') {
-      context.scriptType = normalize(attributes['type'])
     }
   }
 
@@ -680,8 +693,10 @@ export class Handler {
     }
 
     // Handle parsing significant script elements.
-    if (prevContext.scriptType) {
-      if (prevContext.scriptType === 'application/ld+json') {
+    if (prevContext.tagName === 'script') {
+      const type = normalize(prevContext.attributes['type'])
+
+      if (type === 'application/ld+json') {
         try {
           const jsonld = JSON.parse(prevContext.text)
 
@@ -690,6 +705,48 @@ export class Handler {
       }
 
       return
+    }
+
+    if (prevContext.tagName === 'a') {
+      const text = normalize(prevContext.text)
+      const href = normalize(prevContext.attributes['href'])
+
+      if (text && href) {
+        const download = prevContext.attributes.hasOwnProperty('download')
+        const target = normalize(prevContext.attributes['target'])
+        const hreflang = normalize(prevContext.attributes['hreflang'])
+        const type = normalize(prevContext.attributes['type'])
+        const rel = normalize(prevContext.attributes['rel'])
+
+        this.result.links.push({
+          href: resolveUrl(this.options.url, href),
+          text,
+          download,
+          target,
+          hreflang,
+          type,
+          rel
+        })
+      }
+    }
+
+    if (prevContext.tagName === 'img') {
+      const src = normalize(prevContext.attributes['src'])
+
+      if (src) {
+        const alt = normalize(prevContext.attributes['alt'])
+        const longdesc = normalize(prevContext.attributes['longdesc'])
+        const sizes = normalize(prevContext.attributes['sizes'])
+        const srcset = normalize(prevContext.attributes['srcset'])
+
+        this.result.images.push({
+          src,
+          alt,
+          longdesc,
+          sizes: typeof sizes === 'string' ? sizes.split(/\s*,\s*/) : undefined,
+          srcset: typeof srcset === 'string' ? srcset.split(/\s*,\s*/) : undefined
+        })
+      }
     }
 
     // Push the previous context text onto the current context.
@@ -710,7 +767,7 @@ export class Handler {
       if (prevContext.microdataTextProperty) {
         this._addMicrodataProperty(
           last(this._microdataNodes),
-          prevContext.id,
+          normalize(prevContext.attributes['id']),
           prevContext.microdataTextProperty,
           schemaValue
         )
