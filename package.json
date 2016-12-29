@@ -47,7 +47,7 @@
   "devDependencies": {
     "filenamify": "^1.2.1",
     "htmlparser2": "^3.9.2",
-    "jest": "^17.0.3",
+    "jest": "^18.1.0",
     "popsicle": "^9.0.0",
     "thenify": "^3.2.1",
     "tslint": "^4.0.2",
