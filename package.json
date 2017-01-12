@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
   "devDependencies": {
-    "filenamify": "^1.2.1",
+    "filenamify": "^2.0.0",
     "htmlparser2": "^3.9.2",
     "jest": "^18.1.0",
     "popsicle": "^9.0.0",
