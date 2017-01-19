@@ -51,7 +51,7 @@
     "popsicle": "^9.0.0",
     "thenify": "^3.2.1",
     "tslint": "^4.0.2",
-    "tslint-config-standard": "^2.0.0",
+    "tslint-config-standard": "^3.0.0",
     "typescript": "^2.1.4",
     "typings": "^2.0.0"
   },
