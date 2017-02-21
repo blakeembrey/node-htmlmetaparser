@@ -72,29 +72,29 @@ interface JsonLdValue {
 }
 
 export interface HtmlValueMap {
-  [tagName: string]: (baseUrl: string, attrs: any) => string | undefined
+  [tagName: string]: (attrs: any, baseUrl: string) => string | undefined
 }
 
 /**
  * Grab the correct attribute for RDFa support.
  */
 export const HTML_VALUE_MAP: HtmlValueMap = {
-  meta (baseUrl, attrs) {
+  meta (attrs) {
     return attrs.content
   },
-  audio (baseUrl, attrs) {
+  audio (attrs, baseUrl) {
     return attrs.src ? resolveUrl(baseUrl, attrs.src) : undefined
   },
-  a (baseUrl, attrs) {
+  a (attrs, baseUrl) {
     return attrs.href ? resolveUrl(baseUrl, attrs.href) : undefined
   },
-  object (baseUrl, attrs) {
+  object (attrs, baseUrl) {
     return attrs.data ? resolveUrl(baseUrl, attrs.data) : undefined
   },
-  time (baseUrl, attrs) {
+  time (attrs) {
     return attrs.datetime
   },
-  data (baseUrl, attrs) {
+  data (attrs) {
     return attrs.value
   }
 }
@@ -930,7 +930,7 @@ function getValueMap (url: string, tagName: string, attributes: any) {
   const value = normalize(attributes.content)
 
   if (!value && HTML_VALUE_MAP.hasOwnProperty(tagName)) {
-    return normalize(HTML_VALUE_MAP[tagName](url, attributes))
+    return normalize(HTML_VALUE_MAP[tagName](attributes, url))
   }
 
   return value

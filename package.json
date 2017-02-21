@@ -47,10 +47,10 @@
   "devDependencies": {
     "filenamify": "^2.0.0",
     "htmlparser2": "^3.9.2",
-    "jest": "^18.1.0",
+    "jest": "^19.0.0",
     "popsicle": "^9.0.0",
     "thenify": "^3.2.1",
-    "tslint": "^4.0.2",
+    "tslint": "^4.4.2",
     "tslint-config-standard": "^4.0.0",
     "typescript": "^2.1.4",
     "typings": "^2.0.0"
