@@ -50,7 +50,7 @@
     "jest": "^19.0.0",
     "popsicle": "^9.0.0",
     "thenify": "^3.2.1",
-    "tslint": "^4.4.2",
+    "tslint": "^5.0.0",
     "tslint-config-standard": "^4.0.0",
     "typescript": "^2.1.4",
     "typings": "^2.0.0"
