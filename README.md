@@ -4,7 +4,6 @@
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
-[![Greenkeeper badge](https://badges.greenkeeper.io/blakeembrey/node-htmlmetaparser.svg)](https://greenkeeper.io/)
 
 > A `htmlparser2` handler for parsing rich metadata from HTML. Includes HTML metadata, JSON-LD, RDFa, microdata, OEmbed, Twitter cards and AppLinks.
 
