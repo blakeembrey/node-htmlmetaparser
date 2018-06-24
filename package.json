@@ -6,17 +6,14 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist/",
-    "vendor/",
-    "typings.json",
-    "README.md",
-    "LICENSE"
+    "vendor/"
   ],
   "scripts": {
-    "lint": "tslint \"src/**/*.ts\"",
+    "lint": "tslint \"src/**/*.ts\" --project tsconfig.json",
     "build": "rm -rf dist && tsc",
-    "pretest": "npm run lint && npm run build",
-    "test": "jest --coverage",
-    "prepublish": "typings install && npm run build"
+    "specs": "jest --coverage",
+    "test": "npm run lint && npm run build && npm run specs",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -45,15 +42,17 @@
   },
   "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
   "devDependencies": {
+    "@types/jest": "^23.1.1",
+    "@types/node": "^10.3.5",
     "filenamify": "^2.0.0",
     "htmlparser2": "^3.9.2",
-    "jest": "^21.0.0",
-    "popsicle": "^9.0.0",
+    "jest": "^23.1.0",
+    "json-stable-stringify": "^1.0.1",
+    "popsicle": "^10.0.1",
     "thenify": "^3.2.1",
-    "tslint": "^5.0.0",
+    "tslint": "^5.10.0",
     "tslint-config-standard": "^7.0.0",
-    "typescript": "^2.1.4",
-    "typings": "^2.0.0"
+    "typescript": "^2.9.2"
   },
   "dependencies": {
     "setvalue": "^1.0.0"

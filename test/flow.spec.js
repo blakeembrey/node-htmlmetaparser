@@ -2,9 +2,7 @@ const htmlparser = require('htmlparser2')
 const thenify = require('thenify')
 const readFile = thenify(require('fs').readFile)
 const readdirSync = require('fs').readdirSync
-const createReadStream = require('fs').createReadStream
 const join = require('path').join
-const assert = require('assert')
 
 const metaparser = require('../')
 const FIXTURE_DIR = join(__dirname, '../test/fixtures')

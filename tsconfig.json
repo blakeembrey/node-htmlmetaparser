@@ -6,19 +6,9 @@
     "rootDir": "src",
     "module": "commonjs",
     "moduleResolution": "node",
+    "strict": true,
     "declaration": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
-    "removeComments": true,
     "sourceMap": true,
     "inlineSources": true
-  },
-  "include": [
-    "src/**/*",
-    "typings/**/*"
-  ]
+  }
 }
