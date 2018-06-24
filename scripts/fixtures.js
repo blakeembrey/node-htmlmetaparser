@@ -27,6 +27,8 @@ const FIXTURES = [
   'http://www.imdb.com/title/tt1375666/',
   'https://www.rottentomatoes.com/m/inception/',
   'https://trakt.tv/movies/kung-fury-2015',
+  // Recipes.
+  'https://www.foodnetwork.com/recipes/food-network-kitchen/swedish-pancakes-recipe-1972715',
   // File pages.
   'http://d.pr/a/q3z9',
   // Information pages.
