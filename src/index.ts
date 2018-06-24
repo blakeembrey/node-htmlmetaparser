@@ -362,7 +362,7 @@ export class Handler {
 
         for (const ref of refs) {
           // Set microdata id reference when it doesn't already exist.
-          if (this._microdataRefs[ref] != null) {
+          if (this._microdataRefs[ref] !== undefined) {
             assignJsonldProperties(newNode, this._microdataRefs[ref])
           }
 
@@ -391,7 +391,7 @@ export class Handler {
       const value = getValueMap(this.options.url, tagName, attributes)
       const props = split(itempropAttr)
 
-      if (value != null) {
+      if (value !== undefined) {
         this._addMicrodataProperty(
           last(this._microdataNodes),
           normalize(context.attributes['id']),
@@ -508,7 +508,7 @@ export class Handler {
       const value = getValueMap(this.options.url, tagName, attributes)
       const properties = this._normalizeRdfaProperty(propertyAttr)
 
-      if (value != null) {
+      if (value !== undefined) {
         this._addRdfaProperty(
           last(this._rdfaNodes),
           properties,
@@ -886,7 +886,7 @@ function setContext (node: any, key: string, value: string) {
  * Normalize a HTML value, trimming and removing whitespace.
  */
 function normalize (value?: string): string | undefined {
-  return value == null ? undefined : value.trim().replace(/\s+/g, ' ')
+  return value === undefined ? undefined : value.trim().replace(/\s+/g, ' ')
 }
 
 /**
@@ -940,7 +940,7 @@ function getValueMap (url: string, tagName: string, attributes: any) {
  * Merge values together.
  */
 function merge <T> (left: undefined | T | T[], right: T | T[]): T | T[] {
-  const result = (Array.isArray(left) ? left : (left == null ? [] : [left])).concat(right)
+  const result = (Array.isArray(left) ? left : (left === undefined ? [] : [left])).concat(right)
 
   return result.length > 1 ? result : result[0]
 }
@@ -1022,7 +1022,7 @@ function normalizeJsonLdValue (value: JsonLdValue): string | JsonLdValue {
  */
 export function copy <T extends { [key: string]: any }> (a: T, b: T) {
   for (const prop of Object.keys(b)) {
-    if (b[prop] != null) {
+    if (b[prop] !== undefined) {
       a[prop] = b[prop]
     }
   }

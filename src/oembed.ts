@@ -1,45 +1,3 @@
-export interface Provider {
-  provider_name: string
-  provider_url: string
-  endpoints: Array<{
-    url?: string
-    schemes?: string[]
-    discovery?: boolean
-    formats?: string[]
-  }>
-}
-
-/**
- * Find a matching provider.
- */
-export class OEmbedProviders {
-
-  matchers: OEmbedMatch[] = []
-
-  constructor (providers: Provider[]) {
-    for (const provider of providers) {
-      this.add(provider)
-    }
-  }
-
-  add (provider: Provider) {
-    this.matchers.push(new OEmbedMatch(provider))
-  }
-
-  match (url: string) {
-    for (const matcher of this.matchers) {
-      const res = matcher.match(url)
-
-      if (res) {
-        return res
-      }
-    }
-
-    return
-  }
-
-}
-
 export interface MatchResult {
   type: string
   href: string
@@ -94,12 +52,54 @@ export class OEmbedMatch {
   }
 
   formatResult (oembedUrl: string, url: string, formats?: string[]): MatchResult {
-    const type = formats == null ? 'json' : (formats.indexOf('json') > -1 ? 'json' : formats[0])
+    const type = formats === undefined ? 'json' : (formats.indexOf('json') > -1 ? 'json' : formats[0])
 
     return {
       href: `${oembedUrl}?type=${encodeURIComponent(type)}&url=${encodeURIComponent(url)}`,
       type: `application/${type}+oembed`
     }
+  }
+
+}
+
+export interface Provider {
+  provider_name: string
+  provider_url: string
+  endpoints: Array<{
+    url?: string
+    schemes?: string[]
+    discovery?: boolean
+    formats?: string[]
+  }>
+}
+
+/**
+ * Find a matching provider.
+ */
+export class OEmbedProviders {
+
+  matchers: OEmbedMatch[] = []
+
+  constructor (providers: Provider[]) {
+    for (const provider of providers) {
+      this.add(provider)
+    }
+  }
+
+  add (provider: Provider) {
+    this.matchers.push(new OEmbedMatch(provider))
+  }
+
+  match (url: string) {
+    for (const matcher of this.matchers) {
+      const res = matcher.match(url)
+
+      if (res) {
+        return res
+      }
+    }
+
+    return
   }
 
 }
