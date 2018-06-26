@@ -700,7 +700,7 @@ export class Handler {
         try {
           const jsonld = JSON.parse(prevContext.text)
 
-          this.result.jsonld = jsonld
+          this.result.jsonld = merge(this.result.jsonld, jsonld)
         } catch (e) { /* Ignore. */ }
       }
 

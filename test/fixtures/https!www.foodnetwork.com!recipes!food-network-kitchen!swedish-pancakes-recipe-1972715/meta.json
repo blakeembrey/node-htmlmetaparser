@@ -1,0 +1,30 @@
+{
+  "headers": {
+    "access-control-allow-method": "GET",
+    "access-control-allow-origin": "*",
+    "cache-control": "max-age=874",
+    "connection": [
+      "close",
+      "Transfer-Encoding"
+    ],
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sun, 24 Jun 2018 18:13:09 GMT",
+    "expires": "Sun, 24 Jun 2018 18:27:43 GMT",
+    "server": "Apache",
+    "server-timing": [
+      "origin; dur=64;, cdn-cache; desc=REVALIDATE;",
+      "edge; dur=30;"
+    ],
+    "transfer-encoding": "chunked",
+    "vary": [
+      "User-Agent",
+      "Accept-Encoding"
+    ],
+    "x-akamai-transformed": "9 - 0 pmb=mRUM,3"
+  },
+  "originalUrl": "https://www.foodnetwork.com/recipes/food-network-kitchen/swedish-pancakes-recipe-1972715",
+  "status": 200,
+  "statusText": "OK",
+  "url": "https://www.foodnetwork.com/recipes/food-network-kitchen/swedish-pancakes-recipe-1972715"
+}
