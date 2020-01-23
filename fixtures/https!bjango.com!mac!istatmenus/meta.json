@@ -1,0 +1,18 @@
+{
+  "url": "https://bjango.com/mac/istatmenus/",
+  "headers": {
+    "accept-ranges": "bytes",
+    "connection": "close",
+    "content-length": "21549",
+    "content-type": "text/html",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "etag": "\"542d-53832fb963a00;53f545a93ed40\"",
+    "last-modified": "Fri, 22 Jul 2016 05:48:24 GMT",
+    "server": "Apache",
+    "strict-transport-security": "max-age=15768000; preload",
+    "x-frame-options": "DENY"
+  },
+  "originalUrl": "https://bjango.com/mac/istatmenus/",
+  "status": 200,
+  "statusText": "OK"
+}

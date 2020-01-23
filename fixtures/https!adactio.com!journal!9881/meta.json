@@ -1,0 +1,24 @@
+{
+  "url": "https://adactio.com/journal/9881",
+  "headers": {
+    "cache-control": "public",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-length": "23079",
+    "content-security-policy": "default-src https: data: 'unsafe-inline' 'unsafe-eval'",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "pragma": "no-cache",
+    "server": "Apache",
+    "set-cookie": "PHPSESSID=ngo9efg6tq152393f6pm0h0pq5; path=/;HttpOnly;Secure",
+    "strict-transport-security": "max-age=63072000",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://adactio.com/journal/9881",
+  "status": 200,
+  "statusText": "OK"
+}

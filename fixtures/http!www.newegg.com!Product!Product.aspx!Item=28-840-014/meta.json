@@ -1,0 +1,23 @@
+{
+  "url": "http://www.newegg.com/Product/Product.aspx?Item=28-840-014",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "0",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-length": "41965",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "ga": "0",
+    "server": "NEWEGG",
+    "vary": "Accept-Encoding",
+    "x-newegg-flow": "PASS",
+    "x-newegg-index": "0",
+    "x-served-by": "40009",
+    "x-server-id": "119",
+    "x-ver": "08161601"
+  },
+  "originalUrl": "http://www.newegg.com/Product/Product.aspx?Item=28-840-014",
+  "status": 200,
+  "statusText": "OK"
+}

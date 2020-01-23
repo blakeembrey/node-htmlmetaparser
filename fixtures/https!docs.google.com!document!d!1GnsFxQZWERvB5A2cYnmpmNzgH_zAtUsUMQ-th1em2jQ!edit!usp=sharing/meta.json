@@ -1,0 +1,32 @@
+{
+  "url": "https://docs.google.com/document/d/1GnsFxQZWERvB5A2cYnmpmNzgH_zAtUsUMQ-th1em2jQ/edit?usp=sharing",
+  "headers": {
+    "alt-svc": "quic=\":443\"; ma=2592000; v=\"36,35,34,33,32\"",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+    "p3p": [
+      "CP=\"This is not a P3P policy! See https://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+      "CP=\"This is not a P3P policy! See https://support.google.com/accounts/answer/151657?hl=en for more info.\""
+    ],
+    "pragma": "no-cache",
+    "server": "GSE",
+    "set-cookie": [
+      "NID=89=LNyZr98glfWivoA8p8nrMupJwWGjYDKKYUfpy3ZHro73l-wC4HE6Thg6ojwjTyCNpargyB5Yt95W6bIYv8Ussu9A4AHm_C-XKVohLvgQEn_G-gUsL_wV4_m3p70cWN_8;Domain=.google.com;Path=/;Expires=Sun, 23-Apr-2017 02:10:46 GMT;HttpOnly",
+      "NID=89=IevydPV1qZIHp3Afxf5drTDRCTpOSGOoiSCNlZS8FWSFeBkwBS71yOsTElI_7pnXUH6fak3xg65FhdXRgTaFxCNy5AFTjTB4VMU2MCiD3KKi6TXxPVXMdLNjDgFFTvm8;Domain=.google.com;Path=/;Expires=Sun, 23-Apr-2017 02:10:46 GMT;HttpOnly",
+      "S=documents=I2immpgMv1xzxjhAKhw7mg; Domain=.docs.google.com; Expires=Sat, 22-Oct-2016 03:10:46 GMT; Path=/document/d/1GnsFxQZWERvB5A2cYnmpmNzgH_zAtUsUMQ-th1em2jQ; Secure; HttpOnly",
+      "GFE_RTT=639; Domain=.docs.google.com; Expires=Sat, 22-Oct-2016 02:15:46 GMT; Path=/; Priority=LOW"
+    ],
+    "strict-transport-security": "max-age=10886400; includeSubDomains",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff",
+    "x-robots-tag": "noindex, nofollow, nosnippet",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://docs.google.com/document/d/1GnsFxQZWERvB5A2cYnmpmNzgH_zAtUsUMQ-th1em2jQ/edit?usp=sharing",
+  "status": 200,
+  "statusText": "OK"
+}

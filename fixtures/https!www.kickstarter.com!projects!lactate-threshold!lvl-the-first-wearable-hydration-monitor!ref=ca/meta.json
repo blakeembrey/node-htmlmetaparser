@@ -1,0 +1,37 @@
+{
+  "url": "https://www.kickstarter.com/projects/lactate-threshold/lvl-the-first-wearable-hydration-monitor?ref=category_featured",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "0",
+    "cache-control": "max-age=0, private, must-revalidate",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:47 GMT",
+    "heartbleed": "NO; see http://heartbleedheader.com",
+    "server": "nginx",
+    "set-cookie": [
+      "vis=bcf02ce34cab66d6-a38df1aa12cb72ad-18b161a908ea507dv1; path=/; expires=Wed, 22 Oct 2036 02:10:46 -0000; secure",
+      "lang=en; path=/; secure",
+      "last_page=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Flactate-threshold%2Flvl-the-first-wearable-hydration-monitor%3Fref%3Dcategory_featured; path=/; expires=Sat, 22 Oct 2016 02:40:46 -0000; HttpOnly; secure",
+      "ref_361230638=direct%3F1477102246; path=/projects/lactate-threshold/lvl-the-first-wearable-hydration-monitor; secure",
+      "_ksr_session=ZnpnQVk0U1NDdy80NHltbzYrclBPbTZHTFpTS0NRMG1FUkUya3h0aHVUZXRqZzc2YmFxSjZKem1zcDFrZFBpY05ZeGZvUUZ2dnh3RURVbk9rNExqOFZlOGtEclVQbjIrN1RFLzlJZWtqT2w4dUduODBFUHhSVkRQUTZzKzFBQTY4aCtOLzl0WFphYjJWRlZvb1p2TGVTOHdVblJrZkRVdVI4QVdaZGFwaGY0PS0tWUZVN2F1ak1NN0NyZzI0eGZQOWl1dz09--07edac14781612911fd6f2f86edb844f5ba0f260; path=/; secure; HttpOnly",
+      "request_time=Sat%2C+22+Oct+2016+02%3A10%3A46+-0000; path=/; secure"
+    ],
+    "strict-transport-security": "max-age=31557600",
+    "transfer-encoding": "chunked",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-request-id": "2198e347-b257-4bd8-a9a7-2f398c67ee87",
+    "x-runtime": "0.574196",
+    "x-served-by": "cache-sea1927-SEA",
+    "x-timer": "S1477102246.385457,VS0,VE727",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.kickstarter.com/projects/lactate-threshold/lvl-the-first-wearable-hydration-monitor?ref=category_featured",
+  "status": 200,
+  "statusText": "OK"
+}

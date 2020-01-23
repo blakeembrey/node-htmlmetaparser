@@ -1,0 +1,34 @@
+{
+  "url": "https://www.airbnb.com/rooms/2250401?checkin=06%2F24%2F2016&checkout=06%2F30%2F2016&guests=1&s=eI3nl9s6",
+  "headers": {
+    "cache-control": "max-age=0, private, must-revalidate",
+    "connection": ["close", "Transfer-Encoding"],
+    "content-encoding": "gzip",
+    "content-security-policy": "default-src 'self' https:; connect-src 'self' https: ws://localhost.airbnb.com:8888 *.mapbox.com *.inspectlet.com wss://ws.inspectlet.com http:; font-src 'self' data: *.muscache.com fonts.gstatic.com use.typekit.net; frame-src * *.google.com; img-src 'self' https: *.mapbox.com *.inspectlet.com *.gstatic.com http: data:; media-src 'self' https: blob:; object-src 'self' https:; script-src 'sha256-2S1zmL0hHGfsnw+rP+m+rBKOma7sejqhykg8DdWFKfU=' 'self' https: 'unsafe-eval' 'unsafe-inline' *.mapbox.com *.inspectlet.com *.google.com *.gstatic.com http:; style-src 'self' https: 'unsafe-inline' *.mapbox.com http:; report-uri /tracking/csp?action=show&controller=rooms&req_uuid=bd80ea39-a6e3-4d8e-8770-caeea244f18a&version=c7a2d862f59ab003ed783e0ae09eca8230abb27f;",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:47 GMT",
+    "etag": "W/\"19112e7d12067646f75471f3eb2f7fd9\"",
+    "server": "nginx/1.7.12",
+    "set-cookie": [
+      "bev=1477102246_wMgTnfviQPqZZBtH; domain=.airbnb.com; path=/; expires=Mon, 22-Oct-2018 02:10:46 GMT; secure",
+      "_csrf_token=V4%24.airbnb.com%24uQhAE7GSsZ8%249fgnoqYbqeMA6_44GtKulGDwqzcpue6u35QDJ9D_QlE%3D; domain=.airbnb.com; path=/; secure",
+      "_user_attributes=%7B%22curr%22%3A%22USD%22%2C%22guest_exchange%22%3A1.0%2C%22device_profiling_session_id%22%3A%221477102247--f379f91608f77844c1ac9c0a%22%2C%22giftcard_profiling_session_id%22%3A%221477102247--fe9091e93d37a31ce7d88dea%22%7D; domain=.airbnb.com; path=/; secure",
+      "flags=268435456; domain=.airbnb.com; path=/; secure",
+      "p1_new=treatment; expires=Wed, 21-Dec-2016 02:10:47 GMT; domain=.airbnb.com",
+      "p1_new_eligible=57; expires=Wed, 21-Dec-2016 02:10:47 GMT; domain=.airbnb.com",
+      "p1_hero=treatment; expires=Wed, 21-Dec-2016 02:10:47 GMT; domain=.airbnb.com"
+    ],
+    "status": "200 OK",
+    "strict-transport-security": "max-age=10886400; includeSubdomains",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-server-name": "www.airbnb.com",
+    "x-ua-compatible": "IE=Edge,chrome=1",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.airbnb.com/rooms/2250401?checkin=06%2F24%2F2016&checkout=06%2F30%2F2016&guests=1&s=eI3nl9s6",
+  "status": 200,
+  "statusText": "OK"
+}

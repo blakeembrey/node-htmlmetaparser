@@ -1,0 +1,32 @@
+{
+  "url": "https://www.reddit.com/r/news/comments/4p1enj/uk_man_tried_to_kill_trump_court_papers/",
+  "headers": {
+    "accept-ranges": "bytes",
+    "cache-control": "max-age=0, must-revalidate",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-length": "82325",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:47 GMT",
+    "server": "snooserv",
+    "set-cookie": [
+      "loid=uWHyWCxdkiuC4Jiy1Z; Domain=reddit.com; Max-Age=63071999; Path=/; expires=Mon, 22-Oct-2018 02:10:47 GMT; secure",
+      "loidcreated=2016-10-22T02%3A10%3A46.256Z; Domain=reddit.com; Max-Age=63071999; Path=/; expires=Mon, 22-Oct-2018 02:10:47 GMT; secure"
+    ],
+    "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
+    "vary": "accept-encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-moose": "majestic",
+    "x-served-by": "cache-sea1925-SEA",
+    "x-timer": "S1477102246.254134,VS0,VE1039",
+    "x-ua-compatible": "IE=edge",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.reddit.com/r/news/comments/4p1enj/uk_man_tried_to_kill_trump_court_papers/",
+  "status": 200,
+  "statusText": "OK"
+}

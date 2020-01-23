@@ -1,0 +1,29 @@
+{
+  "url": "https://www.npmjs.com/package/filenamify",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "0",
+    "cache-control": "no-cache",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-security-policy": "connect-src 'self' https://typeahead.npmjs.com/ https://partners.npmjs.com/ https://checkout.stripe.com/api/outer/manhattan https://api.github.com https://ac.cnstrc.com https://*.log.optimizely.com;default-src 'self';font-src 'self' https://fonts.gstatic.com https://assets.npmjs.com;frame-ancestors 'none';frame-src https://checkout.stripe.com https://js.stripe.com https://www.youtube.com https://s3-us-west-2.amazonaws.com/files.accountdock.com/pre.prod.html https://accountdock.com/app https://accountdock.com/charges/ https://assets.npmjs.com;img-src * data:;script-src 'self' https://img.en25.com/i/elqCfg.min.js https://api.stripe.com https://checkout.stripe.com/checkout.js https://js.stripe.com https://platform.twitter.com/oct.js https://www.google-analytics.com https://fonts.googleapis.com https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js https://npmjs.us9.list-manage.com https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js https://cdn.optimizely.com/js/3318080746.js https://cnstrc.com/js/ac.js https://ac.cnstrc.com https://static.accountdock.com/app.min.js https://assets.npmjs.com safari-extension:;style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.npmjs.com;report-uri /-/csplog",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:47 GMT",
+    "set-cookie": "crumb=PKKpLhwz9cjMwarG3WrmMQiu6vXHTkU1-xd6ij5nDTg; Secure; HttpOnly; SameSite=Strict; Path=/",
+    "strict-transport-security": "max-age=2592000000; includeSubDomains",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-content-type-options": "nosniff",
+    "x-download-options": "noopen",
+    "x-frame-options": "DENY",
+    "x-served-by": "cache-sea1926-SEA",
+    "x-timer": "S1477102246.822818,VS0,VE185",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.npmjs.com/package/filenamify",
+  "status": 200,
+  "statusText": "OK"
+}

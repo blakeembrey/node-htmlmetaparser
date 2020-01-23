@@ -1,0 +1,33 @@
+{
+  "url": "https://twitter.com/ericclemmons/status/749223563790471169",
+  "headers": {
+    "cache-control": "no-cache, no-store, must-revalidate, pre-check=0, post-check=0",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-length": "36658",
+    "content-type": "text/html;charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Tue, 31 Mar 1981 05:00:00 GMT",
+    "last-modified": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "pragma": "no-cache",
+    "server": "tsa_a",
+    "set-cookie": [
+      "fm=0; Expires=Sat, 22 Oct 2016 02:10:36 UTC; Path=/; Domain=.twitter.com; Secure; HTTPOnly",
+      "_twitter_sess=BAh7CSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCDiZJ%252BpXAToMY3NyZl9p%250AZCIlOWRmYWYzN2FiYzI3MzI5NmIxNGMwNzAzMjE3NTBkNWI6B2lkIiU5ZDk0%250AMzQ3ZGM1ZTRjNGEzODEwMTUxNjkxOWQyNGQzZA%253D%253D--4a71392a83e20846cc5c7dc26a1a2738d383a3e3; Path=/; Domain=.twitter.com; Secure; HTTPOnly",
+      "guest_id=v1%3A147710224619906128; Domain=.twitter.com; Path=/; Expires=Mon, 22-Oct-2018 02:10:46 UTC"
+    ],
+    "status": "200 OK",
+    "strict-transport-security": "max-age=631138519",
+    "x-connection-hash": "1be0017634dea6c4481915927be8d6fe",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-response-time": "159",
+    "x-transaction": "00f6e4000037f0eb",
+    "x-twitter-response-tags": "BouncerCompliant",
+    "x-ua-compatible": "IE=edge,chrome=1",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://twitter.com/ericclemmons/status/749223563790471169",
+  "status": 200,
+  "statusText": "OK"
+}

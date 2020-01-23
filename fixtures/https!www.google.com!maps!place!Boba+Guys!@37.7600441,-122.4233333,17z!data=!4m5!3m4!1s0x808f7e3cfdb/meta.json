@@ -1,0 +1,20 @@
+{
+  "url": "https://www.google.com/maps/place/Boba+Guys/@37.7600441,-122.4233333,17z/data=!4m5!3m4!1s0x808f7e3cfdb89265:0x8ae0820c41111f70!8m2!3d37.7600017!4d-122.4211124?dg=dbrw&newdg=1",
+  "headers": {
+    "alt-svc": "quic=\":443\"; ma=2592000; v=\"36,35,34,33,32\"",
+    "cache-control": "no-cache, must-revalidate",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+    "pragma": "no-cache",
+    "server": "mafe",
+    "transfer-encoding": "chunked",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.google.com/maps/place/Boba+Guys/@37.7600441,-122.4233333,17z/data=!4m5!3m4!1s0x808f7e3cfdb89265:0x8ae0820c41111f70!8m2!3d37.7600017!4d-122.4211124",
+  "status": 200,
+  "statusText": "OK"
+}

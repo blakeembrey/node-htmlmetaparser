@@ -1,0 +1,34 @@
+{
+  "url": "https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.a0wjf4ltt",
+  "headers": {
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "cf-ray": "2f596a30ac7d0d55-LAX",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-security-policy": "default-src 'self'; connect-src https://localhost https://*.instapaper.com https://*.stripe.com https://getpocket.com https://medium.com:443 https://*.medium.com:443 https://*.medium.com https://medium.com https://*.medium.com https://*.algolia.net https://cdn-static-1.medium.com https://dnqgz544uhbo8.cloudfront.net https://*.lightstep.com 'self'; font-src data: https://*.amazonaws.com https://*.medium.com https://*.gstatic.com https://dnqgz544uhbo8.cloudfront.net https://use.typekit.net https://cdn-static-1.medium.com 'self'; frame-src chromenull: https: webviewprogressproxy: medium: 'self'; img-src blob: data: https: 'self'; media-src https://*.cdn.vine.co https://d1fcbxp97j4nb2.cloudfront.net https://d262ilb51hltx0.cloudfront.net https://medium2.global.ssl.fastly.net https://*.medium.com https://gomiro.medium.com https://miro.medium.com https://pbs.twimg.com 'self'; object-src 'self'; script-src 'unsafe-eval' 'unsafe-inline' about: https: 'self'; style-src 'unsafe-inline' data: https: 'self'; report-uri https://csp.medium.com",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Thu, 09 Sep 1999 09:09:09 GMT",
+    "link": "<https://medium.com/humans.txt>; rel=\"humans\"",
+    "pragma": "no-cache",
+    "server": "cloudflare-nginx",
+    "set-cookie": [
+      "__cfduid=db6154c15511174a60afa705b1db7839a1477102246; expires=Sun, 22-Oct-17 02:10:46 GMT; path=/; domain=.medium.com; HttpOnly",
+      "uid=lo_2d021132372b; path=/; expires=Sun, 22 Oct 2017 02:10:46 GMT; domain=.medium.com; secure; httponly",
+      "sid=1:j3SWX0Oo16HrQcdTwIktGVSLLxKpiY38zQi8UmS+DdruCbBGlbyOsYgj9X5GSq6x; path=/; expires=Sun, 22 Oct 2017 02:10:46 GMT; domain=.medium.com; secure; httponly"
+    ],
+    "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
+    "tk": "T",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "sameorigin",
+    "x-obvious-info": "25694-2e5b416,38ba083",
+    "x-obvious-tid": "1477102246548:2f6a538a1fe8",
+    "x-powered-by": "Medium",
+    "x-ua-compatible": "IE=edge, Chrome=1",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.a0wjf4ltt",
+  "status": 200,
+  "statusText": "OK"
+}

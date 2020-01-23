@@ -9,11 +9,15 @@
     "vendor/"
   ],
   "scripts": {
-    "lint": "tslint \"src/**/*.ts\" --project tsconfig.json",
-    "build": "rm -rf dist && tsc",
+    "prettier": "prettier --write",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --quiet --fix",
+    "format": "npm run prettier -- \"{.,src/**}/*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
+    "build": "rimraf dist/ && tsc",
     "specs": "jest --coverage",
-    "test": "npm run lint && npm run build && npm run specs",
-    "prepublish": "npm run build"
+    "test": "npm run build && npm run lint && npm run specs",
+    "prepublish": "npm run build",
+    "fixtures": "ts-node scripts/fixtures.ts",
+    "vendor": "ts-node scripts/oembed-providers.ts"
   },
   "repository": {
     "type": "git",
@@ -41,18 +45,53 @@
     "url": "https://github.com/blakeembrey/node-htmlmetaparser/issues"
   },
   "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
+  "jest": {
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "transform": {
+      "\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,yml,yaml}": "npm run prettier"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
-    "@types/jest": "^23.1.1",
-    "@types/node": "^10.3.5",
-    "filenamify": "^2.0.0",
-    "htmlparser2": "^3.9.2",
-    "jest": "^23.1.0",
-    "json-stable-stringify": "^1.0.1",
-    "popsicle": "^10.0.1",
-    "thenify": "^3.2.1",
-    "tslint": "^5.10.0",
-    "tslint-config-standard": "^7.1.0",
-    "typescript": "^2.9.2"
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.1.8",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "filenamify": "^4.1.0",
+    "htmlparser2": "^4.0.0",
+    "husky": "^4.2.0",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.1",
+    "popsicle": "^12.0.5",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "setvalue": "^1.0.0"

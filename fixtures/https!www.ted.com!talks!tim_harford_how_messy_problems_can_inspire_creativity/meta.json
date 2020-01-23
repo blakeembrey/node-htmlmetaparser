@@ -1,0 +1,25 @@
+{
+  "url": "https://www.ted.com/talks/tim_harford_how_messy_problems_can_inspire_creativity",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "0",
+    "cache-control": "max-age=0, public, s-maxage=30",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-length": "20524",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "server": "nginx",
+    "set-cookie": [
+      "_nu=1477102246.403; Expires=Thu, 21 Oct 2021 02:10:46 GMT; Path=/",
+      "_abby=11tmRILtaWQRlZ0; Expires=Thu, 21 Oct 2021 02:10:46 GMT; Path=/; Domain=.ted.com"
+    ],
+    "status": "200 OK",
+    "x-content-type-options": "nosniff",
+    "x-served-by": "e11; w01",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.ted.com/talks/tim_harford_how_messy_problems_can_inspire_creativity",
+  "status": 200,
+  "statusText": "OK"
+}

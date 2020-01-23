@@ -1,0 +1,18 @@
+{
+  "url": "https://bjango.com/articles/pngoptimisation/",
+  "headers": {
+    "accept-ranges": "bytes",
+    "connection": "close",
+    "content-length": "15523",
+    "content-type": "text/html",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "etag": "\"3ca3-53df04b942a40;53f545a93ed40\"",
+    "last-modified": "Mon, 03 Oct 2016 06:45:53 GMT",
+    "server": "Apache",
+    "strict-transport-security": "max-age=15768000; preload",
+    "x-frame-options": "DENY"
+  },
+  "originalUrl": "https://bjango.com/articles/pngoptimisation/",
+  "status": 200,
+  "statusText": "OK"
+}

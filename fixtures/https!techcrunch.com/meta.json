@@ -1,0 +1,21 @@
+{
+  "url": "https://techcrunch.com/",
+  "headers": {
+    "cache-control": "max-age=284, must-revalidate",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "last-modified": "Sat, 22 Oct 2016 02:10:30 GMT",
+    "link": "<http://wp.me/1FaB8>; rel=shortlink",
+    "server": "nginx",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": ["Accept-Encoding", "Cookie"],
+    "x-hacker": "If you're reading this, you should visit automattic.com/jobs and apply to join the fun, mention this header.",
+    "x-nananana": "Batcache"
+  },
+  "originalUrl": "https://techcrunch.com/",
+  "status": 200,
+  "statusText": "OK"
+}

@@ -1,0 +1,21 @@
+{
+  "headers": {
+    "cache-control": "private, must-revalidate, max-age=0",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-language": "en",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 19:39:38 GMT",
+    "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+    "last-modified": "Sun, 28 Aug 2016 06:03:20 GMT",
+    "server": "nginx",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": ["Accept-Encoding", "Accept-Encoding, Cookie"],
+    "x-content-type-options": "nosniff"
+  },
+  "originalUrl": "https://codex.wordpress.org/Embeds/",
+  "status": 200,
+  "statusText": "OK",
+  "url": "https://codex.wordpress.org/Embeds/"
+}

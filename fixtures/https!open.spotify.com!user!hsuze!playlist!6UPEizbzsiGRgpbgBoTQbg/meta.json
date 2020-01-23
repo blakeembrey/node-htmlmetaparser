@@ -1,0 +1,22 @@
+{
+  "headers": {
+    "cache-control": "no-cache",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Thu, 17 Nov 2016 04:39:43 GMT",
+    "server": "nginx",
+    "set-cookie": [
+      "sp_landing=http%3A%2F%2Fopen.spotify.com%2Fuser%2Fhsuze%2Fplaylist%2F6UPEizbzsiGRgpbgBoTQbg; expires=Fri, 18-Nov-2016 04:39:43 GMT; Max-Age=86400; path=/; domain=.spotify.com",
+      "sp_t=5b2074b2369274237f6b2c611682f8b2; expires=Mon, 16-Jan-2017 04:39:43 GMT; Max-Age=5184000; path=/; domain=.spotify.com; secure"
+    ],
+    "strict-transport-security": "max-age=31536000;",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff"
+  },
+  "originalUrl": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg",
+  "status": 200,
+  "statusText": "OK",
+  "url": "https://open.spotify.com/user/hsuze/playlist/6UPEizbzsiGRgpbgBoTQbg"
+}

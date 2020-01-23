@@ -1,0 +1,20 @@
+{
+  "url": "http://html5doctor.com/microdata/",
+  "headers": {
+    "cache-control": "max-age=3, must-revalidate",
+    "connection": "close",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "server": "Sucuri/Cloudproxy",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding,Cookie",
+    "wp-super-cache": "Served supercache file from PHP",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-sucuri-id": "12010",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "http://html5doctor.com/microdata/",
+  "status": 200,
+  "statusText": "OK"
+}

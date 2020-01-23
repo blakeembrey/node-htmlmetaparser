@@ -1,0 +1,18 @@
+{
+  "url": "https://soundcloud.com/tobiasvanschneider/ntmy-episode-1-pieter-levels",
+  "headers": {
+    "cache-control": "private, max-age=0",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "server": "am/2",
+    "set-cookie": "sc_anonymous_id=669504-539002-155635-427375; path=/; expires=Tue, 20 Oct 2026 02:10:46 GMT; domain=.soundcloud.com",
+    "transfer-encoding": "chunked",
+    "via": "sssr",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "originalUrl": "https://soundcloud.com/tobiasvanschneider/ntmy-episode-1-pieter-levels",
+  "status": 200,
+  "statusText": "OK"
+}

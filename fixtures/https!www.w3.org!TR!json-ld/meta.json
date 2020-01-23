@@ -1,0 +1,22 @@
+{
+  "url": "https://www.w3.org/TR/json-ld/",
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "cache-control": "max-age=31536000",
+    "connection": "close",
+    "content-length": "247720",
+    "content-security-policy": "upgrade-insecure-requests",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "etag": "\"3c7a8-4efd7fdafb300\"",
+    "expires": "Sun, 22 Oct 2017 02:10:46 GMT",
+    "last-modified": "Mon, 13 Jan 2014 11:01:00 GMT",
+    "link": "<https://timetravel.mementoweb.org/w3c/timegate/https://www.w3.org/TR/json-ld/>;rel=\"timegate\"",
+    "p3p": "policyref=\"http://www.w3.org/2014/08/p3p.xml\"",
+    "strict-transport-security": "max-age=15552000; includeSubdomains; preload"
+  },
+  "originalUrl": "https://www.w3.org/TR/json-ld/",
+  "status": 200,
+  "statusText": "OK"
+}

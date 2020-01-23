@@ -1,0 +1,23 @@
+{
+  "url": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/stocks-intro-tutorial/v/bonds-vs-stocks",
+  "headers": {
+    "cache-control": "no-cache",
+    "connection": "close",
+    "content-length": "191339",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:47 GMT",
+    "expires": "Sat, 22 Oct 2016 02:10:47 GMT",
+    "server": "Google Frontend",
+    "set-cookie": [
+      "fkey=1.0_iuJz4Ao7b_dM1Q==_1477102246; Path=/",
+      "gae_b_id=X2dhZV9iaW5nb19yYW5kb206a3hGVzM4dFZDSUFCOV9YX3gwTl9EWHdBT2tQTnhQLVNzNGVGeml0dQ==; expires=Sun, 22 Oct 2017 02:10:47 GMT; Max-Age=31536000; Path=/",
+      "ka_session=YtZ4gThPOSuFHzxd6h7ZqBO6tnGs9dGfH8fulA7j:1477102246:1477102246:1:; expires=Sun, 22 Oct 2017 02:10:47 GMT; Max-Age=31536000; Path=/"
+    ],
+    "x-cloud-trace-context": "6a4b644772a07c98ac261bbf916dc57a;o=7",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "originalUrl": "https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds/stocks-intro-tutorial/v/bonds-vs-stocks",
+  "status": 200,
+  "statusText": "OK"
+}

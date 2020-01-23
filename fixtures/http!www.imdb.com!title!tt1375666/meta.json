@@ -1,0 +1,23 @@
+{
+  "url": "http://www.imdb.com/title/tt1375666/",
+  "headers": {
+    "content-encoding": "gzip",
+    "content-language": "en-US",
+    "content-security-policy": "frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com",
+    "content-type": "text/html;charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "p3p": "policyref=\"http://i.imdb.com/images/p3p.xml\",CP=\"CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC \"",
+    "server": "Server",
+    "set-cookie": [
+      "uu=BCYvhumHNUTPoquUUE79ChGjW8q-7zHx21OtSZPV1pqozPV5thBIMqqQxYwqHTc_gEP0qg5tvdc8%0D%0A0YA95k55Q010PodmN8RLOz55lg2BshU5t3xJ6a_lbc_H06aXE8Dchnn1xi6N8SxOJjrJ6v4QpdH-%0D%0An0RrCVBFg1GST2A5xggpqspTOUCBlI0klPYUEzInwmwVqFjVQX4Xlcugax-RX6-Qd6TITqZGVVk4%0D%0Al4TNCwgpxaye8Bf7j9Kzqlj3uDDaaCmW0dJJXW10egA8atBRT8bJF6ao0xi8nS3FsW2Ad4Ss3Vs%0D%0A; Domain=.imdb.com; Expires=Thu, 09-Nov-2084 05:24:53 GMT; Path=/",
+      "session-id=169-8272831-5979563; Domain=.imdb.com; Expires=Thu, 09-Nov-2084 05:24:53 GMT; Path=/",
+      "session-id-time=1634782246; Domain=.imdb.com; Expires=Thu, 09-Nov-2084 05:24:53 GMT; Path=/"
+    ],
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding,User-Agent",
+    "x-frame-options": "SAMEORIGIN"
+  },
+  "originalUrl": "http://www.imdb.com/title/tt1375666/",
+  "status": 200,
+  "statusText": "OK"
+}

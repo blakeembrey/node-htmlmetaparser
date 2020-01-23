@@ -1,0 +1,37 @@
+{
+  "url": "https://www.etsy.com/listing/230389421/agents-of-shield-decal-sticker-for-car?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery_20",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "0",
+    "cache-control": "private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+    "last-modified": "Fri, 21 Oct 2016 23:37:32 +0000",
+    "server": "Apache",
+    "set-cookie": [
+      "uaid=uaid%3DATTDyOBMFWuUuGX7Qttyt9I683KN%26_now%3D1477102246%26_slt%3DrwmXITt7%26_kid%3D1%26_ver%3D1%26_mac%3DpIK5TKY_82xMt097F5hxxPSzMob15wIYOBPVXGyM-UU.; expires=Tue, 21-Nov-2017 18:29:06 GMT; Max-Age=34186700; path=/; domain=.etsy.com; secure; HttpOnly",
+      "fve=1477102246.0; expires=Tue, 21-Nov-2017 18:29:06 GMT; Max-Age=34186700; path=/; domain=.etsy.com; secure",
+      "user_prefs=-hvQcJX4IxSs6BnuxD_XompCgZpjZACCCK5Ty2B0tFJosIuSjlJ6Yk5OalElkJWapxsaDKQjIpR08kpzcnSMIBQWIpYBAA..; expires=Sun, 22-Oct-2017 02:10:46 GMT; Max-Age=31536000; path=/; domain=.etsy.com",
+      "last_browse_page=https%3A%2F%2Fwww.etsy.com%2Fshop%2FInfernoDecals; path=/; domain=.etsy.com",
+      "etsy_guest_pass=QTSGFyC3f00gHfLtzn6lsXYPGdFjZACCCK5Ty2B0tVKGklV0bC0DAA..; path=/; domain=.etsy.com"
+    ],
+    "strict-transport-security": "max-age=631138520; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "X-Custom-Shops,Accept-Encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-recruiting": "Is code your craft? https://www.etsy.com/careers",
+    "x-served-by": "cache-ord1744-ORD",
+    "x-timer": "S1477102246.322030,VS0,VE363",
+    "x-xss-protection": "1; mode=block; report=/beacon/csp.php"
+  },
+  "originalUrl": "https://www.etsy.com/listing/230389421/agents-of-shield-decal-sticker-for-car?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery_20",
+  "status": 200,
+  "statusText": "OK"
+}

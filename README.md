@@ -16,24 +16,25 @@ npm install htmlmetaparser --save
 ## Usage
 
 ```ts
-import * as metaparser from 'htmlmetaparser'
-import * as htmlparser from 'htmlparser2'
+import { Handler } from "htmlmetaparser";
+import { Parser } from "htmlparser2";
 
-const url = 'https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.a0wjf4ltt'
+const url =
+  "https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254";
 
-const handler = new metaparser.Handler(
-  function (err, result) {
-    console.log(result)
+const handler = new Handler(
+  (err, result) => {
+    console.log(result);
   },
   {
     url // The HTML pages URL is used to resolve relative URLs.
   }
-)
+);
 
 // Create a HTML parser with the handler.
-const parser = new htmlparser.Parser(handler, { decodeEntities: true })
-parser.write(html)
-parser.done()
+const parser = new Parser(handler, { decodeEntities: true });
+parser.write(html);
+parser.done();
 
 /*
 Object {
@@ -152,11 +153,8 @@ Object {
 ## Development
 
 ```sh
-# Build the fixtures directory with raw content.
-node scripts/fixtures.js
-
-# Load the latest `provider.json` document.
-node scripts/providers.js
+# Build fixtures and providers.
+npm run vendor && npm run fixtures
 
 # Run the test suite.
 npm test

@@ -1,0 +1,30 @@
+{
+  "url": "https://www.flickr.com/photos/timdrivas/27999498362/in/explore-2016-07-05/",
+  "headers": {
+    "age": "0",
+    "cache-control": "no-cache, max-age=0, must-revalidate, no-store",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-security-policy": "default-src 'unsafe-inline' https://*.flickr.com https://*.flickr.net https://y-flickr.yahoo.com http://y-flickr.yahoo.com https://*.yimg.com https://*.braintreegateway.com https://*.kaptcha.com https://*.paypal.com https://*.conviva.com http://*.btrll.com http://api.flickr.com https://*.pinterest.com https://*.google-analytics.com; img-src data: blob: https://*.flickr.com https://*.flickr.net http://*.flickr.net https://*.staticflickr.com https://*.yimg.com https://*.yahoo.com https://*.cedexis.com https://*.cedexis-test.com https://*.cedexis-radar.net https://sb.scorecardresearch.com https://image.maps.api.here.com https://csync.yahooapis.com https://*.paypal.com https://*.pinterest.com http://*.static-alpha.flickr.com https://geo-um.btrll.com https://*.google-analytics.com; script-src 'unsafe-eval' 'unsafe-inline' https://*.flickr.com http://*.flickr.net https://*.flickr.net https://*.yimg.com https://*.analytics.yahoo.com https://y-flickr.yahoo.com https://yep.video.yahoo.com https://video.media.yql.yahoo.com https://*.yahooapis.com https://fc.yahoo.com https://*.braintreegateway.com https://*.paypalobjects.com https://*.cedexis.com https://*.cedexis-radar.net https://*.cedexis-test.com https://*.google-analytics.com; connect-src https://*.flickr.com https://*.flickr.net http://*.flickr.net https://*.yimg.com https://geo.query.yahoo.com https://*.yahooapis.com https://*.conviva.com http://api.flickr.com https://*.pinterest.com http://*.yahoo.com https://*.cedexis.com https://*.cedexis-radar.net https://*.cedexis-test.com; report-uri https://csp.flickr.com/beacon/csp?src=adsecflickr;",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sat, 22 Oct 2016 02:10:46 GMT",
+    "pragma": "no-cache",
+    "server": "ATS",
+    "set-cookie": [
+      "xb=181186; Domain=.flickr.com; Path=/; Expires=Sun, 22 Oct 2017 02:10:46 GMT",
+      "BX=0c8n4e1c0lil6&b=3&s=hg; expires=Sat, 22-Oct-2017 02:10:46 GMT; path=/; domain=.flickr.com"
+    ],
+    "transfer-encoding": "chunked",
+    "via": "http/1.1 fts110.flickr.gq1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1 e9.ycpi.swb.yahoo.com (ApacheTrafficServer [cMsSf ])",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-instance": "flickr.v1.production.manhattan.gq1.yahoo.com",
+    "x-powered-by": "Express",
+    "x-request-id": "9ecb2b36",
+    "x-served-by": "pprd1-node458-lh1.manhattan.gq1.yahoo.com",
+    "x-xss-protection": "1; mode=block"
+  },
+  "originalUrl": "https://www.flickr.com/photos/timdrivas/27999498362/in/explore-2016-07-05/",
+  "status": 200,
+  "statusText": "OK"
+}
