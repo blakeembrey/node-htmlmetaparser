@@ -11,7 +11,7 @@
   "scripts": {
     "prettier": "prettier --write",
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --quiet --fix",
-    "format": "npm run prettier -- \"{.,src/**}/*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
+    "format": "npm run prettier -- \"{.,{src,vendor,scripts}/**}/*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
     "build": "rimraf dist/ && tsc",
     "specs": "jest --coverage",
     "test": "npm run build && npm run lint && npm run specs",

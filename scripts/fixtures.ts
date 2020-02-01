@@ -155,17 +155,18 @@ Promise.all(
     const dir = join(FIXTURE_DIR, filename);
 
     const load = async () => {
-      console.log('Fetching "' + fixtureUrl + '"...');
+      console.log(`Fetching "${fixtureUrl}"...`);
 
       const res = await fetch(fixtureUrl);
+
       await mkdir(dir);
 
-      console.log('Writing "' + filename + '"...');
+      console.log(`Writing "${filename}"...`);
 
       const meta = {
         originalUrl: fixtureUrl,
         url: res.url,
-        headers: res.headers,
+        headers: res.headers.asObject(),
         status: res.status,
         statusText: res.statusText
       };
@@ -180,7 +181,7 @@ Promise.all(
       const stats = await stat(dir);
 
       if (stats.isDirectory()) {
-        console.log('Skipping "' + fixtureUrl + '"...');
+        console.log(`Skipping "${fixtureUrl}"...`);
         return;
       }
 
