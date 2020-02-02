@@ -11,27 +11,27 @@ const FIXTURES = fs.readdirSync(FIXTURE_DIR);
 
 describe("htmlmetaparser", () => {
   FIXTURES.forEach(name => {
-    it(name, () => {
-      return Promise.all([
+    it(name, async () => {
+      const [html, meta] = await Promise.all([
         readFile(join(FIXTURE_DIR, name, "body.html"), "utf8"),
         readFile(join(FIXTURE_DIR, name, "meta.json"), "utf8").then(x =>
           JSON.parse(x)
         )
-      ]).then(function(inputs) {
-        const handler = new Handler(
-          (err, result) => {
-            expect(err).toBeNull();
-            expect(result).toMatchSnapshot();
-          },
-          {
-            url: inputs[1].url
-          }
-        );
+      ]);
 
-        const parser = new Parser(handler, { decodeEntities: true });
-        parser.write(inputs[0]);
-        parser.done();
-      });
+      const handler = new Handler(
+        (err, result) => {
+          expect(err).toBeNull();
+          expect(result).toMatchSnapshot();
+        },
+        {
+          url: meta.url
+        }
+      );
+
+      const parser = new Parser(handler, { decodeEntities: true });
+      parser.write(html);
+      parser.done();
     });
   });
 });
