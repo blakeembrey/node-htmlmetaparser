@@ -268,9 +268,9 @@ export interface Result {
   icons: Array<Icon>;
   links: Array<Link>;
   images: Array<Image>;
-  jsonld?: ResultJsonLd | ResultJsonLd[];
-  rdfa?: ResultJsonLd;
-  microdata?: ResultJsonLd;
+  jsonld?: ResultJsonLd[];
+  rdfa?: ResultJsonLd[];
+  microdata?: ResultJsonLd[];
   applinks?: ResultApplinks;
   twitter?: ResultTwitter;
   dublincore?: ResultDublinCore;
@@ -294,12 +294,10 @@ export class Handler {
   ];
   protected langs: string[] = [];
 
-  private _rdfa: any = {};
   private _rdfaNodes: any[] = [{}];
   private _rdfaVocabs: string[] = [];
   private _rdfaRels: Array<{ links: string[]; used: boolean }> = [];
 
-  private _microdata: any = {};
   private _microdataRefs: any = {};
   private _microdataScopes: string[][] = [[]];
   private _microdataNodes: any[] = [{}];
@@ -392,8 +390,7 @@ export class Handler {
           newNode
         );
       } else {
-        this.result.microdata = this._microdata;
-        pushToGraph(this._microdata, newNode);
+        this.result.microdata = merge(this.result.microdata, newNode);
         this._microdataScopes.push([]);
         context.flags = context.flags | HandlerFlags.microdataScope;
       }
@@ -477,7 +474,7 @@ export class Handler {
           continue;
         }
 
-        setContext(this._rdfa, prefix, value);
+        setContext(last(this._rdfaNodes), prefix, value);
       }
     }
 
@@ -848,9 +845,8 @@ export class Handler {
       addJsonldProperty(this._microdataRefs[id], itemprop, value);
     }
 
-    if (!this._microdata.hasOwnProperty("@graph")) {
-      this.result.microdata = this._microdata;
-      pushToGraph(this._microdata, node);
+    if (!this.result.microdata) {
+      this.result.microdata = [node];
     }
   }
 
@@ -876,9 +872,8 @@ export class Handler {
   private _addRdfaProperty(node: any, property: string | string[], value: any) {
     addJsonldProperty(node, property, value);
 
-    if (!this._rdfa.hasOwnProperty("@graph")) {
-      this.result.rdfa = this._rdfa;
-      pushToGraph(this._rdfa, node);
+    if (!this.result.rdfa) {
+      this.result.rdfa = [node];
     }
   }
 
@@ -892,12 +887,14 @@ export class Handler {
       const prefix = getPrefix(property);
 
       if (prefix) {
+        const node = last(this._rdfaNodes);
+
         if (
-          !this._rdfa.hasOwnProperty("@context") ||
-          !this._rdfa["@context"].hasOwnProperty(prefix)
+          !node.hasOwnProperty("@context") ||
+          !node["@context"].hasOwnProperty(prefix)
         ) {
           if (KNOWN_VOCABULARIES.hasOwnProperty(prefix)) {
-            setContext(this._rdfa, prefix, KNOWN_VOCABULARIES[prefix]);
+            setContext(node, prefix, KNOWN_VOCABULARIES[prefix]);
           }
         }
       } else {
@@ -916,30 +913,17 @@ export class Handler {
    * Create an RDFa resource.
    */
   private _createRdfaResource(id?: string) {
-    if (id && this._rdfa.hasOwnProperty("@graph")) {
-      for (const item of this._rdfa["@graph"]) {
-        if (item["@id"] === id) {
-          return item;
-        }
+    for (const item of this._rdfaNodes) {
+      if (item["@id"] === id) {
+        return item;
       }
     }
 
     const node: any = {};
-    if (id) {
-      node["@id"] = id;
-    }
-    this.result.rdfa = this._rdfa;
-    pushToGraph(this._rdfa, node);
+    if (id) node["@id"] = id;
+    this.result.rdfa = merge(this.result.rdfa, node);
     return node;
   }
-}
-
-/**
- * Push a value into a JSON-LD graph.
- */
-function pushToGraph(node: any, value: any) {
-  node["@graph"] = node["@graph"] || [];
-  node["@graph"].push(value);
 }
 
 /**
@@ -1007,15 +991,10 @@ function getValueMap(url: string, tagName: string, attributes: any) {
 /**
  * Merge values together.
  */
-function merge<T>(left: undefined | T | T[], right: T | T[]): T | T[] {
-  const result = (Array.isArray(left)
-    ? left
-    : left === undefined
-    ? []
-    : [left]
-  ).concat(right);
-
-  return result.length > 1 ? result : result[0];
+function merge<T>(left: undefined | T | T[], right: T | T[]): T[] {
+  return (Array.isArray(left) ? left : left === undefined ? [] : [left]).concat(
+    right
+  );
 }
 
 /**
