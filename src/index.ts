@@ -438,7 +438,7 @@ export class Handler {
       const vocabs = last(this._microdataScopes);
       const id = normalize(context.attributes["id"]);
 
-      if (type && vocab !== last(vocabs)) {
+      if (type && vocabs && vocab !== last(vocabs)) {
         setContext(last(this._microdataNodes), "@vocab", vocab);
 
         vocabs.push(vocab);
@@ -492,7 +492,7 @@ export class Handler {
     if (this._rdfaRels.length) {
       const rel = last(this._rdfaRels);
 
-      if (!rel.used) {
+      if (rel && !rel.used) {
         const validRelId = resourceAttr || hrefAttr || srcAttr;
 
         if (validRelId) {
@@ -691,12 +691,15 @@ export class Handler {
   }
 
   ontext(value: string) {
-    last(this.contexts).text += value;
+    const currentContext = last(this.contexts);
+    if (currentContext) currentContext.text += value;
   }
 
   onclosetag() {
-    const prevContext = this.contexts.pop() as HandlerContext;
+    const prevContext = this.contexts.pop();
     const currentContext = last(this.contexts);
+    if (!prevContext || !currentContext) return;
+
     const text = normalize(prevContext.text);
 
     if (prevContext.flags) {
@@ -707,7 +710,8 @@ export class Handler {
 
       // This context used a new vocabulary.
       if (prevContext.flags & HandlerFlags.microdataVocab) {
-        last(this._microdataScopes).pop();
+        const vocabs = last(this._microdataScopes);
+        if (vocabs) vocabs.pop();
       }
 
       // This context created a new scope altogether.
@@ -971,7 +975,7 @@ function assignJsonldProperties(obj: any, values: any) {
 /**
  * Get the last element in a stack.
  */
-function last<T>(arr: T[]): T {
+function last<T>(arr: T[]): T | undefined {
   return arr[arr.length - 1];
 }
 
