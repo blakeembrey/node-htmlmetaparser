@@ -828,7 +828,10 @@ export class Handler {
         );
       }
 
-      if (prevContext.tagName === "title") {
+      if (
+        prevContext.tagName === "title" &&
+        (currentContext.tagName === "head" || currentContext.tagName === "html")
+      ) {
         set(this.result, ["html", "title"], text);
       }
     }
