@@ -804,17 +804,15 @@ export class Handler {
     currentContext.text += prevContext.text;
 
     if (text) {
-      const schemaValue = normalizeJsonLdValue({
-        "@value": text,
-        "@language": last(this.langs)
-      });
-
       // Set RDFa to text value.
       if (prevContext.rdfaTextProperty) {
         this._addRdfaProperty(
           last(this._rdfaNodes),
           prevContext.rdfaTextProperty,
-          schemaValue
+          normalizeJsonLdValue({
+            "@value": text,
+            "@language": last(this.langs)
+          })
         );
       }
 
@@ -824,7 +822,10 @@ export class Handler {
           last(this._microdataNodes),
           normalize(prevContext.attributes["id"]),
           prevContext.microdataTextProperty,
-          schemaValue
+          normalizeJsonLdValue({
+            "@value": text,
+            "@language": last(this.langs)
+          })
         );
       }
 
