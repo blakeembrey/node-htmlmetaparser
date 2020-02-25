@@ -678,7 +678,11 @@ export class Handler {
               type: typeAttr || "application/rdf+xml",
               href: resolveUrl(this.options.url, hrefAttr)
             });
-          } else if (rel === "icon") {
+          } else if (
+            rel === "icon" ||
+            rel === "apple-touch-icon" ||
+            rel === "apple-touch-icon-precomposed"
+          ) {
             appendAndDedupe(this.result.icons, ["href"], {
               type: typeAttr,
               sizes: normalize(attributes["sizes"]),
