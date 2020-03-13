@@ -15,6 +15,8 @@ npm install htmlmetaparser --save
 
 ## Usage
 
+[Try it using Runkit!](https://runkit.com/blakeembrey/htmlmetaparser)
+
 ```ts
 import { Handler } from "htmlmetaparser";
 import { Parser } from "htmlparser2";
