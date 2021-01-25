@@ -29,7 +29,7 @@ const handler = new Handler(
     console.log(result);
   },
   {
-    url // The HTML pages URL is used to resolve relative URLs.
+    url, // The HTML pages URL is used to resolve relative URLs.
   }
 );
 

@@ -1,6 +1,7 @@
 import { set } from "setvalue";
-import { resolve as resolveUrl } from "url";
 import { OEmbedProviders } from "./oembed";
+
+declare const URL: typeof import("url").URL;
 
 const providers = new OEmbedProviders(require("../vendor/providers.json"));
 
@@ -65,7 +66,7 @@ export const KNOWN_VOCABULARIES: { [prefix: string]: string } = {
   book: "http://ogp.me/ns/book#",
   profile: "http://ogp.me/ns/profile#",
   website: "http://ogp.me/ns/website#",
-  fb: "http://ogp.me/ns/fb#"
+  fb: "http://ogp.me/ns/fb#",
 };
 
 interface JsonLdValue {
@@ -74,8 +75,18 @@ interface JsonLdValue {
   "@language"?: string;
 }
 
+/**
+ * Wrapper around `URL` for resolving correctly.
+ */
+function resolveUrl(baseUrl: string, newUrl: string) {
+  return new URL(newUrl, baseUrl).toString();
+}
+
 export interface HtmlValueMap {
-  [tagName: string]: (attrs: any, baseUrl: string) => string | undefined;
+  [tagName: string]: (
+    attrs: { [key: string]: string },
+    baseUrl: string
+  ) => string | undefined;
 }
 
 /**
@@ -99,7 +110,7 @@ export const HTML_VALUE_MAP: HtmlValueMap = {
   },
   data(attrs) {
     return attrs.value;
-  }
+  },
 };
 
 HTML_VALUE_MAP["embed"] = HTML_VALUE_MAP["audio"];
@@ -128,7 +139,7 @@ export const HandlerFlags = {
   rdfaVocab: 1 << 3,
   microdataNode: 1 << 4,
   microdataVocab: 1 << 5,
-  microdataScope: 1 << 6
+  microdataScope: 1 << 6,
 };
 
 export interface ResultTwitter {
@@ -282,25 +293,30 @@ export interface Options {
   url: string;
 }
 
+export interface RdfaNode {
+  "@context"?: { [key: string]: string };
+  [key: string]: any;
+}
+
 export class Handler {
   protected result: Result = {
     alternate: [],
     icons: [],
     links: [],
-    images: []
+    images: [],
   };
   protected contexts: HandlerContext[] = [
-    { tagName: "", text: "", flags: 0, attributes: {} }
+    { tagName: "", text: "", flags: 0, attributes: {} },
   ];
   protected langs: string[] = [];
 
-  private _rdfaNodes: any[] = [{}];
+  private _rdfaNodes: RdfaNode[] = [{}];
   private _rdfaVocabs: string[] = [];
   private _rdfaRels: Array<{ links: string[]; used: boolean }> = [];
 
-  private _microdataRefs: any = {};
+  private _microdataRefs: { [key: string]: RdfaNode } = {};
   private _microdataScopes: string[][] = [[]];
-  private _microdataNodes: any[] = [{}];
+  private _microdataNodes: RdfaNode[] = [{}];
 
   constructor(
     protected callback: (err: Error | null, result: Result) => void,
@@ -313,7 +329,7 @@ export class Handler {
     // Add the known OEmbed provider when discovered externally.
     if (
       oembedProvider &&
-      !this.result.alternate.some(x => x.type === oembedProvider.type)
+      !this.result.alternate.some((x) => x.type === oembedProvider.type)
     ) {
       this.result.alternate.push(oembedProvider);
     }
@@ -364,7 +380,7 @@ export class Handler {
 
     // Microdata item.
     if (attributes.hasOwnProperty("itemscope")) {
-      const newNode: any = {};
+      const newNode: object = {};
 
       // Copy item reference data.
       if (itemrefAttr) {
@@ -412,7 +428,7 @@ export class Handler {
           props,
           normalizeJsonLdValue({
             "@value": value,
-            "@language": last(this.langs)
+            "@language": last(this.langs),
           })
         );
       } else {
@@ -424,12 +440,8 @@ export class Handler {
     if (itemidAttr) {
       const id = normalize(context.attributes["id"]);
 
-      this._setMicrodataProperty(
-        last(this._microdataNodes),
-        id,
-        "@id",
-        itemidAttr
-      );
+      const node = last(this._microdataNodes)!;
+      this._setMicrodataProperty(node, id, "@id", itemidAttr);
     }
 
     // Microdata `itemtype=""`.
@@ -439,7 +451,7 @@ export class Handler {
       const id = normalize(context.attributes["id"]);
 
       if (type && vocabs && vocab !== last(vocabs)) {
-        setContext(last(this._microdataNodes), "@vocab", vocab);
+        setContext(last(this._microdataNodes)!, "@vocab", vocab);
 
         vocabs.push(vocab);
         context.flags = context.flags | HandlerFlags.microdataVocab;
@@ -455,7 +467,7 @@ export class Handler {
 
     // RDFa `vocab=""`.
     if (vocabAttr) {
-      setContext(last(this._rdfaNodes), "@vocab", vocabAttr);
+      setContext(last(this._rdfaNodes)!, "@vocab", vocabAttr);
       this._rdfaVocabs.push(vocabAttr);
       context.flags = context.flags | HandlerFlags.rdfaVocab;
     }
@@ -474,7 +486,7 @@ export class Handler {
           continue;
         }
 
-        setContext(last(this._rdfaNodes), prefix, value);
+        setContext(last(this._rdfaNodes)!, prefix, value);
       }
     }
 
@@ -542,7 +554,7 @@ export class Handler {
           normalizeJsonLdValue({
             "@value": value,
             "@language": last(this.langs),
-            "@type": normalize(attributes["datatype"])
+            "@type": normalize(attributes["datatype"]),
           })
         );
       } else {
@@ -550,7 +562,7 @@ export class Handler {
           (typeOfAttr || resourceAttr) &&
           !(context.flags & HandlerFlags.rdfaLink)
         ) {
-          const newNode: any = {};
+          const newNode: { "@id"?: string } = {};
 
           if (resourceAttr) {
             newNode["@id"] = resourceAttr;
@@ -669,14 +681,14 @@ export class Handler {
                   media: mediaAttr,
                   hreflang: hreflangAttr,
                   title: normalize(attributes["title"]),
-                  href: resolveUrl(this.options.url, hrefAttr)
+                  href: resolveUrl(this.options.url, hrefAttr),
                 }
               );
             }
           } else if (rel === "meta") {
             appendAndDedupe(this.result.alternate, ["type"], {
               type: typeAttr || "application/rdf+xml",
-              href: resolveUrl(this.options.url, hrefAttr)
+              href: resolveUrl(this.options.url, hrefAttr),
             });
           } else if (
             rel === "icon" ||
@@ -686,7 +698,7 @@ export class Handler {
             appendAndDedupe(this.result.icons, ["href"], {
               type: typeAttr,
               sizes: normalize(attributes["sizes"]),
-              href: resolveUrl(this.options.url, hrefAttr)
+              href: resolveUrl(this.options.url, hrefAttr),
             });
           }
         }
@@ -750,9 +762,11 @@ export class Handler {
 
       if (type === "application/ld+json") {
         try {
-          const jsonld = JSON.parse(prevContext.text);
+          const jsonld = JSON.parse(prevContext.text) as unknown;
 
-          this.result.jsonld = merge(this.result.jsonld, jsonld);
+          if (jsonld && typeof jsonld === "object") {
+            this.result.jsonld = merge(this.result.jsonld, jsonld);
+          }
         } catch (e) {
           /* Ignore. */
         }
@@ -779,7 +793,7 @@ export class Handler {
           target,
           hreflang,
           type,
-          rel
+          rel,
         });
       }
     }
@@ -799,7 +813,7 @@ export class Handler {
           longdesc,
           sizes: typeof sizes === "string" ? sizes.split(/\s*,\s*/) : undefined,
           srcset:
-            typeof srcset === "string" ? srcset.split(/\s*,\s*/) : undefined
+            typeof srcset === "string" ? srcset.split(/\s*,\s*/) : undefined,
         });
       }
     }
@@ -815,7 +829,7 @@ export class Handler {
           prevContext.rdfaTextProperty,
           normalizeJsonLdValue({
             "@value": text,
-            "@language": last(this.langs)
+            "@language": last(this.langs),
           })
         );
       }
@@ -828,7 +842,7 @@ export class Handler {
           prevContext.microdataTextProperty,
           normalizeJsonLdValue({
             "@value": text,
-            "@language": last(this.langs)
+            "@language": last(this.langs),
           })
         );
       }
@@ -866,10 +880,10 @@ export class Handler {
    * Set a microdata property.
    */
   private _setMicrodataProperty(
-    node: any,
+    node: { [key: string]: any },
     id: string | undefined,
     key: string,
-    value: any
+    value: unknown
   ) {
     node[key] = value;
 
@@ -899,12 +913,9 @@ export class Handler {
       const prefix = getPrefix(property);
 
       if (prefix) {
-        const node = last(this._rdfaNodes);
+        const node = last(this._rdfaNodes)!;
 
-        if (
-          !node.hasOwnProperty("@context") ||
-          !node["@context"].hasOwnProperty(prefix)
-        ) {
+        if (!node["@context"]?.hasOwnProperty(prefix)) {
           if (KNOWN_VOCABULARIES.hasOwnProperty(prefix)) {
             setContext(node, prefix, KNOWN_VOCABULARIES[prefix]);
           }
@@ -931,7 +942,7 @@ export class Handler {
       }
     }
 
-    const node: any = {};
+    const node: { [key: string]: any } = {};
     if (id) node["@id"] = id;
     this.result.rdfa = merge(this.result.rdfa, node);
     return node;
@@ -941,7 +952,7 @@ export class Handler {
 /**
  * Set a value to the node context.
  */
-function setContext(node: any, key: string, value: string) {
+function setContext(node: RdfaNode, key: string, value: string) {
   node["@context"] = node["@context"] || {};
   node["@context"][key] = value;
 }
@@ -956,7 +967,7 @@ function normalize(value?: string): string | undefined {
 /**
  * Set an object property.
  */
-function addJsonldProperty(obj: any, key: string | string[], value: any) {
+function addJsonldProperty(obj: RdfaNode, key: string | string[], value: any) {
   // Skip empty keys.
   if (!key) {
     return;
@@ -974,7 +985,7 @@ function addJsonldProperty(obj: any, key: string | string[], value: any) {
 /**
  * Merge properties together using regular "set" algorithm.
  */
-function assignJsonldProperties(obj: any, values: any) {
+function assignJsonldProperties(obj: RdfaNode, values: RdfaNode) {
   for (const key of Object.keys(values)) {
     addJsonldProperty(obj, key, values[key]);
   }
@@ -990,7 +1001,11 @@ function last<T>(arr: T[]): T | undefined {
 /**
  * Grab the semantic value from HTML.
  */
-function getValueMap(url: string, tagName: string, attributes: any) {
+function getValueMap(
+  url: string,
+  tagName: string,
+  attributes: { [key: string]: string }
+) {
   const value = normalize(attributes.content);
 
   if (!value && HTML_VALUE_MAP.hasOwnProperty(tagName)) {
@@ -1068,7 +1083,7 @@ function splitItemtype(value: string) {
 function normalizeJsonLdValue(value: JsonLdValue): string | JsonLdValue {
   if (value["@type"] || value["@language"]) {
     const result: JsonLdValue = {
-      "@value": value["@value"]
+      "@value": value["@value"],
     };
 
     if (value["@type"]) {
@@ -1103,7 +1118,7 @@ function appendAndDedupe<T extends { href: string }>(
   value: T
 ): void {
   for (const entry of list) {
-    const matches = props.every(x => entry[x] === value[x]);
+    const matches = props.every((x) => entry[x] === value[x]);
 
     if (matches) {
       copy(entry, value);

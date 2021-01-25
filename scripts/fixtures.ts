@@ -145,12 +145,12 @@ const FIXTURES = [
   "https://www.npmjs.com/package/filenamify",
   "https://atom.io/themes/aesthetic-ui",
   // Schema definitions.
-  "https://schema.org/docs/schema_org_rdfa.html"
+  "https://schema.org/docs/schema_org_rdfa.html",
 ];
 
 // Read each fixture, populating the raw content.
 Promise.all(
-  FIXTURES.map(async fixtureUrl => {
+  FIXTURES.map(async (fixtureUrl) => {
     const filename = filenamify(fixtureUrl);
     const dir = join(FIXTURE_DIR, filename);
 
@@ -168,12 +168,12 @@ Promise.all(
         url: res.url,
         headers: res.headers.asObject(),
         status: res.status,
-        statusText: res.statusText
+        statusText: res.statusText,
       };
 
       return Promise.all([
         writeFile(join(dir, "meta.json"), JSON.stringify(meta, null, 2)),
-        writeFile(join(dir, "body.html"), await res.text())
+        writeFile(join(dir, "body.html"), await res.text()),
       ]);
     };
 
@@ -190,7 +190,7 @@ Promise.all(
       return load();
     }
   })
-).catch(err => {
+).catch((err) => {
   console.error(err);
   process.exit(1);
 });

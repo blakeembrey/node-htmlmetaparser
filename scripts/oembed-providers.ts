@@ -6,14 +6,14 @@ import * as fs from "fs";
 const writeFile = promisify(fs.writeFile);
 
 fetch("http://oembed.com/providers.json")
-  .then(x => x.json())
-  .then(data => {
+  .then((x) => x.json())
+  .then((data) => {
     return writeFile(
       join(__dirname, "../vendor/providers.json"),
       JSON.stringify(data, null, 2)
     );
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
     process.exit(1);
   });

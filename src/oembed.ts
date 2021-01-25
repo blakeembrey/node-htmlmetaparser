@@ -14,10 +14,10 @@ export class OEmbedMatch {
       if (typeof endpoint.url === "string") {
         this.routes.push({
           matches: Array.isArray(endpoint.schemes)
-            ? endpoint.schemes.map(x => this.schemeToRegExp(x))
+            ? endpoint.schemes.map((x) => this.schemeToRegExp(x))
             : [this.urlToRegExp(provider.provider_url)],
           url: endpoint.url.replace(/\?.*$/, ""),
-          formats: endpoint.formats
+          formats: endpoint.formats,
         });
       }
     }
@@ -66,7 +66,7 @@ export class OEmbedMatch {
       href: `${oembedUrl}?type=${encodeURIComponent(
         type
       )}&url=${encodeURIComponent(url)}`,
-      type: `application/${type}+oembed`
+      type: `application/${type}+oembed`,
     };
   }
 }

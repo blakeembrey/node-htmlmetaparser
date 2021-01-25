@@ -10,13 +10,11 @@ const FIXTURE_DIR = join(__dirname, "../fixtures");
 const FIXTURES = fs.readdirSync(FIXTURE_DIR);
 
 describe("htmlmetaparser", () => {
-  FIXTURES.forEach(name => {
+  FIXTURES.forEach((name) => {
     it(name, async () => {
-      const [html, meta] = await Promise.all([
+      const [html, meta] = await Promise.all<string, { url: string }>([
         readFile(join(FIXTURE_DIR, name, "body.html"), "utf8"),
-        readFile(join(FIXTURE_DIR, name, "meta.json"), "utf8").then(x =>
-          JSON.parse(x)
-        )
+        readFile(join(FIXTURE_DIR, name, "meta.json"), "utf8").then(JSON.parse),
       ]);
 
       const handler = new Handler(
@@ -25,13 +23,13 @@ describe("htmlmetaparser", () => {
           expect(result).toMatchSnapshot();
         },
         {
-          url: meta.url
+          url: meta.url,
         }
       );
 
       const parser = new Parser(handler, { decodeEntities: true });
       parser.write(html);
-      parser.done();
+      parser.end();
     });
   });
 });
