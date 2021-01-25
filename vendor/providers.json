@@ -21,6 +21,16 @@
     ]
   },
   {
+    "provider_name": "ActBlue",
+    "provider_url": "https://secure.actblue.com",
+    "endpoints": [
+      {
+        "schemes": ["https://secure.actblue.com/donate/*"],
+        "url": "https://secure.actblue.com/cf/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "Adways",
     "provider_url": "http://www.adways.com",
     "endpoints": [
@@ -49,8 +59,11 @@
     "provider_url": "https://www.altrulabs.com",
     "endpoints": [
       {
-        "schemes": ["https://app.altrulabs.com/*/*?answer_id=*"],
-        "url": "https://api.altrulabs.com/social/oembed",
+        "schemes": [
+          "https://app.altrulabs.com/*/*?answer_id=*",
+          "https://app.altrulabs.com/player/*"
+        ],
+        "url": "https://api.altrulabs.com/api/v1/social/oembed",
         "formats": ["json"]
       }
     ]
@@ -89,6 +102,16 @@
       {
         "schemes": ["http://animoto.com/play/*"],
         "url": "http://animoto.com/oembeds/create"
+      }
+    ]
+  },
+  {
+    "provider_name": "AnnieMusic",
+    "provider_url": "https://anniemusic.app",
+    "endpoints": [
+      {
+        "schemes": ["https://anniemusic.app/t/*", "https://anniemusic.app/p/*"],
+        "url": "https://api.anniemusic.app/api/v1/oembed"
       }
     ]
   },
@@ -132,6 +155,7 @@
     "endpoints": [
       {
         "schemes": [
+          "https://audioboom.com/channels/*",
           "https://audioboom.com/channel/*",
           "https://audioboom.com/posts/*"
         ],
@@ -156,26 +180,15 @@
   },
   {
     "provider_name": "Audiomack",
-    "provider_url": "https://www.audiomack.com",
+    "provider_url": "https://audiomack.com",
     "endpoints": [
       {
         "schemes": [
-          "https://www.audiomack.com/song/*",
-          "https://www.audiomack.com/album/*",
-          "https://www.audiomack.com/playlist/*"
+          "https://audiomack.com/*/song/*",
+          "https://audiomack.com/*/album/*",
+          "https://audiomack.com/*/playlist/*"
         ],
-        "url": "https://www.audiomack.com/oembed",
-        "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "AudioSnaps",
-    "provider_url": "http://audiosnaps.com",
-    "endpoints": [
-      {
-        "schemes": ["http://audiosnaps.com/k/*"],
-        "url": "http://audiosnaps.com/service/oembed",
+        "url": "https://audiomack.com/oembed",
         "discovery": true
       }
     ]
@@ -185,9 +198,20 @@
     "provider_url": "https://www.avocode.com/",
     "endpoints": [
       {
-        "schemes": ["https://app.avocode.com/view/*/_/comments/"],
+        "schemes": ["https://app.avocode.com/view/*"],
         "url": "https://stage-embed.avocode.com/api/oembed",
         "formats": ["json"]
+      }
+    ]
+  },
+  {
+    "provider_name": "AxiomNinja",
+    "provider_url": "http://axiom.ninja",
+    "endpoints": [
+      {
+        "schemes": ["http://axiom.ninja/*"],
+        "url": "http://axiom.ninja/oembed/",
+        "discovery": true
       }
     ]
   },
@@ -198,6 +222,8 @@
       {
         "schemes": [
           "https://backtracks.fm/*/*/e/*",
+          "https://backtracks.fm/*/s/*/*",
+          "https://backtracks.fm/*/*/*/*/e/*/*",
           "https://backtracks.fm/*",
           "http://backtracks.fm/*"
         ],
@@ -331,6 +357,22 @@
     ]
   },
   {
+    "provider_name": "Chainflix",
+    "provider_url": "https://chainflix.net",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://chainflix.net/video/*",
+          "https://chainflix.net/video/embed/*",
+          "https://*.chainflix.net/video/*",
+          "https://*.chainflix.net/video/embed/*"
+        ],
+        "url": "https://www.chainflix.net/video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "ChartBlocks",
     "provider_url": "http://www.chartblocks.com/",
     "endpoints": [
@@ -388,6 +430,17 @@
     ]
   },
   {
+    "provider_name": "CoCo Corp",
+    "provider_url": "https://ilovecoco.video",
+    "endpoints": [
+      {
+        "schemes": ["https://app.ilovecoco.video/*/embed"],
+        "url": "https://app.ilovecoco.video/api/oembed.{format}",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "CodeHS",
     "provider_url": "http://www.codehs.com",
     "endpoints": [
@@ -404,7 +457,7 @@
     "endpoints": [
       {
         "schemes": ["http://codepen.io/*", "https://codepen.io/*"],
-        "url": "http://codepen.io/api/oembed"
+        "url": "https://codepen.io/api/oembed"
       }
     ]
   },
@@ -479,6 +532,26 @@
     ]
   },
   {
+    "provider_name": "Cueup DJ Booking",
+    "provider_url": "https://cueup.io",
+    "endpoints": [
+      {
+        "schemes": ["https://cueup.io/user/*/sounds/*"],
+        "url": "https://gql.cueup.io/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "CustomerDB",
+    "provider_url": "http://customerdb.com/",
+    "endpoints": [
+      {
+        "schemes": ["https://app.customerdb.com/share/*"],
+        "url": "https://app.customerdb.com/embed"
+      }
+    ]
+  },
+  {
     "provider_name": "Cyrano Systems",
     "provider_url": "http://www.cyranosystems.com/",
     "endpoints": [
@@ -494,23 +567,23 @@
     ]
   },
   {
-    "provider_name": "Daily Mile",
-    "provider_url": "http://www.dailymile.com",
-    "endpoints": [
-      {
-        "schemes": ["http://www.dailymile.com/people/*/entries/*"],
-        "url": "http://api.dailymile.com/oembed?format=json",
-        "formats": ["json"]
-      }
-    ]
-  },
-  {
     "provider_name": "Dailymotion",
     "provider_url": "https://www.dailymotion.com",
     "endpoints": [
       {
         "schemes": ["https://www.dailymotion.com/video/*"],
         "url": "https://www.dailymotion.com/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Datawrapper",
+    "provider_url": "http://www.datawrapper.de",
+    "endpoints": [
+      {
+        "schemes": ["https://datawrapper.dwcdn.net/*"],
+        "url": "https://api.datawrapper.de/v3/oembed/",
         "discovery": true
       }
     ]
@@ -590,7 +663,9 @@
           "https://*.docdroid.net/*",
           "http://*.docdroid.net/*",
           "https://docdro.id/*",
-          "http://docdro.id/*"
+          "http://docdro.id/*",
+          "https://*.docdroid.com/*",
+          "http://*.docdroid.com/*"
         ],
         "url": "https://www.docdroid.net/api/oembed",
         "formats": ["json"],
@@ -665,6 +740,17 @@
     ]
   },
   {
+    "provider_name": "Embedery",
+    "provider_url": "https://embedery.com/",
+    "endpoints": [
+      {
+        "schemes": ["https://embedery.com/widget/*"],
+        "url": "https://embedery.com/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Embedly",
     "provider_url": "http://api.embed.ly/",
     "endpoints": [
@@ -702,26 +788,30 @@
       {
         "schemes": [
           "https://www.facebook.com/*/posts/*",
-          "https://www.facebook.com/photos/*",
-          "https://www.facebook.com/*/photos/*",
-          "https://www.facebook.com/photo.php*",
-          "https://www.facebook.com/photo.php",
           "https://www.facebook.com/*/activity/*",
-          "https://www.facebook.com/permalink.php",
+          "https://www.facebook.com/photo.php?fbid=*",
+          "https://www.facebook.com/photos/*",
+          "https://www.facebook.com/permalink.php?story_fbid=*",
           "https://www.facebook.com/media/set?set=*",
           "https://www.facebook.com/questions/*",
           "https://www.facebook.com/notes/*/*/*"
         ],
-        "url": "https://www.facebook.com/plugins/post/oembed.json",
-        "discovery": true
+        "url": "https://graph.facebook.com/v8.0/oembed_post",
+        "discovery": false
       },
       {
         "schemes": [
           "https://www.facebook.com/*/videos/*",
-          "https://www.facebook.com/video.php"
+          "https://www.facebook.com/video.php?id=*",
+          "https://www.facebook.com/video.php?v=*"
         ],
-        "url": "https://www.facebook.com/plugins/video/oembed.json",
-        "discovery": true
+        "url": "https://graph.facebook.com/v8.0/oembed_video",
+        "discovery": false
+      },
+      {
+        "schemes": ["https://www.facebook.com/*"],
+        "url": "https://graph.facebook.com/v8.0/oembed_page",
+        "discovery": false
       }
     ]
   },
@@ -749,6 +839,20 @@
           "https://faithlifetv.com/media/resource/*/*"
         ],
         "url": "https://faithlifetv.com/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Firework",
+    "provider_url": "https://fireworktv.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.fireworktv.com/*",
+          "https://*.fireworktv.com/embed/*/v/*"
+        ],
+        "url": "https://www.fireworktv.com/oembed",
         "discovery": true
       }
     ]
@@ -802,16 +906,6 @@
         ],
         "url": "https://app.flourish.studio/api/v1/oembed",
         "discovery": true
-      }
-    ]
-  },
-  {
-    "provider_name": "Fontself",
-    "provider_url": "https://www.fontself.com",
-    "endpoints": [
-      {
-        "schemes": ["https://catapult.fontself.com/*"],
-        "url": "https://oembed.fontself.com/"
       }
     ]
   },
@@ -958,6 +1052,16 @@
     ]
   },
   {
+    "provider_name": "Grain",
+    "provider_url": "https://grain.co",
+    "endpoints": [
+      {
+        "schemes": ["https://grain.co/highlight/*"],
+        "url": "http://api.grain.co/_/api/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "GT Channel",
     "provider_url": "https://gtchannel.com",
     "endpoints": [
@@ -985,8 +1089,19 @@
     "endpoints": [
       {
         "schemes": ["https://hearthis.at/*/*/", "https://hearthis.at/*/set/*/"],
-        "url": "https://hearthis.at/oembed/",
+        "url": "https://hearthis.at/oembed/?format=json",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "hihaho",
+    "provider_url": "https://www.hihaho.com",
+    "endpoints": [
+      {
+        "schemes": ["https://player.hihaho.com/*"],
+        "url": "https://player.hihaho.com/services/oembed/*",
+        "formats": ["json", "xml"]
       }
     ]
   },
@@ -998,6 +1113,17 @@
         "schemes": ["https://homey.app/f/*", "https://homey.app/*/flow/*"],
         "url": "https://homey.app/api/oembed/flow",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Hosted by You",
+    "provider_url": "https://hostedbyyou.com",
+    "endpoints": [
+      {
+        "schemes": ["https://hostedbyyou.com/event/*"],
+        "url": "https://hostedbyyou.com/api/oembed",
+        "formats": ["json"]
       }
     ]
   },
@@ -1038,6 +1164,17 @@
       {
         "schemes": ["http://ifttt.com/recipes/*"],
         "url": "http://www.ifttt.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "iHeartRadio",
+    "provider_url": "https://www.iheart.com",
+    "endpoints": [
+      {
+        "schemes": ["https://www.iheart.com/podcast/*/*"],
+        "url": "https://www.iheart.com/oembed",
         "discovery": true
       }
     ]
@@ -1139,16 +1276,32 @@
         ],
         "url": "https://api.instagram.com/oembed",
         "formats": ["json"]
-      }
-    ]
-  },
-  {
-    "provider_name": "iSnare Articles",
-    "provider_url": "https://www.isnare.com/",
-    "endpoints": [
+      },
       {
-        "schemes": ["https://www.isnare.com/*"],
-        "url": "https://www.isnare.com/oembed/"
+        "schemes": [
+          "http://instagram.com/*/p/*,",
+          "http://www.instagram.com/*/p/*,",
+          "https://instagram.com/*/p/*,",
+          "https://www.instagram.com/*/p/*,",
+          "http://instagram.com/p/*",
+          "http://instagr.am/p/*",
+          "http://www.instagram.com/p/*",
+          "http://www.instagr.am/p/*",
+          "https://instagram.com/p/*",
+          "https://instagr.am/p/*",
+          "https://www.instagram.com/p/*",
+          "https://www.instagr.am/p/*",
+          "http://instagram.com/tv/*",
+          "http://instagr.am/tv/*",
+          "http://www.instagram.com/tv/*",
+          "http://www.instagr.am/tv/*",
+          "https://instagram.com/tv/*",
+          "https://instagr.am/tv/*",
+          "https://www.instagram.com/tv/*",
+          "https://www.instagr.am/tv/*"
+        ],
+        "url": "https://graph.facebook.com/v8.0/instagram_oembed",
+        "formats": ["json"]
       }
     ]
   },
@@ -1175,13 +1328,16 @@
   },
   {
     "provider_name": "Jovian",
-    "provider_url": "https://jovian.ml/",
+    "provider_url": "https://jovian.ai/",
     "endpoints": [
       {
         "schemes": [
           "https://jovian.ml/*",
           "https://jovian.ml/viewer*",
-          "https://*.jovian.ml/*"
+          "https://*.jovian.ml/*",
+          "https://jovian.ai/*",
+          "https://jovian.ai/viewer*",
+          "https://*.jovian.ai/*"
         ],
         "url": "https://api.jovian.ai/oembed.json",
         "discovery": true
@@ -1264,6 +1420,16 @@
     ]
   },
   {
+    "provider_name": "kmdr",
+    "provider_url": "https://kmdr.sh",
+    "endpoints": [
+      {
+        "schemes": ["https://app.kmdr.sh/h/*", "https://app.kmdr.sh/history/*"],
+        "url": "https://api.kmdr.sh/services/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "Knacki",
     "provider_url": "http://jdr.knacki.info",
     "endpoints": [
@@ -1277,12 +1443,34 @@
     ]
   },
   {
+    "provider_name": "Knowledge Pad",
+    "provider_url": "https://knowledgepad.co/",
+    "endpoints": [
+      {
+        "schemes": ["https://knowledgepad.co/#/knowledge/*"],
+        "url": "https://api.spoonacular.com/knowledge/oembed",
+        "formats": ["json"]
+      }
+    ]
+  },
+  {
     "provider_name": "LearningApps.org",
     "provider_url": "http://learningapps.org/",
     "endpoints": [
       {
         "schemes": ["http://learningapps.org/*"],
         "url": "http://learningapps.org/oembed.php",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "LeMans.Pod",
+    "provider_url": "https://umotion-test.univ-lemans.fr/",
+    "endpoints": [
+      {
+        "schemes": ["https://umotion-test.univ-lemans.fr/video/*"],
+        "url": "https://umotion-test.univ-lemans.fr/oembed",
         "discovery": true
       }
     ]
@@ -1329,6 +1517,17 @@
     ]
   },
   {
+    "provider_name": "Lumiere",
+    "provider_url": "https://latd.com",
+    "endpoints": [
+      {
+        "schemes": ["https://*.lumiere.is/v/*"],
+        "url": "https://admin.lumiere.is/api/services/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "MathEmbed",
     "provider_url": "http://mathembed.com",
     "endpoints": [
@@ -1359,6 +1558,24 @@
       {
         "schemes": ["https://me.me/i/*"],
         "url": "https://me.me/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "MediaLab",
+    "provider_url": "https://www.medialab.co/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.medialab.app/share/watch/*",
+          "https://*.medialab.co/share/watch/*",
+          "https://*.medialab.app/share/social/*",
+          "https://*.medialab.co/share/social/*",
+          "https://*.medialab.app/share/embed/*",
+          "https://*.medialab.co/share/embed/*"
+        ],
+        "url": "https://*.medialab.(co|app)/api/oembed/",
         "discovery": true
       }
     ]
@@ -1407,6 +1624,20 @@
     "endpoints": [
       {
         "url": "https://api.microlink.io"
+      }
+    ]
+  },
+  {
+    "provider_name": "Microsoft Stream",
+    "provider_url": "https://stream.microsoft.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://*.microsoftstream.com/video/*",
+          "https://*.microsoftstream.com/channel/*"
+        ],
+        "url": "https://web.microsoftstream.com/oembed",
+        "discovery": true
       }
     ]
   },
@@ -1557,12 +1788,58 @@
     ]
   },
   {
+    "provider_name": "NoPaste",
+    "provider_url": "https://nopaste.ml",
+    "endpoints": [
+      {
+        "schemes": ["https://nopaste.ml/*"],
+        "url": "https://oembed.nopaste.ml",
+        "discovery": false
+      }
+    ]
+  },
+  {
+    "provider_name": "Observable",
+    "provider_url": "https://observablehq.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://observablehq.com/@*/*",
+          "https://observablehq.com/d/*",
+          "https://observablehq.com/embed/*"
+        ],
+        "url": "https://api.observablehq.com/oembed",
+        "formats": ["json"]
+      }
+    ]
+  },
+  {
     "provider_name": "Odds.com.au",
     "provider_url": "https://www.odds.com.au",
     "endpoints": [
       {
         "schemes": ["https://www.odds.com.au/*", "https://odds.com.au/*"],
         "url": "https://www.odds.com.au/api/oembed/"
+      }
+    ]
+  },
+  {
+    "provider_name": "Odesli (formerly Songlink)",
+    "provider_url": "https://odesli.co",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://song.link/*",
+          "https://album.link/*",
+          "https://artist.link/*",
+          "https://playlist.link/*",
+          "https://pods.link/*",
+          "https://mylink.page/*",
+          "https://odesli.co/*"
+        ],
+        "url": "https://song.link/oembed",
+        "formats": ["json"],
+        "discovery": true
       }
     ]
   },
@@ -1677,6 +1954,17 @@
     ]
   },
   {
+    "provider_name": "Padlet",
+    "provider_url": "https://padlet.com/",
+    "endpoints": [
+      {
+        "schemes": ["https://padlet.com/*"],
+        "url": "https://padlet.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Pastery",
     "provider_url": "https://www.pastery.net",
     "endpoints": [
@@ -1699,6 +1987,18 @@
       {
         "url": "https://beta.pingvp.com.kpnis.nl/p/oembed.php",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Pinpoll",
+    "provider_url": "https://www.pinpoll.com/products/tools",
+    "endpoints": [
+      {
+        "schemes": ["https://tools.pinpoll.com/embed/*"],
+        "url": "https://tools.pinpoll.com/oembed",
+        "discovery": true,
+        "formats": ["json", "xml"]
       }
     ]
   },
@@ -1786,6 +2086,16 @@
     ]
   },
   {
+    "provider_name": "Qualifio",
+    "provider_url": "https://qualifio.com/",
+    "endpoints": [
+      {
+        "url": "https://oembed.qualifio.com/",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Quiz.biz",
     "provider_url": "http://www.quiz.biz/",
     "endpoints": [
@@ -1808,12 +2118,37 @@
     ]
   },
   {
-    "provider_name": "RapidEngage",
-    "provider_url": "https://rapidengage.com",
+    "provider_name": "RadioPublic",
+    "provider_url": "https://radiopublic.com",
     "endpoints": [
       {
-        "schemes": ["https://rapidengage.com/s/*"],
-        "url": "https://rapidengage.com/api/oembed"
+        "schemes": [
+          "https://play.radiopublic.com/*",
+          "https://radiopublic.com/*",
+          "https://www.radiopublic.com/*",
+          "http://play.radiopublic.com/*",
+          "http://radiopublic.com/*",
+          "http://www.radiopublic.com/*",
+          "https://*.radiopublic.com/*'"
+        ],
+        "url": "https://oembed.radiopublic.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "rcvis",
+    "provider_url": "https://www.rcvis.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.rcvis.com/v/*",
+          "https://www.rcvis.com/visualize=*",
+          "https://www.rcvis.com/ve/*",
+          "https://www.rcvis.com/visualizeEmbedded=*"
+        ],
+        "url": "https://animatron.com/oembed",
+        "discovery": true
       }
     ]
   },
@@ -1923,6 +2258,30 @@
     ]
   },
   {
+    "provider_name": "Runkit",
+    "provider_url": "https://runkit.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://embed.runkit.com/*,",
+          "https://embed.runkit.com/*,"
+        ],
+        "url": "https://embed.runkit.com/oembed",
+        "formats": ["json"]
+      }
+    ]
+  },
+  {
+    "provider_name": "Saooti",
+    "provider_url": "https://octopus.saooti.com",
+    "endpoints": [
+      {
+        "schemes": ["https://octopus.saooti.com/main/pub/podcast/*"],
+        "url": "https://octopus.saooti.com/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "Sapo Videos",
     "provider_url": "http://videos.sapo.pt",
     "endpoints": [
@@ -2022,6 +2381,20 @@
     ]
   },
   {
+    "provider_name": "Show by Animaker",
+    "provider_url": "https://getshow.io/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.getshow.io/iframe/*",
+          "https://*.getshow.io/share/*"
+        ],
+        "url": "https://api.getshow.io/oembed.{format}",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "Show the Way, actionable location info",
     "provider_url": "https://showtheway.io",
     "endpoints": [
@@ -2075,13 +2448,18 @@
     "endpoints": [
       {
         "schemes": [
+          "https://www.slideshare.net/*/*",
           "http://www.slideshare.net/*/*",
+          "https://fr.slideshare.net/*/*",
           "http://fr.slideshare.net/*/*",
+          "https://de.slideshare.net/*/*",
           "http://de.slideshare.net/*/*",
+          "https://es.slideshare.net/*/*",
           "http://es.slideshare.net/*/*",
+          "https://pt.slideshare.net/*/*",
           "http://pt.slideshare.net/*/*"
         ],
-        "url": "http://www.slideshare.net/api/oembed/2",
+        "url": "https://www.slideshare.net/api/oembed/2",
         "discovery": true
       }
     ]
@@ -2128,39 +2506,16 @@
     ]
   },
   {
-    "provider_name": "Songlink",
-    "provider_url": "https://song.link",
-    "endpoints": [
-      {
-        "schemes": ["https://song.link/*"],
-        "url": "https://song.link/oembed",
-        "formats": ["json"],
-        "discovery": true
-      }
-    ]
-  },
-  {
     "provider_name": "SoundCloud",
     "provider_url": "http://soundcloud.com/",
     "endpoints": [
       {
-        "schemes": ["http://soundcloud.com/*", "https://soundcloud.com/*"],
-        "url": "https://soundcloud.com/oembed"
-      }
-    ]
-  },
-  {
-    "provider_name": "Soundsgood",
-    "provider_url": "https://soundsgood.co",
-    "endpoints": [
-      {
         "schemes": [
-          "https://play.soundsgood.co/playlist/*",
-          "https://soundsgood.co/playlist/*"
+          "http://soundcloud.com/*",
+          "https://soundcloud.com/*",
+          "https://soundcloud.app.goog.gl/*"
         ],
-        "url": "https://play.soundsgood.co/oembed",
-        "discovery": true,
-        "formats": ["json", "xml"]
+        "url": "https://soundcloud.com/oembed"
       }
     ]
   },
@@ -2240,6 +2595,33 @@
       {
         "schemes": ["https://content.streamonecloud.net/embed/*"],
         "url": "https://content.streamonecloud.net/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Subscribi",
+    "provider_url": "https://subscribi.io/",
+    "endpoints": [
+      {
+        "schemes": ["https://subscribi.io/api/oembed*"],
+        "url": "https://subscribi.io/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Sudomemo",
+    "provider_url": "https://www.sudomemo.net/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.sudomemo.net/watch/*",
+          "http://www.sudomemo.net/watch/*",
+          "https://flipnot.es/*",
+          "http://flipnot.es/*"
+        ],
+        "url": "https://www.sudomemo.net/oembed",
         "discovery": true
       }
     ]
@@ -2329,6 +2711,16 @@
     ]
   },
   {
+    "provider_name": "TikTok",
+    "provider_url": "http://www.tiktok.com/",
+    "endpoints": [
+      {
+        "schemes": ["https://www.tiktok.com/*/video/*"],
+        "url": "https://www.tiktok.com/oembed"
+      }
+    ]
+  },
+  {
     "provider_name": "Toornament",
     "provider_url": "https://www.toornament.com/",
     "endpoints": [
@@ -2357,6 +2749,28 @@
     ]
   },
   {
+    "provider_name": "TourHero",
+    "provider_url": "http://www.tourhero.com",
+    "endpoints": [
+      {
+        "schemes": ["https://www.tourhero.com/*"],
+        "url": "https://oembed.tourhero.com/",
+        "discovery": true,
+        "formats": ["json"]
+      }
+    ]
+  },
+  {
+    "provider_name": "Tumblr",
+    "provider_url": "https://www.tumblr.com",
+    "endpoints": [
+      {
+        "schemes": ["https://*.tumblr.com/post/*"],
+        "url": "https://www.tumblr.com/oembed/1.0"
+      }
+    ]
+  },
+  {
     "provider_name": "Tuxx",
     "provider_url": "https://www.tuxx.be/",
     "endpoints": [
@@ -2378,31 +2792,15 @@
     ]
   },
   {
-    "provider_name": "Twitch",
-    "provider_url": "https://www.twitch.tv",
-    "endpoints": [
-      {
-        "schemes": [
-          "http://clips.twitch.tv/*",
-          "https://clips.twitch.tv/*",
-          "http://www.twitch.tv/*",
-          "https://www.twitch.tv/*",
-          "http://twitch.tv/*",
-          "https://twitch.tv/*"
-        ],
-        "url": "https://api.twitch.tv/v5/oembed",
-        "formats": ["json"]
-      }
-    ]
-  },
-  {
     "provider_name": "Twitter",
     "provider_url": "http://www.twitter.com/",
     "endpoints": [
       {
         "schemes": [
           "https://twitter.com/*/status/*",
-          "https://*.twitter.com/*/status/*"
+          "https://*.twitter.com/*/status/*",
+          "https://twitter.com/*/moments/*",
+          "https://*.twitter.com/*/moments/*"
         ],
         "url": "https://publish.twitter.com/oembed"
       }
@@ -2474,6 +2872,17 @@
           "https://*.uol.com.br/video/*"
         ],
         "url": "https://mais.uol.com.br/apiuol/v3/oembed/view",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "uppy",
+    "provider_url": "https://uppy.jp",
+    "endpoints": [
+      {
+        "schemes": ["https://app.uppy.jp/_shares/video/*"],
+        "url": "https://api.uppy.jp/v1/oembed",
         "discovery": true
       }
     ]
@@ -2596,7 +3005,7 @@
     "provider_url": "https://www.vidmizer.com/",
     "endpoints": [
       {
-        "schemes": ["https://players.vidmizer.com/*"],
+        "schemes": ["https://players-cdn-v2.vidmizer.com/*"],
         "url": "https://app-v2.vidmizer.com/api/oembed",
         "discovery": true
       }
@@ -2604,14 +3013,14 @@
   },
   {
     "provider_name": "Vidyard",
-    "provider_url": "http://www.vidyard.com",
+    "provider_url": "https://vidyard.com",
     "endpoints": [
       {
         "schemes": [
-          "http://embed.vidyard.com/*",
-          "http://play.vidyard.com/*",
-          "http://share.vidyard.com/*",
-          "http://*.hubs.vidyard.com/*"
+          "http://*.vidyard.com/*",
+          "https://*.vidyard.com/*",
+          "http://*.hubs.vidyard.com/*",
+          "https://*.hubs.vidyard.com/*"
         ],
         "url": "https://api.vidyard.com/dashboard/v1.1/oembed",
         "discovery": true
@@ -2633,6 +3042,18 @@
         ],
         "url": "https://vimeo.com/api/oembed.{format}",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Viously",
+    "provider_url": "https://www.viously.com",
+    "endpoints": [
+      {
+        "schemes": ["https://www.viously.com/*/*"],
+        "url": "https://www.viously.com/oembed",
+        "discovery": true,
+        "formats": ["json", "xml"]
       }
     ]
   },
@@ -2703,6 +3124,17 @@
     ]
   },
   {
+    "provider_name": "Wave.video",
+    "provider_url": "https://wave.video",
+    "endpoints": [
+      {
+        "schemes": ["https://watch.wave.video/*", "https://embed.wave.video/*"],
+        "url": "https://embed.wave.video/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "wecandeo",
     "provider_url": "http://www.wecandeo.com/",
     "endpoints": [
@@ -2751,6 +3183,29 @@
           "https://*.wizer.me/preview/*"
         ],
         "url": "http://app.wizer.me/api/oembed.{format}",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Wokwi",
+    "provider_url": "https://wokwi.com",
+    "endpoints": [
+      {
+        "schemes": ["https://wokwi.com/share/*"],
+        "url": "https://wokwi.com/api/oembed",
+        "discovery": true,
+        "formats": ["json"]
+      }
+    ]
+  },
+  {
+    "provider_name": "Wolfram Cloud",
+    "provider_url": "https://www.wolframcloud.com",
+    "endpoints": [
+      {
+        "schemes": ["https://*.wolframcloud.com/*"],
+        "url": "https://www.wolframcloud.com/oembed",
         "discovery": true
       }
     ]
@@ -2824,6 +3279,22 @@
     ]
   },
   {
+    "provider_name": "Zeplin",
+    "provider_url": "https://zeplin.io",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app.zeplin.io/project/*/screen/*",
+          "https://app.zeplin.io/project/*/screen/*/version/*",
+          "https://app.zeplin.io/project/*/styleguide/components?coid=*",
+          "https://app.zeplin.io/styleguide/*/components?coid=*"
+        ],
+        "url": "https://app.zeplin.io/embed",
+        "discovery": true
+      }
+    ]
+  },
+  {
     "provider_name": "ZingSoft",
     "provider_url": "https://app.zingsoft.com",
     "endpoints": [
@@ -2844,6 +3315,17 @@
       {
         "schemes": ["https://*.znipe.tv/*"],
         "url": "https://api.znipe.tv/v3/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Zoomable",
+    "provider_url": "https://zoomable.ca/",
+    "endpoints": [
+      {
+        "schemes": ["https://srv2.zoomable.ca/viewer.php*"],
+        "url": "https://srv2.zoomable.ca/oembed",
         "discovery": true
       }
     ]
