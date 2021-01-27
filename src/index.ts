@@ -190,10 +190,6 @@ export interface ResultSailthru {
   [key: string]: string | undefined;
 }
 
-export interface ResultJsonLd {
-  [key: string]: any;
-}
-
 export interface ResultApplinks {
   "ios:url"?: string;
   "ios:app_store_id"?: string;
@@ -279,9 +275,9 @@ export interface Result {
   icons: Array<Icon>;
   links: Array<Link>;
   images: Array<Image>;
-  jsonld?: ResultJsonLd[];
-  rdfa?: ResultJsonLd[];
-  microdata?: ResultJsonLd[];
+  jsonld?: RdfaNode[];
+  rdfa?: RdfaNode[];
+  microdata?: RdfaNode[];
   applinks?: ResultApplinks;
   twitter?: ResultTwitter;
   dublincore?: ResultDublinCore;
@@ -294,8 +290,9 @@ export interface Options {
 }
 
 export interface RdfaNode {
+  "@id"?: string;
   "@context"?: { [key: string]: string };
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export class Handler {
@@ -380,7 +377,7 @@ export class Handler {
 
     // Microdata item.
     if (attributes.hasOwnProperty("itemscope")) {
-      const newNode: object = {};
+      const newNode: RdfaNode = {};
 
       // Copy item reference data.
       if (itemrefAttr) {
@@ -400,13 +397,14 @@ export class Handler {
       if (itempropAttr) {
         const id = normalize(context.attributes["id"]);
         this._addMicrodataProperty(
-          last(this._microdataNodes),
+          last(this._microdataNodes)!,
           id,
           split(itempropAttr),
           newNode
         );
       } else {
-        this.result.microdata = merge(this.result.microdata, newNode);
+        this.result.microdata = this.result.microdata || [];
+        this.result.microdata.push(newNode);
         this._microdataScopes.push([]);
         context.flags = context.flags | HandlerFlags.microdataScope;
       }
@@ -423,7 +421,7 @@ export class Handler {
 
       if (value !== undefined) {
         this._addMicrodataProperty(
-          last(this._microdataNodes),
+          last(this._microdataNodes)!,
           normalize(context.attributes["id"]),
           props,
           normalizeJsonLdValue({
@@ -458,7 +456,7 @@ export class Handler {
       }
 
       this._addMicrodataProperty(
-        last(this._microdataNodes),
+        last(this._microdataNodes)!,
         id,
         "@type",
         type || itemtypeAttr
@@ -508,10 +506,10 @@ export class Handler {
         const validRelId = resourceAttr || hrefAttr || srcAttr;
 
         if (validRelId) {
-          const newNode: any = { "@id": validRelId };
+          const newNode: RdfaNode = { "@id": validRelId };
 
           rel.used = true;
-          this._addRdfaProperty(last(this._rdfaNodes), rel.links, newNode);
+          this._addRdfaProperty(last(this._rdfaNodes)!, rel.links, newNode);
 
           if (resourceAttr && !(context.flags & HandlerFlags.rdfaNode)) {
             this._rdfaNodes.push(newNode);
@@ -527,9 +525,9 @@ export class Handler {
           rel.used = true;
 
           if (!(context.flags & HandlerFlags.rdfaNode)) {
-            const newNode: any = {};
+            const newNode: RdfaNode = {};
             this._rdfaNodes.push(newNode);
-            this._addRdfaProperty(last(this._rdfaNodes), rel.links, newNode);
+            this._addRdfaProperty(last(this._rdfaNodes)!, rel.links, newNode);
             context.flags = context.flags | HandlerFlags.rdfaNode;
           }
         }
@@ -549,7 +547,7 @@ export class Handler {
 
       if (value !== undefined) {
         this._addRdfaProperty(
-          last(this._rdfaNodes),
+          last(this._rdfaNodes)!,
           properties,
           normalizeJsonLdValue({
             "@value": value,
@@ -568,7 +566,7 @@ export class Handler {
             newNode["@id"] = resourceAttr;
           }
 
-          this._addRdfaProperty(last(this._rdfaNodes), properties, newNode);
+          this._addRdfaProperty(last(this._rdfaNodes)!, properties, newNode);
 
           if (typeOfAttr && !(context.flags & HandlerFlags.rdfaNode)) {
             this._rdfaNodes.push(newNode);
@@ -600,7 +598,7 @@ export class Handler {
         context.flags = context.flags | HandlerFlags.rdfaNode;
       }
 
-      this._addRdfaProperty(last(this._rdfaNodes), "@type", split(typeOfAttr));
+      this._addRdfaProperty(last(this._rdfaNodes)!, "@type", split(typeOfAttr));
     }
 
     // Handle meta properties (E.g. HTML, Twitter cards, etc).
@@ -764,8 +762,11 @@ export class Handler {
         try {
           const jsonld = JSON.parse(prevContext.text) as unknown;
 
-          if (jsonld && typeof jsonld === "object") {
-            this.result.jsonld = merge(this.result.jsonld, jsonld);
+          if (typeof jsonld === "object" && jsonld !== null) {
+            this.result.jsonld = merge(
+              this.result.jsonld,
+              jsonld as RdfaNode | RdfaNode[]
+            );
           }
         } catch (e) {
           /* Ignore. */
@@ -825,7 +826,7 @@ export class Handler {
       // Set RDFa to text value.
       if (prevContext.rdfaTextProperty) {
         this._addRdfaProperty(
-          last(this._rdfaNodes),
+          last(this._rdfaNodes)!,
           prevContext.rdfaTextProperty,
           normalizeJsonLdValue({
             "@value": text,
@@ -837,7 +838,7 @@ export class Handler {
       // Set microdata to text value.
       if (prevContext.microdataTextProperty) {
         this._addMicrodataProperty(
-          last(this._microdataNodes),
+          last(this._microdataNodes)!,
           normalize(prevContext.attributes["id"]),
           prevContext.microdataTextProperty,
           normalizeJsonLdValue({
@@ -860,10 +861,10 @@ export class Handler {
    * Add a microdata property, with support for `id` references (used via `itemref`).
    */
   private _addMicrodataProperty(
-    node: any,
+    node: RdfaNode,
     id: string | undefined,
     itemprop: string | string[],
-    value: any
+    value: unknown
   ) {
     addJsonldProperty(node, itemprop, value);
 
@@ -880,7 +881,7 @@ export class Handler {
    * Set a microdata property.
    */
   private _setMicrodataProperty(
-    node: { [key: string]: any },
+    node: RdfaNode,
     id: string | undefined,
     key: string,
     value: unknown
@@ -895,7 +896,11 @@ export class Handler {
   /**
    * Add an RDFa property to the node.
    */
-  private _addRdfaProperty(node: any, property: string | string[], value: any) {
+  private _addRdfaProperty(
+    node: RdfaNode,
+    property: string | string[],
+    value: unknown
+  ) {
     addJsonldProperty(node, property, value);
 
     if (!this.result.rdfa) {
@@ -942,9 +947,10 @@ export class Handler {
       }
     }
 
-    const node: { [key: string]: any } = {};
+    const node: RdfaNode = {};
     if (id) node["@id"] = id;
-    this.result.rdfa = merge(this.result.rdfa, node);
+    this.result.rdfa = this.result.rdfa || [];
+    this.result.rdfa.push(node);
     return node;
   }
 }
@@ -967,11 +973,13 @@ function normalize(value?: string): string | undefined {
 /**
  * Set an object property.
  */
-function addJsonldProperty(obj: RdfaNode, key: string | string[], value: any) {
+function addJsonldProperty(
+  obj: RdfaNode,
+  key: string | string[],
+  value: unknown
+) {
   // Skip empty keys.
-  if (!key) {
-    return;
-  }
+  if (!key) return;
 
   if (Array.isArray(key)) {
     for (const k of key) {
@@ -1018,10 +1026,13 @@ function getValueMap(
 /**
  * Merge values together.
  */
-function merge<T>(left: undefined | T | T[], right: T | T[]): T[] {
-  return (Array.isArray(left) ? left : left === undefined ? [] : [left]).concat(
-    right
-  );
+function merge<T>(target: undefined | T | T[], value: T | T[]): T[] {
+  return (Array.isArray(target)
+    ? target
+    : target === undefined
+    ? []
+    : [target]
+  ).concat(value);
 }
 
 /**
@@ -1101,11 +1112,9 @@ function normalizeJsonLdValue(value: JsonLdValue): string | JsonLdValue {
 /**
  * Copy properties from `a` to `b`, when "defined".
  */
-export function copy<T extends { [key: string]: any }>(a: T, b: T) {
-  for (const prop of Object.keys(b) as (keyof T & string)[]) {
-    if (b[prop] !== undefined) {
-      a[prop] = b[prop];
-    }
+export function copy<T extends { [key: string]: unknown }>(a: T, b: T) {
+  for (const prop of Object.keys(b) as (keyof T)[]) {
+    if (b[prop] !== undefined) a[prop] = b[prop];
   }
 }
 
