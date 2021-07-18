@@ -36,7 +36,7 @@ const handler = new Handler(
 // Create a HTML parser with the handler.
 const parser = new Parser(handler, { decodeEntities: true });
 parser.write(html);
-parser.done();
+parser.end();
 
 /*
 Object {
