@@ -79,7 +79,11 @@ interface JsonLdValue {
  * Wrapper around `URL` for resolving correctly.
  */
 function resolveUrl(baseUrl: string, newUrl: string) {
-  return new URL(newUrl, baseUrl).toString();
+  try {
+    return new URL(newUrl, baseUrl).toString();
+  } catch (e) {
+    return;
+  }
 }
 
 export interface HtmlValueMap {
@@ -659,13 +663,11 @@ export class Handler {
 
         for (const rel of rels) {
           const typeAttr = normalize(attributes["type"]);
+          const resolvedHref = resolveUrl(this.options.url, hrefAttr);
+          if (!resolvedHref) continue;
 
           if (rel === "canonical" || rel === "amphtml" || rel === "pingback") {
-            set(
-              this.result,
-              ["html", rel],
-              resolveUrl(this.options.url, hrefAttr)
-            );
+            set(this.result, ["html", rel], resolvedHref);
           } else if (rel === "alternate") {
             const mediaAttr = normalize(attributes["media"]);
             const hreflangAttr = normalize(attributes["hreflang"]);
@@ -679,14 +681,14 @@ export class Handler {
                   media: mediaAttr,
                   hreflang: hreflangAttr,
                   title: normalize(attributes["title"]),
-                  href: resolveUrl(this.options.url, hrefAttr),
+                  href: resolvedHref,
                 }
               );
             }
           } else if (rel === "meta") {
             appendAndDedupe(this.result.alternate, ["type"], {
               type: typeAttr || "application/rdf+xml",
-              href: resolveUrl(this.options.url, hrefAttr),
+              href: resolvedHref,
             });
           } else if (
             rel === "icon" ||
@@ -696,7 +698,7 @@ export class Handler {
             appendAndDedupe(this.result.icons, ["href"], {
               type: typeAttr,
               sizes: normalize(attributes["sizes"]),
-              href: resolveUrl(this.options.url, hrefAttr),
+              href: resolvedHref,
             });
           }
         }
@@ -786,16 +788,18 @@ export class Handler {
         const hreflang = normalize(prevContext.attributes["hreflang"]);
         const type = normalize(prevContext.attributes["type"]);
         const rel = normalize(prevContext.attributes["rel"]);
-
-        this.result.links.push({
-          href: resolveUrl(this.options.url, href),
-          text,
-          download,
-          target,
-          hreflang,
-          type,
-          rel,
-        });
+        const resolvedHref = resolveUrl(this.options.url, href);
+        if (resolvedHref) {
+          this.result.links.push({
+            href: resolvedHref,
+            text,
+            download,
+            target,
+            hreflang,
+            type,
+            rel,
+          });
+        }
       }
     }
 
