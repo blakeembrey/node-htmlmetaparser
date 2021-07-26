@@ -1,28 +1,38 @@
 {
   "name": "htmlmetaparser",
   "version": "2.1.1",
-  "description": "A `htmlparser2` handler for parsing rich metadata from HTML. Includes HTML metadata, JSON-LD, RDFa, microdata, OEmbed, Twitter cards and AppLinks.",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist/",
-    "vendor/"
-  ],
-  "scripts": {
-    "prettier": "prettier --write",
-    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --quiet --fix",
-    "format": "npm run prettier -- \"{,{src,vendor,scripts}/**/}*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
-    "build": "rimraf dist/ && tsc",
-    "specs": "jest --coverage",
-    "test": "npm run build && npm run lint && npm run specs",
-    "prepublish": "npm run build",
-    "fixtures": "ts-node scripts/fixtures.ts",
-    "vendor": "ts-node scripts/oembed-providers.ts"
+  "publishConfig": {
+    "access": "public"
   },
+  "description": "A `htmlparser2` handler for parsing rich metadata from HTML. Includes HTML metadata, JSON-LD, RDFa, microdata, OEmbed, Twitter cards and AppLinks.",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/blakeembrey/node-htmlmetaparser.git"
   },
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/node-htmlmetaparser/issues"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "fixtures": "ts-node scripts/fixtures.ts",
+    "format": "ts-scripts format",
+    "lint": "ts-scripts lint",
+    "prepare": "ts-scripts install && ts-scripts build",
+    "specs": "ts-scripts specs",
+    "test": "ts-scripts test",
+    "vendor": "ts-node scripts/oembed-providers.ts"
+  },
+  "files": [
+    "dist/",
+    "vendor/"
+  ],
   "keywords": [
     "metadata",
     "scraper",
@@ -35,65 +45,27 @@
     "microdata",
     "json-ld"
   ],
-  "author": {
-    "name": "Blake Embrey",
-    "email": "hello@blakeembrey.com",
-    "url": "http://blakeembrey.me"
-  },
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/blakeembrey/node-htmlmetaparser/issues"
-  },
-  "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
-  "jest": {
-    "roots": [
-      "<rootDir>/src/"
-    ],
-    "transform": {
-      "\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,md,yml,yaml}": "npm run prettier"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "devDependencies": {
-    "@types/jest": "^26.0.20",
-    "@types/node": "^14.14.22",
-    "@typescript-eslint/eslint-plugin": "^4.14.0",
-    "@typescript-eslint/parser": "^4.14.0",
-    "eslint": "^7.18.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "filenamify": "^4.1.0",
-    "htmlparser2": "^6.0.0",
-    "husky": "^4.2.0",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.0.1",
-    "popsicle": "^12.0.5",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.0",
-    "ts-jest": "^26.4.4",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.3"
-  },
   "dependencies": {
     "setvalue": "^1.0.0"
+  },
+  "devDependencies": {
+    "@borderless/ts-scripts": "^0.5.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^16.4.3",
+    "filenamify": "^5.0.0",
+    "htmlparser2": "^6.0.0",
+    "popsicle": "^12.0.5",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.1.3"
+  },
+  "typings": "dist/index.d.ts",
+  "ts-scripts": {
+    "src": [
+      "src",
+      "scripts"
+    ],
+    "project": [
+      "tsconfig.build.json"
+    ]
   }
 }
