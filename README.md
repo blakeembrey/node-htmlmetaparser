@@ -2,8 +2,8 @@
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
-[![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+[![Build status][build-image]][build-url]
+[![Build coverage][coverage-image]][coverage-url]
 
 > A `htmlparser2` handler for parsing rich metadata from HTML. Includes HTML metadata, JSON-LD, RDFa, microdata, OEmbed, Twitter cards and AppLinks.
 
@@ -173,7 +173,7 @@ Apache 2.0
 [npm-url]: https://npmjs.org/package/htmlmetaparser
 [downloads-image]: https://img.shields.io/npm/dm/htmlmetaparser.svg?style=flat
 [downloads-url]: https://npmjs.org/package/htmlmetaparser
-[travis-image]: https://img.shields.io/travis/blakeembrey/node-htmlmetaparser.svg?style=flat
-[travis-url]: https://travis-ci.org/blakeembrey/node-htmlmetaparser
-[coveralls-image]: https://img.shields.io/coveralls/blakeembrey/node-htmlmetaparser.svg?style=flat
-[coveralls-url]: https://coveralls.io/r/blakeembrey/node-htmlmetaparser?branch=master
+[build-image]: https://img.shields.io/github/workflow/status/blakeembrey/htmlmetaparser/CI/main
+[build-url]: https://github.com/blakeembrey/htmlmetaparser/actions/workflows/ci.yml?query=branch%3Amain
+[coverage-image]: https://img.shields.io/codecov/c/gh/blakeembrey/htmlmetaparser
+[coverage-url]: https://codecov.io/gh/blakeembrey/htmlmetaparser
