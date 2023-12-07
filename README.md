@@ -173,7 +173,7 @@ Apache 2.0
 [npm-url]: https://npmjs.org/package/htmlmetaparser
 [downloads-image]: https://img.shields.io/npm/dm/htmlmetaparser.svg?style=flat
 [downloads-url]: https://npmjs.org/package/htmlmetaparser
-[build-image]: https://img.shields.io/github/workflow/status/blakeembrey/node-htmlmetaparser/CI/main
+[build-image]: https://img.shields.io/github/actions/workflow/status/blakeembrey/node-htmlmetaparser/ci.yml?branch=main
 [build-url]: https://github.com/blakeembrey/node-htmlmetaparser/actions/workflows/ci.yml?query=branch%3Amain
 [coverage-image]: https://img.shields.io/codecov/c/gh/blakeembrey/node-htmlmetaparser
 [coverage-url]: https://codecov.io/gh/blakeembrey/node-htmlmetaparser
