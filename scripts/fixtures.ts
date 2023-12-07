@@ -189,7 +189,7 @@ Promise.all(
     } catch {
       return load();
     }
-  })
+  }),
 ).catch((err) => {
   console.error(err);
   process.exit(1);

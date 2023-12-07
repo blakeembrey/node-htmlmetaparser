@@ -1,38 +1,7 @@
 {
   "name": "htmlmetaparser",
   "version": "2.1.2",
-  "publishConfig": {
-    "access": "public"
-  },
   "description": "A `htmlparser2` handler for parsing rich metadata from HTML. Includes HTML metadata, JSON-LD, RDFa, microdata, OEmbed, Twitter cards and AppLinks.",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/blakeembrey/node-htmlmetaparser.git"
-  },
-  "author": {
-    "name": "Blake Embrey",
-    "email": "hello@blakeembrey.com",
-    "url": "http://blakeembrey.me"
-  },
-  "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
-  "bugs": {
-    "url": "https://github.com/blakeembrey/node-htmlmetaparser/issues"
-  },
-  "main": "dist/index.js",
-  "scripts": {
-    "fixtures": "tsx scripts/fixtures.ts",
-    "format": "ts-scripts format",
-    "lint": "ts-scripts lint",
-    "prepare": "ts-scripts install && ts-scripts build",
-    "specs": "ts-scripts specs",
-    "test": "ts-scripts test",
-    "vendor": "tsx scripts/oembed-providers.ts"
-  },
-  "files": [
-    "dist/",
-    "vendor/"
-  ],
   "keywords": [
     "metadata",
     "scraper",
@@ -45,6 +14,35 @@
     "microdata",
     "json-ld"
   ],
+  "homepage": "https://github.com/blakeembrey/node-htmlmetaparser",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/node-htmlmetaparser/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/node-htmlmetaparser.git"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "vendor/"
+  ],
+  "scripts": {
+    "fixtures": "tsx scripts/fixtures.ts",
+    "format": "ts-scripts format",
+    "lint": "ts-scripts lint",
+    "prepare": "ts-scripts install && ts-scripts build",
+    "specs": "ts-scripts specs",
+    "test": "ts-scripts test",
+    "vendor": "tsx scripts/oembed-providers.ts"
+  },
   "dependencies": {
     "setvalue": "^1.0.0"
   },
@@ -59,7 +57,9 @@
     "typescript": "^5.3.3",
     "vitest": "^1.0.1"
   },
-  "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "ts-scripts": {
     "src": [
       "src",

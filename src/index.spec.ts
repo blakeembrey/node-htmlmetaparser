@@ -25,7 +25,7 @@ describe("htmlmetaparser", () => {
         },
         {
           url: meta.url,
-        }
+        },
       );
 
       const parser = new Parser(handler, { decodeEntities: true });

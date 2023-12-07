@@ -10,7 +10,7 @@ fetch("http://oembed.com/providers.json")
   .then((data) => {
     return writeFile(
       join(__dirname, "../vendor/providers.json"),
-      JSON.stringify(data, null, 2)
+      JSON.stringify(data, null, 2),
     );
   })
   .catch((err) => {

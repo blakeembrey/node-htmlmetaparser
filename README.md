@@ -30,7 +30,7 @@ const handler = new Handler(
   },
   {
     url, // The HTML pages URL is used to resolve relative URLs.
-  }
+  },
 );
 
 // Create a HTML parser with the handler.

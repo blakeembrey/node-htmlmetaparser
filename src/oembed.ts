@@ -53,18 +53,18 @@ export class OEmbedMatch {
   formatResult(
     oembedUrl: string,
     url: string,
-    formats?: string[]
+    formats?: string[],
   ): MatchResult {
     const type =
       formats === undefined
         ? "json"
         : formats.includes("json")
-        ? "json"
-        : formats[0];
+          ? "json"
+          : formats[0];
 
     return {
       href: `${oembedUrl}?type=${encodeURIComponent(
-        type
+        type,
       )}&url=${encodeURIComponent(url)}`,
       type: `application/${type}+oembed`,
     };

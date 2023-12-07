@@ -11,11 +11,11 @@ const RDF_VALID_NAME_START_CHAR_RANGE =
   "\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\u10000-\uEFFFF";
 
 const RDF_NAME_START_CHAR_REGEXP = new RegExp(
-  `^[${RDF_VALID_NAME_START_CHAR_RANGE}]$`
+  `^[${RDF_VALID_NAME_START_CHAR_RANGE}]$`,
 );
 
 const RDF_NAME_CHAR_REGEXP = new RegExp(
-  `^[${RDF_VALID_NAME_START_CHAR_RANGE}\\-\\.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$`
+  `^[${RDF_VALID_NAME_START_CHAR_RANGE}\\-\\.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$`,
 );
 
 /**
@@ -89,7 +89,7 @@ function resolveUrl(baseUrl: string, newUrl: string) {
 export interface HtmlValueMap {
   [tagName: string]: (
     attrs: { [key: string]: string },
-    baseUrl: string
+    baseUrl: string,
   ) => string | undefined;
 }
 
@@ -321,7 +321,7 @@ export class Handler {
 
   constructor(
     protected callback: (err: Error | null, result: Result) => void,
-    protected options: Options
+    protected options: Options,
   ) {}
 
   onend() {
@@ -405,7 +405,7 @@ export class Handler {
           last(this._microdataNodes)!,
           id,
           split(itempropAttr),
-          newNode
+          newNode,
         );
       } else {
         this.result.microdata = this.result.microdata || [];
@@ -432,7 +432,7 @@ export class Handler {
           normalizeJsonLdValue({
             "@value": value,
             "@language": last(this.langs),
-          })
+          }),
         );
       } else {
         context.microdataTextProperty = props;
@@ -464,7 +464,7 @@ export class Handler {
         last(this._microdataNodes)!,
         id,
         "@type",
-        type || itemtypeAttr
+        type || itemtypeAttr,
       );
     }
 
@@ -558,7 +558,7 @@ export class Handler {
             "@value": value,
             "@language": last(this.langs),
             "@type": normalize(attributes["datatype"]),
-          })
+          }),
         );
       } else {
         if (
@@ -683,7 +683,7 @@ export class Handler {
                   hreflang: hreflangAttr,
                   title: normalize(attributes["title"]),
                   href: resolvedHref,
-                }
+                },
               );
             }
           } else if (rel === "meta") {
@@ -768,7 +768,7 @@ export class Handler {
           if (typeof jsonld === "object" && jsonld !== null) {
             this.result.jsonld = merge(
               this.result.jsonld,
-              jsonld as RdfaNode | RdfaNode[]
+              jsonld as RdfaNode | RdfaNode[],
             );
           }
         } catch (e) {
@@ -836,7 +836,7 @@ export class Handler {
           normalizeJsonLdValue({
             "@value": text,
             "@language": last(this.langs),
-          })
+          }),
         );
       }
 
@@ -849,7 +849,7 @@ export class Handler {
           normalizeJsonLdValue({
             "@value": text,
             "@language": last(this.langs),
-          })
+          }),
         );
       }
 
@@ -869,7 +869,7 @@ export class Handler {
     node: RdfaNode,
     id: string | undefined,
     itemprop: string | string[],
-    value: unknown
+    value: unknown,
   ) {
     addJsonldProperty(node, itemprop, value);
 
@@ -889,7 +889,7 @@ export class Handler {
     node: RdfaNode,
     id: string | undefined,
     key: string,
-    value: unknown
+    value: unknown,
   ) {
     node[key] = value;
 
@@ -904,7 +904,7 @@ export class Handler {
   private _addRdfaProperty(
     node: RdfaNode,
     property: string | string[],
-    value: unknown
+    value: unknown,
   ) {
     addJsonldProperty(node, property, value);
 
@@ -981,7 +981,7 @@ function normalize(value?: string): string | undefined {
 function addJsonldProperty(
   obj: RdfaNode,
   key: string | string[],
-  value: unknown
+  value: unknown,
 ) {
   // Skip empty keys.
   if (!key) return;
@@ -1017,7 +1017,7 @@ function last<T>(arr: T[]): T | undefined {
 function getValueMap(
   url: string,
   tagName: string,
-  attributes: { [key: string]: string }
+  attributes: { [key: string]: string },
 ) {
   const value = normalize(attributes.content);
 
@@ -1032,11 +1032,8 @@ function getValueMap(
  * Merge values together.
  */
 function merge<T>(target: undefined | T | T[], value: T | T[]): T[] {
-  return (Array.isArray(target)
-    ? target
-    : target === undefined
-    ? []
-    : [target]
+  return (
+    Array.isArray(target) ? target : target === undefined ? [] : [target]
   ).concat(value);
 }
 
@@ -1129,7 +1126,7 @@ export function copy<T extends { [key: string]: unknown }>(a: T, b: T) {
 function appendAndDedupe<T extends { href: string }>(
   list: T[],
   props: Array<keyof T>,
-  value: T
+  value: T,
 ): void {
   for (const entry of list) {
     const matches = props.every((x) => entry[x] === value[x]);
