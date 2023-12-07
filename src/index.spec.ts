@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import * as fs from "fs";
 import { promisify } from "util";
 import { Parser } from "htmlparser2";
@@ -12,7 +13,7 @@ const FIXTURES = fs.readdirSync(FIXTURE_DIR);
 describe("htmlmetaparser", () => {
   FIXTURES.forEach((name) => {
     it(name, async () => {
-      const [html, meta] = await Promise.all<string, { url: string }>([
+      const [html, meta] = await Promise.all([
         readFile(join(FIXTURE_DIR, name, "body.html"), "utf8"),
         readFile(join(FIXTURE_DIR, name, "meta.json"), "utf8").then(JSON.parse),
       ]);
