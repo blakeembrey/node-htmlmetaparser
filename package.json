@@ -50,6 +50,7 @@
     "@borderless/ts-scripts": "^0.15.0",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.10.4",
+    "@vitest/coverage-v8": "^1.0.1",
     "filenamify": "^6.0.0",
     "htmlparser2": "^9.0.0",
     "popsicle": "^12.0.5",
