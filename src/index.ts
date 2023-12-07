@@ -372,6 +372,7 @@ export class Handler {
     if (langAttr) {
       this.langs.push(langAttr);
       context.flags = context.flags | HandlerFlags.hasLang;
+      set(this.result, ["html", "language"], langAttr);
     }
 
     // Store `id` references for later (microdata itemrefs).
